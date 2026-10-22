@@ -1,0 +1,6 @@
+---
+import type {Resource} from '../types/content';
+interface Props {resource:Resource}
+const {resource:r}=Astro.props;
+---
+<article class="card"><span class="pill">Video</span><h3>{r.title}</h3><p>{r.description}</p><p class="muted">{r.video?.status==='APPROVED_PRIVATE_USE'?'Riferimento video autorizzato':'Video da revisionare prima dell’associazione in aula.'}</p>{r.video?.status==='APPROVED_PRIVATE_USE'&&r.video.url&&<a class="button secondary" href={r.video.url} target="_blank" rel="noopener noreferrer">Apri video esterno ↗</a>}<p class="muted">La riproduzione di risorse esterne richiede una connessione.</p></article>

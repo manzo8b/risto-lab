@@ -1,0 +1,6 @@
+---
+import {withBase} from '../../../../lib/urls';
+
+import Hub from '../../../../layouts/Instructor.astro';import Editor from '../../../../components/TeachingEditor.astro';
+---
+<Hub title="Crea lezione"><p class="eyebrow"><a href={withBase("/instructor/sessioni/")}>Lezioni</a> / Nuova</p><h1>Prepara la tua lezione</h1><p class="lead muted">Scegli i materiali, decidi l’ordine e assegna i tempi.</p><Editor/></Hub>

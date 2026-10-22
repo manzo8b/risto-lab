@@ -1,0 +1,6 @@
+---
+import Hub from '../../../layouts/Instructor.astro';
+import Library from '../../../components/Library.astro';
+import {resources,units} from '../../data/catalog';
+---
+<Hub title="Cerca il materiale giusto."><p class="eyebrow">Strumenti docente</p><h1>Cerca il materiale giusto</h1><p class="muted">Titolo, descrizione, argomento, tipo e unità. Ricerca locale, senza servizi esterni.</p><Library resources={resources} units={units}/></Hub>

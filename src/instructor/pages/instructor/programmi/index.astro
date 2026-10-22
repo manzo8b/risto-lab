@@ -1,0 +1,7 @@
+---
+import {withBase} from '../../../../lib/urls';
+
+import Hub from '../../../../layouts/Instructor.astro';
+import {program} from '../../../data/catalog';
+---
+<Hub title="Programmi"><p class="eyebrow">Curriculum</p><h1>I tuoi programmi</h1><div class="card prose"><p class="eyebrow">Programma canonico · 26 unità</p><h2>{program.title}</h2><p class="muted">{program.description}</p><a class="button" href={withBase("/instructor/programmi/il-servizio-in-sala/")}>Apri il programma ↗</a></div><section class="section"><h2>Materiali complementari</h2><p class="muted">Professione Sala, Sicurezza Alimentare, Sicurezza sul lavoro.</p><a class="button secondary" href={withBase("/instructor/raccolte/")}>Esplora le raccolte ↗</a></section></Hub>

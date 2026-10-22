@@ -1,0 +1,4 @@
+export const normalize=(s:string)=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+export const matchesQuery=(haystack:string,query:string)=>normalize(query).split(/\s+/).filter(Boolean).every(t=>normalize(haystack).includes(t));
+export function searchText(r:{title:string;description:string;topics:string[];type:string;unit_ids:string[];keywords?:string[]},unitTitles:Record<string,string>={}){return [r.title,r.description,...r.topics,...(r.keywords||[]),r.type,...r.unit_ids,...r.unit_ids.map(id=>unitTitles[id]||'')].join(' ');}
+export function searchResources<T extends {title:string;description:string;topics:string[];type:string;unit_ids:string[];keywords?:string[]}>(items:T[],query:string,type='',unit='',unitTitles:Record<string,string>={}){return items.filter(r=>(!type||r.type===type)&&(!unit||r.unit_ids.includes(unit))&&matchesQuery(searchText(r,unitTitles),query));}

@@ -1,0 +1,6 @@
+---
+import {withBase} from '../../../lib/urls';
+
+import Hub from '../../../layouts/Instructor.astro';
+---
+<Hub title="Importazione contenuti"><h1>Importazione contenuti</h1><p class="notice">Gestione/importazione contenuti disponibile nell’ambiente locale di authoring.</p><p>Il sito ospitato è pubblico e statico. I nuovi materiali vengono preparati e verificati localmente, poi pubblicati con una nuova build.</p><a class="button secondary" href={withBase("/instructor/biblioteca/")}>Apri la biblioteca</a></Hub>

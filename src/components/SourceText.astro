@@ -1,0 +1,10 @@
+---
+interface Props{text:string}
+const {text}=Astro.props;
+const blocks=text.split(/\n\n+/).filter(Boolean).flatMap(block=>{
+ const lines=block.split('\n');
+ const first=lines[0];
+ return first.startsWith('## ')?[{kind:'heading',text:first.replace(/^## /,''),items:[]},{kind:'body',text:lines.slice(1).join('\n'),items:[]}]:[{kind:lines.every(l=>/^[-•] /.test(l))?'list':lines.every(l=>/^\d+\. /.test(l))?'ordered':'body',text:block,items:lines}];
+});
+---
+<div class="source-text">{blocks.map(block=>block.kind==='heading'?<h3>{block.text}</h3>:block.kind==='list'?<ul>{block.items.map(l=><li>{l.slice(2)}</li>)}</ul>:block.kind==='ordered'?<ol>{block.items.map(l=><li>{l.replace(/^\d+\. /,'')}</li>)}</ol>:block.text&&<p>{block.text}</p>)}</div>

@@ -1,0 +1,21 @@
+---
+import {withBase} from '../lib/urls';
+
+import Icon from './Icon.astro';
+import {searchText} from '../lib/search';
+import type {Resource} from '../types/content';
+import {isAvailable,isClassroomApproved} from '../lib/resources';
+import {teachingKind,teacherResourceLabel,classroomUseLabel} from '../lib/presentation';
+interface Props {resource:Resource;unitTitles?:Record<string,string>;collectionTitle?:string}
+const {resource:r,unitTitles={},collectionTitle}=Astro.props;const available=isAvailable(r);const use=classroomUseLabel(r);
+const unitContext=r.unit_ids.length?'Unità '+r.unit_ids.slice(0,3).map(u=>u.replace('unit-','')).join(', ')+(r.unit_ids.length>3?' · altre '+(r.unit_ids.length-3):''):'Materiale trasversale';
+---
+<article class="card resource" data-collection={r.collection_id||''} data-kind={r.material_kind||''} data-teaching-kind={teachingKind(r)} data-programs={r.program_ids.join(' ')} data-format={r.format||'Riferimento'} data-id={r.id} data-type={r.type} data-units={r.unit_ids.join(' ')} data-topics={r.topics.join('|')} data-search={searchText(r,unitTitles)+' '+teacherResourceLabel(r)}>
+<span class="pill"><Icon name={r.type==='IMAGE'?'image':r.type==='QUIZ'?'quiz':r.type==='VIDEO'?'play':'file'}/>{teacherResourceLabel(r)}</span><h3>{r.title}</h3><p class="muted resource-description">{r.description}</p><p class="resource-context">{collectionTitle&&<><span>{collectionTitle}</span><br/></>}{unitContext} · {r.format||'Riferimento'}</p>
+<p class:list={['classroom-status',isClassroomApproved(r)&&'available']}><span class="muted">Uso in aula:</span> {isClassroomApproved(r)?'●':'○'} {use}</p>
+{available&&!isClassroomApproved(r)&&<p class="consultation-hint muted">Consultabile dal docente; versione per l’aula da approvare.</p>}
+{r.regulatory_status!=='NOT_APPLICABLE'&&r.regulatory_status!=='VERIFIED_CURRENT'&&<p class="regulatory-hint">Vigenza normativa non verificata.</p>}
+{available?<div class="actions"><a class="button secondary" href={withBase(`/instructor/risorse/${r.id}/`)}><Icon name="right"/>Apri materiale</a>{r.visibility!=='TEACHER'&&isClassroomApproved(r)&&<a class="text-link" href={withBase(`/instructor/aula/?unit=${r.unit_ids[0]}&resource=${r.id}`)}>In Aula</a><a class="text-link" href={withBase('/instructor/sessioni/nuova/?unit=')+r.unit_ids[0]+'&resource='+r.id}>Crea lezione</a>}</div>:<p class="muted">Materiale non disponibile; revisione necessaria.</p>}
+<details class="technical"><summary>Informazioni sulla fonte</summary><p>{r.topics.join(' · ')}<br/>Unità collegate: {r.unit_ids.map(u=>u.replace('unit-','')).join(', ')||'nessuna'}<br/>Uso privato: {r.private_use_authorized?'autorizzato':'da verificare'}<br/>Pubblicazione pubblica: non autorizzata</p></details>
+</article>
+<style>.resource-context,.classroom-status{font-size:.8rem}.resource-context{color:var(--muted)}.classroom-status{margin:20px 0 8px}.consultation-hint,.regulatory-hint{font-size:.75rem!important;line-height:1.5}.regulatory-hint{color:var(--muted)}.resource-description{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.resource[hidden]{display:none!important}</style>

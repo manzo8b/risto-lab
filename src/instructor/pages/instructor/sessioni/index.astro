@@ -1,0 +1,7 @@
+---
+import {withBase} from '../../../../lib/urls';
+
+import Hub from '../../../../layouts/Instructor.astro';
+---
+<Hub title="Lezioni"><p class="eyebrow">Il tuo piano operativo</p><h1>Lezioni</h1><p class="lead muted">I tuoi incontri sono salvati solo in questo browser. Usa Esporta / Importa JSON per portarli su un altro dispositivo. Non inserire dati personali sensibili.</p><a class="button" href={withBase("/instructor/sessioni/nuova/")}>Crea lezione</a><p id="plans-message" role="status"></p><section id="saved-plans" class="section"></section></Hub>
+<script>import {renderPlans} from '../../../../lib/plan-list';renderPlans('#saved-plans');</script>

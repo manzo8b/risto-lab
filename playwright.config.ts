@@ -1,0 +1,1 @@
+import {defineConfig} from '@playwright/test';export default defineConfig({testDir:'./tests',testMatch:'**/*.e2e.ts',workers:1,use:{browserName:'chromium',channel:'chrome',headless:true},webServer:{command:'node scripts/serve-static.mjs',url:'http://127.0.0.1:4330/risto-lab/instructor/',reuseExistingServer:false},reporter:'list'});

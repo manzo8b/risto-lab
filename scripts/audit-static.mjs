@@ -1,0 +1,4 @@
+import {readdirSync,readFileSync,statSync} from 'node:fs';import {join} from 'node:path';
+const walk=p=>readdirSync(p,{withFileTypes:true}).flatMap(d=>d.isDirectory()?walk(join(p,d.name)):[join(p,d.name)]);const files=walk('dist'),bad=[];let bytes=0;
+for(const p of files){bytes+=statSync(p).size;if(/\.(html|js|json|css|svg)$/.test(p)){const t=readFileSync(p,'utf8');if(/\/Users\/|PRIVATE_SYNTHETIC_|PRIVATE_TEACHER_NOTE|attendance_records|participant_id|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY/.test(t))bad.push(p+': private payload');if(p.endsWith('.html')&&/(?:href|src|action)=["']\/(?!risto-lab(?:\/|["']))/.test(t))bad.push(p+': root link');}}
+if(files.some(p=>p.includes('/server/')))bad.push('Server output');if(bad.length)throw new Error(bad.join('\n'));console.log(`Static audit: ${files.length} files, ${bytes} bytes; no server/private payload/root asset links.`);

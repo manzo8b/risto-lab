@@ -1,0 +1,7 @@
+---
+import {withBase} from '../lib/urls';
+
+import Icon from './Icon.astro';
+import {sessionLabels,sessionTiming} from '../lib/teaching';import {units,program} from '../instructor/data/catalog';const {session:s}=Astro.props;const timing=sessionTiming(s);
+---
+<article class="card teaching-session-card"><p class="eyebrow">{new Date(s.date+'T12:00:00').toLocaleDateString('it-IT')} · {sessionLabels[s.status as keyof typeof sessionLabels]}</p><h3>{s.title}</h3><p>{s.program_id===program.id?program.title:'Incontro trasversale'} · {s.unit_ids.map((id:string)=>units.find(u=>u.id===id)?.title).filter(Boolean).join(', ')}</p><p>{s.start_time}–{s.planned_end_time} · {s.blocks.length} blocchi · {timing.total} min</p><div class="actions"><a class="button" href={withBase('/instructor/sessioni/')+s.id+'/?avvia=1'}><Icon name="play"/>Avvia lezione</a><a class="button secondary" href={withBase('/instructor/sessioni/')+s.id+'/'}>Modifica</a></div></article>

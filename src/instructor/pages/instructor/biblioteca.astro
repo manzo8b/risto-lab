@@ -1,0 +1,6 @@
+---
+import Hub from '../../../layouts/Instructor.astro';
+import Library from '../../../components/Library.astro';
+import {resources,units} from '../../data/catalog';
+---
+<Hub title="La biblioteca."><p class="eyebrow">Strumenti docente</p><h1>La biblioteca</h1><p class="muted">Un catalogo, più punti di accesso. Materiali e riferimenti restano collegati alle stesse risorse.</p><Library resources={resources} units={units}/></Hub>

@@ -1,0 +1,31 @@
+{
+  "name": "risto-lab",
+  "version": "1.0.0",
+  "description": "RISTO-LAB \u2014 Static Hospitality Teaching Workspace",
+  "scripts": {
+    "dev": "astro dev --ignore-lock",
+    "preview": "astro preview --host 127.0.0.1",
+    "dev:authoring": "node scripts/authoring.mjs",
+    "check": "astro check",
+    "build": "npm run validate:content && astro build && node scripts/audit-static.mjs",
+    "test": "tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test",
+    "validate:content": "tsx scripts/validate-public.ts",
+    "publication:gate": "node scripts/publication-gate.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "astro": "7.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3"
+  },
+  "private": true
+}

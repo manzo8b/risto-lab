@@ -1,0 +1,12 @@
+import {resources,units} from '../instructor/data/catalog';
+import {isClassroomApproved} from './resources';
+import {validateTeaching,type TeachingSession} from './teaching';
+const KEY='risto-lab-sessions-v1';export const DRAFT_KEY='risto-lab-draft-v1';
+const eligible=()=>resources.filter(isClassroomApproved).map(r=>r.id);
+export function normalizePlan(input:unknown):TeachingSession{if(!input||typeof input!=='object'||Array.isArray(input))throw new Error('Il piano non è valido.');const raw=input as Record<string,unknown>;const valid=validateTeaching(raw,units.map(u=>u.id),eligible());const now=new Date().toISOString();return {...valid,id:typeof raw.id==='string'&&/^teaching-[a-f0-9-]{36}$/.test(raw.id)?raw.id:'teaching-'+crypto.randomUUID(),created_at:typeof raw.created_at==='string'?raw.created_at:now,updated_at:now,actual_end_time:null,revision:0};}
+export function readPlans():TeachingSession[]{const value=localStorage.getItem(KEY);if(!value)return [];let data:unknown;try{data=JSON.parse(value);}catch{throw new Error('Archivio del browser non leggibile. I dati non sono stati sovrascritti.');}if(!Array.isArray(data))throw new Error('Archivio del browser non valido.');return data.map(normalizePlan);}
+export function savePlan(input:unknown){const plan=normalizePlan(input),all=readPlans(),at=all.findIndex(s=>s.id===plan.id);if(at>=0)all[at]=plan;else all.push(plan);if(all.length>100)throw new Error('Limite di 100 lezioni: esporta ed elimina quelle non utilizzate.');localStorage.setItem(KEY,JSON.stringify(all));localStorage.setItem('risto-lab-recent-session',plan.id);return plan;}
+export function removePlan(id:string){localStorage.setItem(KEY,JSON.stringify(readPlans().filter(s=>s.id!==id)));}
+export function exportPlan(plan:TeachingSession){return JSON.stringify({schema:'risto-lab-session',version:1,plan:normalizePlan(plan)},null,2);}
+export function importPlan(text:string){if(text.length>256_000)throw new Error('File troppo grande: massimo 256 KB.');let data;try{data=JSON.parse(text);}catch{throw new Error('Il file non contiene JSON valido.');}if(!data||data.schema!=='risto-lab-session'||data.version!==1)throw new Error('Formato o versione del piano non compatibile.');return normalizePlan({...data.plan,id:undefined});}
+export function downloadPlan(plan:TeachingSession){const blob=new Blob([exportPlan(plan)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='risto-lab-lezione.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}

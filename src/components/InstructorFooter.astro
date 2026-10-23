@@ -1,0 +1,5 @@
+---
+import {withBase} from '../lib/urls';
+import {currentInstructor} from '../lib/instructor-profile';
+---
+<footer class="instructor-footer" aria-label="Informazioni RISTO-LAB"><div><strong>RISTO—LAB</strong><p>Hospitality Training &amp; Restaurant Operations</p><small>Instructor Hub · Il Servizio in Sala</small></div><nav aria-label="Link del progetto"><a href={withBase('/')}>Sito RISTO-LAB</a><a href="https://github.com/manzo8b/risto-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={withBase('/risto-lab/')}>Note sul progetto</a></nav><small>© 2026 RISTO-LAB · by {currentInstructor?.displayName||'RISTO-LAB'}</small></footer>

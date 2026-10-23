@@ -1,0 +1,14 @@
+---
+import {withBase} from '../lib/urls';
+import {units,resources,program} from '../instructor/data/catalog';
+const {title}=Astro.props;
+const path=Astro.url.pathname;
+let items:{label:string;href?:string}[]=[];
+const unit=units.find(u=>path===withBase('/instructor/unita/'+u.slug+'/'));
+const resource=resources.find(r=>path===withBase('/instructor/risorse/'+r.id+'/'));
+if(unit)items=[{label:'Programma',href:withBase('/instructor/programmi/')},{label:program.title,href:withBase('/instructor/programmi/il-servizio-in-sala/')},{label:String(unit.order).padStart(2,'0')+' · '+unit.title}];
+else if(resource)items=[{label:'Biblioteca',href:withBase('/instructor/biblioteca/')},{label:resource.title}];
+else if(path.startsWith(withBase('/instructor/programmi/'))&&path!==withBase('/instructor/programmi/'))items=[{label:'Programma',href:withBase('/instructor/programmi/')},{label:program.title}];
+else if(path.startsWith(withBase('/instructor/sessioni/'))&&path!==withBase('/instructor/sessioni/'))items=[{label:'Lezioni',href:withBase('/instructor/sessioni/')},{label:String(title).replace(/\.$/,'')}];
+---
+{items.length>0&&<nav class="breadcrumbs" aria-label="Percorso"><ol>{items.map(item=><li>{item.href?<a href={item.href}>{item.label}</a>:<span aria-current="page">{item.label}</span>}</li>)}</ol></nav>}

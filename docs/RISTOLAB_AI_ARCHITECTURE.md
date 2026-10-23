@@ -11,3 +11,11 @@ I collegamenti contestuali sono nelle unità, nel menu compatto dei materiali, n
 Per argomenti normativi si rimanda alle fonti e si chiede verifica: niente punteggi di fiducia o dichiarazioni di conformità. Il normale motore di ricerca del catalogo resta separato e deterministico.
 
 **Futuro, non implementato:** UI → backend AI autenticato → OpenAI → conoscenza e strumenti RISTO-LAB. Chiavi, autorizzazione, controllo del contesto e logging dovranno risiedere nel sistema appropriato, non in JavaScript pubblico. Il contratto del provider consente il cambio del ponte senza rifare la UI.
+
+## Phase 5.1
+
+Il ponte statico conserva ChatGPTRistoLabPluginProvider e buildAIContext come punti unici di estensione. Il contesto copiato usa una allowlist e inizia sempre con «Usa RISTO-LAB per rispondere a questa richiesta.» Note private, percorsi Mac, ID interni e metadati di governance sono esclusi. L’anteprima è espandibile; nessun invio avviene dalle azioni rapide. La copia abilita il successivo collegamento HTTPS a ChatGPT, con alternativa manuale quando i permessi sono negati.
+
+Il riferimento ufficiale fornito dal proprietario è `app://plugin_c07fec5d295481919b09a675ea35214e`, nome **RISTO-LAB**. È un identificatore interno ChatGPT e non una destinazione web da imporre al browser. Fallback: https://chatgpt.com/. L’utente deve selezionare RISTO-LAB nel proprio account. Nessuna disponibilità account viene simulata.
+
+Una futura integrazione autenticata richiederebbe progettazione separata, autorizzazione e gestione sicura dei segreti. Non è implementata. Oggi il sito rimane interamente statico.

@@ -10,4 +10,4 @@ Nessun risultato umano assegnato. Eseguire sul sito live dopo il deploy riuscito
 | 4. Avvia Console Docente → Vista Aula: il flusso didattico funziona? | ___ |
 | 5. Cerca mise en place, HACCP, brigata: i risultati sono utili? | ___ |
 
-URL previsto: https://manzo8b.github.io/risto-lab/instructor/ . Data/browser: ___.
+URL live: https://manzo8b.github.io/risto-lab/instructor/ . Data/browser: ___.

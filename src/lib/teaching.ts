@@ -17,8 +17,19 @@ export function validateTeaching(input:Record<string,unknown>,unitIds:string[],e
 }
 
 /** Mechanical time allocation over the existing approved order; never creates teaching content. */
-export function proposeBlocks(unitIds:string[],eligible:{id:string;title:string;unit_ids:string[]}[],sequence:string[],minutes:number,uuid:()=>string):TeachingBlock[]{
+export function proposeBlocks(unitIds:string[],eligible:{id:string;title:string;unit_ids:string[];recommended_minutes?:number}[],sequence:string[],minutes:number,uuid:()=>string):TeachingBlock[]{
  const ids=[...new Set(sequence)];const items=ids.map(id=>eligible.find(r=>r.id===id&&r.unit_ids.some(u=>unitIds.includes(u)))).filter((r):r is NonNullable<typeof r>=>!!r);
  const target=Math.max(items.length,Math.floor(Number.isFinite(minutes)?minutes:60)),base=Math.floor(target/Math.max(1,items.length)),extra=target%Math.max(1,items.length);
- return items.map((r,i)=>({id:'block-'+uuid(),session_id:'',order:i+1,resource_id:r.id,block_type:'RESOURCE',title:r.title,planned_minutes:Math.min(240,base+(i<extra?1:0)),teacher_note:'',projector_enabled:true,status:'PLANNED'}));
+ const allocation=items.map((_,i)=>base+(i<extra?1:0));
+ // Existing sequences retain equal allocation. New curated sequences may reserve time for practice.
+ if(items.length&&items.every(r=>Number.isFinite(r.recommended_minutes)&&r.recommended_minutes!>0)){
+  const weights=items.map(r=>r.recommended_minutes!),sum=weights.reduce((a,b)=>a+b,0),remaining=target-items.length;
+  const shares=weights.map(w=>remaining*w/sum);shares.forEach((v,i)=>allocation[i]=1+Math.floor(v));
+  let left=target-allocation.reduce((a,b)=>a+b,0);
+  const order=shares.map((v,i)=>({i,f:v-Math.floor(v)})).sort((a,b)=>b.f-a.f||a.i-b.i);
+  for(const {i} of order){if(!left)break;allocation[i]++;left--;}
+  // Use the exact authored split at its intended duration.
+  if(target===sum)weights.forEach((v,i)=>allocation[i]=v);
+ }
+ return items.map((r,i)=>({id:'block-'+uuid(),session_id:'',order:i+1,resource_id:r.id,block_type:'RESOURCE',title:r.title,planned_minutes:Math.min(240,allocation[i]),teacher_note:'',projector_enabled:true,status:'PLANNED'}));
 }

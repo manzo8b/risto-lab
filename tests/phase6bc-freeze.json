@@ -1,0 +1,349 @@
+{
+  "resources": {
+    "res-mep-text": "d9bdc94da1e159cb232bcda7983fd4e3b9c299a92a64652ee8659dedda420db6",
+    "res-mep-exercise": "069107bc1b75555831493cbe055759a192f63e8554a5cccab052dfc5c3dd57d8",
+    "res-mep-quiz": "54c800f139053ee107ebb6152393eb9272b0899ae3be42d95351ab0e5902d53f",
+    "res-mep-checklist": "6e29f3ace89e3c63c6d368d938b3ae1d0e403fcd61c5a879672a7738479064d6",
+    "res-mep-pdf": "23b34163e8999795b7feaa64d1a2b64441ba84ee1ccff3aa105ca53e5b4fe42a",
+    "res-mep-image": "85157c13b727f2119be5dc4e57f13230301f36e5042b6e11869a14c50d96ccfd",
+    "res-mep-table": "8895be530765487308d8332c641f89632c29cc3eb8fed6172d6223c26385cd6f",
+    "res-mep-errors": "4e6bd24064968ba5eee4d84ae9da2a54de35575cca8233df8c9b07296c4656c5",
+    "res-brigata": "eff2826e8e1335bf65d02adc7db2f846291dc5e6d83264d043a64d9f38e7537e",
+    "res-colloquio": "1619daae23d634078b50a407070975bc7ca36672ed5aa8c619f54b58370c1ad2",
+    "res-manual-pdf": "25c2f8d35b61f400330574079d8d428a517912a8518eab156f9a5f89ad94fc4a",
+    "res-mep-video": "235064e1e280e963517f6c3ce20b166e0c468123cb1c92d69d73fdf9bde5c67a",
+    "res-chapter-01": "57803cfb30ea939e374535841d5cc314ee897c6f828a59b5a9f19ff034aafb8d",
+    "res-chapter-02": "9a2ee080615b5498e6da1493b805423b11b1a6fe4138da50d578615a5650f4f3",
+    "res-chapter-03": "613d4df7eabbd5a2c645a9a439df6b8a9ae5b09602e1e5fcf94f7765eae7ea35",
+    "res-chapter-04": "9bbcb96f2b5a4082072294e4a4ce63066d1d4854971f8adab36bf1e2dda2e02f",
+    "res-chapter-05": "d4eeec2bb6cbd4805723d60ba468fff2971df12d5cf095c95476291f7bcc5452",
+    "res-chapter-06": "6221ec2f138ae8395f193f8f3c2ba41a3a94f476f9c549fbd155e98871c28877",
+    "res-chapter-07": "612c39b9be261502c94b19f0400de4de7c69a0a460921241a106903225086cee",
+    "res-chapter-08": "1e98794e919e56cfff28689c1e020a82e0db6b5f10a74b8b0e7b1a2b90b32a54",
+    "res-chapter-09": "7d59b7f4843c46bb6bc80b0e71a90a0f4289c7f292c6fad2594400d31afa07d5",
+    "res-chapter-10": "c260c6b78ffa81b664b4366828eab372265893383f93afd4251c411547865a57",
+    "res-chapter-11": "0a53ae66fff0c4d58e44fb8ffcf9ae685ddaa096d0702de7498402bae027d092",
+    "res-chapter-12": "c0fe456eb245bda4074d11c76a99dc7fe23f233c66fdf858e6e06fb0bf0d414c",
+    "res-chapter-13": "8b371dce9b7b03f7c3b9b3205b1e3947ab005d2e23c186b66c1965fd21f24d1b",
+    "res-chapter-14": "ab8fa5228629d29978c49ef48e4bc31026e3127fec7d90c9d60bfd4cee7c7d88",
+    "res-chapter-15": "7734050cf38c4fc4643f5fa0b00df8f2d34423f866032d9a0971e24418e8e8cf",
+    "res-chapter-16": "85408e5be7d75def1344a1bc043a10d57885eac23d1590619ceea13cd626fddc",
+    "res-chapter-17": "1d1af26f9b53d469c46ef2ff2314ba76aaacfde0bea8d5873e79e768015a456c",
+    "res-chapter-18": "ac3f44843fb6818c5105848832a81e8cf6b76da872c98810676f17df8df8023d",
+    "res-chapter-19": "81c14f16f3288c2dcbbed9b02608a67cad52aa7dc86f6b4d8ea8de6f4526cc7e",
+    "res-chapter-20": "bf458c84745957290e33b12588c04173979f912f5bccd1a92b308fe7576abb3a",
+    "res-chapter-21": "0c4a7fa17058ea84d22a9a01f6fcdbf65a2a7b691ec50102962d6de19ed762e6",
+    "res-chapter-22": "5fe092c9a475f93c08feeccc780499caf094c48d20921a1ef0a2225c3465bfc0",
+    "res-chapter-23": "4ca571d757b18bd26232d673ce8ffe04af7a07b5f011edf95c2bed8bfe7eb3d0",
+    "res-chapter-24": "93c5bed435036a4d53d4357a426210967594caca6043b66e62244c047250354f",
+    "res-chapter-25": "98eee5e0c6fea9e69b9d761ec683b62ff9c60166e4606d72e502de0bc4b66595",
+    "res-chapter-26": "456d607683e499c998e1108166dbef64f74878ae5ffdfd3da208f13a89635920",
+    "res-sicurezza-corso": "a6e452914f03bc041fdfcb3ff7654db5ba978563e83727f577270349335c22db",
+    "res-sicurezza-slides": "a3e88efae8ba28ea2d2d1dfa2a40cb52735f46a5878cb2a267962d8d3b180cee",
+    "res-sicurezza-formatore": "fd2291cb23ff8b3ff827b1ea65c8ea9e668570560650719d5fa3efa0a59cac44",
+    "res-sicurezza-banca-quiz": "d4bac5919c44e0b576cd302cd3f2f6edeb3864ab654a18964834078ae780fbb8",
+    "res-visual-sbarazzo": "a4209907840b0cb5c6e839b6405d41714e29bb511ced07637d7f41807efbb4f5",
+    "res-visual-contaminazione": "fcee210d6775fb358f348219d51fba242ca83c3953d5b3de77334b941c120954",
+    "res-visual-ciclo-servizio": "9c063eb1282bde7ea4171733dc036c6fd617c5e708f128914fa28bde7601bc7a",
+    "res-visual-ciclo-illustrato": "86250fe555f306757ad0a9ebc9500ca671f47d0b23f7def3fb50afffdbfea096",
+    "res-visual-mise-fondo": "157a2cad9023ee64631ff9fde4afdbef0480d1889eef17ffe3e1ef9341b44d9b",
+    "res-visual-cliente": "edb2488b5e0c1951ab23865902cfb08c421d346d492c4ed8f6ef79a92de27f29",
+    "res-visual-brigata": "a7683c2ee1af0193266ad319a3016e591118e5fe4bee295d17a0fb16f17c707e",
+    "res-visual-igiene": "b2a4da18825e553a6e895b6fbfc903d62c54073aacbb5f999806cdfe3d0cf387",
+    "res-visual-sala-cucina": "7a24f20a0232c539dc7ad2ab71161ef3da1e593dc76af3491daf9c4ba5172157",
+    "res-visual-stili": "e63a008376de559efe751f1229e5ffde6b43b70b23fd4da88f84e754b8aa5f81",
+    "res-visual-icone": "225d6be9a98a825e894d1a7ebb93c9f8e72d457a55dbe1617976145bc4c4dc9d",
+    "res-food-codex": "c2b299bed0ffbf78a9f16a60c0f18356a51760a2be3c9f4728e9f142456a9a29",
+    "res-food-microbiologia": "639f186fe20952372dc1d5f802c9b20bd310ec1b6ea4a3796c12c439d31fdceb",
+    "res-food-pacchetto": "12e13a0228ef3942e435bc0d6d91aded4aefb502d19f93977d2afbddc2cf31d5",
+    "res-food-pericoli": "a3098a122dd712cbd919f3ea6c6b62081e45749ddbd73edbfad20bacd9926d8a",
+    "res-food-1169": "1cfcbe35252dd4fe593fbc72ca8a81bb721f004ab73a748586707099137600ec",
+    "res-food-178": "ab155ad37e0699541d94741d6d3c4715a46b5026daf14bfa68e7b7aecbbf5bc9",
+    "res-food-852": "b06f8318923dc903e95c6983c926233c8b934bed92f8b6d97a6c55107833c727",
+    "res-food-2021-382": "1be41dfd56deb615ce1f85be07adc21b54cbe7728834613a97c8c28866d35936",
+    "res-u10-welcome": "580555fd10898cac90602fff9f89f08fafefa76665035e21912e0f93ea877562",
+    "res-u10-phrases": "2d02be15ad9c497756687aafd45ca0b0ac93c97879fdd1a03c4a10e16f179453",
+    "res-u10-waiting": "3db03cba8d68fbcc970ce22238f19f41815ac368d1cff0efe5e7cfe6d7fd1686",
+    "res-u10-roleplay": "b654c2f208d2552150aaf869a8cc5124d22579e65aa80e7ce5f5fc7e02afefdc",
+    "res-u10-quiz": "b00d7306b6915129749ec26131d646f8dd28e49303ee23efef4396168c158c0b",
+    "res-u10-checklist": "ea39224eba57da6f1c1be9680b9fd98004fa7f7586b58fef4ee3a12b40fd1bd9",
+    "res-u17-method": "1c0f7d12f168cec15a1d10feb1e2c35c587b894b1f8ac184cc205298e6494290",
+    "res-u17-hazards": "4429e26b4451cb9130fa5df28f833b45b7b06ce5a805e87c328b85fd961d92c2",
+    "res-u17-hygiene": "cbbd0f111d910503b209136f1fef0b7f78904df3e34037255d2d6aa27b0b99bc",
+    "res-u17-storage": "8217f03b2e513d2414a48dae85574d7542f490924ee980ac9f030ea2cd5c97bb",
+    "res-u17-cases": "b59cb80dbc2b30715fdcf9419b64a4166843a433ca3cb5b9656cad7551038fa6",
+    "res-u17-quiz": "bd24e48b25faa5c86c3d17e577d9a13adf8e31e1e8a2d01d9f0bbc781686dd82",
+    "res-u17-checklist": "e32bd86b05f8b56257db2cd4687a065b8179dac9c38073891c51e21dce02ece9",
+    "res-u10-print": "9b0b206ea3f6804b09afc8b748551b272cace86592cd25068e52aa0c064e0d6e",
+    "res-u17-print": "50dc4951d3220dfc58e1fb36adbd892cd94105e677fdf8e176b4074742956d35",
+    "res-u1-sistema": "2713d70915f4f48f83fedfa360fe28a7c34d3a15010e0d1413ff439ea2b5a4b8",
+    "res-u1-servizio": "7d132531cfa8647f85b128969137ab649aa391c36d2e36cf97786bde7e68d9dc",
+    "res-u1-standard": "32268a0768352a691393a3ee6a3f207a46e1793190b6d04e4eb7a7a53930a5e8",
+    "res-u1-activity": "1f26c434cc129aeeb0e84f3e6ce5b142eac22210fac5ea6f858ef106b29270ca",
+    "res-u1-quiz": "9e4fe2c523e681d3a1aaa36cf4c81f4ceea0e7ea4edcd110b03fbd4fb57de94b",
+    "res-u1-checklist": "b2b0cc00899d297938a046efcd6d02e3e54050ec02271c2ba6732d93c8fd7e5b",
+    "res-u2-competenze": "2176eb7779722b20204cdbc07758ecd98663e9c9bf93276ed8f5b201317d93cc",
+    "res-u2-presentazione": "c87c574c695d2ca0f43b21b876e6e28d300ab0dd7ed96dae2efef96d0ed0d914",
+    "res-u2-squadra": "2c70176db3fadf197cd6e78e4a0c27b1e5f28d2098abb32ecb55870ff00a54bd",
+    "res-u2-activity": "6d6b0e04d81247432ac6bc0ed4ccfc0970cbcb84e999550cfd3c08680f7819a1",
+    "res-u2-quiz": "ed2a3f8e15dd76860ca0301a8b03236cf5d8f28b4ea9889a71ebf5cd748a2433",
+    "res-u2-checklist": "48ea8de2bd94ddb107d6ef127fed2ba940b5472ae0584ef246c8bcf3951cc645",
+    "res-u3-responsabile": "bd6aadefabd0658b4242925fa9702ddfef7abf2d77f6825d4a10c9c8d8d653d1",
+    "res-u3-ruoli": "e6747726a636aa6ffbc68e78af329331a351f7276967e0c7c376e7ffc87a64fa",
+    "res-u3-briefing": "a377e1ff6b3cdba6f0aecf994a3118f2791865d1b264d5bf45f9ae9f8d1a77c6",
+    "res-u3-activity": "31389e37039e3b124776001b4a1dc4564f0971a2ef03768be60efe50658e218a",
+    "res-u3-quiz": "d3a95a31c196b807d80cbbf5aef99972964d4d7f23a7e114a8f86fd1416d90e8",
+    "res-u3-checklist": "860b733cd8f1ced4c64fb8c8036c82550780ff17d73acf6200ea9e844de850b1",
+    "res-u4-sala": "4017274c2e7d4a0a8720f4ff75e93dc53f4f0e37e6458a7e7f9d9842e280703d",
+    "res-u4-office": "29274b7d11b1477167e22813f989ede70ffd59724ebb9acb10caa6bf1b3db271",
+    "res-u4-pass": "761088581848556e244fb260134dbbba4dcc22ead51618ccf81af9bd60b7221d",
+    "res-u4-activity": "0355bb4bed75d957a6f9354f2b5f5ca8ee321ebb34035e382d2ae37de5f20da9",
+    "res-u4-quiz": "e9a59c6f3f84be562ec8029f0eee45c7168271db74360894dc3e5bacdb6a0681",
+    "res-u4-checklist": "2cd0020f8c20ba624519d275594fb9b8a48e259dde4e9e1567d3efe15e19599e",
+    "res-u5-tavola": "3946f52c2acfca26f5e5daf39358e83da5f3e6d70ee2e049fed22d1dde1cb7ec",
+    "res-u5-tovagliato": "299bfb6ecb42bdab7ceae672700241625878c3adcdbc3005deeac175d0fe128e",
+    "res-u5-vassoio": "6b0edd42275dd433a76c9144c24c3d8f0e647e3df41f8a804d693285bbabcd68",
+    "res-u5-dimostrazione": "22de9f7bc228a73ad8f08f445269c8897842e0046a20871e3dd8db1f1586fa23",
+    "res-u5-activity": "0f5eecda51147dc300395789d466ff68ca27ae6e77af6c6ee23f1b988e073e13",
+    "res-u5-quiz": "d92ddb8f1791a47d80724a0493b78c5c6bbe00c9abe207f07663a42f3449c267",
+    "res-u5-checklist": "da80906e7658daa90701eb841d2004d4111da6c7c694d5b500f64106e1ee2bf2"
+  },
+  "units": {
+    "1": "e404e053fce7c2425b3d2525ed5576bc9d44d966a586bd52da8cddcafdf3b084",
+    "2": "3cd291808a26ad8473d71030b7c68e77a0b2726330e49ec4994cb26c9f41f971",
+    "3": "fc9eec7f9cb7b44ba4e793f34d36801cbca16295c179c53368e096dcfe32eb12",
+    "4": "e4664fe034e956c03ab45e036bd20f91e3bae52846d05605ec2b4a0e251be556",
+    "5": "aaca1285059f6ca423d39477785c56868dd972b1a2a6083962ff1e7f22e92bd6",
+    "6": "66c6909ecbe4ea12282e1a58607349c643cfc4006990676a24320b61e47cb275",
+    "7": "e529886fb4ee225b458203dd55c48840bf3c386ae21d6e7c345cd9fdc8c8e834",
+    "8": "2ccdab2fb7859c3158a7015d8dd0ed0cd6d062b2a439be929947f0366aa997ed",
+    "9": "d022d350aeb1b5d26c72fe5e4ca41f760b78b63324836a00bf04302f701407e9",
+    "10": "715fc06c9c4ea4a00280d121c8124b5956e8e1b84b11e55115ffc72245f3747b",
+    "11": "e7a940fc69250ed980d5b940916071c6aa0942de51933678449a136633b1dccb",
+    "12": "26d74ea41e62bb05288bf000779f4f74624f86f9075d091308ba77dba3c8ff9a",
+    "13": "384ee2bbc2ead583c50b650614cd89342a0001be6cf26f6a31af8e71393bbac0",
+    "14": "420d04fd7a185f632eb50ac6661844c8269fdc015c70556baed5c7e7e4d3ff0f",
+    "15": "d54ff8ba3d89ef70fc68e6561c821fa35e99eb714ec44daface9cdfdf78bf1a1",
+    "16": "57f382a59e5a29adf779ada98acd063dfa1e0a1519506035662f6eae38842130",
+    "17": "709c46f64f25678c21f782d805a08f4a03ee96fc4d38c8057afb302566ce5601",
+    "18": "b755a5bd61c061bb6eaf96593f082b7e3f516c0d07996f2199a7c295e928d72e",
+    "19": "eaa5d41ad3086c4b4a82d349940dd6e06c0b58b30d9d3894d51c2acdad810565",
+    "20": "03b77a6b5cb7bcd76cb561dbdac70d6ea97749b5618ade9f6a1bf802dd718330",
+    "21": "6db68593506921a968e61c1e110bd55aecae613bd4e9df2717b91c8e06e99751",
+    "22": "032826d5023a915f39e0c9a508019f46c94a92f85916399a92d7536a21f7f4f4",
+    "23": "0166cf5681a1c8934fbdacc3b34851b93ff8504546f4ed7cec8e2703a33e5efa",
+    "24": "3d05b895e2914546b1afb6a37391337b303018f84ddbf1432db6e2348bda3b04",
+    "25": "fe33594e2d0423d352d473e0400fa89e2e07eb710ff7af785ba6d9f167fb23a7",
+    "26": "f65da2e7c7af3419278b7a18a23abee46619636357ca50db0056b9dc2da769fc"
+  },
+  "sequence": [
+    {
+      "resource_id": "res-mep-text",
+      "label": "Comprendere"
+    },
+    {
+      "resource_id": "res-mep-image",
+      "label": "Osservare le fasi"
+    },
+    {
+      "resource_id": "res-mep-table",
+      "label": "Osservare la tavola"
+    },
+    {
+      "resource_id": "res-mep-exercise",
+      "label": "Esercitarsi"
+    },
+    {
+      "resource_id": "res-mep-quiz",
+      "label": "Verificare"
+    },
+    {
+      "resource_id": "res-mep-checklist",
+      "label": "Controllare"
+    },
+    {
+      "resource_id": "res-mep-errors",
+      "label": "Riepilogare gli errori"
+    },
+    {
+      "resource_id": "res-u10-welcome",
+      "label": "Il primo contatto: salutare e verificare"
+    },
+    {
+      "resource_id": "res-u10-phrases",
+      "label": "Italiano professionale per dare il benvenuto"
+    },
+    {
+      "resource_id": "res-u10-waiting",
+      "label": "Attesa, richieste e passaggio al responsabile"
+    },
+    {
+      "resource_id": "res-u10-roleplay",
+      "label": "Simulazione: dalla porta al tavolo"
+    },
+    {
+      "resource_id": "res-u10-quiz",
+      "label": "Quiz accoglienza: scegli il prossimo gesto"
+    },
+    {
+      "resource_id": "res-u10-checklist",
+      "label": "Checklist osservatore per la simulazione"
+    },
+    {
+      "resource_id": "res-u17-method",
+      "label": "HACCP: dal pericolo al controllo"
+    },
+    {
+      "resource_id": "res-u17-hazards",
+      "label": "Contaminazioni: riconoscere il percorso"
+    },
+    {
+      "resource_id": "res-u17-hygiene",
+      "label": "Mani, materiali puliti e sanificazione"
+    },
+    {
+      "resource_id": "res-u17-storage",
+      "label": "Temperature e conservazione: controllare e segnalare"
+    },
+    {
+      "resource_id": "res-u17-cases",
+      "label": "Cinque casi: che cosa fai e chi avvisi?"
+    },
+    {
+      "resource_id": "res-u17-quiz",
+      "label": "Quiz HACCP: decisioni in sala e bar"
+    },
+    {
+      "resource_id": "res-u17-checklist",
+      "label": "Checklist didattica: osservare, controllare, segnalare"
+    },
+    {
+      "resource_id": "res-u1-sistema",
+      "label": "Il ristorante come sistema"
+    },
+    {
+      "resource_id": "res-u1-servizio",
+      "label": "Servizio informale, curato e formale"
+    },
+    {
+      "resource_id": "res-u1-standard",
+      "label": "Locale, menu, cliente e standard"
+    },
+    {
+      "resource_id": "res-u1-activity",
+      "label": "Analizza un locale"
+    },
+    {
+      "resource_id": "res-u1-quiz",
+      "label": "Verifica guidata · Unità 01"
+    },
+    {
+      "resource_id": "res-u1-checklist",
+      "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u2-competenze",
+      "label": "Conoscenza, pratica e responsabilità"
+    },
+    {
+      "resource_id": "res-u2-presentazione",
+      "label": "Presentazione personale e rispetto"
+    },
+    {
+      "resource_id": "res-u2-squadra",
+      "label": "Affidabilità e comunicazione con la squadra"
+    },
+    {
+      "resource_id": "res-u2-activity",
+      "label": "Comportamenti professionali in situazione"
+    },
+    {
+      "resource_id": "res-u2-quiz",
+      "label": "Verifica guidata · Unità 02"
+    },
+    {
+      "resource_id": "res-u2-checklist",
+      "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u3-responsabile",
+      "label": "Responsabile di sala e riferimento del turno"
+    },
+    {
+      "resource_id": "res-u3-ruoli",
+      "label": "Chef de rang, commis, runner e rango"
+    },
+    {
+      "resource_id": "res-u3-briefing",
+      "label": "Briefing e richiesta di aiuto"
+    },
+    {
+      "resource_id": "res-u3-activity",
+      "label": "Disegna la brigata e trasmetti una richiesta"
+    },
+    {
+      "resource_id": "res-u3-quiz",
+      "label": "Verifica guidata · Unità 03"
+    },
+    {
+      "resource_id": "res-u3-checklist",
+      "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u4-sala",
+      "label": "Sala: spazio del cliente e spazio operativo"
+    },
+    {
+      "resource_id": "res-u4-office",
+      "label": "Office: pulito, sporco e supporto"
+    },
+    {
+      "resource_id": "res-u4-pass",
+      "label": "Pass, bar, cassa e magazzino"
+    },
+    {
+      "resource_id": "res-u4-activity",
+      "label": "Mappa del flusso di servizio"
+    },
+    {
+      "resource_id": "res-u4-quiz",
+      "label": "Verifica guidata · Unità 04"
+    },
+    {
+      "resource_id": "res-u4-checklist",
+      "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u5-tavola",
+      "label": "Posate, bicchieri e piatti"
+    },
+    {
+      "resource_id": "res-u5-tovagliato",
+      "label": "Tovagliato e materiali di servizio"
+    },
+    {
+      "resource_id": "res-u5-vassoio",
+      "label": "Vassoio, comanda e strumenti digitali"
+    },
+    {
+      "resource_id": "res-u5-dimostrazione",
+      "label": "Prima l’equilibrio, poi il carico"
+    },
+    {
+      "resource_id": "res-u5-activity",
+      "label": "Prepara e controlla una postazione"
+    },
+    {
+      "resource_id": "res-u5-quiz",
+      "label": "Verifica guidata · Unità 05"
+    },
+    {
+      "resource_id": "res-u5-checklist",
+      "label": "Controlla il tuo lavoro"
+    }
+  ],
+  "runtime": {
+    "src/lib/classroom-client.ts": "ce9c445197c16b18f3b0dec41bad24e6906493d2b2e6810adc51434e1733968e",
+    "src/lib/static-classroom.ts": "81ad059fa292bb742bde9d1c6954459daeaa9e2b3f092744420ad580ec9cbdd1"
+  }
+}

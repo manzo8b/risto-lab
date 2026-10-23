@@ -4,7 +4,7 @@ import {withBase} from '../lib/urls';
 import Icon from './Icon.astro';
 import {resources,units,program,classroomSequence} from '../instructor/data/catalog';import {isClassroomApproved} from '../lib/resources';import {blockLabels,sessionLabels} from '../lib/teaching';
 const selected=units.find(()=>false);const session={id:'',title:'',date:'',program_id:program.id,unit_ids:[] as string[],start_time:'09:00',planned_end_time:'10:00',actual_end_time:null,status:'DRAFT',blocks:[],created_at:'',updated_at:'',revision:0};
-const available=resources.filter(r=>isClassroomApproved(r)&&r.visibility!=='TEACHER').map(r=>({id:r.id,title:r.title,type:r.type,unit_ids:r.unit_ids,description:r.description||'',keywords:[...r.topics,...r.keywords].join(' ')}));
+const available=resources.filter(r=>isClassroomApproved(r)&&r.visibility!=='TEACHER').map(r=>({id:r.id,title:r.title,type:r.type,unit_ids:r.unit_ids,recommended_minutes:r.recommended_minutes,description:r.description||'',keywords:[...r.topics,...r.keywords].join(' ')}));
 const requested=null;const rejected=requested&&!available.some(r=>r.id===requested);const json=JSON.stringify({session,available,firstSequence:classroomSequence.map(p=>p.resource_id),unitTitles:Object.fromEntries(units.map(u=>[u.id,u.title])),requested:rejected?null:requested}).replace(/</g,'\\u003c');
 ---
 {rejected&&<p class="notice" role="alert">Questa risorsa non è ancora approvata per Aula. <a href={withBase("/instructor/revisione/")}>Apri revisione</a></p>}

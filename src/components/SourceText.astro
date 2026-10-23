@@ -4,7 +4,8 @@ const {text}=Astro.props;
 const blocks=text.split(/\n\n+/).filter(Boolean).flatMap(block=>{
  const lines=block.split('\n');
  const first=lines[0];
- return first.startsWith('## ')?[{kind:'heading',text:first.replace(/^## /,''),items:[]},{kind:'body',text:lines.slice(1).join('\n'),items:[]}]:[{kind:lines.every(l=>/^[-•] /.test(l))?'list':lines.every(l=>/^\d+\. /.test(l))?'ordered':'body',text:block,items:lines}];
+ return first.startsWith('## ')?[{kind:'heading',text:first.replace(/^## /,''),items:[]},{kind:'body',text:lines.slice(1).join('\n'),items:[]}]:[{kind:lines.every(l=>l.startsWith('|'))?'table':lines.every(l=>/^[-•] /.test(l))?'list':lines.every(l=>/^\d+\. /.test(l))?'ordered':'body',text:block,items:lines}];
 });
 ---
-<div class="source-text">{blocks.map(block=>block.kind==='heading'?<h3>{block.text}</h3>:block.kind==='list'?<ul>{block.items.map(l=><li>{l.slice(2)}</li>)}</ul>:block.kind==='ordered'?<ol>{block.items.map(l=><li>{l.replace(/^\d+\. /,'')}</li>)}</ol>:block.text&&<p>{block.text}</p>)}</div>
+<div class="source-text">{blocks.map(block=>block.kind==='heading'?<h3>{block.text}</h3>:block.kind==='table'?<div class="source-table"><table><thead><tr>{block.items[0].split('|').slice(1,-1).map(cell=><th scope="col">{cell.trim()}</th>)}</tr></thead><tbody>{block.items.slice(2).map(row=><tr>{row.split('|').slice(1,-1).map(cell=><td>{cell.trim()}</td>)}</tr>)}</tbody></table></div>:block.kind==='list'?<ul>{block.items.map(l=><li>{l.slice(2)}</li>)}</ul>:block.kind==='ordered'?<ol>{block.items.map(l=><li>{l.replace(/^\d+\. /,'')}</li>)}</ol>:block.text&&<p>{block.text}</p>)}</div>
+<style>.source-table{overflow-x:auto;margin:1rem 0}.source-table table{width:100%;border-collapse:collapse;text-align:left}.source-table th,.source-table td{padding:.7rem;border-bottom:1px solid var(--line,#ddd);vertical-align:top}.source-table th{font-weight:600}</style>

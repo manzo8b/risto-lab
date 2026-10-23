@@ -9,3 +9,5 @@ Le cinque unità sono CLASSROOM_READY per un’introduzione guidata, non COMPLET
 Il retest umano contiene soltanto tre prove ed è pronto senza voti assegnati. Prossima fase raccomandata dopo il confronto umano: 6B — Service Operations Cluster.
 
 Validazione locale: 26 test di modello + 26 test browser PASS; check, build statica e audit collegamenti PASS. Nessuna chiave API o risorsa privata nella produzione. Originali verificati: 34.893, zero variazioni. Le viste di proiezione sono estratti brevi, le cinque schede stanno ciascuna in una pagina A4 e sono state renderizzate e ispezionate. I risultati tecnici non sostituiscono la prova umana dei contenuti.
+
+Pubblicato sul repository e su GitHub Pages attraverso il workflow esistente: [deploy 39991112653](https://github.com/manzo8b/risto-lab/actions/runs/39991112653). Live QA PASS su unità 01–06, programma, Biblioteca, ricerca, compositore, AI e Aula; cinque stampabili accessibili. La bozza live non è stata trasformata in una lezione reale salvata. Human test READY. Nessun servizio cloud, account o migrazione aggiuntiva attivato.

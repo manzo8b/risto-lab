@@ -39,3 +39,5 @@ form.addEventListener('input',e=>{if((e.target as HTMLElement).closest('fieldset
 
 
 if(new URL(location.href).searchParams.get('avvia')==='1')el('launch-teaching').click();
+
+const aiLink=el<HTMLAnchorElement>('session-ai');function updateAIEntry(){const q=new URLSearchParams({task:'lesson'});if(session.id)q.set('session',session.id);const u=fields().unit_ids[0];if(u)q.set('unit',u);aiLink.href=withBase('/instructor/ai/?')+q;aiLink.textContent=dirty?(session.id?'✦ RISTO-LAB AI · usa il piano salvato':'✦ RISTO-LAB AI · contesto dell’unità'):'✦ Chiedi a RISTO-LAB AI';}form.addEventListener('input',updateAIEntry);form.addEventListener('change',updateAIEntry);form.addEventListener('submit',()=>setTimeout(updateAIEntry,0));updateAIEntry();

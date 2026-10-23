@@ -1,0 +1,5 @@
+---
+import {currentInstructor} from '../lib/instructor-profile';
+const profile=Astro.props.profile===undefined?currentInstructor:Astro.props.profile;
+---
+{profile&&<div class="instructor-profile" aria-label="Profilo docente"><span class="profile-initials" aria-hidden="true">{profile.initials}</span><div><strong>{profile.firstName||profile.displayName}</strong><small>{profile.roleLabel}</small></div></div>}

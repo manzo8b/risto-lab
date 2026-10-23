@@ -2,10 +2,11 @@
 import type {ProgramUnit,Resource} from '../types/content';
 import Card from './ResourceCard.astro';
 import {collections,program} from '../instructor/data/catalog';
-import {typeLabels} from '../lib/resources';
+import {typeLabels,isClassroomApproved} from '../lib/resources';
 import {teachingKinds} from '../lib/presentation';
 interface Props{resources:Resource[];units:ProgramUnit[]}
 const {resources,units}=Astro.props;
+const orderedResources=resources.toSorted((a,b)=>Number(isClassroomApproved(b))-Number(isClassroomApproved(a)));
 const nonTopics=new Set([...collections.map(c=>c.title),program.title,...teachingKinds.map(([,label])=>label),'Quiz','Slide','Laboratorio','Dispensa','Guida docente','Infografica','Illustrazione','Sfondo','Elementi grafici','Testo normativo','Linee guida','Checklist','Capitoli del manuale']);
 const topics=[...new Set(resources.flatMap(r=>r.topics))].filter(t=>!nonTopics.has(t));
 const formats=[...new Set(resources.map(r=>r.format||'Riferimento'))].sort();
@@ -21,7 +22,7 @@ const formats=[...new Set(resources.map(r=>r.format||'Riferimento'))].sort();
 </form>
 <div id="filter-chips" class="filter-chips" aria-label="Filtri attivi"></div><div class="section-heading"><p id="result-count" role="status" aria-live="polite">{resources.length} risorse trovate</p><button id="clear" class="secondary" type="button">Azzera filtri</button></div>
 <div id="no-results" class="empty-state" hidden={resources.length>0} role="status"></div>
-<div class="grid" id="results" hidden={resources.length===0}>{resources.map(resource=><Card resource={resource} unitTitles={Object.fromEntries(units.map(u=>[u.id,u.title]))} collectionTitle={collections.find(c=>c.id===resource.collection_id)?.title}/>)}</div>
+<div class="grid" id="results" hidden={resources.length===0}>{orderedResources.map(resource=><Card resource={resource} unitTitles={Object.fromEntries(units.map(u=>[u.id,u.title]))} collectionTitle={collections.find(c=>c.id===resource.collection_id)?.title}/>)}</div>
 <script>
 import {normalize,matchesQuery} from '../lib/search';
 const form=document.querySelector<HTMLFormElement>('#search-form')!;

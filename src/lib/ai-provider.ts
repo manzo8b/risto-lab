@@ -1,0 +1,3 @@
+export interface RistoLabAIProvider{name:string;availability:'COPY_AND_CHATGPT'|'VALIDATED_PLUGIN_LINK';launchUrl:string|null;fallbackUrl:string;instructions:string}
+export class ChatGPTRistoLabPluginProvider implements RistoLabAIProvider{readonly name='ChatGPT / RISTO-LAB';readonly availability='COPY_AND_CHATGPT' as const;readonly launchUrl=null;readonly fallbackUrl='https://chatgpt.com/';readonly instructions='Copia la richiesta, apri ChatGPT e incollala. Se RISTO-LAB è disponibile nel tuo account, selezionalo prima di inviare. Il sito non invia richieste automaticamente.';}
+export const aiProvider:RistoLabAIProvider=new ChatGPTRistoLabPluginProvider();

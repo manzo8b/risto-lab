@@ -1,0 +1,75 @@
+{
+  "unit": {
+    "id": "unit-06",
+    "program_id": "il-servizio-in-sala",
+    "order": 6,
+    "title": "La mise en place",
+    "slug": "06-la-mise-en-place",
+    "status": "PARTIAL",
+    "manual_page": 38,
+    "resource_ids": [
+      "res-chapter-06",
+      "res-mep-text",
+      "res-mep-exercise",
+      "res-mep-quiz",
+      "res-mep-checklist",
+      "res-mep-pdf",
+      "res-mep-image",
+      "res-mep-table",
+      "res-mep-errors",
+      "res-manual-pdf",
+      "res-mep-video",
+      "res-visual-ciclo-servizio",
+      "res-visual-mise-fondo",
+      "res-food-852"
+    ],
+    "lesson_ids": [],
+    "last_reviewed": null,
+    "objectives": [
+      "Capire che cosa significa mise en place e perche e importante nel lavoro di sala."
+    ],
+    "overview": "Preparare il tavolo con ordine, pulizia e logica, adattando la mise en place al locale e al servizio.",
+    "chapter_resource_id": "res-chapter-06"
+  },
+  "resource_checksums": {
+    "res-mep-text": "5627653f4f4eda52bf2a4b3325965f583743ff8c04473eabbf44b1ba4cee5316",
+    "res-mep-exercise": "5627653f4f4eda52bf2a4b3325965f583743ff8c04473eabbf44b1ba4cee5316",
+    "res-mep-quiz": "6c481de8a7b45e002264ad6146dcb1dbca7e48dfe89e86c4eedb6c56286065b3",
+    "res-mep-checklist": "2ae5d895d5686a5e62ee52b61ecefe6b775722c39fb07f675e59a8fb73fc39ec",
+    "res-mep-pdf": "2ae5d895d5686a5e62ee52b61ecefe6b775722c39fb07f675e59a8fb73fc39ec",
+    "res-mep-image": "25e2f21c144b9a2877c65c4cc1a605c4cc52e2615b9b7174be37b6d535b665c9",
+    "res-mep-table": "1dcdc1f4b6250d1f299934b11493f38577dab1d63e1a0bc2d6978bc644b11532",
+    "res-mep-errors": "d0c19124bafd56b4bfc8c8b508d8357b24131e9f68c9dbb68c2468fa45902b17",
+    "res-mep-video": "0668d5bfd19b7c57173f52e166d922d94f318bd7c985fab3d35304fd16428516"
+  },
+  "sequence": [
+    {
+      "resource_id": "res-mep-text",
+      "label": "Comprendere"
+    },
+    {
+      "resource_id": "res-mep-image",
+      "label": "Osservare le fasi"
+    },
+    {
+      "resource_id": "res-mep-table",
+      "label": "Osservare la tavola"
+    },
+    {
+      "resource_id": "res-mep-exercise",
+      "label": "Esercitarsi"
+    },
+    {
+      "resource_id": "res-mep-quiz",
+      "label": "Verificare"
+    },
+    {
+      "resource_id": "res-mep-checklist",
+      "label": "Controllare"
+    },
+    {
+      "resource_id": "res-mep-errors",
+      "label": "Riepilogare gli errori"
+    }
+  ]
+}

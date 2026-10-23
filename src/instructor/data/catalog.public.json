@@ -213,16 +213,30 @@
       "order": 10,
       "title": "L'accoglienza del cliente",
       "slug": "10-l-accoglienza-del-cliente",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 64,
       "resource_ids": [
         "res-chapter-10",
         "res-visual-ciclo-servizio",
-        "res-visual-cliente"
+        "res-visual-cliente",
+        "res-u10-welcome",
+        "res-u10-phrases",
+        "res-u10-waiting",
+        "res-u10-roleplay",
+        "res-u10-quiz",
+        "res-u10-checklist",
+        "res-u10-print"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-10"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-10",
+      "overview": "Saluto, verifica, attesa e accompagnamento: una sequenza da provare con dialoghi e simulazioni.",
+      "objectives": [
+        "Salutare e verificare prenotazione/coperti in una scena di ingresso",
+        "Comunicare un’attesa dopo averla verificata con la squadra",
+        "Accompagnare al tavolo e indicare il passaggio successivo",
+        "Riferire una richiesta delicata senza improvvisare"
+      ]
     },
     {
       "id": "unit-11",
@@ -348,7 +362,7 @@
       "order": 17,
       "title": "HACCP",
       "slug": "17-haccp",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 94,
       "resource_ids": [
         "res-chapter-17",
@@ -360,11 +374,26 @@
         "res-food-pericoli",
         "res-food-1169",
         "res-food-178",
-        "res-food-852"
+        "res-food-852",
+        "res-u17-method",
+        "res-u17-hazards",
+        "res-u17-hygiene",
+        "res-u17-storage",
+        "res-u17-cases",
+        "res-u17-quiz",
+        "res-u17-checklist",
+        "res-u17-print"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-17"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-17",
+      "overview": "Riconoscere i pericoli, applicare le procedure e segnalare: una base pratica per sala e bar.",
+      "objectives": [
+        "Distinguere pericolo, rischio e misura di controllo in un caso",
+        "Individuare un percorso tra sporco e pulito e come interromperlo",
+        "Descrivere quale procedura verificare su conservazione e sanificazione",
+        "Segnalare un’anomalia e registrare solo controlli realmente svolti"
+      ]
     },
     {
       "id": "unit-18",
@@ -6159,6 +6188,1779 @@
         "evidence": "Owner statement in chat 2026-10-22: sono tutti fatti da me e pubblici",
         "scope": "public repository and website"
       }
+    },
+    {
+      "id": "res-u10-welcome",
+      "title": "Il primo contatto: salutare e verificare",
+      "description": "Apertura con tre situazioni di ingresso. Usala per dimostrare un saluto e verificare i dati prima di accompagnare.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-10"
+      ],
+      "topics": [
+        "accoglienza",
+        "cliente",
+        "comunicazione",
+        "benvenuto"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "11f7f84f632fff554b5359b677e54b621f0712887246716c5c206bcd077d0a9d",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "Accogliere significa far capire al cliente che è stato visto, ascoltato e orientato.\n\nSe stai finendo un compito, riconosci la presenza del cliente: «Buonasera, arrivo appena concludo questo passaggio». Non promettere tempi impossibili.\n\nChiedi se ha prenotato e per quante persone. Verifica nome, coperti, disponibilità e tavolo realmente pronto. Comunica con la squadra prima di accompagnare.\n\nAccompagna con passo regolare: non indicare il tavolo da lontano. Offri aiuto quando è utile e gradito, poi spiega il passaggio successivo, per esempio la consegna del menu.",
+      "reading": "Accogliere significa far capire al cliente che è stato visto, ascoltato e orientato.\n\nSe stai finendo un compito, riconosci la presenza del cliente: «Buonasera, arrivo appena concludo questo passaggio». Non promettere tempi impossibili.\n\nChiedi se ha prenotato e per quante persone. Verifica nome, coperti, disponibilità e tavolo realmente pronto. Comunica con la squadra prima di accompagnare.\n\nAccompagna con passo regolare: non indicare il tavolo da lontano. Offri aiuto quando è utile e gradito, poi spiega il passaggio successivo, per esempio la consegna del menu.",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u10-welcome",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "11f7f84f632fff554b5359b677e54b621f0712887246716c5c206bcd077d0a9d",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "simulazione",
+        "prenotazione",
+        "attesa",
+        "A2 B1"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u10-welcome-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "11f7f84f632fff554b5359b677e54b621f0712887246716c5c206bcd077d0a9d",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u10-welcome-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "projector_pages": [
+        {
+          "title": "Che cosa percepisce il cliente?",
+          "body": "Entra un cliente mentre stai lavorando.\nCome gli fai capire che lo hai visto, senza abbandonare un passaggio delicato?"
+        },
+        {
+          "title": "Prima di accompagnare",
+          "body": "Conferma prenotazione e numero di persone.\nVerifica disponibilità e tavolo pronto.\nAvvisa la squadra e accompagna con passo regolare."
+        }
+      ]
+    },
+    {
+      "id": "res-u10-phrases",
+      "title": "Italiano professionale per dare il benvenuto",
+      "description": "Frasi brevi per prenotazione, disponibilità e accompagnamento. Da provare a coppie con italiano A2–B1.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-10"
+      ],
+      "topics": [
+        "accoglienza",
+        "cliente",
+        "comunicazione",
+        "benvenuto"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "2f15fbd890c2f74daa8469ae6a31f50973c78d0a902681c09fd2c5f439e5ff3b",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "«Buongiorno, benvenuti. Avete una prenotazione?»\n«A quale nome? Per quante persone?»\n«Controllo subito la disponibilità.»\n«Prego, vi accompagno al tavolo.»\n«Potete accomodarvi qui. Vi porto il menu.»\n\nSe non hai capito: «Mi scusi, può ripetere più lentamente?» Usa una domanda per verificare il bisogno, senza dedurlo da aspetto o provenienza. Non spostare oggetti personali o ausili senza consenso.\n\nA coppie, sostituite il numero di persone e la richiesta del cliente. Usate una frase alla volta, tono calmo e indicazioni chiare.",
+      "reading": "«Buongiorno, benvenuti. Avete una prenotazione?»\n«A quale nome? Per quante persone?»\n«Controllo subito la disponibilità.»\n«Prego, vi accompagno al tavolo.»\n«Potete accomodarvi qui. Vi porto il menu.»\n\nSe non hai capito: «Mi scusi, può ripetere più lentamente?» Usa una domanda per verificare il bisogno, senza dedurlo da aspetto o provenienza. Non spostare oggetti personali o ausili senza consenso.\n\nA coppie, sostituite il numero di persone e la richiesta del cliente. Usate una frase alla volta, tono calmo e indicazioni chiare.",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u10-phrases",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "2f15fbd890c2f74daa8469ae6a31f50973c78d0a902681c09fd2c5f439e5ff3b",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "simulazione",
+        "prenotazione",
+        "attesa",
+        "A2 B1"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u10-phrases-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "2f15fbd890c2f74daa8469ae6a31f50973c78d0a902681c09fd2c5f439e5ff3b",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u10-phrases-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "projector_pages": [
+        {
+          "title": "Frasi da provare",
+          "body": "Buongiorno, benvenuti.\nAvete una prenotazione?\nControllo subito la disponibilità.\nPrego, vi accompagno al tavolo."
+        },
+        {
+          "title": "Verifica, non indovinare",
+          "body": "Mi scusi, può ripetere più lentamente?\nQuale lingua preferisce?\nOffri aiuto e attendi il consenso."
+        }
+      ]
+    },
+    {
+      "id": "res-u10-waiting",
+      "title": "Attesa, richieste e passaggio al responsabile",
+      "description": "Casi di tavolo non pronto e informazioni delicate. Serve a discutere cosa verificare e cosa riferire al responsabile.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-10"
+      ],
+      "topics": [
+        "accoglienza",
+        "cliente",
+        "comunicazione",
+        "benvenuto"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "f932079159bd75248378d8f63903a7d2b37f489c893e5f2f9fb38971c2abd959",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "Tavolo non pronto: «Il tavolo è in preparazione. Verifico il tempo necessario e torno da voi». Chiedi un tempo realistico e aggiorna se cambia. Non inventare «cinque minuti» per chiudere la conversazione.\n\nUna richiesta semplice, come un tovagliolo pulito, si può gestire secondo il proprio ruolo. Per una prenotazione non trovata, una lamentela o una richiesta fuori dal tuo margine, coinvolgi il responsabile e riferisci il problema con chiarezza.\n\nSe il cliente chiede allergeni e non sei certo, non garantire l’assenza di un ingrediente: verifica con le informazioni e la persona competente del locale. «Un momento, verifico con il responsabile».",
+      "reading": "Tavolo non pronto: «Il tavolo è in preparazione. Verifico il tempo necessario e torno da voi». Chiedi un tempo realistico e aggiorna se cambia. Non inventare «cinque minuti» per chiudere la conversazione.\n\nUna richiesta semplice, come un tovagliolo pulito, si può gestire secondo il proprio ruolo. Per una prenotazione non trovata, una lamentela o una richiesta fuori dal tuo margine, coinvolgi il responsabile e riferisci il problema con chiarezza.\n\nSe il cliente chiede allergeni e non sei certo, non garantire l’assenza di un ingrediente: verifica con le informazioni e la persona competente del locale. «Un momento, verifico con il responsabile».",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u10-waiting",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "f932079159bd75248378d8f63903a7d2b37f489c893e5f2f9fb38971c2abd959",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "simulazione",
+        "prenotazione",
+        "attesa",
+        "A2 B1"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u10-waiting-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "f932079159bd75248378d8f63903a7d2b37f489c893e5f2f9fb38971c2abd959",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u10-waiting-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "projector_pages": [
+        {
+          "title": "Tavolo non pronto",
+          "body": "Verifica il tempo con la squadra.\nDai un’informazione realistica.\nAggiorna il cliente quando cambia la situazione."
+        },
+        {
+          "title": "Una domanda sugli allergeni",
+          "body": "Non inventare e non rassicurare senza verifica.\nRaccogli la richiesta e coinvolgi la persona competente.\nComunica al cliente il prossimo passaggio."
+        }
+      ]
+    },
+    {
+      "id": "res-u10-roleplay",
+      "title": "Simulazione: dalla porta al tavolo",
+      "description": "Attività in terne con cliente, addetto e osservatore. Prevede ripetizione e feedback su cinque azioni osservabili.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-10"
+      ],
+      "topics": [
+        "accoglienza",
+        "cliente",
+        "comunicazione",
+        "benvenuto"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "37507830f0dfdc3fabe1b71480dcdfe75c225ae5b48ee163f0cf1085644eba1e",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "Lavorate in terne: cliente, addetto, osservatore.\n\nPrimo giro: due clienti con prenotazione arrivano mentre l’addetto conclude un compito. Il tavolo è pronto. Dopo il menu chiedono se un piatto contiene latticini.\n\nSecondo giro: clienti senza prenotazione, tavolo non ancora disponibile. L’addetto deve verificare e comunicare l’attesa, senza inventare un tempo.\n\nIn 15 minuti: 2 minuti per distribuire i ruoli; 4 per il primo giro; 2 di feedback; 4 per ripetere con ruoli diversi; 3 di confronto.\n\nL’osservatore controlla: saluto e sguardo; verifica di prenotazione/coperti; controllo del tavolo; accompagnamento e prossimo passaggio; richiesta di aiuto corretta. Indica un comportamento riuscito e uno da riprovare.",
+      "reading": "Lavorate in terne: cliente, addetto, osservatore.\n\nPrimo giro: due clienti con prenotazione arrivano mentre l’addetto conclude un compito. Il tavolo è pronto. Dopo il menu chiedono se un piatto contiene latticini.\n\nSecondo giro: clienti senza prenotazione, tavolo non ancora disponibile. L’addetto deve verificare e comunicare l’attesa, senza inventare un tempo.\n\nIn 15 minuti: 2 minuti per distribuire i ruoli; 4 per il primo giro; 2 di feedback; 4 per ripetere con ruoli diversi; 3 di confronto.\n\nL’osservatore controlla: saluto e sguardo; verifica di prenotazione/coperti; controllo del tavolo; accompagnamento e prossimo passaggio; richiesta di aiuto corretta. Indica un comportamento riuscito e uno da riprovare.",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u10-roleplay",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "37507830f0dfdc3fabe1b71480dcdfe75c225ae5b48ee163f0cf1085644eba1e",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "simulazione",
+        "prenotazione",
+        "attesa",
+        "A2 B1"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u10-roleplay-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "37507830f0dfdc3fabe1b71480dcdfe75c225ae5b48ee163f0cf1085644eba1e",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u10-roleplay-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "EXERCISE",
+      "projector_pages": [
+        {
+          "title": "Simulazione in terne",
+          "body": "Cliente, addetto, osservatore.\nSaluta, verifica, accompagna e indica il passaggio successivo.\nSe chiedono allergeni, verifica: non improvvisare."
+        },
+        {
+          "title": "Secondo giro e feedback",
+          "body": "Senza prenotazione: il tavolo non è pronto.\nQuale informazione verifichi prima di parlare?\nL’osservatore segnala un punto riuscito e uno da riprovare."
+        }
+      ]
+    },
+    {
+      "id": "res-u10-quiz",
+      "title": "Quiz accoglienza: scegli il prossimo gesto",
+      "description": "Otto situazioni brevi su saluto, attesa, accompagnamento e richieste. Usale dopo la simulazione.",
+      "type": "QUIZ",
+      "unit_ids": [
+        "unit-10"
+      ],
+      "topics": [
+        "accoglienza",
+        "cliente",
+        "comunicazione",
+        "benvenuto"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "a37f908b2044ff690f2e75efb57caa6a989456753c0f1ba6c77e9d2516fff759",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "",
+      "reading": "",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u10-quiz",
+      "resource_type": "QUIZ",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "a37f908b2044ff690f2e75efb57caa6a989456753c0f1ba6c77e9d2516fff759",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "simulazione",
+        "prenotazione",
+        "attesa",
+        "A2 B1"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u10-quiz-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "a37f908b2044ff690f2e75efb57caa6a989456753c0f1ba6c77e9d2516fff759",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u10-quiz-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "QUIZ",
+      "questions": [
+        {
+          "question": "Sei occupato e un cliente entra: quale risposta mantiene il contatto?",
+          "options": [
+            "Ignorarlo fino a quando sei libero",
+            "Riconoscerlo e spiegare che arrivi appena concluso il passaggio",
+            "Dire un’attesa precisa senza verificare"
+          ],
+          "answer": 1,
+          "explanation": "La presenza viene riconosciuta senza una promessa impossibile."
+        },
+        {
+          "question": "Un cliente arriva senza prenotazione: prima di accompagnarlo…",
+          "options": [
+            "Lo lasci scegliere un tavolo",
+            "Garantisci un posto anche se non hai controllato",
+            "Verifichi persone, disponibilità e tavolo pronto"
+          ],
+          "answer": 2,
+          "explanation": "La disponibilità deve essere verificata con l’organizzazione del locale."
+        },
+        {
+          "question": "Il tavolo non è pronto: cosa dici?",
+          "options": [
+            "Verifico il tempo necessario e torno da voi",
+            "Cinque minuti, anche se non lo sai",
+            "È colpa della cucina"
+          ],
+          "answer": 0,
+          "explanation": "Il tempo va verificato e aggiornato, non inventato."
+        },
+        {
+          "question": "Il cliente chiede se un piatto contiene latte e non sei sicuro",
+          "options": [
+            "Garantisci che non lo contiene",
+            "Verifichi con la persona competente del locale",
+            "Suggerisci di assaggiarlo"
+          ],
+          "answer": 1,
+          "explanation": "Ingredienti e allergeni richiedono un’informazione verificata."
+        },
+        {
+          "question": "Come accompagni al tavolo?",
+          "options": [
+            "Indichi da lontano e ti allontani",
+            "Cammini velocemente senza controllare il gruppo",
+            "Guidi con passo regolare e verifichi che il gruppo ti segua"
+          ],
+          "answer": 2,
+          "explanation": "Accompagnare è guidare con ordine e attenzione."
+        },
+        {
+          "question": "Non hai capito una richiesta",
+          "options": [
+            "Chiedi di ripetere con calma e una frase semplice",
+            "Fingi di aver capito",
+            "Parli più forte senza fare domande"
+          ],
+          "answer": 0,
+          "explanation": "Verificare la comprensione evita risposte basate su supposizioni."
+        },
+        {
+          "question": "Il cliente è nervoso per l’attesa",
+          "options": [
+            "Rispondi con lo stesso tono",
+            "Mantieni calma, verifichi e coinvolgi il responsabile se serve",
+            "Lo ignori"
+          ],
+          "answer": 1,
+          "explanation": "La calma e il passaggio corretto delle informazioni sostengono il servizio."
+        },
+        {
+          "question": "Il cliente può aver bisogno di aiuto per accomodarsi",
+          "options": [
+            "Sposti subito i suoi oggetti personali",
+            "Decidi il bisogno dal suo aspetto",
+            "Offri aiuto e attendi il consenso"
+          ],
+          "answer": 2,
+          "explanation": "L’aiuto va offerto senza sostituire la scelta della persona."
+        }
+      ]
+    },
+    {
+      "id": "res-u10-checklist",
+      "title": "Checklist osservatore per la simulazione",
+      "description": "Griglia breve per osservare la scena e dare feedback. È uno strumento didattico, non una valutazione del personale.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-10"
+      ],
+      "topics": [
+        "accoglienza",
+        "cliente",
+        "comunicazione",
+        "benvenuto"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "a28bfd21f66f81c84f4a313dd71e5622192e315ae5d46820f114be1b542eb68f",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "- Riconosco il cliente con saluto e sguardo\n- Verifico prenotazione, coperti e disponibilità\n- Controllo che il tavolo sia pronto\n- Accompagno con passo regolare e offro aiuto se gradito\n- Comunico il passaggio successivo\n- Verifico le informazioni delicate e coinvolgo il responsabile\n- Dico quale gesto è riuscito\n- Scelgo un gesto da ripetere nel giro successivo",
+      "reading": "- Riconosco il cliente con saluto e sguardo\n- Verifico prenotazione, coperti e disponibilità\n- Controllo che il tavolo sia pronto\n- Accompagno con passo regolare e offro aiuto se gradito\n- Comunico il passaggio successivo\n- Verifico le informazioni delicate e coinvolgo il responsabile\n- Dico quale gesto è riuscito\n- Scelgo un gesto da ripetere nel giro successivo",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u10-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "a28bfd21f66f81c84f4a313dd71e5622192e315ae5d46820f114be1b542eb68f",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "simulazione",
+        "prenotazione",
+        "attesa",
+        "A2 B1"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u10-checklist-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "a28bfd21f66f81c84f4a313dd71e5622192e315ae5d46820f114be1b542eb68f",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u10-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "projector_pages": [
+        {
+          "title": "Prima del tavolo",
+          "body": "Riconosco il cliente con saluto e sguardo\nVerifico prenotazione, coperti e disponibilità\nControllo che il tavolo sia pronto"
+        },
+        {
+          "title": "Accompagnamento e richieste",
+          "body": "Accompagno con passo regolare e offro aiuto se gradito\nComunico il passaggio successivo\nVerifico le informazioni delicate e coinvolgo il responsabile"
+        },
+        {
+          "title": "Feedback",
+          "body": "Dico quale gesto è riuscito\nScelgo un gesto da ripetere nel giro successivo"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Prima del tavolo",
+          "items": [
+            "Riconosco il cliente con saluto e sguardo",
+            "Verifico prenotazione, coperti e disponibilità",
+            "Controllo che il tavolo sia pronto"
+          ]
+        },
+        {
+          "title": "Accompagnamento e richieste",
+          "items": [
+            "Accompagno con passo regolare e offro aiuto se gradito",
+            "Comunico il passaggio successivo",
+            "Verifico le informazioni delicate e coinvolgo il responsabile"
+          ]
+        },
+        {
+          "title": "Feedback",
+          "items": [
+            "Dico quale gesto è riuscito",
+            "Scelgo un gesto da ripetere nel giro successivo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u17-method",
+      "title": "HACCP: dal pericolo al controllo",
+      "description": "Introduzione a pericolo, rischio e controllo preventivo. Presenta i sette principi a livello didattico, senza costruire il piano di un’impresa.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-17"
+      ],
+      "topics": [
+        "HACCP",
+        "igiene",
+        "contaminazione",
+        "temperature",
+        "sicurezza alimentare"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "96657cddef683bd93454ef08b3ff02457b5de98b86cb44cd1d89be8e3033363f",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "HACCP significa Hazard Analysis and Critical Control Points: analisi dei pericoli e punti critici di controllo. È un metodo preventivo nella gestione della sicurezza alimentare, non un attestato o un raccoglitore da firmare.\n\nPericolo: un agente o una condizione che può causare danno, per esempio detergente vicino a bicchieri puliti. Rischio: probabilità e gravità del danno nel contesto. Una misura di controllo previene o riduce il rischio. Non ogni controllo quotidiano è un CCP: i punti critici e i limiti sono definiti nel piano del locale.\n\nI sette principi: analizzare i pericoli; individuare i CCP; definire i limiti critici; monitorare; stabilire azioni correttive; verificare; documentare.\n\nIn sala e bar: rispetta le procedure, esegui i controlli assegnati, registra dati realmente osservati e segnala le anomalie. Se il controllo non è stato eseguito, non inventare il dato. Questo materiale introduttivo non sostituisce piano di autocontrollo, formazione richiesta o indicazioni competenti.",
+      "reading": "HACCP significa Hazard Analysis and Critical Control Points: analisi dei pericoli e punti critici di controllo. È un metodo preventivo nella gestione della sicurezza alimentare, non un attestato o un raccoglitore da firmare.\n\nPericolo: un agente o una condizione che può causare danno, per esempio detergente vicino a bicchieri puliti. Rischio: probabilità e gravità del danno nel contesto. Una misura di controllo previene o riduce il rischio. Non ogni controllo quotidiano è un CCP: i punti critici e i limiti sono definiti nel piano del locale.\n\nI sette principi: analizzare i pericoli; individuare i CCP; definire i limiti critici; monitorare; stabilire azioni correttive; verificare; documentare.\n\nIn sala e bar: rispetta le procedure, esegui i controlli assegnati, registra dati realmente osservati e segnala le anomalie. Se il controllo non è stato eseguito, non inventare il dato. Questo materiale introduttivo non sostituisce piano di autocontrollo, formazione richiesta o indicazioni competenti.",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u17-method",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "96657cddef683bd93454ef08b3ff02457b5de98b86cb44cd1d89be8e3033363f",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "sanificazione",
+        "catena del freddo",
+        "allergeni",
+        "pericolo",
+        "rischio",
+        "CCP"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u17-method-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "96657cddef683bd93454ef08b3ff02457b5de98b86cb44cd1d89be8e3033363f",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u17-method-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [
+        "eu-852-2004",
+        "eu-178-2002",
+        "eu-1169-2011"
+      ],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "projector_pages": [
+        {
+          "title": "Prevenire, non compilare",
+          "body": "Che cosa potrebbe arrivare al cliente?\nQuale controllo lo può prevenire?\nChi avvisi quando qualcosa non rispetta la procedura?"
+        },
+        {
+          "title": "Pericolo, rischio, controllo",
+          "body": "Detergente vicino a bicchieri puliti: identifica il pericolo.\nIl rischio dipende dal contesto.\nLa misura di controllo previene o riduce il rischio."
+        },
+        {
+          "title": "Sette principi, una logica",
+          "body": "Analizzare i pericoli e individuare i CCP.\nDefinire limiti, monitorare e correggere.\nVerificare e documentare."
+        }
+      ]
+    },
+    {
+      "id": "res-u17-hazards",
+      "title": "Contaminazioni: riconoscere il percorso",
+      "description": "Esempi biologici, chimici, fisici e comunicazione sugli allergeni. Usali per chiedere agli allievi quale passaggio interrompere.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-17"
+      ],
+      "topics": [
+        "HACCP",
+        "igiene",
+        "contaminazione",
+        "temperature",
+        "sicurezza alimentare"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "7c14804d182207e719f1bc70aa65029227a723d835d11e1046a2869636c1eb86",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "Una contaminazione può passare attraverso mani, strumenti, superfici e materiali. Esempio per sala e bar: telefono → mani non lavate → bordo del bicchiere. Mantieni separati pulito e sporco e applica la procedura di igiene prima di riprendere il servizio.\n\nPericolo biologico: microrganismi veicolati da mani, alimenti o superfici. Pericolo chimico: detergente a contatto con alimenti o materiali. Pericolo fisico: vetro o frammenti estranei.\n\nGli allergeni richiedono gestione e informazioni verificate: non sono una domanda a cui rispondere per intuizione. Se non conosci ingredienti e procedure applicabili, coinvolgi la persona competente.\n\nOsserva un caso: detergente vicino alle tazze, vetro rotto presso il banco, pinza caduta a terra. Identifica il rischio, impedisci l’uso improprio secondo il tuo ruolo e segnala il fatto al responsabile.",
+      "reading": "Una contaminazione può passare attraverso mani, strumenti, superfici e materiali. Esempio per sala e bar: telefono → mani non lavate → bordo del bicchiere. Mantieni separati pulito e sporco e applica la procedura di igiene prima di riprendere il servizio.\n\nPericolo biologico: microrganismi veicolati da mani, alimenti o superfici. Pericolo chimico: detergente a contatto con alimenti o materiali. Pericolo fisico: vetro o frammenti estranei.\n\nGli allergeni richiedono gestione e informazioni verificate: non sono una domanda a cui rispondere per intuizione. Se non conosci ingredienti e procedure applicabili, coinvolgi la persona competente.\n\nOsserva un caso: detergente vicino alle tazze, vetro rotto presso il banco, pinza caduta a terra. Identifica il rischio, impedisci l’uso improprio secondo il tuo ruolo e segnala il fatto al responsabile.",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u17-hazards",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "7c14804d182207e719f1bc70aa65029227a723d835d11e1046a2869636c1eb86",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "sanificazione",
+        "catena del freddo",
+        "allergeni",
+        "pericolo",
+        "rischio",
+        "CCP"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u17-hazards-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "7c14804d182207e719f1bc70aa65029227a723d835d11e1046a2869636c1eb86",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u17-hazards-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [
+        "eu-852-2004",
+        "eu-178-2002",
+        "eu-1169-2011"
+      ],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "projector_pages": [
+        {
+          "title": "Segui il percorso",
+          "body": "Telefono → mani non lavate → bordo del bicchiere.\nDove puoi interrompere il passaggio?"
+        },
+        {
+          "title": "Tre esempi da distinguere",
+          "body": "Mani contaminate: pericolo biologico.\nDetergente vicino alle tazze: pericolo chimico.\nFrammenti di vetro: pericolo fisico."
+        },
+        {
+          "title": "Allergeni: verifica la risposta",
+          "body": "Non indovinare gli ingredienti.\nRaccogli la richiesta del cliente.\nVerifica con la persona competente del locale."
+        }
+      ]
+    },
+    {
+      "id": "res-u17-hygiene",
+      "title": "Mani, materiali puliti e sanificazione",
+      "description": "Una dimostrazione guidata sui passaggi tra sporco e pulito. Distingue rimozione dello sporco e applicazione della procedura prevista.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-17"
+      ],
+      "topics": [
+        "HACCP",
+        "igiene",
+        "contaminazione",
+        "temperature",
+        "sicurezza alimentare"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "652350773fa799ef9ff9537aefc1ab4afccaa0db9b37a71d53f988a044b52df9",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "Lava le mani nei momenti corretti: prima di iniziare; dopo bagno, rifiuti, tosse o starnuti; dopo telefono e oggetti personali; dopo lavorazioni sporche e prima di riprendere materiali puliti, secondo la procedura del locale. Non toccare il bordo dei bicchieri o la parte delle posate che entra in bocca.\n\nPulire rimuove lo sporco. La sanificazione richiede una procedura con prodotti, metodi e tempi previsti; una superficie che sembra pulita non basta a dimostrare il controllo del rischio.\n\nPrima di usare un prodotto verifica dove si può applicare, modalità, tempo di contatto ed eventuale risciacquo. Non spruzzare vicino ad alimenti o bicchieri; separa gli strumenti destinati a usi diversi. Se manca il prodotto o non conosci la procedura, chiedi conferma.",
+      "reading": "Lava le mani nei momenti corretti: prima di iniziare; dopo bagno, rifiuti, tosse o starnuti; dopo telefono e oggetti personali; dopo lavorazioni sporche e prima di riprendere materiali puliti, secondo la procedura del locale. Non toccare il bordo dei bicchieri o la parte delle posate che entra in bocca.\n\nPulire rimuove lo sporco. La sanificazione richiede una procedura con prodotti, metodi e tempi previsti; una superficie che sembra pulita non basta a dimostrare il controllo del rischio.\n\nPrima di usare un prodotto verifica dove si può applicare, modalità, tempo di contatto ed eventuale risciacquo. Non spruzzare vicino ad alimenti o bicchieri; separa gli strumenti destinati a usi diversi. Se manca il prodotto o non conosci la procedura, chiedi conferma.",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u17-hygiene",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "652350773fa799ef9ff9537aefc1ab4afccaa0db9b37a71d53f988a044b52df9",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "sanificazione",
+        "catena del freddo",
+        "allergeni",
+        "pericolo",
+        "rischio",
+        "CCP"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u17-hygiene-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "652350773fa799ef9ff9537aefc1ab4afccaa0db9b37a71d53f988a044b52df9",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u17-hygiene-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [
+        "eu-852-2004",
+        "eu-178-2002",
+        "eu-1169-2011"
+      ],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "projector_pages": [
+        {
+          "title": "Quando passare dallo sporco al pulito",
+          "body": "Dopo rifiuti, telefono o pulizia sporca, prima di riprendere il servizio: applica la procedura di igiene delle mani.\nQuali materiali non devi toccare dal bordo?"
+        },
+        {
+          "title": "Pulire e sanificare",
+          "body": "Rimuovere lo sporco non dimostra da solo il controllo igienico.\nUsa prodotto, metodo e tempi previsti.\nNon spruzzare vicino a cibo o bicchieri."
+        }
+      ]
+    },
+    {
+      "id": "res-u17-storage",
+      "title": "Temperature e conservazione: controllare e segnalare",
+      "description": "Caso di prodotto fresco fuori conservazione e frigo anomalo. Invita a leggere il piano e a registrare controlli reali, senza soglie universali.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-17"
+      ],
+      "topics": [
+        "HACCP",
+        "igiene",
+        "contaminazione",
+        "temperature",
+        "sicurezza alimentare"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "62c1b4241c8da102d69105d8e90d20bdda5d52e7c0932344862a20df224fd1ef",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "I prodotti richiedono condizioni di conservazione definite. Leggi etichetta e procedure del locale: i valori e i tempi da rispettare non si decidono per intuizione.\n\nControlla dove previsto frigorifero, conservazione dei prodotti aperti, integrità dei contenitori, etichette e scadenze. Non cambiare date o indicazioni.\n\nUn latte o una preparazione è rimasto fuori dalle condizioni previste? Non dichiararlo sicuro soltanto perché sembra normale e non rimetterlo in uso senza verifica. Riferisci prodotto, luogo e informazioni disponibili al responsabile e applica l’azione prevista.\n\nUn frigo sembra non funzionare o un controllo non è stato eseguito? Segnala il problema. Una registrazione deve corrispondere a un controllo realmente svolto: non compilare valori a memoria.",
+      "reading": "I prodotti richiedono condizioni di conservazione definite. Leggi etichetta e procedure del locale: i valori e i tempi da rispettare non si decidono per intuizione.\n\nControlla dove previsto frigorifero, conservazione dei prodotti aperti, integrità dei contenitori, etichette e scadenze. Non cambiare date o indicazioni.\n\nUn latte o una preparazione è rimasto fuori dalle condizioni previste? Non dichiararlo sicuro soltanto perché sembra normale e non rimetterlo in uso senza verifica. Riferisci prodotto, luogo e informazioni disponibili al responsabile e applica l’azione prevista.\n\nUn frigo sembra non funzionare o un controllo non è stato eseguito? Segnala il problema. Una registrazione deve corrispondere a un controllo realmente svolto: non compilare valori a memoria.",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u17-storage",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "62c1b4241c8da102d69105d8e90d20bdda5d52e7c0932344862a20df224fd1ef",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "sanificazione",
+        "catena del freddo",
+        "allergeni",
+        "pericolo",
+        "rischio",
+        "CCP"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u17-storage-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "62c1b4241c8da102d69105d8e90d20bdda5d52e7c0932344862a20df224fd1ef",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u17-storage-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [
+        "eu-852-2004",
+        "eu-178-2002",
+        "eu-1169-2011"
+      ],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "projector_pages": [
+        {
+          "title": "Prima di usare un prodotto",
+          "body": "Leggi indicazioni e procedura applicabile.\nControlla conservazione, etichetta e scadenza.\nNon modificare date o registrazioni."
+        },
+        {
+          "title": "Il prodotto è rimasto fuori",
+          "body": "Non dedurre che sia sicuro dall’aspetto.\nEvita l’uso improprio e segnala i fatti al responsabile.\nApplica l’azione prevista dal piano del locale."
+        }
+      ]
+    },
+    {
+      "id": "res-u17-cases",
+      "title": "Cinque casi: che cosa fai e chi avvisi?",
+      "description": "Laboratorio a piccoli gruppi su vetro, allergeni, conservazione, detergenti e utensili. Valuta il ragionamento e la segnalazione, non una procedura inventata.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-17"
+      ],
+      "topics": [
+        "HACCP",
+        "igiene",
+        "contaminazione",
+        "temperature",
+        "sicurezza alimentare"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "24a65aca6b3180ff988019f9ebe1eafc5289eeea7348539c27dc624dbba8bcc0",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "In piccoli gruppi scegliete due casi: vetro rotto vicino al banco; domanda sugli allergeni; latte rimasto fuori dal frigo; detergente accanto a tazze pulite; pinza caduta a terra.\n\nPer ogni caso indicate: pericolo; possibile percorso della contaminazione; comportamento da interrompere; procedura/informazione da verificare; persona da avvisare; frase con cui segnalare. Non inventate temperature, tempi o un’autorizzazione a usare il prodotto.\n\nIn 15 minuti: 3 per leggere e distribuire i casi; 6 per discutere; 4 per confrontare le risposte; 2 per ripetere la segnalazione in modo più chiaro.\n\nIl docente controlla che la risposta distingua osservazione e supposizione, interrompa l’uso improprio e coinvolga la persona competente. Le azioni specifiche vengono dal piano del locale.",
+      "reading": "In piccoli gruppi scegliete due casi: vetro rotto vicino al banco; domanda sugli allergeni; latte rimasto fuori dal frigo; detergente accanto a tazze pulite; pinza caduta a terra.\n\nPer ogni caso indicate: pericolo; possibile percorso della contaminazione; comportamento da interrompere; procedura/informazione da verificare; persona da avvisare; frase con cui segnalare. Non inventate temperature, tempi o un’autorizzazione a usare il prodotto.\n\nIn 15 minuti: 3 per leggere e distribuire i casi; 6 per discutere; 4 per confrontare le risposte; 2 per ripetere la segnalazione in modo più chiaro.\n\nIl docente controlla che la risposta distingua osservazione e supposizione, interrompa l’uso improprio e coinvolga la persona competente. Le azioni specifiche vengono dal piano del locale.",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u17-cases",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "24a65aca6b3180ff988019f9ebe1eafc5289eeea7348539c27dc624dbba8bcc0",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "sanificazione",
+        "catena del freddo",
+        "allergeni",
+        "pericolo",
+        "rischio",
+        "CCP"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u17-cases-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "24a65aca6b3180ff988019f9ebe1eafc5289eeea7348539c27dc624dbba8bcc0",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u17-cases-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [
+        "eu-852-2004",
+        "eu-178-2002",
+        "eu-1169-2011"
+      ],
+      "collection_id": null,
+      "material_kind": "EXERCISE",
+      "projector_pages": [
+        {
+          "title": "Scegli due casi",
+          "body": "Vetro vicino al banco.\nAllergeni non noti.\nLatte fuori conservazione.\nDetergente vicino alle tazze.\nPinza caduta a terra."
+        },
+        {
+          "title": "Riferisci fatti, non supposizioni",
+          "body": "Che cosa hai osservato?\nQuale uso improprio interrompi?\nQuale procedura verifichi e chi avvisi?"
+        }
+      ]
+    },
+    {
+      "id": "res-u17-quiz",
+      "title": "Quiz HACCP: decisioni in sala e bar",
+      "description": "Dieci casi brevi basati sui materiali selezionati. Verifica comportamenti e uso delle procedure, non la memoria degli articoli di legge.",
+      "type": "QUIZ",
+      "unit_ids": [
+        "unit-17"
+      ],
+      "topics": [
+        "HACCP",
+        "igiene",
+        "contaminazione",
+        "temperature",
+        "sicurezza alimentare"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "cc0043a2c747032305854f6d6bb8efb3a88bdf9a4faa812543886c9a20d62072",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "",
+      "reading": "",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u17-quiz",
+      "resource_type": "QUIZ",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "cc0043a2c747032305854f6d6bb8efb3a88bdf9a4faa812543886c9a20d62072",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "sanificazione",
+        "catena del freddo",
+        "allergeni",
+        "pericolo",
+        "rischio",
+        "CCP"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u17-quiz-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "cc0043a2c747032305854f6d6bb8efb3a88bdf9a4faa812543886c9a20d62072",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u17-quiz-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [
+        "eu-852-2004",
+        "eu-178-2002",
+        "eu-1169-2011"
+      ],
+      "collection_id": null,
+      "material_kind": "QUIZ",
+      "questions": [
+        {
+          "question": "Dopo aver usato il telefono devi servire bicchieri puliti",
+          "options": [
+            "Continui perché hai fretta",
+            "Applichi la procedura di igiene delle mani prima di riprendere",
+            "Usi il bordo del bicchiere per trasportarlo"
+          ],
+          "answer": 1,
+          "explanation": "Telefono e materiali puliti non vanno collegati da mani non trattate secondo procedura."
+        },
+        {
+          "question": "Il vassoio pulito deve essere appoggiato",
+          "options": [
+            "Su una superficie prevista e pulita, separata dallo sporco",
+            "Sul sacco dei rifiuti",
+            "Dove capita se il turno è intenso"
+          ],
+          "answer": 0,
+          "explanation": "Il percorso pulito/sporco va mantenuto separato."
+        },
+        {
+          "question": "Un cliente chiede se il dolce contiene frutta secca: non sai rispondere",
+          "options": [
+            "Dici di no per rassicurarlo",
+            "Consigli di assaggiare",
+            "Verifichi con le informazioni e la persona competente del locale"
+          ],
+          "answer": 2,
+          "explanation": "La risposta sugli allergeni non si improvvisa."
+        },
+        {
+          "question": "Trovi detergente accanto alle tazze pulite",
+          "options": [
+            "Identifichi un possibile pericolo chimico e segnali secondo procedura",
+            "Lo usi per profumarle",
+            "Lo ignori perché non è un alimento"
+          ],
+          "answer": 0,
+          "explanation": "I prodotti chimici non devono contaminare materiali a contatto con alimenti e bevande."
+        },
+        {
+          "question": "Un prodotto fresco è rimasto fuori dalle condizioni previste",
+          "options": [
+            "Lo servi se ha un buon aspetto",
+            "Eviti l’uso improprio, segnali e verifichi l’azione prevista",
+            "Cambi l’etichetta"
+          ],
+          "answer": 1,
+          "explanation": "L’aspetto non sostituisce la verifica delle condizioni e della procedura."
+        },
+        {
+          "question": "Un controllo non è stato eseguito: quale registrazione fai?",
+          "options": [
+            "Copi il valore di ieri",
+            "Scrivi un valore plausibile",
+            "Segnali il controllo mancante senza inventare dati"
+          ],
+          "answer": 2,
+          "explanation": "La registrazione deve corrispondere a un controllo reale."
+        },
+        {
+          "question": "Si rompe un bicchiere vicino alla postazione",
+          "options": [
+            "Riconosci il pericolo fisico e applichi la procedura, avvisando il responsabile",
+            "Continui a servire senza controllare l’area",
+            "Sposti i frammenti verso i materiali puliti"
+          ],
+          "answer": 0,
+          "explanation": "I frammenti di vetro sono corpi estranei; non si nasconde il problema."
+        },
+        {
+          "question": "La superficie sembra pulita: basta per dire che è sanificata?",
+          "options": [
+            "Sì, l’aspetto dimostra tutto",
+            "No, occorre la procedura con prodotto, metodo e tempi previsti",
+            "Sì, se il cliente non vede"
+          ],
+          "answer": 1,
+          "explanation": "L’aspetto visivo non prova l’esecuzione della procedura."
+        },
+        {
+          "question": "Chi decide limiti critici e azioni per il tuo locale?",
+          "options": [
+            "Ogni nuovo operatore li inventa",
+            "Una risposta generica trovata online",
+            "Il piano e le procedure definiti per il locale, con le persone competenti"
+          ],
+          "answer": 2,
+          "explanation": "La lezione introduttiva non definisce un piano aziendale."
+        },
+        {
+          "question": "Come riassumi il tuo ruolo quotidiano?",
+          "options": [
+            "Osservare, rispettare le procedure, registrare quando richiesto e segnalare",
+            "Firmare senza controllare",
+            "Intervenire soltanto quando il cliente protesta"
+          ],
+          "answer": 0,
+          "explanation": "HACCP ha una logica preventiva e richiede evidenze reali."
+        }
+      ]
+    },
+    {
+      "id": "res-u17-checklist",
+      "title": "Checklist didattica: osservare, controllare, segnalare",
+      "description": "Riepilogo per discutere una postazione simulata. Non sostituisce la checklist operativa del piano aziendale.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-17"
+      ],
+      "topics": [
+        "HACCP",
+        "igiene",
+        "contaminazione",
+        "temperature",
+        "sicurezza alimentare"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "248f2b0dafae4ab633741528467cb59d14569a012a0d6024af866cddaa52a2eb",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "body": "- Lavo le mani nei momenti previsti\n- Tengo separati pulito e sporco\n- Non tocco i bicchieri dal bordo\n- Verifico conservazione, etichette e scadenze dove previsto\n- Uso detergenti e strumenti secondo procedura\n- Segnalo vetro rotto e utensili contaminati\n- Non improvviso sugli allergeni\n- Registro solo controlli realmente svolti\n- Segnalo dubbi e anomalie al responsabile",
+      "reading": "- Lavo le mani nei momenti previsti\n- Tengo separati pulito e sporco\n- Non tocco i bicchieri dal bordo\n- Verifico conservazione, etichette e scadenze dove previsto\n- Uso detergenti e strumenti secondo procedura\n- Segnalo vetro rotto e utensili contaminati\n- Non improvviso sugli allergeni\n- Registro solo controlli realmente svolti\n- Segnalo dubbi e anomalie al responsabile",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u17-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "248f2b0dafae4ab633741528467cb59d14569a012a0d6024af866cddaa52a2eb",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "sanificazione",
+        "catena del freddo",
+        "allergeni",
+        "pericolo",
+        "rischio",
+        "CCP"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u17-checklist-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "248f2b0dafae4ab633741528467cb59d14569a012a0d6024af866cddaa52a2eb",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u17-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [
+        "eu-852-2004",
+        "eu-178-2002",
+        "eu-1169-2011"
+      ],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "projector_pages": [
+        {
+          "title": "Mani e materiali",
+          "body": "Lavo le mani nei momenti previsti\nTengo separati pulito e sporco\nNon tocco i bicchieri dal bordo"
+        },
+        {
+          "title": "Prodotti e postazione",
+          "body": "Verifico conservazione, etichette e scadenze dove previsto\nUso detergenti e strumenti secondo procedura\nSegnalo vetro rotto e utensili contaminati"
+        },
+        {
+          "title": "Informazioni e controlli",
+          "body": "Non improvviso sugli allergeni\nRegistro solo controlli realmente svolti\nSegnalo dubbi e anomalie al responsabile"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Mani e materiali",
+          "items": [
+            "Lavo le mani nei momenti previsti",
+            "Tengo separati pulito e sporco",
+            "Non tocco i bicchieri dal bordo"
+          ]
+        },
+        {
+          "title": "Prodotti e postazione",
+          "items": [
+            "Verifico conservazione, etichette e scadenze dove previsto",
+            "Uso detergenti e strumenti secondo procedura",
+            "Segnalo vetro rotto e utensili contaminati"
+          ]
+        },
+        {
+          "title": "Informazioni e controlli",
+          "items": [
+            "Non improvviso sugli allergeni",
+            "Registro solo controlli realmente svolti",
+            "Segnalo dubbi e anomalie al responsabile"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u10-print",
+      "title": "Accoglienza: frasi e griglia di osservazione",
+      "description": "Scheda A4 da stampare per l’attività e il feedback. Nessun dato personale richiesto.",
+      "type": "PDF",
+      "unit_ids": [
+        "unit-10"
+      ],
+      "topics": [
+        "accoglienza",
+        "cliente",
+        "comunicazione",
+        "benvenuto"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "42264ae157abae1cca2715960ae70d2bc7e4aa51fe88eedabbf82be417bb3d55",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "PDF",
+      "visibility": "TEACHER",
+      "body": "",
+      "reading": "",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u10-print",
+      "resource_type": "PDF",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "42264ae157abae1cca2715960ae70d2bc7e4aa51fe88eedabbf82be417bb3d55",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "simulazione",
+        "prenotazione",
+        "attesa",
+        "A2 B1"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": false,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u10-print-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "42264ae157abae1cca2715960ae70d2bc7e4aa51fe88eedabbf82be417bb3d55",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u10-print-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "PDF",
+      "asset_filename": "unit-10-scheda-didattica.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u17-print",
+      "title": "HACCP: scheda di osservazione didattica",
+      "description": "Scheda A4 da stampare per l’attività e il feedback. Nessun dato personale richiesto.",
+      "type": "PDF",
+      "unit_ids": [
+        "unit-17"
+      ],
+      "topics": [
+        "HACCP",
+        "igiene",
+        "contaminazione",
+        "temperature",
+        "sicurezza alimentare"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "9bd73671785e6a43d74ec34b046247ceb6020f5bb81cb6e6c845f9ce2ffe6dc0",
+        "source_id": null,
+        "section": "Adattamento didattico da materiali RISTO-LAB selezionati",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22 and Phase 5 controlled content instruction 2026-10-23"
+      },
+      "format": "PDF",
+      "visibility": "TEACHER",
+      "body": "",
+      "reading": "",
+      "legacy_status": {
+        "privacy_status": "REVIEWED_NO_PERSONAL_DATA",
+        "rights_status": "APPROVED_PRIVATE_USE",
+        "publication_status": "PRIVATE_APPROVED"
+      },
+      "slug": "res-u17-print",
+      "resource_type": "PDF",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "9bd73671785e6a43d74ec34b046247ceb6020f5bb81cb6e6c845f9ce2ffe6dc0",
+      "last_reviewed": "2026-10-23",
+      "notes": [],
+      "keywords": [
+        "sanificazione",
+        "catena del freddo",
+        "allergeni",
+        "pericolo",
+        "rischio",
+        "CCP"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": false,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u17-print-v1",
+          "label": "Versione didattica per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "9bd73671785e6a43d74ec34b046247ceb6020f5bb81cb6e6c845f9ce2ffe6dc0",
+          "reviewed_by": "RISTO-LAB editorial preparation",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Adattamento selettivo Phase 5",
+          "notes": "Validazione umana del contenuto ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u17-print-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "evidence": "Owner statement: sono tutti fatti da me e pubblici; Phase 5 selected internal derivatives",
+        "scope": "public repository and website"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [
+        "eu-852-2004",
+        "eu-178-2002",
+        "eu-1169-2011"
+      ],
+      "collection_id": null,
+      "material_kind": "PDF",
+      "asset_filename": "unit-17-scheda-didattica.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
     }
   ],
   "lessons": [],
@@ -6296,7 +8098,10 @@
       "notes": [],
       "title_metadata_status": "REVIEW_REQUIRED",
       "teaching_resource_ids": [
-        "res-food-pacchetto"
+        "res-food-pacchetto",
+        "res-u17-method",
+        "res-u17-storage",
+        "res-u17-hazards"
       ]
     },
     {
@@ -6342,7 +8147,11 @@
       ],
       "notes": [],
       "title_metadata_status": "REVIEW_REQUIRED",
-      "teaching_resource_ids": []
+      "teaching_resource_ids": [
+        "res-u17-method",
+        "res-u17-storage",
+        "res-u17-hazards"
+      ]
     },
     {
       "id": "eu-1169-2011",
@@ -6413,7 +8222,11 @@
       ],
       "notes": [],
       "title_metadata_status": "REVIEW_REQUIRED",
-      "teaching_resource_ids": []
+      "teaching_resource_ids": [
+        "res-u17-method",
+        "res-u17-storage",
+        "res-u17-hazards"
+      ]
     },
     {
       "id": "eu-2021-382",
@@ -6795,6 +8608,58 @@
     {
       "resource_id": "res-mep-errors",
       "label": "Riepilogare gli errori"
+    },
+    {
+      "resource_id": "res-u10-welcome",
+      "label": "Il primo contatto: salutare e verificare"
+    },
+    {
+      "resource_id": "res-u10-phrases",
+      "label": "Italiano professionale per dare il benvenuto"
+    },
+    {
+      "resource_id": "res-u10-waiting",
+      "label": "Attesa, richieste e passaggio al responsabile"
+    },
+    {
+      "resource_id": "res-u10-roleplay",
+      "label": "Simulazione: dalla porta al tavolo"
+    },
+    {
+      "resource_id": "res-u10-quiz",
+      "label": "Quiz accoglienza: scegli il prossimo gesto"
+    },
+    {
+      "resource_id": "res-u10-checklist",
+      "label": "Checklist osservatore per la simulazione"
+    },
+    {
+      "resource_id": "res-u17-method",
+      "label": "HACCP: dal pericolo al controllo"
+    },
+    {
+      "resource_id": "res-u17-hazards",
+      "label": "Contaminazioni: riconoscere il percorso"
+    },
+    {
+      "resource_id": "res-u17-hygiene",
+      "label": "Mani, materiali puliti e sanificazione"
+    },
+    {
+      "resource_id": "res-u17-storage",
+      "label": "Temperature e conservazione: controllare e segnalare"
+    },
+    {
+      "resource_id": "res-u17-cases",
+      "label": "Cinque casi: che cosa fai e chi avvisi?"
+    },
+    {
+      "resource_id": "res-u17-quiz",
+      "label": "Quiz HACCP: decisioni in sala e bar"
+    },
+    {
+      "resource_id": "res-u17-checklist",
+      "label": "Checklist didattica: osservare, controllare, segnalare"
     }
   ],
   "collections": [

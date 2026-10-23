@@ -42,3 +42,7 @@ GitHub Actions su main: checkout ufficiale, withastro/action, deploy-pages. La b
 ## Limiti
 
 Nessuna autenticazione o riservatezza tecnica dei materiali online. I piani locali possono essere persi cancellando i dati del browser: esportarli quando occorre conservarli. Una copia normativa e il suo collegamento non attestano la vigenza. Nessuna migrazione automatica dell’archivio completo.
+
+## Phase 5
+
+Unità 10 e 17 dispongono di sequenze Aula e schede stampabili, con stato CLASSROOM_READY. La Home usa un profilo docente locale sostituibile. RISTO-LAB AI prepara richieste contestuali da copiare in ChatGPT, senza API o modifica automatica dei piani. Vedi `docs/PHASE5_COMPLETION_REPORT.md` e `docs/PHASE5_HUMAN_ACCEPTANCE.md` per verifiche e prova umana ancora da eseguire.

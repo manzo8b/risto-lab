@@ -8,7 +8,7 @@ Scenario library: PASS nel perimetro selezionato. Le attività riutilizzano lo s
 
 Regulatory separation: PASS. Riferimenti puntuali controllati e collegati ai testi ufficiali, senza dichiarare verificato tutto il quadro, un piano HACCP o una procedura del locale. Le risorse didattiche normative restano NOT_VERIFIED. Nessuna diagnosi o valutazione psicologica; compensazioni e conflitti restano nei limiti del ruolo e della sicurezza.
 
-Ricerca, Session Builder, AI contestuale, Console e Vista Aula: PASS tecnico. 45 test di modello e 44 E2E: 89 PASS / 0 FAIL. Build statica PASS. GitHub Pages: verifica live in attesa del deploy 6C.
+Ricerca, Session Builder, AI contestuale, Console e Vista Aula: PASS tecnico. 45 test di modello e 44 E2E: 89 PASS / 0 FAIL. Build statica PASS. GitHub Pages: PASS, workflow 40006372758. Verificate live unità 16–22, ricerca, compositore, Console, proiezione e contesto AI; tutti i 14 stampabili corrispondono ai file locali verificati.
 
 Lacune: quattro nuove 6C, 19 aperte nel registro complessivo. Le unità 23–26 restano fuori perimetro. Le lacune e la prova umana non sono chiuse automaticamente.
 

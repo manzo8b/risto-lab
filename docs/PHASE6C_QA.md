@@ -17,6 +17,6 @@ Un’asserzione iniziale attendeva il titolo senza il prefisso editoriale dell�
 
 Sei schede PDF renderizzate e ispezionate: cinque di una pagina; la 21 ha una seconda pagina di debrief con spazio per le risposte. Nessun nuovo visuale AI. Le 14 schede delle due fasi sono state ispezionate insieme per impaginazione e leggibilità; nessuna stampa fisica è dichiarata eseguita.
 
-GitHub Pages e verifica live: in attesa del deploy 6C. L’esito verrà sostituito dopo il controllo effettivo.
+GitHub Pages: PASS. Commit c3c4581, workflow 40006372758, build e deploy completati. Verificate live tutte le unità 16–22, inclusa la 17 preservata e la 18 PARTIAL; proposta Unità 20 da 60 minuti (10/10/35/5), Console con navigazione, proiezione senza strumenti docente, AI contestuale Unità 22 con vincoli su ruolo e sicurezza, ricerca service recovery e ricarica diretta dell’Unità 20. I 14 PDF live corrispondono byte per byte ai file locali ispezionati. La verifica AI riguarda il contesto e il ponte esistente, senza generare o approvare una risposta del servizio esterno.
 
 Prove umane 6C: quattro, READY e non eseguite. Nessun voto inventato. L’Unità 18 resta PARTIAL; CLASSROOM_READY per le altre indica disponibilità del percorso selezionato, non certificazione o approvazione di un piano aziendale.

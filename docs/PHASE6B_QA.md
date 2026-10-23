@@ -15,6 +15,6 @@ Nuovi test: otto percorsi diretti con ricarica, pratica, contesto AI, stampa, pr
 
 Otto schede stampabili, una pagina A4 ciascuna, renderizzate e ispezionate. Interfaccia chiara invariata. Nessuna nuova immagine generata.
 
-GitHub Pages e verifica live: in attesa del deploy di questa fase; l’esito sarà registrato dopo il controllo effettivo.
+GitHub Pages: PASS. Commit 9e7388e, workflow 40004131976, build e deploy completati. Controllate live tutte le unità 07–15, incluse la 10 preservata, la proposta Unità 13 (10/10/35/5), Console, Vista Aula senza controlli docente, AI con unità 13 e ricerca sbarazzo.
 
 La prova di insegnamento, il trasporto fisico e il giudizio sul realismo restano a Marcelo. Nessun voto umano è stato assegnato.

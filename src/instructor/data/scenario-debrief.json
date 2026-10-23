@@ -1,0 +1,12 @@
+{
+  "id": "debrief-servizio-v1",
+  "origin": "OWNER_BRIEF_TRANSLATION",
+  "description": "Traccia comune richiesta nel brief 6C; traduzione delle cinque domande, senza nuovo caso tecnico o risposte generate",
+  "questions": [
+    "Che cosa è successo?",
+    "Che cosa ha funzionato?",
+    "Che cosa ha creato difficoltà?",
+    "Quale azione alternativa era possibile?",
+    "Che cosa faresti la prossima volta?"
+  ]
+}

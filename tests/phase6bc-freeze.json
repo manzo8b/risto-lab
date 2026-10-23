@@ -106,7 +106,39 @@
     "res-u5-dimostrazione": "22de9f7bc228a73ad8f08f445269c8897842e0046a20871e3dd8db1f1586fa23",
     "res-u5-activity": "0f5eecda51147dc300395789d466ff68ca27ae6e77af6c6ee23f1b988e073e13",
     "res-u5-quiz": "d92ddb8f1791a47d80724a0493b78c5c6bbe00c9abe207f07663a42f3449c267",
-    "res-u5-checklist": "da80906e7658daa90701eb841d2004d4111da6c7c694d5b500f64106e1ee2bf2"
+    "res-u5-checklist": "da80906e7658daa90701eb841d2004d4111da6c7c694d5b500f64106e1ee2bf2",
+    "res-u7-postazione": "fac00c66dc4fd3369050b33570b659aeb04ed87d0cc0413e6326892d03bd9d12",
+    "res-u7-presidio": "49dbe5db4e04eeade9d82f32ca794af74c16ef0dabeceef9edc8f1e2fb7a57b5",
+    "res-u7-activity": "904fe298f1c7e7f2ea73ebfe9083addb4daad8f0edbaf088a6ad0a0ac6e96365",
+    "res-u7-checklist": "62c9a92ed39678d325ffefb165908b4a7534a9b685f133dd7e479d77c7b60cf9",
+    "res-u8-menu": "f388b63ee3e8aebf1702c04f3343c23f904a76a71c577e885698007380b95969",
+    "res-u8-verifica": "d83d226ce996815cee577fa834ec23dfcc6dd62cde6f75897ed504f48f3d195a",
+    "res-u8-activity": "295c5d71412084321f89fc7ae1d58ef8829b8adada68565792d40b6c438fe4cd",
+    "res-u8-checklist": "a0c70056224cedbbffbdca288d0e71292b5747fe036b3e8555150ee71b6ed526",
+    "res-u9-stili": "e5131d49ddefbf12323d2e2a5dc344867cfdbf0d74d27c04f28066defa82c911",
+    "res-u9-confronto": "b95fb4d792b8faab6f10758be6f8f4a156865e42616d4e861e0281f94b204b40",
+    "res-u9-activity": "23108438534e923eb1069c86713663a398cccfe59e53f0ab67406906370bc200",
+    "res-u9-checklist": "aafd72305202655386f6a68f5519eafe453ca39e80bf2cd1ddeb3f471bee378e",
+    "res-u11-ascolto": "37e6b60a71f34065fbcb0b0890aa1602dc445e7a73e76f2eaff50e5b9b094297",
+    "res-u11-linguaggio": "a9d9a5bde6bdebf1c60c64307e5d431e57d6f08d8afe6fd08b49f4075f809217",
+    "res-u11-activity": "076d78c20a6c6905757efbf9858825887b6bf64d533b9123853af81944946edd",
+    "res-u11-checklist": "3ec21be5b54173fe5aa0a1299654eba21bd7c4f69fa6d4a28eaf2098402bac9c",
+    "res-u12-comanda": "bf017ce32510fa8b8fe45839a63a7d698aa4b682bb9a858ad2bef329fd110427",
+    "res-u12-correzioni": "ea6064d2bc2c543a64177fcaaf601398922e3551a75e34d30aa4d909072e7fcb",
+    "res-u12-activity": "d84ca8cc532cb8dfa7dc037d462b3fe0fab34f8bea4ea7a9135eebb4b9814561",
+    "res-u12-checklist": "eee49ce95393a11f0f71d1e9caf5f432177387d58a2ab8d67c2812065a10c85f",
+    "res-u13-pass": "90d65cfbe2dc5cf21d3b397cd4737366335307bc97cd9127090274c75cb34d66",
+    "res-u13-beverage": "c0d825832fc613cdb644674a4516946a3a3d284717186d5fa35dcb2b2cdf1c68",
+    "res-u13-activity": "fdb670fffc9f6315112dea845fbce405492f775c3e58290054910358990b92df",
+    "res-u13-checklist": "11fd4b664f8d77607b91aa9db21e0925b6de8ccd1479bcfff1acdfd2809d8dfd",
+    "res-u14-momento": "44555a2fa5dfa9891b3b997799b0b3c87ef3e9f16f2cd97f780f76d4ce3e5de8",
+    "res-u14-ripristino": "5ad616e0731a4ef1a931395cadbaa4cb19fb3a7316eb35e7975f9c36405f2c53",
+    "res-u14-activity": "e25d4ce0c1a66c698a58391fd6daebd9a56f0a92941c79aec8ee01fea54a9e01",
+    "res-u14-checklist": "06be5605208276160af640516afcd12f3e10cb637186a65a322ad43cf97fa46c",
+    "res-u15-chiusura": "072e773eb674a29fce2baddd241282b490dce452350f8849091aec2c331aa379",
+    "res-u15-consegne": "607d4c79b177725c1030ac7520d06d24be85ecf0d3d1978fcfd820c9f943e113",
+    "res-u15-activity": "ecd25d8dad9dd9acaf10f5d78465710257fa6a59d3063f8c976b7af8863f5af9",
+    "res-u15-checklist": "2bce8d25fa83e6ed3676d32dd9e61d99ebea0eb306e0ae8320f86ad7fb7ea258"
   },
   "units": {
     "1": "e404e053fce7c2425b3d2525ed5576bc9d44d966a586bd52da8cddcafdf3b084",
@@ -340,6 +372,134 @@
     {
       "resource_id": "res-u5-checklist",
       "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u7-postazione",
+      "label": "Rango, postazione e scorte utili"
+    },
+    {
+      "resource_id": "res-u7-presidio",
+      "label": "Presidio della sala e consegna al collega"
+    },
+    {
+      "resource_id": "res-u7-activity",
+      "label": "Vassoio, percorso e ripristino"
+    },
+    {
+      "resource_id": "res-u7-checklist",
+      "label": "Checklist postazione prima del servizio"
+    },
+    {
+      "resource_id": "res-u8-menu",
+      "label": "Conoscere il menu senza inventare"
+    },
+    {
+      "resource_id": "res-u8-verifica",
+      "label": "Richieste alimentari: ascoltare e verificare"
+    },
+    {
+      "resource_id": "res-u8-activity",
+      "label": "Briefing prima del servizio"
+    },
+    {
+      "resource_id": "res-u8-checklist",
+      "label": "Controllo del briefing e del menu"
+    },
+    {
+      "resource_id": "res-u9-stili",
+      "label": "Descrivere la tecnica prima del nome"
+    },
+    {
+      "resource_id": "res-u9-confronto",
+      "label": "Confronto operativo degli stili"
+    },
+    {
+      "resource_id": "res-u9-activity",
+      "label": "Riconoscere e simulare gli stili"
+    },
+    {
+      "resource_id": "res-u9-checklist",
+      "label": "Riconoscere lo stile e scegliere il carico"
+    },
+    {
+      "resource_id": "res-u11-ascolto",
+      "label": "Parole, tono e ascolto attivo"
+    },
+    {
+      "resource_id": "res-u11-linguaggio",
+      "label": "Risposte chiare e comunicazione interna"
+    },
+    {
+      "resource_id": "res-u11-activity",
+      "label": "Ascoltare, riformulare, rispondere"
+    },
+    {
+      "resource_id": "res-u11-checklist",
+      "label": "Confermare senza perdere informazioni"
+    },
+    {
+      "resource_id": "res-u12-comanda",
+      "label": "Preparare, registrare e confermare l’ordine"
+    },
+    {
+      "resource_id": "res-u12-correzioni",
+      "label": "Allergeni, trasmissione e correzioni"
+    },
+    {
+      "resource_id": "res-u12-activity",
+      "label": "Dal tavolo all’ordinativo"
+    },
+    {
+      "resource_id": "res-u12-checklist",
+      "label": "Controllo della comanda"
+    },
+    {
+      "resource_id": "res-u13-pass",
+      "label": "Dal controllo al pass al tavolo"
+    },
+    {
+      "resource_id": "res-u13-beverage",
+      "label": "Acqua, vino e bevande: controlli essenziali"
+    },
+    {
+      "resource_id": "res-u13-activity",
+      "label": "Dal pass al tavolo"
+    },
+    {
+      "resource_id": "res-u13-checklist",
+      "label": "Controllare prima di servire"
+    },
+    {
+      "resource_id": "res-u14-momento",
+      "label": "Quando ritirare: osservare e chiedere"
+    },
+    {
+      "resource_id": "res-u14-ripristino",
+      "label": "Sbarazzo e ripristino controllati"
+    },
+    {
+      "resource_id": "res-u14-activity",
+      "label": "Sbarazzare e ripristinare"
+    },
+    {
+      "resource_id": "res-u14-checklist",
+      "label": "Osservare, ritirare e ripristinare"
+    },
+    {
+      "resource_id": "res-u15-chiusura",
+      "label": "Riordino, pulizia e controllo scorte"
+    },
+    {
+      "resource_id": "res-u15-consegne",
+      "label": "Consegne utili per il turno seguente"
+    },
+    {
+      "resource_id": "res-u15-activity",
+      "label": "Chiudere e consegnare"
+    },
+    {
+      "resource_id": "res-u15-checklist",
+      "label": "Checklist fine servizio"
     }
   ],
   "runtime": {

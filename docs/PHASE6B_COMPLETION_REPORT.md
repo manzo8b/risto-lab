@@ -6,7 +6,9 @@ Unità 07, 08, 09, 11, 12, 13, 14 e 15: CLASSROOM_READY per il percorso introdut
 
 Ciclo del servizio: COHERENT sul piano strutturale; valutazione umana del ritmo da eseguire. Modello di TeachingSession «Il ciclo del servizio»: 08 → 10 → 12 → 13 → 14 → 15, 60 minuti, importabile e modificabile con il compositore esistente.
 
-Ricerca, Session Builder, AI contestuale, Console e Vista Aula: PASS tecnico. 37 test di modello e 36 E2E: 73 PASS / 0 FAIL. Build statica PASS. GitHub Pages: verifica live in attesa del deploy.
+Lacune al termine della 6B: 15; il registro viene poi aggiornato dalla 6C.
+
+Ricerca, Session Builder, AI contestuale, Console e Vista Aula: PASS tecnico. 37 test di modello e 36 E2E: 73 PASS / 0 FAIL. Build statica PASS. GitHub Pages: PASS, workflow 40004131976. Verifica browser live delle unità 07–15, ricerca, proposta da 60 minuti, Aula, proiezione e contesto AI eseguita.
 
 Archivio sorgente modificato: NO, 34.893 file verificati. Nessuna migrazione massiva, nuova infrastruttura AI o funzionalità di prodotto. Le fonti normative e le procedure del locale restano distinte dai materiali didattici.
 

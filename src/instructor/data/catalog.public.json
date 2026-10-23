@@ -518,7 +518,7 @@
       "order": 16,
       "title": "Igiene professionale",
       "slug": "16-igiene-professionale",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 89,
       "resource_ids": [
         "res-chapter-16",
@@ -530,11 +530,24 @@
         "res-food-pericoli",
         "res-food-1169",
         "res-food-852",
-        "res-food-2021-382"
+        "res-food-2021-382",
+        "res-u16-igiene",
+        "res-u16-contatti",
+        "res-u16-activity",
+        "res-u16-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-16"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-16",
+      "printable_resource_id": "res-u16-activity",
+      "objectives": [
+        "Distinguere igiene personale, pulizia, disinfezione e sanificazione.",
+        "Riconoscere i momenti principali per il lavaggio delle mani.",
+        "Gestire divisa, panni, stoviglie e superfici con prudenza.",
+        "Evitare contaminazioni crociate nella sala e nel bar.",
+        "Segnalare condizioni di salute o anomalie secondo la procedura aziendale."
+      ],
+      "overview": "Il personale di sala e bar entra continuamente in contatto con bicchieri, posate, stoviglie, superfici, alimenti e bevande. Un gesto apparentemente piccolo può proteggere il cliente oppure trasferire sporco e contaminanti. L’igiene professionale richiede conoscenze, organizzazione e coerenza."
     },
     {
       "id": "unit-17",
@@ -591,11 +604,24 @@
         "res-food-pericoli",
         "res-food-178",
         "res-food-852",
-        "res-food-2021-382"
+        "res-food-2021-382",
+        "res-u18-sistema",
+        "res-u18-organizzazione",
+        "res-u18-activity",
+        "res-u18-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-18"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-18",
+      "printable_resource_id": "res-u18-activity",
+      "objectives": [
+        "Separare il sistema HACCP dalla sua applicazione burocratica.",
+        "Riconoscere segnali di una cultura della sicurezza debole.",
+        "Comprendere il ruolo di leadership, risorse e comunicazione.",
+        "Valutare criticamente moduli e controlli.",
+        "Proporre miglioramenti realistici e verificabili."
+      ],
+      "overview": "Questo capitolo non mette in discussione la funzione preventiva dell’HACCP. Analizza la distanza che può crearsi tra procedure scritte e lavoro reale, soprattutto quando formazione, leadership e organizzazione sono deboli."
     },
     {
       "id": "unit-19",
@@ -603,15 +629,27 @@
       "order": 19,
       "title": "Le soft skills",
       "slug": "19-le-soft-skills",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 103,
       "resource_ids": [
         "res-chapter-19",
-        "res-visual-cliente"
+        "res-visual-cliente",
+        "res-u19-comportamenti",
+        "res-u19-feedback",
+        "res-u19-activity",
+        "res-u19-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-19"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-19",
+      "printable_resource_id": "res-u19-activity",
+      "objectives": [
+        "Definire le principali soft skills del servizio.",
+        "Tradurre qualità astratte in comportamenti osservabili.",
+        "Dare e ricevere feedback professionale.",
+        "Collaborare in gruppi multiculturali."
+      ],
+      "overview": "Le competenze trasversali non sono qualità misteriose o innate. Sono comportamenti che possono essere osservati, allenati e migliorati: ascoltare, collaborare, organizzarsi, accettare feedback, rispettare limiti e comunicare sotto pressione."
     },
     {
       "id": "unit-20",
@@ -619,14 +657,27 @@
       "order": 20,
       "title": "Problem solving",
       "slug": "20-problem-solving",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 107,
       "resource_ids": [
-        "res-chapter-20"
+        "res-chapter-20",
+        "res-u20-metodo",
+        "res-u20-priorita",
+        "res-u20-activity",
+        "res-u20-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-20"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-20",
+      "printable_resource_id": "res-u20-activity",
+      "objectives": [
+        "Applicare il metodo Osserva-Valuta-Decidi-Agisci-Verifica.",
+        "Distinguere urgenza, importanza e competenza.",
+        "Coinvolgere il responsabile al momento corretto.",
+        "Comunicare un problema senza cercare subito un colpevole.",
+        "Registrare ciò che può evitare la ripetizione."
+      ],
+      "overview": "In sala i problemi arrivano mentre il lavoro continua. Il metodo deve essere abbastanza semplice da ricordare sotto pressione e abbastanza prudente da evitare improvvisazioni pericolose."
     },
     {
       "id": "unit-21",
@@ -634,18 +685,30 @@
       "order": 21,
       "title": "Lavorare sotto pressione",
       "slug": "21-lavorare-sotto-pressione",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 110,
       "resource_ids": [
         "res-chapter-21",
         "res-sicurezza-corso",
         "res-sicurezza-slides",
         "res-sicurezza-formatore",
-        "res-sicurezza-banca-quiz"
+        "res-sicurezza-banca-quiz",
+        "res-u21-pressione",
+        "res-u21-supporto",
+        "res-u21-activity",
+        "res-u21-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-21"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-21",
+      "printable_resource_id": "res-u21-activity",
+      "objectives": [
+        "Riconoscere segnali di sovraccarico.",
+        "Stabilire priorità sotto pressione.",
+        "Usare comunicazioni brevi senza aggressività.",
+        "Comprendere il ruolo dell’organizzazione nei rischi psicosociali."
+      ],
+      "overview": "Ritmi intensi, orari, rumore, richieste simultanee e contatto con il pubblico possono creare stress. La risposta non può essere soltanto “devi resistere”: servono organizzazione, pause, comunicazione, risorse e tecniche individuali."
     },
     {
       "id": "unit-22",
@@ -653,15 +716,28 @@
       "order": 22,
       "title": "Il cliente difficile",
       "slug": "22-il-cliente-difficile",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 114,
       "resource_ids": [
         "res-chapter-22",
-        "res-visual-cliente"
+        "res-visual-cliente",
+        "res-u22-situazioni",
+        "res-u22-limiti",
+        "res-u22-activity",
+        "res-u22-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-22"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-22",
+      "printable_resource_id": "res-u22-activity",
+      "objectives": [
+        "Distinguere problema, emozione e comportamento.",
+        "Applicare una sequenza di de-escalation.",
+        "Gestire reclami senza promesse non autorizzate.",
+        "Stabilire limiti davanti ad aggressioni o molestie.",
+        "Coinvolgere il responsabile e le autorità quando necessario."
+      ],
+      "overview": "“Cliente difficile” è un’espressione utile soltanto se non diventa un’etichetta. Può esistere un reclamo legittimo, un fraintendimento, un comportamento aggressivo o una richiesta impossibile. Ogni situazione richiede ascolto, limiti ed escalation."
     },
     {
       "id": "unit-23",
@@ -15465,6 +15541,2743 @@
       "asset_filename": "unit-15-scheda-operativa.pdf",
       "asset_mime": "application/pdf",
       "downloadable": true
+    },
+    {
+      "id": "res-u16-igiene",
+      "title": "Igiene personale e passaggi critici",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-16"
+      ],
+      "topics": [
+        "igiene",
+        "lavaggio mani",
+        "divisa",
+        "telefono",
+        "contaminazione",
+        "panni"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "cf164ae23cc00b9c3275f09045ca6c7b8bafee0b2fa375d385a399122fcbb1e5",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 16; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u16-igiene",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "cf164ae23cc00b9c3275f09045ca6c7b8bafee0b2fa375d385a399122fcbb1e5",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "igiene",
+        "lavaggio mani",
+        "divisa",
+        "telefono",
+        "contaminazione",
+        "panni"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u16-igiene-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "cf164ae23cc00b9c3275f09045ca6c7b8bafee0b2fa375d385a399122fcbb1e5",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u16-igiene-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 16.1 Igiene personale: comportamento, non apparenza\n\nL’igiene personale riguarda mani, abiti da lavoro, capelli, oggetti personali e comportamenti. Non coincide con un giudizio estetico. Lo standard deve essere collegato a sicurezza, pulizia e mansione. Il Regolamento (CE) n. 852/2004 richiede un elevato grado di pulizia personale e indumenti adeguati, puliti e, quando necessario, protettivi.\n\n## 16.2 Quando lavare le mani\n\nIl piano aziendale deve specificare metodo e frequenza. In termini generali, le mani vanno lavate prima di iniziare, dopo i servizi igienici, dopo rifiuti o materiale sporco, dopo aver tossito o toccato viso e capelli, dopo operazioni di pulizia e ogni volta che il passaggio da un’attività a un’altra può creare contaminazione.",
+      "reading": "## 16.1 Igiene personale: comportamento, non apparenza\n\nL’igiene personale riguarda mani, abiti da lavoro, capelli, oggetti personali e comportamenti. Non coincide con un giudizio estetico. Lo standard deve essere collegato a sicurezza, pulizia e mansione. Il Regolamento (CE) n. 852/2004 richiede un elevato grado di pulizia personale e indumenti adeguati, puliti e, quando necessario, protettivi.\n\n## 16.2 Quando lavare le mani\n\nIl piano aziendale deve specificare metodo e frequenza. In termini generali, le mani vanno lavate prima di iniziare, dopo i servizi igienici, dopo rifiuti o materiale sporco, dopo aver tossito o toccato viso e capelli, dopo operazioni di pulizia e ogni volta che il passaggio da un’attività a un’altra può creare contaminazione.",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "16.1 Igiene personale: comportamento, non apparenza",
+          "body": "L’igiene personale riguarda mani, abiti da lavoro, capelli, oggetti personali e comportamenti.\nNon coincide con un giudizio estetico.\nLo standard deve essere collegato a sicurezza, pulizia e mansione.\nIl Regolamento (CE) n. 852/2004 richiede un elevato grado di pulizia personale e indumenti adeguati, puliti e, quando necessario, protettivi."
+        },
+        {
+          "title": "16.2 Quando lavare le mani",
+          "body": "Il piano aziendale deve specificare metodo e frequenza.\nIn termini generali, le mani vanno lavate prima di iniziare, dopo i servizi igienici, dopo rifiuti o materiale sporco, dopo aver tossito o toccato viso e capelli, dopo operazioni di pulizia e ogni volta che il passaggio da un’attività a un’altra può creare contaminazione."
+        }
+      ]
+    },
+    {
+      "id": "res-u16-contatti",
+      "title": "Panni, stoviglie e segnalazioni",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-16"
+      ],
+      "topics": [
+        "igiene",
+        "lavaggio mani",
+        "divisa",
+        "telefono",
+        "contaminazione",
+        "panni"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "36d9d1a5e1d4fb3a286d983a2bf6dd1d56f684db8dcbd8f86b7e51c32ae35e93",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 16; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u16-contatti",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "36d9d1a5e1d4fb3a286d983a2bf6dd1d56f684db8dcbd8f86b7e51c32ae35e93",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "igiene",
+        "lavaggio mani",
+        "divisa",
+        "telefono",
+        "contaminazione",
+        "panni"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u16-contatti-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "36d9d1a5e1d4fb3a286d983a2bf6dd1d56f684db8dcbd8f86b7e51c32ae35e93",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u16-contatti-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 16.3 Pulire, disinfettare, sanificare\n\nPulire significa rimuovere sporco e residui. Disinfettare significa applicare un prodotto o metodo destinato a ridurre microrganismi, secondo istruzioni. Sanificare è un termine più ampio usato per indicare un insieme di operazioni che porta l’ambiente a condizioni igieniche definite. Prodotti, diluizioni e tempi di contatto non si improvvisano.\n\n## 16.4 Panni, strofinacci e spugne\n\nUn panno sporco non pulisce: distribuisce sporco. Colori, contenitori e destinazioni possono aiutare a separare bar, tavoli, pavimenti e aree di lavaggio. Il sistema deve essere semplice, conosciuto e verificato. Panni umidi lasciati a lungo senza ricambio possono diventare fonte di contaminazione e cattivi odori.\n\n## 16.5 Stoviglie e punti di presa\n\nBicchieri e posate si maneggiano dalle parti che non entrano in contatto con bocca o alimento. I bicchieri non si afferrano dal bordo; le posate non si prendono dalla parte funzionale. Un materiale pulito caduto a terra non torna in servizio senza il trattamento previsto.\n\n## 16.6 Salute e idoneità al turno\n\nSintomi o condizioni che possono compromettere la sicurezza degli alimenti devono essere comunicati secondo la procedura aziendale. Il lavoratore non deve autodiagnosticarsi né nascondere un problema per paura. Il responsabile deve gestire l’informazione con riservatezza e applicare le indicazioni competenti.",
+      "reading": "## 16.3 Pulire, disinfettare, sanificare\n\nPulire significa rimuovere sporco e residui. Disinfettare significa applicare un prodotto o metodo destinato a ridurre microrganismi, secondo istruzioni. Sanificare è un termine più ampio usato per indicare un insieme di operazioni che porta l’ambiente a condizioni igieniche definite. Prodotti, diluizioni e tempi di contatto non si improvvisano.\n\n## 16.4 Panni, strofinacci e spugne\n\nUn panno sporco non pulisce: distribuisce sporco. Colori, contenitori e destinazioni possono aiutare a separare bar, tavoli, pavimenti e aree di lavaggio. Il sistema deve essere semplice, conosciuto e verificato. Panni umidi lasciati a lungo senza ricambio possono diventare fonte di contaminazione e cattivi odori.\n\n## 16.5 Stoviglie e punti di presa\n\nBicchieri e posate si maneggiano dalle parti che non entrano in contatto con bocca o alimento. I bicchieri non si afferrano dal bordo; le posate non si prendono dalla parte funzionale. Un materiale pulito caduto a terra non torna in servizio senza il trattamento previsto.\n\n## 16.6 Salute e idoneità al turno\n\nSintomi o condizioni che possono compromettere la sicurezza degli alimenti devono essere comunicati secondo la procedura aziendale. Il lavoratore non deve autodiagnosticarsi né nascondere un problema per paura. Il responsabile deve gestire l’informazione con riservatezza e applicare le indicazioni competenti.",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "16.3 Pulire, disinfettare, sanificare",
+          "body": "Pulire significa rimuovere sporco e residui.\nDisinfettare significa applicare un prodotto o metodo destinato a ridurre microrganismi, secondo istruzioni.\nSanificare è un termine più ampio usato per indicare un insieme di operazioni che porta l’ambiente a condizioni igieniche definite.\nProdotti, diluizioni e tempi di contatto non si improvvisano."
+        },
+        {
+          "title": "16.4 Panni, strofinacci e spugne",
+          "body": "Un panno sporco non pulisce: distribuisce sporco.\nColori, contenitori e destinazioni possono aiutare a separare bar, tavoli, pavimenti e aree di lavaggio.\nIl sistema deve essere semplice, conosciuto e verificato.\nPanni umidi lasciati a lungo senza ricambio possono diventare fonte di contaminazione e cattivi odori."
+        },
+        {
+          "title": "16.5 Stoviglie e punti di presa",
+          "body": "Bicchieri e posate si maneggiano dalle parti che non entrano in contatto con bocca o alimento.\nI bicchieri non si afferrano dal bordo; le posate non si prendono dalla parte funzionale.\nUn materiale pulito caduto a terra non torna in servizio senza il trattamento previsto."
+        },
+        {
+          "title": "16.6 Salute e idoneità al turno",
+          "body": "Sintomi o condizioni che possono compromettere la sicurezza degli alimenti devono essere comunicati secondo la procedura aziendale.\nIl lavoratore non deve autodiagnosticarsi né nascondere un problema per paura.\nIl responsabile deve gestire l’informazione con riservatezza e applicare le indicazioni competenti."
+        }
+      ]
+    },
+    {
+      "id": "res-u16-activity",
+      "title": "Il percorso invisibile delle mani",
+      "description": "Simulazione dei contatti indiretti con adesivi colorati su oggetti didattici. Nessuna coltura microbica o alimento da consumare. Il docente sceglie una sequenza di prova e ne guida la ripetizione.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-16"
+      ],
+      "topics": [
+        "igiene",
+        "lavaggio mani",
+        "divisa",
+        "telefono",
+        "contaminazione",
+        "panni"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "1fe75f4ead0bdc9cda27738aeaa5c5d3cb1d77fbb94ea412db03422609ae6fc8",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 16; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u16-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "1fe75f4ead0bdc9cda27738aeaa5c5d3cb1d77fbb94ea412db03422609ae6fc8",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "igiene",
+        "lavaggio mani",
+        "divisa",
+        "telefono",
+        "contaminazione",
+        "panni"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u16-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "1fe75f4ead0bdc9cda27738aeaa5c5d3cb1d77fbb94ea412db03422609ae6fc8",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u16-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "SERVICE_SCENARIO",
+      "body": "## Obiettivo operativo\n\nIndividuare i passaggi di contaminazione durante un servizio simulato.\n\n## Materiali\n\nPolvere fluorescente o adesivi colorati; oggetti di sala; lampada UV se disponibile.\n\n## Svolgimento\n\n1. Scegliere un oggetto come fonte simulata di contaminazione.\n2. Svolgere per cinque minuti una sequenza di servizio.\n3. Osservare su quali superfici è arrivato il segnale.\n4. Ricostruire i passaggi e inserire punti di lavaggio o cambio attività.\n5. Ripetere la sequenza corretta.\n\n## Cosa osservare\n\n- Capacità di riconoscere contatti indiretti.\n- Separazione tra sporco e pulito.\n- Lavaggio nei momenti utili, non soltanto a orario fisso.\n- Uso corretto dei punti di presa.\n\n## Domande per il debriefing\n\n- Quale contatto non avevi previsto?\n- Quale controllo organizzativo riduce il rischio?\n- Che differenza c’è tra pulire una superficie e sanificarla?\n\n## Verifica aperta\n\n- Pulire e disinfettare sono la stessa cosa?\n- Perché il telefono è un punto critico?\n- Che cosa fare se una stoviglia pulita cade a terra?",
+      "reading": "## Obiettivo operativo\n\nIndividuare i passaggi di contaminazione durante un servizio simulato.\n\n## Materiali\n\nPolvere fluorescente o adesivi colorati; oggetti di sala; lampada UV se disponibile.\n\n## Svolgimento\n\n1. Scegliere un oggetto come fonte simulata di contaminazione.\n2. Svolgere per cinque minuti una sequenza di servizio.\n3. Osservare su quali superfici è arrivato il segnale.\n4. Ricostruire i passaggi e inserire punti di lavaggio o cambio attività.\n5. Ripetere la sequenza corretta.\n\n## Cosa osservare\n\n- Capacità di riconoscere contatti indiretti.\n- Separazione tra sporco e pulito.\n- Lavaggio nei momenti utili, non soltanto a orario fisso.\n- Uso corretto dei punti di presa.\n\n## Domande per il debriefing\n\n- Quale contatto non avevi previsto?\n- Quale controllo organizzativo riduce il rischio?\n- Che differenza c’è tra pulire una superficie e sanificarla?\n\n## Verifica aperta\n\n- Pulire e disinfettare sono la stessa cosa?\n- Perché il telefono è un punto critico?\n- Che cosa fare se una stoviglia pulita cade a terra?",
+      "recommended_minutes": 35,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Obiettivo operativo",
+          "body": "Individuare i passaggi di contaminazione durante un servizio simulato."
+        },
+        {
+          "title": "Materiali",
+          "body": "Polvere fluorescente o adesivi colorati; oggetti di sala; lampada UV se disponibile."
+        },
+        {
+          "title": "Svolgimento",
+          "body": "1. Scegliere un oggetto come fonte simulata di contaminazione.\n2. Svolgere per cinque minuti una sequenza di servizio.\n3. Osservare su quali superfici è arrivato il segnale.\n4. Ricostruire i passaggi e inserire punti di lavaggio o cambio attività.\n5. Ripetere la sequenza corretta."
+        },
+        {
+          "title": "Cosa osservare",
+          "body": "- Capacità di riconoscere contatti indiretti.\n- Separazione tra sporco e pulito.\n- Lavaggio nei momenti utili, non soltanto a orario fisso.\n- Uso corretto dei punti di presa."
+        },
+        {
+          "title": "Domande per il debriefing",
+          "body": "- Quale contatto non avevi previsto?\n- Quale controllo organizzativo riduce il rischio?\n- Che differenza c’è tra pulire una superficie e sanificarla?"
+        },
+        {
+          "title": "Verifica aperta",
+          "body": "- Pulire e disinfettare sono la stessa cosa?\n- Perché il telefono è un punto critico?\n- Che cosa fare se una stoviglia pulita cade a terra?"
+        }
+      ],
+      "asset_filename": "unit-16-scheda-operativa.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u16-checklist",
+      "title": "Controllo dei comportamenti igienici",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-16"
+      ],
+      "topics": [
+        "igiene",
+        "lavaggio mani",
+        "divisa",
+        "telefono",
+        "contaminazione",
+        "panni"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "b54f7168daa8a0bf048f89b61deb6fa504185658ec6944da2d983d1038ac490c",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 16; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u16-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "b54f7168daa8a0bf048f89b61deb6fa504185658ec6944da2d983d1038ac490c",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "igiene",
+        "lavaggio mani",
+        "divisa",
+        "telefono",
+        "contaminazione",
+        "panni"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u16-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "b54f7168daa8a0bf048f89b61deb6fa504185658ec6944da2d983d1038ac490c",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u16-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- Lavo le mani nei passaggi critici.\n- Separo materiale sporco e pulito.\n- Uso prodotti e panni secondo procedura.\n- Segnalo ferite, sintomi e anomalie.",
+      "reading": "## Controlla il tuo lavoro\n\n- Lavo le mani nei passaggi critici.\n- Separo materiale sporco e pulito.\n- Uso prodotti e panni secondo procedura.\n- Segnalo ferite, sintomi e anomalie.",
+      "recommended_minutes": 5,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "- Lavo le mani nei passaggi critici.\n- Separo materiale sporco e pulito.\n- Uso prodotti e panni secondo procedura.\n- Segnalo ferite, sintomi e anomalie."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Lavo le mani nei passaggi critici.",
+            "Separo materiale sporco e pulito.",
+            "Uso prodotti e panni secondo procedura.",
+            "Segnalo ferite, sintomi e anomalie."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u18-sistema",
+      "title": "Sistema preventivo e applicazione quotidiana",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-18"
+      ],
+      "topics": [
+        "HACCP",
+        "autocontrollo",
+        "cultura sicurezza",
+        "procedure",
+        "registri",
+        "burocrazia"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "6a31cfa73f0f64ae8f615b697f7c62a3b5740d28bb7d36926523ac57302fd02b",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 18; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u18-sistema",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "6a31cfa73f0f64ae8f615b697f7c62a3b5740d28bb7d36926523ac57302fd02b",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "EDITORIAL_ANALYSIS; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "HACCP",
+        "autocontrollo",
+        "cultura sicurezza",
+        "procedure",
+        "registri",
+        "burocrazia"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u18-sistema-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "6a31cfa73f0f64ae8f615b697f7c62a3b5740d28bb7d36926523ac57302fd02b",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u18-sistema-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 18.1 La luce: un metodo che anticipa i problemi\n\nLa forza dell’HACCP è spostare l’attenzione dal controllo del prodotto finito alla prevenzione lungo il processo. Chiede di conoscere il lavoro, individuare punti vulnerabili, misurare, correggere e verificare. Quando è proporzionato e compreso, rende visibili responsabilità e priorità.\n\n## 18.2 L’ombra: il raccoglitore che nessuno usa\n\nUn manuale copiato da un’altra attività, registrazioni troppo numerose o istruzioni impossibili durante il servizio trasformano il sistema in burocrazia. Il problema non è la presenza di documenti, ma la loro distanza dal processo reale. RIQUADRO — Che cosa NON è HACCP Non è un attestato appeso al muro, non è un manuale copiato da un’altra attività, non è una serie di caselle compilate a fine turno e non è una responsabilità scaricata sul lavoratore meno esperto. È un sistema che funziona solo se direzione, responsabili e operatori conoscono i rischi reali, dispongono di strumenti adeguati e registrano controlli effettivamente svolti.",
+      "reading": "## 18.1 La luce: un metodo che anticipa i problemi\n\nLa forza dell’HACCP è spostare l’attenzione dal controllo del prodotto finito alla prevenzione lungo il processo. Chiede di conoscere il lavoro, individuare punti vulnerabili, misurare, correggere e verificare. Quando è proporzionato e compreso, rende visibili responsabilità e priorità.\n\n## 18.2 L’ombra: il raccoglitore che nessuno usa\n\nUn manuale copiato da un’altra attività, registrazioni troppo numerose o istruzioni impossibili durante il servizio trasformano il sistema in burocrazia. Il problema non è la presenza di documenti, ma la loro distanza dal processo reale. RIQUADRO — Che cosa NON è HACCP Non è un attestato appeso al muro, non è un manuale copiato da un’altra attività, non è una serie di caselle compilate a fine turno e non è una responsabilità scaricata sul lavoratore meno esperto. È un sistema che funziona solo se direzione, responsabili e operatori conoscono i rischi reali, dispongono di strumenti adeguati e registrano controlli effettivamente svolti.",
+      "recommended_minutes": 10,
+      "content_classification": "EDITORIAL_ANALYSIS",
+      "projector_pages": [
+        {
+          "title": "Analisi didattica · 18.1 La luce: un metodo che anticipa i problemi",
+          "body": "La forza dell’HACCP è spostare l’attenzione dal controllo del prodotto finito alla prevenzione lungo il processo.\nChiede di conoscere il lavoro, individuare punti vulnerabili, misurare, correggere e verificare.\nQuando è proporzionato e compreso, rende visibili responsabilità e priorità."
+        },
+        {
+          "title": "Analisi didattica · 18.2 L’ombra: il raccoglitore che nessuno usa",
+          "body": "Un manuale copiato da un’altra attività, registrazioni troppo numerose o istruzioni impossibili durante il servizio trasformano il sistema in burocrazia.\nIl problema non è la presenza di documenti, ma la loro distanza dal processo reale."
+        },
+        {
+          "title": "Analisi didattica · 18.2 L’ombra: il raccoglitore che nessuno usa",
+          "body": "RIQUADRO — Che cosa NON è HACCP Non è un attestato appeso al muro, non è un manuale copiato da un’altra attività, non è una serie di caselle compilate a fine turno e non è una responsabilità scaricata sul lavoratore meno esperto.\nÈ un sistema che funziona solo se direzione, responsabili e operatori conoscono i rischi reali, dispongono di strumenti adeguati e registrano controlli effettivamente svolti."
+        }
+      ]
+    },
+    {
+      "id": "res-u18-organizzazione",
+      "title": "Risorse, responsabilità e miglioramento",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-18"
+      ],
+      "topics": [
+        "HACCP",
+        "autocontrollo",
+        "cultura sicurezza",
+        "procedure",
+        "registri",
+        "burocrazia"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "4f43531ffc0e4c1072753d123ea2b28e68782bf52a23bdacfff88a0741ad9b7a",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 18; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u18-organizzazione",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "4f43531ffc0e4c1072753d123ea2b28e68782bf52a23bdacfff88a0741ad9b7a",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "OPERATIONAL_OBSERVATION; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "HACCP",
+        "autocontrollo",
+        "cultura sicurezza",
+        "procedure",
+        "registri",
+        "burocrazia"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u18-organizzazione-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "4f43531ffc0e4c1072753d123ea2b28e68782bf52a23bdacfff88a0741ad9b7a",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u18-organizzazione-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 18.5 La responsabilità della direzione\n\nNon è coerente chiedere al commis di rispettare una procedura se il responsabile ordina di ignorarla durante il pienone. Tempi, organico, manutenzione, acquisti e formazione sono decisioni organizzative che determinano la sicurezza quanto il comportamento individuale.\n\n## 18.6 Dall’errore al miglioramento\n\nUn errore deve produrre apprendimento: che cosa è accaduto, quale barriera mancava, come evitare la ripetizione, chi verifica l’efficacia. Cercare soltanto un colpevole può impedire di vedere la causa organizzativa.",
+      "reading": "## 18.5 La responsabilità della direzione\n\nNon è coerente chiedere al commis di rispettare una procedura se il responsabile ordina di ignorarla durante il pienone. Tempi, organico, manutenzione, acquisti e formazione sono decisioni organizzative che determinano la sicurezza quanto il comportamento individuale.\n\n## 18.6 Dall’errore al miglioramento\n\nUn errore deve produrre apprendimento: che cosa è accaduto, quale barriera mancava, come evitare la ripetizione, chi verifica l’efficacia. Cercare soltanto un colpevole può impedire di vedere la causa organizzativa.",
+      "recommended_minutes": 10,
+      "content_classification": "OPERATIONAL_OBSERVATION",
+      "projector_pages": [
+        {
+          "title": "Osservazione operativa · 18.5 La responsabilità della direzione",
+          "body": "Non è coerente chiedere al commis di rispettare una procedura se il responsabile ordina di ignorarla durante il pienone.\nTempi, organico, manutenzione, acquisti e formazione sono decisioni organizzative che determinano la sicurezza quanto il comportamento individuale."
+        },
+        {
+          "title": "Osservazione operativa · 18.6 Dall’errore al miglioramento",
+          "body": "Un errore deve produrre apprendimento: che cosa è accaduto, quale barriera mancava, come evitare la ripetizione, chi verifica l’efficacia.\nCercare soltanto un colpevole può impedire di vedere la causa organizzativa."
+        }
+      ]
+    },
+    {
+      "id": "res-u18-activity",
+      "title": "Audit onesto di una procedura",
+      "description": "Discussione su una procedura simulata. Le difficoltà sono osservazioni del caso didattico: nessun giudizio di conformità su un’impresa reale.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-18"
+      ],
+      "topics": [
+        "HACCP",
+        "autocontrollo",
+        "cultura sicurezza",
+        "procedure",
+        "registri",
+        "burocrazia"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "b31a1c3fd2798ecf9e5bf7253886b2678ab0fbbb66eb0597d09b4e7865323949",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 18; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u18-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "b31a1c3fd2798ecf9e5bf7253886b2678ab0fbbb66eb0597d09b4e7865323949",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "EDITORIAL_ANALYSIS; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "HACCP",
+        "autocontrollo",
+        "cultura sicurezza",
+        "procedure",
+        "registri",
+        "burocrazia"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u18-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "b31a1c3fd2798ecf9e5bf7253886b2678ab0fbbb66eb0597d09b4e7865323949",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u18-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "SERVICE_SCENARIO",
+      "body": "## Obiettivo operativo\n\nConfrontare una procedura scritta con ciò che avviene realmente.\n\n## Materiali\n\nProcedura simulata; scheda osservazione; post-it.\n\n## Svolgimento\n\n1. Scegliere una procedura semplice: temperature, buffet, pulizia o allergeni.\n2. Leggere ciò che il documento richiede.\n3. Simulare il turno reale con tempi e ostacoli.\n4. Segnare passaggi impossibili, ambigui o non controllati.\n5. Proporre una versione più semplice che mantenga il controllo del rischio.\n\n## Cosa osservare\n\n- Distinzione tra semplificazione e omissione.\n- Coinvolgimento di ruoli diversi.\n- Proposte realistiche.\n- Presenza di verifica finale.\n\n## Domande per il debriefing\n\n- Quale requisito era utile ma spiegato male?\n- Quale problema dipendeva dalle risorse?\n- Come si verifica che il miglioramento funzioni?\n\n## Verifica aperta\n\n- Che cosa rende burocratico un controllo?\n- Che cos’è la cultura della sicurezza alimentare?\n- Flessibilità significa eliminare controlli?",
+      "reading": "## Obiettivo operativo\n\nConfrontare una procedura scritta con ciò che avviene realmente.\n\n## Materiali\n\nProcedura simulata; scheda osservazione; post-it.\n\n## Svolgimento\n\n1. Scegliere una procedura semplice: temperature, buffet, pulizia o allergeni.\n2. Leggere ciò che il documento richiede.\n3. Simulare il turno reale con tempi e ostacoli.\n4. Segnare passaggi impossibili, ambigui o non controllati.\n5. Proporre una versione più semplice che mantenga il controllo del rischio.\n\n## Cosa osservare\n\n- Distinzione tra semplificazione e omissione.\n- Coinvolgimento di ruoli diversi.\n- Proposte realistiche.\n- Presenza di verifica finale.\n\n## Domande per il debriefing\n\n- Quale requisito era utile ma spiegato male?\n- Quale problema dipendeva dalle risorse?\n- Come si verifica che il miglioramento funzioni?\n\n## Verifica aperta\n\n- Che cosa rende burocratico un controllo?\n- Che cos’è la cultura della sicurezza alimentare?\n- Flessibilità significa eliminare controlli?",
+      "recommended_minutes": 35,
+      "content_classification": "EDITORIAL_ANALYSIS",
+      "projector_pages": [
+        {
+          "title": "Analisi didattica · Obiettivo operativo",
+          "body": "Confrontare una procedura scritta con ciò che avviene realmente."
+        },
+        {
+          "title": "Analisi didattica · Materiali",
+          "body": "Procedura simulata; scheda osservazione; post-it."
+        },
+        {
+          "title": "Analisi didattica · Svolgimento",
+          "body": "1. Scegliere una procedura semplice: temperature, buffet, pulizia o allergeni.\n2. Leggere ciò che il documento richiede.\n3. Simulare il turno reale con tempi e ostacoli.\n4. Segnare passaggi impossibili, ambigui o non controllati.\n5. Proporre una versione più semplice che mantenga il controllo del rischio."
+        },
+        {
+          "title": "Analisi didattica · Cosa osservare",
+          "body": "- Distinzione tra semplificazione e omissione.\n- Coinvolgimento di ruoli diversi.\n- Proposte realistiche.\n- Presenza di verifica finale."
+        },
+        {
+          "title": "Analisi didattica · Domande per il debriefing",
+          "body": "- Quale requisito era utile ma spiegato male?\n- Quale problema dipendeva dalle risorse?\n- Come si verifica che il miglioramento funzioni?"
+        },
+        {
+          "title": "Analisi didattica · Verifica aperta",
+          "body": "- Che cosa rende burocratico un controllo?\n- Che cos’è la cultura della sicurezza alimentare?\n- Flessibilità significa eliminare controlli?"
+        }
+      ],
+      "asset_filename": "unit-18-scheda-operativa.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u18-checklist",
+      "title": "Distinguere documenti e applicazione",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-18"
+      ],
+      "topics": [
+        "HACCP",
+        "autocontrollo",
+        "cultura sicurezza",
+        "procedure",
+        "registri",
+        "burocrazia"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "41316514ebcd3bd3bd814ad394a4a1b0c34c1cc3963e51bc7d814687bd959496",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 18; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u18-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_VERIFIED",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "41316514ebcd3bd3bd814ad394a4a1b0c34c1cc3963e51bc7d814687bd959496",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "EDITORIAL_ANALYSIS; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "HACCP",
+        "autocontrollo",
+        "cultura sicurezza",
+        "procedure",
+        "registri",
+        "burocrazia"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u18-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "41316514ebcd3bd3bd814ad394a4a1b0c34c1cc3963e51bc7d814687bd959496",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u18-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- So distinguere sistema e burocrazia.\n- Valuto la praticabilità delle procedure.\n- Riconosco il ruolo della direzione.\n- Propongo miglioramenti verificabili.",
+      "reading": "## Controlla il tuo lavoro\n\n- So distinguere sistema e burocrazia.\n- Valuto la praticabilità delle procedure.\n- Riconosco il ruolo della direzione.\n- Propongo miglioramenti verificabili.",
+      "recommended_minutes": 5,
+      "content_classification": "EDITORIAL_ANALYSIS",
+      "projector_pages": [
+        {
+          "title": "Analisi didattica · Controlla il tuo lavoro",
+          "body": "- So distinguere sistema e burocrazia.\n- Valuto la praticabilità delle procedure.\n- Riconosco il ruolo della direzione.\n- Propongo miglioramenti verificabili."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "So distinguere sistema e burocrazia.",
+            "Valuto la praticabilità delle procedure.",
+            "Riconosco il ruolo della direzione.",
+            "Propongo miglioramenti verificabili."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u19-comportamenti",
+      "title": "Dalle etichette ai comportamenti osservabili",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-19"
+      ],
+      "topics": [
+        "soft skills",
+        "teamwork",
+        "feedback",
+        "empatia",
+        "collaborazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "00bdbab4f7f04fa8e2a8c34960308926ad94d900213cddb02ac45379d79a31ef",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 19; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u19-comportamenti",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "00bdbab4f7f04fa8e2a8c34960308926ad94d900213cddb02ac45379d79a31ef",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "soft skills",
+        "teamwork",
+        "feedback",
+        "empatia",
+        "collaborazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u19-comportamenti-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "00bdbab4f7f04fa8e2a8c34960308926ad94d900213cddb02ac45379d79a31ef",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u19-comportamenti-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 19.1 Dal carattere al comportamento\n\nDire “non ha il carattere giusto” non aiuta a formare. È più utile descrivere l’azione: non comunica un ritardo, interrompe il collega, non controlla la consegna. Il comportamento può essere corretto, esercitato e valutato.\n\n## 19.2 Empatia professionale\n\nEmpatia non significa indovinare ciò che una persona pensa né accettare tutto. Significa riconoscere il punto di vista, fare domande e rispondere senza giudizio. I confini professionali restano necessari.\n\n## Affidabilità\n\nArriva pronto, mantiene impegni, avvisa in tempo.\n\n## Ascolto\n\nLascia terminare e riformula.\n\n## Collaborazione\n\nCondivide informazioni e offre supporto.\n\n## Flessibilità\n\nAdatta il piano senza perdere lo standard.\n\n## Autocontrollo\n\nMantiene tono e priorità sotto pressione.",
+      "reading": "## 19.1 Dal carattere al comportamento\n\nDire “non ha il carattere giusto” non aiuta a formare. È più utile descrivere l’azione: non comunica un ritardo, interrompe il collega, non controlla la consegna. Il comportamento può essere corretto, esercitato e valutato.\n\n## 19.2 Empatia professionale\n\nEmpatia non significa indovinare ciò che una persona pensa né accettare tutto. Significa riconoscere il punto di vista, fare domande e rispondere senza giudizio. I confini professionali restano necessari.\n\n## Affidabilità\n\nArriva pronto, mantiene impegni, avvisa in tempo.\n\n## Ascolto\n\nLascia terminare e riformula.\n\n## Collaborazione\n\nCondivide informazioni e offre supporto.\n\n## Flessibilità\n\nAdatta il piano senza perdere lo standard.\n\n## Autocontrollo\n\nMantiene tono e priorità sotto pressione.",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "19.1 Dal carattere al comportamento",
+          "body": "Dire “non ha il carattere giusto” non aiuta a formare.\nÈ più utile descrivere l’azione: non comunica un ritardo, interrompe il collega, non controlla la consegna.\nIl comportamento può essere corretto, esercitato e valutato."
+        },
+        {
+          "title": "19.2 Empatia professionale",
+          "body": "Empatia non significa indovinare ciò che una persona pensa né accettare tutto.\nSignifica riconoscere il punto di vista, fare domande e rispondere senza giudizio.\nI confini professionali restano necessari."
+        },
+        {
+          "title": "Affidabilità",
+          "body": "Arriva pronto, mantiene impegni, avvisa in tempo."
+        },
+        {
+          "title": "Ascolto",
+          "body": "Lascia terminare e riformula."
+        },
+        {
+          "title": "Collaborazione",
+          "body": "Condivide informazioni e offre supporto."
+        },
+        {
+          "title": "Flessibilità",
+          "body": "Adatta il piano senza perdere lo standard."
+        },
+        {
+          "title": "Autocontrollo",
+          "body": "Mantiene tono e priorità sotto pressione."
+        }
+      ]
+    },
+    {
+      "id": "res-u19-feedback",
+      "title": "Feedback concreto e squadra multiculturale",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-19"
+      ],
+      "topics": [
+        "soft skills",
+        "teamwork",
+        "feedback",
+        "empatia",
+        "collaborazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "843c3ea35cdd9babf66e9e4729950c2dd8fec682c7de5f19a0d101d03d5e009c",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 19; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u19-feedback",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "843c3ea35cdd9babf66e9e4729950c2dd8fec682c7de5f19a0d101d03d5e009c",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "soft skills",
+        "teamwork",
+        "feedback",
+        "empatia",
+        "collaborazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u19-feedback-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "843c3ea35cdd9babf66e9e4729950c2dd8fec682c7de5f19a0d101d03d5e009c",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u19-feedback-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 19.3 Feedback: descrivere, non etichettare\n\nUn feedback utile indica fatto, conseguenza e alternativa: “Hai lasciato il vassoio sul bordo; poteva cadere. Appoggialo completamente sulla superficie”. “Sei incapace” non contiene istruzione e umilia la persona.\n\n## 19.4 Diversità e lingua\n\nUna squadra può includere persone con lingue, culture, età e percorsi scolastici differenti. Semplificare le consegne, mostrare i gesti e verificare la comprensione migliora il lavoro di tutti. L’accento o un errore linguistico non misurano l’intelligenza o il valore professionale.",
+      "reading": "## 19.3 Feedback: descrivere, non etichettare\n\nUn feedback utile indica fatto, conseguenza e alternativa: “Hai lasciato il vassoio sul bordo; poteva cadere. Appoggialo completamente sulla superficie”. “Sei incapace” non contiene istruzione e umilia la persona.\n\n## 19.4 Diversità e lingua\n\nUna squadra può includere persone con lingue, culture, età e percorsi scolastici differenti. Semplificare le consegne, mostrare i gesti e verificare la comprensione migliora il lavoro di tutti. L’accento o un errore linguistico non misurano l’intelligenza o il valore professionale.",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "19.3 Feedback: descrivere, non etichettare",
+          "body": "Un feedback utile indica fatto, conseguenza e alternativa: “Hai lasciato il vassoio sul bordo; poteva cadere.\nAppoggialo completamente sulla superficie”.\n“Sei incapace” non contiene istruzione e umilia la persona."
+        },
+        {
+          "title": "19.4 Diversità e lingua",
+          "body": "Una squadra può includere persone con lingue, culture, età e percorsi scolastici differenti.\nSemplificare le consegne, mostrare i gesti e verificare la comprensione migliora il lavoro di tutti.\nL’accento o un errore linguistico non misurano l’intelligenza o il valore professionale."
+        }
+      ]
+    },
+    {
+      "id": "res-u19-activity",
+      "title": "Il feedback che fa crescere",
+      "description": "Cliente, collega e osservatore possono riutilizzare questa risorsa in lezioni diverse. Si osservano gesti e comunicazioni, senza profili di personalità o valutazioni psicologiche.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-19"
+      ],
+      "topics": [
+        "soft skills",
+        "teamwork",
+        "feedback",
+        "empatia",
+        "collaborazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "77c8cbe34ee5b5d523794d4f7a7d22e39b93ec5248a128cf29fd27b4ae93c09b",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 19; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u19-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "77c8cbe34ee5b5d523794d4f7a7d22e39b93ec5248a128cf29fd27b4ae93c09b",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata.",
+        "Traccia comune: traduzione del brief del proprietario, distinta dagli estratti del manuale."
+      ],
+      "keywords": [
+        "soft skills",
+        "teamwork",
+        "feedback",
+        "empatia",
+        "collaborazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u19-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "77c8cbe34ee5b5d523794d4f7a7d22e39b93ec5248a128cf29fd27b4ae93c09b",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u19-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "SERVICE_SCENARIO",
+      "body": "## Obiettivo operativo\n\nFormulare correzioni tecniche chiare e rispettose.\n\n## Materiali\n\nSchede con errori; griglia fatto-conseguenza-alternativa.\n\n## Svolgimento\n\n1. Un partecipante esegue una breve procedura con un errore assegnato.\n2. L’osservatore descrive il fatto senza etichettare la persona.\n3. Aggiunge la conseguenza possibile.\n4. Propone una correzione concreta.\n5. La persona ripete il gesto e valuta se il feedback era comprensibile.\n\n## Cosa osservare\n\n- Precisione della descrizione.\n- Assenza di sarcasmo e giudizi personali.\n- Alternativa praticabile.\n- Capacità di ricevere il feedback senza difendersi automaticamente.\n\n## Domande per il debriefing\n\n- Quale frase era troppo vaga?\n- Come cambia la correzione se c’è un rischio immediato?\n- Che cosa deve essere discusso in privato?\n\n## Verifica aperta\n\n- Le soft skills sono innate?\n- Come si formula un feedback utile?\n- Un cliente può giustificare una molestia?\n\n## Riflessione finale comune\n\n- Che cosa è successo?\n- Che cosa ha funzionato?\n- Che cosa ha creato difficoltà?\n- Quale azione alternativa era possibile?\n- Che cosa faresti la prossima volta?",
+      "reading": "## Obiettivo operativo\n\nFormulare correzioni tecniche chiare e rispettose.\n\n## Materiali\n\nSchede con errori; griglia fatto-conseguenza-alternativa.\n\n## Svolgimento\n\n1. Un partecipante esegue una breve procedura con un errore assegnato.\n2. L’osservatore descrive il fatto senza etichettare la persona.\n3. Aggiunge la conseguenza possibile.\n4. Propone una correzione concreta.\n5. La persona ripete il gesto e valuta se il feedback era comprensibile.\n\n## Cosa osservare\n\n- Precisione della descrizione.\n- Assenza di sarcasmo e giudizi personali.\n- Alternativa praticabile.\n- Capacità di ricevere il feedback senza difendersi automaticamente.\n\n## Domande per il debriefing\n\n- Quale frase era troppo vaga?\n- Come cambia la correzione se c’è un rischio immediato?\n- Che cosa deve essere discusso in privato?\n\n## Verifica aperta\n\n- Le soft skills sono innate?\n- Come si formula un feedback utile?\n- Un cliente può giustificare una molestia?\n\n## Riflessione finale comune\n\n- Che cosa è successo?\n- Che cosa ha funzionato?\n- Che cosa ha creato difficoltà?\n- Quale azione alternativa era possibile?\n- Che cosa faresti la prossima volta?",
+      "recommended_minutes": 35,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Obiettivo operativo",
+          "body": "Formulare correzioni tecniche chiare e rispettose."
+        },
+        {
+          "title": "Materiali",
+          "body": "Schede con errori; griglia fatto-conseguenza-alternativa."
+        },
+        {
+          "title": "Svolgimento",
+          "body": "1. Un partecipante esegue una breve procedura con un errore assegnato.\n2. L’osservatore descrive il fatto senza etichettare la persona.\n3. Aggiunge la conseguenza possibile.\n4. Propone una correzione concreta.\n5. La persona ripete il gesto e valuta se il feedback era comprensibile."
+        },
+        {
+          "title": "Cosa osservare",
+          "body": "- Precisione della descrizione.\n- Assenza di sarcasmo e giudizi personali.\n- Alternativa praticabile.\n- Capacità di ricevere il feedback senza difendersi automaticamente."
+        },
+        {
+          "title": "Domande per il debriefing",
+          "body": "- Quale frase era troppo vaga?\n- Come cambia la correzione se c’è un rischio immediato?\n- Che cosa deve essere discusso in privato?"
+        },
+        {
+          "title": "Verifica aperta",
+          "body": "- Le soft skills sono innate?\n- Come si formula un feedback utile?\n- Un cliente può giustificare una molestia?"
+        },
+        {
+          "title": "Riflessione finale comune",
+          "body": "Che cosa è successo?\nChe cosa ha funzionato?\nChe cosa ha creato difficoltà?"
+        },
+        {
+          "title": "Riflessione finale comune",
+          "body": "Quale azione alternativa era possibile?\nChe cosa faresti la prossima volta?"
+        }
+      ],
+      "debrief_template_id": "debrief-servizio-v1",
+      "asset_filename": "unit-19-scheda-operativa.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u19-checklist",
+      "title": "Osservare e correggere senza etichette",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-19"
+      ],
+      "topics": [
+        "soft skills",
+        "teamwork",
+        "feedback",
+        "empatia",
+        "collaborazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "538c57d642711046a1f252fbbc7feb2025f48891cdfc1bf3993f8378e12a5f0f",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 19; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u19-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "538c57d642711046a1f252fbbc7feb2025f48891cdfc1bf3993f8378e12a5f0f",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "soft skills",
+        "teamwork",
+        "feedback",
+        "empatia",
+        "collaborazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u19-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "538c57d642711046a1f252fbbc7feb2025f48891cdfc1bf3993f8378e12a5f0f",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u19-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- Descrivo comportamenti, non caratteri.\n- Do feedback con fatto, conseguenza e alternativa.\n- Adatto la comunicazione al gruppo.\n- Conosco il canale per segnalare molestie.",
+      "reading": "## Controlla il tuo lavoro\n\n- Descrivo comportamenti, non caratteri.\n- Do feedback con fatto, conseguenza e alternativa.\n- Adatto la comunicazione al gruppo.\n- Conosco il canale per segnalare molestie.",
+      "recommended_minutes": 5,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "- Descrivo comportamenti, non caratteri.\n- Do feedback con fatto, conseguenza e alternativa.\n- Adatto la comunicazione al gruppo.\n- Conosco il canale per segnalare molestie."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Descrivo comportamenti, non caratteri.",
+            "Do feedback con fatto, conseguenza e alternativa.",
+            "Adatto la comunicazione al gruppo.",
+            "Conosco il canale per segnalare molestie."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u20-metodo",
+      "title": "Osserva, valuta, decidi, agisci, verifica",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-20"
+      ],
+      "topics": [
+        "problem solving",
+        "priorità",
+        "imprevisti",
+        "decisione",
+        "escalation"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "32851bd3b412632d12ea858210550c76ae39744deb01f810f95c8f4e3ceb38ef",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 20; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u20-metodo",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "32851bd3b412632d12ea858210550c76ae39744deb01f810f95c8f4e3ceb38ef",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "problem solving",
+        "priorità",
+        "imprevisti",
+        "decisione",
+        "escalation"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u20-metodo-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "32851bd3b412632d12ea858210550c76ae39744deb01f810f95c8f4e3ceb38ef",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u20-metodo-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Osserva\n\nChe cosa sta accadendo realmente?\n\n## Valuta\n\nQuali rischi, persone e tempi sono coinvolti?\n\n## Decidi\n\nChe cosa posso fare nel mio ruolo?\n\n## Agisci\n\nQual è l’azione più sicura e utile adesso?\n\n## Verifica\n\nIl problema è risolto? Che cosa resta da comunicare?",
+      "reading": "## Osserva\n\nChe cosa sta accadendo realmente?\n\n## Valuta\n\nQuali rischi, persone e tempi sono coinvolti?\n\n## Decidi\n\nChe cosa posso fare nel mio ruolo?\n\n## Agisci\n\nQual è l’azione più sicura e utile adesso?\n\n## Verifica\n\nIl problema è risolto? Che cosa resta da comunicare?",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Osserva",
+          "body": "Che cosa sta accadendo realmente?"
+        },
+        {
+          "title": "Valuta",
+          "body": "Quali rischi, persone e tempi sono coinvolti?"
+        },
+        {
+          "title": "Decidi",
+          "body": "Che cosa posso fare nel mio ruolo?"
+        },
+        {
+          "title": "Agisci",
+          "body": "Qual è l’azione più sicura e utile adesso?"
+        },
+        {
+          "title": "Verifica",
+          "body": "Il problema è risolto?\nChe cosa resta da comunicare?"
+        }
+      ]
+    },
+    {
+      "id": "res-u20-priorita",
+      "title": "Rischio, ruolo e cause del problema",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-20"
+      ],
+      "topics": [
+        "problem solving",
+        "priorità",
+        "imprevisti",
+        "decisione",
+        "escalation"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "583a91f365447633b654423f837568a9450e398ea9ee78e49c6a30f9a6c2b83e",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 20; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u20-priorita",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "583a91f365447633b654423f837568a9450e398ea9ee78e49c6a30f9a6c2b83e",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "problem solving",
+        "priorità",
+        "imprevisti",
+        "decisione",
+        "escalation"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u20-priorita-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "583a91f365447633b654423f837568a9450e398ea9ee78e49c6a30f9a6c2b83e",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u20-priorita-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 20.2 Urgente non significa rumoroso\n\nUn cliente che alza la voce attira attenzione, ma un vetro rotto nel passaggio può essere più urgente. La priorità dipende dal rischio, dalla possibilità di aggravamento e dall’impatto sul servizio, non dal volume della richiesta.\n\n## 20.3 Escalation professionale\n\nCoinvolgere il responsabile non è una sconfitta. È corretto quando servono autorizzazione, gestione di denaro, sicurezza, allergeni, conflitti, reclami complessi o decisioni che superano il ruolo. Una buona escalation include fatti, azione già compiuta e bisogno specifico.\n\n## 20.4 Soluzione immediata e causa\n\nPortare una posata risolve il bisogno immediato; capire perché tutte le posate sono terminate evita la ripetizione. Il servizio richiede entrambi i livelli: contenere il problema e correggere la causa.\n\n## 20.5 Errori e responsabilità\n\nAmmettere un errore non significa attribuirsi ogni colpa. Significa fornire informazioni corrette per ridurre il danno. La responsabilità organizzativa riguarda procedure, formazione, strumenti, carichi e supervisione.",
+      "reading": "## 20.2 Urgente non significa rumoroso\n\nUn cliente che alza la voce attira attenzione, ma un vetro rotto nel passaggio può essere più urgente. La priorità dipende dal rischio, dalla possibilità di aggravamento e dall’impatto sul servizio, non dal volume della richiesta.\n\n## 20.3 Escalation professionale\n\nCoinvolgere il responsabile non è una sconfitta. È corretto quando servono autorizzazione, gestione di denaro, sicurezza, allergeni, conflitti, reclami complessi o decisioni che superano il ruolo. Una buona escalation include fatti, azione già compiuta e bisogno specifico.\n\n## 20.4 Soluzione immediata e causa\n\nPortare una posata risolve il bisogno immediato; capire perché tutte le posate sono terminate evita la ripetizione. Il servizio richiede entrambi i livelli: contenere il problema e correggere la causa.\n\n## 20.5 Errori e responsabilità\n\nAmmettere un errore non significa attribuirsi ogni colpa. Significa fornire informazioni corrette per ridurre il danno. La responsabilità organizzativa riguarda procedure, formazione, strumenti, carichi e supervisione.",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "20.2 Urgente non significa rumoroso",
+          "body": "Un cliente che alza la voce attira attenzione, ma un vetro rotto nel passaggio può essere più urgente.\nLa priorità dipende dal rischio, dalla possibilità di aggravamento e dall’impatto sul servizio, non dal volume della richiesta."
+        },
+        {
+          "title": "20.3 Escalation professionale",
+          "body": "Coinvolgere il responsabile non è una sconfitta.\nÈ corretto quando servono autorizzazione, gestione di denaro, sicurezza, allergeni, conflitti, reclami complessi o decisioni che superano il ruolo.\nUna buona escalation include fatti, azione già compiuta e bisogno specifico."
+        },
+        {
+          "title": "20.4 Soluzione immediata e causa",
+          "body": "Portare una posata risolve il bisogno immediato; capire perché tutte le posate sono terminate evita la ripetizione.\nIl servizio richiede entrambi i livelli: contenere il problema e correggere la causa."
+        },
+        {
+          "title": "20.5 Errori e responsabilità",
+          "body": "Ammettere un errore non significa attribuirsi ogni colpa.\nSignifica fornire informazioni corrette per ridurre il danno.\nLa responsabilità organizzativa riguarda procedure, formazione, strumenti, carichi e supervisione."
+        }
+      ]
+    },
+    {
+      "id": "res-u20-activity",
+      "title": "La sala degli imprevisti",
+      "description": "Carte con vetro rotto simulato, piatto in ritardo e conto errato. Niente vetro reale: si valuta rischio, comunicazione e limite del ruolo, poi si verifica la decisione.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-20"
+      ],
+      "topics": [
+        "problem solving",
+        "priorità",
+        "imprevisti",
+        "decisione",
+        "escalation"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "c838b27afe4a6499695bb4d3293ae3465d505a7c583b2cebb2f91d4cc4ad612e",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 20; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u20-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "c838b27afe4a6499695bb4d3293ae3465d505a7c583b2cebb2f91d4cc4ad612e",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata.",
+        "Traccia comune: traduzione del brief del proprietario, distinta dagli estratti del manuale."
+      ],
+      "keywords": [
+        "problem solving",
+        "priorità",
+        "imprevisti",
+        "decisione",
+        "escalation"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u20-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "c838b27afe4a6499695bb4d3293ae3465d505a7c583b2cebb2f91d4cc4ad612e",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u20-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "SERVICE_SCENARIO",
+      "body": "## Obiettivo operativo\n\nGestire più problemi con priorità e comunicazione.\n\n## Materiali\n\nCarte-imprevisto; planimetria; timer; scheda decisione.\n\n## Svolgimento\n\n1. Assegnare ruoli e una sala simulata.\n2. Inserire tre problemi quasi simultanei: vetro rotto, piatto in ritardo, conto errato.\n3. Ogni persona dichiara priorità e azione.\n4. Il responsabile riceve escalation sintetiche.\n5. Concludere con verifica e causa possibile.\n\n## Cosa osservare\n\n- Priorità basata sul rischio.\n- Chiarezza della comunicazione.\n- Rispetto dei limiti del ruolo.\n- Verifica dopo l’azione.\n\n## Domande per il debriefing\n\n- Quale problema sembrava urgente ma poteva attendere?\n- Quale informazione mancava al responsabile?\n- Che cosa deve cambiare nel processo?\n\n## Verifica aperta\n\n- Quali sono i cinque passaggi?\n- Quando serve escalation?\n- Perché verificare dopo l’azione?\n\n## Riflessione finale comune\n\n- Che cosa è successo?\n- Che cosa ha funzionato?\n- Che cosa ha creato difficoltà?\n- Quale azione alternativa era possibile?\n- Che cosa faresti la prossima volta?",
+      "reading": "## Obiettivo operativo\n\nGestire più problemi con priorità e comunicazione.\n\n## Materiali\n\nCarte-imprevisto; planimetria; timer; scheda decisione.\n\n## Svolgimento\n\n1. Assegnare ruoli e una sala simulata.\n2. Inserire tre problemi quasi simultanei: vetro rotto, piatto in ritardo, conto errato.\n3. Ogni persona dichiara priorità e azione.\n4. Il responsabile riceve escalation sintetiche.\n5. Concludere con verifica e causa possibile.\n\n## Cosa osservare\n\n- Priorità basata sul rischio.\n- Chiarezza della comunicazione.\n- Rispetto dei limiti del ruolo.\n- Verifica dopo l’azione.\n\n## Domande per il debriefing\n\n- Quale problema sembrava urgente ma poteva attendere?\n- Quale informazione mancava al responsabile?\n- Che cosa deve cambiare nel processo?\n\n## Verifica aperta\n\n- Quali sono i cinque passaggi?\n- Quando serve escalation?\n- Perché verificare dopo l’azione?\n\n## Riflessione finale comune\n\n- Che cosa è successo?\n- Che cosa ha funzionato?\n- Che cosa ha creato difficoltà?\n- Quale azione alternativa era possibile?\n- Che cosa faresti la prossima volta?",
+      "recommended_minutes": 35,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Obiettivo operativo",
+          "body": "Gestire più problemi con priorità e comunicazione."
+        },
+        {
+          "title": "Materiali",
+          "body": "Carte-imprevisto; planimetria; timer; scheda decisione."
+        },
+        {
+          "title": "Svolgimento",
+          "body": "1. Assegnare ruoli e una sala simulata.\n2. Inserire tre problemi quasi simultanei: vetro rotto, piatto in ritardo, conto errato.\n3. Ogni persona dichiara priorità e azione.\n4. Il responsabile riceve escalation sintetiche.\n5. Concludere con verifica e causa possibile."
+        },
+        {
+          "title": "Cosa osservare",
+          "body": "- Priorità basata sul rischio.\n- Chiarezza della comunicazione.\n- Rispetto dei limiti del ruolo.\n- Verifica dopo l’azione."
+        },
+        {
+          "title": "Domande per il debriefing",
+          "body": "- Quale problema sembrava urgente ma poteva attendere?\n- Quale informazione mancava al responsabile?\n- Che cosa deve cambiare nel processo?"
+        },
+        {
+          "title": "Verifica aperta",
+          "body": "- Quali sono i cinque passaggi?\n- Quando serve escalation?\n- Perché verificare dopo l’azione?"
+        },
+        {
+          "title": "Riflessione finale comune",
+          "body": "Che cosa è successo?\nChe cosa ha funzionato?\nChe cosa ha creato difficoltà?"
+        },
+        {
+          "title": "Riflessione finale comune",
+          "body": "Quale azione alternativa era possibile?\nChe cosa faresti la prossima volta?"
+        }
+      ],
+      "debrief_template_id": "debrief-servizio-v1",
+      "asset_filename": "unit-20-scheda-operativa.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u20-checklist",
+      "title": "Valutare e verificare una decisione",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-20"
+      ],
+      "topics": [
+        "problem solving",
+        "priorità",
+        "imprevisti",
+        "decisione",
+        "escalation"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "3ff94249d3dd07827898b4fd15c8b890e096e4545b3c0829d22f16e7a983ffa0",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 20; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u20-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "3ff94249d3dd07827898b4fd15c8b890e096e4545b3c0829d22f16e7a983ffa0",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "problem solving",
+        "priorità",
+        "imprevisti",
+        "decisione",
+        "escalation"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u20-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "3ff94249d3dd07827898b4fd15c8b890e096e4545b3c0829d22f16e7a983ffa0",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u20-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- Uso un metodo e non reagisco soltanto.\n- Valuto rischio e urgenza.\n- Coinvolgo il responsabile con informazioni complete.\n- Verifico risultato e causa.",
+      "reading": "## Controlla il tuo lavoro\n\n- Uso un metodo e non reagisco soltanto.\n- Valuto rischio e urgenza.\n- Coinvolgo il responsabile con informazioni complete.\n- Verifico risultato e causa.",
+      "recommended_minutes": 5,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "- Uso un metodo e non reagisco soltanto.\n- Valuto rischio e urgenza.\n- Coinvolgo il responsabile con informazioni complete.\n- Verifico risultato e causa."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Uso un metodo e non reagisco soltanto.",
+            "Valuto rischio e urgenza.",
+            "Coinvolgo il responsabile con informazioni complete.",
+            "Verifico risultato e causa."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u21-pressione",
+      "title": "Pressione, carico e risorse",
+      "description": "Osservazione organizzativa della fonte didattica, senza diagnosi, autovalutazioni psicologiche o tracciamento dello stress.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-21"
+      ],
+      "topics": [
+        "pressione",
+        "stress",
+        "priorità",
+        "supporto",
+        "organizzazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "7db5d7af0c94c19c0afefc3741ab0ffaceee06a9febeafead3a9d3b76352bd96",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 21; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u21-pressione",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "7db5d7af0c94c19c0afefc3741ab0ffaceee06a9febeafead3a9d3b76352bd96",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "OPERATIONAL_OBSERVATION; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "pressione",
+        "stress",
+        "priorità",
+        "supporto",
+        "organizzazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u21-pressione-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "7db5d7af0c94c19c0afefc3741ab0ffaceee06a9febeafead3a9d3b76352bd96",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u21-pressione-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 21.1 Pressione utile e sovraccarico\n\nUna certa attivazione può aiutare a concentrarsi; quando richieste e risorse restano sbilanciate, aumentano errori, irritabilità e fatica. I rischi psicosociali dipendono anche da organizzazione, carichi, relazioni e gestione, non soltanto dalla fragilità individuale.",
+      "reading": "## 21.1 Pressione utile e sovraccarico\n\nUna certa attivazione può aiutare a concentrarsi; quando richieste e risorse restano sbilanciate, aumentano errori, irritabilità e fatica. I rischi psicosociali dipendono anche da organizzazione, carichi, relazioni e gestione, non soltanto dalla fragilità individuale.",
+      "recommended_minutes": 10,
+      "content_classification": "OPERATIONAL_OBSERVATION",
+      "projector_pages": [
+        {
+          "title": "21.1 Pressione utile e sovraccarico",
+          "body": "Una certa attivazione può aiutare a concentrarsi; quando richieste e risorse restano sbilanciate, aumentano errori, irritabilità e fatica.\nI rischi psicosociali dipendono anche da organizzazione, carichi, relazioni e gestione, non soltanto dalla fragilità individuale."
+        }
+      ]
+    },
+    {
+      "id": "res-u21-supporto",
+      "title": "Priorità, comunicazione e supporto",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-21"
+      ],
+      "topics": [
+        "pressione",
+        "stress",
+        "priorità",
+        "supporto",
+        "organizzazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "6f55de26fff28d78755adb3ddbb42db02acda8e87b5ae823032e42e732fecf1e",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 21; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u21-supporto",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "6f55de26fff28d78755adb3ddbb42db02acda8e87b5ae823032e42e732fecf1e",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "pressione",
+        "stress",
+        "priorità",
+        "supporto",
+        "organizzazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u21-supporto-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "6f55de26fff28d78755adb3ddbb42db02acda8e87b5ae823032e42e732fecf1e",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u21-supporto-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 21.3 Priorità e micro-organizzazione\n\nSotto pressione è utile limitare il campo: sicurezza immediata, piatti pronti, clienti senza assistenza, comunicazioni critiche. Scrivere, ripetere la consegna e chiudere un’attività prima di aprirne troppe riduce il carico mentale.\n\n## 21.4 Respirare non sostituisce organizzare\n\nTecniche brevi di respirazione, postura e pausa possono aiutare, ma non risolvono turni impossibili, carenza cronica di personale o violenza. Il responsabile deve intervenire sulle cause organizzative.",
+      "reading": "## 21.3 Priorità e micro-organizzazione\n\nSotto pressione è utile limitare il campo: sicurezza immediata, piatti pronti, clienti senza assistenza, comunicazioni critiche. Scrivere, ripetere la consegna e chiudere un’attività prima di aprirne troppe riduce il carico mentale.\n\n## 21.4 Respirare non sostituisce organizzare\n\nTecniche brevi di respirazione, postura e pausa possono aiutare, ma non risolvono turni impossibili, carenza cronica di personale o violenza. Il responsabile deve intervenire sulle cause organizzative.",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "21.3 Priorità e micro-organizzazione",
+          "body": "Sotto pressione è utile limitare il campo: sicurezza immediata, piatti pronti, clienti senza assistenza, comunicazioni critiche.\nScrivere, ripetere la consegna e chiudere un’attività prima di aprirne troppe riduce il carico mentale."
+        },
+        {
+          "title": "21.4 Respirare non sostituisce organizzare",
+          "body": "Tecniche brevi di respirazione, postura e pausa possono aiutare, ma non risolvono turni impossibili, carenza cronica di personale o violenza.\nIl responsabile deve intervenire sulle cause organizzative."
+        }
+      ]
+    },
+    {
+      "id": "res-u21-activity",
+      "title": "Servizio pieno, comunicazione corta",
+      "description": "Cinque minuti di servizio simulato, confronto, riassegnazione e ripetizione. L’osservazione riguarda priorità e supporto: la velocità da sola non è un criterio di riuscita.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-21"
+      ],
+      "topics": [
+        "pressione",
+        "stress",
+        "priorità",
+        "supporto",
+        "organizzazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "caf72af7973daa13ae8bff91e809bfa3e99973604123fb7888b1834ce513e783",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 21; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u21-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "caf72af7973daa13ae8bff91e809bfa3e99973604123fb7888b1834ce513e783",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata.",
+        "Traccia comune: traduzione del brief del proprietario, distinta dagli estratti del manuale.",
+        "Eventi: traduzione dello scenario esemplificativo fornito dal proprietario nel brief 6C."
+      ],
+      "keywords": [
+        "pressione",
+        "stress",
+        "priorità",
+        "supporto",
+        "organizzazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u21-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "caf72af7973daa13ae8bff91e809bfa3e99973604123fb7888b1834ce513e783",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u21-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "SERVICE_SCENARIO",
+      "body": "## Obiettivo operativo\n\nMantenere priorità e tono durante un picco simulato.\n\n## Materiali\n\nTimer; carte richieste; vassoi; scheda priorità.\n\n## Eventi della simulazione\n\n- Un tavolo chiede il conto.\n- Arrivano nuovi ospiti.\n- La cucina chiama per il ritiro.\n- Un altro ospite segnala una bevanda sbagliata.\n\n## Svolgimento\n\n1. Simulare cinque minuti di servizio con richieste crescenti.\n2. Ogni operatore usa frasi operative brevi e conferma le consegne.\n3. Inserire un segnale di sovraccarico in un partecipante.\n4. La squadra riassegna compiti e crea una breve pausa sicura.\n5. Debriefing su cause e non soltanto emozioni.\n\n## Cosa osservare\n\n- Capacità di ordinare le priorità.\n- Tono e chiarezza.\n- Richiesta di aiuto prima del collasso.\n- Intervento organizzativo del responsabile.\n\n## Domande per il debriefing\n\n- Quale compito poteva attendere?\n- Quando la pressione è diventata rischio?\n- Che cosa deve cambiare nel turno reale?\n\n## Verifica aperta\n\n- Lo stress dipende soltanto dalla persona?\n- Respirare risolve un turno disorganizzato?\n- Come agire davanti a una persona alterata?\n\n## Riflessione finale comune\n\n- Che cosa è successo?\n- Che cosa ha funzionato?\n- Che cosa ha creato difficoltà?\n- Quale azione alternativa era possibile?\n- Che cosa faresti la prossima volta?",
+      "reading": "## Obiettivo operativo\n\nMantenere priorità e tono durante un picco simulato.\n\n## Materiali\n\nTimer; carte richieste; vassoi; scheda priorità.\n\n## Eventi della simulazione\n\n- Un tavolo chiede il conto.\n- Arrivano nuovi ospiti.\n- La cucina chiama per il ritiro.\n- Un altro ospite segnala una bevanda sbagliata.\n\n## Svolgimento\n\n1. Simulare cinque minuti di servizio con richieste crescenti.\n2. Ogni operatore usa frasi operative brevi e conferma le consegne.\n3. Inserire un segnale di sovraccarico in un partecipante.\n4. La squadra riassegna compiti e crea una breve pausa sicura.\n5. Debriefing su cause e non soltanto emozioni.\n\n## Cosa osservare\n\n- Capacità di ordinare le priorità.\n- Tono e chiarezza.\n- Richiesta di aiuto prima del collasso.\n- Intervento organizzativo del responsabile.\n\n## Domande per il debriefing\n\n- Quale compito poteva attendere?\n- Quando la pressione è diventata rischio?\n- Che cosa deve cambiare nel turno reale?\n\n## Verifica aperta\n\n- Lo stress dipende soltanto dalla persona?\n- Respirare risolve un turno disorganizzato?\n- Come agire davanti a una persona alterata?\n\n## Riflessione finale comune\n\n- Che cosa è successo?\n- Che cosa ha funzionato?\n- Che cosa ha creato difficoltà?\n- Quale azione alternativa era possibile?\n- Che cosa faresti la prossima volta?",
+      "recommended_minutes": 35,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Obiettivo operativo",
+          "body": "Mantenere priorità e tono durante un picco simulato."
+        },
+        {
+          "title": "Materiali",
+          "body": "Timer; carte richieste; vassoi; scheda priorità."
+        },
+        {
+          "title": "Quattro richieste · Simulazione dal brief del docente",
+          "body": "Un tavolo chiede il conto.\nArrivano nuovi ospiti.\nLa cucina chiama per il ritiro.\nUn altro ospite segnala una bevanda sbagliata."
+        },
+        {
+          "title": "Svolgimento",
+          "body": "1. Simulare cinque minuti di servizio con richieste crescenti.\n2. Ogni operatore usa frasi operative brevi e conferma le consegne.\n3. Inserire un segnale di sovraccarico in un partecipante.\n4. La squadra riassegna compiti e crea una breve pausa sicura.\n5. Debriefing su cause e non soltanto emozioni."
+        },
+        {
+          "title": "Cosa osservare",
+          "body": "- Capacità di ordinare le priorità.\n- Tono e chiarezza.\n- Richiesta di aiuto prima del collasso.\n- Intervento organizzativo del responsabile."
+        },
+        {
+          "title": "Domande per il debriefing",
+          "body": "- Quale compito poteva attendere?\n- Quando la pressione è diventata rischio?\n- Che cosa deve cambiare nel turno reale?"
+        },
+        {
+          "title": "Verifica aperta",
+          "body": "- Lo stress dipende soltanto dalla persona?\n- Respirare risolve un turno disorganizzato?\n- Come agire davanti a una persona alterata?"
+        },
+        {
+          "title": "Riflessione finale comune",
+          "body": "Che cosa è successo?\nChe cosa ha funzionato?\nChe cosa ha creato difficoltà?"
+        },
+        {
+          "title": "Riflessione finale comune",
+          "body": "Quale azione alternativa era possibile?\nChe cosa faresti la prossima volta?"
+        }
+      ],
+      "debrief_template_id": "debrief-servizio-v1",
+      "asset_filename": "unit-21-scheda-operativa.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u21-checklist",
+      "title": "Priorità e responsabilità organizzative",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-21"
+      ],
+      "topics": [
+        "pressione",
+        "stress",
+        "priorità",
+        "supporto",
+        "organizzazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "b817e6483c5c9978bf71b7f45542777861604b65967fd303acc81b71961a5f61",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 21; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u21-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "b817e6483c5c9978bf71b7f45542777861604b65967fd303acc81b71961a5f61",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "pressione",
+        "stress",
+        "priorità",
+        "supporto",
+        "organizzazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u21-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "b817e6483c5c9978bf71b7f45542777861604b65967fd303acc81b71961a5f61",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u21-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- Riconosco il sovraccarico.\n- Stabilisco priorità e chiedo aiuto.\n- Non uso sostanze per sostenere il turno.\n- Conosco il ruolo dell’organizzazione.",
+      "reading": "## Controlla il tuo lavoro\n\n- Riconosco il sovraccarico.\n- Stabilisco priorità e chiedo aiuto.\n- Non uso sostanze per sostenere il turno.\n- Conosco il ruolo dell’organizzazione.",
+      "recommended_minutes": 5,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "- Riconosco il sovraccarico.\n- Stabilisco priorità e chiedo aiuto.\n- Non uso sostanze per sostenere il turno.\n- Conosco il ruolo dell’organizzazione."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Riconosco il sovraccarico.",
+            "Stabilisco priorità e chiedo aiuto.",
+            "Non uso sostanze per sostenere il turno.",
+            "Conosco il ruolo dell’organizzazione."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u22-situazioni",
+      "title": "Gestire la situazione, senza etichettare la persona",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-22"
+      ],
+      "topics": [
+        "cliente difficile",
+        "reclamo",
+        "complaint",
+        "service recovery",
+        "de-escalation"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "d8094194f1d6af7fe97b787de5071a0c0726a4aa784e14f999ae0178d6d54db0",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 22; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u22-situazioni",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "d8094194f1d6af7fe97b787de5071a0c0726a4aa784e14f999ae0178d6d54db0",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "cliente difficile",
+        "reclamo",
+        "complaint",
+        "service recovery",
+        "de-escalation"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u22-situazioni-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "d8094194f1d6af7fe97b787de5071a0c0726a4aa784e14f999ae0178d6d54db0",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u22-situazioni-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Perché questo argomento è importante\n\n“Cliente difficile” è un’espressione utile soltanto se non diventa un’etichetta. Può esistere un reclamo legittimo, un fraintendimento, un comportamento aggressivo o una richiesta impossibile. Ogni situazione richiede ascolto, limiti ed escalation.\n\n## 22.1 Prima ascoltare, poi classificare\n\nIl cliente può avere ragione sul problema e comportarsi male nel modo in cui lo esprime. Il personale deve ascoltare il contenuto senza accettare insulti, minacce o contatti. Separare i due piani aiuta a trovare una soluzione e mantenere il limite.\n\n## Ascolta\n\nLascia terminare la frase senza interrompere.\n\n## Riformula\n\n“Ha aspettato a lungo e il piatto è arrivato freddo, corretto?”\n\n## Riconosci\n\n“Capisco il disagio che questa situazione ha creato.”\n\n## Agisci nel ruolo\n\nSostituire, verificare, chiamare il responsabile.\n\n## Conferma\n\nSpiegare che cosa accadrà e in quali tempi realistici.",
+      "reading": "## Perché questo argomento è importante\n\n“Cliente difficile” è un’espressione utile soltanto se non diventa un’etichetta. Può esistere un reclamo legittimo, un fraintendimento, un comportamento aggressivo o una richiesta impossibile. Ogni situazione richiede ascolto, limiti ed escalation.\n\n## 22.1 Prima ascoltare, poi classificare\n\nIl cliente può avere ragione sul problema e comportarsi male nel modo in cui lo esprime. Il personale deve ascoltare il contenuto senza accettare insulti, minacce o contatti. Separare i due piani aiuta a trovare una soluzione e mantenere il limite.\n\n## Ascolta\n\nLascia terminare la frase senza interrompere.\n\n## Riformula\n\n“Ha aspettato a lungo e il piatto è arrivato freddo, corretto?”\n\n## Riconosci\n\n“Capisco il disagio che questa situazione ha creato.”\n\n## Agisci nel ruolo\n\nSostituire, verificare, chiamare il responsabile.\n\n## Conferma\n\nSpiegare che cosa accadrà e in quali tempi realistici.",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Perché questo argomento è importante",
+          "body": "“Cliente difficile” è un’espressione utile soltanto se non diventa un’etichetta. Può esistere un reclamo legittimo, un fraintendimento, un comportamento aggressivo o una richiesta impossibile. Ogni situazione richiede ascolto, limiti ed escalation."
+        },
+        {
+          "title": "22.1 Prima ascoltare, poi classificare",
+          "body": "Il cliente può avere ragione sul problema e comportarsi male nel modo in cui lo esprime. Il personale deve ascoltare il contenuto senza accettare insulti, minacce o contatti. Separare i due piani aiuta a trovare una soluzione e mantenere il limite."
+        },
+        {
+          "title": "Ascolta",
+          "body": "Lascia terminare la frase senza interrompere."
+        },
+        {
+          "title": "Riformula",
+          "body": "“Ha aspettato a lungo e il piatto è arrivato freddo, corretto?”"
+        },
+        {
+          "title": "Riconosci",
+          "body": "“Capisco il disagio che questa situazione ha creato.”"
+        },
+        {
+          "title": "Agisci nel ruolo",
+          "body": "Sostituire, verificare, chiamare il responsabile."
+        },
+        {
+          "title": "Conferma",
+          "body": "Spiegare che cosa accadrà e in quali tempi realistici."
+        }
+      ]
+    },
+    {
+      "id": "res-u22-limiti",
+      "title": "Promesse, limiti e protezione del servizio",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-22"
+      ],
+      "topics": [
+        "cliente difficile",
+        "reclamo",
+        "complaint",
+        "service recovery",
+        "de-escalation"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "9b5d485c103f48b82a0a33438196a91a5dfc84cb4a965e93ad2e59f447216f35",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 22; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u22-limiti",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "9b5d485c103f48b82a0a33438196a91a5dfc84cb4a965e93ad2e59f447216f35",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "cliente difficile",
+        "reclamo",
+        "complaint",
+        "service recovery",
+        "de-escalation"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u22-limiti-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "9b5d485c103f48b82a0a33438196a91a5dfc84cb4a965e93ad2e59f447216f35",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u22-limiti-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 22.4 Promesse e compensazioni\n\nSconti, omaggi e rimborsi richiedono autorizzazione. L’operatore può promettere soltanto ciò che controlla: verificare, aggiornare, coinvolgere il responsabile. Una promessa impossibile crea un secondo reclamo.\n\n## Sicurezza e limite\n\nNota su cliente aggressivo: la cortesia non obbliga ad accettare insulti, minacce, discriminazioni o contatti inappropriati. Il personale deve conoscere chi chiamare, come allontanarsi e come registrare l’episodio secondo procedura.\n\n## 22.6 Proteggere il resto della sala\n\nIl responsabile assegna una persona al cliente e mantiene il resto del servizio operativo. Più colleghi che discutono contemporaneamente aumentano il caos. Dopo l’episodio serve un debriefing e, se necessario, una registrazione.",
+      "reading": "## 22.4 Promesse e compensazioni\n\nSconti, omaggi e rimborsi richiedono autorizzazione. L’operatore può promettere soltanto ciò che controlla: verificare, aggiornare, coinvolgere il responsabile. Una promessa impossibile crea un secondo reclamo.\n\n## Sicurezza e limite\n\nNota su cliente aggressivo: la cortesia non obbliga ad accettare insulti, minacce, discriminazioni o contatti inappropriati. Il personale deve conoscere chi chiamare, come allontanarsi e come registrare l’episodio secondo procedura.\n\n## 22.6 Proteggere il resto della sala\n\nIl responsabile assegna una persona al cliente e mantiene il resto del servizio operativo. Più colleghi che discutono contemporaneamente aumentano il caos. Dopo l’episodio serve un debriefing e, se necessario, una registrazione.",
+      "recommended_minutes": 10,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "22.4 Promesse e compensazioni",
+          "body": "Sconti, omaggi e rimborsi richiedono autorizzazione.\nL’operatore può promettere soltanto ciò che controlla: verificare, aggiornare, coinvolgere il responsabile.\nUna promessa impossibile crea un secondo reclamo."
+        },
+        {
+          "title": "Sicurezza e limite",
+          "body": "Nota su cliente aggressivo: la cortesia non obbliga ad accettare insulti, minacce, discriminazioni o contatti inappropriati.\nIl personale deve conoscere chi chiamare, come allontanarsi e come registrare l’episodio secondo procedura."
+        },
+        {
+          "title": "22.6 Proteggere il resto della sala",
+          "body": "Il responsabile assegna una persona al cliente e mantiene il resto del servizio operativo.\nPiù colleghi che discutono contemporaneamente aumentano il caos.\nDopo l’episodio serve un debriefing e, se necessario, una registrazione."
+        }
+      ]
+    },
+    {
+      "id": "res-u22-activity",
+      "title": "Tre reclami, tre risposte",
+      "description": "Ruoli di cliente, operatore, responsabile e osservatore. Gli episodi offensivi o minacciosi si leggono su una scheda: niente insulti rivolti ai partecipanti, minacce o contatto fisico nella prova.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-22"
+      ],
+      "topics": [
+        "cliente difficile",
+        "reclamo",
+        "complaint",
+        "service recovery",
+        "de-escalation"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "fa54073548cc7dcc08b5e48f60547196b973394c4b23689082dc7555b5e7456a",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 22; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u22-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "fa54073548cc7dcc08b5e48f60547196b973394c4b23689082dc7555b5e7456a",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata.",
+        "Traccia comune: traduzione del brief del proprietario, distinta dagli estratti del manuale."
+      ],
+      "keywords": [
+        "cliente difficile",
+        "reclamo",
+        "complaint",
+        "service recovery",
+        "de-escalation"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u22-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "fa54073548cc7dcc08b5e48f60547196b973394c4b23689082dc7555b5e7456a",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u22-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "SERVICE_SCENARIO",
+      "body": "## Obiettivo operativo\n\nScegliere risposte proporzionate a reclami diversi.\n\n## Materiali\n\nSchede: ritardo, allergene, aggressione; griglia di escalation.\n\n## Svolgimento\n\n1. Assegnare cliente, operatore, responsabile e osservatore.\n2. Simulare un reclamo legittimo espresso con calma.\n3. Simulare un reclamo confuso con richiesta di sconto.\n4. Simulare un comportamento offensivo o minaccioso.\n5. Debriefing su ascolto, limite e coinvolgimento del responsabile.\n\n## Cosa osservare\n\n- Riformulazione corretta.\n- Promesse compatibili con il ruolo.\n- Capacità di porre un limite.\n- Protezione del resto della sala.\n\n## Domande per il debriefing\n\n- Quale frase ha abbassato la tensione?\n- Quando l’ascolto non era più sufficiente?\n- Che cosa deve essere registrato?\n\n## Verifica aperta\n\n- Riconoscere il disagio significa dare sempre ragione?\n- Quando serve interrompere il confronto?\n- Perché evitare più colleghi attorno al cliente?\n\n## Riflessione finale comune\n\n- Che cosa è successo?\n- Che cosa ha funzionato?\n- Che cosa ha creato difficoltà?\n- Quale azione alternativa era possibile?\n- Che cosa faresti la prossima volta?",
+      "reading": "## Obiettivo operativo\n\nScegliere risposte proporzionate a reclami diversi.\n\n## Materiali\n\nSchede: ritardo, allergene, aggressione; griglia di escalation.\n\n## Svolgimento\n\n1. Assegnare cliente, operatore, responsabile e osservatore.\n2. Simulare un reclamo legittimo espresso con calma.\n3. Simulare un reclamo confuso con richiesta di sconto.\n4. Simulare un comportamento offensivo o minaccioso.\n5. Debriefing su ascolto, limite e coinvolgimento del responsabile.\n\n## Cosa osservare\n\n- Riformulazione corretta.\n- Promesse compatibili con il ruolo.\n- Capacità di porre un limite.\n- Protezione del resto della sala.\n\n## Domande per il debriefing\n\n- Quale frase ha abbassato la tensione?\n- Quando l’ascolto non era più sufficiente?\n- Che cosa deve essere registrato?\n\n## Verifica aperta\n\n- Riconoscere il disagio significa dare sempre ragione?\n- Quando serve interrompere il confronto?\n- Perché evitare più colleghi attorno al cliente?\n\n## Riflessione finale comune\n\n- Che cosa è successo?\n- Che cosa ha funzionato?\n- Che cosa ha creato difficoltà?\n- Quale azione alternativa era possibile?\n- Che cosa faresti la prossima volta?",
+      "recommended_minutes": 35,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Obiettivo operativo",
+          "body": "Scegliere risposte proporzionate a reclami diversi."
+        },
+        {
+          "title": "Materiali",
+          "body": "Schede: ritardo, allergene, aggressione; griglia di escalation."
+        },
+        {
+          "title": "Svolgimento",
+          "body": "1. Assegnare cliente, operatore, responsabile e osservatore.\n2. Simulare un reclamo legittimo espresso con calma.\n3. Simulare un reclamo confuso con richiesta di sconto.\n4. Simulare un comportamento offensivo o minaccioso.\n5. Debriefing su ascolto, limite e coinvolgimento del responsabile."
+        },
+        {
+          "title": "Cosa osservare",
+          "body": "- Riformulazione corretta.\n- Promesse compatibili con il ruolo.\n- Capacità di porre un limite.\n- Protezione del resto della sala."
+        },
+        {
+          "title": "Domande per il debriefing",
+          "body": "- Quale frase ha abbassato la tensione?\n- Quando l’ascolto non era più sufficiente?\n- Che cosa deve essere registrato?"
+        },
+        {
+          "title": "Verifica aperta",
+          "body": "- Riconoscere il disagio significa dare sempre ragione?\n- Quando serve interrompere il confronto?\n- Perché evitare più colleghi attorno al cliente?"
+        },
+        {
+          "title": "Riflessione finale comune",
+          "body": "Che cosa è successo?\nChe cosa ha funzionato?\nChe cosa ha creato difficoltà?"
+        },
+        {
+          "title": "Riflessione finale comune",
+          "body": "Quale azione alternativa era possibile?\nChe cosa faresti la prossima volta?"
+        }
+      ],
+      "debrief_template_id": "debrief-servizio-v1",
+      "asset_filename": "unit-22-scheda-operativa.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u22-checklist",
+      "title": "Ascolto, autorizzazione e richiesta di aiuto",
+      "description": "Passaggi del manuale RISTO-LAB selezionati per spiegazione, confronto e pratica guidata.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-22"
+      ],
+      "topics": [
+        "cliente difficile",
+        "reclamo",
+        "complaint",
+        "service recovery",
+        "de-escalation"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "20fb88e4c8686645d711ac20a403bed084789d5e3fbcbaf71e2f5b2d79c421ae",
+        "source_id": null,
+        "section": "Manuale mf.v.04, capitolo 22; estratti selezionati per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6C source selection instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u22-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "20fb88e4c8686645d711ac20a403bed084789d5e3fbcbaf71e2f5b2d79c421ae",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED_FACT; selezione della fonte didattica interna, non verifica di conformità.",
+        "Nessuna valutazione umana assegnata."
+      ],
+      "keywords": [
+        "cliente difficile",
+        "reclamo",
+        "complaint",
+        "service recovery",
+        "de-escalation"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u22-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "20fb88e4c8686645d711ac20a403bed084789d5e3fbcbaf71e2f5b2d79c421ae",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6C — selezione di contenuti esistenti",
+          "notes": "Selezione richiesta dal compito; validazione umana del percorso ancora da eseguire"
+        }
+      ],
+      "current_approved_version_id": "res-u22-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; existing RISTO-LAB source selection"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- Ascolto il problema senza accettare aggressioni.\n- Riformulo e agisco nel mio ruolo.\n- Non prometto sconti non autorizzati.\n- Conosco quando interrompere e chiedere aiuto.",
+      "reading": "## Controlla il tuo lavoro\n\n- Ascolto il problema senza accettare aggressioni.\n- Riformulo e agisco nel mio ruolo.\n- Non prometto sconti non autorizzati.\n- Conosco quando interrompere e chiedere aiuto.",
+      "recommended_minutes": 5,
+      "content_classification": "SOURCE_DERIVED_FACT",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "- Ascolto il problema senza accettare aggressioni.\n- Riformulo e agisco nel mio ruolo.\n- Non prometto sconti non autorizzati.\n- Conosco quando interrompere e chiedere aiuto."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Ascolto il problema senza accettare aggressioni.",
+            "Riformulo e agisco nel mio ruolo.",
+            "Non prometto sconti non autorizzati.",
+            "Conosco quando interrompere e chiedere aiuto."
+          ]
+        }
+      ]
     }
   ],
   "lessons": [],
@@ -16416,6 +19229,102 @@
     {
       "resource_id": "res-u15-checklist",
       "label": "Checklist fine servizio"
+    },
+    {
+      "resource_id": "res-u16-igiene",
+      "label": "Igiene personale e passaggi critici"
+    },
+    {
+      "resource_id": "res-u16-contatti",
+      "label": "Panni, stoviglie e segnalazioni"
+    },
+    {
+      "resource_id": "res-u16-activity",
+      "label": "Il percorso invisibile delle mani"
+    },
+    {
+      "resource_id": "res-u16-checklist",
+      "label": "Controllo dei comportamenti igienici"
+    },
+    {
+      "resource_id": "res-u18-sistema",
+      "label": "Sistema preventivo e applicazione quotidiana"
+    },
+    {
+      "resource_id": "res-u18-organizzazione",
+      "label": "Risorse, responsabilità e miglioramento"
+    },
+    {
+      "resource_id": "res-u18-activity",
+      "label": "Audit onesto di una procedura"
+    },
+    {
+      "resource_id": "res-u18-checklist",
+      "label": "Distinguere documenti e applicazione"
+    },
+    {
+      "resource_id": "res-u19-comportamenti",
+      "label": "Dalle etichette ai comportamenti osservabili"
+    },
+    {
+      "resource_id": "res-u19-feedback",
+      "label": "Feedback concreto e squadra multiculturale"
+    },
+    {
+      "resource_id": "res-u19-activity",
+      "label": "Il feedback che fa crescere"
+    },
+    {
+      "resource_id": "res-u19-checklist",
+      "label": "Osservare e correggere senza etichette"
+    },
+    {
+      "resource_id": "res-u20-metodo",
+      "label": "Osserva, valuta, decidi, agisci, verifica"
+    },
+    {
+      "resource_id": "res-u20-priorita",
+      "label": "Rischio, ruolo e cause del problema"
+    },
+    {
+      "resource_id": "res-u20-activity",
+      "label": "La sala degli imprevisti"
+    },
+    {
+      "resource_id": "res-u20-checklist",
+      "label": "Valutare e verificare una decisione"
+    },
+    {
+      "resource_id": "res-u21-pressione",
+      "label": "Pressione, carico e risorse"
+    },
+    {
+      "resource_id": "res-u21-supporto",
+      "label": "Priorità, comunicazione e supporto"
+    },
+    {
+      "resource_id": "res-u21-activity",
+      "label": "Servizio pieno, comunicazione corta"
+    },
+    {
+      "resource_id": "res-u21-checklist",
+      "label": "Priorità e responsabilità organizzative"
+    },
+    {
+      "resource_id": "res-u22-situazioni",
+      "label": "Gestire la situazione, senza etichettare la persona"
+    },
+    {
+      "resource_id": "res-u22-limiti",
+      "label": "Promesse, limiti e protezione del servizio"
+    },
+    {
+      "resource_id": "res-u22-activity",
+      "label": "Tre reclami, tre risposte"
+    },
+    {
+      "resource_id": "res-u22-checklist",
+      "label": "Ascolto, autorizzazione e richiesta di aiuto"
     }
   ],
   "collections": [

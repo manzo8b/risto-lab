@@ -39,16 +39,31 @@
       "order": 1,
       "title": "La ristorazione: molto più di un piatto servito",
       "slug": "01-la-ristorazione-molto-piu-di-un-piatto-servito",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 8,
       "resource_ids": [
         "res-chapter-01",
         "res-visual-ciclo-servizio",
-        "res-visual-ciclo-illustrato"
+        "res-visual-ciclo-illustrato",
+        "res-u1-sistema",
+        "res-u1-servizio",
+        "res-u1-standard",
+        "res-u1-activity",
+        "res-u1-quiz",
+        "res-u1-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-01"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-01",
+      "printable_resource_id": "res-u1-activity",
+      "objectives": [
+        "Spiegare che cosa comprende la ristorazione.",
+        "Distinguere il cibo dall’esperienza complessiva del cliente.",
+        "Riconoscere i principali tipi di attività e di servizio.",
+        "Comprendere il valore professionale e sociale del lavoro di sala.",
+        "Individuare ciò che dipende dal singolo operatore e ciò che richiede la squadra."
+      ],
+      "overview": "Prima di imparare a portare un piatto, bisogna capire che cosa stiamo offrendo a una persona."
     },
     {
       "id": "unit-02",
@@ -56,15 +71,30 @@
       "order": 2,
       "title": "Il professionista di sala",
       "slug": "02-il-professionista-di-sala",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 14,
       "resource_ids": [
         "res-chapter-02",
-        "res-food-852"
+        "res-food-852",
+        "res-u2-competenze",
+        "res-u2-presentazione",
+        "res-u2-squadra",
+        "res-u2-activity",
+        "res-u2-quiz",
+        "res-u2-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-02"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-02",
+      "printable_resource_id": "res-u2-activity",
+      "objectives": [
+        "Distinguere sapere, saper fare e saper essere.",
+        "Riconoscere le attività principali dell’operatore di sala.",
+        "Comprendere i limiti del ruolo e il valore della segnalazione.",
+        "Tradurre parole astratte come affidabilità e professionalità in comportamenti osservabili.",
+        "Applicare criteri di presentazione personale rispettosi, igienici e non discriminatori."
+      ],
+      "overview": "La tecnica rende possibile il servizio; il comportamento lo rende affidabile."
     },
     {
       "id": "unit-03",
@@ -72,16 +102,31 @@
       "order": 3,
       "title": "La brigata di sala",
       "slug": "03-la-brigata-di-sala",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 19,
       "resource_ids": [
         "res-chapter-03",
         "res-brigata",
-        "res-visual-brigata"
+        "res-visual-brigata",
+        "res-u3-responsabile",
+        "res-u3-ruoli",
+        "res-u3-briefing",
+        "res-u3-activity",
+        "res-u3-quiz",
+        "res-u3-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-03"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-03",
+      "printable_resource_id": "res-u3-activity",
+      "objectives": [
+        "Comprendere che cosa significa brigata.",
+        "Riconoscere i principali ruoli tradizionali e moderni.",
+        "Distinguere responsabilità operative e di coordinamento.",
+        "Comunicare informazioni brevi, complete e utili.",
+        "Partecipare a un briefing e a un passaggio di consegne."
+      ],
+      "overview": "Capire chi lavora in sala, quali sono i ruoli principali e come comunicare senza creare confusione."
     },
     {
       "id": "unit-04",
@@ -89,7 +134,7 @@
       "order": 4,
       "title": "Gli ambienti di lavoro",
       "slug": "04-gli-ambienti-di-lavoro",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 25,
       "resource_ids": [
         "res-chapter-04",
@@ -97,11 +142,26 @@
         "res-sicurezza-slides",
         "res-sicurezza-formatore",
         "res-sicurezza-banca-quiz",
-        "res-food-852"
+        "res-food-852",
+        "res-u4-sala",
+        "res-u4-office",
+        "res-u4-pass",
+        "res-u4-activity",
+        "res-u4-quiz",
+        "res-u4-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-04"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-04",
+      "printable_resource_id": "res-u4-activity",
+      "objectives": [
+        "Riconoscere le funzioni principali degli ambienti.",
+        "Distinguere area cliente, area operativa e area riservata.",
+        "Comprendere il ruolo di office e pass.",
+        "Leggere i flussi di persone, pulito, sporco, cibi e bevande.",
+        "Individuare ostacoli e anomalie senza modificare autonomamente il locale."
+      ],
+      "overview": "Prima di muoversi velocemente, bisogna sapere dove si sta andando e che cosa può incrociare il percorso."
     },
     {
       "id": "unit-05",
@@ -109,7 +169,7 @@
       "order": 5,
       "title": "Le attrezzature di sala e bar",
       "slug": "05-le-attrezzature-di-sala-e-bar",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 31,
       "resource_ids": [
         "res-chapter-05",
@@ -117,11 +177,27 @@
         "res-sicurezza-slides",
         "res-sicurezza-formatore",
         "res-sicurezza-banca-quiz",
-        "res-food-852"
+        "res-food-852",
+        "res-u5-tavola",
+        "res-u5-tovagliato",
+        "res-u5-vassoio",
+        "res-u5-dimostrazione",
+        "res-u5-activity",
+        "res-u5-quiz",
+        "res-u5-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-05"
+      "last_reviewed": "2026-10-23",
+      "chapter_resource_id": "res-chapter-05",
+      "printable_resource_id": "res-u5-activity",
+      "objectives": [
+        "Riconoscere le principali categorie di attrezzature.",
+        "Collegare ogni oggetto alla sua funzione.",
+        "Eseguire un controllo visivo di pulizia e integrità.",
+        "Comprendere quando un’attrezzatura non deve essere usata.",
+        "Applicare un metodo semplice per prelievo, utilizzo e riordino."
+      ],
+      "overview": "Un attrezzo è utile soltanto quando è corretto, integro, pulito e usato nel modo previsto."
     },
     {
       "id": "unit-06",
@@ -7961,6 +8037,3635 @@
       "asset_filename": "unit-17-scheda-didattica.pdf",
       "asset_mime": "application/pdf",
       "downloadable": true
+    },
+    {
+      "id": "res-u1-sistema",
+      "title": "Il ristorante come sistema",
+      "description": "Concetti ed esempio della fonte interna. Usali per distinguere ciò che vede il cliente e ciò che coordina la squadra.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-01"
+      ],
+      "topics": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "55c90c9f3274320d1de29a9fa08a0abdd9668e94b61835d8a89b1738fb4a9cc9",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u1-sistema",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "55c90c9f3274320d1de29a9fa08a0abdd9668e94b61835d8a89b1738fb4a9cc9",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u1-sistema-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "55c90c9f3274320d1de29a9fa08a0abdd9668e94b61835d8a89b1738fb4a9cc9",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u1-sistema-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Spiegazione risto-lab\n\nUna persona che entra in un ristorante non guarda solo il piatto.\nGuarda tutto:\n\n- ingresso;\n- pulizia;\n- luci;\n- tavoli;\n- divise;\n- tono di voce;\n- tempi di attesa;\n- modo in cui viene accolta;\n- modo in cui viene gestito un problema.\n\nIl lavoro di sala serve a tenere insieme tutto questo.\n\n## Ristorante come sistema\n\nUn ristorante funziona quando diverse parti lavorano insieme:\n\n- sala;\n- cucina;\n- bar;\n- office;\n- magazzino;\n- cassa;\n- prenotazioni;\n- gestione del personale.\n\nSe una parte non comunica, il cliente lo sente.\n\n## Che cosa deve capire chi lavora in sala\n\nChi lavora in sala deve pensare a tre livelli:\n\n1. Il cliente: cosa vede, cosa chiede, cosa sente.\n2. Il servizio: cosa devo fare adesso.\n3. Il sistema: chi devo avvisare, cosa devo preparare, quale standard devo seguire.\n\n## Esercizio breve\n\nPensa a un ristorante dove sei stato.\nScrivi:\n\n1. Che cosa ti ha fatto una buona impressione?\n2. Che cosa ti ha dato fastidio?\n3. Che cosa poteva fare meglio la sala?",
+      "reading": "## Spiegazione risto-lab\n\nUna persona che entra in un ristorante non guarda solo il piatto.\nGuarda tutto:\n\n- ingresso;\n- pulizia;\n- luci;\n- tavoli;\n- divise;\n- tono di voce;\n- tempi di attesa;\n- modo in cui viene accolta;\n- modo in cui viene gestito un problema.\n\nIl lavoro di sala serve a tenere insieme tutto questo.\n\n## Ristorante come sistema\n\nUn ristorante funziona quando diverse parti lavorano insieme:\n\n- sala;\n- cucina;\n- bar;\n- office;\n- magazzino;\n- cassa;\n- prenotazioni;\n- gestione del personale.\n\nSe una parte non comunica, il cliente lo sente.\n\n## Che cosa deve capire chi lavora in sala\n\nChi lavora in sala deve pensare a tre livelli:\n\n1. Il cliente: cosa vede, cosa chiede, cosa sente.\n2. Il servizio: cosa devo fare adesso.\n3. Il sistema: chi devo avvisare, cosa devo preparare, quale standard devo seguire.\n\n## Esercizio breve\n\nPensa a un ristorante dove sei stato.\nScrivi:\n\n1. Che cosa ti ha fatto una buona impressione?\n2. Che cosa ti ha dato fastidio?\n3. Che cosa poteva fare meglio la sala?",
+      "projector_pages": [
+        {
+          "title": "Il ristorante come sistema",
+          "body": "Un ristorante funziona quando diverse parti lavorano insieme:\nsala;\ncucina;\nbar;\noffice;\nmagazzino;"
+        },
+        {
+          "title": "Cliente, servizio, sistema",
+          "body": "Chi lavora in sala deve pensare a tre livelli:\nIl cliente: cosa vede, cosa chiede, cosa sente.\nIl servizio: cosa devo fare adesso.\nIl sistema: chi devo avvisare, cosa devo preparare, quale standard devo seguire."
+        },
+        {
+          "title": "Osserva un’esperienza",
+          "body": "Pensa a un ristorante dove sei stato.\nScrivi:\nChe cosa ti ha fatto una buona impressione?\nChe cosa ti ha dato fastidio?\nChe cosa poteva fare meglio la sala?"
+        }
+      ]
+    },
+    {
+      "id": "res-u1-servizio",
+      "title": "Servizio informale, curato e formale",
+      "description": "Tre contesti di servizio a confronto. La fonte evita di confondere informalità e disordine.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-01"
+      ],
+      "topics": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "f881b2e26bd0d984bc91c8263425bdc2856d41377e66c4f6ee7dad8f8a140781",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u1-servizio",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "f881b2e26bd0d984bc91c8263425bdc2856d41377e66c4f6ee7dad8f8a140781",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u1-servizio-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "f881b2e26bd0d984bc91c8263425bdc2856d41377e66c4f6ee7dad8f8a140781",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u1-servizio-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Spiegazione risto-lab\n\nUn errore comune e pensare che esista un solo modo giusto di servire.\nIn realta il servizio deve essere coerente con il locale.\n\nUn bar, una trattoria, un bistrot, una pizzeria e un ristorante elegante hanno bisogni diversi.\n\n## Servizio informale\n\nE piu semplice e veloce.\nSi trova spesso in:\n\n- bar;\n- pizzerie;\n- tavole calde;\n- trattorie semplici;\n- locali con alto passaggio.\n\nCaratteristiche:\n\n- comunicazione diretta;\n- tempi rapidi;\n- mise en place essenziale;\n- meno formalita;\n- molta attenzione a ritmo e pulizia.\n\nInformale non significa disordinato.\n\n## Servizio curato\n\nE un servizio ordinato, attento, ma non troppo rigido.\nSi trova spesso in:\n\n- bistrot;\n- ristoranti moderni;\n- trattorie curate;\n- locali turistici di buon livello;\n- hotel.\n\nCaratteristiche:\n\n- accoglienza piu attenta;\n- tavoli ben preparati;\n- spiegazioni sul menu;\n- attenzione a richieste e allergie;\n- linguaggio professionale ma vicino.\n\n## Servizio formale\n\nE piu preciso e codificato.\nSi trova in:\n\n- ristoranti eleganti;\n- eventi;\n- banchetti;\n- fine dining;\n- contesti istituzionali.\n\nCaratteristiche:\n\n- maggiore attenzione al protocollo;\n- ruoli piu definiti;\n- gesti piu precisi;\n- mise en place piu completa;\n- comunicazione piu controllata.\n\n## Esercizio\n\nScegli tre locali:\n\n1. Pizzeria di quartiere\n2. Bistrot moderno\n3. Ristorante elegante\n\nPer ognuno scrivi:\n\n- come saluteresti il cliente;\n- che mise en place ti aspetti;\n- che velocita di servizio serve;\n- che tono useresti.",
+      "reading": "## Spiegazione risto-lab\n\nUn errore comune e pensare che esista un solo modo giusto di servire.\nIn realta il servizio deve essere coerente con il locale.\n\nUn bar, una trattoria, un bistrot, una pizzeria e un ristorante elegante hanno bisogni diversi.\n\n## Servizio informale\n\nE piu semplice e veloce.\nSi trova spesso in:\n\n- bar;\n- pizzerie;\n- tavole calde;\n- trattorie semplici;\n- locali con alto passaggio.\n\nCaratteristiche:\n\n- comunicazione diretta;\n- tempi rapidi;\n- mise en place essenziale;\n- meno formalita;\n- molta attenzione a ritmo e pulizia.\n\nInformale non significa disordinato.\n\n## Servizio curato\n\nE un servizio ordinato, attento, ma non troppo rigido.\nSi trova spesso in:\n\n- bistrot;\n- ristoranti moderni;\n- trattorie curate;\n- locali turistici di buon livello;\n- hotel.\n\nCaratteristiche:\n\n- accoglienza piu attenta;\n- tavoli ben preparati;\n- spiegazioni sul menu;\n- attenzione a richieste e allergie;\n- linguaggio professionale ma vicino.\n\n## Servizio formale\n\nE piu preciso e codificato.\nSi trova in:\n\n- ristoranti eleganti;\n- eventi;\n- banchetti;\n- fine dining;\n- contesti istituzionali.\n\nCaratteristiche:\n\n- maggiore attenzione al protocollo;\n- ruoli piu definiti;\n- gesti piu precisi;\n- mise en place piu completa;\n- comunicazione piu controllata.\n\n## Esercizio\n\nScegli tre locali:\n\n1. Pizzeria di quartiere\n2. Bistrot moderno\n3. Ristorante elegante\n\nPer ognuno scrivi:\n\n- come saluteresti il cliente;\n- che mise en place ti aspetti;\n- che velocita di servizio serve;\n- che tono useresti.",
+      "projector_pages": [
+        {
+          "title": "Servizio informale",
+          "body": "comunicazione diretta;\ntempi rapidi;\nmise en place essenziale;\nmeno formalita;\nmolta attenzione a ritmo e pulizia.\nInformale non significa disordinato."
+        },
+        {
+          "title": "Servizio curato",
+          "body": "accoglienza piu attenta;\ntavoli ben preparati;\nspiegazioni sul menu;\nattenzione a richieste e allergie;\nlinguaggio professionale ma vicino."
+        },
+        {
+          "title": "Servizio formale",
+          "body": "maggiore attenzione al protocollo;\nruoli piu definiti;\ngesti piu precisi;\nmise en place piu completa;\ncomunicazione piu controllata."
+        }
+      ]
+    },
+    {
+      "id": "res-u1-standard",
+      "title": "Locale, menu, cliente e standard",
+      "description": "Domande di contesto e standard aziendale. Collegale al locale che il gruppo osserva.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-01"
+      ],
+      "topics": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "5081b48425e96bc9f23a650095fb59811d4470fbf0fd9377976a22a58bdf5e8b",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u1-standard",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "5081b48425e96bc9f23a650095fb59811d4470fbf0fd9377976a22a58bdf5e8b",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u1-standard-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "5081b48425e96bc9f23a650095fb59811d4470fbf0fd9377976a22a58bdf5e8b",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u1-standard-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Obiettivo\n\nCapire le quattro domande che guidano il lavoro di sala:\n\n1. Che tipo di locale e?\n2. Che menu offre?\n3. Che cliente arriva?\n4. Quale standard vuole l'azienda?\n\n## 4. Standard aziendale\n\nLo standard e il modo deciso dall'azienda per lavorare.\n\nEsempi:\n\n- come si saluta;\n- come si apparecchia;\n- come si prende una comanda;\n- quando si porta il pane;\n- come si sbarazza;\n- cosa si dice se il tavolo non e pronto;\n- come si gestisce un reclamo.\n\nLo standard evita che ognuno lavori \"a modo suo\".\n\n## Esempio reale\n\nDue camerieri preparano i tavoli in modo diverso.\nUn tavolo ha il tovagliolo a sinistra.\nUn altro lo ha sopra il piatto.\nUn altro non lo ha ancora.\n\nIl cliente vede disordine.\nLo standard serve a creare coerenza.\n\n## Esercizio\n\nScegli un locale reale.\nRispondi:\n\n1. Che tipo di locale e?\n2. Che menu offre?\n3. Che tipo di cliente arriva?\n4. Quale standard immagini abbia?\n5. Cosa dovrebbe imparare una persona nuova prima del primo servizio?",
+      "reading": "## Obiettivo\n\nCapire le quattro domande che guidano il lavoro di sala:\n\n1. Che tipo di locale e?\n2. Che menu offre?\n3. Che cliente arriva?\n4. Quale standard vuole l'azienda?\n\n## 4. Standard aziendale\n\nLo standard e il modo deciso dall'azienda per lavorare.\n\nEsempi:\n\n- come si saluta;\n- come si apparecchia;\n- come si prende una comanda;\n- quando si porta il pane;\n- come si sbarazza;\n- cosa si dice se il tavolo non e pronto;\n- come si gestisce un reclamo.\n\nLo standard evita che ognuno lavori \"a modo suo\".\n\n## Esempio reale\n\nDue camerieri preparano i tavoli in modo diverso.\nUn tavolo ha il tovagliolo a sinistra.\nUn altro lo ha sopra il piatto.\nUn altro non lo ha ancora.\n\nIl cliente vede disordine.\nLo standard serve a creare coerenza.\n\n## Esercizio\n\nScegli un locale reale.\nRispondi:\n\n1. Che tipo di locale e?\n2. Che menu offre?\n3. Che tipo di cliente arriva?\n4. Quale standard immagini abbia?\n5. Cosa dovrebbe imparare una persona nuova prima del primo servizio?",
+      "projector_pages": [
+        {
+          "title": "Prima del servizio",
+          "body": "Capire le quattro domande che guidano il lavoro di sala:\nChe tipo di locale e?\nChe menu offre?\nChe cliente arriva?\nQuale standard vuole l'azienda?"
+        },
+        {
+          "title": "Standard aziendale",
+          "body": "Lo standard e il modo deciso dall'azienda per lavorare."
+        },
+        {
+          "title": "Osserva il contesto",
+          "body": "Scegli un locale reale.\nRispondi:\nChe tipo di locale e?\nChe menu offre?\nChe tipo di cliente arriva?\nQuale standard immagini abbia?"
+        },
+        {
+          "title": "Osserva il contesto",
+          "body": "Cosa dovrebbe imparare una persona nuova prima del primo servizio?"
+        }
+      ]
+    },
+    {
+      "id": "res-u1-activity",
+      "title": "Analizza un locale",
+      "description": "Scheda di osservazione dalla fonte interna, disponibile anche in PDF. Usala per confrontare prima impressione, servizio e standard.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-01"
+      ],
+      "topics": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "cae6182ba7621a8d905c7249ced8e2abccab86f4d9b10dcbb986a1d3cd2a56cf",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u1-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "cae6182ba7621a8d905c7249ced8e2abccab86f4d9b10dcbb986a1d3cd2a56cf",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u1-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "cae6182ba7621a8d905c7249ced8e2abccab86f4d9b10dcbb986a1d3cd2a56cf",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u1-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "EXERCISE",
+      "body": "## Obiettivo\n\nAllenare l'occhio professionale.\nNon guardare un locale solo come cliente, ma come persona che sta imparando il lavoro.\n\n## Scegli un locale\n\nPuoi scegliere:\n\n- un ristorante;\n- una trattoria;\n- una pizzeria;\n- un bar;\n- un bistrot;\n- un hotel;\n- una tavola calda.\n\n## Scheda analisi\n\n1. Identita\n\nNome del locale:\n\nTipo di locale:\n\nZona:\n\nCliente principale:\n\n2. Prima impressione\n\nCom'e l'ingresso?\n\nLa sala sembra ordinata?\n\nIl personale saluta?\n\nI tavoli sono pronti?\n\n3. Servizio\n\nIl servizio e:\n\n- informale;\n- curato;\n- formale;\n- misto.\n\nPerche?\n\n4. Menu\n\nIl menu sembra:\n\n- semplice;\n- ampio;\n- turistico;\n- tradizionale;\n- moderno;\n- elegante.\n\nChe cosa deve conoscere bene la sala?\n\n5. Standard\n\nVedi coerenza tra i tavoli?\n\nIl personale usa parole simili?\n\nLa mise en place e uguale per tutti?\n\n6. Miglioramenti\n\nScrivi tre cose positive:\n\n1.\n2.\n3.\n\nScrivi tre cose da migliorare:\n\n1.\n2.\n3.\n\n## Conclusione\n\nChe cosa impari da questo locale?\n\nChe cosa porteresti in risto-lab come esempio?",
+      "reading": "## Obiettivo\n\nAllenare l'occhio professionale.\nNon guardare un locale solo come cliente, ma come persona che sta imparando il lavoro.\n\n## Scegli un locale\n\nPuoi scegliere:\n\n- un ristorante;\n- una trattoria;\n- una pizzeria;\n- un bar;\n- un bistrot;\n- un hotel;\n- una tavola calda.\n\n## Scheda analisi\n\n1. Identita\n\nNome del locale:\n\nTipo di locale:\n\nZona:\n\nCliente principale:\n\n2. Prima impressione\n\nCom'e l'ingresso?\n\nLa sala sembra ordinata?\n\nIl personale saluta?\n\nI tavoli sono pronti?\n\n3. Servizio\n\nIl servizio e:\n\n- informale;\n- curato;\n- formale;\n- misto.\n\nPerche?\n\n4. Menu\n\nIl menu sembra:\n\n- semplice;\n- ampio;\n- turistico;\n- tradizionale;\n- moderno;\n- elegante.\n\nChe cosa deve conoscere bene la sala?\n\n5. Standard\n\nVedi coerenza tra i tavoli?\n\nIl personale usa parole simili?\n\nLa mise en place e uguale per tutti?\n\n6. Miglioramenti\n\nScrivi tre cose positive:\n\n1.\n2.\n3.\n\nScrivi tre cose da migliorare:\n\n1.\n2.\n3.\n\n## Conclusione\n\nChe cosa impari da questo locale?\n\nChe cosa porteresti in risto-lab come esempio?",
+      "projector_pages": [
+        {
+          "title": "Analizza un locale",
+          "body": "Allenare l'occhio professionale.\nNon guardare un locale solo come cliente, ma come persona che sta imparando il lavoro."
+        },
+        {
+          "title": "Prima impressione",
+          "body": "Com'e l'ingresso?\nLa sala sembra ordinata?\nIl personale saluta?\nI tavoli sono pronti?"
+        },
+        {
+          "title": "Standard",
+          "body": "Vedi coerenza tra i tavoli?\nIl personale usa parole simili?\nLa mise en place e uguale per tutti?"
+        },
+        {
+          "title": "Confronto",
+          "body": "Che cosa impari da questo locale?\nChe cosa porteresti in risto-lab come esempio?"
+        }
+      ],
+      "asset_filename": "unit-01-scheda-attivita.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u1-quiz",
+      "title": "Verifica guidata · Unità 01",
+      "description": "8 domande già presenti nei materiali RISTO-LAB. Usale dopo l’attività e confronta le scelte con il gruppo.",
+      "type": "QUIZ",
+      "unit_ids": [
+        "unit-01"
+      ],
+      "topics": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "ab7dad48d910781de77c2fbeaf6d5243d3f16c271f5358522fdc3a5e8c434aff",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u1-quiz",
+      "resource_type": "QUIZ",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "ab7dad48d910781de77c2fbeaf6d5243d3f16c271f5358522fdc3a5e8c434aff",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u1-quiz-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "ab7dad48d910781de77c2fbeaf6d5243d3f16c271f5358522fdc3a5e8c434aff",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u1-quiz-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "QUIZ",
+      "body": "",
+      "reading": "",
+      "questions": [
+        {
+          "question": "Un ristorante vende solo cibo?",
+          "options": [
+            "Si.",
+            "No, vende anche accoglienza, servizio, ordine e esperienza.",
+            "Solo nei locali eleganti."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "La prima impressione nasce:",
+          "options": [
+            "Nei primi momenti, anche da saluto, ordine e pulizia.",
+            "Solo al momento del conto.",
+            "Solo quando arriva il piatto."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Il servizio informale puo essere professionale?",
+          "options": [
+            "Solo se usa molte posate.",
+            "Si, se e coerente, pulito e ordinato.",
+            "No."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Il menu influenza il lavoro di sala?",
+          "options": [
+            "Si, per posate, bicchieri, tempi e spiegazioni.",
+            "No, riguarda solo la cucina.",
+            "Solo se il cliente lo chiede."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Che cos'e uno standard aziendale?",
+          "options": [
+            "Una decorazione del tavolo.",
+            "Una scelta personale di ogni cameriere.",
+            "Il modo deciso dall'azienda per lavorare in modo coerente."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Se il tavolo non e pronto, cosa aiuta?",
+          "options": [
+            "Evitare il contatto visivo.",
+            "Lasciare il cliente senza informazioni.",
+            "Dare una informazione chiara e gentile."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Quali reparti devono comunicare bene?",
+          "options": [
+            "Sala, cucina, bar, office e cassa.",
+            "Solo cucina.",
+            "Solo sala."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Perche bisogna adattarsi al tipo di locale?",
+          "options": [
+            "Perche la sala non conta.",
+            "Perche ogni cliente decide le regole.",
+            "Perche cliente, menu, ritmo e standard cambiano."
+          ],
+          "answer": 2,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "res-u1-checklist",
+      "title": "Controlla il tuo lavoro",
+      "description": "Riepilogo del capitolo originale. Usalo per il confronto finale e scegli un gesto da ripetere.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-01"
+      ],
+      "topics": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "5b3dce60a49c9232320147573c79d2cc3399a057444d3260aa3980b259ffd3a3",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u1-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "5b3dce60a49c9232320147573c79d2cc3399a057444d3260aa3980b259ffd3a3",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ristorazione",
+        "ospitalità",
+        "servizio",
+        "esperienza cliente"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u1-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "5b3dce60a49c9232320147573c79d2cc3399a057444d3260aa3980b259ffd3a3",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u1-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- So spiegare la differenza tra prodotto e servizio complessivo.\n- So indicare almeno cinque contesti di lavoro.\n- So riconoscere ciò che posso risolvere e ciò che devo segnalare.\n- So descrivere il lavoro di sala senza usare espressioni svalutanti.\n- So spiegare perché il rispetto riguarda sia il cliente sia il personale.",
+      "reading": "## Controlla il tuo lavoro\n\n- So spiegare la differenza tra prodotto e servizio complessivo.\n- So indicare almeno cinque contesti di lavoro.\n- So riconoscere ciò che posso risolvere e ciò che devo segnalare.\n- So descrivere il lavoro di sala senza usare espressioni svalutanti.\n- So spiegare perché il rispetto riguarda sia il cliente sia il personale.",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "So spiegare la differenza tra prodotto e servizio complessivo.\nSo indicare almeno cinque contesti di lavoro.\nSo riconoscere ciò che posso risolvere e ciò che devo segnalare.\nSo descrivere il lavoro di sala senza usare espressioni svalutanti.\nSo spiegare perché il rispetto riguarda sia il cliente sia il personale."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "So spiegare la differenza tra prodotto e servizio complessivo.",
+            "So indicare almeno cinque contesti di lavoro.",
+            "So riconoscere ciò che posso risolvere e ciò che devo segnalare.",
+            "So descrivere il lavoro di sala senza usare espressioni svalutanti.",
+            "So spiegare perché il rispetto riguarda sia il cliente sia il personale."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u2-competenze",
+      "title": "Conoscenza, pratica e responsabilità",
+      "description": "Introduzione e domanda del capitolo 02. Usale per collegare tecnica e comportamento, senza giudizi estetici.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-02"
+      ],
+      "topics": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "c4a2c3f199dfa3df588e415574379c0b5bdd29299899a8034ab1f313c810d9ef",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u2-competenze",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "c4a2c3f199dfa3df588e415574379c0b5bdd29299899a8034ab1f313c810d9ef",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u2-competenze-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "c4a2c3f199dfa3df588e415574379c0b5bdd29299899a8034ab1f313c810d9ef",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u2-competenze-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Il professionista di sala\n\nIl professionista di sala non è definito da un gesto elegante o da una divisa. È definito dalla capacità di unire conoscenza, pratica, comunicazione, controllo e responsabilità. Questa competenza si costruisce nel tempo e può iniziare anche da mansioni semplici.\n\n## Domanda iniziale\n\nUna persona conosce tutti i nomi delle posate, ma arriva spesso in ritardo e nasconde gli errori. È già un buon professionista? Motiva la risposta.\n\n## Sapere\n\nConoscere parole, prodotti, procedure, rischi e standard.\n\n## Saper fare\n\nApplicare una procedura in una situazione concreta.\n\n## Saper essere\n\nComportarsi in modo affidabile e rispettoso anche sotto pressione.\n\n## Sapere, saper fare, saper essere\n\nUna persona può conoscere la teoria e non riuscire ancora ad applicarla. Può anche essere veloce, ma creare problemi perché non comunica. La formazione serve a rendere queste tre dimensioni progressivamente coerenti.",
+      "reading": "## Il professionista di sala\n\nIl professionista di sala non è definito da un gesto elegante o da una divisa. È definito dalla capacità di unire conoscenza, pratica, comunicazione, controllo e responsabilità. Questa competenza si costruisce nel tempo e può iniziare anche da mansioni semplici.\n\n## Domanda iniziale\n\nUna persona conosce tutti i nomi delle posate, ma arriva spesso in ritardo e nasconde gli errori. È già un buon professionista? Motiva la risposta.\n\n## Sapere\n\nConoscere parole, prodotti, procedure, rischi e standard.\n\n## Saper fare\n\nApplicare una procedura in una situazione concreta.\n\n## Saper essere\n\nComportarsi in modo affidabile e rispettoso anche sotto pressione.\n\n## Sapere, saper fare, saper essere\n\nUna persona può conoscere la teoria e non riuscire ancora ad applicarla. Può anche essere veloce, ma creare problemi perché non comunica. La formazione serve a rendere queste tre dimensioni progressivamente coerenti.",
+      "projector_pages": [
+        {
+          "title": "Una domanda professionale",
+          "body": "Una persona conosce tutti i nomi delle posate, ma arriva spesso in ritardo e nasconde gli errori. È già un buon professionista? Motiva la risposta."
+        },
+        {
+          "title": "Sapere, saper fare, saper essere",
+          "body": "Sapere: Conoscere parole, prodotti, procedure, rischi e standard.\nSaper fare: Applicare una procedura in una situazione concreta.\nSaper essere: Comportarsi in modo affidabile e rispettoso anche sotto pressione."
+        }
+      ]
+    },
+    {
+      "id": "res-u2-presentazione",
+      "title": "Presentazione personale e rispetto",
+      "description": "Criteri del capitolo 02 collegati al lavoro. Usali per distinguere ordine e igiene da preferenze estetiche.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-02"
+      ],
+      "topics": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "9d3582ae8e23ad7436e232740fcc315d7712b65d526ef924538090c5d6277f13",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u2-presentazione",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "9d3582ae8e23ad7436e232740fcc315d7712b65d526ef924538090c5d6277f13",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u2-presentazione-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "9d3582ae8e23ad7436e232740fcc315d7712b65d526ef924538090c5d6277f13",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u2-presentazione-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Immagine, postura e comunicazione\n\nLa presentazione personale comunica ordine e attenzione, ma non deve diventare un giudizio \nestetico sulla persona. Gli standard devono essere pertinenti al lavoro, uguali nelle finalità e \nrispettosi di identità, cultura, religione e caratteristiche individuali.\n Divisa pulita, integra e adatta alla mansione.\n Scarpe pulite, stabili e compatibili con la sicurezza del lavoro.\n Capelli curati e gestiti secondo il rischio e le procedure del locale.\n Mani e unghie pulite; oggetti personali gestiti senza contaminare il lavoro.\n Profumi e odori non invasivi.\n Postura attenta, senza appoggiarsi a tavoli o mobili davanti ai clienti.\n Tono chiaro e rispettoso, adattato alla situazione.",
+      "reading": "## Immagine, postura e comunicazione\n\nLa presentazione personale comunica ordine e attenzione, ma non deve diventare un giudizio \nestetico sulla persona. Gli standard devono essere pertinenti al lavoro, uguali nelle finalità e \nrispettosi di identità, cultura, religione e caratteristiche individuali.\n Divisa pulita, integra e adatta alla mansione.\n Scarpe pulite, stabili e compatibili con la sicurezza del lavoro.\n Capelli curati e gestiti secondo il rischio e le procedure del locale.\n Mani e unghie pulite; oggetti personali gestiti senza contaminare il lavoro.\n Profumi e odori non invasivi.\n Postura attenta, senza appoggiarsi a tavoli o mobili davanti ai clienti.\n Tono chiaro e rispettoso, adattato alla situazione.",
+      "projector_pages": [
+        {
+          "title": "Immagine, postura e comunicazione",
+          "body": "La presentazione personale comunica ordine e attenzione, ma non deve diventare un giudizio\nestetico sulla persona. Gli standard devono essere pertinenti al lavoro, uguali nelle finalità e\nrispettosi di identità, cultura, religione e caratteristiche individuali.\nDivisa pulita, integra e adatta alla mansione."
+        },
+        {
+          "title": "Immagine, postura e comunicazione",
+          "body": "Scarpe pulite, stabili e compatibili con la sicurezza del lavoro.\nCapelli curati e gestiti secondo il rischio e le procedure del locale.\nMani e unghie pulite; oggetti personali gestiti senza contaminare il lavoro.\nProfumi e odori non invasivi.\nPostura attenta, senza appoggiarsi a tavoli o mobili davanti ai clienti."
+        },
+        {
+          "title": "Immagine, postura e comunicazione",
+          "body": "Tono chiaro e rispettoso, adattato alla situazione."
+        }
+      ]
+    },
+    {
+      "id": "res-u2-squadra",
+      "title": "Affidabilità e comunicazione con la squadra",
+      "description": "Consegne, segnalazioni e frasi della fonte interna. Usale per allenare una comunicazione breve e utile.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-02"
+      ],
+      "topics": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "ee606f9f319ab655e351e7aaf0efc8b7d0dbbd608e56b00577a4619cf5509f13",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u2-squadra",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "ee606f9f319ab655e351e7aaf0efc8b7d0dbbd608e56b00577a4619cf5509f13",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u2-squadra-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "ee606f9f319ab655e351e7aaf0efc8b7d0dbbd608e56b00577a4619cf5509f13",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u2-squadra-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Spiegazione risto-lab\n\nNel lavoro di ristorazione il servizio ha orari, ritmi e responsabilita.\n\nSe una persona arriva tardi, non arriva preparata o non avvisa, crea problemi a tutta la squadra.\n\nPuntualita significa:\n\n- arrivare in orario;\n- essere pronti a iniziare;\n- avere abbigliamento adeguato;\n- sapere a chi presentarsi;\n- avvisare prima se c'e un problema reale.\n\n## Affidabilita\n\nUna persona affidabile non e una persona perfetta.\n\nE una persona che:\n\n- mantiene gli impegni;\n- chiede quando non capisce;\n- comunica problemi in tempo;\n- non sparisce;\n- rispetta colleghi e responsabile.\n\n## Metodo: situazione, luogo, richiesta\n\nUna comunicazione utile contiene:\n\n1. cosa succede;\n2. dove succede;\n3. cosa serve.\n\nEsempio:\n\n\"Al tavolo 4 il cliente chiede allergeni sul dolce. Puoi confermare?\"\n\n## Con il responsabile\n\nCon il responsabile devi comunicare situazioni che richiedono decisione:\n\n- allergeni;\n- cliente arrabbiato;\n- errore in comanda;\n- materiale rotto;\n- dubbio su pagamento;\n- problema di sicurezza.",
+      "reading": "## Spiegazione risto-lab\n\nNel lavoro di ristorazione il servizio ha orari, ritmi e responsabilita.\n\nSe una persona arriva tardi, non arriva preparata o non avvisa, crea problemi a tutta la squadra.\n\nPuntualita significa:\n\n- arrivare in orario;\n- essere pronti a iniziare;\n- avere abbigliamento adeguato;\n- sapere a chi presentarsi;\n- avvisare prima se c'e un problema reale.\n\n## Affidabilita\n\nUna persona affidabile non e una persona perfetta.\n\nE una persona che:\n\n- mantiene gli impegni;\n- chiede quando non capisce;\n- comunica problemi in tempo;\n- non sparisce;\n- rispetta colleghi e responsabile.\n\n## Metodo: situazione, luogo, richiesta\n\nUna comunicazione utile contiene:\n\n1. cosa succede;\n2. dove succede;\n3. cosa serve.\n\nEsempio:\n\n\"Al tavolo 4 il cliente chiede allergeni sul dolce. Puoi confermare?\"\n\n## Con il responsabile\n\nCon il responsabile devi comunicare situazioni che richiedono decisione:\n\n- allergeni;\n- cliente arrabbiato;\n- errore in comanda;\n- materiale rotto;\n- dubbio su pagamento;\n- problema di sicurezza.",
+      "projector_pages": [
+        {
+          "title": "Affidabilità",
+          "body": "Una persona affidabile non e una persona perfetta.\nE una persona che:\nmantiene gli impegni;\nchiede quando non capisce;\ncomunica problemi in tempo;\nnon sparisce;"
+        },
+        {
+          "title": "Affidabilità",
+          "body": "rispetta colleghi e responsabile."
+        },
+        {
+          "title": "Situazione, luogo, richiesta",
+          "body": "Una comunicazione utile contiene:\ncosa succede;\ndove succede;\ncosa serve.\nEsempio:\n\"Al tavolo 4 il cliente chiede allergeni sul dolce. Puoi confermare?\""
+        }
+      ]
+    },
+    {
+      "id": "res-u2-activity",
+      "title": "Comportamenti professionali in situazione",
+      "description": "Esercizi già presenti su comunicazione e priorità. Usali a coppie e confronta le azioni proposte; scheda PDF disponibile.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-02"
+      ],
+      "topics": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "89783d9542dc407c56d06aa368f8c8f579b653c8d0ddc86b6dbc469955108c55",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u2-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "89783d9542dc407c56d06aa368f8c8f579b653c8d0ddc86b6dbc469955108c55",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u2-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "89783d9542dc407c56d06aa368f8c8f579b653c8d0ddc86b6dbc469955108c55",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u2-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "EXERCISE",
+      "body": "## Obiettivo\n\nTrasformare comportamenti generici in azioni osservabili.\n\n## Parte 3 - Comunicazione\n\nTrasforma queste frasi:\n\n- \"C'e casino.\"\n- \"Non so.\"\n- \"Il cliente e arrabbiato.\"\n- \"Manca roba.\"\n\nIn frasi professionali:\n\n1.\n2.\n3.\n4.\n\n## Parte 4 - Stress\n\nSituazione:\n\nPiatto pronto al pass, cliente che aspetta acqua, tavolo che chiede il conto.\n\nScrivi:\n\n- prima azione;\n- seconda azione;\n- chi avvisi;\n- frase da usare.",
+      "reading": "## Obiettivo\n\nTrasformare comportamenti generici in azioni osservabili.\n\n## Parte 3 - Comunicazione\n\nTrasforma queste frasi:\n\n- \"C'e casino.\"\n- \"Non so.\"\n- \"Il cliente e arrabbiato.\"\n- \"Manca roba.\"\n\nIn frasi professionali:\n\n1.\n2.\n3.\n4.\n\n## Parte 4 - Stress\n\nSituazione:\n\nPiatto pronto al pass, cliente che aspetta acqua, tavolo che chiede il conto.\n\nScrivi:\n\n- prima azione;\n- seconda azione;\n- chi avvisi;\n- frase da usare.",
+      "projector_pages": [
+        {
+          "title": "Parte 3 - Comunicazione",
+          "body": "Trasforma queste frasi:\n\"C'e casino.\"\n\"Non so.\"\n\"Il cliente e arrabbiato.\"\n\"Manca roba.\"\nIn frasi professionali:"
+        },
+        {
+          "title": "Parte 4 - Stress",
+          "body": "Situazione:\nPiatto pronto al pass, cliente che aspetta acqua, tavolo che chiede il conto.\nScrivi:\nprima azione;\nseconda azione;\nchi avvisi;"
+        },
+        {
+          "title": "Parte 4 - Stress",
+          "body": "frase da usare."
+        }
+      ],
+      "asset_filename": "unit-02-scheda-attivita.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u2-quiz",
+      "title": "Verifica guidata · Unità 02",
+      "description": "6 domande già presenti nei materiali RISTO-LAB. Usale dopo l’attività e confronta le scelte con il gruppo.",
+      "type": "QUIZ",
+      "unit_ids": [
+        "unit-02"
+      ],
+      "topics": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "e17c2ce7ccda94f5c43a2617aef4297ef4cebc034ce758914ffaa1ce029ea8e6",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u2-quiz",
+      "resource_type": "QUIZ",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "e17c2ce7ccda94f5c43a2617aef4297ef4cebc034ce758914ffaa1ce029ea8e6",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u2-quiz-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "e17c2ce7ccda94f5c43a2617aef4297ef4cebc034ce758914ffaa1ce029ea8e6",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u2-quiz-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "QUIZ",
+      "body": "",
+      "reading": "",
+      "questions": [
+        {
+          "question": "Puntualita significa:",
+          "options": [
+            "Arrivare quando si vuole.",
+            "Essere pronti a iniziare il turno.",
+            "Avvisare dopo il ritardo."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Una postura professionale comunica:",
+          "options": [
+            "Disinteresse.",
+            "Fretta senza ordine.",
+            "Presenza e attenzione."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Durante il servizio la comunicazione deve essere:",
+          "options": [
+            "Sempre aggressiva.",
+            "Breve, chiara e utile.",
+            "Lunga e confusa."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Se fai un errore:",
+          "options": [
+            "Lo nascondi.",
+            "Lo riconosci e avvisi chi deve sapere.",
+            "Dai subito colpa al collega."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "In un momento di stress e meglio:",
+          "options": [
+            "Capire la priorita e fare una cosa alla volta.",
+            "Smettere di comunicare.",
+            "Correre senza guardare."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Il feedback serve a:",
+          "options": [
+            "Evitare la pratica.",
+            "Migliorare un comportamento.",
+            "Dimostrare che non vali."
+          ],
+          "answer": 1,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "res-u2-checklist",
+      "title": "Controlla il tuo lavoro",
+      "description": "Riepilogo del capitolo originale. Usalo per il confronto finale e scegli un gesto da ripetere.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-02"
+      ],
+      "topics": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "b03e82f0adfd5e7738cc79e6329c7bb842f705aacb878e18d1ad4a47ab6235b3",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u2-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "b03e82f0adfd5e7738cc79e6329c7bb842f705aacb878e18d1ad4a47ab6235b3",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "professionista di sala",
+        "cameriere",
+        "competenze",
+        "comportamento"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u2-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "b03e82f0adfd5e7738cc79e6329c7bb842f705aacb878e18d1ad4a47ab6235b3",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u2-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- Comprendo la differenza tra sapere, saper fare e saper essere.\n- Conosco le attività del mio turno e i limiti del mio ruolo.\n- Non invento informazioni che non possiedo.\n- Comunico errori e anomalie in tempo.\n- Mi presento con divisa e igiene adeguate secondo lo standard ricevuto.\n- Rispetto le persone senza confondere professionalità e giudizio estetico.",
+      "reading": "## Controlla il tuo lavoro\n\n- Comprendo la differenza tra sapere, saper fare e saper essere.\n- Conosco le attività del mio turno e i limiti del mio ruolo.\n- Non invento informazioni che non possiedo.\n- Comunico errori e anomalie in tempo.\n- Mi presento con divisa e igiene adeguate secondo lo standard ricevuto.\n- Rispetto le persone senza confondere professionalità e giudizio estetico.",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "Comprendo la differenza tra sapere, saper fare e saper essere.\nConosco le attività del mio turno e i limiti del mio ruolo.\nNon invento informazioni che non possiedo.\nComunico errori e anomalie in tempo.\nMi presento con divisa e igiene adeguate secondo lo standard ricevuto.\nRispetto le persone senza confondere professionalità e giudizio estetico."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Comprendo la differenza tra sapere, saper fare e saper essere.",
+            "Conosco le attività del mio turno e i limiti del mio ruolo.",
+            "Non invento informazioni che non possiedo.",
+            "Comunico errori e anomalie in tempo.",
+            "Mi presento con divisa e igiene adeguate secondo lo standard ricevuto.",
+            "Rispetto le persone senza confondere professionalità e giudizio estetico."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u3-responsabile",
+      "title": "Responsabile di sala e riferimento del turno",
+      "description": "Funzioni e limiti del ruolo nella fonte interna. Inizia chiarendo chi coordina il servizio reale.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-03"
+      ],
+      "topics": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "ffc060ac3ec1095508b40cee6e439b8c7ee27c9806bfce4dd55fe9c299ae0b64",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u3-responsabile",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "ffc060ac3ec1095508b40cee6e439b8c7ee27c9806bfce4dd55fe9c299ae0b64",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u3-responsabile-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "ffc060ac3ec1095508b40cee6e439b8c7ee27c9806bfce4dd55fe9c299ae0b64",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u3-responsabile-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Nota didattica\n\nNon tutti i locali hanno una brigata formale.\nAnche nei locali piccoli, pero, esistono responsabilita, priorita e persone a cui fare riferimento.\n\n## Spiegazione risto-lab\n\nIl responsabile di sala coordina il servizio.\nIn alcuni locali viene chiamato maître, direttore di sala o semplicemente responsabile.\n\nIl nome puo cambiare.\nLa funzione resta simile: organizzare la sala e far lavorare il team in modo ordinato.\n\n## Che cosa fa\n\nIl responsabile puo occuparsi di:\n\n- organizzare i tavoli;\n- controllare prenotazioni;\n- assegnare ranghi o zone;\n- spiegare menu e fuori menu;\n- controllare mise en place;\n- gestire clienti difficili;\n- coordinare tempi con cucina;\n- dare indicazioni al personale;\n- risolvere problemi.\n\n## Cosa deve fare una persona nuova\n\nUna persona nuova deve:\n\n- ascoltare il briefing;\n- chiedere se non capisce;\n- non prendere iniziative rischiose;\n- avvisare se vede un problema;\n- rispettare le priorita date.",
+      "reading": "## Nota didattica\n\nNon tutti i locali hanno una brigata formale.\nAnche nei locali piccoli, pero, esistono responsabilita, priorita e persone a cui fare riferimento.\n\n## Spiegazione risto-lab\n\nIl responsabile di sala coordina il servizio.\nIn alcuni locali viene chiamato maître, direttore di sala o semplicemente responsabile.\n\nIl nome puo cambiare.\nLa funzione resta simile: organizzare la sala e far lavorare il team in modo ordinato.\n\n## Che cosa fa\n\nIl responsabile puo occuparsi di:\n\n- organizzare i tavoli;\n- controllare prenotazioni;\n- assegnare ranghi o zone;\n- spiegare menu e fuori menu;\n- controllare mise en place;\n- gestire clienti difficili;\n- coordinare tempi con cucina;\n- dare indicazioni al personale;\n- risolvere problemi.\n\n## Cosa deve fare una persona nuova\n\nUna persona nuova deve:\n\n- ascoltare il briefing;\n- chiedere se non capisce;\n- non prendere iniziative rischiose;\n- avvisare se vede un problema;\n- rispettare le priorita date.",
+      "projector_pages": [
+        {
+          "title": "La brigata di sala",
+          "body": "Non tutti i locali hanno una brigata formale.\nAnche nei locali piccoli, pero, esistono responsabilita, priorita e persone a cui fare riferimento."
+        },
+        {
+          "title": "Il responsabile coordina",
+          "body": "Il responsabile di sala coordina il servizio.\nIn alcuni locali viene chiamato maître, direttore di sala o semplicemente responsabile."
+        },
+        {
+          "title": "Prima del turno",
+          "body": "ascoltare il briefing;\nchiedere se non capisce;\nnon prendere iniziative rischiose;\navvisare se vede un problema;\nrispettare le priorita date."
+        }
+      ]
+    },
+    {
+      "id": "res-u3-ruoli",
+      "title": "Chef de rang, commis, runner e rango",
+      "description": "Ruoli spiegati per compiti, con la distinzione dei locali piccoli. Usali per costruire lo schema della squadra.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-03"
+      ],
+      "topics": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "cd46b71197264da9a3633472ba3f595f341a84beb3d8b7f4b12043a3519cdbbc",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u3-ruoli",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "cd46b71197264da9a3633472ba3f595f341a84beb3d8b7f4b12043a3519cdbbc",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u3-ruoli-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "cd46b71197264da9a3633472ba3f595f341a84beb3d8b7f4b12043a3519cdbbc",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u3-ruoli-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Chef de rang\n\nLo chef de rang segue una zona della sala, chiamata rango.\nE responsabile di alcuni tavoli.\n\nPuo occuparsi di:\n\n- accoglienza nella propria zona;\n- presa comande;\n- controllo tavoli;\n- servizio;\n- comunicazione con cucina;\n- gestione richieste;\n- coordinamento del commis.\n\n## Commis di sala\n\nIl commis supporta lo chef de rang o il responsabile.\nE spesso una figura di ingresso o crescita.\n\nPuo occuparsi di:\n\n- preparare mise en place;\n- portare materiali;\n- aiutare nel servizio;\n- sbarazzare;\n- riordinare;\n- osservare e imparare.\n\nIl commis non e \"meno importante\".\nE una figura fondamentale per far scorrere il servizio.\n\n## Runner\n\nIl runner aiuta nei movimenti rapidi tra cucina, pass e sala.\n\nPuo occuparsi di:\n\n- portare piatti;\n- portare materiali;\n- avvisare;\n- aiutare nei momenti di alto ritmo.\n\nDeve essere veloce, ma non caotico.\n\n## Nei locali piccoli\n\nIn un locale piccolo una sola persona puo fare piu ruoli.\nQuesto non significa che non esista organizzazione.\n\nEsempio:\n\nUna persona puo prendere comande, servire e sbarazzare.\nMa deve comunque sapere cosa fare prima e cosa fare dopo.",
+      "reading": "## Chef de rang\n\nLo chef de rang segue una zona della sala, chiamata rango.\nE responsabile di alcuni tavoli.\n\nPuo occuparsi di:\n\n- accoglienza nella propria zona;\n- presa comande;\n- controllo tavoli;\n- servizio;\n- comunicazione con cucina;\n- gestione richieste;\n- coordinamento del commis.\n\n## Commis di sala\n\nIl commis supporta lo chef de rang o il responsabile.\nE spesso una figura di ingresso o crescita.\n\nPuo occuparsi di:\n\n- preparare mise en place;\n- portare materiali;\n- aiutare nel servizio;\n- sbarazzare;\n- riordinare;\n- osservare e imparare.\n\nIl commis non e \"meno importante\".\nE una figura fondamentale per far scorrere il servizio.\n\n## Runner\n\nIl runner aiuta nei movimenti rapidi tra cucina, pass e sala.\n\nPuo occuparsi di:\n\n- portare piatti;\n- portare materiali;\n- avvisare;\n- aiutare nei momenti di alto ritmo.\n\nDeve essere veloce, ma non caotico.\n\n## Nei locali piccoli\n\nIn un locale piccolo una sola persona puo fare piu ruoli.\nQuesto non significa che non esista organizzazione.\n\nEsempio:\n\nUna persona puo prendere comande, servire e sbarazzare.\nMa deve comunque sapere cosa fare prima e cosa fare dopo.",
+      "projector_pages": [
+        {
+          "title": "Ruoli e responsabilità",
+          "body": "Chef de rang: Lo chef de rang segue una zona della sala, chiamata rango.\nE responsabile di alcuni tavoli.\nCommis di sala: Il commis supporta lo chef de rang o il responsabile.\nE spesso una figura di ingresso o crescita.\nRunner: Il runner aiuta nei movimenti rapidi tra cucina, pass e sala."
+        },
+        {
+          "title": "Nei locali piccoli",
+          "body": "In un locale piccolo una sola persona puo fare piu ruoli.\nQuesto non significa che non esista organizzazione."
+        }
+      ]
+    },
+    {
+      "id": "res-u3-briefing",
+      "title": "Briefing e richiesta di aiuto",
+      "description": "Indicazioni e frasi originali per trasmettere le informazioni. Usale in una breve dimostrazione prima della simulazione.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-03"
+      ],
+      "topics": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "bf4dfdaac28a46144bf27ac3b730d7456a65e25c3fa602ba02c6dc881dd5896f",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u3-briefing",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "bf4dfdaac28a46144bf27ac3b730d7456a65e25c3fa602ba02c6dc881dd5896f",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u3-briefing-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "bf4dfdaac28a46144bf27ac3b730d7456a65e25c3fa602ba02c6dc881dd5896f",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u3-briefing-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Che cos'e il briefing\n\nIl briefing e un momento breve prima del servizio.\nServe per condividere informazioni importanti.\n\nPuo durare pochi minuti, ma puo evitare molti errori.\n\n## Cosa si comunica\n\nDurante il briefing si possono comunicare:\n\n- prenotazioni;\n- tavoli importanti;\n- allergie gia segnalate;\n- fuori menu;\n- piatti finiti;\n- menu del giorno;\n- eventi o gruppi;\n- divisione dei ranghi;\n- priorita del servizio;\n- problemi da controllare.\n\n## Come partecipare\n\nDurante il briefing:\n\n- ascolta;\n- non parlare sopra gli altri;\n- prendi nota se serve;\n- chiedi se non capisci;\n- conferma il tuo compito;\n- non usare il telefono per distrarti.\n\n## Come segnalare un problema\n\nUna buona segnalazione deve dire:\n\n1. Dove.\n2. Che cosa.\n3. Quanto e urgente.\n4. Se serve un intervento.\n\nEsempio:\n\nAl tavolo 6 il cliente dice che manca un piatto.\nSta aspettando da molto.\nPuoi controllare con la cucina?\n\n## Quando chiedere aiuto\n\nChiedi aiuto quando:\n\n- non conosci una procedura;\n- un cliente fa una richiesta speciale;\n- si parla di allergie;\n- non capisci una comanda;\n- c'e un errore su un piatto;\n- un cliente si lamenta;\n- manca materiale;\n- non sai dove andare.",
+      "reading": "## Che cos'e il briefing\n\nIl briefing e un momento breve prima del servizio.\nServe per condividere informazioni importanti.\n\nPuo durare pochi minuti, ma puo evitare molti errori.\n\n## Cosa si comunica\n\nDurante il briefing si possono comunicare:\n\n- prenotazioni;\n- tavoli importanti;\n- allergie gia segnalate;\n- fuori menu;\n- piatti finiti;\n- menu del giorno;\n- eventi o gruppi;\n- divisione dei ranghi;\n- priorita del servizio;\n- problemi da controllare.\n\n## Come partecipare\n\nDurante il briefing:\n\n- ascolta;\n- non parlare sopra gli altri;\n- prendi nota se serve;\n- chiedi se non capisci;\n- conferma il tuo compito;\n- non usare il telefono per distrarti.\n\n## Come segnalare un problema\n\nUna buona segnalazione deve dire:\n\n1. Dove.\n2. Che cosa.\n3. Quanto e urgente.\n4. Se serve un intervento.\n\nEsempio:\n\nAl tavolo 6 il cliente dice che manca un piatto.\nSta aspettando da molto.\nPuoi controllare con la cucina?\n\n## Quando chiedere aiuto\n\nChiedi aiuto quando:\n\n- non conosci una procedura;\n- un cliente fa una richiesta speciale;\n- si parla di allergie;\n- non capisci una comanda;\n- c'e un errore su un piatto;\n- un cliente si lamenta;\n- manca materiale;\n- non sai dove andare.",
+      "projector_pages": [
+        {
+          "title": "Prima del servizio",
+          "body": "Il briefing e un momento breve prima del servizio.\nServe per condividere informazioni importanti.\nPuo durare pochi minuti, ma puo evitare molti errori."
+        },
+        {
+          "title": "Informazioni da condividere",
+          "body": "prenotazioni;\ntavoli importanti;\nallergie gia segnalate;\nfuori menu;\npiatti finiti;\nmenu del giorno;"
+        },
+        {
+          "title": "Segnalare un problema",
+          "body": "Una buona segnalazione deve dire:\nDove.\nChe cosa.\nQuanto e urgente.\nSe serve un intervento.\nEsempio:"
+        },
+        {
+          "title": "Segnalare un problema",
+          "body": "Al tavolo 6 il cliente dice che manca un piatto.\nSta aspettando da molto.\nPuoi controllare con la cucina?"
+        }
+      ]
+    },
+    {
+      "id": "res-u3-activity",
+      "title": "Disegna la brigata e trasmetti una richiesta",
+      "description": "Esercizio originale con schema dei ruoli e simulazione di una richiesta sugli allergeni. Stampalo e confronta destinatari e responsabilità.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-03"
+      ],
+      "topics": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "ba6b53ac428012cf11f8388915554233d39257b117a946b690e8da5732ad62ae",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u3-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "ba6b53ac428012cf11f8388915554233d39257b117a946b690e8da5732ad62ae",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u3-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "ba6b53ac428012cf11f8388915554233d39257b117a946b690e8da5732ad62ae",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u3-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "EXERCISE",
+      "body": "## Obiettivo\n\nCapire chi fa cosa in una sala.\n\n## Disegna una brigata\n\nDisegna questi ruoli:\n\n- responsabile di sala;\n- chef de rang;\n- commis;\n- runner;\n- bar;\n- cucina/pass.\n\n## Compila\n\nResponsabile di sala\n\nCompiti:\n\n1.\n2.\n3.\n\nQuando lo chiamo:\n\n1.\n2.\n3.\n\nChef de rang\n\nCompiti:\n\n1.\n2.\n3.\n\nCommis\n\nCompiti:\n\n1.\n2.\n3.\n\nRunner\n\nCompiti:\n\n1.\n2.\n3.\n\n## Simulazione\n\nSituazione:\n\nIl tavolo 5 comunica una allergia.\n\nRispondi:\n\n1. Cosa dici al cliente?\n2. Chi avvisi?\n3. Cosa non devi fare?\n\n## Conclusione\n\nScrivi tre frasi professionali per chiedere aiuto:\n\n1.\n2.\n3.",
+      "reading": "## Obiettivo\n\nCapire chi fa cosa in una sala.\n\n## Disegna una brigata\n\nDisegna questi ruoli:\n\n- responsabile di sala;\n- chef de rang;\n- commis;\n- runner;\n- bar;\n- cucina/pass.\n\n## Compila\n\nResponsabile di sala\n\nCompiti:\n\n1.\n2.\n3.\n\nQuando lo chiamo:\n\n1.\n2.\n3.\n\nChef de rang\n\nCompiti:\n\n1.\n2.\n3.\n\nCommis\n\nCompiti:\n\n1.\n2.\n3.\n\nRunner\n\nCompiti:\n\n1.\n2.\n3.\n\n## Simulazione\n\nSituazione:\n\nIl tavolo 5 comunica una allergia.\n\nRispondi:\n\n1. Cosa dici al cliente?\n2. Chi avvisi?\n3. Cosa non devi fare?\n\n## Conclusione\n\nScrivi tre frasi professionali per chiedere aiuto:\n\n1.\n2.\n3.",
+      "projector_pages": [
+        {
+          "title": "Disegna una brigata",
+          "body": "Disegna questi ruoli:\nresponsabile di sala;\nchef de rang;\ncommis;\nrunner;\nbar;"
+        },
+        {
+          "title": "Disegna una brigata",
+          "body": "cucina/pass."
+        },
+        {
+          "title": "Trasmetti una richiesta",
+          "body": "Situazione:\nIl tavolo 5 comunica una allergia.\nRispondi:\nCosa dici al cliente?\nChi avvisi?\nCosa non devi fare?"
+        }
+      ],
+      "asset_filename": "unit-03-scheda-attivita.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u3-quiz",
+      "title": "Verifica guidata · Unità 03",
+      "description": "7 domande già presenti nei materiali RISTO-LAB. Usale dopo l’attività e confronta le scelte con il gruppo.",
+      "type": "QUIZ",
+      "unit_ids": [
+        "unit-03"
+      ],
+      "topics": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "d6d3a620078520617a8cdda7b2e20df342df02e72d2b0082c5932cee75647857",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u3-quiz",
+      "resource_type": "QUIZ",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "d6d3a620078520617a8cdda7b2e20df342df02e72d2b0082c5932cee75647857",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u3-quiz-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "d6d3a620078520617a8cdda7b2e20df342df02e72d2b0082c5932cee75647857",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u3-quiz-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "QUIZ",
+      "body": "",
+      "reading": "",
+      "questions": [
+        {
+          "question": "Il responsabile di sala:",
+          "options": [
+            "Coordina il servizio e gestisce priorita.",
+            "E sempre un cliente.",
+            "Non deve sapere cosa succede."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Lo chef de rang segue:",
+          "options": [
+            "Solo il magazzino.",
+            "Solo i social del locale.",
+            "Una zona o rango della sala."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Il commis:",
+          "options": [
+            "Non lavora con la sala.",
+            "Supporta il servizio e impara.",
+            "Decide sempre tutto da solo."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Il briefing serve a:",
+          "options": [
+            "Condividere informazioni prima del servizio.",
+            "Perdere tempo.",
+            "Evitare di lavorare."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Se un cliente segnala una allergia, cosa fai?",
+          "options": [
+            "Decido da solo senza chiedere.",
+            "Ignoro se il cliente sembra tranquillo.",
+            "Avviso subito responsabile/procedura del locale."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Una buona comunicazione in servizio deve essere:",
+          "options": [
+            "Sempre urlata.",
+            "Breve, chiara e utile.",
+            "Lunga e confusa."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Chiedere aiuto quando non sai:",
+          "options": [
+            "E professionale.",
+            "E sempre sbagliato.",
+            "Non serve mai."
+          ],
+          "answer": 0,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "res-u3-checklist",
+      "title": "Controlla il tuo lavoro",
+      "description": "Riepilogo del capitolo originale. Usalo per il confronto finale e scegli un gesto da ripetere.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-03"
+      ],
+      "topics": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "c0735474ff22e2d36bd6d04d4e3250ae04f543f299417b8a87655df36f0d19a6",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u3-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "c0735474ff22e2d36bd6d04d4e3250ae04f543f299417b8a87655df36f0d19a6",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "brigata",
+        "squadra di sala",
+        "maître",
+        "chef de rang",
+        "commis",
+        "rango"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u3-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "c0735474ff22e2d36bd6d04d4e3250ae04f543f299417b8a87655df36f0d19a6",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u3-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- So chi è il mio responsabile durante il turno.\n- Conosco il rango o l’area assegnata.\n- Ascolto il briefing e confermo le consegne importanti.\n- Comunico fatti, non accuse generiche.\n- So quando coinvolgere un ruolo superiore.\n- Non considero urla o umiliazioni una normale tecnica di gestione.",
+      "reading": "## Controlla il tuo lavoro\n\n- So chi è il mio responsabile durante il turno.\n- Conosco il rango o l’area assegnata.\n- Ascolto il briefing e confermo le consegne importanti.\n- Comunico fatti, non accuse generiche.\n- So quando coinvolgere un ruolo superiore.\n- Non considero urla o umiliazioni una normale tecnica di gestione.",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "So chi è il mio responsabile durante il turno.\nConosco il rango o l’area assegnata.\nAscolto il briefing e confermo le consegne importanti.\nComunico fatti, non accuse generiche.\nSo quando coinvolgere un ruolo superiore.\nNon considero urla o umiliazioni una normale tecnica di gestione."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "So chi è il mio responsabile durante il turno.",
+            "Conosco il rango o l’area assegnata.",
+            "Ascolto il briefing e confermo le consegne importanti.",
+            "Comunico fatti, non accuse generiche.",
+            "So quando coinvolgere un ruolo superiore.",
+            "Non considero urla o umiliazioni una normale tecnica di gestione."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u4-sala",
+      "title": "Sala: spazio del cliente e spazio operativo",
+      "description": "Due punti di vista e regole di movimento dalla fonte interna. Usali per osservare percorsi e ostacoli.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-04"
+      ],
+      "topics": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "e5260e09e20991e7a129b490df906c33ad18bc6c869032ffa6816b828101cdd4",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u4-sala",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "e5260e09e20991e7a129b490df906c33ad18bc6c869032ffa6816b828101cdd4",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u4-sala-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "e5260e09e20991e7a129b490df906c33ad18bc6c869032ffa6816b828101cdd4",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u4-sala-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Spiegazione risto-lab\n\nLa sala e il luogo dove il cliente vive l'esperienza.\nMa per il personale e anche un ambiente operativo.\n\nIn sala si fanno molte azioni:\n\n- accogliere;\n- accompagnare;\n- apparecchiare;\n- servire;\n- osservare;\n- rispondere;\n- sbarazzare;\n- pulire;\n- comunicare con office, cucina e bar.\n\n## Due sguardi\n\nSguardo del cliente\n\nIl cliente vede:\n\n- tavolo;\n- sedie;\n- luci;\n- pulizia;\n- personale;\n- tempi;\n- atmosfera.\n\nSguardo professionale\n\nChi lavora vede anche:\n\n- passaggi;\n- ostacoli;\n- tavoli da controllare;\n- materiali mancanti;\n- clienti in attesa;\n- piatti da ritirare;\n- richieste da comunicare.\n\n## Regola base\n\nIn sala non si cammina a caso.\nOgni movimento deve avere un motivo.\n\nDomande utili:\n\n1. Dove sto andando?\n2. Cosa posso portare?\n3. Cosa posso riportare?\n4. Chi devo avvisare?\n5. Sto creando ostacolo?\n\n## Comportamenti corretti\n\n- Camminare senza correre.\n- Guardare i tavoli mentre ci si muove.\n- Non fermarsi nei passaggi stretti.\n- Non parlare forte in mezzo alla sala.\n- Non lasciare materiali in vista senza motivo.\n- Chiedere se non si capisce.",
+      "reading": "## Spiegazione risto-lab\n\nLa sala e il luogo dove il cliente vive l'esperienza.\nMa per il personale e anche un ambiente operativo.\n\nIn sala si fanno molte azioni:\n\n- accogliere;\n- accompagnare;\n- apparecchiare;\n- servire;\n- osservare;\n- rispondere;\n- sbarazzare;\n- pulire;\n- comunicare con office, cucina e bar.\n\n## Due sguardi\n\nSguardo del cliente\n\nIl cliente vede:\n\n- tavolo;\n- sedie;\n- luci;\n- pulizia;\n- personale;\n- tempi;\n- atmosfera.\n\nSguardo professionale\n\nChi lavora vede anche:\n\n- passaggi;\n- ostacoli;\n- tavoli da controllare;\n- materiali mancanti;\n- clienti in attesa;\n- piatti da ritirare;\n- richieste da comunicare.\n\n## Regola base\n\nIn sala non si cammina a caso.\nOgni movimento deve avere un motivo.\n\nDomande utili:\n\n1. Dove sto andando?\n2. Cosa posso portare?\n3. Cosa posso riportare?\n4. Chi devo avvisare?\n5. Sto creando ostacolo?\n\n## Comportamenti corretti\n\n- Camminare senza correre.\n- Guardare i tavoli mentre ci si muove.\n- Non fermarsi nei passaggi stretti.\n- Non parlare forte in mezzo alla sala.\n- Non lasciare materiali in vista senza motivo.\n- Chiedere se non si capisce.",
+      "projector_pages": [
+        {
+          "title": "Sala: due punti di vista",
+          "body": "La sala e il luogo dove il cliente vive l'esperienza.\nMa per il personale e anche un ambiente operativo."
+        },
+        {
+          "title": "Prima di muoverti",
+          "body": "In sala non si cammina a caso.\nOgni movimento deve avere un motivo.\nDomande utili:\nDove sto andando?\nCosa posso portare?\nCosa posso riportare?"
+        },
+        {
+          "title": "Prima di muoverti",
+          "body": "Chi devo avvisare?\nSto creando ostacolo?"
+        }
+      ]
+    },
+    {
+      "id": "res-u4-office",
+      "title": "Office: pulito, sporco e supporto",
+      "description": "Funzioni e separazione dei materiali nella fonte interna. Confrontale con l’organizzazione del locale.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-04"
+      ],
+      "topics": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "7cd089acc21b2f8b50453081fc0d71ae7d448956321f8a594f32352e441d9e0f",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u4-office",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "7cd089acc21b2f8b50453081fc0d71ae7d448956321f8a594f32352e441d9e0f",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u4-office-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "7cd089acc21b2f8b50453081fc0d71ae7d448956321f8a594f32352e441d9e0f",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u4-office-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Spiegazione risto-lab\n\nL'office e una zona di supporto.\nIl cliente spesso non la vede, ma il servizio dipende molto da come e organizzata.\n\nIn office possono esserci:\n\n- posate pulite;\n- bicchieri;\n- piatti;\n- tovaglioli;\n- materiali di servizio;\n- appoggi temporanei;\n- raccolta sporco;\n- collegamento con lavaggio o cucina.\n\n## Pulito e sporco\n\nUna regola fondamentale:\n\nIl pulito e lo sporco non devono confondersi.\n\nEsempi:\n\n- posate pulite separate da posate usate;\n- bicchieri puliti lontani da residui;\n- tovaglioli puliti protetti;\n- piatti sporchi in area dedicata;\n- superfici pulite e libere.\n\n## Comportamenti corretti\n\n- Rimettere ogni materiale al suo posto.\n- Non appoggiare sporco dove ci sono materiali puliti.\n- Avvisare se mancano posate, bicchieri o tovaglioli.\n- Non lasciare passaggi bloccati.\n- Pulire una superficie dopo averla usata.\n\n## Esercizio\n\nDividi un foglio in due colonne:\n\n- PULITO\n- SPORCO\n\nScrivi sotto ogni colonna almeno 6 elementi che puoi trovare in office.",
+      "reading": "## Spiegazione risto-lab\n\nL'office e una zona di supporto.\nIl cliente spesso non la vede, ma il servizio dipende molto da come e organizzata.\n\nIn office possono esserci:\n\n- posate pulite;\n- bicchieri;\n- piatti;\n- tovaglioli;\n- materiali di servizio;\n- appoggi temporanei;\n- raccolta sporco;\n- collegamento con lavaggio o cucina.\n\n## Pulito e sporco\n\nUna regola fondamentale:\n\nIl pulito e lo sporco non devono confondersi.\n\nEsempi:\n\n- posate pulite separate da posate usate;\n- bicchieri puliti lontani da residui;\n- tovaglioli puliti protetti;\n- piatti sporchi in area dedicata;\n- superfici pulite e libere.\n\n## Comportamenti corretti\n\n- Rimettere ogni materiale al suo posto.\n- Non appoggiare sporco dove ci sono materiali puliti.\n- Avvisare se mancano posate, bicchieri o tovaglioli.\n- Non lasciare passaggi bloccati.\n- Pulire una superficie dopo averla usata.\n\n## Esercizio\n\nDividi un foglio in due colonne:\n\n- PULITO\n- SPORCO\n\nScrivi sotto ogni colonna almeno 6 elementi che puoi trovare in office.",
+      "projector_pages": [
+        {
+          "title": "Separare i percorsi",
+          "body": "Una regola fondamentale:\nIl pulito e lo sporco non devono confondersi.\nEsempi:\nposate pulite separate da posate usate;\nbicchieri puliti lontani da residui;\ntovaglioli puliti protetti;"
+        },
+        {
+          "title": "Separare i percorsi",
+          "body": "piatti sporchi in area dedicata;\nsuperfici pulite e libere."
+        },
+        {
+          "title": "Supportare il servizio",
+          "body": "Rimettere ogni materiale al suo posto.\nNon appoggiare sporco dove ci sono materiali puliti.\nAvvisare se mancano posate, bicchieri o tovaglioli.\nNon lasciare passaggi bloccati.\nPulire una superficie dopo averla usata."
+        }
+      ]
+    },
+    {
+      "id": "res-u4-pass",
+      "title": "Pass, bar, cassa e magazzino",
+      "description": "Definizioni e domande operative già presenti. Usale per seguire il viaggio di comande e materiali.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-04"
+      ],
+      "topics": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "818e8eb01e0bc6a4cdded9a808b0000859b9ed61bf6d846afbfbae6de6da8467",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u4-pass",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "818e8eb01e0bc6a4cdded9a808b0000859b9ed61bf6d846afbfbae6de6da8467",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u4-pass-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "818e8eb01e0bc6a4cdded9a808b0000859b9ed61bf6d846afbfbae6de6da8467",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u4-pass-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Che cos'e il pass\n\nIl pass e il punto dove i piatti escono dalla cucina e vengono presi dalla sala.\nPuo essere una zona fisica, un banco o una postazione organizzata.\n\nAl pass si controllano:\n\n- piatto corretto;\n- tavolo corretto;\n- tempi;\n- temperatura;\n- richieste speciali;\n- allergie;\n- ordine di uscita.\n\n## Che cos'e una comanda\n\nLa comanda e l'ordine del cliente comunicato alla cucina o al bar.\nPuo essere:\n\n- scritta a mano;\n- inserita in un palmare;\n- inserita in cassa;\n- comunicata secondo procedura del locale.\n\nUna comanda sbagliata crea problemi a catena.\n\n## Comportamenti corretti\n\n- Non inventare risposte su allergie o ingredienti.\n- Chiedere al responsabile se non si sa.\n- Controllare tavolo e piatto.\n- Non creare confusione al pass.\n- Non prendere piatti senza sapere dove vanno.\n\n## Bar\n\nIl bar puo preparare:\n\n- acqua;\n- vino al calice;\n- bevande;\n- caffe;\n- aperitivi;\n- cocktail semplici;\n- colazioni;\n- digestivi.\n\nIn molti locali la sala deve coordinarsi con il bar per tempi e richieste.\n\n## Cassa\n\nLa cassa non e solo pagamento.\nPuo gestire:\n\n- conti;\n- divisioni;\n- scontrini;\n- prenotazioni;\n- comande;\n- tavoli;\n- chiusure.\n\nChi lavora in sala deve sapere chi puo usare la cassa e come chiedere supporto.\n\n## Magazzino\n\nIl magazzino contiene materiali e prodotti.\nNon e uno spazio dove entrare senza criterio.\n\nPuò contenere:\n\n- tovaglioli;\n- carta;\n- bottiglie;\n- prodotti confezionati;\n- materiali pulizia;\n- scorte.\n\n## Regola\n\nNon prendere materiali senza sapere dove registrarli o dove rimetterli.\nOgni azienda ha una procedura.",
+      "reading": "## Che cos'e il pass\n\nIl pass e il punto dove i piatti escono dalla cucina e vengono presi dalla sala.\nPuo essere una zona fisica, un banco o una postazione organizzata.\n\nAl pass si controllano:\n\n- piatto corretto;\n- tavolo corretto;\n- tempi;\n- temperatura;\n- richieste speciali;\n- allergie;\n- ordine di uscita.\n\n## Che cos'e una comanda\n\nLa comanda e l'ordine del cliente comunicato alla cucina o al bar.\nPuo essere:\n\n- scritta a mano;\n- inserita in un palmare;\n- inserita in cassa;\n- comunicata secondo procedura del locale.\n\nUna comanda sbagliata crea problemi a catena.\n\n## Comportamenti corretti\n\n- Non inventare risposte su allergie o ingredienti.\n- Chiedere al responsabile se non si sa.\n- Controllare tavolo e piatto.\n- Non creare confusione al pass.\n- Non prendere piatti senza sapere dove vanno.\n\n## Bar\n\nIl bar puo preparare:\n\n- acqua;\n- vino al calice;\n- bevande;\n- caffe;\n- aperitivi;\n- cocktail semplici;\n- colazioni;\n- digestivi.\n\nIn molti locali la sala deve coordinarsi con il bar per tempi e richieste.\n\n## Cassa\n\nLa cassa non e solo pagamento.\nPuo gestire:\n\n- conti;\n- divisioni;\n- scontrini;\n- prenotazioni;\n- comande;\n- tavoli;\n- chiusure.\n\nChi lavora in sala deve sapere chi puo usare la cassa e come chiedere supporto.\n\n## Magazzino\n\nIl magazzino contiene materiali e prodotti.\nNon e uno spazio dove entrare senza criterio.\n\nPuò contenere:\n\n- tovaglioli;\n- carta;\n- bottiglie;\n- prodotti confezionati;\n- materiali pulizia;\n- scorte.\n\n## Regola\n\nNon prendere materiali senza sapere dove registrarli o dove rimetterli.\nOgni azienda ha una procedura.",
+      "projector_pages": [
+        {
+          "title": "Il pass",
+          "body": "Il pass e il punto dove i piatti escono dalla cucina e vengono presi dalla sala.\nPuo essere una zona fisica, un banco o una postazione organizzata."
+        },
+        {
+          "title": "La comanda",
+          "body": "La comanda e l'ordine del cliente comunicato alla cucina o al bar.\nPuo essere:\nscritta a mano;\ninserita in un palmare;\ninserita in cassa;\ncomunicata secondo procedura del locale."
+        },
+        {
+          "title": "La comanda",
+          "body": "Una comanda sbagliata crea problemi a catena."
+        },
+        {
+          "title": "Magazzino e procedura",
+          "body": "Non prendere materiali senza sapere dove registrarli o dove rimetterli.\nOgni azienda ha una procedura."
+        }
+      ]
+    },
+    {
+      "id": "res-u4-activity",
+      "title": "Mappa del flusso di servizio",
+      "description": "Attività originale con percorsi di cliente, informazioni e materiali. Foglio e pennarelli bastano; PDF disponibile.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-04"
+      ],
+      "topics": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "ae035437df308ee0dddf704122c7219208da48b16040a39a524c0bade433a9f8",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u4-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "ae035437df308ee0dddf704122c7219208da48b16040a39a524c0bade433a9f8",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u4-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "ae035437df308ee0dddf704122c7219208da48b16040a39a524c0bade433a9f8",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u4-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "EXERCISE",
+      "body": "## Obiettivo\n\nCapire come si muovono persone, piatti, informazioni e materiali durante un servizio.\n\n## Disegna una mappa semplice\n\nDisegna questi spazi:\n\n- ingresso;\n- sala;\n- office;\n- cucina;\n- pass;\n- bar;\n- cassa;\n- magazzino.\n\n## Fase 1 - Cliente\n\nDisegna il percorso del cliente:\n\n1. entra;\n2. viene accolto;\n3. va al tavolo;\n4. ordina;\n5. mangia;\n6. paga;\n7. esce.\n\n## Fase 2 - Informazioni\n\nDisegna il percorso della comanda:\n\n1. cliente ordina;\n2. sala prende ordine;\n3. ordine arriva a cucina/bar;\n4. piatto o bevanda viene preparato;\n5. sala porta al tavolo.\n\n## Fase 3 - Materiali\n\nDisegna il percorso di:\n\n- piatti puliti;\n- piatti sporchi;\n- bicchieri puliti;\n- bicchieri sporchi;\n- tovaglioli;\n- comande.\n\n## Domande\n\n1. Dove si puo creare confusione?\n2. Dove si puo creare attesa?\n3. Dove si puo mischiare pulito e sporco?\n4. Dove serve una comunicazione precisa?\n5. Dove una persona nuova deve chiedere prima di agire?\n\n## Conclusione\n\nScrivi tre regole personali per muoverti meglio:\n\n1.\n2.\n3.",
+      "reading": "## Obiettivo\n\nCapire come si muovono persone, piatti, informazioni e materiali durante un servizio.\n\n## Disegna una mappa semplice\n\nDisegna questi spazi:\n\n- ingresso;\n- sala;\n- office;\n- cucina;\n- pass;\n- bar;\n- cassa;\n- magazzino.\n\n## Fase 1 - Cliente\n\nDisegna il percorso del cliente:\n\n1. entra;\n2. viene accolto;\n3. va al tavolo;\n4. ordina;\n5. mangia;\n6. paga;\n7. esce.\n\n## Fase 2 - Informazioni\n\nDisegna il percorso della comanda:\n\n1. cliente ordina;\n2. sala prende ordine;\n3. ordine arriva a cucina/bar;\n4. piatto o bevanda viene preparato;\n5. sala porta al tavolo.\n\n## Fase 3 - Materiali\n\nDisegna il percorso di:\n\n- piatti puliti;\n- piatti sporchi;\n- bicchieri puliti;\n- bicchieri sporchi;\n- tovaglioli;\n- comande.\n\n## Domande\n\n1. Dove si puo creare confusione?\n2. Dove si puo creare attesa?\n3. Dove si puo mischiare pulito e sporco?\n4. Dove serve una comunicazione precisa?\n5. Dove una persona nuova deve chiedere prima di agire?\n\n## Conclusione\n\nScrivi tre regole personali per muoverti meglio:\n\n1.\n2.\n3.",
+      "projector_pages": [
+        {
+          "title": "Fase 1 - Cliente",
+          "body": "Disegna il percorso del cliente:\nentra;\nviene accolto;\nva al tavolo;\nordina;\nmangia;"
+        },
+        {
+          "title": "Fase 1 - Cliente",
+          "body": "paga;\nesce."
+        },
+        {
+          "title": "Fase 2 - Informazioni",
+          "body": "Disegna il percorso della comanda:\ncliente ordina;\nsala prende ordine;\nordine arriva a cucina/bar;\npiatto o bevanda viene preparato;\nsala porta al tavolo."
+        },
+        {
+          "title": "Domande",
+          "body": "Dove si puo creare confusione?\nDove si puo creare attesa?\nDove si puo mischiare pulito e sporco?\nDove serve una comunicazione precisa?\nDove una persona nuova deve chiedere prima di agire?"
+        }
+      ],
+      "asset_filename": "unit-04-scheda-attivita.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u4-quiz",
+      "title": "Verifica guidata · Unità 04",
+      "description": "7 domande già presenti nei materiali RISTO-LAB. Usale dopo l’attività e confronta le scelte con il gruppo.",
+      "type": "QUIZ",
+      "unit_ids": [
+        "unit-04"
+      ],
+      "topics": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "c769ccc5d4638f1bbb42b2e3905733c43948032e7d9ef97f3a41ae776be99b8e",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u4-quiz",
+      "resource_type": "QUIZ",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "c769ccc5d4638f1bbb42b2e3905733c43948032e7d9ef97f3a41ae776be99b8e",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u4-quiz-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "c769ccc5d4638f1bbb42b2e3905733c43948032e7d9ef97f3a41ae776be99b8e",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u4-quiz-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "QUIZ",
+      "body": "",
+      "reading": "",
+      "questions": [
+        {
+          "question": "La sala e:",
+          "options": [
+            "Solo spazio del cliente.",
+            "Spazio del cliente e spazio operativo.",
+            "Solo uno spazio decorativo."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "L'office serve a:",
+          "options": [
+            "Accogliere sempre i clienti.",
+            "Preparare solo cocktail.",
+            "Supportare il servizio e organizzare materiali."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Pulito e sporco devono:",
+          "options": [
+            "Essere nascosti sotto il tavolo.",
+            "Restare separati.",
+            "Essere messi insieme."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Il pass collega:",
+          "options": [
+            "Cucina e sala.",
+            "Cliente e parcheggio.",
+            "Magazzino e strada."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Una comanda deve essere:",
+          "options": [
+            "A memoria e senza dettagli.",
+            "Sempre uguale per tutti i clienti.",
+            "Chiara e precisa."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Se non conosci una procedura di magazzino:",
+          "options": [
+            "Lasci perdere il servizio.",
+            "Chiedi prima di prendere materiali.",
+            "Prendi tutto quello che serve."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Un viaggio non utile e:",
+          "options": [
+            "Muoversi senza portare o riportare nulla quando si poteva aiutare.",
+            "Portare materiali necessari.",
+            "Avvisare il responsabile."
+          ],
+          "answer": 0,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "res-u4-checklist",
+      "title": "Controlla il tuo lavoro",
+      "description": "Riepilogo del capitolo originale. Usalo per il confronto finale e scegli un gesto da ripetere.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-04"
+      ],
+      "topics": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "60bb493a9ad71e66d371a7314c236d0618385346e4a1cfcdfe7a22bd6d15a989",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u4-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "60bb493a9ad71e66d371a7314c236d0618385346e4a1cfcdfe7a22bd6d15a989",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "ambienti",
+        "sala",
+        "office",
+        "pass",
+        "bar",
+        "magazzino"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u4-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "60bb493a9ad71e66d371a7314c236d0618385346e4a1cfcdfe7a22bd6d15a989",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u4-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- Conosco sala, office, pass, bar, lavaggio e deposito.\n- So quali aree posso utilizzare e quali sono riservate.\n- Non lascio materiali nei passaggi.\n- Mantengo separati pulito e sporco secondo la procedura.\n- Segnalo pavimenti bagnati, guasti, vetri rotti e ostacoli.\n- Uso spogliatoio e armadietto rispettando ordine e privacy.",
+      "reading": "## Controlla il tuo lavoro\n\n- Conosco sala, office, pass, bar, lavaggio e deposito.\n- So quali aree posso utilizzare e quali sono riservate.\n- Non lascio materiali nei passaggi.\n- Mantengo separati pulito e sporco secondo la procedura.\n- Segnalo pavimenti bagnati, guasti, vetri rotti e ostacoli.\n- Uso spogliatoio e armadietto rispettando ordine e privacy.",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "Conosco sala, office, pass, bar, lavaggio e deposito.\nSo quali aree posso utilizzare e quali sono riservate.\nNon lascio materiali nei passaggi.\nMantengo separati pulito e sporco secondo la procedura.\nSegnalo pavimenti bagnati, guasti, vetri rotti e ostacoli.\nUso spogliatoio e armadietto rispettando ordine e privacy."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Conosco sala, office, pass, bar, lavaggio e deposito.",
+            "So quali aree posso utilizzare e quali sono riservate.",
+            "Non lascio materiali nei passaggi.",
+            "Mantengo separati pulito e sporco secondo la procedura.",
+            "Segnalo pavimenti bagnati, guasti, vetri rotti e ostacoli.",
+            "Uso spogliatoio e armadietto rispettando ordine e privacy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "res-u5-tavola",
+      "title": "Posate, bicchieri e piatti",
+      "description": "Nomi, funzioni e controlli della fonte interna. Usali con materiali reali per decidere che cosa è pronto al servizio.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-05"
+      ],
+      "topics": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "1cd8f7fda3f7b0b3d62a1b17587214e200edb9fc296ced9163e96fa11ff2179a",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u5-tavola",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "1cd8f7fda3f7b0b3d62a1b17587214e200edb9fc296ced9163e96fa11ff2179a",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u5-tavola-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "1cd8f7fda3f7b0b3d62a1b17587214e200edb9fc296ced9163e96fa11ff2179a",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u5-tavola-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Posate\n\nLe posate piu comuni sono:\n\n- forchetta;\n- coltello;\n- cucchiaio;\n- cucchiaino;\n- posate dessert;\n- posate specifiche, se previste dal locale.\n\nNel corso base non serve conoscere ogni posata speciale.\nServe prima riconoscere, controllare e posizionare bene le posate principali.\n\n## Bicchieri\n\nI bicchieri piu comuni sono:\n\n- bicchiere acqua;\n- calice vino;\n- flute o calice bollicine, se previsto;\n- bicchieri bar, se il servizio lo richiede.\n\nOgni bicchiere deve essere pulito, senza aloni e senza scheggiature.\n\n## Piatti\n\nI piatti possono essere:\n\n- piano;\n- fondo;\n- dessert;\n- pane;\n- servizio o presentazione, se previsto.\n\nIl piatto comunica pulizia e cura.\nUn piatto sporco, scheggiato o rovinato non deve andare al cliente.\n\n## Controllo materiali\n\nPrima del servizio controlla:\n\n- aloni;\n- impronte;\n- residui;\n- scheggiature;\n- graffi evidenti;\n- odori;\n- materiali non uguali tra loro.\n\n## Esercizio\n\nPrendi 5 posate, 3 bicchieri e 3 piatti.\nControlla:\n\n- pulizia;\n- integrita;\n- odore;\n- coerenza con gli altri materiali.\n\nScrivi cosa terresti e cosa cambieresti.",
+      "reading": "## Posate\n\nLe posate piu comuni sono:\n\n- forchetta;\n- coltello;\n- cucchiaio;\n- cucchiaino;\n- posate dessert;\n- posate specifiche, se previste dal locale.\n\nNel corso base non serve conoscere ogni posata speciale.\nServe prima riconoscere, controllare e posizionare bene le posate principali.\n\n## Bicchieri\n\nI bicchieri piu comuni sono:\n\n- bicchiere acqua;\n- calice vino;\n- flute o calice bollicine, se previsto;\n- bicchieri bar, se il servizio lo richiede.\n\nOgni bicchiere deve essere pulito, senza aloni e senza scheggiature.\n\n## Piatti\n\nI piatti possono essere:\n\n- piano;\n- fondo;\n- dessert;\n- pane;\n- servizio o presentazione, se previsto.\n\nIl piatto comunica pulizia e cura.\nUn piatto sporco, scheggiato o rovinato non deve andare al cliente.\n\n## Controllo materiali\n\nPrima del servizio controlla:\n\n- aloni;\n- impronte;\n- residui;\n- scheggiature;\n- graffi evidenti;\n- odori;\n- materiali non uguali tra loro.\n\n## Esercizio\n\nPrendi 5 posate, 3 bicchieri e 3 piatti.\nControlla:\n\n- pulizia;\n- integrita;\n- odore;\n- coerenza con gli altri materiali.\n\nScrivi cosa terresti e cosa cambieresti.",
+      "projector_pages": [
+        {
+          "title": "Riconoscere il materiale",
+          "body": "Posate\nforchetta;\ncoltello;\ncucchiaio;\nBicchieri\nbicchiere acqua;"
+        },
+        {
+          "title": "Riconoscere il materiale",
+          "body": "calice vino;\nflute o calice bollicine, se previsto;\nPiatti\npiano;\nfondo;\ndessert;"
+        },
+        {
+          "title": "Prima dell’uso",
+          "body": "Prima del servizio controlla:\naloni;\nimpronte;\nresidui;\nscheggiature;\ngraffi evidenti;"
+        },
+        {
+          "title": "Prima dell’uso",
+          "body": "odori;\nmateriali non uguali tra loro."
+        },
+        {
+          "title": "Riconoscere e decidere",
+          "body": "Prendi 5 posate, 3 bicchieri e 3 piatti.\nControlla:\npulizia;\nintegrita;\nodore;\ncoerenza con gli altri materiali."
+        },
+        {
+          "title": "Riconoscere e decidere",
+          "body": "Scrivi cosa terresti e cosa cambieresti."
+        }
+      ]
+    },
+    {
+      "id": "res-u5-tovagliato",
+      "title": "Tovagliato e materiali di servizio",
+      "description": "Categorie e uso dei panni secondo la procedura. Usale per riconoscere funzione e luogo di conservazione.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-05"
+      ],
+      "topics": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "28d444149e825e1a68fa9a82215d9f368dced64f307219ecce2e2a48c5dc2f88",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u5-tovagliato",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "28d444149e825e1a68fa9a82215d9f368dced64f307219ecce2e2a48c5dc2f88",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u5-tovagliato-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "28d444149e825e1a68fa9a82215d9f368dced64f307219ecce2e2a48c5dc2f88",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u5-tovagliato-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Tovagliato\n\nIl tovagliato puo includere:\n\n- tovaglia;\n- coprimacchia;\n- runner;\n- tovaglietta;\n- tovagliolo;\n- panni di servizio.\n\nNon tutti i locali usano tovagliato in tessuto.\nAnche una tovaglietta di carta deve essere pulita, ordinata e coerente con il locale.\n\n## Tovagliolo\n\nIl tovagliolo puo essere:\n\n- di carta;\n- di tessuto;\n- piegato in modo semplice;\n- posizionato secondo standard del locale.\n\nDeve essere pulito e uguale per tutti i coperti dello stesso tavolo.\n\n## Materiali di servizio\n\nPossono includere:\n\n- vassoio;\n- caraffa;\n- cestino pane;\n- glacette o secchiello vino;\n- pinze;\n- mollette;\n- piattino di servizio;\n- penna;\n- blocco comande;\n- palmare.\n\n## Panni e pulizia\n\nI panni non sono tutti uguali.\nUn locale serio distingue panni per:\n\n- superfici;\n- bicchieri;\n- mani;\n- servizio;\n- pulizia specifica.\n\nNon usare un panno a caso.\nChiedi la procedura.\n\n## Esercizio\n\nScrivi 10 materiali di servizio che puoi trovare in un ristorante.\nPer ognuno scrivi:\n\n- a cosa serve;\n- dove si conserva;\n- quando si controlla.",
+      "reading": "## Tovagliato\n\nIl tovagliato puo includere:\n\n- tovaglia;\n- coprimacchia;\n- runner;\n- tovaglietta;\n- tovagliolo;\n- panni di servizio.\n\nNon tutti i locali usano tovagliato in tessuto.\nAnche una tovaglietta di carta deve essere pulita, ordinata e coerente con il locale.\n\n## Tovagliolo\n\nIl tovagliolo puo essere:\n\n- di carta;\n- di tessuto;\n- piegato in modo semplice;\n- posizionato secondo standard del locale.\n\nDeve essere pulito e uguale per tutti i coperti dello stesso tavolo.\n\n## Materiali di servizio\n\nPossono includere:\n\n- vassoio;\n- caraffa;\n- cestino pane;\n- glacette o secchiello vino;\n- pinze;\n- mollette;\n- piattino di servizio;\n- penna;\n- blocco comande;\n- palmare.\n\n## Panni e pulizia\n\nI panni non sono tutti uguali.\nUn locale serio distingue panni per:\n\n- superfici;\n- bicchieri;\n- mani;\n- servizio;\n- pulizia specifica.\n\nNon usare un panno a caso.\nChiedi la procedura.\n\n## Esercizio\n\nScrivi 10 materiali di servizio che puoi trovare in un ristorante.\nPer ognuno scrivi:\n\n- a cosa serve;\n- dove si conserva;\n- quando si controlla.",
+      "projector_pages": [
+        {
+          "title": "Tovagliato",
+          "body": "tovaglia;\ncoprimacchia;\nrunner;\ntovaglietta;\ntovagliolo;\npanni di servizio."
+        },
+        {
+          "title": "Panni e procedura",
+          "body": "I panni non sono tutti uguali.\nUn locale serio distingue panni per:\nsuperfici;\nbicchieri;\nmani;\nservizio;"
+        },
+        {
+          "title": "Panni e procedura",
+          "body": "pulizia specifica.\nNon usare un panno a caso.\nChiedi la procedura."
+        }
+      ]
+    },
+    {
+      "id": "res-u5-vassoio",
+      "title": "Vassoio, comanda e strumenti digitali",
+      "description": "Regole base e richieste di spiegazione già presenti. Usale per una dimostrazione guidata senza improvvisare l’uso di macchine.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-05"
+      ],
+      "topics": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "bf32e689cb374ed7e00cb9c905e8a3009154f3982fe7f9f45a95aa4e652a750d",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u5-vassoio",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "bf32e689cb374ed7e00cb9c905e8a3009154f3982fe7f9f45a95aa4e652a750d",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u5-vassoio-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "bf32e689cb374ed7e00cb9c905e8a3009154f3982fe7f9f45a95aa4e652a750d",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u5-vassoio-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Vassoio\n\nIl vassoio aiuta a trasportare:\n\n- bicchieri;\n- bevande;\n- caffe;\n- piccoli materiali;\n- piatti leggeri, se previsto.\n\nNon e solo un oggetto da portare.\nRichiede equilibrio, attenzione e pulizia.\n\n## Regole base vassoio\n\n- Controlla che sia pulito.\n- Non caricarlo troppo.\n- Distribuisci il peso.\n- Tienilo stabile.\n- Non correre.\n- Fai attenzione a clienti e colleghi.\n\n## Comanda\n\nLa comanda e il modo in cui l'ordine del cliente arriva a cucina o bar.\n\nPuo essere:\n\n- su carta;\n- su palmare;\n- su cassa;\n- comunicata secondo procedura.\n\nLa comanda deve essere chiara.\n\n## Strumenti digitali\n\nMolti locali usano:\n\n- palmari;\n- tablet;\n- cassa digitale;\n- QR code;\n- gestionali prenotazioni.\n\nUna persona nuova non deve vergognarsi di chiedere spiegazioni.\nOgni sistema e diverso.\n\n## Frasi utili\n\n- Mi puo mostrare come inserire questa comanda?\n- Devo segnare allergie in questo punto?\n- Dove vedo il numero del tavolo?\n- Come correggo un errore?\n\n## Macchina espresso\n\nEstrazione e produzione di acqua/vapore secondo modello.\nUsare e pulire solo secondo formazione; non aprire parti tecniche.\n\n## Macinacaffè\n\nMacinatura e dosaggio.\nNon modificare regolazioni senza consegna.\n\n## Lavabicchieri\n\nLavaggio meccanico della cristalleria.\nControllare carico e prodotti; non intervenire su guasti.\n\n## Shaker e jigger\n\nShaker: Miscelazione e raffreddamento di ricette previste.\nUsare solo con tecnica mostrata e componenti integri.\nJigger: Dosaggio dei liquidi.\nSeguire ricetta e standard; non confondere le misure.",
+      "reading": "## Vassoio\n\nIl vassoio aiuta a trasportare:\n\n- bicchieri;\n- bevande;\n- caffe;\n- piccoli materiali;\n- piatti leggeri, se previsto.\n\nNon e solo un oggetto da portare.\nRichiede equilibrio, attenzione e pulizia.\n\n## Regole base vassoio\n\n- Controlla che sia pulito.\n- Non caricarlo troppo.\n- Distribuisci il peso.\n- Tienilo stabile.\n- Non correre.\n- Fai attenzione a clienti e colleghi.\n\n## Comanda\n\nLa comanda e il modo in cui l'ordine del cliente arriva a cucina o bar.\n\nPuo essere:\n\n- su carta;\n- su palmare;\n- su cassa;\n- comunicata secondo procedura.\n\nLa comanda deve essere chiara.\n\n## Strumenti digitali\n\nMolti locali usano:\n\n- palmari;\n- tablet;\n- cassa digitale;\n- QR code;\n- gestionali prenotazioni.\n\nUna persona nuova non deve vergognarsi di chiedere spiegazioni.\nOgni sistema e diverso.\n\n## Frasi utili\n\n- Mi puo mostrare come inserire questa comanda?\n- Devo segnare allergie in questo punto?\n- Dove vedo il numero del tavolo?\n- Come correggo un errore?\n\n## Macchina espresso\n\nEstrazione e produzione di acqua/vapore secondo modello.\nUsare e pulire solo secondo formazione; non aprire parti tecniche.\n\n## Macinacaffè\n\nMacinatura e dosaggio.\nNon modificare regolazioni senza consegna.\n\n## Lavabicchieri\n\nLavaggio meccanico della cristalleria.\nControllare carico e prodotti; non intervenire su guasti.\n\n## Shaker e jigger\n\nShaker: Miscelazione e raffreddamento di ricette previste.\nUsare solo con tecnica mostrata e componenti integri.\nJigger: Dosaggio dei liquidi.\nSeguire ricetta e standard; non confondere le misure.",
+      "projector_pages": [
+        {
+          "title": "Vassoio: prima di partire",
+          "body": "Controlla che sia pulito.\nNon caricarlo troppo.\nDistribuisci il peso.\nTienilo stabile.\nNon correre.\nFai attenzione a clienti e colleghi."
+        },
+        {
+          "title": "Attrezzature del bar",
+          "body": "Macchina espresso: Estrazione e produzione di acqua/vapore secondo modello.\nUsare e pulire solo secondo formazione; non aprire parti tecniche.\nMacinacaffè: Macinatura e dosaggio.\nNon modificare regolazioni senza consegna."
+        }
+      ]
+    },
+    {
+      "id": "res-u5-dimostrazione",
+      "title": "Prima l’equilibrio, poi il carico",
+      "description": "Estratto del capitolo 05 per la dimostrazione progressiva. Il servizio reale e le bevande calde richiedono supervisione.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-05"
+      ],
+      "topics": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "2cc69f578e0bd2cec9d2b985fef9119f28a083e982bdfa743bded97433c09174",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u5-dimostrazione",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "2cc69f578e0bd2cec9d2b985fef9119f28a083e982bdfa743bded97433c09174",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u5-dimostrazione-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "2cc69f578e0bd2cec9d2b985fef9119f28a083e982bdfa743bded97433c09174",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u5-dimostrazione-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Autorizzazione, Procedura, Integrità, Pulizia\n\nSono stato incaricato o formato per utilizzare questo oggetto o questa macchina?\nConosco i passaggi, i limiti e il luogo in cui deve essere usato?\nÈ stabile, completo, senza crepe, fili danneggiati o parti allentate?\nÈ pulito, asciutto e pronto secondo la procedura?\n\n## Primo addestramento al vassoio\n\nIl vassoio non si impara caricandolo subito al massimo. Si impara progressivamente: prima \nl’equilibrio, poi il movimento, infine il servizio. Il numero di bottiglie, bicchieri o bevande \ndipende da dimensioni del vassoio, peso, percorso, esperienza e standard aziendale. L’obiettivo \nnon è dimostrare forza, ma arrivare senza urti, versamenti o pericoli.\n\nLa prima esercitazione deve avvenire con vassoio vuoto e materiali non pericolosi. Solo in seguito si \nintroducono bottiglie chiuse, bicchieri vuoti e contenitori riempiti d’acqua. Bevande calde, cristalleria \ndelicata e servizio reale richiedono supervisione.",
+      "reading": "## Autorizzazione, Procedura, Integrità, Pulizia\n\nSono stato incaricato o formato per utilizzare questo oggetto o questa macchina?\nConosco i passaggi, i limiti e il luogo in cui deve essere usato?\nÈ stabile, completo, senza crepe, fili danneggiati o parti allentate?\nÈ pulito, asciutto e pronto secondo la procedura?\n\n## Primo addestramento al vassoio\n\nIl vassoio non si impara caricandolo subito al massimo. Si impara progressivamente: prima \nl’equilibrio, poi il movimento, infine il servizio. Il numero di bottiglie, bicchieri o bevande \ndipende da dimensioni del vassoio, peso, percorso, esperienza e standard aziendale. L’obiettivo \nnon è dimostrare forza, ma arrivare senza urti, versamenti o pericoli.\n\nLa prima esercitazione deve avvenire con vassoio vuoto e materiali non pericolosi. Solo in seguito si \nintroducono bottiglie chiuse, bicchieri vuoti e contenitori riempiti d’acqua. Bevande calde, cristalleria \ndelicata e servizio reale richiedono supervisione.",
+      "projector_pages": [
+        {
+          "title": "Autorizzazione, Procedura, Integrità, Pulizia",
+          "body": "Sono stato incaricato o formato per utilizzare questo oggetto o questa macchina?\nConosco i passaggi, i limiti e il luogo in cui deve essere usato?\nÈ stabile, completo, senza crepe, fili danneggiati o parti allentate?\nÈ pulito, asciutto e pronto secondo la procedura?"
+        },
+        {
+          "title": "Primo addestramento al vassoio",
+          "body": "Il vassoio non si impara caricandolo subito al massimo. Si impara progressivamente: prima\nl’equilibrio, poi il movimento, infine il servizio. Il numero di bottiglie, bicchieri o bevande\ndipende da dimensioni del vassoio, peso, percorso, esperienza e standard aziendale. L’obiettivo\nnon è dimostrare forza, ma arrivare senza urti, versamenti o pericoli."
+        },
+        {
+          "title": "Primo addestramento al vassoio",
+          "body": "La prima esercitazione deve avvenire con vassoio vuoto e materiali non pericolosi. Solo in seguito si\nintroducono bottiglie chiuse, bicchieri vuoti e contenitori riempiti d’acqua. Bevande calde, cristalleria\ndelicata e servizio reale richiedono supervisione."
+        }
+      ]
+    },
+    {
+      "id": "res-u5-activity",
+      "title": "Prepara e controlla una postazione",
+      "description": "Scenario originale da 20 coperti con domande su quantità, integrità e segnalazione. Usalo su carta o con materiali base; PDF disponibile.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-05"
+      ],
+      "topics": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "5df2c63ea56dc0ece54e1821d50e2d8a425ca29ed6517d2d97546f2cdf5e275b",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u5-activity",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "5df2c63ea56dc0ece54e1821d50e2d8a425ca29ed6517d2d97546f2cdf5e275b",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u5-activity-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "5df2c63ea56dc0ece54e1821d50e2d8a425ca29ed6517d2d97546f2cdf5e275b",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u5-activity-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "EXERCISE",
+      "body": "## Obiettivo\n\nAllenare ordine, controllo e logica di servizio.\n\n## Scenario\n\nDevi preparare una piccola postazione di sala per un servizio da 20 coperti.\n\n## Materiali da prevedere\n\nScrivi quantita e posizione:\n\n- posate:\n- bicchieri:\n- tovaglioli:\n- menu:\n- penne:\n- blocco comande:\n- panni:\n- materiali per pulizia:\n- altri materiali:\n\n## Controllo qualita\n\nPer ogni materiale rispondi:\n\n1. E pulito?\n2. E integro?\n3. E sufficiente?\n4. E nel posto giusto?\n5. Chi avviso se manca?\n\n## Problemi\n\nScrivi cosa fai se:\n\nMancano bicchieri\n\nRisposta:\n\nTrovi posate con aloni\n\nRisposta:\n\nUn piatto e scheggiato\n\nRisposta:\n\nNon sai quale panno usare\n\nRisposta:\n\n## Conclusione\n\nScrivi tre regole per lasciare una postazione ordinata:\n\n1.\n2.\n3.",
+      "reading": "## Obiettivo\n\nAllenare ordine, controllo e logica di servizio.\n\n## Scenario\n\nDevi preparare una piccola postazione di sala per un servizio da 20 coperti.\n\n## Materiali da prevedere\n\nScrivi quantita e posizione:\n\n- posate:\n- bicchieri:\n- tovaglioli:\n- menu:\n- penne:\n- blocco comande:\n- panni:\n- materiali per pulizia:\n- altri materiali:\n\n## Controllo qualita\n\nPer ogni materiale rispondi:\n\n1. E pulito?\n2. E integro?\n3. E sufficiente?\n4. E nel posto giusto?\n5. Chi avviso se manca?\n\n## Problemi\n\nScrivi cosa fai se:\n\nMancano bicchieri\n\nRisposta:\n\nTrovi posate con aloni\n\nRisposta:\n\nUn piatto e scheggiato\n\nRisposta:\n\nNon sai quale panno usare\n\nRisposta:\n\n## Conclusione\n\nScrivi tre regole per lasciare una postazione ordinata:\n\n1.\n2.\n3.",
+      "projector_pages": [
+        {
+          "title": "Prepara una postazione",
+          "body": "Devi preparare una piccola postazione di sala per un servizio da 20 coperti."
+        },
+        {
+          "title": "Controllo qualità",
+          "body": "Per ogni materiale rispondi:\nE pulito?\nE integro?\nE sufficiente?\nE nel posto giusto?\nChi avviso se manca?"
+        },
+        {
+          "title": "Che cosa fai?",
+          "body": "Scrivi cosa fai se:\nMancano bicchieri\nTrovi posate con aloni\nUn piatto e scheggiato\nNon sai quale panno usare"
+        }
+      ],
+      "asset_filename": "unit-05-scheda-attivita.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u5-quiz",
+      "title": "Verifica guidata · Unità 05",
+      "description": "7 domande già presenti nei materiali RISTO-LAB. Usale dopo l’attività e confronta le scelte con il gruppo.",
+      "type": "QUIZ",
+      "unit_ids": [
+        "unit-05"
+      ],
+      "topics": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "fd08c2570801eea44c63503407bae5f520a0bbd36bfa20544fc36e5b45d3856e",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u5-quiz",
+      "resource_type": "QUIZ",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "fd08c2570801eea44c63503407bae5f520a0bbd36bfa20544fc36e5b45d3856e",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u5-quiz-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "fd08c2570801eea44c63503407bae5f520a0bbd36bfa20544fc36e5b45d3856e",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u5-quiz-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "QUIZ",
+      "body": "",
+      "reading": "",
+      "questions": [
+        {
+          "question": "Un bicchiere con scheggiatura:",
+          "options": [
+            "Non deve andare al cliente.",
+            "Si usa se il servizio e pieno.",
+            "Si mette solo ai tavoli esterni."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Il tovagliato deve essere:",
+          "options": [
+            "Sempre costoso.",
+            "Sempre uguale in ogni locale.",
+            "Pulito, ordinato e coerente con lo standard."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Il vassoio deve essere:",
+          "options": [
+            "Usato correndo.",
+            "Pulito e caricato con equilibrio.",
+            "Sempre pienissimo."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "La comanda deve essere:",
+          "options": [
+            "Chiara e precisa.",
+            "Confusa ma veloce.",
+            "Solo a memoria."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Se non sai usare uno strumento digitale:",
+          "options": [
+            "Premi a caso.",
+            "Ignori la comanda.",
+            "Chiedi spiegazione."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Una postazione ordinata aiuta a:",
+          "options": [
+            "Evitare il servizio.",
+            "Lavorare con meno errori.",
+            "Nascondere materiali rotti."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Pulito e sporco:",
+          "options": [
+            "Devono restare separati.",
+            "Si possono mescolare se c'e fretta.",
+            "Non riguardano la sala."
+          ],
+          "answer": 0,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "res-u5-checklist",
+      "title": "Controlla il tuo lavoro",
+      "description": "Riepilogo del capitolo originale. Usalo per il confronto finale e scegli un gesto da ripetere.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-05"
+      ],
+      "topics": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "2f9c2614c1ffedd12b80abc68f1b59a60b18bc6fc0573dff69edf524701b1038",
+        "source_id": null,
+        "section": "Estratti selezionati da fonti RISTO-LAB; impaginazione per web e Aula",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement 2026-10-22; Phase 6A instruction: select source content and classroom sequence"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u5-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "2f9c2614c1ffedd12b80abc68f1b59a60b18bc6fc0573dff69edf524701b1038",
+      "last_reviewed": "2026-10-23",
+      "notes": [
+        "SOURCE_DERIVED; selezione di passaggi già presenti nelle fonti RISTO-LAB. Nessun nuovo esempio o quesito.",
+        "Validazione umana del percorso ancora da eseguire"
+      ],
+      "keywords": [
+        "attrezzature",
+        "posate",
+        "posateria",
+        "bicchieri",
+        "calice",
+        "cristalleria",
+        "porcellana",
+        "bar",
+        "vassoio"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u5-checklist-v1",
+          "label": "Selezione della fonte per Aula",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "2f9c2614c1ffedd12b80abc68f1b59a60b18bc6fc0573dff69edf524701b1038",
+          "reviewed_by": "Codex — controllo di fedeltà alla fonte",
+          "reviewed_at": "2026-10-23",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6A — selezione di contenuti esistenti",
+          "notes": "Approvazione della selezione per Aula richiesta dal compito; nessuna approvazione umana inventata per nuovi testi"
+        }
+      ],
+      "current_approved_version_id": "res-u5-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-23",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected existing RISTO-LAB source passages, no new explanatory draft"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Controlla il tuo lavoro\n\n- Conosco nome, funzione e luogo delle attrezzature principali.\n- Applico il controllo A.P.I.P. prima dell’uso.\n- Non uso materiale scheggiato, lesionato o dubbio.\n- Non sovraccarico vassoi e carrelli.\n- Non intervengo su guasti elettrici o meccanici senza autorizzazione.\n- Segnalo rotture e ammanchi senza nasconderli o accusare senza prove.",
+      "reading": "## Controlla il tuo lavoro\n\n- Conosco nome, funzione e luogo delle attrezzature principali.\n- Applico il controllo A.P.I.P. prima dell’uso.\n- Non uso materiale scheggiato, lesionato o dubbio.\n- Non sovraccarico vassoi e carrelli.\n- Non intervengo su guasti elettrici o meccanici senza autorizzazione.\n- Segnalo rotture e ammanchi senza nasconderli o accusare senza prove.",
+      "projector_pages": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "Conosco nome, funzione e luogo delle attrezzature principali.\nApplico il controllo A.P.I.P. prima dell’uso.\nNon uso materiale scheggiato, lesionato o dubbio.\nNon sovraccarico vassoi e carrelli.\nNon intervengo su guasti elettrici o meccanici senza autorizzazione.\nSegnalo rotture e ammanchi senza nasconderli o accusare senza prove."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Conosco nome, funzione e luogo delle attrezzature principali.",
+            "Applico il controllo A.P.I.P. prima dell’uso.",
+            "Non uso materiale scheggiato, lesionato o dubbio.",
+            "Non sovraccarico vassoi e carrelli.",
+            "Non intervengo su guasti elettrici o meccanici senza autorizzazione.",
+            "Segnalo rotture e ammanchi senza nasconderli o accusare senza prove."
+          ]
+        }
+      ]
     }
   ],
   "lessons": [],
@@ -8660,6 +12365,130 @@
     {
       "resource_id": "res-u17-checklist",
       "label": "Checklist didattica: osservare, controllare, segnalare"
+    },
+    {
+      "resource_id": "res-u1-sistema",
+      "label": "Il ristorante come sistema"
+    },
+    {
+      "resource_id": "res-u1-servizio",
+      "label": "Servizio informale, curato e formale"
+    },
+    {
+      "resource_id": "res-u1-standard",
+      "label": "Locale, menu, cliente e standard"
+    },
+    {
+      "resource_id": "res-u1-activity",
+      "label": "Analizza un locale"
+    },
+    {
+      "resource_id": "res-u1-quiz",
+      "label": "Verifica guidata · Unità 01"
+    },
+    {
+      "resource_id": "res-u1-checklist",
+      "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u2-competenze",
+      "label": "Conoscenza, pratica e responsabilità"
+    },
+    {
+      "resource_id": "res-u2-presentazione",
+      "label": "Presentazione personale e rispetto"
+    },
+    {
+      "resource_id": "res-u2-squadra",
+      "label": "Affidabilità e comunicazione con la squadra"
+    },
+    {
+      "resource_id": "res-u2-activity",
+      "label": "Comportamenti professionali in situazione"
+    },
+    {
+      "resource_id": "res-u2-quiz",
+      "label": "Verifica guidata · Unità 02"
+    },
+    {
+      "resource_id": "res-u2-checklist",
+      "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u3-responsabile",
+      "label": "Responsabile di sala e riferimento del turno"
+    },
+    {
+      "resource_id": "res-u3-ruoli",
+      "label": "Chef de rang, commis, runner e rango"
+    },
+    {
+      "resource_id": "res-u3-briefing",
+      "label": "Briefing e richiesta di aiuto"
+    },
+    {
+      "resource_id": "res-u3-activity",
+      "label": "Disegna la brigata e trasmetti una richiesta"
+    },
+    {
+      "resource_id": "res-u3-quiz",
+      "label": "Verifica guidata · Unità 03"
+    },
+    {
+      "resource_id": "res-u3-checklist",
+      "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u4-sala",
+      "label": "Sala: spazio del cliente e spazio operativo"
+    },
+    {
+      "resource_id": "res-u4-office",
+      "label": "Office: pulito, sporco e supporto"
+    },
+    {
+      "resource_id": "res-u4-pass",
+      "label": "Pass, bar, cassa e magazzino"
+    },
+    {
+      "resource_id": "res-u4-activity",
+      "label": "Mappa del flusso di servizio"
+    },
+    {
+      "resource_id": "res-u4-quiz",
+      "label": "Verifica guidata · Unità 04"
+    },
+    {
+      "resource_id": "res-u4-checklist",
+      "label": "Controlla il tuo lavoro"
+    },
+    {
+      "resource_id": "res-u5-tavola",
+      "label": "Posate, bicchieri e piatti"
+    },
+    {
+      "resource_id": "res-u5-tovagliato",
+      "label": "Tovagliato e materiali di servizio"
+    },
+    {
+      "resource_id": "res-u5-vassoio",
+      "label": "Vassoio, comanda e strumenti digitali"
+    },
+    {
+      "resource_id": "res-u5-dimostrazione",
+      "label": "Prima l’equilibrio, poi il carico"
+    },
+    {
+      "resource_id": "res-u5-activity",
+      "label": "Prepara e controlla una postazione"
+    },
+    {
+      "resource_id": "res-u5-quiz",
+      "label": "Verifica guidata · Unità 05"
+    },
+    {
+      "resource_id": "res-u5-checklist",
+      "label": "Controlla il tuo lavoro"
     }
   ],
   "collections": [

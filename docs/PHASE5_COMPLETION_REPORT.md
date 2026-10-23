@@ -15,3 +15,7 @@ Verifiche: check senza errori; 17 test di modello e 12 test browser PASS, zero F
 Documentazione: CONTENT_MIGRATION_WORKFLOW, CONTENT_GAPS, FUTURE_MULTI_INSTRUCTOR, RISTOLAB_AI_ARCHITECTURE, PHASE5_QA e PHASE5_HUMAN_ACCEPTANCE. La prova umana contiene quattro verifiche di contenuto e una sola verifica AI. I cinque PASS live 4B dichiarati da Marcelo sono registrati separatamente, senza attribuire voti ai nuovi contenuti.
 
 Prossima azione: prova umana dei contenuti delle unità 10 e 17 e del ponte AI.
+
+Pubblicazione verificata: il workflow [39941239415](https://github.com/manzo8b/risto-lab/actions/runs/39941239415) ha completato build e deploy. Sul sito pubblico sono stati verificati saluto, unità 10/17, creazione e avvio di un piano da 60 minuti, contesto HACCP nel compositore AI, copia della richiesta e ritorno all'unità. Un collegamento «Unità completa» della Console è stato corretto per usare l'unità del piano anziché il valore statico predefinito; regressione aggiunta per entrambe le unità. Tutti i 29 test sono nuovamente PASS dopo la correzione.
+
+Integrità: confronto di dimensione, data modifica e SHA-256 su 34.893 originali, zero variazioni. Gate pubblicazione GO. Proiezione fisica e accettazione dei nuovi contenuti restano da eseguire con Marcelo.

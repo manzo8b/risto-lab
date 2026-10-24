@@ -1,0 +1,212 @@
+[
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u1-quiz",
+    "index": 0,
+    "area": "ruolo e contesto",
+    "source_question_hash": "deb04cc077f3c175c8e99221e2057d279da6962855ab7299b5345869e196da0c"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u1-quiz",
+    "index": 3,
+    "area": "ruolo e contesto",
+    "source_question_hash": "91a08f2de72f7e819d89f2a37a940353fba18d1b3f8d7f575b9c4e64d951a8f9"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u2-quiz",
+    "index": 0,
+    "area": "professionalità",
+    "source_question_hash": "75a5c59e328682487c2fb018ac70bc0c6aebf99d2a718052c0b992e0583ae1bd"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u3-quiz",
+    "index": 0,
+    "area": "brigata",
+    "source_question_hash": "c1646a4d4581e24efc95f90c345a193b174075eace36d0ba2e355586e8c0e06b"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u3-quiz",
+    "index": 2,
+    "area": "brigata",
+    "source_question_hash": "32398012972f8e99ec5698961d3da02df3c20dc0294dcd7302b151b2034e42c2"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u4-quiz",
+    "index": 1,
+    "area": "spazi",
+    "source_question_hash": "15cfdac9aadc695ffd431de18ece156bfbdb0a4547afe444d9fea0673d4bb2cc"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u5-quiz",
+    "index": 0,
+    "area": "materiali e comanda",
+    "source_question_hash": "24b233b24ddaf9f4b34988f633ad6db171d4e489a084f9d85ab443caaa0a8bea"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u5-quiz",
+    "index": 2,
+    "area": "materiali e comanda",
+    "source_question_hash": "7b98abb0d679169a113a42d4ba68a579a2371ab1e7cd23efd57f6ed3ec3ff16a"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u5-quiz",
+    "index": 3,
+    "area": "materiali e comanda",
+    "source_question_hash": "b19b06eb5c28bcd370b1b216a8926c2e80e8dd050fa8db1f6e6220443c65cd7d"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-mep-quiz",
+    "index": 0,
+    "area": "mise en place",
+    "source_question_hash": "9a6d7a15c67ba0b7e52cff7c55fa505b47449d130dec8b3bac22c4f31997c51d"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-mep-quiz",
+    "index": 2,
+    "area": "mise en place",
+    "source_question_hash": "1ebf2bbcdb7b41a9a726c86636cbdc6f1e9b6f94c50e705211e89af1aed994e9"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u10-quiz",
+    "index": 0,
+    "area": "accoglienza e comunicazione",
+    "source_question_hash": "ba83650522004a4982b7f5ea20e0295bf78a70bce60c828ba3167891a393d385"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u10-quiz",
+    "index": 2,
+    "area": "accoglienza e comunicazione",
+    "source_question_hash": "7882d8ad97647dd6f5f62d5b0c94109ce913e7fc8d58d7df4147905497c136fd"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u10-quiz",
+    "index": 5,
+    "area": "accoglienza e comunicazione",
+    "source_question_hash": "4f77c41d78d983f70d6afe7684166765e9f66e11288a7fa5d7443a6a12b52538"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u10-quiz",
+    "index": 6,
+    "area": "accoglienza e comunicazione",
+    "source_question_hash": "329bc32db06c535d8d3045bb3d199783c52b0ef718a20e70f466606f3183dc8c"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u17-quiz",
+    "index": 0,
+    "area": "igiene e HACCP",
+    "source_question_hash": "3b30cd894a384047e35641eccc5c214bcfcd3fc6ace5710090048dedd6d803a9"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u17-quiz",
+    "index": 3,
+    "area": "igiene e HACCP",
+    "source_question_hash": "090438693c6f5cd0951efa3660337100694993a50bdf900e834b6e17019257bf"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u17-quiz",
+    "index": 5,
+    "area": "igiene e HACCP",
+    "source_question_hash": "f647d6786a41209f4d3624f6ba273d4edddc19e4afdfa9971d0567b30600a347"
+  },
+  {
+    "origin": "CANONICAL_RESOURCE",
+    "resource_id": "res-u17-quiz",
+    "index": 8,
+    "area": "igiene e HACCP",
+    "source_question_hash": "00201a74516834d11a957a0b91151b884ee4d70b0d4e8b0802304588631493ff"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 0,
+    "area": "servizio sbarazzo chiusura",
+    "source_label": "Modulo_07_Servizio_sbarazzo_riordino/quiz_modulo_07.md",
+    "source_question_hash": "5923bb989ac47a1b2f28cdbf149485387ec4eef4185d08f6654739f5659d878e"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 2,
+    "area": "servizio sbarazzo chiusura",
+    "source_label": "Modulo_07_Servizio_sbarazzo_riordino/quiz_modulo_07.md",
+    "source_question_hash": "5448cdd7c63c2b2ed71285fb1e17f3fdade9683fe2caa637771f2b42c6b38f39"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 4,
+    "area": "servizio sbarazzo chiusura",
+    "source_label": "Modulo_07_Servizio_sbarazzo_riordino/quiz_modulo_07.md",
+    "source_question_hash": "d877c43fe310940e699283c9cd042e685bc016291a8dd33c8dc23ceb78e1529a"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 2,
+    "area": "comunicazione problem solving feedback",
+    "source_label": "Modulo_05_Soft_skills_hospitality/quiz_modulo_05.md",
+    "source_question_hash": "86fdcfcd427ff302b3d8e89d9f09ac19dfdaea602257c9c92b0690719ee804a4"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 3,
+    "area": "comunicazione problem solving feedback",
+    "source_label": "Modulo_05_Soft_skills_hospitality/quiz_modulo_05.md",
+    "source_question_hash": "dcf7fd19e10ce2c373f00f11f1ef30db714b720aedfae7dfd7798a9e4175eb0c"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 4,
+    "area": "comunicazione problem solving feedback",
+    "source_label": "Modulo_05_Soft_skills_hospitality/quiz_modulo_05.md",
+    "source_question_hash": "f5f974c0710f5bdeed58ad25356a4c526f7deab715ddba760815e6dab4055e17"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 5,
+    "area": "comunicazione problem solving feedback",
+    "source_label": "Modulo_05_Soft_skills_hospitality/quiz_modulo_05.md",
+    "source_question_hash": "f70d9276462ba7eb8f1893c843b825ddd2288615b1434b663a77a0c6f07c7591"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 0,
+    "area": "briefing allergeni aiuto",
+    "source_label": "Modulo_08_Simulazioni_pratiche/quiz_modulo_08.md",
+    "source_question_hash": "2863b7dd28380717afa4e7b261e1e39165d51c0c19b222e3a359c159bc85636d"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 1,
+    "area": "briefing allergeni aiuto",
+    "source_label": "Modulo_08_Simulazioni_pratiche/quiz_modulo_08.md",
+    "source_question_hash": "8ccea166e7ff68810ad676e2883f954c5d6dd987edfd5e6a063abc8288568362"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 4,
+    "area": "briefing allergeni aiuto",
+    "source_label": "Modulo_08_Simulazioni_pratiche/quiz_modulo_08.md",
+    "source_question_hash": "cbfb116041dd37344c3443052158e4706506cd65b98129ee539925195d89a4e8"
+  },
+  {
+    "origin": "ARCHIVE_SOURCE",
+    "index": 3,
+    "area": "servizio bevande",
+    "source_label": "Modulo_03_Bar_caffetteria_base/quiz_modulo_03.md",
+    "source_question_hash": "51e37ed1153da1fc69dc82cdb27dc31d80202c1b152c009e0097415d81e2c526"
+  }
+]

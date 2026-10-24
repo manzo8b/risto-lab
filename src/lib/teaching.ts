@@ -17,8 +17,8 @@ export function validateTeaching(input:Record<string,unknown>,unitIds:string[],e
 }
 
 /** Mechanical time allocation over the existing approved order; never creates teaching content. */
-export function proposeBlocks(unitIds:string[],eligible:{id:string;title:string;unit_ids:string[];recommended_minutes?:number}[],sequence:string[],minutes:number,uuid:()=>string):TeachingBlock[]{
- const ids=[...new Set(sequence)];const items=ids.map(id=>eligible.find(r=>r.id===id&&r.unit_ids.some(u=>unitIds.includes(u)))).filter((r):r is NonNullable<typeof r>=>!!r);
+export function proposeBlocks(unitIds:string[],eligible:{id:string;title:string;unit_ids:string[];recommended_minutes?:number}[],sequence:string[],minutes:number,uuid:()=>string,unitSequences:Record<string,string[]>={}):TeachingBlock[]{
+ const explicit=unitIds.some(id=>unitSequences[id]);const ids=[...new Set(explicit?unitIds.flatMap(id=>unitSequences[id]||sequence.filter(rid=>eligible.some(r=>r.id===rid&&r.unit_ids.includes(id)))):sequence)];const items=ids.map(id=>eligible.find(r=>r.id===id&&(r.unit_ids.some(u=>unitIds.includes(u))||unitIds.some(u=>unitSequences[u]?.includes(id))))).filter((r):r is NonNullable<typeof r>=>!!r);
  const target=Math.max(items.length,Math.floor(Number.isFinite(minutes)?minutes:60)),base=Math.floor(target/Math.max(1,items.length)),extra=target%Math.max(1,items.length);
  const allocation=items.map((_,i)=>base+(i<extra?1:0));
  // Existing sequences retain equal allocation. New curated sequences may reserve time for practice.

@@ -745,15 +745,36 @@
       "order": 23,
       "title": "Prepararsi al lavoro",
       "slug": "23-prepararsi-al-lavoro",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 118,
       "resource_ids": [
         "res-chapter-23",
-        "res-colloquio"
+        "res-colloquio",
+        "res-u23-cv",
+        "res-u23-frasi",
+        "res-u23-interview",
+        "res-u23-onboarding",
+        "res-u23-checklist"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-23"
+      "last_reviewed": "2026-10-24",
+      "chapter_resource_id": "res-chapter-23",
+      "classroom_resource_ids": [
+        "res-u23-cv",
+        "res-u23-frasi",
+        "res-u23-interview",
+        "res-u23-onboarding",
+        "res-u23-checklist"
+      ],
+      "printable_resource_id": "res-u23-interview",
+      "overview": "Un buon percorso formativo deve aiutare a entrare nel mercato del lavoro con aspettative realistiche. Curriculum, presentazione, colloquio e prova pratica devono mostrare competenze reali senza inventare esperienze.",
+      "objectives": [
+        "Preparare un CV semplice e pertinente.",
+        "Presentarsi a un locale in modo professionale.",
+        "Affrontare colloquio e prova pratica.",
+        "Valutare con prudenza una proposta di lavoro.",
+        "Organizzare il primo giorno e il periodo di inserimento."
+      ]
     },
     {
       "id": "unit-24",
@@ -761,15 +782,41 @@
       "order": 24,
       "title": "Simulazioni operative",
       "slug": "24-simulazioni-operative",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 122,
       "resource_ids": [
         "res-chapter-24",
-        "res-visual-ciclo-illustrato"
+        "res-visual-ciclo-illustrato",
+        "res-u24-guide",
+        "res-u24-observer",
+        "res-u10-roleplay",
+        "res-u8-activity",
+        "res-u12-activity",
+        "res-u11-activity",
+        "res-u13-activity",
+        "res-u14-activity",
+        "res-u15-activity",
+        "res-u20-activity",
+        "res-u21-activity",
+        "res-u22-activity"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-24"
+      "last_reviewed": "2026-10-24",
+      "chapter_resource_id": "res-chapter-24",
+      "classroom_resource_ids": [
+        "res-u24-guide",
+        "res-u12-activity",
+        "res-u24-observer"
+      ],
+      "printable_resource_id": "res-u24-observer",
+      "overview": "La simulazione ricrea una situazione professionale in ambiente protetto. Non è teatro improvvisato: richiede obiettivi, ruoli, regole, osservazione e debriefing. Serve a collegare tecnica, comunicazione e decisione.",
+      "objectives": [
+        "Progettare uno scenario realistico.",
+        "Assegnare ruoli e informazioni.",
+        "Usare osservatori con criteri.",
+        "Condurre un debriefing non punitivo.",
+        "Aumentare progressivamente la difficoltà."
+      ]
     },
     {
       "id": "unit-25",
@@ -777,18 +824,45 @@
       "order": 25,
       "title": "Laboratori",
       "slug": "25-laboratori",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 126,
       "resource_ids": [
         "res-chapter-25",
         "res-sicurezza-corso",
         "res-sicurezza-slides",
         "res-sicurezza-formatore",
-        "res-sicurezza-banca-quiz"
+        "res-sicurezza-banca-quiz",
+        "res-u25-guide",
+        "res-u25-observer",
+        "res-mep-checklist",
+        "res-u5-activity",
+        "res-u7-activity",
+        "res-u9-activity",
+        "res-u13-activity",
+        "res-u12-activity",
+        "res-u14-activity",
+        "res-u8-activity",
+        "res-u22-activity",
+        "res-u21-activity",
+        "res-u15-activity"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-25"
+      "last_reviewed": "2026-10-24",
+      "chapter_resource_id": "res-chapter-25",
+      "classroom_resource_ids": [
+        "res-u25-guide",
+        "res-u13-activity",
+        "res-u25-observer"
+      ],
+      "printable_resource_id": "res-u25-observer",
+      "overview": "Il laboratorio deve permettere di osservare, provare, correggere e ripetere. Per gruppi eterogenei servono istruzioni visuali, parole semplici, materiali alternativi e attività con livelli progressivi.",
+      "objectives": [
+        "Definire obiettivi operativi.",
+        "Preparare materiali e sicurezza.",
+        "Condurre dimostrazione e pratica guidata.",
+        "Adattare attività a lingua e formazione diverse.",
+        "Usare checklist e criteri di valutazione."
+      ]
     },
     {
       "id": "unit-26",
@@ -796,15 +870,37 @@
       "order": 26,
       "title": "Verifica finale",
       "slug": "26-verifica-finale",
-      "status": "PARTIAL",
+      "status": "CLASSROOM_READY",
       "manual_page": 130,
       "resource_ids": [
         "res-chapter-26",
-        "res-sicurezza-banca-quiz"
+        "res-sicurezza-banca-quiz",
+        "res-u26-intro",
+        "res-u26-quiz",
+        "res-u26-practice",
+        "res-u26-rubric",
+        "res-u26-feedback",
+        "res-u26-answer-sheet"
       ],
       "lesson_ids": [],
-      "last_reviewed": null,
-      "chapter_resource_id": "res-chapter-26"
+      "last_reviewed": "2026-10-24",
+      "chapter_resource_id": "res-chapter-26",
+      "classroom_resource_ids": [
+        "res-u26-intro",
+        "res-u26-quiz",
+        "res-u26-practice",
+        "res-u26-rubric",
+        "res-u26-feedback"
+      ],
+      "printable_resource_id": "res-u26-rubric",
+      "overview": "La verifica finale deve misurare ciò che è stato insegnato e allenato. Una prova equilibrata unisce conoscenze, applicazione, comunicazione e sicurezza. I criteri devono essere noti prima.",
+      "objectives": [
+        "Costruire una verifica teorica e pratica.",
+        "Usare criteri e livelli di prestazione.",
+        "Gestire errori critici e recupero.",
+        "Dare feedback finale utile.",
+        "Distinguere la valutazione didattica da una certificazione professionale."
+      ]
     }
   ],
   "resources": [
@@ -18278,6 +18374,2248 @@
           ]
         }
       ]
+    },
+    {
+      "id": "res-u23-cv",
+      "title": "Un CV semplice, pertinente e veritiero",
+      "description": "Struttura di lavoro per il CV, non un modello obbligatorio. Usa dati fittizi in aula; formazione, esperienze e disponibilità devono essere vere nella candidatura reale.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-23"
+      ],
+      "topics": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "edd2e8f18d671b227a98f44b5d0a162fc8804b7fab886128c50b8a0abe4ded40",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 23",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u23-cv",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "edd2e8f18d671b227a98f44b5d0a162fc8804b7fab886128c50b8a0abe4ded40",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u23-cv-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "edd2e8f18d671b227a98f44b5d0a162fc8804b7fab886128c50b8a0abe4ded40",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u23-cv-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [
+        "res-u2-competenze"
+      ],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 23.1 Un CV che si capisce in un minuto\n\nIl CV deve far capire chi sei, che cosa sai fare, dove hai lavorato o imparato, quali lingue usi e quando sei disponibile. Per chi ha poca esperienza sono utili laboratori, volontariato, competenze trasferibili e obiettivi chiari. Non inserire competenze tecniche non possedute.\n\n## Struttura consigliata\n\n## 1. Dati\n\n- Nome e cognome:\n- Telefono:\n- Email:\n- Citta/zona:\n- Disponibilita a spostarsi:\n\n## 2. Obiettivo\n\nScrivi una frase breve.\n\nEsempio:\n\n\"Cerco lavoro come aiuto sala, runner o barista base. Sono disponibile a imparare e a lavorare in squadra.\"\n\nIl mio obiettivo:\n\n...\n\n## 3. Esperienze\n\nPer ogni esperienza scrivi:\n\n- ruolo;\n- luogo;\n- periodo;\n- cosa facevi.\n\nEsempio:\n\n\"Aiuto sala - Trattoria ... - 2025. Preparazione tavoli, sbarazzo, supporto al cameriere.\"\n\n## 4. Competenze\n\nScegli solo quelle vere.\n\n- Accoglienza cliente\n- Mise en place base\n- Sbarazzo\n- Pulizia postazione\n- Caffetteria base\n- Uso vassoio\n- Italiano professionale base\n- Inglese base\n- Lavoro in squadra\n- Puntualita\n\n## 5. Lingue\n\n- Italiano:\n- Inglese:\n- Spagnolo:\n- Altre lingue:\n\n## 6. Disponibilita\n\n- Pranzo:\n- Cena:\n- Weekend:\n- Festivi:\n- Full time:\n- Part time:\n- Zona:\n\n## Uso della scheda\n\nUna struttura possibile, da adattare alla candidatura. Durante la prova usa dati fittizi e solo competenze realmente possedute; nessun CV viene raccolto dal sito.",
+      "reading": "## 23.1 Un CV che si capisce in un minuto\n\nIl CV deve far capire chi sei, che cosa sai fare, dove hai lavorato o imparato, quali lingue usi e quando sei disponibile. Per chi ha poca esperienza sono utili laboratori, volontariato, competenze trasferibili e obiettivi chiari. Non inserire competenze tecniche non possedute.\n\n## Struttura consigliata\n\n## 1. Dati\n\n- Nome e cognome:\n- Telefono:\n- Email:\n- Citta/zona:\n- Disponibilita a spostarsi:\n\n## 2. Obiettivo\n\nScrivi una frase breve.\n\nEsempio:\n\n\"Cerco lavoro come aiuto sala, runner o barista base. Sono disponibile a imparare e a lavorare in squadra.\"\n\nIl mio obiettivo:\n\n...\n\n## 3. Esperienze\n\nPer ogni esperienza scrivi:\n\n- ruolo;\n- luogo;\n- periodo;\n- cosa facevi.\n\nEsempio:\n\n\"Aiuto sala - Trattoria ... - 2025. Preparazione tavoli, sbarazzo, supporto al cameriere.\"\n\n## 4. Competenze\n\nScegli solo quelle vere.\n\n- Accoglienza cliente\n- Mise en place base\n- Sbarazzo\n- Pulizia postazione\n- Caffetteria base\n- Uso vassoio\n- Italiano professionale base\n- Inglese base\n- Lavoro in squadra\n- Puntualita\n\n## 5. Lingue\n\n- Italiano:\n- Inglese:\n- Spagnolo:\n- Altre lingue:\n\n## 6. Disponibilita\n\n- Pranzo:\n- Cena:\n- Weekend:\n- Festivi:\n- Full time:\n- Part time:\n- Zona:\n\n## Uso della scheda\n\nUna struttura possibile, da adattare alla candidatura. Durante la prova usa dati fittizi e solo competenze realmente possedute; nessun CV viene raccolto dal sito.",
+      "recommended_minutes": 8,
+      "projector_pages": [
+        {
+          "title": "23.1 Un CV che si capisce in un minuto",
+          "body": "Il CV deve far capire chi sei, che cosa sai fare, dove hai lavorato o imparato, quali lingue usi e quando sei disponibile.\nPer chi ha poca esperienza sono utili laboratori, volontariato, competenze trasferibili e obiettivi chiari.\nNon inserire competenze tecniche non possedute."
+        },
+        {
+          "title": "Struttura consigliata",
+          "body": "1. Dati\n- Nome e cognome:\n- Telefono:\n- Email:\n- Citta/zona:\n- Disponibilita a spostarsi:\n2. Obiettivo\nScrivi una frase breve.\nEsempio:\n\"Cerco lavoro come aiuto sala, runner o barista base. Sono disponibile a imparare e a lavorare in squadra.\"\nIl mio obiettivo:\n...\n3. Esperienze\nPer ogni esperienza scrivi:\n- ruolo;\n- luogo;\n- periodo;\n- cosa facevi.\nEsempio:"
+        },
+        {
+          "title": "Struttura consigliata",
+          "body": "\"Aiuto sala - Trattoria ... - 2025. Preparazione tavoli, sbarazzo, supporto al cameriere.\"\n4. Competenze\nScegli solo quelle vere.\n- Accoglienza cliente\n- Mise en place base\n- Sbarazzo\n- Pulizia postazione\n- Caffetteria base\n- Uso vassoio\n- Italiano professionale base\n- Inglese base\n- Lavoro in squadra\n- Puntualita\n5. Lingue\n- Italiano:\n- Inglese:\n- Spagnolo:\n- Altre lingue:\n6. Disponibilita"
+        },
+        {
+          "title": "Struttura consigliata",
+          "body": "- Pranzo:\n- Cena:\n- Weekend:\n- Festivi:\n- Full time:\n- Part time:\n- Zona:"
+        },
+        {
+          "title": "Uso della scheda",
+          "body": "Una struttura possibile, da adattare alla candidatura.\nDurante la prova usa dati fittizi e solo competenze realmente possedute; nessun CV viene raccolto dal sito."
+        }
+      ]
+    },
+    {
+      "id": "res-u23-frasi",
+      "title": "Presentarsi e rispondere con sincerità",
+      "description": "Frasi A2–B1 da completare con la propria situazione, senza inventare esperienza o disponibilità.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-23"
+      ],
+      "topics": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "89e9cb62958f6af345eaf3203c172155031f9cc3ef0eeae43c32ace55d0bb52e",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 23",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u23-frasi",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "89e9cb62958f6af345eaf3203c172155031f9cc3ef0eeae43c32ace55d0bb52e",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u23-frasi-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "89e9cb62958f6af345eaf3203c172155031f9cc3ef0eeae43c32ace55d0bb52e",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u23-frasi-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [
+        "res-u11-linguaggio"
+      ],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## Primo contatto\n\n\"Buongiorno, mi chiamo ... Sto cercando lavoro in sala/bar. Posso lasciare il mio CV?\"\n\n\"Buongiorno, vorrei sapere se state cercando personale.\"\n\n\"Posso inviare il mio CV via email o WhatsApp?\"\n\n## Se parti da zero\n\n\"Non ho ancora molta esperienza, ma ho studiato le basi e sono disponibile a imparare.\"\n\n\"Sto cercando una prima opportunita nel settore.\"\n\n\"Mi interessa iniziare dalla base e crescere con ordine.\"\n\n## Se hai gia esperienza\n\n\"Ho lavorato come ... Mi occupavo di ...\"\n\n\"Ho esperienza in ... e vorrei migliorare in ...\"\n\n\"Sono abituato a lavorare con clienti e squadra.\"\n\n## Disponibilita\n\n\"Sono disponibile a pranzo.\"\n\n\"Sono disponibile la sera e nel weekend.\"\n\n\"Posso lavorare su turni, con un minimo di organizzazione.\"\n\n\"Posso iniziare da ...\"\n\n## Se non capisci una domanda\n\n\"Mi scusi, puo ripetere?\"\n\n\"Posso spiegarmi meglio?\"\n\n\"Non sono sicuro di aver capito bene.\"\n\n## Se non sai fare una cosa\n\n\"Non l'ho ancora fatto, ma posso imparare.\"\n\n\"Ho bisogno di una spiegazione iniziale.\"\n\n\"Preferisco chiedere prima di sbagliare.\"",
+      "reading": "## Primo contatto\n\n\"Buongiorno, mi chiamo ... Sto cercando lavoro in sala/bar. Posso lasciare il mio CV?\"\n\n\"Buongiorno, vorrei sapere se state cercando personale.\"\n\n\"Posso inviare il mio CV via email o WhatsApp?\"\n\n## Se parti da zero\n\n\"Non ho ancora molta esperienza, ma ho studiato le basi e sono disponibile a imparare.\"\n\n\"Sto cercando una prima opportunita nel settore.\"\n\n\"Mi interessa iniziare dalla base e crescere con ordine.\"\n\n## Se hai gia esperienza\n\n\"Ho lavorato come ... Mi occupavo di ...\"\n\n\"Ho esperienza in ... e vorrei migliorare in ...\"\n\n\"Sono abituato a lavorare con clienti e squadra.\"\n\n## Disponibilita\n\n\"Sono disponibile a pranzo.\"\n\n\"Sono disponibile la sera e nel weekend.\"\n\n\"Posso lavorare su turni, con un minimo di organizzazione.\"\n\n\"Posso iniziare da ...\"\n\n## Se non capisci una domanda\n\n\"Mi scusi, puo ripetere?\"\n\n\"Posso spiegarmi meglio?\"\n\n\"Non sono sicuro di aver capito bene.\"\n\n## Se non sai fare una cosa\n\n\"Non l'ho ancora fatto, ma posso imparare.\"\n\n\"Ho bisogno di una spiegazione iniziale.\"\n\n\"Preferisco chiedere prima di sbagliare.\"",
+      "recommended_minutes": 7,
+      "projector_pages": [
+        {
+          "title": "Primo contatto",
+          "body": "\"Buongiorno, mi chiamo ...\nSto cercando lavoro in sala/bar.\nPosso lasciare il mio CV?\"  \"Buongiorno, vorrei sapere se state cercando personale.\"  \"Posso inviare il mio CV via email o WhatsApp?\""
+        },
+        {
+          "title": "Se parti da zero",
+          "body": "\"Non ho ancora molta esperienza, ma ho studiato le basi e sono disponibile a imparare.\"  \"Sto cercando una prima opportunita nel settore.\"  \"Mi interessa iniziare dalla base e crescere con ordine.\""
+        },
+        {
+          "title": "Se hai gia esperienza",
+          "body": "\"Ho lavorato come ...\nMi occupavo di ...\"  \"Ho esperienza in ... e vorrei migliorare in ...\"  \"Sono abituato a lavorare con clienti e squadra.\""
+        },
+        {
+          "title": "Disponibilita",
+          "body": "\"Sono disponibile a pranzo.\"  \"Sono disponibile la sera e nel weekend.\"  \"Posso lavorare su turni, con un minimo di organizzazione.\"  \"Posso iniziare da ...\""
+        },
+        {
+          "title": "Se non capisci una domanda",
+          "body": "\"Mi scusi, puo ripetere?\"  \"Posso spiegarmi meglio?\"  \"Non sono sicuro di aver capito bene.\""
+        },
+        {
+          "title": "Se non sai fare una cosa",
+          "body": "\"Non l'ho ancora fatto, ma posso imparare.\"  \"Ho bisogno di una spiegazione iniziale.\"  \"Preferisco chiedere prima di sbagliare.\""
+        }
+      ]
+    },
+    {
+      "id": "res-u23-interview",
+      "title": "Colloquio breve: candidato, responsabile e osservatore",
+      "description": "Role card per una candidatura aiuto sala. Rotazione dei ruoli, cinque domande, feedback e ripetizione; nessun dato personale richiesto dal sito.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-23"
+      ],
+      "topics": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "b3b5c2590e7faaf29728a9071a8962e726896e11f4132271f639e1fc29f22f0a",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 23",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u23-interview",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "b3b5c2590e7faaf29728a9071a8962e726896e11f4132271f639e1fc29f22f0a",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u23-interview-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "b3b5c2590e7faaf29728a9071a8962e726896e11f4132271f639e1fc29f22f0a",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u23-interview-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [
+        "res-u19-activity"
+      ],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "ROLE_CARD",
+      "body": "## Uso\n\nUna persona fa il responsabile.\nUna persona fa il candidato.\nSe studi da solo, leggi le domande e rispondi ad alta voce.\n\n## Scenario\n\nLocale: trattoria/pizzeria a Roma.\nRuolo: aiuto sala.\nEsperienza richiesta: base o prima esperienza con voglia di imparare.\n\n## Parte 4 - Colloquio\n\nPrepara una risposta per ogni domanda.\n\n1. \"Hai esperienza?\"\n2. \"Che disponibilita hai?\"\n3. \"Perche vuoi lavorare nella ristorazione?\"\n4. \"Come reagisci se sbagli?\"\n5. \"Cosa vuoi imparare?\"\n\n## Valutazione\n\nIl lavoro e pronto se:\n\n- il messaggio e chiaro;\n- il CV non promette cose false;\n- la disponibilita e realistica;\n- le risposte sono brevi;\n- la persona sa chiedere aiuto senza vergogna.\n\n## Feedback\n\nDopo la simulazione controlla:\n\n- ho parlato troppo veloce?\n- ho risposto in modo chiaro?\n- ho detto la mia disponibilita?\n- ho detto la verita?\n- ho fatto almeno una domanda?\n\n## Domanda finale da fare al responsabile\n\nPosso chiederle quali sarebbero le mansioni principali e se e previsto un affiancamento iniziale?\n\n## Vincolo della prova\n\nL’osservatore usa i criteri dichiarati, non giudizi sulla personalità. Il candidato risponde sulla propria esperienza reale o su un profilo interamente fittizio dichiarato. Non imparare una storia lavorativa inventata.",
+      "reading": "## Uso\n\nUna persona fa il responsabile.\nUna persona fa il candidato.\nSe studi da solo, leggi le domande e rispondi ad alta voce.\n\n## Scenario\n\nLocale: trattoria/pizzeria a Roma.\nRuolo: aiuto sala.\nEsperienza richiesta: base o prima esperienza con voglia di imparare.\n\n## Parte 4 - Colloquio\n\nPrepara una risposta per ogni domanda.\n\n1. \"Hai esperienza?\"\n2. \"Che disponibilita hai?\"\n3. \"Perche vuoi lavorare nella ristorazione?\"\n4. \"Come reagisci se sbagli?\"\n5. \"Cosa vuoi imparare?\"\n\n## Valutazione\n\nIl lavoro e pronto se:\n\n- il messaggio e chiaro;\n- il CV non promette cose false;\n- la disponibilita e realistica;\n- le risposte sono brevi;\n- la persona sa chiedere aiuto senza vergogna.\n\n## Feedback\n\nDopo la simulazione controlla:\n\n- ho parlato troppo veloce?\n- ho risposto in modo chiaro?\n- ho detto la mia disponibilita?\n- ho detto la verita?\n- ho fatto almeno una domanda?\n\n## Domanda finale da fare al responsabile\n\nPosso chiederle quali sarebbero le mansioni principali e se e previsto un affiancamento iniziale?\n\n## Vincolo della prova\n\nL’osservatore usa i criteri dichiarati, non giudizi sulla personalità. Il candidato risponde sulla propria esperienza reale o su un profilo interamente fittizio dichiarato. Non imparare una storia lavorativa inventata.",
+      "recommended_minutes": 30,
+      "projector_pages": [
+        {
+          "title": "Uso",
+          "body": "Una persona fa il responsabile.\nUna persona fa il candidato.\nSe studi da solo, leggi le domande e rispondi ad alta voce."
+        },
+        {
+          "title": "Scenario",
+          "body": "Locale: trattoria/pizzeria a Roma.\nRuolo: aiuto sala.\nEsperienza richiesta: base o prima esperienza con voglia di imparare."
+        },
+        {
+          "title": "Parte 4 - Colloquio",
+          "body": "Prepara una risposta per ogni domanda.\n1. \"Hai esperienza?\"\n2. \"Che disponibilita hai?\"\n3. \"Perche vuoi lavorare nella ristorazione?\"\n4. \"Come reagisci se sbagli?\"\n5. \"Cosa vuoi imparare?\""
+        },
+        {
+          "title": "Valutazione",
+          "body": "Il lavoro e pronto se:\n- il messaggio e chiaro;\n- il CV non promette cose false;\n- la disponibilita e realistica;\n- le risposte sono brevi;\n- la persona sa chiedere aiuto senza vergogna."
+        },
+        {
+          "title": "Feedback",
+          "body": "Dopo la simulazione controlla:\n- ho parlato troppo veloce?\n- ho risposto in modo chiaro?\n- ho detto la mia disponibilita?\n- ho detto la verita?\n- ho fatto almeno una domanda?"
+        },
+        {
+          "title": "Domanda finale da fare al responsabile",
+          "body": "Posso chiederle quali sarebbero le mansioni principali e se e previsto un affiancamento iniziale?"
+        },
+        {
+          "title": "Vincolo della prova",
+          "body": "L’osservatore usa i criteri dichiarati, non giudizi sulla personalità.\nIl candidato risponde sulla propria esperienza reale o su un profilo interamente fittizio dichiarato.\nNon imparare una storia lavorativa inventata."
+        }
+      ],
+      "asset_filename": "u23-interview.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u23-onboarding",
+      "title": "Primi giorni: osservare, chiedere, ripetere",
+      "description": "Domande e consegne per l’inserimento. Condizioni di lavoro e prove reali richiedono verifiche specifiche; nessun modulo sui diritti è dichiarato obbligatorio per tutti.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-23"
+      ],
+      "topics": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "3f2fac9647f068b48cdb5a8f6e488f47ee9baf05d4b24b678fed599e243b0cd1",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 23",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u23-onboarding",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "3f2fac9647f068b48cdb5a8f6e488f47ee9baf05d4b24b678fed599e243b0cd1",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u23-onboarding-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "3f2fac9647f068b48cdb5a8f6e488f47ee9baf05d4b24b678fed599e243b0cd1",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u23-onboarding-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [
+        "res-u3-responsabile",
+        "res-u19-feedback"
+      ],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 23.6 Il primo giorno\n\nArrivare in anticipo ragionevole, sapere a chi presentarsi, portare ciò che è stato richiesto, osservare planimetria e procedure, prendere appunti e chiedere conferma. Il nuovo lavoratore non deve essere lasciato solo con la frase “guarda e arrangiati”.\n\n## Giorni 2-3: fai domande utili\n\nDomande:\n\n- \"Dove trovo questo materiale?\"\n- \"Come preferite che venga preparato il tavolo?\"\n- \"A chi devo chiedere se ho un dubbio?\"\n- \"Qual e la priorita adesso?\"\n- \"Questa cosa si fa sempre cosi qui?\"\n\n## Giorni 4-5: ripeti con ordine\n\nNon cercare di fare mille cose insieme.\n\nConcentrati su:\n\n- arrivare puntuale;\n- ricordare i nomi;\n- tenere la postazione in ordine;\n- fare bene le mansioni assegnate;\n- chiedere prima di improvvisare;\n- ascoltare correzioni.\n\n## Giorni 6-7: chiedi feedback\n\nFrase semplice:\n\n\"In questi primi giorni cosa posso migliorare?\"\n\nOppure:\n\n\"C'e qualcosa che devo fare in modo diverso?\"\n\nChi chiede feedback nel modo giusto dimostra maturita.\n\n## Regola risto-lab\n\nNei primi giorni vincono tre parole: osserva, chiedi, ripeti.",
+      "reading": "## 23.6 Il primo giorno\n\nArrivare in anticipo ragionevole, sapere a chi presentarsi, portare ciò che è stato richiesto, osservare planimetria e procedure, prendere appunti e chiedere conferma. Il nuovo lavoratore non deve essere lasciato solo con la frase “guarda e arrangiati”.\n\n## Giorni 2-3: fai domande utili\n\nDomande:\n\n- \"Dove trovo questo materiale?\"\n- \"Come preferite che venga preparato il tavolo?\"\n- \"A chi devo chiedere se ho un dubbio?\"\n- \"Qual e la priorita adesso?\"\n- \"Questa cosa si fa sempre cosi qui?\"\n\n## Giorni 4-5: ripeti con ordine\n\nNon cercare di fare mille cose insieme.\n\nConcentrati su:\n\n- arrivare puntuale;\n- ricordare i nomi;\n- tenere la postazione in ordine;\n- fare bene le mansioni assegnate;\n- chiedere prima di improvvisare;\n- ascoltare correzioni.\n\n## Giorni 6-7: chiedi feedback\n\nFrase semplice:\n\n\"In questi primi giorni cosa posso migliorare?\"\n\nOppure:\n\n\"C'e qualcosa che devo fare in modo diverso?\"\n\nChi chiede feedback nel modo giusto dimostra maturita.\n\n## Regola risto-lab\n\nNei primi giorni vincono tre parole: osserva, chiedi, ripeti.",
+      "recommended_minutes": 10,
+      "projector_pages": [
+        {
+          "title": "23.6 Il primo giorno",
+          "body": "Arrivare in anticipo ragionevole, sapere a chi presentarsi, portare ciò che è stato richiesto, osservare planimetria e procedure, prendere appunti e chiedere conferma.\nIl nuovo lavoratore non deve essere lasciato solo con la frase “guarda e arrangiati”."
+        },
+        {
+          "title": "Giorni 2-3: fai domande utili",
+          "body": "Domande:\n- \"Dove trovo questo materiale?\"\n- \"Come preferite che venga preparato il tavolo?\"\n- \"A chi devo chiedere se ho un dubbio?\"\n- \"Qual e la priorita adesso?\"\n- \"Questa cosa si fa sempre cosi qui?\""
+        },
+        {
+          "title": "Giorni 4-5: ripeti con ordine",
+          "body": "Non cercare di fare mille cose insieme.\nConcentrati su:\n- arrivare puntuale;\n- ricordare i nomi;\n- tenere la postazione in ordine;\n- fare bene le mansioni assegnate;\n- chiedere prima di improvvisare;\n- ascoltare correzioni."
+        },
+        {
+          "title": "Giorni 6-7: chiedi feedback",
+          "body": "Frase semplice:  \"In questi primi giorni cosa posso migliorare?\"  Oppure:  \"C'e qualcosa che devo fare in modo diverso?\"  Chi chiede feedback nel modo giusto dimostra maturita."
+        },
+        {
+          "title": "Regola risto-lab",
+          "body": "Nei primi giorni vincono tre parole: osserva, chiedi, ripeti."
+        }
+      ]
+    },
+    {
+      "id": "res-u23-checklist",
+      "title": "Preparazione del colloquio e controllo del CV",
+      "description": "Controllo da stampare e usare prima della simulazione. Il modello non richiede documenti, informazioni sanitarie o altri dati sensibili.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-23"
+      ],
+      "topics": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "c76936e7c922d1022ee8cfd4677f2dee700143bc863e741eeb4281fcecbd4d5c",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 23",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u23-checklist",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "c76936e7c922d1022ee8cfd4677f2dee700143bc863e741eeb4281fcecbd4d5c",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "colloquio",
+        "CV",
+        "curriculum vitae",
+        "lavoro",
+        "interview",
+        "onboarding",
+        "presentazione",
+        "candidatura"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u23-checklist-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "c76936e7c922d1022ee8cfd4677f2dee700143bc863e741eeb4281fcecbd4d5c",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u23-checklist-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "CHECKLIST",
+      "body": "## Il giorno prima\n\n- Ho controllato il nome del locale.\n- Ho guardato che tipo di locale e.\n- Ho controllato indirizzo e percorso.\n- Ho preparato la mia presentazione.\n- Ho preparato la mia disponibilita.\n- Ho preparato vestiti semplici e puliti.\n- Ho salvato il numero o il contatto del locale.\n\n## Durante il colloquio\n\n- Saluto con educazione.\n- Parlo in modo semplice.\n- Dico la verita sulla mia esperienza.\n- Spiego la mia disponibilita.\n- Chiedo se c'e affiancamento.\n- Ringrazio alla fine.\n\n## Controlla il tuo lavoro\n\n- Il mio CV è chiaro e veritiero.\n- Mi presento fuori dagli orari di punta.\n- Chiedo condizioni e referente della prova.\n- Valuto ruolo, orari, contratto e formazione.",
+      "reading": "## Il giorno prima\n\n- Ho controllato il nome del locale.\n- Ho guardato che tipo di locale e.\n- Ho controllato indirizzo e percorso.\n- Ho preparato la mia presentazione.\n- Ho preparato la mia disponibilita.\n- Ho preparato vestiti semplici e puliti.\n- Ho salvato il numero o il contatto del locale.\n\n## Durante il colloquio\n\n- Saluto con educazione.\n- Parlo in modo semplice.\n- Dico la verita sulla mia esperienza.\n- Spiego la mia disponibilita.\n- Chiedo se c'e affiancamento.\n- Ringrazio alla fine.\n\n## Controlla il tuo lavoro\n\n- Il mio CV è chiaro e veritiero.\n- Mi presento fuori dagli orari di punta.\n- Chiedo condizioni e referente della prova.\n- Valuto ruolo, orari, contratto e formazione.",
+      "recommended_minutes": 5,
+      "projector_pages": [
+        {
+          "title": "Il giorno prima",
+          "body": "- Ho controllato il nome del locale.\n- Ho guardato che tipo di locale e.\n- Ho controllato indirizzo e percorso.\n- Ho preparato la mia presentazione.\n- Ho preparato la mia disponibilita.\n- Ho preparato vestiti semplici e puliti.\n- Ho salvato il numero o il contatto del locale."
+        },
+        {
+          "title": "Durante il colloquio",
+          "body": "- Saluto con educazione.\n- Parlo in modo semplice.\n- Dico la verita sulla mia esperienza.\n- Spiego la mia disponibilita.\n- Chiedo se c'e affiancamento.\n- Ringrazio alla fine."
+        },
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "- Il mio CV è chiaro e veritiero.\n- Mi presento fuori dagli orari di punta.\n- Chiedo condizioni e referente della prova.\n- Valuto ruolo, orari, contratto e formazione."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Il giorno prima",
+          "items": [
+            "Ho controllato il nome del locale.",
+            "Ho guardato che tipo di locale e.",
+            "Ho controllato indirizzo e percorso.",
+            "Ho preparato la mia presentazione.",
+            "Ho preparato la mia disponibilita.",
+            "Ho preparato vestiti semplici e puliti.",
+            "Ho salvato il numero o il contatto del locale."
+          ]
+        },
+        {
+          "title": "Durante il colloquio",
+          "items": [
+            "Saluto con educazione.",
+            "Parlo in modo semplice.",
+            "Dico la verita sulla mia esperienza.",
+            "Spiego la mia disponibilita.",
+            "Chiedo se c'e affiancamento.",
+            "Ringrazio alla fine."
+          ]
+        },
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Il mio CV è chiaro e veritiero.",
+            "Mi presento fuori dagli orari di punta.",
+            "Chiedo condizioni e referente della prova.",
+            "Valuto ruolo, orari, contratto e formazione."
+          ]
+        }
+      ],
+      "asset_filename": "u23-checklist.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u24-guide",
+      "title": "Una simulazione: obiettivo, ruoli e debrief",
+      "description": "Istruzioni brevi per scegliere uno scenario canonico, distribuire ruoli e informazioni e condurre il confronto. Le schede sottostanti richiamano attività già approvate.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-24"
+      ],
+      "topics": [
+        "simulazione",
+        "role play",
+        "scenario",
+        "osservatore",
+        "debrief",
+        "feedback",
+        "pratica"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "dbd027da2cc9699475de39b6be5234cd1463ec63007e86f5d83519c3a8d84bc3",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 24",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u24-guide",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "dbd027da2cc9699475de39b6be5234cd1463ec63007e86f5d83519c3a8d84bc3",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "simulazione",
+        "role play",
+        "scenario",
+        "osservatore",
+        "debrief",
+        "feedback",
+        "pratica"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u24-guide-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "dbd027da2cc9699475de39b6be5234cd1463ec63007e86f5d83519c3a8d84bc3",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u24-guide-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [
+        "res-u10-roleplay",
+        "res-u8-activity",
+        "res-u12-activity",
+        "res-u11-activity",
+        "res-u13-activity",
+        "res-u14-activity",
+        "res-u15-activity",
+        "res-u20-activity",
+        "res-u21-activity",
+        "res-u22-activity"
+      ],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 24.1 Che cosa rende utile una simulazione\n\nUna simulazione è utile quando misura un comportamento previsto: accogliere, registrare, servire, comunicare o gestire un problema. Inserire troppi imprevisti trasforma l’attività in confusione e rende difficile capire che cosa è stato appreso.\n\n## 24.3 Il ruolo dell’osservatore\n\nL’osservatore non cerca errori per giudicare. Registra fatti: parole usate, ordine dei passaggi, richieste di aiuto, controlli e conseguenze. Deve distinguere ciò che vede da ciò che interpreta.\n\n## 24.4 Il debriefing\n\nIl debriefing trasforma l’esperienza in apprendimento. Ordine consigliato: parla chi ha agito; poi osservatori; infine formatore. Domande: che cosa volevi ottenere, che cosa è accaduto, che cosa rifaresti, quale principio colleghi al manuale?\n\n## 24.6 Sicurezza psicologica\n\nLa persona deve poter provare senza essere ridicolizzata. La simulazione non deve riprodurre molestie reali in modo traumatico né obbligare qualcuno a raccontare esperienze personali. Il formatore stabilisce limiti e possibilità di interrompere.",
+      "reading": "## 24.1 Che cosa rende utile una simulazione\n\nUna simulazione è utile quando misura un comportamento previsto: accogliere, registrare, servire, comunicare o gestire un problema. Inserire troppi imprevisti trasforma l’attività in confusione e rende difficile capire che cosa è stato appreso.\n\n## 24.3 Il ruolo dell’osservatore\n\nL’osservatore non cerca errori per giudicare. Registra fatti: parole usate, ordine dei passaggi, richieste di aiuto, controlli e conseguenze. Deve distinguere ciò che vede da ciò che interpreta.\n\n## 24.4 Il debriefing\n\nIl debriefing trasforma l’esperienza in apprendimento. Ordine consigliato: parla chi ha agito; poi osservatori; infine formatore. Domande: che cosa volevi ottenere, che cosa è accaduto, che cosa rifaresti, quale principio colleghi al manuale?\n\n## 24.6 Sicurezza psicologica\n\nLa persona deve poter provare senza essere ridicolizzata. La simulazione non deve riprodurre molestie reali in modo traumatico né obbligare qualcuno a raccontare esperienze personali. Il formatore stabilisce limiti e possibilità di interrompere.",
+      "recommended_minutes": 10,
+      "projector_pages": [
+        {
+          "title": "24.1 Che cosa rende utile una simulazione",
+          "body": "Una simulazione è utile quando misura un comportamento previsto: accogliere, registrare, servire, comunicare o gestire un problema.\nInserire troppi imprevisti trasforma l’attività in confusione e rende difficile capire che cosa è stato appreso."
+        },
+        {
+          "title": "24.3 Il ruolo dell’osservatore",
+          "body": "L’osservatore non cerca errori per giudicare.\nRegistra fatti: parole usate, ordine dei passaggi, richieste di aiuto, controlli e conseguenze.\nDeve distinguere ciò che vede da ciò che interpreta."
+        },
+        {
+          "title": "24.4 Il debriefing",
+          "body": "Il debriefing trasforma l’esperienza in apprendimento.\nOrdine consigliato: parla chi ha agito; poi osservatori; infine formatore.\nDomande: che cosa volevi ottenere, che cosa è accaduto, che cosa rifaresti, quale principio colleghi al manuale?"
+        },
+        {
+          "title": "24.6 Sicurezza psicologica",
+          "body": "La persona deve poter provare senza essere ridicolizzata.\nLa simulazione non deve riprodurre molestie reali in modo traumatico né obbligare qualcuno a raccontare esperienze personali.\nIl formatore stabilisce limiti e possibilità di interrompere."
+        }
+      ]
+    },
+    {
+      "id": "res-u24-observer",
+      "title": "Osservazione e feedback della simulazione",
+      "description": "Scheda osservatore riutilizzabile: fatti, azioni riuscite, una correzione e prossimo tentativo. Annotazioni solo su carta, senza archivio di valutazioni.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-24"
+      ],
+      "topics": [
+        "simulazione",
+        "role play",
+        "scenario",
+        "osservatore",
+        "debrief",
+        "feedback",
+        "pratica"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "17ca1f27851cf803f9cbb9c68192731fbb7b4f2f674d3bb77a85ac2499252bfc",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 24",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u24-observer",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "17ca1f27851cf803f9cbb9c68192731fbb7b4f2f674d3bb77a85ac2499252bfc",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "simulazione",
+        "role play",
+        "scenario",
+        "osservatore",
+        "debrief",
+        "feedback",
+        "pratica"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u24-observer-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "17ca1f27851cf803f9cbb9c68192731fbb7b4f2f674d3bb77a85ac2499252bfc",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u24-observer-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "OBSERVER_SHEET",
+      "body": "## Comportamenti osservabili\n\n- Comunicazione chiara e tono professionale\n- Sequenza concordata rispettata\n- Ospite riconosciuto e richiesta confermata\n- Informazione verificata prima di promettere\n- Colleghi informati con una consegna chiara\n- Materiali e percorso gestiti in sicurezza\n- Referente coinvolto quando necessario\n- Controllo del risultato e prossimo passo esplicito\n\n## Feedback dopo la prova\n\n- OSSERVATO\n- COSA HA FUNZIONATO\n- COSA MIGLIORARE\n- PROSSIMO TENTATIVO\n\n## Vincoli comuni\n\nUsa dati fittizi, menu didattici e richieste dichiarate. Ingredienti e allergeni si verificano con la documentazione e il referente previsto. Non usare vetro rotto, liquidi caldi o aggressioni reali. È possibile interrompere la prova per sicurezza. Osserva comportamenti, non personalità.\n\n## Controlla il tuo lavoro\n\n- Definisco un obiettivo osservabile.\n- Assegno ruoli e informazioni.\n- Uso criteri, non impressioni.\n- Conduco un debriefing rispettoso.",
+      "reading": "## Comportamenti osservabili\n\n- Comunicazione chiara e tono professionale\n- Sequenza concordata rispettata\n- Ospite riconosciuto e richiesta confermata\n- Informazione verificata prima di promettere\n- Colleghi informati con una consegna chiara\n- Materiali e percorso gestiti in sicurezza\n- Referente coinvolto quando necessario\n- Controllo del risultato e prossimo passo esplicito\n\n## Feedback dopo la prova\n\n- OSSERVATO\n- COSA HA FUNZIONATO\n- COSA MIGLIORARE\n- PROSSIMO TENTATIVO\n\n## Vincoli comuni\n\nUsa dati fittizi, menu didattici e richieste dichiarate. Ingredienti e allergeni si verificano con la documentazione e il referente previsto. Non usare vetro rotto, liquidi caldi o aggressioni reali. È possibile interrompere la prova per sicurezza. Osserva comportamenti, non personalità.\n\n## Controlla il tuo lavoro\n\n- Definisco un obiettivo osservabile.\n- Assegno ruoli e informazioni.\n- Uso criteri, non impressioni.\n- Conduco un debriefing rispettoso.",
+      "recommended_minutes": 15,
+      "projector_pages": [
+        {
+          "title": "Comportamenti osservabili",
+          "body": "Comunicazione chiara e tono professionale\nSequenza concordata rispettata\nOspite riconosciuto e richiesta confermata"
+        },
+        {
+          "title": "Comportamenti osservabili",
+          "body": "Informazione verificata prima di promettere\nColleghi informati con una consegna chiara\nMateriali e percorso gestiti in sicurezza"
+        },
+        {
+          "title": "Comportamenti osservabili",
+          "body": "Referente coinvolto quando necessario\nControllo del risultato e prossimo passo esplicito"
+        },
+        {
+          "title": "Feedback dopo la prova",
+          "body": "- OSSERVATO\n- COSA HA FUNZIONATO\n- COSA MIGLIORARE\n- PROSSIMO TENTATIVO"
+        },
+        {
+          "title": "Vincoli comuni",
+          "body": "Usa dati fittizi, menu didattici e richieste dichiarate.\nIngredienti e allergeni si verificano con la documentazione e il referente previsto.\nNon usare vetro rotto, liquidi caldi o aggressioni reali.\nÈ possibile interrompere la prova per sicurezza.\nOsserva comportamenti, non personalità."
+        },
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "- Definisco un obiettivo osservabile.\n- Assegno ruoli e informazioni.\n- Uso criteri, non impressioni.\n- Conduco un debriefing rispettoso."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Comportamenti osservabili",
+          "items": [
+            "Comunicazione chiara e tono professionale",
+            "Sequenza concordata rispettata",
+            "Ospite riconosciuto e richiesta confermata",
+            "Informazione verificata prima di promettere",
+            "Colleghi informati con una consegna chiara",
+            "Materiali e percorso gestiti in sicurezza",
+            "Referente coinvolto quando necessario",
+            "Controllo del risultato e prossimo passo esplicito"
+          ]
+        },
+        {
+          "title": "Feedback dopo la prova",
+          "items": [
+            "OSSERVATO",
+            "COSA HA FUNZIONATO",
+            "COSA MIGLIORARE",
+            "PROSSIMO TENTATIVO"
+          ]
+        },
+        {
+          "title": "Vincoli comuni",
+          "items": [
+            "Usa dati fittizi, menu didattici e richieste dichiarate. Ingredienti e allergeni si verificano con la documentazione e il referente previsto. Non usare vetro rotto, liquidi caldi o aggressioni reali. È possibile interrompere la prova per sicurezza. Osserva comportamenti, non personalità."
+          ]
+        },
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Definisco un obiettivo osservabile.",
+            "Assegno ruoli e informazioni.",
+            "Uso criteri, non impressioni.",
+            "Conduco un debriefing rispettoso."
+          ]
+        }
+      ],
+      "asset_filename": "u24-observer.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u25-guide",
+      "title": "Preparare, mostrare e far ripetere",
+      "description": "Preparazione docente del laboratorio. Scegli una scheda in base ad attrezzatura, obiettivo e tempo; la versione su carta allena la sequenza, non dimostra l’abilità manuale.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-25"
+      ],
+      "topics": [
+        "laboratorio",
+        "esercitazione",
+        "attrezzatura",
+        "pratica",
+        "materiali",
+        "dimostrazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "ace58db1c09689610c7b17aec669a3b27412e92a377d4cfd91cbf8287dc6d893",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 25",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u25-guide",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "ace58db1c09689610c7b17aec669a3b27412e92a377d4cfd91cbf8287dc6d893",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "laboratorio",
+        "esercitazione",
+        "attrezzatura",
+        "pratica",
+        "materiali",
+        "dimostrazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u25-guide-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "ace58db1c09689610c7b17aec669a3b27412e92a377d4cfd91cbf8287dc6d893",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u25-guide-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [
+        "res-mep-checklist",
+        "res-u5-activity",
+        "res-u7-activity",
+        "res-u9-activity",
+        "res-u13-activity",
+        "res-u12-activity",
+        "res-u14-activity",
+        "res-u8-activity",
+        "res-u22-activity",
+        "res-u21-activity",
+        "res-u15-activity"
+      ],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 25.2 Dimostrare in modo visibile\n\nMostrare prima il risultato finale, nominare gli strumenti, eseguire lentamente, evidenziare i punti critici e ripetere a velocità normale. Il formatore deve posizionarsi affinché tutti vedano e non parlare mentre svolge un gesto invisibile.\n\n## 25.3 Pratica guidata e autonoma\n\nNella pratica guidata il formatore fornisce indicazioni immediate. Nella prova autonoma osserva senza intervenire a ogni passaggio, salvo rischio. La differenza permette di capire se la persona sa agire senza aiuto.\n\n## 25.5 Materiali realistici e sicuri\n\nIn fase iniziale si usano piatti vuoti, acqua al posto di bevande calde, bottiglie chiuse e prodotti inerti. Il realismo aumenta soltanto quando il controllo è sufficiente. L’obiettivo non è impressionare il gruppo, ma costruire competenza.\n\n## 25.6 Valutare durante il laboratorio\n\nLa valutazione formativa avviene mentre si impara: il formatore osserva, dà feedback e consente una nuova prova. I criteri devono essere comunicati prima: preparazione, sequenza, sicurezza, controllo finale e comunicazione.",
+      "reading": "## 25.2 Dimostrare in modo visibile\n\nMostrare prima il risultato finale, nominare gli strumenti, eseguire lentamente, evidenziare i punti critici e ripetere a velocità normale. Il formatore deve posizionarsi affinché tutti vedano e non parlare mentre svolge un gesto invisibile.\n\n## 25.3 Pratica guidata e autonoma\n\nNella pratica guidata il formatore fornisce indicazioni immediate. Nella prova autonoma osserva senza intervenire a ogni passaggio, salvo rischio. La differenza permette di capire se la persona sa agire senza aiuto.\n\n## 25.5 Materiali realistici e sicuri\n\nIn fase iniziale si usano piatti vuoti, acqua al posto di bevande calde, bottiglie chiuse e prodotti inerti. Il realismo aumenta soltanto quando il controllo è sufficiente. L’obiettivo non è impressionare il gruppo, ma costruire competenza.\n\n## 25.6 Valutare durante il laboratorio\n\nLa valutazione formativa avviene mentre si impara: il formatore osserva, dà feedback e consente una nuova prova. I criteri devono essere comunicati prima: preparazione, sequenza, sicurezza, controllo finale e comunicazione.",
+      "recommended_minutes": 10,
+      "projector_pages": [
+        {
+          "title": "25.2 Dimostrare in modo visibile",
+          "body": "Mostrare prima il risultato finale, nominare gli strumenti, eseguire lentamente, evidenziare i punti critici e ripetere a velocità normale.\nIl formatore deve posizionarsi affinché tutti vedano e non parlare mentre svolge un gesto invisibile."
+        },
+        {
+          "title": "25.3 Pratica guidata e autonoma",
+          "body": "Nella pratica guidata il formatore fornisce indicazioni immediate.\nNella prova autonoma osserva senza intervenire a ogni passaggio, salvo rischio.\nLa differenza permette di capire se la persona sa agire senza aiuto."
+        },
+        {
+          "title": "25.5 Materiali realistici e sicuri",
+          "body": "In fase iniziale si usano piatti vuoti, acqua al posto di bevande calde, bottiglie chiuse e prodotti inerti.\nIl realismo aumenta soltanto quando il controllo è sufficiente.\nL’obiettivo non è impressionare il gruppo, ma costruire competenza."
+        },
+        {
+          "title": "25.6 Valutare durante il laboratorio",
+          "body": "La valutazione formativa avviene mentre si impara: il formatore osserva, dà feedback e consente una nuova prova.\nI criteri devono essere comunicati prima: preparazione, sequenza, sicurezza, controllo finale e comunicazione."
+        }
+      ]
+    },
+    {
+      "id": "res-u25-observer",
+      "title": "Checklist istruttore del laboratorio",
+      "description": "Sette punti per preparazione, osservazione e debrief. Durate e attrezzatura sono precisate nelle schede dei singoli laboratori.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-25"
+      ],
+      "topics": [
+        "laboratorio",
+        "esercitazione",
+        "attrezzatura",
+        "pratica",
+        "materiali",
+        "dimostrazione"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "2733628282746527ce90a875a2a4cd3cbcb520af55c91915e9b05efb4d9b97a6",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 25",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u25-observer",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "2733628282746527ce90a875a2a4cd3cbcb520af55c91915e9b05efb4d9b97a6",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "laboratorio",
+        "esercitazione",
+        "attrezzatura",
+        "pratica",
+        "materiali",
+        "dimostrazione"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u25-observer-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "2733628282746527ce90a875a2a4cd3cbcb520af55c91915e9b05efb4d9b97a6",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u25-observer-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "LAB_CHECKLIST",
+      "body": "## Prima della prova\n\n- Obiettivo osservabile e criteri comunicati\n- Materiali e spazio controllati\n- Dimostrazione visibile\n\n## Durante e dopo\n\n- Sequenza e sicurezza\n- Pratica guidata e autonoma distinte\n- Controllo finale e comunicazione\n- Feedback e nuova prova\n\n## Controlla il tuo lavoro\n\n- Scrivo obiettivi osservabili.\n- Mostro risultato e passaggi.\n- Distinguo pratica guidata e autonoma.\n- Adatto supporti senza abbassare lo standard.",
+      "reading": "## Prima della prova\n\n- Obiettivo osservabile e criteri comunicati\n- Materiali e spazio controllati\n- Dimostrazione visibile\n\n## Durante e dopo\n\n- Sequenza e sicurezza\n- Pratica guidata e autonoma distinte\n- Controllo finale e comunicazione\n- Feedback e nuova prova\n\n## Controlla il tuo lavoro\n\n- Scrivo obiettivi osservabili.\n- Mostro risultato e passaggi.\n- Distinguo pratica guidata e autonoma.\n- Adatto supporti senza abbassare lo standard.",
+      "recommended_minutes": 15,
+      "projector_pages": [
+        {
+          "title": "Prima della prova",
+          "body": "- Obiettivo osservabile e criteri comunicati\n- Materiali e spazio controllati\n- Dimostrazione visibile"
+        },
+        {
+          "title": "Durante e dopo",
+          "body": "- Sequenza e sicurezza\n- Pratica guidata e autonoma distinte\n- Controllo finale e comunicazione\n- Feedback e nuova prova"
+        },
+        {
+          "title": "Controlla il tuo lavoro",
+          "body": "- Scrivo obiettivi osservabili.\n- Mostro risultato e passaggi.\n- Distinguo pratica guidata e autonoma.\n- Adatto supporti senza abbassare lo standard."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Prima della prova",
+          "items": [
+            "Obiettivo osservabile e criteri comunicati",
+            "Materiali e spazio controllati",
+            "Dimostrazione visibile"
+          ]
+        },
+        {
+          "title": "Durante e dopo",
+          "items": [
+            "Sequenza e sicurezza",
+            "Pratica guidata e autonoma distinte",
+            "Controllo finale e comunicazione",
+            "Feedback e nuova prova"
+          ]
+        },
+        {
+          "title": "Controlla il tuo lavoro",
+          "items": [
+            "Scrivo obiettivi osservabili.",
+            "Mostro risultato e passaggi.",
+            "Distinguo pratica guidata e autonoma.",
+            "Adatto supporti senza abbassare lo standard."
+          ]
+        }
+      ],
+      "asset_filename": "u25-observer.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u26-intro",
+      "title": "Verifica finale: conoscenze, pratica e riflessione",
+      "description": "Struttura trasparente, criteri comunicati prima e possibilità di adattare le consegne. Nessuna percentuale o soglia di promozione viene imposta.",
+      "type": "TEXT",
+      "unit_ids": [
+        "unit-26"
+      ],
+      "topics": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "e56e5ac3e81c5fc9de3ea9b388c2e70e8b9704c1dff2dfb4df5fac509fafda3f",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 26",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web",
+      "visibility": "STUDENT",
+      "slug": "res-u26-intro",
+      "resource_type": "TEXT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "e56e5ac3e81c5fc9de3ea9b388c2e70e8b9704c1dff2dfb4df5fac509fafda3f",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u26-intro-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "e56e5ac3e81c5fc9de3ea9b388c2e70e8b9704c1dff2dfb4df5fac509fafda3f",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u26-intro-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "TEXT",
+      "body": "## 26.1 Che cosa verificare\n\nIl manuale lavora su tre dimensioni: sapere, saper fare e saper essere. La prova teorica può verificare termini e ragionamento; la prova pratica osserva preparazione, sequenza, sicurezza, comunicazione e controllo finale.\n\n## 26.4 Errori critici\n\nAlcuni errori richiedono l’interruzione della prova: rischio fisico, gestione imprudente di allergeni, contaminazione grave, comportamento aggressivo o violazione intenzionale di una procedura di sicurezza. L’interruzione deve essere spiegata e seguita da recupero formativo quando possibile.\n\n## 26.5 Equità e accessibilità\n\nLa prova non deve misurare la velocità di lettura se l’obiettivo è apparecchiare. Si possono leggere le consegne, usare immagini o concedere tempo aggiuntivo, mantenendo invariati i criteri professionali. Cedefop evidenzia il ruolo centrale dei risultati di apprendimento nella valutazione della formazione professionale.\n\n## 26.7 Feedback e piano di miglioramento\n\nIl risultato finale deve indicare punti solidi, priorità di miglioramento, esercizio consigliato e data di eventuale recupero. “Insufficiente” senza indicazioni non completa la funzione formativa.\n\n## Finalità didattica\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Non è prevista una soglia automatica di promozione: il docente descrive evidenze, punti solidi e pratica consigliata. Per la verifica completa usa il modello da 120 minuti; la proposta da 60 minuti è una selezione diagnostica guidata.",
+      "reading": "## 26.1 Che cosa verificare\n\nIl manuale lavora su tre dimensioni: sapere, saper fare e saper essere. La prova teorica può verificare termini e ragionamento; la prova pratica osserva preparazione, sequenza, sicurezza, comunicazione e controllo finale.\n\n## 26.4 Errori critici\n\nAlcuni errori richiedono l’interruzione della prova: rischio fisico, gestione imprudente di allergeni, contaminazione grave, comportamento aggressivo o violazione intenzionale di una procedura di sicurezza. L’interruzione deve essere spiegata e seguita da recupero formativo quando possibile.\n\n## 26.5 Equità e accessibilità\n\nLa prova non deve misurare la velocità di lettura se l’obiettivo è apparecchiare. Si possono leggere le consegne, usare immagini o concedere tempo aggiuntivo, mantenendo invariati i criteri professionali. Cedefop evidenzia il ruolo centrale dei risultati di apprendimento nella valutazione della formazione professionale.\n\n## 26.7 Feedback e piano di miglioramento\n\nIl risultato finale deve indicare punti solidi, priorità di miglioramento, esercizio consigliato e data di eventuale recupero. “Insufficiente” senza indicazioni non completa la funzione formativa.\n\n## Finalità didattica\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Non è prevista una soglia automatica di promozione: il docente descrive evidenze, punti solidi e pratica consigliata. Per la verifica completa usa il modello da 120 minuti; la proposta da 60 minuti è una selezione diagnostica guidata.",
+      "recommended_minutes": 5,
+      "projector_pages": [
+        {
+          "title": "26.1 Che cosa verificare",
+          "body": "Il manuale lavora su tre dimensioni: sapere, saper fare e saper essere.\nLa prova teorica può verificare termini e ragionamento; la prova pratica osserva preparazione, sequenza, sicurezza, comunicazione e controllo finale."
+        },
+        {
+          "title": "26.4 Errori critici",
+          "body": "Alcuni errori richiedono l’interruzione della prova: rischio fisico, gestione imprudente di allergeni, contaminazione grave, comportamento aggressivo o violazione intenzionale di una procedura di sicurezza.\nL’interruzione deve essere spiegata e seguita da recupero formativo quando possibile."
+        },
+        {
+          "title": "26.5 Equità e accessibilità",
+          "body": "La prova non deve misurare la velocità di lettura se l’obiettivo è apparecchiare.\nSi possono leggere le consegne, usare immagini o concedere tempo aggiuntivo, mantenendo invariati i criteri professionali.\nCedefop evidenzia il ruolo centrale dei risultati di apprendimento nella valutazione della formazione professionale."
+        },
+        {
+          "title": "26.7 Feedback e piano di miglioramento",
+          "body": "Il risultato finale deve indicare punti solidi, priorità di miglioramento, esercizio consigliato e data di eventuale recupero.\n“Insufficiente” senza indicazioni non completa la funzione formativa."
+        },
+        {
+          "title": "Finalità didattica",
+          "body": "La verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante.\nNon è prevista una soglia automatica di promozione: il docente descrive evidenze, punti solidi e pratica consigliata.\nPer la verifica completa usa il modello da 120 minuti; la proposta da 60 minuti è una selezione diagnostica guidata."
+        }
+      ]
+    },
+    {
+      "id": "res-u26-quiz",
+      "title": "Verifica delle conoscenze · 30 domande",
+      "description": "30 domande esistenti su ruolo, brigata, mise en place, preparazione, comunicazione, servizio, igiene e gestione degli imprevisti. Nessun punteggio viene archiviato.",
+      "type": "QUIZ",
+      "unit_ids": [
+        "unit-26"
+      ],
+      "topics": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "3bf0874ab369662679cc6522d6d5f6a94336a67d1e5cb20a25a1da0ab32316c4",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 26",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u26-quiz",
+      "resource_type": "QUIZ",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "3bf0874ab369662679cc6522d6d5f6a94336a67d1e5cb20a25a1da0ab32316c4",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u26-quiz-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "3bf0874ab369662679cc6522d6d5f6a94336a67d1e5cb20a25a1da0ab32316c4",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u26-quiz-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "ASSESSMENT",
+      "body": "## Uso della verifica\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Trenta quesiti selezionati dalle fonti interne e dai quiz approvati; confrontare le scelte con pratica e osservazione, senza una soglia automatica.",
+      "reading": "## Uso della verifica\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Trenta quesiti selezionati dalle fonti interne e dai quiz approvati; confrontare le scelte con pratica e osservazione, senza una soglia automatica.",
+      "recommended_minutes": 20,
+      "questions": [
+        {
+          "question": "Un ristorante vende solo cibo?",
+          "options": [
+            "Si.",
+            "No, vende anche accoglienza, servizio, ordine e esperienza.",
+            "Solo nei locali eleganti."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Il menu influenza il lavoro di sala?",
+          "options": [
+            "No, riguarda solo la cucina.",
+            "Solo se il cliente lo chiede.",
+            "Si, per posate, bicchieri, tempi e spiegazioni."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Puntualita significa:",
+          "options": [
+            "Avvisare dopo il ritardo.",
+            "Arrivare quando si vuole.",
+            "Essere pronti a iniziare il turno."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Il responsabile di sala:",
+          "options": [
+            "Coordina il servizio e gestisce priorita.",
+            "E sempre un cliente.",
+            "Non deve sapere cosa succede."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Il commis:",
+          "options": [
+            "Supporta il servizio e impara.",
+            "Decide sempre tutto da solo.",
+            "Non lavora con la sala."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "L'office serve a:",
+          "options": [
+            "Supportare il servizio e organizzare materiali.",
+            "Accogliere sempre i clienti.",
+            "Preparare solo cocktail."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Un bicchiere con scheggiatura:",
+          "options": [
+            "Non deve andare al cliente.",
+            "Si usa se il servizio e pieno.",
+            "Si mette solo ai tavoli esterni."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Il vassoio deve essere:",
+          "options": [
+            "Pulito e caricato con equilibrio.",
+            "Sempre pienissimo.",
+            "Usato correndo."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "La comanda deve essere:",
+          "options": [
+            "Solo a memoria.",
+            "Chiara e precisa.",
+            "Confusa ma veloce."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "id": "g4-q1",
+          "question": "Che cosa significa mise en place?",
+          "options": [
+            "Preparare prima tutto quello che serve per il servizio.",
+            "Portare il conto al cliente.",
+            "Scegliere il nome del ristorante."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "id": "g4-q3",
+          "question": "Dove va di solito la forchetta in una mise en place base?",
+          "options": [
+            "Sotto il bicchiere.",
+            "Sopra la sedia.",
+            "A sinistra."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Sei occupato e un cliente entra: quale risposta mantiene il contatto?",
+          "options": [
+            "Dire un’attesa precisa senza verificare",
+            "Ignorarlo fino a quando sei libero",
+            "Riconoscerlo e spiegare che arrivi appena concluso il passaggio"
+          ],
+          "answer": 2,
+          "explanation": "La presenza viene riconosciuta senza una promessa impossibile."
+        },
+        {
+          "question": "Il tavolo non è pronto: cosa dici?",
+          "options": [
+            "Verifico il tempo necessario e torno da voi",
+            "Cinque minuti, anche se non lo sai",
+            "È colpa della cucina"
+          ],
+          "answer": 0,
+          "explanation": "Il tempo va verificato e aggiornato, non inventato."
+        },
+        {
+          "question": "Non hai capito una richiesta",
+          "options": [
+            "Fingi di aver capito",
+            "Parli più forte senza fare domande",
+            "Chiedi di ripetere con calma e una frase semplice"
+          ],
+          "answer": 2,
+          "explanation": "Verificare la comprensione evita risposte basate su supposizioni."
+        },
+        {
+          "question": "Il cliente è nervoso per l’attesa",
+          "options": [
+            "Lo ignori",
+            "Rispondi con lo stesso tono",
+            "Mantieni calma, verifichi e coinvolgi il responsabile se serve"
+          ],
+          "answer": 2,
+          "explanation": "La calma e il passaggio corretto delle informazioni sostengono il servizio."
+        },
+        {
+          "question": "Dopo aver usato il telefono devi servire bicchieri puliti",
+          "options": [
+            "Continui perché hai fretta",
+            "Applichi la procedura di igiene delle mani prima di riprendere",
+            "Usi il bordo del bicchiere per trasportarlo"
+          ],
+          "answer": 1,
+          "explanation": "Telefono e materiali puliti non vanno collegati da mani non trattate secondo procedura."
+        },
+        {
+          "question": "Trovi detergente accanto alle tazze pulite",
+          "options": [
+            "Lo usi per profumarle",
+            "Lo ignori perché non è un alimento",
+            "Identifichi un possibile pericolo chimico e segnali secondo procedura"
+          ],
+          "answer": 2,
+          "explanation": "I prodotti chimici non devono contaminare materiali a contatto con alimenti e bevande."
+        },
+        {
+          "question": "Un controllo non è stato eseguito: quale registrazione fai?",
+          "options": [
+            "Segnali il controllo mancante senza inventare dati",
+            "Copi il valore di ieri",
+            "Scrivi un valore plausibile"
+          ],
+          "answer": 0,
+          "explanation": "La registrazione deve corrispondere a un controllo reale."
+        },
+        {
+          "question": "Chi decide limiti critici e azioni per il tuo locale?",
+          "options": [
+            "Ogni nuovo operatore li inventa",
+            "Una risposta generica trovata online",
+            "Il piano e le procedure definiti per il locale, con le persone competenti"
+          ],
+          "answer": 2,
+          "explanation": "La lezione introduttiva non definisce un piano aziendale."
+        },
+        {
+          "question": "Muoversi bene in sala significa:",
+          "options": [
+            "Guardare lo spazio e muoversi con uno scopo.",
+            "Passare dove capita.",
+            "Correre sempre."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Prima di sbarazzare e utile:",
+          "options": [
+            "Non guardare il tavolo.",
+            "Chiedere o osservare se il cliente ha finito.",
+            "Togliere tutto subito."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Il riordino finale serve a:",
+          "options": [
+            "Preparare meglio il servizio successivo.",
+            "Perdere tempo.",
+            "Evitare di comunicare con il responsabile."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Durante il servizio la comunicazione deve essere:",
+          "options": [
+            "Lunga e confusa.",
+            "Sempre aggressiva.",
+            "Breve, chiara e utile."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Se fai un errore:",
+          "options": [
+            "Dai subito colpa al collega.",
+            "Lo nascondi.",
+            "Lo riconosci e avvisi chi deve sapere."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "In un momento di stress e meglio:",
+          "options": [
+            "Correre senza guardare.",
+            "Capire la priorita e fare una cosa alla volta.",
+            "Smettere di comunicare."
+          ],
+          "answer": 1,
+          "explanation": null
+        },
+        {
+          "question": "Il feedback serve a:",
+          "options": [
+            "Dimostrare che non vali.",
+            "Evitare la pratica.",
+            "Migliorare un comportamento."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "A cosa serve il briefing prima del servizio?",
+          "options": [
+            "A sostituire il lavoro in sala.",
+            "A perdere tempo.",
+            "A comunicare informazioni importanti prima del turno."
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Se un cliente dichiara un'allergia, qual e la risposta piu professionale?",
+          "options": [
+            "\"Tranquillo, non c'e problema.\"",
+            "\"Non lo so, scelga altro.\"",
+            "\"Verifico subito con cucina o responsabile.\""
+          ],
+          "answer": 2,
+          "explanation": null
+        },
+        {
+          "question": "Perche e importante chiedere aiuto nel modo corretto?",
+          "options": [
+            "Per evitare errori e proteggere il servizio.",
+            "Per scaricare sempre il lavoro sugli altri.",
+            "Per mostrare che non sai fare nulla."
+          ],
+          "answer": 0,
+          "explanation": null
+        },
+        {
+          "question": "Prima di servire una tazza devi:",
+          "options": [
+            "Metterla sul banco anche sporca.",
+            "Controllare che sia pulita e corretta.",
+            "Servire senza guardare."
+          ],
+          "answer": 1,
+          "explanation": null
+        }
+      ],
+      "asset_filename": "u26-quiz.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u26-practice",
+      "title": "Prova pratica integrata di servizio",
+      "description": "Scenario composto dai passaggi richiesti nel brief e dalle attività canoniche collegate. La prova valuta integrazione; il docente comunica prima evento e criteri, interrompendo in caso di rischio.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-26"
+      ],
+      "topics": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "becfbcedd69d9dd909de30892dc8fbe472fd306fa1fdc1ba280b9f91e3258375",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 26",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u26-practice",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "becfbcedd69d9dd909de30892dc8fbe472fd306fa1fdc1ba280b9f91e3258375",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u26-practice-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "becfbcedd69d9dd909de30892dc8fbe472fd306fa1fdc1ba280b9f91e3258375",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u26-practice-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [
+        "res-u5-activity",
+        "res-u10-roleplay",
+        "res-u12-activity",
+        "res-u13-activity",
+        "res-u20-activity",
+        "res-u15-activity"
+      ],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "ASSESSMENT",
+      "body": "## Scenario integrato\n\nPrepara la postazione; accogli l’ospite; prendi l’ordine con una modifica; servi secondo lo standard concordato; affronta un solo imprevisto; concludi l’interazione professionalmente.\n\n## Ruoli e condizioni\n\nPartecipante, cliente, referente e osservatore. Sala didattica, menu dichiarato, materiali freddi e vuoti. Concordare prima criteri, ruolo e informazione disponibile; nessun dato di persone reali.\n\n## Procedura della prova\n\n- Preparazione della postazione\n- Accoglienza e verifica della richiesta\n- Comanda con una variante\n- Controllo e servizio\n- Un imprevisto scelto dalle schede già approvate\n- Chiusura dell’interazione e consegna\n- Osservazione, feedback e ripetizione mirata\n\n## Sicurezza e osservazione\n\nNon dedurre ingredienti o assenza di allergeni. Fermare l’attività non sicura e coinvolgere il referente secondo le procedure dichiarate. Il docente osserva sequenza, comunicazione, organizzazione e controllo, non la personalità. Usare la rubrica senza calcolare una promozione automatica.\n\n## Riflessione del partecipante\n\nChe cosa è successo? Che cosa ha funzionato? Che cosa va rinforzato? Quale prova ripetere?",
+      "reading": "## Scenario integrato\n\nPrepara la postazione; accogli l’ospite; prendi l’ordine con una modifica; servi secondo lo standard concordato; affronta un solo imprevisto; concludi l’interazione professionalmente.\n\n## Ruoli e condizioni\n\nPartecipante, cliente, referente e osservatore. Sala didattica, menu dichiarato, materiali freddi e vuoti. Concordare prima criteri, ruolo e informazione disponibile; nessun dato di persone reali.\n\n## Procedura della prova\n\n- Preparazione della postazione\n- Accoglienza e verifica della richiesta\n- Comanda con una variante\n- Controllo e servizio\n- Un imprevisto scelto dalle schede già approvate\n- Chiusura dell’interazione e consegna\n- Osservazione, feedback e ripetizione mirata\n\n## Sicurezza e osservazione\n\nNon dedurre ingredienti o assenza di allergeni. Fermare l’attività non sicura e coinvolgere il referente secondo le procedure dichiarate. Il docente osserva sequenza, comunicazione, organizzazione e controllo, non la personalità. Usare la rubrica senza calcolare una promozione automatica.\n\n## Riflessione del partecipante\n\nChe cosa è successo? Che cosa ha funzionato? Che cosa va rinforzato? Quale prova ripetere?",
+      "recommended_minutes": 25,
+      "projector_pages": [
+        {
+          "title": "Scenario integrato",
+          "body": "Prepara la postazione; accogli l’ospite; prendi l’ordine con una modifica; servi secondo lo standard concordato; affronta un solo imprevisto; concludi l’interazione professionalmente."
+        },
+        {
+          "title": "Ruoli e condizioni",
+          "body": "Partecipante, cliente, referente e osservatore.\nSala didattica, menu dichiarato, materiali freddi e vuoti.\nConcordare prima criteri, ruolo e informazione disponibile; nessun dato di persone reali."
+        },
+        {
+          "title": "Procedura della prova",
+          "body": "- Preparazione della postazione\n- Accoglienza e verifica della richiesta\n- Comanda con una variante\n- Controllo e servizio\n- Un imprevisto scelto dalle schede già approvate\n- Chiusura dell’interazione e consegna\n- Osservazione, feedback e ripetizione mirata"
+        },
+        {
+          "title": "Sicurezza e osservazione",
+          "body": "Non dedurre ingredienti o assenza di allergeni.\nFermare l’attività non sicura e coinvolgere il referente secondo le procedure dichiarate.\nIl docente osserva sequenza, comunicazione, organizzazione e controllo, non la personalità.\nUsare la rubrica senza calcolare una promozione automatica."
+        },
+        {
+          "title": "Riflessione del partecipante",
+          "body": "Che cosa è successo?\nChe cosa ha funzionato?\nChe cosa va rinforzato?\nQuale prova ripetere?"
+        }
+      ],
+      "asset_filename": "u26-practice.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u26-rubric",
+      "title": "Rubrica della prova pratica",
+      "description": "Sette ambiti e quattro descrizioni di livello della fonte. Da compilare su carta con evidenze, non giudizi personali.",
+      "type": "CHECKLIST",
+      "unit_ids": [
+        "unit-26"
+      ],
+      "topics": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "90b872e7574f922b8a77ecfbbbb85cbfbe5244d741a9d37b366040eb62d9440c",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 26",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u26-rubric",
+      "resource_type": "CHECKLIST",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "90b872e7574f922b8a77ecfbbbb85cbfbe5244d741a9d37b366040eb62d9440c",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u26-rubric-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "90b872e7574f922b8a77ecfbbbb85cbfbe5244d741a9d37b366040eb62d9440c",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u26-rubric-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "RUBRIC",
+      "body": "## Non ancora raggiunto\n\nNon completa la procedura o crea un rischio non gestito.\n\n## Base\n\nCompleta con aiuto e corregge dopo indicazione.\n\n## Autonomo\n\nCompleta in sicurezza e controlla il risultato.\n\n## Avanzato\n\nGestisce variazioni e spiega il ragionamento.\n\n## Ambiti di osservazione\n\n- Preparazione\n- Esecuzione tecnica\n- Comunicazione\n- Organizzazione\n- Consapevolezza di sicurezza e igiene\n- Problem solving\n- Comportamento professionale\n\n## Evidenze, non percentuali\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Per ogni ambito indicare il livello osservato e un fatto concreto. Lasciare non osservato ciò che la prova non permette di valutare. Nessuna media automatica, selezione lavorativa o soglia di idoneità.",
+      "reading": "## Non ancora raggiunto\n\nNon completa la procedura o crea un rischio non gestito.\n\n## Base\n\nCompleta con aiuto e corregge dopo indicazione.\n\n## Autonomo\n\nCompleta in sicurezza e controlla il risultato.\n\n## Avanzato\n\nGestisce variazioni e spiega il ragionamento.\n\n## Ambiti di osservazione\n\n- Preparazione\n- Esecuzione tecnica\n- Comunicazione\n- Organizzazione\n- Consapevolezza di sicurezza e igiene\n- Problem solving\n- Comportamento professionale\n\n## Evidenze, non percentuali\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Per ogni ambito indicare il livello osservato e un fatto concreto. Lasciare non osservato ciò che la prova non permette di valutare. Nessuna media automatica, selezione lavorativa o soglia di idoneità.",
+      "recommended_minutes": 5,
+      "projector_pages": [
+        {
+          "title": "Non ancora raggiunto",
+          "body": "Non completa la procedura o crea un rischio non gestito."
+        },
+        {
+          "title": "Base",
+          "body": "Completa con aiuto e corregge dopo indicazione."
+        },
+        {
+          "title": "Autonomo",
+          "body": "Completa in sicurezza e controlla il risultato."
+        },
+        {
+          "title": "Avanzato",
+          "body": "Gestisce variazioni e spiega il ragionamento."
+        },
+        {
+          "title": "Ambiti di osservazione",
+          "body": "- Preparazione\n- Esecuzione tecnica\n- Comunicazione\n- Organizzazione\n- Consapevolezza di sicurezza e igiene\n- Problem solving\n- Comportamento professionale"
+        },
+        {
+          "title": "Evidenze, non percentuali",
+          "body": "La verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante.\nPer ogni ambito indicare il livello osservato e un fatto concreto.\nLasciare non osservato ciò che la prova non permette di valutare.\nNessuna media automatica, selezione lavorativa o soglia di idoneità."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Non ancora raggiunto",
+          "items": [
+            "Non completa la procedura o crea un rischio non gestito."
+          ]
+        },
+        {
+          "title": "Base",
+          "items": [
+            "Completa con aiuto e corregge dopo indicazione."
+          ]
+        },
+        {
+          "title": "Autonomo",
+          "items": [
+            "Completa in sicurezza e controlla il risultato."
+          ]
+        },
+        {
+          "title": "Avanzato",
+          "items": [
+            "Gestisce variazioni e spiega il ragionamento."
+          ]
+        },
+        {
+          "title": "Ambiti di osservazione",
+          "items": [
+            "Preparazione",
+            "Esecuzione tecnica",
+            "Comunicazione",
+            "Organizzazione",
+            "Consapevolezza di sicurezza e igiene",
+            "Problem solving",
+            "Comportamento professionale"
+          ]
+        },
+        {
+          "title": "Evidenze, non percentuali",
+          "items": [
+            "La verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Per ogni ambito indicare il livello osservato e un fatto concreto. Lasciare non osservato ciò che la prova non permette di valutare. Nessuna media automatica, selezione lavorativa o soglia di idoneità."
+          ]
+        }
+      ],
+      "asset_filename": "u26-rubric.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u26-feedback",
+      "title": "Sintesi del docente e prossimo tentativo",
+      "description": "Modulo finale da stampare: codice facoltativo, osservazioni, riflessione e pratica consigliata. Non contiene campi online o un registro voti.",
+      "type": "EXERCISE",
+      "unit_ids": [
+        "unit-26"
+      ],
+      "topics": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "322b9b82dedd1fa77e2e4a8127a95eb44eebba421d11ce5d707358a00e5e40e8",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 26",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "STUDENT",
+      "slug": "res-u26-feedback",
+      "resource_type": "EXERCISE",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "322b9b82dedd1fa77e2e4a8127a95eb44eebba421d11ce5d707358a00e5e40e8",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": true,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u26-feedback-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "322b9b82dedd1fa77e2e4a8127a95eb44eebba421d11ce5d707358a00e5e40e8",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u26-feedback-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "FEEDBACK_FORM",
+      "body": "## Scheda finale\n\nCodice del partecipante (facoltativo): __________\nData: __________\nProgramma: Il Servizio in Sala\nConoscenze: __________\nPratica: __________\nComunicazione: __________\nOrganizzazione: __________\nSicurezza e igiene: __________\nComportamento professionale: __________\nNote del docente: __________\nProssimo passo consigliato: __________\n\n## Profilo di esito\n\nPunti solidi: __________\nAspetti da rinforzare: __________\nPratica consigliata: __________\nProssima simulazione: __________\n\n## Riflessione del partecipante\n\nMi sento più sicuro in: __________\nDevo ancora migliorare in: __________\nIl mio prossimo obiettivo è: __________\n\n## Finalità didattica\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Il sito non raccoglie o salva schede di valutazione compilate.",
+      "reading": "## Scheda finale\n\nCodice del partecipante (facoltativo): __________\nData: __________\nProgramma: Il Servizio in Sala\nConoscenze: __________\nPratica: __________\nComunicazione: __________\nOrganizzazione: __________\nSicurezza e igiene: __________\nComportamento professionale: __________\nNote del docente: __________\nProssimo passo consigliato: __________\n\n## Profilo di esito\n\nPunti solidi: __________\nAspetti da rinforzare: __________\nPratica consigliata: __________\nProssima simulazione: __________\n\n## Riflessione del partecipante\n\nMi sento più sicuro in: __________\nDevo ancora migliorare in: __________\nIl mio prossimo obiettivo è: __________\n\n## Finalità didattica\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Il sito non raccoglie o salva schede di valutazione compilate.",
+      "recommended_minutes": 5,
+      "projector_pages": [
+        {
+          "title": "Scheda finale",
+          "body": "Codice del partecipante (facoltativo): __________ Data: __________ Programma: Il Servizio in Sala Conoscenze: __________ Pratica: __________ Comunicazione: __________ Organizzazione: __________ Sicurezza e igiene: __________ Comportamento professionale: __________ Note del docente: __________ Prossimo passo consigliato: __________"
+        },
+        {
+          "title": "Profilo di esito",
+          "body": "Punti solidi: __________ Aspetti da rinforzare: __________ Pratica consigliata: __________ Prossima simulazione: __________"
+        },
+        {
+          "title": "Riflessione del partecipante",
+          "body": "Mi sento più sicuro in: __________ Devo ancora migliorare in: __________ Il mio prossimo obiettivo è: __________"
+        },
+        {
+          "title": "Finalità didattica",
+          "body": "La verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante.\nIl sito non raccoglie o salva schede di valutazione compilate."
+        }
+      ],
+      "asset_filename": "u26-feedback.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
+    },
+    {
+      "id": "res-u26-answer-sheet",
+      "title": "Foglio risposte della verifica finale",
+      "description": "Foglio A4 vuoto per le 30 risposte. Non include dati personali, soglie o promozioni automatiche; le soluzioni restano sotto il controllo docente nella Console.",
+      "type": "HANDOUT",
+      "unit_ids": [
+        "unit-26"
+      ],
+      "topics": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "privacy_status": "CLEAR",
+      "rights_status": "OWNED",
+      "publication_status": "PUBLIC_APPROVED",
+      "provenance": {
+        "original_source_path": "",
+        "checksum": "06c70bca19c1ade332110ee15ed68410572b1d82eb179e42c0dd833096ca9b60",
+        "source_id": null,
+        "section": "Manuale e materiali RISTO-LAB; unità 26",
+        "usage": "METADATA_ONLY",
+        "approval_evidence": "Owner publication statement; Phase 6D source selection and cross-curriculum adaptation instruction"
+      },
+      "format": "Testo web + PDF",
+      "visibility": "TEACHER",
+      "slug": "res-u26-answer-sheet",
+      "resource_type": "HANDOUT",
+      "canonical_status": "APPROVED",
+      "regulatory_status": "NOT_APPLICABLE",
+      "program_ids": [
+        "il-servizio-in-sala"
+      ],
+      "language": "it",
+      "audience": "STUDENT_WITH_INSTRUCTOR",
+      "version": "1.0",
+      "supersedes": null,
+      "superseded_by": null,
+      "checksum": "06c70bca19c1ade332110ee15ed68410572b1d82eb179e42c0dd833096ca9b60",
+      "last_reviewed": "2026-10-24",
+      "notes": [
+        "SOURCE_DERIVED / EDITORIAL_ADAPTATION: selezione e organizzazione di fonti interne e della struttura richiesta dal proprietario.",
+        "Prova umana non eseguita; nessun giudizio su persone reali."
+      ],
+      "keywords": [
+        "verifica",
+        "quiz finale",
+        "assessment",
+        "valutazione",
+        "rubrica",
+        "feedback",
+        "prova pratica"
+      ],
+      "private_use_authorized": true,
+      "approved_for_classroom": false,
+      "creator": "Marcelo Fernandez",
+      "revision": null,
+      "date": null,
+      "source_records": [],
+      "versions": [
+        {
+          "id": "res-u26-answer-sheet-v1",
+          "label": "Selezione e adattamento per il percorso didattico",
+          "status": "APPROVED",
+          "source_ids": [],
+          "asset_id": null,
+          "file_id": null,
+          "checksum": "06c70bca19c1ade332110ee15ed68410572b1d82eb179e42c0dd833096ca9b60",
+          "reviewed_by": "Codex — controllo di fedeltà e organizzazione delle fonti",
+          "reviewed_at": "2026-10-24",
+          "supersedes": null,
+          "superseded_by": null,
+          "chronology": "Phase 6D — selezione e collegamenti tra unità",
+          "notes": "Selezione richiesta dal compito; nessuna approvazione umana o risultato di valutazione inventato"
+        }
+      ],
+      "current_approved_version_id": "res-u26-answer-sheet-v1",
+      "entity_type": "TEACHING_RESOURCE",
+      "publication_approval": {
+        "date": "2026-10-24",
+        "scope": "public repository and website",
+        "evidence": "Owner publication statement; selected internal resources and owner brief structure"
+      },
+      "related_resource_ids": [],
+      "regulation_ids": [],
+      "collection_id": null,
+      "material_kind": "ANSWER_SHEET",
+      "body": "## Intestazione\n\nCodice facoltativo: __________\nData: __________\nProgramma: Il Servizio in Sala\n\n## Risposte\n\n01. A [ ] B [ ] C [ ]\n02. A [ ] B [ ] C [ ]\n03. A [ ] B [ ] C [ ]\n04. A [ ] B [ ] C [ ]\n05. A [ ] B [ ] C [ ]\n06. A [ ] B [ ] C [ ]\n07. A [ ] B [ ] C [ ]\n08. A [ ] B [ ] C [ ]\n09. A [ ] B [ ] C [ ]\n10. A [ ] B [ ] C [ ]\n11. A [ ] B [ ] C [ ]\n12. A [ ] B [ ] C [ ]\n13. A [ ] B [ ] C [ ]\n14. A [ ] B [ ] C [ ]\n15. A [ ] B [ ] C [ ]\n16. A [ ] B [ ] C [ ]\n17. A [ ] B [ ] C [ ]\n18. A [ ] B [ ] C [ ]\n19. A [ ] B [ ] C [ ]\n20. A [ ] B [ ] C [ ]\n21. A [ ] B [ ] C [ ]\n22. A [ ] B [ ] C [ ]\n23. A [ ] B [ ] C [ ]\n24. A [ ] B [ ] C [ ]\n25. A [ ] B [ ] C [ ]\n26. A [ ] B [ ] C [ ]\n27. A [ ] B [ ] C [ ]\n28. A [ ] B [ ] C [ ]\n29. A [ ] B [ ] C [ ]\n30. A [ ] B [ ] C [ ]\n\n## Uso del foglio\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Nessun valore compilato viene richiesto dal sito. La lettura del risultato si confronta con osservazione e pratica, senza soglia automatica.",
+      "reading": "## Intestazione\n\nCodice facoltativo: __________\nData: __________\nProgramma: Il Servizio in Sala\n\n## Risposte\n\n01. A [ ] B [ ] C [ ]\n02. A [ ] B [ ] C [ ]\n03. A [ ] B [ ] C [ ]\n04. A [ ] B [ ] C [ ]\n05. A [ ] B [ ] C [ ]\n06. A [ ] B [ ] C [ ]\n07. A [ ] B [ ] C [ ]\n08. A [ ] B [ ] C [ ]\n09. A [ ] B [ ] C [ ]\n10. A [ ] B [ ] C [ ]\n11. A [ ] B [ ] C [ ]\n12. A [ ] B [ ] C [ ]\n13. A [ ] B [ ] C [ ]\n14. A [ ] B [ ] C [ ]\n15. A [ ] B [ ] C [ ]\n16. A [ ] B [ ] C [ ]\n17. A [ ] B [ ] C [ ]\n18. A [ ] B [ ] C [ ]\n19. A [ ] B [ ] C [ ]\n20. A [ ] B [ ] C [ ]\n21. A [ ] B [ ] C [ ]\n22. A [ ] B [ ] C [ ]\n23. A [ ] B [ ] C [ ]\n24. A [ ] B [ ] C [ ]\n25. A [ ] B [ ] C [ ]\n26. A [ ] B [ ] C [ ]\n27. A [ ] B [ ] C [ ]\n28. A [ ] B [ ] C [ ]\n29. A [ ] B [ ] C [ ]\n30. A [ ] B [ ] C [ ]\n\n## Uso del foglio\n\nLa verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante. Nessun valore compilato viene richiesto dal sito. La lettura del risultato si confronta con osservazione e pratica, senza soglia automatica.",
+      "recommended_minutes": 0,
+      "projector_pages": [
+        {
+          "title": "Intestazione",
+          "body": "Codice facoltativo: __________ Data: __________ Programma: Il Servizio in Sala"
+        },
+        {
+          "title": "Risposte",
+          "body": "01. A [ ] B [ ] C [ ]\n02. A [ ] B [ ] C [ ]\n03. A [ ] B [ ] C [ ]\n04. A [ ] B [ ] C [ ]\n05. A [ ] B [ ] C [ ]\n06. A [ ] B [ ] C [ ]\n07. A [ ] B [ ] C [ ]\n08. A [ ] B [ ] C [ ]\n09. A [ ] B [ ] C [ ]\n10. A [ ] B [ ] C [ ]\n11. A [ ] B [ ] C [ ]\n12. A [ ] B [ ] C [ ]\n13. A [ ] B [ ] C [ ]\n14. A [ ] B [ ] C [ ]\n15. A [ ] B [ ] C [ ]\n16. A [ ] B [ ] C [ ]\n17. A [ ] B [ ] C [ ]\n18. A [ ] B [ ] C [ ]"
+        },
+        {
+          "title": "Risposte",
+          "body": "19. A [ ] B [ ] C [ ]\n20. A [ ] B [ ] C [ ]\n21. A [ ] B [ ] C [ ]\n22. A [ ] B [ ] C [ ]\n23. A [ ] B [ ] C [ ]\n24. A [ ] B [ ] C [ ]\n25. A [ ] B [ ] C [ ]\n26. A [ ] B [ ] C [ ]\n27. A [ ] B [ ] C [ ]\n28. A [ ] B [ ] C [ ]\n29. A [ ] B [ ] C [ ]\n30. A [ ] B [ ] C [ ]"
+        },
+        {
+          "title": "Uso del foglio",
+          "body": "La verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante.\nNessun valore compilato viene richiesto dal sito.\nLa lettura del risultato si confronta con osservazione e pratica, senza soglia automatica."
+        }
+      ],
+      "asset_filename": "u26-answer-sheet.pdf",
+      "asset_mime": "application/pdf",
+      "downloadable": true
     }
   ],
   "lessons": [],
@@ -19325,6 +21663,62 @@
     {
       "resource_id": "res-u22-checklist",
       "label": "Ascolto, autorizzazione e richiesta di aiuto"
+    },
+    {
+      "resource_id": "res-u23-cv",
+      "label": "Un CV semplice, pertinente e veritiero"
+    },
+    {
+      "resource_id": "res-u23-frasi",
+      "label": "Presentarsi e rispondere con sincerità"
+    },
+    {
+      "resource_id": "res-u23-interview",
+      "label": "Colloquio breve: candidato, responsabile e osservatore"
+    },
+    {
+      "resource_id": "res-u23-onboarding",
+      "label": "Primi giorni: osservare, chiedere, ripetere"
+    },
+    {
+      "resource_id": "res-u23-checklist",
+      "label": "Preparazione del colloquio e controllo del CV"
+    },
+    {
+      "resource_id": "res-u24-guide",
+      "label": "Una simulazione: obiettivo, ruoli e debrief"
+    },
+    {
+      "resource_id": "res-u24-observer",
+      "label": "Osservazione e feedback della simulazione"
+    },
+    {
+      "resource_id": "res-u25-guide",
+      "label": "Preparare, mostrare e far ripetere"
+    },
+    {
+      "resource_id": "res-u25-observer",
+      "label": "Checklist istruttore del laboratorio"
+    },
+    {
+      "resource_id": "res-u26-intro",
+      "label": "Verifica finale: conoscenze, pratica e riflessione"
+    },
+    {
+      "resource_id": "res-u26-quiz",
+      "label": "Verifica delle conoscenze · 30 domande"
+    },
+    {
+      "resource_id": "res-u26-practice",
+      "label": "Prova pratica integrata di servizio"
+    },
+    {
+      "resource_id": "res-u26-rubric",
+      "label": "Rubrica della prova pratica"
+    },
+    {
+      "resource_id": "res-u26-feedback",
+      "label": "Sintesi del docente e prossimo tentativo"
     }
   ],
   "collections": [

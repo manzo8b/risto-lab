@@ -1,4 +1,4 @@
-import {resources,classroomSequence} from '../instructor/data/catalog';import {isClassroomApproved,assetUrl} from './resources';import type {ClassroomStep} from '../types/classroom';import type {TeachingSession} from './teaching';
+import {resources,classroomResourceIds} from '../instructor/data/catalog';import {isClassroomApproved,assetUrl} from './resources';import type {ClassroomStep} from '../types/classroom';import type {TeachingSession} from './teaching';
 function resourceSteps(id:string,projector:boolean):ClassroomStep[]{const r=resources.find(r=>r.id===id&&isClassroomApproved(r)&&r.visibility!=='TEACHER');if(!r)return [];
  if(r.type==='QUIZ')return (r.questions||[r.quiz!]).map((q,i)=>({id:r.id+'-q'+i,resourceId:r.id,type:r.type,title:`Verifica · domanda ${i+1} di ${r.questions?.length||1}`,question:q.question,options:q.options,...(!projector?{answer:q.answer,explanation:q.explanation}:{})}));
  if(r.type==='IMAGE')return [{id:r.id,resourceId:r.id,type:r.type,title:r.title,image:assetUrl(r.id),alt:r.alt}];
@@ -7,6 +7,6 @@ function resourceSteps(id:string,projector:boolean):ClassroomStep[]{const r=reso
 }
 export function presentationSteps(unit:string,projector:boolean,session?:TeachingSession){let steps:ClassroomStep[]=[];
  if(session){session.blocks.forEach((b,index)=>{const rs=b.resource_id?resourceSteps(b.resource_id,projector):[{id:b.id,resourceId:b.id,type:b.block_type,title:projector&&!b.projector_enabled?'Momento di lavoro':b.title}];if(b.resource_id&&!rs.length)throw new Error('Una risorsa della lezione non è più approvata per Aula. Rivedi la lezione prima di avviare.');steps.push(...rs.map(s=>({...s,blockIndex:index,blockTitle:projector&&!b.projector_enabled&&!b.resource_id?'Momento di lavoro':b.title,resourceId:projector?s.resourceId:b.id,...(!projector?{canonicalResourceId:b.resource_id,teacherNote:b.teacher_note}:{}),...(!b.projector_enabled&&projector?{title:'Momento di lavoro',blockTitle:'Momento di lavoro',body:'',image:undefined,question:undefined,options:undefined,alt:undefined}:{})})));});}
- else for(const p of classroomSequence){const r=resources.find(r=>r.id===p.resource_id&&r.unit_ids.includes(unit));if(r)steps.push(...resourceSteps(r.id,projector));}
+ else for(const id of classroomResourceIds(unit))steps.push(...resourceSteps(id,projector));
  const groups=[...new Set(steps.map(s=>session?s.blockIndex:s.resourceId))];return steps.map((s,i)=>({...s,id:'view-'+i,resourceId:projector?'material-'+groups.indexOf(session?s.blockIndex:s.resourceId):s.resourceId,...(!projector?{originalId:s.id,canonicalResourceId:s.canonicalResourceId||s.resourceId}:{})}));
 }

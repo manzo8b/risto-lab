@@ -1,0 +1,82 @@
+{
+  "schema": "risto-lab-session",
+  "version": 1,
+  "plan": {
+    "id": "teaching-c063f37d-9db2-472c-bb04-b761efae6644",
+    "title": "Verifica finale RISTO-LAB",
+    "date": "2026-10-24",
+    "program_id": "il-servizio-in-sala",
+    "unit_ids": [
+      "unit-26"
+    ],
+    "start_time": "09:00",
+    "planned_end_time": "11:00",
+    "actual_end_time": null,
+    "status": "READY",
+    "blocks": [
+      {
+        "id": "block-bf7b4781-913a-4bbe-94a1-75004ef7ea04",
+        "session_id": "",
+        "order": 1,
+        "resource_id": "res-u26-intro",
+        "block_type": "RESOURCE",
+        "title": "Verifica finale: conoscenze, pratica e riflessione",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-ffed914e-dea6-4ae5-8b28-9be2b76f1ee1",
+        "session_id": "",
+        "order": 2,
+        "resource_id": "res-u26-quiz",
+        "block_type": "RESOURCE",
+        "title": "Verifica delle conoscenze · 30 domande",
+        "planned_minutes": 35,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-bff44c08-659d-4b18-851f-acfd1d4fc43c",
+        "session_id": "",
+        "order": 3,
+        "resource_id": "res-u26-practice",
+        "block_type": "RESOURCE",
+        "title": "Prova pratica integrata di servizio",
+        "planned_minutes": 50,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-c2951f20-c703-406c-8832-8f70afebe126",
+        "session_id": "",
+        "order": 4,
+        "resource_id": "res-u26-rubric",
+        "block_type": "RESOURCE",
+        "title": "Rubrica della prova pratica",
+        "planned_minutes": 15,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-271c2024-37e5-4070-b901-6253f9822321",
+        "session_id": "",
+        "order": 5,
+        "resource_id": "res-u26-feedback",
+        "block_type": "RESOURCE",
+        "title": "Sintesi del docente e prossimo tentativo",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      }
+    ],
+    "created_at": "2026-10-24T09:00:00.000Z",
+    "updated_at": "2026-10-24T09:00:00.000Z",
+    "revision": 0
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "risto-lab-session",
+  "version": 1,
+  "plan": {
+    "id": "teaching-38a86d22-00c3-43fe-b380-d3d4aebd237b",
+    "title": "Laboratorio mise en place e servizio",
+    "date": "2026-10-24",
+    "program_id": "il-servizio-in-sala",
+    "unit_ids": [
+      "unit-25",
+      "unit-06",
+      "unit-13"
+    ],
+    "start_time": "09:00",
+    "planned_end_time": "10:30",
+    "actual_end_time": null,
+    "status": "READY",
+    "blocks": [
+      {
+        "id": "block-97e6bc73-01e7-4268-9754-de3f7814b8d5",
+        "session_id": "",
+        "order": 1,
+        "resource_id": "res-u25-guide",
+        "block_type": "RESOURCE",
+        "title": "Preparare, mostrare e far ripetere",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-3afa9a57-5fd4-4c0f-95c9-51e6e75dc427",
+        "session_id": "",
+        "order": 2,
+        "resource_id": "res-mep-checklist",
+        "block_type": "RESOURCE",
+        "title": "Checklist prima del servizio",
+        "planned_minutes": 25,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-a440b803-50f4-4398-8a10-e22bf83c2836",
+        "session_id": "",
+        "order": 3,
+        "resource_id": "res-u13-activity",
+        "block_type": "RESOURCE",
+        "title": "Dal pass al tavolo",
+        "planned_minutes": 35,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-9ea819e1-6bea-4f03-b824-f4b3a3907e96",
+        "session_id": "",
+        "order": 4,
+        "resource_id": "res-u25-observer",
+        "block_type": "RESOURCE",
+        "title": "Checklist istruttore del laboratorio",
+        "planned_minutes": 20,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      }
+    ],
+    "created_at": "2026-10-24T09:00:00.000Z",
+    "updated_at": "2026-10-24T09:00:00.000Z",
+    "revision": 0
+  }
+}

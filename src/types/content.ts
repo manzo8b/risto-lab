@@ -19,6 +19,8 @@ export interface MediaAsset { id:string; resource_id:string; format:string; copi
 
 export interface QuizQuestion {id?:string;question:string;options:string[];answer:number;explanation:string|null}
 export interface ClassroomPlacement {resource_id:string;label:string}
+/** Explicit approved order for cross-curriculum units; references canonical resources. */
+export interface ProgramUnit {classroom_resource_ids?:string[];}
 /** Editorial timing hint for an approved sequence; the teacher can change it. */
 export interface Resource {recommended_minutes?:number;content_classification?:'SOURCE_DERIVED_FACT'|'OPERATIONAL_OBSERVATION'|'EDITORIAL_ANALYSIS'|'REGULATORY_REQUIREMENT';}
 

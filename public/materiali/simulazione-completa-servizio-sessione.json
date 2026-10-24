@@ -1,0 +1,111 @@
+{
+  "schema": "risto-lab-session",
+  "version": 1,
+  "plan": {
+    "id": "teaching-03bd1629-4ac4-48d6-bbb5-c128a349738c",
+    "title": "Simulazione completa di servizio",
+    "date": "2026-10-24",
+    "program_id": "il-servizio-in-sala",
+    "unit_ids": [
+      "unit-24",
+      "unit-08",
+      "unit-10",
+      "unit-12",
+      "unit-13",
+      "unit-14"
+    ],
+    "start_time": "09:00",
+    "planned_end_time": "10:30",
+    "actual_end_time": null,
+    "status": "READY",
+    "blocks": [
+      {
+        "id": "block-ac75ccd5-744c-45ed-9830-7ae26ba45eb5",
+        "session_id": "",
+        "order": 1,
+        "resource_id": "res-u24-guide",
+        "block_type": "RESOURCE",
+        "title": "Una simulazione: obiettivo, ruoli e debrief",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-182ee93d-7f0e-41bb-874f-756f1fd7d1bd",
+        "session_id": "",
+        "order": 2,
+        "resource_id": "res-u8-activity",
+        "block_type": "RESOURCE",
+        "title": "Briefing prima del servizio",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-cddda5cc-745b-44ea-9fd6-0908d955dbe2",
+        "session_id": "",
+        "order": 3,
+        "resource_id": "res-u10-roleplay",
+        "block_type": "RESOURCE",
+        "title": "Simulazione: dalla porta al tavolo",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-0ba0df91-49c9-483b-a9dc-6904664e8c49",
+        "session_id": "",
+        "order": 4,
+        "resource_id": "res-u12-activity",
+        "block_type": "RESOURCE",
+        "title": "Dal tavolo all’ordinativo",
+        "planned_minutes": 15,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-3e6ee464-8890-4bbf-bcb4-4689a8659107",
+        "session_id": "",
+        "order": 5,
+        "resource_id": "res-u13-activity",
+        "block_type": "RESOURCE",
+        "title": "Dal pass al tavolo",
+        "planned_minutes": 15,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-30cfef18-ddd7-4635-a16e-0d39fc3d0f87",
+        "session_id": "",
+        "order": 6,
+        "resource_id": "res-u14-activity",
+        "block_type": "RESOURCE",
+        "title": "Sbarazzare e ripristinare",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-9c160f97-e88e-4427-a6a7-696fccedfa92",
+        "session_id": "",
+        "order": 7,
+        "resource_id": "res-u24-observer",
+        "block_type": "RESOURCE",
+        "title": "Osservazione e feedback della simulazione",
+        "planned_minutes": 20,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      }
+    ],
+    "created_at": "2026-10-24T09:00:00.000Z",
+    "updated_at": "2026-10-24T09:00:00.000Z",
+    "revision": 0
+  }
+}

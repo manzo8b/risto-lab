@@ -12,7 +12,7 @@ unit.value=params.get('unit')||session?.unit_ids[0]||'';
 task.value=Object.hasOwn(aiTasks,params.get('task')||'')?params.get('task')!:'lesson';
 request.value=params.get('request')?.slice(0,6000)||'';
 let lastPreset='';
-function chooseResources(selected=''){resource.replaceChildren(new Option('Nessun materiale selezionato',''));for(const r of resources.filter(r=>!unit.value||r.unit_ids.includes(unit.value)))resource.add(new Option(r.title,r.id));resource.value=selected;}
+function chooseResources(selected=''){resource.replaceChildren(new Option('Nessun materiale selezionato',''));for(const r of resources.filter(r=>!unit.value||r.unit_ids.includes(unit.value)||r.id===selected))resource.add(new Option(r.title,r.id));resource.value=selected;}
 function update(){
  const u=units.find(u=>u.id===unit.value),r=resources.find(r=>r.id===resource.value);
  preview.value=buildAIContext({instructor:currentInstructor,program,unit:u,resource:r,session,searchQuery:params.get('q')||undefined,task:task.value as AITask,request:request.value});

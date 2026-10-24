@@ -1,0 +1,497 @@
+{
+  "scenarios": [
+    {
+      "id": "scenario-accoglienza",
+      "resource_id": "res-u10-roleplay",
+      "title": "Simulazione: dalla porta al tavolo",
+      "level": 1,
+      "minutes": 15,
+      "prerequisites": [
+        "unit-10",
+        "unit-11"
+      ],
+      "setting": "Ingresso di una sala simulata",
+      "roles": "Cliente, addetto e osservatore",
+      "objective": "Accogliere e verificare prenotazione, tavolo e richiesta senza promesse non verificate.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Scegli il primo giro con prenotazione e richiesta sui latticini oppure il secondo con tavolo in attesa."
+    },
+    {
+      "id": "scenario-briefing",
+      "resource_id": "res-u8-activity",
+      "title": "Briefing prima del servizio",
+      "level": 1,
+      "minutes": 30,
+      "prerequisites": [
+        "unit-07",
+        "unit-08",
+        "unit-11"
+      ],
+      "setting": "Briefing prima dell’arrivo degli ospiti",
+      "roles": "Responsabile, squadra e osservatore",
+      "objective": "Annotare e confermare le informazioni critiche del briefing.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Tavolo 8: persona celiaca; tavolo 12: gruppo da sei; piatto del giorno esaurito."
+    },
+    {
+      "id": "scenario-comanda",
+      "resource_id": "res-u12-activity",
+      "title": "Dal tavolo all’ordinativo",
+      "level": 2,
+      "minutes": 30,
+      "prerequisites": [
+        "unit-08",
+        "unit-11",
+        "unit-12",
+        "unit-17"
+      ],
+      "setting": "Tavolo con quattro clienti, variante e domanda su allergeni",
+      "roles": "Quattro clienti, operatore, cucina/bar e osservatore",
+      "objective": "Registrare, confermare e trasmettere una comanda con variante e richiesta su allergeni.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Una variante e una domanda su allergeni; cucina e bar segnalano le ambiguità."
+    },
+    {
+      "id": "scenario-chiarimento",
+      "resource_id": "res-u11-activity",
+      "title": "Ascoltare, riformulare, rispondere",
+      "level": 1,
+      "minutes": 30,
+      "prerequisites": [
+        "unit-10",
+        "unit-11"
+      ],
+      "setting": "Richiesta da comprendere e riformulare",
+      "roles": "Cliente, operatore e osservatore",
+      "objective": "Riformulare una richiesta e identificare ciò che deve essere verificato.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Una richiesta letta una volta viene chiarita dal cliente; poi scegli barriera linguistica o reclamo semplice."
+    },
+    {
+      "id": "scenario-servizio",
+      "resource_id": "res-u13-activity",
+      "title": "Dal pass al tavolo",
+      "level": 2,
+      "minutes": 45,
+      "prerequisites": [
+        "unit-05",
+        "unit-07",
+        "unit-09",
+        "unit-12",
+        "unit-13"
+      ],
+      "setting": "Pass e tavolo simulati, con un solo imprevisto",
+      "roles": "Pass, runner, operatore del rango e osservatore",
+      "objective": "Controllare comanda e percorso, coordinarsi e servire senza forzare il carico.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Un piatto mancante oppure una bevanda rovesciata, rappresentata su scheda."
+    },
+    {
+      "id": "scenario-sbarazzo",
+      "resource_id": "res-u14-activity",
+      "title": "Sbarazzare e ripristinare",
+      "level": 2,
+      "minutes": 30,
+      "prerequisites": [
+        "unit-06",
+        "unit-13",
+        "unit-14"
+      ],
+      "setting": "Tavolo con segnali ambigui e materiali utilizzati",
+      "roles": "Cliente, operatore e osservatore",
+      "objective": "Chiedere conferma prima del ritiro e ripristinare separando pulito e sporco.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Segnali ambigui del cliente e una rottura solo simulata."
+    },
+    {
+      "id": "scenario-chiusura",
+      "resource_id": "res-u15-activity",
+      "title": "Chiudere e consegnare",
+      "level": 2,
+      "minutes": 30,
+      "prerequisites": [
+        "unit-07",
+        "unit-14",
+        "unit-15"
+      ],
+      "setting": "Fine servizio e consegne al turno seguente",
+      "roles": "Gruppi per area e osservatore",
+      "objective": "Segnalare anomalie e consegnare informazioni che permettano la riapertura.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Scegli un’anomalia dalla fonte: bicchieri mancanti, frigo aperto, oggetto trovato o tavolo instabile."
+    },
+    {
+      "id": "scenario-imprevisti",
+      "resource_id": "res-u20-activity",
+      "title": "La sala degli imprevisti",
+      "level": 3,
+      "minutes": 45,
+      "prerequisites": [
+        "unit-12",
+        "unit-13",
+        "unit-20"
+      ],
+      "setting": "Sala con ritardo, conto errato e carta di vetro rotto simulato",
+      "roles": "Operatori, responsabile e osservatore",
+      "objective": "Gestire più problemi con priorità e comunicazione.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Vetro rotto solo su carta, piatto in ritardo e conto errato: priorità da dichiarare."
+    },
+    {
+      "id": "scenario-pressione",
+      "resource_id": "res-u21-activity",
+      "title": "Servizio pieno, comunicazione corta",
+      "level": 3,
+      "minutes": 30,
+      "prerequisites": [
+        "unit-11",
+        "unit-19",
+        "unit-20",
+        "unit-21"
+      ],
+      "setting": "Cinque minuti di servizio con quattro richieste simultanee",
+      "roles": "Squadra, responsabile, clienti e osservatore",
+      "objective": "Mantenere priorità e tono durante un picco simulato.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Conto, nuovi ospiti, ritiro al pass e bevanda sbagliata; poi un segnale simulato di sovraccarico."
+    },
+    {
+      "id": "scenario-reclamo",
+      "resource_id": "res-u22-activity",
+      "title": "Tre reclami, tre risposte",
+      "level": 2,
+      "minutes": 30,
+      "prerequisites": [
+        "unit-11",
+        "unit-20",
+        "unit-22"
+      ],
+      "setting": "Reclamo di attesa o richiesta di sconto simulata",
+      "roles": "Cliente, operatore, responsabile e osservatore",
+      "objective": "Scegliere risposte proporzionate a reclami diversi.",
+      "initial_conditions": "Il docente consegna le informazioni del caso, chiarisce lo standard e distribuisce i ruoli prima del giro.",
+      "constraints": "Seleziona un giro della fonte; aggiungi richieste concorrenti solo nei casi integrati previsti. Usa dati e menu fittizi. Nessuna promessa su allergeni o compensazioni fuori ruolo. Vetro, liquidi caldi, minacce e contatto fisico restano simulati su schede.",
+      "observer_resource_id": "res-u24-observer",
+      "debrief_resource_id": "res-u24-observer",
+      "event": "Scegli un reclamo calmo, una richiesta confusa di sconto o una minaccia descritta su scheda."
+    }
+  ],
+  "labs": [
+    {
+      "id": "lab-mise",
+      "title": "Mise en place",
+      "resource_id": "res-mep-checklist",
+      "minutes": 45,
+      "prerequisites": [
+        "unit-05",
+        "unit-06"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Tavolo, sedie, piatti, posate, bicchieri e scheda dello standard",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Schema del coperto su carta: riconoscere e ordinare i materiali, senza considerarlo prova della tecnica manuale.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Preparare un coperto base secondo la scheda.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-postazione",
+      "title": "Organizzazione della postazione",
+      "resource_id": "res-u5-activity",
+      "minutes": 30,
+      "prerequisites": [
+        "unit-04",
+        "unit-05",
+        "unit-07"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Postazione, materiali base e lista dei coperti",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Inventario e schema della postazione su carta.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Preparare e controllare una postazione.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-vassoio",
+      "title": "Vassoio e percorso controllato",
+      "resource_id": "res-u7-activity",
+      "minutes": 45,
+      "prerequisites": [
+        "unit-05",
+        "unit-07"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Vassoio vuoto, bottiglie di plastica chiuse, tavoli e percorso libero",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Vassoio vuoto e percorso breve; aumentare il carico solo con controllo.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Trasportare un carico didattico, percorrere il tragitto e ripristinare la postazione.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-piatti",
+      "title": "Trasporto progressivo dei piatti",
+      "resource_id": "res-u9-activity",
+      "minutes": 45,
+      "prerequisites": [
+        "unit-05",
+        "unit-09",
+        "unit-13"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Uno o due piatti freddi e vuoti, tavolo e percorso",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Un piatto freddo e vuoto; osservare prima presa e appoggio.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Prendere e trasportare uno o due piatti freddi e vuoti con controllo.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-servizio",
+      "title": "Acqua, bevande simulate e servizio al tavolo",
+      "resource_id": "res-u13-activity",
+      "minutes": 45,
+      "prerequisites": [
+        "unit-07",
+        "unit-12",
+        "unit-13"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Piatti vuoti, vassoio, bicchieri resistenti e acqua",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Disposizione su pianta cartacea; per dimostrare la tecnica occorrono materiali reali sicuri.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Servire un tavolo simulato con controllo e coordinamento.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-comanda",
+      "title": "Comanda e trasmissione delle varianti",
+      "resource_id": "res-u12-activity",
+      "minutes": 30,
+      "prerequisites": [
+        "unit-08",
+        "unit-11",
+        "unit-12"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Menu didattico, carta, penne e schede cliente",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Menu e blocco comanda di carta; nessun POS necessario.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Registrare e trasmettere una comanda completa.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-sbarazzo",
+      "title": "Sbarazzo e ripristino",
+      "resource_id": "res-u14-activity",
+      "minutes": 30,
+      "prerequisites": [
+        "unit-06",
+        "unit-14"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Tavolo, piatti, posate, bicchieri e vassoio",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Schede con tavolo utilizzato/non utilizzato; distinguere la decisione dalla tecnica fisica.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Rimuovere materiali e preparare il tavolo alla portata successiva.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-briefing",
+      "title": "Briefing prima del servizio",
+      "resource_id": "res-u8-activity",
+      "minutes": 15,
+      "prerequisites": [
+        "unit-07",
+        "unit-08",
+        "unit-11"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Menu didattico, carta e penne",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Briefing orale con informazioni scritte essenziali.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Trasmettere le informazioni essenziali del briefing.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-reclamo",
+      "title": "Role play sul reclamo",
+      "resource_id": "res-u22-activity",
+      "minutes": 30,
+      "prerequisites": [
+        "unit-11",
+        "unit-20",
+        "unit-22"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Schede ruolo e spazio per il confronto",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Ruoli letti da seduti; episodi offensivi solo descritti su una carta.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Scegliere risposte proporzionate a reclami diversi.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-pressione",
+      "title": "Priorità nel servizio pieno",
+      "resource_id": "res-u21-activity",
+      "minutes": 30,
+      "prerequisites": [
+        "unit-19",
+        "unit-20",
+        "unit-21"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Timer e quattro carte richiesta",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Solo carte, senza corsa o trasporto di carichi.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Mantenere priorità e tono durante un picco simulato.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    },
+    {
+      "id": "lab-chiusura",
+      "title": "Chiusura e consegne",
+      "resource_id": "res-u15-activity",
+      "minutes": 30,
+      "prerequisites": [
+        "unit-07",
+        "unit-14",
+        "unit-15"
+      ],
+      "participants": "Piccolo gruppo con ruoli a rotazione; il docente adatta il numero ai materiali e allo spazio.",
+      "materials": "Checklist, schede anomalie e materiali di sala",
+      "setup": "Preparare lo spazio e controllare i materiali prima dell’ingresso del gruppo. Comunicare obiettivo, criteri e segnale di stop.",
+      "briefing": "Mostrare il risultato e i passaggi in modo visibile; svolgere un giro guidato e poi una prova autonoma.",
+      "alternative": "Schede delle aree e consegna scritta di massimo cinque righe.",
+      "success": "Sequenza controllata, sicurezza, comunicazione e controllo finale secondo la scheda canonica; ripetere un passaggio da migliorare.",
+      "observer_resource_id": "res-u25-observer",
+      "objective": "Eseguire una chiusura simulata e produrre una consegna utile.",
+      "common_errors": [
+        "Mostrare un gesto che il gruppo non vede.",
+        "Aumentare il realismo prima di avere controllo.",
+        "Intervenire a ogni passaggio nella prova autonoma, salvo rischio."
+      ]
+    }
+  ],
+  "notice": "La verifica ha finalità didattica e non costituisce una certificazione professionale o abilitante.",
+  "templates": [
+    {
+      "title": "Preparazione colloquio",
+      "minutes": 60,
+      "filename": "preparazione-colloquio-sessione.json"
+    },
+    {
+      "title": "Laboratorio mise en place e servizio",
+      "minutes": 90,
+      "filename": "laboratorio-mise-servizio-sessione.json"
+    },
+    {
+      "title": "Simulazione completa di servizio",
+      "minutes": 90,
+      "filename": "simulazione-completa-servizio-sessione.json"
+    },
+    {
+      "title": "Verifica finale RISTO-LAB",
+      "minutes": 120,
+      "filename": "verifica-finale-sessione.json"
+    },
+    {
+      "title": "Servizio completo — Simulazione finale",
+      "minutes": 120,
+      "filename": "servizio-completo-capstone-sessione.json"
+    }
+  ]
+}

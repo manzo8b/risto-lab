@@ -1,0 +1,151 @@
+{
+  "schema": "risto-lab-session",
+  "version": 1,
+  "plan": {
+    "id": "teaching-1e77dfe8-131a-40bf-ad67-b460506ff535",
+    "title": "Servizio completo — Simulazione finale",
+    "date": "2026-10-24",
+    "program_id": "il-servizio-in-sala",
+    "unit_ids": [
+      "unit-24",
+      "unit-08",
+      "unit-07",
+      "unit-10",
+      "unit-12",
+      "unit-13",
+      "unit-20",
+      "unit-22",
+      "unit-14",
+      "unit-15"
+    ],
+    "start_time": "09:00",
+    "planned_end_time": "11:00",
+    "actual_end_time": null,
+    "status": "READY",
+    "blocks": [
+      {
+        "id": "block-7249876d-a184-4d1f-9788-49c5ae74e2e3",
+        "session_id": "",
+        "order": 1,
+        "resource_id": "res-u8-activity",
+        "block_type": "RESOURCE",
+        "title": "Briefing prima del servizio",
+        "planned_minutes": 8,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-8948a120-ffdf-4cc8-97b8-dfc0b2a6b30d",
+        "session_id": "",
+        "order": 2,
+        "resource_id": "res-u7-checklist",
+        "block_type": "RESOURCE",
+        "title": "Checklist postazione prima del servizio",
+        "planned_minutes": 12,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-b352d872-e79d-4d7d-a2e1-80746a7b4b49",
+        "session_id": "",
+        "order": 3,
+        "resource_id": "res-u10-roleplay",
+        "block_type": "RESOURCE",
+        "title": "Simulazione: dalla porta al tavolo",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-1e30908b-bd6f-4a25-b488-9bd995078cf0",
+        "session_id": "",
+        "order": 4,
+        "resource_id": "res-u12-activity",
+        "block_type": "RESOURCE",
+        "title": "Dal tavolo all’ordinativo",
+        "planned_minutes": 15,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-178f34aa-3f74-494b-95c2-c8544a6bc47b",
+        "session_id": "",
+        "order": 5,
+        "resource_id": "res-u13-activity",
+        "block_type": "RESOURCE",
+        "title": "Dal pass al tavolo",
+        "planned_minutes": 15,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-27910646-c9cf-437f-869d-df42d726f9d6",
+        "session_id": "",
+        "order": 6,
+        "resource_id": "res-u20-activity",
+        "block_type": "RESOURCE",
+        "title": "La sala degli imprevisti",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-7f75f0f8-6923-4723-893f-887e97236282",
+        "session_id": "",
+        "order": 7,
+        "resource_id": "res-u22-activity",
+        "block_type": "RESOURCE",
+        "title": "Tre reclami, tre risposte",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-3a53043f-97fd-46b8-90e5-fedd5d18032a",
+        "session_id": "",
+        "order": 8,
+        "resource_id": "res-u14-activity",
+        "block_type": "RESOURCE",
+        "title": "Sbarazzare e ripristinare",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-66ea37a7-38ba-4e1f-aa46-14a2f39e9dce",
+        "session_id": "",
+        "order": 9,
+        "resource_id": "res-u15-activity",
+        "block_type": "RESOURCE",
+        "title": "Chiudere e consegnare",
+        "planned_minutes": 10,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      },
+      {
+        "id": "block-8944e3f6-b9bf-4fc9-9972-42767c139517",
+        "session_id": "",
+        "order": 10,
+        "resource_id": "res-u24-observer",
+        "block_type": "RESOURCE",
+        "title": "Osservazione e feedback della simulazione",
+        "planned_minutes": 20,
+        "teacher_note": "",
+        "projector_enabled": true,
+        "status": "PLANNED"
+      }
+    ],
+    "created_at": "2026-10-24T09:00:00.000Z",
+    "updated_at": "2026-10-24T09:00:00.000Z",
+    "revision": 0
+  }
+}

@@ -8,7 +8,7 @@
 | 17 | Eventuali valori operativi di temperatura collegati a una procedura specifica validata | Evitare soglie universali inventate; non necessari alla presente introduzione | HIGH |
 | 17 | Prova docente delle domande e dei casi con allievi A2–B1 | Verificare comprensione senza banalizzare il lessico tecnico | MEDIUM |
 | 06 | Valutazione umana della completezza dei contenuti oltre al flusso tecnico | Il PASS 4B conferma il funzionamento, non tutti i contenuti; resta PARTIAL | MEDIUM |
-| Unità 23–26, dopo i cluster 6B e 6C | Sequenze, attività e quiz selezionati e revisionati | Passare dal capitolo di consultazione a una lezione conducibile | HIGH |
+| Unità 23–26 | ~~Sequenze, attività e quiz selezionati~~ — RISOLTO NEL PERIMETRO 6D | Risorse e sequenze ora disponibili; accettazione umana ancora separata | CHIUSO 6D |
 
 Sette voci iniziali di gap, aggiornate nel perimetro dopo 6A. Nessun contenuto è stato inventato per chiuderle. Le unità 10 e 17 sono CLASSROOM_READY per una lezione introduttiva secondo i materiali selezionati, non COMPLETE. Le lacune non equivalgono a procedure aziendali mancanti da compilare automaticamente.
 
@@ -46,3 +46,16 @@ Nuove lacune 6B: 3. Totale aperto: 15; la voce generale ora riguarda 10 unità, 
 | 16–18 | Verifica contestuale delle procedure e dei riferimenti applicabili al locale | Il controllo puntuale dei riferimenti ufficiali non valida l’intero quadro né il piano aziendale | HIGH |
 
 Nuove lacune 6C: 4. Totale aperto: 19. La voce generale ora riguarda soltanto 23–26, fuori da queste fasi. Le lacune storiche e le prove umane non sono state chiuse automaticamente; 06 e 18 restano PARTIAL per ragioni diverse.
+
+## Phase 6D — Dal corso al lavoro
+
+La voce generale 23–26 è chiusa nel perimetro selezionato: 15 risorse nuove, dieci richiami scenario, undici laboratori, 30 domande esistenti e cinque modelli di incontro. Nessuna delle altre lacune è chiusa per inferenza.
+
+| Unità | Elemento da validare o integrare | Motivo | Priorità |
+|---|---|---|---|
+| 23 | Colloquio e leggibilità A2–B1 provati con il gruppo reale | Fonte e frasi esistono; utilità e sincerità vanno osservate | MEDIUM |
+| 24–25 | Tempi dei giri, disposizione e dimostrazione con materiali del luogo | PDF e carta non dimostrano abilità manuale; foto originali di setup restano utili | HIGH |
+| 26 | Equità, copertura e rubriche provate dal docente con partecipanti | Nessuna soglia è inventata; occorre osservare e confrontare i diversi tipi di evidenza | HIGH |
+| 01–26 | Revisione umana finale del percorso e dei limiti 06/18 | Un percorso consultabile non è automaticamente COMPLETE | HIGH |
+
+Conteggio corrente: 19 precedenti meno1 voce generale risolta più4 nuove = **22 lacune aperte**. Le somme nei paragrafi 6A–6C descrivono lo stato storico della relativa fase. Mancanze di foto e varianti non autorizzano importazioni esterne o materiale debole. Il modulo trasversale sui diritti resta separato e si seleziona soltanto se richiesto dal progetto/fondo: non costituisce una lacuna obbligatoria di ogni corso.

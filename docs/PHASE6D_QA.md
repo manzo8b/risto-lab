@@ -1,6 +1,6 @@
 # Phase 6D — QA
 
-Data: 24 ottobre 2026. Perimetro: unità 23–26 e integrazione nel curriculum. Stato locale PASS; verifica della pubblicazione live in corso.
+Data: 24 ottobre 2026. Perimetro: unità 23–26 e integrazione nel curriculum. Stato locale e live PASS. Prova umana ancora da eseguire.
 
 | Controllo | Esito | Evidenza |
 |---|---|---|
@@ -36,4 +36,10 @@ Inventario con percorsi completi, manifesto di derivazione, verifica di fedeltà
 
 ## Pubblicazione e controllo live
 
-PENDING — compilare soltanto dopo il workflow GitHub Pages e la verifica della versione distribuita.
+[Workflow40066960801](https://github.com/manzo8b/risto-lab/actions/runs/40066960801): build e deploy SUCCESS sul commit `14b2ecf1b94bfee41fed0a301d81bd5243170fb4`. Architettura di pubblicazione invariata.
+
+Suite6D eseguita anche contro `https://manzo8b.github.io/risto-lab`: **8 PASS /0 FAIL**. Verificati caricamento/ricarica23–26, programma26 unità con stati corretti, ricerca su14 parole, biblioteca, cinque importazioni di modello, quattro proposte60 minuti, salvataggio/riapertura/avvio, Aula, risposta quiz sotto controllo docente,30 pagine nello stesso blocco e contesto AI delle risorse richiamate da altre unità. Test live in contesti browser di prova isolati: nessuna lezione reale del docente o dato di presenza modificato.
+
+14 asset live (9 PDF +5 JSON): HTTP200 e checksum identico ai file locali. Verifica visiva nel browser del sito live: intestazione chiara, palette esistente, schede scenario e gerarchia leggibili. Screenshot di prova e report degli asset restano locali e ignorati da Git.
+
+Esito tecnico complessivo:107 test locali +8 esecuzioni live PASS,0 FAIL. Le verifiche live ripetono8 casi della suite; non vengono conteggiate come nuovi giudizi umani o nuovi test unici. La successiva conferma documentale non modifica contenuti, asset o runtime del sito.

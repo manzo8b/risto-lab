@@ -1,6 +1,6 @@
 # Phase 6D — Rapporto di completamento
 
-Implementazione locale completata il 24 ottobre 2026; pubblicazione e controllo live in corso. La fase non assegna COMPLETE al curriculum.
+Fase tecnica completata e pubblicata il 24 ottobre 2026, con controllo locale e live superato. La fase non assegna COMPLETE al curriculum.
 
 | Unità | Stato | Risultato |
 |---|---|---|
@@ -31,7 +31,9 @@ Nessuna soglia di promozione imposta, media automatica, idoneità lavorativa, ce
 
 107 test locali PASS /0 FAIL; check senza errori/warning/hint; build228 pagine, tutti i collegamenti interni risolti. Interfaccia e palette conservate; runtime Console e asset precedenti invariati. 34.893 originali confrontati,0 modifiche. Nessun backend, servizio cloud, account o funzione presenze nuova.
 
-Live GitHub Pages: PENDING. Questa voce sarà aggiornata con run e prove effettive, non sulla sola riuscita del push.
+**GitHub Pages: PASS**. [Workflow40066960801](https://github.com/manzo8b/risto-lab/actions/runs/40066960801), build e deploy SUCCESS, commit contenuti `14b2ecf`. Live8/8 PASS, con unità23–26, Programma, ricerca, biblioteca, compositore/importazione, Console/Vista Aula e AI. Nove PDF e cinque modelli JSON distribuiti identici agli asset locali.
+
+Il successivo commit documentale registra questa evidenza e piccoli affinamenti dei test (conteggio esplicito delle30 pagine e screenshot live); non modifica risorse, interfaccia o runtime. La prova umana resta READY e non eseguita.
 
 ## Prossima azione
 

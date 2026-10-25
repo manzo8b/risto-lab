@@ -8,7 +8,11 @@ Controllo locale superato: **113 test unici PASS** (57 modelli +56 browser). Ana
 
 Questo risultato riguarda i controlli eseguiti e gli stati visitati: non è una certificazione di conformità né un voto umano all'efficacia formativa. La disponibilità del programma non promuove automaticamente le unità a COMPLETE.
 
-Pubblicazione live: IN VERIFICA — esito aggiornato soltanto dopo workflow e collaudo effettivi.
+**Pubblicazione live: PASS**. Commit applicativo `72662073304a8f9d97934bcf80559230a441a04d`; [workflow 40165575554](https://github.com/manzo8b/risto-lab/actions/runs/40165575554), build e deploy SUCCESS. Il successivo commit documentale registra le prove e adegua soltanto il budget complessivo di un test remoto; non modifica il sito degli utenti.
+
+Nove casi live verificati: accessibilità automatica su 16 viste, filtri e ritorno dall'AI, metadati pubblici, schede e tastiera, testo al 200%, ricerca, importazione/esportazione e salvataggio locale della lezione, Console, timer, risposte del quiz e Vista Aula, route riservate assenti, stile e mobile. Il controllo completo degli indirizzi ha verificato HTTP200 per tutte le 26 unità e 178 risorse, poi navigazione/ricarica di 8 pagine principali. Nessun dato reale del browser del docente modificato: i test usano contesti isolati.
+
+Il primo giro live ha superato 8 casi e raggiunto il limite complessivo di 30 secondi nel controllo che enumera oltre 200 indirizzi. Il caso è stato rieseguito con 120 secondi complessivi solo in modalità remota: PASS in 31,9 secondi. Restano identiche tutte le asserzioni e il budget locale; nessuna pagina o risorsa è stata esclusa. Esito finale: tutti i 9 casi live PASS. Le esecuzioni ripetute non aumentano il conteggio dei test unici.
 
 ## Correzioni applicate
 

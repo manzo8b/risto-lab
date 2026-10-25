@@ -22,3 +22,7 @@ Scala spazi: 4, 8, 12, 16, 24, 32, 48, 64, 96px. Raggi 5, 8, 12px. Ombre a bassa
 Comandi principali almeno 46px di altezza; focus visibile. Contrasto del bottone primario bianco/teal verificato a 6,29:1. Questo campionamento non costituisce una certificazione completa WCAG.
 
 Icone SVG originali da un unico registro, tratto 1,8, decorative e aria-hidden; l'etichetta testuale porta il significato. Nessun font di icone o dipendenza remota.
+
+## Controllo del 25 ottobre 2026
+
+Palette invariata. Navigazione attiva coerente con unità e risorse; schede pratiche con indicatore di apertura; tabelle focalizzabili; campi e intestazioni mobili adatti al testo ingrandito. Rapporti di contrasto, copertura, correzioni e limiti sono nel rapporto QUALITY_REVIEW_2026_10_25. Nessuna certificazione automatica di accessibilità o qualità didattica.

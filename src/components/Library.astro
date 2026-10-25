@@ -13,28 +13,30 @@ const formats=[...new Set(resources.map(r=>r.format||'Riferimento'))].sort();
 ---
 <form id="search-form" role="search">
  <div class="filters teacher-filters">
- <label>Parola chiave<input id="query" name="q" type="search" placeholder="Es. mise en place" value={Astro.url.searchParams.get('q')||''}/></label>
+ <label>Parola chiave<input id="query" name="q" type="search" maxlength="300" placeholder="Es. mise en place" value={Astro.url.searchParams.get('q')||''}/></label>
  <label>Cosa cerchi?<select id="kind" aria-label="Cosa cerchi?"><option value="">Tutti i materiali</option>{teachingKinds.map(([value,label])=><option value={value}>{label}</option>)}</select></label>
  <label>Dove?<select id="where" aria-label="Dove?"><option value="">Tutti i luoghi</option><optgroup label="Programma / Unità"><option value={'program:'+program.id}>{program.title} · tutte le unità</option>{units.filter(u=>resources.some(r=>r.unit_ids.includes(u.id))).map(u=><option value={'unit:'+u.id}>{String(u.order).padStart(2,'0')} · {u.title}</option>)}</optgroup><optgroup label="Raccolte">{collections.filter(c=>resources.some(r=>r.collection_id===c.id)).map(c=><option value={'collection:'+c.id}>{c.title}</option>)}</optgroup></select></label>
  <label>Argomento<select id="topic" aria-label="Argomento"><option value="">Tutti gli argomenti</option>{topics.map(t=><option value={t}>{t}</option>)}</select></label>
  </div>
  <details class="advanced-filters"><summary>Filtri avanzati</summary><div class="filters"><label>Tipo tecnico<select id="type" aria-label="Tipo tecnico"><option value="">Tutti i tipi tecnici</option>{[...new Set(resources.map(r=>r.type))].map(t=><option value={t}>{typeLabels[t]} ({t})</option>)}</select></label><label>Formato file<select id="format" aria-label="Formato file"><option value="">Tutti i formati</option>{formats.map(f=><option value={f}>{f}</option>)}</select></label></div></details>
 </form>
-<div id="filter-chips" class="filter-chips" aria-label="Filtri attivi"></div><div class="section-heading"><p id="result-count" role="status" aria-live="polite">{resources.length} risorse trovate</p><button id="clear" class="secondary" type="button">Azzera filtri</button></div>
+<div id="filter-chips" class="filter-chips" role="group" aria-label="Filtri attivi"></div><div class="section-heading"><p id="result-count" role="status" aria-live="polite">{resources.length} risorse trovate</p><button id="clear" class="secondary" type="button">Azzera filtri</button></div>
 <div id="no-results" class="empty-state" hidden={resources.length>0} role="status"></div>
-<div class="grid" id="results" hidden={resources.length===0}>{orderedResources.map(resource=><Card resource={resource} unitTitles={Object.fromEntries(units.map(u=>[u.id,u.title]))} collectionTitle={collections.find(c=>c.id===resource.collection_id)?.title}/>)}</div>
+<div class="grid" id="results" hidden={resources.length===0}><h2 class="sr-only">Materiali trovati</h2>{orderedResources.map(resource=><Card resource={resource} contextUnitIds={units.filter(u=>u.resource_ids.includes(resource.id)||resource.unit_ids.includes(u.id)).map(u=>u.id)} unitTitles={Object.fromEntries(units.map(u=>[u.id,u.title]))} collectionTitle={collections.find(c=>c.id===resource.collection_id)?.title}/>)}</div>
 <script>
 import {normalize,matchesQuery} from '../lib/search';
+import {libraryState,libraryFilterKeys} from '../lib/library-state';
 const form=document.querySelector<HTMLFormElement>('#search-form')!;
 const query=form.querySelector<HTMLInputElement>('#query')!;
 const controls=['kind','where','topic','type','format'].map(id=>form.querySelector<HTMLSelectElement>('#'+id)!);
 const [kind,where,topic,type,format]=controls;
-query.value=new URLSearchParams(location.search).get('q')||'';const collection=new URLSearchParams(location.search).get('collection');if(collection)where.value='collection:'+collection;
+const initial=libraryState(new URLSearchParams(location.search));query.value=initial.get('q')||'';for(const control of controls)control.value=initial.get(control.id)||'';const collection=new URLSearchParams(location.search).get('collection');if(collection)where.value='collection:'+collection;
 const cards=Array.from(document.querySelectorAll<HTMLElement>('#results .resource'));
 const count=document.querySelector<HTMLElement>('#result-count')!,results=document.querySelector<HTMLElement>('#results')!,empty=document.querySelector<HTMLElement>('#no-results')!;
 function filter(){
  const matching=cards.filter(el=>matchesQuery(el.dataset.search||'',query.value)&&(!kind.value||el.dataset.teachingKind===kind.value)&&(!type.value||el.dataset.type===type.value)&&(!format.value||el.dataset.format===format.value)&&(!topic.value||(el.dataset.topics||'').split('|').some(t=>normalize(t)===normalize(topic.value)))&&(!where.value||(where.value.startsWith('unit:')?(el.dataset.units||'').split(' ').includes(where.value.slice(5)):where.value.startsWith('collection:')?el.dataset.collection===where.value.slice(11):(el.dataset.programs||'').split(' ').includes(where.value.slice(8)))));
  const ids=new Set(matching);cards.forEach(el=>{el.hidden=!ids.has(el);});
+ const state=new URLSearchParams();if(query.value.trim())state.set('q',query.value);for(const control of controls)if(control.value)state.set(control.id,control.value);const currentUrl=new URL(location.href);for(const key of libraryFilterKeys)currentUrl.searchParams.delete(key);currentUrl.searchParams.delete('collection');for(const [key,value] of libraryState(state))currentUrl.searchParams.set(key,value);history.replaceState(null,'',currentUrl.pathname+currentUrl.search+currentUrl.hash);
  const hasResults=matching.length>0;results.hidden=!hasResults;empty.hidden=hasResults;
  // An inactive empty state has neither visible text nor live-region content.
  empty.textContent=hasResults?'':'Nessun materiale trovato. Prova un termine più breve oppure azzera i filtri.';
@@ -42,7 +44,7 @@ function filter(){
  const chips=document.querySelector('#filter-chips')!;chips.replaceChildren();
  for(const [input,label] of [[query,'Ricerca'],[kind,'Cosa cerchi'],[where,'Dove'],[topic,'Argomento'],[type,'Tipo tecnico'],[format,'Formato']] as const){if(!input.value)continue;const button=document.createElement('button');button.type='button';button.className='filter-chip';button.textContent=label+': '+(input instanceof HTMLSelectElement?input.selectedOptions[0].text:input.value)+' ×';button.setAttribute('aria-label','Rimuovi filtro '+label);button.addEventListener('click',()=>{input.value='';filter();input.focus();});chips.append(button);}
 }
-results.addEventListener('click',event=>{const link=(event.target as Element).closest<HTMLAnchorElement>('a');if(link&&link.pathname.includes('/instructor/risorse/')){const url=new URL(link.href);if(query.value)url.searchParams.set('q',query.value);else url.searchParams.delete('q');link.href=url.href;}});query.addEventListener('input',filter);controls.forEach(el=>el.addEventListener('change',filter));form.addEventListener('submit',e=>e.preventDefault());document.querySelector('#clear')?.addEventListener('click',()=>{query.value='';controls.forEach(c=>c.value='');filter();query.focus();});filter();
+results.addEventListener('click',event=>{const link=(event.target as Element).closest<HTMLAnchorElement>('a');if(link&&link.pathname.includes('/instructor/risorse/')){const url=new URL(link.href);for(const key of libraryFilterKeys)url.searchParams.delete(key);for(const [key,value] of libraryState(new URLSearchParams(location.search)))url.searchParams.set(key,value);link.href=url.href;}});query.addEventListener('input',filter);controls.forEach(el=>el.addEventListener('change',filter));form.addEventListener('submit',e=>e.preventDefault());document.querySelector('#clear')?.addEventListener('click',()=>{query.value='';controls.forEach(c=>c.value='');filter();query.focus();});filter();
 window.addEventListener('pageshow',filter);
 </script>
 <style>.advanced-filters{margin:0 0 24px;color:var(--muted);font-size:.85rem}.advanced-filters summary{cursor:pointer;padding:10px 0}.advanced-filters .filters{margin-top:16px}.teacher-filters{grid-template-columns:1.5fr 1fr 1.3fr 1fr}#no-results[hidden],#results[hidden]{display:none!important}@media(max-width:900px){.teacher-filters{grid-template-columns:1fr 1fr}}@media(max-width:600px){.teacher-filters{grid-template-columns:1fr}}</style>

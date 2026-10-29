@@ -1,0 +1,5 @@
+---
+const email = 'marcelo2020.it@gmail.com';
+const {label='Contatti e servizi'} = Astro.props;
+---
+<div class="ecosystem-contact-header"><a href={`mailto:${email}`} aria-label={`${label}: ${email}`}><span>{label}</span><strong>{email}</strong></a></div>

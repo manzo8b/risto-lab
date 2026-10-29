@@ -88,7 +88,7 @@ const check=document.getElementById('lab-grade');
 check?.addEventListener('click',()=>{
  const form=document.getElementById('lab-quiz');
  if(!(form instanceof HTMLFormElement))return;
- let correct=0,answered=0;const details=[];
+ let correct=0,answered=0;const details:string[]=[];
  answers.forEach((answer,i)=>{
   const selected=form.querySelector('input[name="q'+i+'"]:checked');
   const value=selected instanceof HTMLInputElement?Number(selected.value):null;

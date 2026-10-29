@@ -1,0 +1,32 @@
+name: Business Academy QA
+
+on:
+  pull_request:
+    paths:
+      - 'src/instructor/pages/instructor/laboratorio-sicurezza.astro'
+      - 'src/instructor/pages/formazione-aziende.astro'
+      - 'src/instructor/pages/formazione.astro'
+      - 'src/instructor/pages/instructor/programmi/index.astro'
+      - 'docs/BUSINESS_ACADEMY_SAFETY_2026.md'
+      - 'tests/business-academy.test.ts'
+      - '.github/workflows/business-academy-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+      - run: npm run publication:gate

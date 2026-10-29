@@ -1,0 +1,102 @@
+---
+import PrismaKit from '../../../../layouts/PrismaKit.astro';
+import {questions,rubric,outcomes,prismaRoot} from '../../../../instructor/data/prisma-hse';
+import {withBase} from '../../../../lib/urls';
+const root=withBase(prismaRoot);
+const transfer=[
+{indicator:'Completezza delle segnalazioni simulate',baseline:'Percentuale baseline rilevata nel pilot',followup:'Quota di segnalazioni con luogo, fatto, incertezza, referente',limit:'Il miglioramento può riflettere processi e organizzazione, non soltanto la formazione.'},
+{indicator:'Uso della matrice normativa',baseline:'Disponibilità di riferimenti puntuali nei progetti campione',followup:'Proporzione di affermazioni documentate con articolo e fonte',limit:'Va valutata anche la correttezza sostanziale da parte di esperto HSE.'},
+{indicator:'Coerenza didattica dei moduli',baseline:'Qualità dei primi storyboard',followup:'Unità con obiettivo, prova e feedback allineati',limit:'Una buona microprogettazione non dimostra di per sé efficacia in azienda.'}
+];
+---
+<PrismaKit title="Valutazione, rubriche e follow-up" section="valutazione">
+ <header class="prisma-hero"><p class="pretitle">05 · Evidenze verificabili</p><h1>Valutare senza <em>confondere</em></h1><p class="lead">Dodici domande con correzione commentata, una rubrica analitica e un piano di osservazione a 30 giorni. Distinguiamo conoscenze, prestazione simulata e comportamento al lavoro.</p><div class="prisma-actions"><a class="prisma-button" href={root+'attivita/'}>Esercitazioni</a><button class="prisma-button secondary" type="button" id="print-eval">Stampa la scheda di valutazione</button></div></header>
+ <aside class="prisma-warning"><strong>Avvertenza:</strong> questa autoverifica è formativa e non certificante. Non costituisce la prova finale normativa dei corsi obbligatori; per tali percorsi si applicano modalità, durate, requisiti e soglie specifiche del vigente Accordo.</aside>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Assessment blueprint</p><h2>Allineamento fra obiettivo e prova</h2>
+  <div class="prisma-table-wrap"><table><thead><tr><th>Obiettivo</th><th>Prestazione attesa</th><th>Evidenza</th></tr></thead><tbody>{outcomes.map(x=><tr><td><strong>{x.id}</strong></td><td>{x.description}</td><td>{x.evidence}</td></tr>)}</tbody></table></div>
+  <p>Quattro domande campione possono essere utilizzate come diagnosi iniziale; il banco di dodici domande serve per recupero e consolidamento. Il confronto pre/post deve utilizzare strumenti coerenti e controllare l'effetto di familiarità con i quesiti.</p>
+ </section>
+ <section class="prisma-section" id="question-bank">
+  <p class="prisma-kicker">Banco di domande · 12 quesiti</p><h2>Questionario con spiegazioni</h2>
+  <p>Correggi quando hai risposto. Le spiegazioni compaiono per ogni quesito; non si invia nessun dato al sito e non si rilascia attestazione.</p>
+  <form id="prisma-test" novalidate>
+   {questions.map((q,i)=><fieldset class="bank-question" data-correct={q.correct} data-why={q.why}>
+    <legend><span class="prisma-time">{String(i+1).padStart(2,'0')} · {q.topic}</span> {q.q}</legend>
+    {q.choices.map((answer,j)=><label class="prisma-choice"><input type="radio" name={'q'+i} value={j}/><span>{answer}</span></label>)}
+    <p class="prisma-feedback question-feedback" role="status" aria-live="polite"></p>
+   </fieldset>)}
+   <div class="prisma-actions prisma-no-print"><button type="button" class="prisma-button" id="grade">Correggi e mostra le motivazioni</button><button type="reset" class="prisma-button secondary">Ricomincia</button></div>
+   <p class="prisma-feedback" id="quiz-result" role="status" aria-live="polite"></p>
+  </form>
+ </section>
+ <section class="prisma-section" id="rubrica">
+  <p class="prisma-kicker">Project work · Valutazione analitica</p><h2>Rubrica 0–10 per il prototipo di gruppo</h2>
+  <p>Assegna a ciascun criterio <strong>0 = assente, 1 = parziale, 2 = completo e documentato</strong>. Il punteggio ha funzione didattica interna. Non equivale a soglie di superamento previste per corsi obbligatori.</p>
+  <div class="prisma-table-wrap"><table class="rubric-table"><thead><tr><th>Criterio</th><th>0</th><th>1</th><th>2</th></tr></thead><tbody>
+   {rubric.map((x,i)=><tr><td><strong>{x.code} · {x.title}</strong><p>{x.full}</p></td>{[0,1,2].map(n=><td><input aria-label={x.code+' punteggio '+n} type="radio" name={'rubric-'+i} value={n}/></td>)}</tr>)}
+  </tbody></table></div>
+  <div class="prisma-actions prisma-no-print"><button class="prisma-button" type="button" id="score-rubric">Calcola la rubrica</button></div>
+  <p class="prisma-feedback" id="rubric-result" role="status" aria-live="polite"></p>
+  <details><summary>Che cosa indica il risultato?</summary><p>Un punteggio basso suggerisce quali dimensioni correggere; un punteggio alto è soltanto un indicatore della qualità didattica osservata nel prototipo. La validazione normativa richiede controllo specialistico, e l’efficacia sul lavoro è una misura successiva.</p></details>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Follow-up · 30 giorni (ipotesi metodologica)</p><h2>Come osservare il trasferimento</h2>
+  <div class="prisma-table-wrap"><table><thead><tr><th>Indicatore</th><th>Prima</th><th>Dopo 30 giorni</th><th>Limite interpretativo</th></tr></thead><tbody>{transfer.map(x=><tr><td><strong>{x.indicator}</strong></td><td>{x.baseline}</td><td>{x.followup}</td><td>{x.limit}</td></tr>)}</tbody></table></div>
+  <h3>Schema di osservazione del responsabile (esempio)</h3>
+  <div class="prisma-panel">
+   <p>Definire un campione autorizzato di comportamenti o prodotti professionali; per ogni episodio documentare presenza di una sequenza osservabile, qualità della segnalazione, collegamento alla procedura e azione successiva. Evitare dati personali non necessari.</p>
+   <ul><li><strong>Baseline:</strong> prima della formazione, se disponibile.</li><li><strong>Controllo:</strong> a 30 giorni, come scelta di progetto (non scadenza normativa universale).</li><li><strong>Responsabile:</strong> persona designata dall’organizzazione per il monitoraggio, con eventuale supporto HSE.</li><li><strong>Riesame:</strong> valutare se il problema deriva da competenza, procedure o condizioni di lavoro.</li></ul>
+  </div>
+  <h3>Gradimento: tre domande distinte dall’apprendimento</h3>
+  <ol><li>Quanto erano pertinenti le attività rispetto ai tuoi compiti?</li><li>Quanto sono stati chiari esempi, spiegazioni e istruzioni?</li><li>Quale attività miglioreresti e perché?</li></ol>
+  <p>Il gradimento è una fonte di miglioramento della formazione; non dimostra da solo conoscenza, comportamento sicuro né riduzione degli incidenti.</p>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Gate professionale di qualità</p><h2>Quando il kit è pronto per essere presentato?</h2>
+  <div class="prisma-grid">
+   <article class="prisma-tile"><h3>Contenuti</h3><p>Ogni affermazione tecnica è verificabile in fonte ufficiale e ha un limite di applicazione esplicito.</p></article>
+   <article class="prisma-tile"><h3>Didattica</h3><p>Gli obiettivi sono misurabili, le prove sono coerenti e il feedback è motivato.</p></article>
+   <article class="prisma-tile"><h3>Governance</h3><p>Il prototipo è dichiarato indipendente; la revisione HSE e il collaudo con utenti rimangono passaggi distinti.</p></article>
+  </div>
+  <p><a href="https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/accordo-stato-regioni-17042025-allegato" target="_blank" rel="noopener noreferrer">Accordo 59/CSR, Parte IV — verifica dell’apprendimento ed efficacia ↗</a></p>
+ </section>
+</PrismaKit>
+<script>
+const form=document.querySelector<HTMLFormElement>('#prisma-test');
+const fields=Array.from(document.querySelectorAll<HTMLFieldSetElement>('.bank-question'));
+document.querySelector('#grade')?.addEventListener('click',()=>{
+ let answered=0,correct=0;
+ fields.forEach(field=>{
+  const selected=field.querySelector<HTMLInputElement>('input[type=radio]:checked');
+  const info=field.querySelector<HTMLElement>('.question-feedback');
+  if(!info)return;
+  if(!selected){info.textContent='Senza risposta. Scegli un’opzione.';info.dataset.kind='review';return;}
+  answered++;
+  const isCorrect=Number(selected.value)===Number(field.dataset.correct);
+  if(isCorrect)correct++;
+  info.textContent=(isCorrect?'Corretta. ':'Da rivedere. ')+(field.dataset.why||'');
+  info.dataset.kind=isCorrect?'correct':'review';
+ });
+ const result=document.querySelector<HTMLElement>('#quiz-result');
+ if(result)result.textContent='Risposte date '+answered+'/'+fields.length+' · corrette '+correct+'/'+fields.length+'. Verifica formativa non certificante.';
+});
+form?.addEventListener('reset',()=>{
+ for(const field of fields){
+  const info=field.querySelector<HTMLElement>('.question-feedback');
+  if(info){info.textContent='';delete info.dataset.kind;}
+ }
+ const result=document.querySelector<HTMLElement>('#quiz-result');
+ if(result)result.textContent='';
+});
+document.querySelector('#score-rubric')?.addEventListener('click',()=>{
+ let complete=0,total=0;
+ for(let i=0;i<5;i++){
+  const selected=document.querySelector<HTMLInputElement>('input[name="rubric-'+i+'"]:checked');
+  if(selected){complete++;total+=Number(selected.value);}
+ }
+ const out=document.querySelector<HTMLElement>('#rubric-result');
+ if(out)out.textContent='Criteri valutati '+complete+'/5 · punteggio '+total+'/10. Riscontro didattico interno, non abilitante.';
+});
+document.querySelector('#print-eval')?.addEventListener('click',()=>window.print());
+</script>

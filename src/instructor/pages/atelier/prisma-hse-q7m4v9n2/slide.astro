@@ -1,0 +1,58 @@
+---
+import PrismaKit from '../../../../layouts/PrismaKit.astro';
+import {prismaSlides} from '../../../../instructor/data/prisma-slides';
+import {sources,prismaRoot} from '../../../../instructor/data/prisma-hse';
+import {withBase} from '../../../../lib/urls';
+const root=withBase(prismaRoot);
+---
+<PrismaKit title="12 slide con note del docente" section="slide">
+ <header class="prisma-hero"><p class="pretitle">02 · Presentazione didattica</p><h1>12 slide, <em>12 decisioni</em></h1><p class="lead">Una presentazione originale e proiettabile dal browser. Ogni slide contiene note per il facilitatore e il riferimento da consultare.</p><div class="prisma-actions"><a class="prisma-button" href={root+'docente/'}>Guida docente</a><button type="button" class="prisma-button secondary" id="print-slides">Stampa il deck</button></div></header>
+ <aside class="prisma-warning"><strong>Presentazione metodologica non certificante.</strong> Non sostituisce durate, contenuti minimi, docenti, soggetti formatori e verifiche dei percorsi obbligatori.</aside>
+ <section class="prisma-section"><p class="prisma-kicker">Storytelling · Slide proiettabili</p><h2>La presentazione</h2>
+ <div id="prisma-slides" aria-label="Deck di dodici slide">
+ {prismaSlides.map((s,i)=><article class="prisma-slide" data-slide={i} hidden={i!==0}>
+  <p class="slide-counter">P.R.I.S.M.A. HSE · {String(s.n).padStart(2,'0')} / 12</p><h2>{s.title}</h2><p style="font-size:1.25rem;color:#DAEEE9">{s.subtitle}</p><ul>{s.points.map(p=><li>{p}</li>)}</ul><p class="slide-counter" style="margin-top:auto;padding-top:22px">Studio dimostrativo · non certificante</p>
+ </article>)}
+ </div>
+ <div class="slide-controls prisma-no-print"><button class="prisma-button secondary" type="button" id="prev">← Precedente</button><strong id="position" aria-live="polite">Slide 1 di 12</strong><button class="prisma-button" type="button" id="next">Successiva →</button><button class="prisma-button secondary" type="button" id="fullscreen">Proietta</button><button class="prisma-button secondary" type="button" id="notes-toggle" aria-expanded="false">Mostra note docente</button></div>
+ <div class="slide-notes" id="lecturer-notes" hidden><h3>Note di conduzione</h3><p id="note-content">{prismaSlides[0].note}</p><p class="prisma-subtle" id="note-source">{prismaSlides[0].source}</p></div>
+ <p class="prisma-subtle">Le frecce ← e → cambiano slide quando non stai compilando un campo. In stampa vengono incluse tutte le dodici slide.</p>
+ </section>
+ <section class="prisma-section"><p class="prisma-kicker">Dal contenuto all'esperienza</p><h2>Uso pedagogico del deck</h2>
+ <div class="prisma-grid"><article class="prisma-tile"><h3>Prima</h3><p>Definisci obiettivo e criteri, poi misura i prerequisiti del gruppo.</p></article><article class="prisma-tile"><h3>Durante</h3><p>Interrompi le spiegazioni con domande e brevi esercitazioni coerenti.</p></article><article class="prisma-tile"><h3>Dopo</h3><p>Chiedi una prova osservabile e registra il debrief, senza confondere presenza e competenza.</p></article></div>
+ </section>
+ <section class="prisma-section"><p class="prisma-kicker">Biblioteca di revisione</p><h2>Fonti delle affermazioni</h2>
+ {sources.map(s=><div class="source-entry"><strong>{s.code} · {s.title}</strong><p>{s.body}</p><a href={s.url} rel="noopener noreferrer" target="_blank">Apri fonte ↗</a></div>)}
+ </section>
+</PrismaKit>
+<script type="application/json" id="slide-manifest" set:html={JSON.stringify(prismaSlides.map(x=>({note:x.note,source:x.source}))).replace(/</g,'\\u003c')}/>
+<script>
+const manifestEl=document.querySelector('#slide-manifest');
+const manifest=JSON.parse(manifestEl?.textContent||'[]') as {note:string;source:string}[];
+const cards=Array.from(document.querySelectorAll<HTMLElement>('.prisma-slide'));
+const notes=document.querySelector<HTMLElement>('#lecturer-notes');
+let slideIndex=0;
+function showSlide(n:number){
+ slideIndex=(n+cards.length)%cards.length;
+ cards.forEach((el,i)=>el.hidden=i!==slideIndex);
+ const counter=document.querySelector('#position');if(counter)counter.textContent='Slide '+(slideIndex+1)+' di '+cards.length;
+ const note=document.querySelector('#note-content');if(note)note.textContent=manifest[slideIndex]?.note||'';
+ const source=document.querySelector('#note-source');if(source)source.textContent=manifest[slideIndex]?.source||'';
+}
+document.querySelector('#prev')?.addEventListener('click',()=>showSlide(slideIndex-1));
+document.querySelector('#next')?.addEventListener('click',()=>showSlide(slideIndex+1));
+document.querySelector('#notes-toggle')?.addEventListener('click',()=>{
+ if(!notes)return;notes.hidden=!notes.hidden;
+ const control=document.querySelector('#notes-toggle');if(control){control.setAttribute('aria-expanded',String(!notes.hidden));control.textContent=notes.hidden?'Mostra note docente':'Nascondi note docente';}
+});
+document.querySelector('#fullscreen')?.addEventListener('click',async()=>{
+ const deck=document.querySelector<HTMLElement>('#prisma-slides');
+ if(deck?.requestFullscreen){try{await deck.requestFullscreen();}catch{deck.scrollIntoView();}}
+});
+document.querySelector('#print-slides')?.addEventListener('click',()=>window.print());
+document.addEventListener('keydown',(e)=>{
+ if(e.target instanceof HTMLInputElement||e.target instanceof HTMLTextAreaElement||e.target instanceof HTMLSelectElement)return;
+ if(e.key==='ArrowRight')showSlide(slideIndex+1);
+ if(e.key==='ArrowLeft')showSlide(slideIndex-1);
+});
+</script>

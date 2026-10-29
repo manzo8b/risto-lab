@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+import '../styles/prisma-kit.css';
+import {withBase} from '../lib/urls';
+import {prismaRoot} from '../instructor/data/prisma-hse';
+
+const {title='P.R.I.S.M.A. HSE',section='overview'}=Astro.props;
+const root=withBase(prismaRoot);
+const nav=[
+ ['overview','', 'Proposta'],
+ ['progetto','progetto/', 'Progettazione'],
+ ['slide','slide/', '12 slide'],
+ ['attivita','attivita/', 'Laboratorio'],
+ ['docente','docente/', 'Kit docente'],
+ ['valutazione','valutazione/', 'Valutazioni'],
+];
+---
+<!doctype html>
+<html lang="it">
+<head>
+ <meta charset="utf-8"/>
+ <meta name="viewport" content="width=device-width,initial-scale=1"/>
+ <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex"/>
+ <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex"/>
+ <meta name="referrer" content="no-referrer"/>
+ <meta name="description" content="Dossier formativo dimostrativo indipendente di RISTO-LAB, non commissionato."/>
+ <link rel="icon" href={withBase('/favicon.svg')}/>
+ <title>{title} | P.R.I.S.M.A. HSE</title>
+</head>
+<body class="prisma-page">
+ <a class="skip" href="#prisma-content">Salta al contenuto</a>
+ <header class="prisma-top">
+  <div class="prisma-container prisma-top-inner">
+   <div class="prisma-brand"><span>RISTO—LAB</span><small>Instructional Design · Dossier indipendente</small></div>
+   <span class="prisma-version">P.R.I.S.M.A. HSE <small>Versione dimostrativa 1.1 · 29.10.2026</small></span>
+  </div>
+ </header>
+ <nav class="prisma-nav prisma-container" aria-label="Sezioni del kit">
+  {nav.map(([key,slug,label],i)=><a href={root+slug} aria-current={section===key?'page':undefined}><span class="prisma-index">{String(i+1).padStart(2,'0')}</span> {label}</a>)}
+ </nav>
+ <main class="prisma-container" id="prisma-content"><slot/></main>
+ <footer class="prisma-footer"><div class="prisma-container">
+  <strong>P.R.I.S.M.A. HSE · RISTO-LAB</strong>
+  <span>Progetto dimostrativo non commissionato · Non equivale a formazione obbligatoria né attestazione</span>
+ </div></footer>
+</body>
+</html>

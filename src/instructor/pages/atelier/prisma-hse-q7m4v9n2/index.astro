@@ -1,0 +1,67 @@
+---
+import PrismaKit from '../../../../layouts/PrismaKit.astro';
+import {withBase} from '../../../../lib/urls';
+import {prismaRoot,prismaName,acronym,agenda,outcomes,sources} from '../../../../instructor/data/prisma-hse';
+const local=(path:string)=>withBase(prismaRoot+path);
+---
+<PrismaKit title="Consilia · Proposta e kit formativo" section="overview">
+ <header class="prisma-hero">
+  <p class="pretitle">RISTO-LAB · Portfolio indipendente · Consilia, caso applicativo</p>
+  <h1><em>P.R.I.S.M.A.</em> HSE</h1>
+  <h2>Progettare la sicurezza che si apprende</h2>
+  <p class="lead">Una proposta autonoma di instructional design per una possibile squadra di progettisti e formatori HSE. Un kit con curriculum, slide, attività, fonti tracciabili, rubrica, verifiche e istruzioni per il docente.</p>
+  <div><span class="pill">2 incontri da 4 ore</span><span class="pill">12 slide</span><span class="pill">3 casi interattivi</span><span class="pill">12 domande</span><span class="pill">Follow-up a 30 giorni</span></div>
+  <div class="prisma-actions"><a class="prisma-button" href={local('progetto/')}>Esamina il progetto</a><a class="prisma-button secondary" href={local('attivita/')}>Prova il laboratorio</a><a class="prisma-button secondary" href={local('slide/')}>Apri le slide</a></div>
+ </header>
+ <aside class="prisma-warning"><strong>Proposta dimostrativa indipendente.</strong> Non è stata commissionata, esaminata o approvata da Consilia CFO S.r.l. e non implica collaborazione con l’azienda. I destinatari, i fabbisogni e il programma sono ipotesi da validare. Il kit è <strong>non certificante</strong>, non sostituisce corsi obbligatori né servizi RSPP. La pagina è non elencata e non indicizzabile per richiesta ai motori di ricerca, ma <strong>non ha password</strong>: il repository GitHub Pages è pubblico.</aside>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Presentazione da colloquio · 90 secondi</p>
+  <h2>Non una presentazione: una prova del metodo</h2>
+  <div class="prisma-panel">
+   <p><strong>Il messaggio da portare al colloquio:</strong> «Ho costruito questo caso dimostrativo per mostrare come progetto la formazione. Parto da un bisogno da verificare, traduco le norme in obiettivi osservabili, preparo una microlezione con prove e feedback, e definisco come misurare l'applicazione sul lavoro. Le parti normative specialistiche rimangono soggette alla revisione di un professionista HSE. Il valore del progetto è la capacità di consegnare materiali utilizzabili, tracciabili e migliorabili, non semplicemente belle slide».</p>
+   <div class="prisma-grid">
+    <article class="prisma-tile"><h3>Prova 1</h3><p>Macro e microprogettazione di otto ore, con vincoli e matrice normativa.</p></article>
+    <article class="prisma-tile"><h3>Prova 2</h3><p>Dodici slide, casi interattivi e istruzioni replicabili da un formatore.</p></article>
+    <article class="prisma-tile"><h3>Prova 3</h3><p>Valutazione dell'apprendimento, rubrica e follow-up distinto dal gradimento.</p></article>
+   </div>
+  </div>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">La nostra chiave metodologica</p><h2>Sei lettere, sei passaggi verificabili</h2>
+  <div class="prisma-grid">{acronym.map(x=><article class="prisma-tile"><div class="big-letter">{x.letter}</div><h3>{x.title}</h3><p>{x.description}</p></article>)}</div>
+  <p class="prisma-subtle">P.R.I.S.M.A. è un’etichetta didattica proposta per organizzare principi noti di progettazione e valutazione: non pretende di costituire una nuova teoria scientifica.</p>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Problema e valore</p><h2>Che cosa può dimostrare questo progetto a Consilia?</h2>
+  <div class="prisma-grid two">
+   <article class="prisma-panel"><h3>Il problema ipotizzato</h3><p>Un gruppo di progettisti HSE deve trasformare aggiornamenti normativi in percorsi formativi comprensibili, coerenti, partecipativi e verificabili, senza sacrificare accuratezza o documentazione.</p><p>Il problema va verificato con interviste e osservazioni, non attribuito automaticamente a Consilia.</p></article>
+   <article class="prisma-panel"><h3>Il risultato concreto</h3><p>Una struttura riutilizzabile di progetto formativo: matrice dei fabbisogni, riferimenti, obiettivi e prove, slide, esercizi, check di conformità, rubrica di qualità e verifica del trasferimento.</p><p>Non un corso obbligatorio preconfezionato: una dimostrazione professionale del metodo.</p></article>
+  </div>
+  <div class="prisma-progress">
+   <div><strong>8 ore</strong><small>Durata laboratorio metodologico proposta</small></div>
+   <div><strong>8–12</strong><small>Partecipanti ipotizzati</small></div>
+   <div><strong>4 settimane</strong><small>Tempo di preparazione stimato</small></div>
+   <div><strong>+30 giorni</strong><small>Riesame della progettazione sul lavoro</small></div>
+  </div>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Risultati di apprendimento</p><h2>Cosa sapranno fare i partecipanti?</h2>
+  <div class="prisma-table-wrap"><table><thead><tr><th>Codice</th><th>Obiettivo osservabile</th><th>Prova</th></tr></thead><tbody>{outcomes.map(x=><tr><td><strong>{x.id}</strong></td><td>{x.description}</td><td>{x.evidence}</td></tr>)}</tbody></table></div>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Percorso e deliverable</p><h2>Un kit utilizzabile, non una semplice presentazione</h2>
+  <div class="prisma-grid two">
+   <article class="prisma-tile"><h3>01 · Progetto esecutivo</h3><p>Analisi del bisogno, ruoli, cronoprogramma, matrice obiettivi/prove e normativa, registro di qualità e vincoli.</p><p><a href={local('progetto/')}>Apri progettazione ↗</a></p></article>
+   <article class="prisma-tile"><h3>02 · Slide proiettabili</h3><p>Dodici slide originali, navigabili, con note per il facilitatore e rimandi alle fonti ufficiali.</p><p><a href={local('slide/')}>Presentazione ↗</a></p></article>
+   <article class="prisma-tile"><h3>03 · Attività applicative</h3><p>Telefonata narrativa, near miss in tre settori, controllo AI, laboratorio per scrivere un obiettivo e mini-prova.</p><p><a href={local('attivita/')}>Esercitazioni ↗</a></p></article>
+   <article class="prisma-tile"><h3>04 · Manuale del docente</h3><p>Scaletta minuto per minuto, conduzione, materiale per partecipanti, risposte guida e lista di preparazione.</p><p><a href={local('docente/')}>Kit docente stampabile ↗</a></p></article>
+   <article class="prisma-tile"><h3>05 · Valutazioni e transfer</h3><p>Dodici domande con feedback, rubrica 0–2, checklist di conformità e piano di osservazione a 30 giorni.</p><p><a href={local('valutazione/')}>Verifiche ↗</a></p></article>
+   <article class="prisma-tile"><h3>06 · Fonti istituzionali</h3><p>Normattiva, Accordo 59/CSR, FAQ ministeriali 2026, guida INAIL e criteri CDC; riferimenti con controllo di vigenza.</p><p><a href="#fonti">Biblioteca delle fonti ↓</a></p></article>
+  </div>
+ </section>
+ <section class="prisma-section" id="fonti">
+  <p class="prisma-kicker">Approccio evidence-first</p><h2>Fonti: dall’affermazione al documento</h2>
+  {sources.map(x=><div class="source-entry"><p class="prisma-kicker">{x.code} · {x.type}</p><h3>{x.title}</h3><p>{x.body}</p><a href={x.url} rel="noopener noreferrer" target="_blank">Apri la fonte istituzionale ↗</a></div>)}
+  <p class="prisma-subtle">Ultima ricognizione: 29 ottobre 2026. Una fonte ufficiale non equivale da sola alla verifica della sua applicabilità al caso concreto; serve revisione di un professionista qualificato.</p>
+ </section>
+</PrismaKit>

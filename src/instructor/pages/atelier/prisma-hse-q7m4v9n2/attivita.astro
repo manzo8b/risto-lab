@@ -1,0 +1,124 @@
+---
+import PrismaKit from '../../../../layouts/PrismaKit.astro';
+import {scenarios,prismaRoot,sources} from '../../../../instructor/data/prisma-hse';
+import {withBase} from '../../../../lib/urls';
+const root=withBase(prismaRoot);
+const factChecks=[
+ {claim:'Una firma o una videolezione bastano sempre a rendere valido un corso HSE obbligatorio.',correct:'Non verificato e fuorviante',reason:'Occorrono requisiti specifici di soggetto, corso, durata, modalità, verifica e documentazione.'},
+ {claim:'RSPP e RLS sono due nomi per la stessa figura professionale.',correct:'Falso',reason:'Il RSPP collabora tecnicamente al servizio di prevenzione e protezione; il RLS rappresenta i lavoratori.'},
+ {claim:'La verifica dell’apprendimento e quella dell’efficacia sul lavoro sono distinte.',correct:'Corretto in termini generali',reason:'L’Accordo 59/CSR, Parte IV, punti 6 e 7, distingue i momenti di valutazione.'}
+];
+---
+<PrismaKit title="Laboratorio e esercitazioni HSE" section="attivita">
+ <header class="prisma-hero"><p class="pretitle">03 · Esperienze e prove guidate</p><h1>Imparare <em>decidendo</em></h1><p class="lead">Tre microcasi, una telefonata narrativa, fact-check delle risposte AI e un laboratorio di instructional design: attività corte con soluzione motivata e rimandi alle fonti.</p><div class="prisma-actions"><a class="prisma-button" href={root+'docente/'}>Apri le schede del docente</a><a class="prisma-button secondary" href={root+'valutazione/'}>Vai alle verifiche</a></div></header>
+ <aside class="prisma-warning">Casi esclusivamente inventati. <strong>Nessun esercizio suggerisce interventi operativi autorizzati</strong> o sostituisce un DVR. La corretta gestione di un evento deve seguire le procedure, i ruoli e le competenze dell'azienda reale.</aside>
+ <section class="prisma-section" id="gossip">
+  <p class="prisma-kicker">Attività A5 · 8 minuti · Dialogo narrativo</p><h2>«Pronto, hai saputo della nuova legge?»</h2>
+  <div class="prisma-grid two">
+   <article class="prisma-tile"><h3>Giulia <span aria-hidden="true">☎</span></h3><p>«Arianna, indovina? Mi hanno detto che, con il nuovo Accordo, bastano delle slide e una firma per essere a posto. Allora la formazione si fa in dieci minuti!»</p></article>
+   <article class="prisma-tile"><h3>Arianna</h3><p>«Aspetta, chi l'ha detto? È scritto nell'Accordo o è un racconto passato da un collega all'altro? Quale percorso, quali docenti e quali verifiche?»</p></article>
+  </div>
+  <fieldset data-answer="1" data-explanation="Non esiste un’equivalenza automatica: bisogna controllare l’Accordo applicabile, il tipo di percorso e i requisiti. Questa è una esercitazione di fact-check, non una consulenza normativa." class="prisma-check">
+   <legend>Qual è la risposta professionale più corretta?</legend>
+   <label class="prisma-choice"><input type="radio" name="gossip" value="0"/> «Sì, mi fido: la voce è molto diffusa»</label>
+   <label class="prisma-choice"><input type="radio" name="gossip" value="1"/> «Prima identifico il corso e verifico i requisiti sulle fonti ufficiali»</label>
+   <label class="prisma-choice"><input type="radio" name="gossip" value="2"/> «Basta allungare la presentazione e usare più immagini»</label>
+   <button type="button" class="prisma-button check-activity">Verifica e spiega</button><p class="prisma-feedback" role="status" aria-live="polite"></p>
+  </fieldset>
+  <details><summary>Traccia del debrief: due domande per il gruppo</summary><ol><li>Qual è il punto in cui una voce diventa una falsa certezza?</li><li>Come si scrive un'affermazione corretta citando fonte e applicabilità?</li></ol><p><strong>Fonte:</strong> Accordo 59/CSR, Parte I e Parte IV; consultare anche le FAQ ministeriali del 2026.</p></details>
+ </section>
+ <section class="prisma-section" id="casi">
+  <p class="prisma-kicker">Attività A5/A9 · 5 minuti per caso</p><h2>Near Miss Detective: tre contesti</h2>
+  <p>Il docente può assegnare un solo caso al gruppo oppure confrontare le tre situazioni. Prima dei quesiti, leggere i fatti e dichiarare le informazioni mancanti.</p>
+  {scenarios.map((s,i)=><article class="prisma-case">
+   <p class="prisma-time">Caso {i+1} · {s.sector} · 5 minuti</p><h3>{s.title}</h3><p>{s.story}</p>
+   <div class="prisma-grid two" style="margin:15px 0">
+    <div class="prisma-tile"><h3>Fatti osservati</h3><ul>{s.facts.map(f=><li>{f}</li>)}</ul></div>
+    <div class="prisma-tile"><h3>Da verificare</h3><ul>{s.unknown.map(f=><li>{f}</li>)}</ul></div>
+   </div>
+   <fieldset data-answer={s.correct} data-explanation={s.why} class="prisma-check">
+    <legend>{s.question}</legend>
+    {s.choices.map((c,j)=><label class="prisma-choice"><input type="radio" name={'case'+i} value={j}/>{c}</label>)}
+    <button type="button" class="prisma-button check-activity">Correggi con spiegazione</button>
+    <p class="prisma-feedback" role="status" aria-live="polite"></p>
+   </fieldset>
+   <details><summary>Consegna per il facilitatore</summary><p>Chiedere di redigere una segnalazione di due frasi: dove è stata osservata la situazione, quale fatto è verificabile e quale passaggio richiede conferma delle procedure. Evitare attribuzioni di colpa.</p></details>
+  </article>)}
+ </section>
+ <section class="prisma-section" id="glossario">
+  <p class="prisma-kicker">Ripasso attivo · 8 minuti</p><h2>Vocabolario HSE e della progettazione didattica</h2>
+  <p>Dodici concetti spiegati in termini accessibili. Ogni definizione può diventare una domanda di recupero attivo per il gruppo.</p>
+  <div class="prisma-grid">
+   {[
+    ['Fabbisogno','Differenza motivata fra competenza attesa e competenza disponibile, da distinguere da carenze organizzative.'],
+    ['Macroprogettazione','Architettura del percorso: destinatari, obiettivi, moduli, metodi, risorse, durata e valutazione.'],
+    ['Microprogettazione','Sequenza precisa di una unità: tempi, contenuti, azioni del discente e feedback.'],
+    ['Obiettivo osservabile','Descrizione verificabile di ciò che una persona sarà capace di fare.'],
+    ['Prova di apprendimento','Attività per misurare competenze o conoscenze raggiunte alla fine o durante il percorso.'],
+    ['Efficacia sul lavoro','Applicazione successiva delle competenze nel contesto professionale.'],
+    ['DVR','Documento di valutazione dei rischi, riferito all’organizzazione effettiva.'],
+    ['RSPP','Responsabile del Servizio di prevenzione e protezione.'],
+    ['RLS','Rappresentante dei lavoratori per la sicurezza.'],
+    ['Preposto','Figura di sovrintendenza e vigilanza nei limiti delle attribuzioni previste.'],
+    ['Near miss','Quasi-incidente utile per identificare opportunità di prevenzione prima del danno.'],
+    ['Feedback','Informazione specifica che spiega come migliorare una prestazione osservata.'],
+   ].map(([term,description])=><details><summary>{term}</summary><p>{description}</p></details>)}
+  </div>
+  <p>Per una prova aggiuntiva di terminologia è disponibile anche il <a href={withBase('/instructor/laboratorio-sicurezza/#cruciverba')}>cruciverba interattivo già sviluppato in RISTO-LAB Instructor ↗</a>. È una risorsa integrativa, non una prova abilitante.</p>
+ </section>
+ <section class="prisma-section" id="ai-fact-check">
+  <p class="prisma-kicker">Attività A8 · 12 minuti</p><h2>AI Fact-Check — tre affermazioni da revisionare</h2>
+  <p>Simula la revisione di materiali generati automaticamente. Per ogni frase, scegli il giudizio più appropriato e registra la fonte che useresti. Non inserire informazioni riservate in sistemi AI non autorizzati.</p>
+  {factChecks.map((f,i)=><div class="prisma-panel">
+   <p class="prisma-kicker">Frase {i+1}</p><h3>{f.claim}</h3>
+   <details><summary>Apri l'esito atteso del fact-check</summary><p><strong>Classificazione:</strong> {f.correct}.</p><p>{f.reason}</p><p><strong>Da consultare:</strong> {i===1?'D.Lgs. 81/2008, artt. 31–33 e 47':'Accordo 59/CSR, Allegato A e FAQ ministeriali 2026'}.</p></details>
+  </div>)}
+ </section>
+ <section class="prisma-section" id="project-work">
+  <p class="prisma-kicker">Attività A3/A4 · 20 minuti · Compito autentico</p><h2>Microprogetta: un obiettivo, una prova, un debrief</h2>
+  <p>Completa la scheda sulla base del caso sintetico del cavo nel passaggio. Evita frasi generiche come «conoscere la sicurezza». Non si salvano né si inviano risposte: puoi stamparle prima di lasciare la pagina.</p>
+  <div class="prisma-panel">
+   <label class="field-label" for="need">Problema osservabile da affrontare</label><textarea id="need" placeholder="Es. segnalazioni incomplete e non basate sui fatti..."></textarea>
+   <label class="field-label" for="goal">Obiettivo misurabile: al termine il partecipante sarà in grado di…</label><textarea id="goal" placeholder="Es. identificare 2 fatti, 1 dubbio e un canale di segnalazione..."></textarea>
+   <label class="field-label" for="test">Come verificherai la prestazione?</label><textarea id="test" placeholder="Es. simulazione di 3 minuti con rubriche di osservazione..."></textarea>
+   <label class="field-label" for="source">Quale fonte e quale punto verificherai?</label><input id="source" type="text" placeholder="Es. D.Lgs. 81/2008, articolo 20"/>
+   <label class="field-label" for="transfer">Come osserverai l'applicazione dopo 30 giorni?</label><textarea id="transfer" placeholder="Es. checklist su segnalazioni e follow-up (solo su dati autorizzati)..."></textarea>
+   <div class="prisma-actions prisma-no-print"><button type="button" class="prisma-button" id="print-work">Stampa la scheda compilata</button><button type="button" class="prisma-button secondary" id="example-work">Mostra un esempio</button></div>
+   <p class="prisma-feedback" id="work-hint" role="status" aria-live="polite"></p>
+  </div>
+  <details><summary>Rubrica di controllo: cinque criteri</summary><p>Assegna 0 = assente, 1 = parziale, 2 = completo per ciascuno: fabbisogno; obiettivo osservabile; prova pertinente; tracciabilità della fonte; follow-up realistico. Punteggio 0–10 a finalità didattica, non valido per obblighi HSE.</p></details>
+ </section>
+ <section class="prisma-section"><p class="prisma-kicker">Biblioteca essenziale</p><h2>Fonti da aprire nel laboratorio</h2>
+ {sources.slice(0,4).map(s=><div class="source-entry"><strong>{s.code} · {s.title}</strong><p>{s.body}</p><a href={s.url} rel="noopener noreferrer" target="_blank">Consulta la fonte ↗</a></div>)}
+ </section>
+</PrismaKit>
+<script>
+document.querySelectorAll<HTMLFieldSetElement>('.prisma-check').forEach(field=>{
+ field.querySelector('.check-activity')?.addEventListener('click',()=>{
+  const selected=field.querySelector<HTMLInputElement>('input[type=radio]:checked');
+  const result=field.querySelector<HTMLElement>('.prisma-feedback');
+  if(!result)return;
+  if(!selected){result.textContent='Scegli una risposta per verificare.';result.dataset.kind='review';return;}
+  const correct=Number(selected.value)===Number(field.dataset.answer);
+  result.textContent=(correct?'Scelta adeguata. ':'Da rivedere. ')+(field.dataset.explanation||'');
+  result.dataset.kind=correct?'correct':'review';
+ });
+});
+document.querySelector('#print-work')?.addEventListener('click',()=>window.print());
+document.querySelector('#example-work')?.addEventListener('click',()=>{
+ const values:{
+ [key:string]:string
+ }={
+  need:'Il personale descrive un’anomalia senza indicare luogo, fatto osservato o referente.',
+  goal:'Dato un caso sintetico, identificare almeno due fatti, un’informazione mancante e il canale di segnalazione previsto.',
+  test:'Simulazione breve; osservazione con criteri espliciti e debrief.',
+  source:'D.Lgs. 81/2008, art. 20; verificare procedure dell’azienda.',
+  transfer:'Dopo 30 giorni osservare un campione di segnalazioni autorizzate e confrontarlo con i criteri concordati.'
+ };
+ for(const [id,value] of Object.entries(values)){
+  const control=document.getElementById(id);
+  if(control instanceof HTMLTextAreaElement||control instanceof HTMLInputElement)control.value=value;
+ }
+ const hint=document.getElementById('work-hint');if(hint)hint.textContent='Esempio inserito: modificalo per il contesto, senza sostituire una validazione HSE.';
+});
+</script>

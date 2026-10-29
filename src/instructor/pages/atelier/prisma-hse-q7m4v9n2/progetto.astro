@@ -1,0 +1,68 @@
+---
+import PrismaKit from '../../../../layouts/PrismaKit.astro';
+import {agenda,outcomes,sourceMatrix,prismaRoot,sources} from '../../../../instructor/data/prisma-hse';
+import {withBase} from '../../../../lib/urls';
+const root=withBase(prismaRoot);
+const diagnostic=[
+ {need:'Quale prestazione non è soddisfacente?',evidence:'Caso sintetico di segnalazione imprecisa',decision:'Servono capacità di distinguere fatti, dubbi e riferimenti.'},
+ {need:'La criticità è formativa?',evidence:'Intervista a responsabile, check di procedure e attrezzature',decision:'Se mancano risorse o misure tecniche, la formazione da sola non basta.'},
+ {need:'Chi partecipa?',evidence:'Ruoli, lingua, digital literacy, prerequisiti',decision:'Adattare casi, lessico e accessibilità.'},
+ {need:'Quali vincoli si applicano?',evidence:'Fonte vigente, tipo di corso, soggetto formatore, docenti',decision:'Distinguere laboratorio metodologico da corsi obbligatori.'}
+];
+const riskRegister=[
+ ['Norma superata o mal citata','Alta','Link ufficiale, articolo/punto, data del controllo e responsabile HSE'],
+ ['AI inventa durate, obblighi o qualifiche','Alta','Nessuna pubblicazione senza confronto con fonti primarie'],
+ ['Casi non rappresentativi del lavoro','Media','Intervista al committente e validazione del contesto'],
+ ['Partecipanti passivi','Media','Prova guidata, turnazione dei ruoli e feedback breve'],
+ ['Confusione tra quiz e competenza operativa','Alta','Simulazione osservabile, rubrica e follow-up'],
+ ['Informazioni personali in servizi digitali','Alta','Solo casi sintetici e strumenti approvati dall’azienda']
+];
+---
+<PrismaKit title="Progetto esecutivo e matrice di qualità" section="progetto">
+ <header class="prisma-hero"><p class="pretitle">01 · Progettazione professionale</p><h1>Il progetto prima delle slide</h1><p class="lead">Una proposta realistica si difende con fabbisogni, obiettivi, scelte metodologiche e prove tracciate. Questo è il modello esecutivo del laboratorio P.R.I.S.M.A. HSE.</p></header>
+ <aside class="prisma-warning"><strong>Profilo del committente ipotetico:</strong> Consilia è un possibile destinatario della dimostrazione, non un committente reale. Non vengono attribuite criticità ai suoi corsi. Il contenuto non è un progetto validato per formazione obbligatoria ex art. 37.</aside>
+ <section class="prisma-section">
+  <p class="prisma-kicker">A · Training needs analysis</p><h2>Diagnosi del fabbisogno: domande prima delle risposte</h2>
+  <p>Prima di proporre una soluzione occorre decidere se la differenza tra comportamento atteso e osservato dipende davvero da competenze. Un ambiente non sicuro non viene risanato con un quiz.</p>
+  <div class="prisma-table-wrap"><table><thead><tr><th>Domanda</th><th>Evidenza proposta</th><th>Decisione di progetto</th></tr></thead><tbody>{diagnostic.map(x=><tr><td>{x.need}</td><td>{x.evidence}</td><td>{x.decision}</td></tr>)}</tbody></table></div>
+  <details><summary>Scheda di intervista al responsabile Formazione — 8 domande</summary>
+   <ol><li>Quale comportamento o competenza volete rafforzare, e in quali situazioni?</li><li>Quali errori ricorrenti avete osservato, se documentati e condivisibili?</li><li>La criticità deriva da conoscenze insufficienti, risorse, procedure o attrezzature?</li><li>Quali mansioni e prerequisiti distinguono i destinatari?</li><li>Quali vincoli normativi e di conformità riguardano il corso?</li><li>Quali materiali e piattaforme avete già approvato?</li><li>Che cosa considerate un esito accettabile, misurabile?</li><li>Chi validerà i contenuti e chi potrà osservare il trasferimento sul lavoro?</li></ol>
+  </details>
+  <p class="prisma-subtle">Strumento utilizzabile su un caso simulato. Per contenuti aziendali autentici occorrono autorizzazioni e accordi di riservatezza.</p>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">B · Backward design</p><h2>Dagli obiettivi alle prove</h2>
+  <div class="prisma-table-wrap"><table><thead><tr><th>Risultato</th><th>Evidenza proposta</th><th>Criterio di accettazione</th></tr></thead><tbody>{outcomes.map(x=><tr><td><strong>{x.id}</strong> — {x.description}</td><td>{x.evidence}</td><td>{x.criterion}</td></tr>)}</tbody></table></div>
+  <p>Esempio di micro-obiettivo: «Dato uno scenario di quasi-incidente, il discente identifica almeno due fatti osservabili, una informazione mancante e un canale appropriato di segnalazione». È una prestazione valutabile; «comprendere tutto sulla sicurezza» non lo è.</p>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">C · Macroprogettazione</p><h2>Programma completo: 480 minuti in due giornate</h2>
+  <p>Due incontri da quattro ore, comprese le pause. Sono durate organizzative per il workshop di progettazione didattica, non quelle previste per percorsi HSE obbligatori.</p>
+  {[1,2].map(day=><div class="prisma-panel"><h3>Giornata {day} · 09:00–13:00</h3><div class="prisma-table-wrap"><table><thead><tr><th>Orario</th><th>Minuti</th><th>Unità</th><th>Metodo</th><th>Evidenza</th></tr></thead><tbody>{agenda.filter(x=>x.day===day).map(x=><tr><td>{x.start}–{x.end}</td><td>{x.minutes}</td><td><strong>{x.title}</strong></td><td>{x.method||'Pausa'}</td><td>{x.output||'—'}</td></tr>)}</tbody></table></div></div>)}
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">D · Microprogettazione</p><h2>Microlezione campione di 25 minuti</h2>
+  <div class="prisma-table-wrap"><table><thead><tr><th>Minuto</th><th>Contenuto</th><th>Partecipante</th><th>Prova/feedback</th></tr></thead><tbody>
+   <tr><td>00–04</td><td>Near miss: cavo in un passaggio</td><td>Osserva e distingue i fatti</td><td>Annota due osservazioni</td></tr>
+   <tr><td>04–08</td><td>Telefonata gossip tra colleghe</td><td>Riconosce l’affermazione da verificare</td><td>Identifica una voce non confermata</td></tr>
+   <tr><td>08–13</td><td>Articoli 15, 19 e 20 D.Lgs. 81/2008</td><td>Consulta la fonte ufficiale</td><td>Collega principio e comportamento</td></tr>
+   <tr><td>13–21</td><td>Decisione e comunicazione</td><td>Costruisce una segnalazione non colpevolizzante</td><td>Prova simulata con rubrica</td></tr>
+   <tr><td>21–25</td><td>Debrief e restituzione</td><td>Corregge e riformula</td><td>Feedback immediato</td></tr>
+  </tbody></table></div>
+  <p><a href={root+'attivita/'}>Apri la simulazione interattiva ↗</a> · <a href={root+'slide/'}>Proietta le slide ↗</a>.</p>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">E · Evidence register</p><h2>Matrice di tracciabilità delle fonti</h2>
+  <p>Ogni affermazione normativa deve essere rintracciabile. Qui è disponibile una matrice modello, con stato esplicito di verifica: <strong>non è un parere di conformità già approvato</strong>.</p>
+  <div class="prisma-table-wrap"><table><thead><tr><th>ID</th><th>Affermazione e punto</th><th>Fonte</th><th>Uso</th><th>Controllo prima dell’erogazione</th></tr></thead><tbody>{sourceMatrix.map(x=><tr><td>{x.id}</td><td>{x.claim}<p class="prisma-subtle">{x.reference}</p></td><td>{x.source}</td><td>{x.use}</td><td>{x.status}</td></tr>)}</tbody></table></div>
+  <h3>Documenti esterni da aprire durante la revisione</h3>
+  {sources.slice(0,4).map(x=><div class="source-entry"><strong>{x.code}</strong> — <a href={x.url} target="_blank" rel="noopener noreferrer">{x.title} ↗</a><p>{x.body}</p></div>)}
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">F · Risk management</p><h2>Rischi di progettazione e salvaguardie</h2>
+  <div class="prisma-table-wrap"><table><thead><tr><th>Rischio</th><th>Priorità proposta</th><th>Misura di controllo</th></tr></thead><tbody>{riskRegister.map(row=><tr>{row.map(cell=><td>{cell}</td>)}</tr>)}</tbody></table></div>
+  <h3>Responsabilità e approvazioni</h3>
+  <ul><li><strong>Project owner:</strong> raccoglie fabbisogni e coordina il processo.</li><li><strong>Instructional designer:</strong> produce obiettivi, sequenze, esercizi, rubrica e storyboard.</li><li><strong>Esperto HSE qualificato:</strong> verifica fonti, correttezza tecnica, vincoli e applicabilità.</li><li><strong>Qualità e accessibilità:</strong> controlla leggibilità, interazione, inclusione e documenti.</li><li><strong>Responsabile aziendale:</strong> approva la progettazione e dispone il riesame secondo i ruoli reali.</li></ul>
+  <p><a href={root+'docente/'}>Guida esecutiva e consegne del formatore ↗</a></p>
+ </section>
+</PrismaKit>

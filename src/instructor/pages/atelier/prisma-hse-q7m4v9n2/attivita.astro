@@ -45,6 +45,27 @@ const factChecks=[
    <details><summary>Consegna per il facilitatore</summary><p>Chiedere di redigere una segnalazione di due frasi: dove è stata osservata la situazione, quale fatto è verificabile e quale passaggio richiede conferma delle procedure. Evitare attribuzioni di colpa.</p></details>
   </article>)}
  </section>
+ <section class="prisma-section" id="glossario">
+  <p class="prisma-kicker">Ripasso attivo · 8 minuti</p><h2>Vocabolario HSE e della progettazione didattica</h2>
+  <p>Dodici concetti spiegati in termini accessibili. Ogni definizione può diventare una domanda di recupero attivo per il gruppo.</p>
+  <div class="prisma-grid">
+   {[
+    ['Fabbisogno','Differenza motivata fra competenza attesa e competenza disponibile, da distinguere da carenze organizzative.'],
+    ['Macroprogettazione','Architettura del percorso: destinatari, obiettivi, moduli, metodi, risorse, durata e valutazione.'],
+    ['Microprogettazione','Sequenza precisa di una unità: tempi, contenuti, azioni del discente e feedback.'],
+    ['Obiettivo osservabile','Descrizione verificabile di ciò che una persona sarà capace di fare.'],
+    ['Prova di apprendimento','Attività per misurare competenze o conoscenze raggiunte alla fine o durante il percorso.'],
+    ['Efficacia sul lavoro','Applicazione successiva delle competenze nel contesto professionale.'],
+    ['DVR','Documento di valutazione dei rischi, riferito all’organizzazione effettiva.'],
+    ['RSPP','Responsabile del Servizio di prevenzione e protezione.'],
+    ['RLS','Rappresentante dei lavoratori per la sicurezza.'],
+    ['Preposto','Figura di sovrintendenza e vigilanza nei limiti delle attribuzioni previste.'],
+    ['Near miss','Quasi-incidente utile per identificare opportunità di prevenzione prima del danno.'],
+    ['Feedback','Informazione specifica che spiega come migliorare una prestazione osservata.'],
+   ].map(([term,description])=><details><summary>{term}</summary><p>{description}</p></details>)}
+  </div>
+  <p>Per una prova aggiuntiva di terminologia è disponibile anche il <a href={withBase('/instructor/laboratorio-sicurezza/#cruciverba')}>cruciverba interattivo già sviluppato in RISTO-LAB Instructor ↗</a>. È una risorsa integrativa, non una prova abilitante.</p>
+ </section>
  <section class="prisma-section" id="ai-fact-check">
   <p class="prisma-kicker">Attività A8 · 12 minuti</p><h2>AI Fact-Check — tre affermazioni da revisionare</h2>
   <p>Simula la revisione di materiali generati automaticamente. Per ogni frase, scegli il giudizio più appropriato e registra la fonte che useresti. Non inserire informazioni riservate in sistemi AI non autorizzati.</p>

@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import '../styles/prisma-kit.css';
+import '../styles/manzo-signature.css';
+import ManzoSignature from '../components/ManzoSignature.astro';
 import {withBase} from '../lib/urls';
 import {prismaRoot} from '../instructor/data/prisma-hse';
 
@@ -42,6 +44,7 @@ const nav=[
  <footer class="prisma-footer"><div class="prisma-container">
   <strong>P.R.I.S.M.A. HSE · RISTO-LAB</strong>
   <span>Progetto dimostrativo non commissionato · Non equivale a formazione obbligatoria né attestazione</span>
+  <ManzoSignature/>
  </div></footer>
 </body>
 </html>

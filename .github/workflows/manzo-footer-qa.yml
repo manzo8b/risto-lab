@@ -1,0 +1,43 @@
+name: MANZO AI Ecosystem Footer QA
+on:
+  pull_request:
+    paths:
+      - 'public/brand/manzo-mark.svg'
+      - 'src/components/ManzoSignature.astro'
+      - 'src/components/InstructorFooter.astro'
+      - 'src/layouts/Public.astro'
+      - 'src/layouts/Instructor.astro'
+      - 'src/layouts/PrismaKit.astro'
+      - 'src/styles/manzo-signature.css'
+      - 'tests/manzo-branding.test.ts'
+      - '.github/workflows/manzo-footer-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+      - run: npm run publication:gate
+      - name: Assert emitted footer and local emblem in the three routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/brand/manzo-mark.svg
+          for file in dist/index.html dist/instructor/index.html dist/atelier/prisma-hse-q7m4v9n2/index.html; do
+            test -s "$file"
+            grep -q 'manzo-signature' "$file"
+            grep -q 'manzo-mark.svg' "$file"
+          done

@@ -26,16 +26,13 @@ test('semantic colors meet WCAG AA normal text contrast on white and warm ivory'
  assert.ok(contrast('#FFFFFF','#0C615D')>=4.5,'white on teal');
 });
 test('both layouts load color system and retain neutral reading and print mode',()=>{
- for(const layout of [pub,ins])assert.match(layout,/learning-colors\.css/);
- assert.match(css,/\\.lesson-card:nth-child\(5n\\+5\)/);
- assert.match(css,/\\.cycle>div:nth-child\(5\)/);
- assert.match(css,/\\.sector-case:nth-of-type/);
- assert.match(css,/@media print/);
- assert.match(css,/:focus-visible/);
- assert.match(css,/@media\(max-width:640px\)/);
- assert.doesNotMatch(css,/animation\s*:/);
+ for(const layout of [pub,ins])assert.ok(layout.includes('learning-colors.css'));
+ for(const marker of ['.lesson-card:nth-child(5n+5)','.cycle>div:nth-child(5)','.sector-case:nth-of-type','@media print',':focus-visible','@media(max-width:640px)']){
+  assert.ok(css.includes(marker),'missing '+marker);
+ }
+ assert.ok(!css.includes('animation:'),'no new animations');
 });
 test('color-led lessons have stable number binding',()=>{
  const page=readFileSync('src/instructor/pages/instructor/laboratorio-sicurezza/lezioni/[slug].astro','utf8');
- assert.match(page,/data-course-lesson=\{lesson\\.number\}/);
+ assert.ok(page.includes('data-course-lesson={lesson.number}'));
 });

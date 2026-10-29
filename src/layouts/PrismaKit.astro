@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import '../styles/prisma-kit.css';
 import '../styles/manzo-signature.css';
+import '../styles/contact-header.css';
+import ContactHeader from '../components/ContactHeader.astro';
 import ManzoSignature from '../components/ManzoSignature.astro';
 import {withBase} from '../lib/urls';
 import {prismaRoot} from '../instructor/data/prisma-hse';
@@ -36,6 +38,7 @@ const nav=[
    <div class="prisma-brand"><span>RISTO—LAB</span><small>Instructional Design · Dossier indipendente</small></div>
    <span class="prisma-version">P.R.I.S.M.A. HSE <small>Versione dimostrativa 1.1 · 29.10.2026</small></span>
   </div>
+  <ContactHeader/>
  </header>
  <nav class="prisma-nav prisma-container" aria-label="Sezioni del kit">
   {nav.map(([key,slug,label],i)=><a href={root+slug} aria-current={section===key?'page':undefined}><span class="prisma-index">{String(i+1).padStart(2,'0')}</span> {label}</a>)}

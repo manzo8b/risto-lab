@@ -1,0 +1,90 @@
+---
+import Hub from '../../../../layouts/Instructor.astro';
+import {withBase} from '../../../../lib/urls';
+
+const agenda=[
+ {minutes:10,title:'Apri con una fonte',guide:'Chiedi: quando una voce diventa una disposizione verificabile? Mostra Normattiva e Accordo.',result:'Riconoscimento della fonte primaria.'},
+ {minutes:15,title:'Ruoli e responsabilità',guide:'Fai completare quattro associazioni; correggi senza attribuire compiti estranei ai ruoli.',result:'Quattro ruoli distinti.'},
+ {minutes:15,title:'Accordo 59/CSR',guide:'Confronta formazione, informazione e addestramento; segnala requisiti dei corsi obbligatori.',result:'Elenco di tre verifiche da effettuare.'},
+ {minutes:10,title:'La telefonata: notizia o fonte?',guide:'Leggi a due voci il dialogo di Giulia e Arianna. Chiedi quale affermazione è da verificare.',result:'Una frase corretta basata sulle fonti.'},
+ {minutes:15,title:'Glossario e cruciverba',guide:'Cinque minuti per termini; dieci per la griglia a coppie. Chiedi la motivazione di due incroci.',result:'Termini usati nel contesto.'},
+ {minutes:25,title:'Near miss, quiz e debrief',guide:'Simula il cavo nel passaggio; fai distinguere fatti, supposizioni e segnalazione; correggi sei domande.',result:'Una segnalazione professionale e un punto da verificare.'},
+];
+const quizKeys=[
+ {question:'Cavo in zona di passaggio',answer:'2 — Segnalare secondo procedura e coinvolgere chi è competente.'},
+ {question:'La firma basta a rendere conforme un corso?',answer:'3 — No, vanno verificati tutti i requisiti del percorso applicabile.'},
+ {question:'RSPP e RLS sono la stessa funzione?',answer:'1 — No, hanno funzioni differenti.'},
+ {question:'Come trattare una voce sul diritto?',answer:'2 — Controllare la fonte prima di diffonderla.'},
+ {question:'Pericolo e rischio coincidono?',answer:'2 — No, il rischio dipende anche dal contesto.'},
+ {question:'Come osservare un apprendimento?',answer:'1 — Prova osservabile e debrief.'},
+];
+const crossAnswers=['ADDESTRAMENTO','VALUTAZIONE','LAVORATORE','FORMAZIONE','SEGNALAZIONE','INFORMAZIONE','RISCHIO','PREPOSTO','PREVENZIONE','PERICOLO'];
+const sourceLaw='https://www.normattiva.it/eli/id/2008/04/30/008G0104/CONSOLIDATED';
+const sourceAgreement='https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/accordo-stato-regioni-17042025-allegato';
+const sourceFaq='https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/faq-accordo-stato-regioni-27032026';
+---
+<Hub title="Scheda docente · La sicurezza non è una firma">
+ <div class="teacher-sheet">
+  <header>
+   <p class="eyebrow">RISTO-LAB Instructor · Scheda operativa docente</p>
+   <h1>La sicurezza non è una firma</h1>
+   <p class="lead">Guida pronta per un laboratorio divulgativo di 90 minuti: sequenza, domande, soluzioni e osservazione dei comportamenti.</p>
+   <div class="actions hide-print"><a class="button secondary" href={withBase('/instructor/laboratorio-sicurezza/')}>Torna al laboratorio ↗</a><button type="button" id="teacher-print">Stampa o salva come PDF</button></div>
+  </header>
+  <div class="notice"><strong>Non certificante.</strong> Questa scheda non è un progetto di formazione obbligatoria ex art. 37 e non produce attestati. Per applicazioni HSE reali consultare DVR, procedure aziendali, soggetti competenti e fonti aggiornate. Bozza didattica del 29 ottobre 2026, da validare con professionista HSE prima di utilizzi specialistici.</div>
+
+  <section class="section">
+   <h2>Destinatari, obiettivi e preparazione</h2>
+   <p><strong>Destinatari:</strong> formatori, team leader, personale operativo e partecipanti interessati alla cultura della prevenzione. <strong>Durata:</strong> 90 minuti indicativi; non coincide con le durate legali dei corsi obbligatori.</p>
+   <p><strong>Obiettivi osservabili:</strong> distinguere fonte e voce; riconoscere pericolo e rischio; identificare le funzioni di lavoratore, preposto, RSPP e RLS; descrivere una segnalazione senza supposizioni; riconoscere i limiti di un semplice attestato di presenza.</p>
+   <p><strong>Preparazione:</strong> aprire il laboratorio nel browser, verificare i link ufficiali, predisporre proiettore e possibilità di stampare. Usare soltanto casi fittizi; non chiedere dati sanitari o eventi aziendali identificabili.</p>
+  </section>
+
+  <section class="section">
+   <h2>Scaletta di conduzione</h2>
+   <div class="agenda">{agenda.map((item,i)=><article class="agenda-row"><div class="step"><strong>{String(i+1).padStart(2,'0')}</strong><small>{item.minutes} min</small></div><div><h3>{item.title}</h3><p>{item.guide}</p><p><strong>Evidenza:</strong> {item.result}</p></div></article>)}</div>
+  </section>
+
+  <section class="section">
+   <h2>Domande di debrief</h2>
+   <ol>
+    <li>Quale parte della storia è un fatto osservato e quale è un’ipotesi?</li>
+    <li>Quale fonte consultiamo per verificare un obbligo e che cosa resta da accertare per il caso specifico?</li>
+    <li>Quale comportamento possiamo descrivere senza pretendere di sostituire il responsabile tecnico?</li>
+    <li>Come sapremmo se il partecipante ha compreso davvero, oltre alla sola presenza?</li>
+   </ol>
+  </section>
+
+  <section class="section keys">
+   <h2>Soluzioni e guida alla correzione <small>— uso docente</small></h2>
+   <p><strong>Associazioni dei ruoli:</strong> preposto (sovrintende e vigila), RLS (rappresenta i lavoratori), RSPP (funzione del servizio di prevenzione e protezione), lavoratore (segue le istruzioni e segnala i pericoli).</p>
+   <p><strong>Telefonata gossip:</strong> seconda alternativa. Verificare il percorso formativo specifico e i requisiti, senza assumere che una videolezione e una firma siano sempre sufficienti.</p>
+   <h3>Quiz finale</h3>
+   <ol>{quizKeys.map(item=><li><strong>{item.question}:</strong> {item.answer}</li>)}</ol>
+   <h3>Cruciverba — dieci soluzioni</h3>
+   <p class="answer-words">{crossAnswers.map((word,i)=><span>{i+1}. {word}</span>)}</p>
+   <p><strong>Near miss:</strong> cavo nel passaggio → descrivere la condizione e segnalarla secondo procedura; evitare interventi tecnici non autorizzati; coinvolgere il referente competente e verificare gli esiti. Non assegnare colpe o attribuire obblighi senza conoscere il contesto.</p>
+  </section>
+
+  <section class="section">
+   <h2>Rubrica osservativa</h2>
+   <p>Per ciascun criterio segna <strong>0 = non emerso, 1 = parziale, 2 = chiaro e motivato</strong>. Il massimo di dieci punti è un riscontro didattico interno, non un esame legalmente valido.</p>
+   <table><thead><tr><th>Comportamento osservabile</th><th>0</th><th>1</th><th>2</th></tr></thead><tbody>
+   {['Cita una fonte pertinente invece di ripetere una voce','Distingue pericolo e rischio nel caso','Non confonde ruoli e responsabilità','Propone una segnalazione chiara e rispettosa delle procedure','Distingue laboratorio da formazione obbligatoria'].map(item=><tr><td>{item}</td><td>□</td><td>□</td><td>□</td></tr>)}
+   </tbody></table>
+   <p>Annotazione del docente / osservazioni sul gruppo (senza dati personali):</p><div class="writing-lines" aria-hidden="true"></div>
+  </section>
+
+  <section class="section">
+   <h2>Normativa da tenere a portata di mano</h2>
+   <ul class="sources"><li><a href={sourceLaw} target="_blank" rel="noopener noreferrer">D.Lgs. 81/2008 — articoli 2, 15, 17, 19, 20, 28, 29, 36, 37 (Normattiva) ↗</a></li>
+   <li><a href={sourceAgreement} target="_blank" rel="noopener noreferrer">Accordo 59/CSR — Parte I §§1–6, Parte II §2, Parte IV §§6–7 (Ministero) ↗</a></li>
+   <li><a href={sourceFaq} target="_blank" rel="noopener noreferrer">FAQ ministeriali 2026 — quesiti 9, 10, 11 e 45 ↗</a></li></ul>
+   <p class="muted">Le fonti sono collegate, non riprodotte. Verificare la vigenza prima di riutilizzare il materiale.</p>
+  </section>
+ </div>
+</Hub>
+<script>document.querySelector('#teacher-print')?.addEventListener('click',()=>window.print());</script>
+<style>
+.teacher-sheet{max-width:1050px}.teacher-sheet h1{font-size:clamp(2.35rem,4vw,3.6rem)}.agenda-row{display:grid;grid-template-columns:80px minmax(0,1fr);gap:20px;border-top:1px solid var(--line);padding:18px 0}.step{display:flex;flex-direction:column;gap:5px}.step strong{font-size:1.65rem;color:var(--copper-text)}.step small{font-size:.83rem}.agenda-row p{margin:8px 0}.agenda-row h3{margin:0}.keys{border-left:3px solid var(--deep-teal);padding-left:20px}.answer-words{display:flex;gap:10px 20px;flex-wrap:wrap}.answer-words span{font-weight:600}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{border:1px solid var(--line);padding:12px;text-align:left}th:not(:first-child),td:not(:first-child){text-align:center;min-width:55px}.writing-lines{height:110px;background:repeating-linear-gradient(transparent,transparent 27px,var(--line) 28px);margin-top:10px}.sources li{margin:12px 0;overflow-wrap:anywhere}@media(max-width:700px){.agenda-row{grid-template-columns:1fr;gap:4px}.step{flex-direction:row;align-items:baseline;gap:15px}.teacher-sheet .section{padding:32px 0}td,th{padding:6px}}@media print{.topbar,.sidebar,.footer,.hide-print{display:none!important}.hubbody{display:block!important}.hubmain{padding:0!important}.teacher-sheet{max-width:none;color:#111}.teacher-sheet h1{font-size:27pt}.teacher-sheet h2{font-size:17pt}.teacher-sheet .section{padding:16px 0;break-inside:auto}.agenda-row,.keys li,tr{break-inside:avoid}.teacher-sheet p,.teacher-sheet li{font-size:10pt;line-height:1.4}.notice{border:1px solid #999}.keys{border-left:2px solid #333}a{color:#111;text-decoration:underline}}
+</style>

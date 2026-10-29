@@ -1,0 +1,125 @@
+---
+import Hub from '../../../../layouts/Instructor.astro';
+import {withBase} from '../../../../lib/urls';
+const cases=[
+  {
+    "sector": "Ristorazione",
+    "title": "Un passaggio scivoloso durante il servizio",
+    "time": "5 minuti",
+    "scene": "Nel pass fra cucina e sala compare una piccola zona bagnata. Un collega devia all'ultimo secondo, senza cadere. Il turno è affollato e nessuno sa chi abbia lasciato il liquido.",
+    "facts": [
+      "La superficie è visibilmente bagnata",
+      "Il passaggio è usato durante il servizio",
+      "Non si registra un infortunio"
+    ],
+    "unknown": [
+      "Perché la superficie è bagnata?",
+      "Qual è la procedura interna di segnalazione e gestione?",
+      "Quale area o percorso alternativo può essere utilizzato in sicurezza?"
+    ],
+    "question": "Quale risposta è metodologicamente più corretta?",
+    "options": [
+      "Accusare chi puliva il reparto e proseguire",
+      "Segnalare il pericolo secondo procedura, evitare ulteriori esposizioni per quanto possibile in sicurezza e coinvolgere chi è competente",
+      "Ignorare la condizione perché non è caduto nessuno"
+    ],
+    "correct": 1,
+    "feedback": "Una segnalazione tempestiva, un intervento gestito secondo procedure e una verifica successiva riducono il rischio di ripetizione. La causa va verificata, non attribuita per sentito dire.",
+    "takeaway": "Una frase utile: «Nel pass davanti alla cucina è presente liquido sul pavimento; serve la verifica del referente e la gestione secondo procedura».",
+    "law": "D.Lgs. 81/2008: artt. 15, 19, 20 e 28"
+  },
+  {
+    "sector": "Uffici",
+    "title": "La multipresa nascosta sotto la scrivania",
+    "time": "5 minuti",
+    "scene": "Un team lavora in una sala riunioni condivisa. Una prolunga attraversa il percorso tra scrivanie e porta. Un collega inciampa senza cadere, mentre altri continuano a usare le postazioni.",
+    "facts": [
+      "Un cavo attraversa un'area di passaggio",
+      "Si è verificato un quasi-incidente",
+      "Le postazioni continuano a essere usate"
+    ],
+    "unknown": [
+      "Esiste una canalina o un percorso previsto per i cavi?",
+      "Chi è autorizzato a intervenire sull'impianto?",
+      "Che cosa stabiliscono procedure e valutazione dei rischi?"
+    ],
+    "question": "Come affronti il problema senza improvvisare interventi tecnici?",
+    "options": [
+      "Stacchi e sposti tutte le connessioni, anche quelle che non conosci",
+      "Chiedi ai colleghi di fare attenzione e lasci tutto com'è",
+      "Rendi nota la condizione pericolosa tramite il canale previsto e chiedi una soluzione al referente competente"
+    ],
+    "correct": 2,
+    "feedback": "La competenza e l'organizzazione contano: segnalare, tutelare le persone nell'ambito del proprio ruolo e far valutare la soluzione tecnica evita rischi aggiuntivi.",
+    "takeaway": "Una frase utile: «La prolunga è sul percorso di accesso: ho segnalato il quasi-incidente; chi verifica la sistemazione prevista?»",
+    "law": "D.Lgs. 81/2008: artt. 15, 19, 20 e 28"
+  },
+  {
+    "sector": "Logistica",
+    "title": "Un pallet sulla corsia di transito",
+    "time": "5 minuti",
+    "scene": "Nel magazzino un pallet è stato lasciato vicino a un incrocio tra corsia pedonale e percorso dei mezzi. Un operatore a piedi cambia direzione all'ultimo momento. Non si conoscono i flussi autorizzati.",
+    "facts": [
+      "Il pallet occupa una zona di interferenza",
+      "Un pedone ha modificato il tragitto per evitarlo",
+      "Non sono disponibili informazioni sui flussi e sulle autorizzazioni"
+    ],
+    "unknown": [
+      "Che cosa prevede il piano dei percorsi?",
+      "Quali mezzi stanno operando?",
+      "Quale personale può coordinare la gestione dell'ostacolo?"
+    ],
+    "question": "Che cosa fai come prima scelta?",
+    "options": [
+      "Informi il responsabile secondo procedura, rispetti i percorsi sicuri e attendi la gestione da chi è autorizzato",
+      "Entri nella corsia dei mezzi per spostare subito il pallet",
+      "Sposti il pallet dove capita senza sapere dove siano i percorsi consentiti"
+    ],
+    "correct": 0,
+    "feedback": "In aree con mezzi e pedoni la gestione dei flussi è un tema organizzativo da riferire a DVR, istruzioni e ruoli. Non entrare in aree non autorizzate né improvvisare manovre.",
+    "takeaway": "Una frase utile: «Pallet in prossimità dell'incrocio mezzi/pedoni; segnalazione al referente e richiesta di verifica del percorso».",
+    "law": "D.Lgs. 81/2008: artt. 15, 19, 20 e 28"
+  }
+];
+const lawUrl='https://www.normattiva.it/eli/id/2008/04/30/008G0104/CONSOLIDATED';
+---
+<Hub title="Tre microcasi di sicurezza sul lavoro">
+ <div class="case-shell">
+  <header><p class="eyebrow">RISTO-LAB Instructor · Tre microcasi settoriali</p><h1>Una regola, tre contesti diversi</h1>
+  <p class="lead">Ristorazione, uffici e logistica: in cinque minuti per caso, riconosci i fatti, individua ciò che manca e scegli un comportamento coerente con le procedure e il tuo ruolo.</p>
+  <div class="actions"><a class="button secondary" href={withBase('/instructor/laboratorio-sicurezza/')}>Torna al laboratorio ↗</a><a class="button secondary" href={withBase('/instructor/laboratorio-sicurezza/scheda-docente/')}>Apri la scheda docente ↗</a></div></header>
+  <div class="notice"><strong>Esempi totalmente inventati, non certificanti.</strong> Non sono una valutazione dei rischi o procedure operative per imprese specifiche. Non utilizzare questi scenari per dedurre regole o autorizzazioni in un ambiente reale: occorrono DVR, istruzioni aziendali e referenti competenti.</div>
+  {cases.map((c,i)=><section class="sector-case section" id={'caso-'+(i+1)}>
+   <p class="eyebrow">Caso {String(i+1).padStart(2,'0')} · {c.sector} · {c.time}</p><h2>{c.title}</h2>
+   <div class="situation"><h3>La situazione</h3><p>{c.scene}</p></div>
+   <div class="analysis-columns">
+    <article><h3>Fatti osservati</h3><ul>{c.facts.map(item=><li>{item}</li>)}</ul></article>
+    <article><h3>Domande da chiarire</h3><ul>{c.unknown.map(item=><li>{item}</li>)}</ul></article>
+   </div>
+   <fieldset class="decision" data-correct={c.correct} data-feedback={c.feedback}><legend>{c.question}</legend>
+    {c.options.map((opt,j)=><label class="decision-option"><input type="radio" name={'case'+i} value={j}/><span>{opt}</span></label>)}
+    <button type="button" class="case-check">Confronta la scelta</button>
+    <p class="case-result" role="status" aria-live="polite"></p>
+   </fieldset>
+   <details class="case-debrief"><summary>Apri il debrief e il modello di segnalazione</summary><p>{c.takeaway}</p><p><strong>Riferimento da leggere:</strong> {c.law}. <a href={lawUrl} target="_blank" rel="noopener noreferrer">Normattiva ↗</a></p><p>Il caso va sempre adattato alle condizioni specifiche da personale competente. Il risultato non costituisce una prescrizione universale.</p></details>
+  </section>)}
+  <section class="section"><p class="eyebrow">Riflessione conclusiva</p><h2>Che cosa cambia e che cosa rimane costante?</h2><p>Nei tre ambienti il pericolo cambia, ma il metodo resta: <strong>osserva i fatti, riconosci ciò che non conosci, segnala per i canali previsti, non intervenire oltre il tuo ruolo e verifica la misura con chi è competente.</strong> Nessuno di questi esercizi sostituisce una valutazione aziendale.</p>
+  <p><a href={lawUrl} target="_blank" rel="noopener noreferrer">Consulta il D.Lgs. 81/2008 nella versione vigente ↗</a></p></section>
+ </div>
+</Hub>
+<script>
+document.querySelectorAll<HTMLFieldSetElement>('.decision').forEach(field=>{
+ field.querySelector('.case-check')?.addEventListener('click',()=>{
+  const selected=field.querySelector<HTMLInputElement>('input[type="radio"]:checked');
+  const result=field.querySelector<HTMLElement>('.case-result');
+  if(!result)return;
+  if(!selected){result.textContent='Seleziona una risposta prima di verificare.';return;}
+  const correct=Number(selected.value)===Number(field.dataset.correct);
+  result.textContent=(correct?'Scelta più adeguata nel caso illustrato. ':'Scelta da riconsiderare. ')+(field.dataset.feedback||'');
+  result.dataset.result=correct?'ok':'review';
+ });
+});
+</script>
+<style>
+.case-shell{max-width:1080px}.case-shell h1{font-size:clamp(2.4rem,5vw,4rem)}.sector-case{scroll-margin-top:20px}.situation{background:var(--soft);padding:23px;border-left:3px solid var(--deep-teal)}.situation h3{margin:0 0 8px}.analysis-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}.analysis-columns article{border:1px solid var(--line);padding:21px;border-radius:8px}.analysis-columns li{margin:8px 0}.decision{border:1px solid var(--line);border-radius:8px;padding:20px;margin-top:16px}.decision legend{font-weight:700;padding:6px}.decision-option{display:flex;flex-direction:row;align-items:flex-start;gap:13px;font-weight:400;font-size:1rem;line-height:1.5;padding:8px 0}.decision-option input{min-height:auto;margin-top:4px;flex-shrink:0}.decision .case-check{margin-top:14px}.case-result:not(:empty){padding:13px 16px;background:var(--soft);border-left:3px solid var(--deep-teal);margin-top:17px}.case-result[data-result="review"]{border-left-color:#b17a38}.case-debrief{border:1px solid var(--line);padding:17px 20px;margin-top:17px;border-radius:8px}.case-debrief summary{cursor:pointer;font-weight:700}.case-debrief p{margin:12px 0}@media(max-width:750px){.analysis-columns{grid-template-columns:1fr}.decision{padding:15px}.situation{padding:18px}}
+</style>

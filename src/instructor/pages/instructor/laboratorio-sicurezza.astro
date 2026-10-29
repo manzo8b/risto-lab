@@ -2,105 +2,233 @@
 import Hub from '../../../layouts/Instructor.astro';
 import {withBase} from '../../../lib/urls';
 
-const stages=[
- {time:'00–15',title:'Leggere il quadro normativo',goal:'Distinguere obblighi del D.Lgs. 81/2008, accordo sulla formazione e procedure interne.',output:'Mappa delle fonti e delle domande aperte.'},
- {time:'15–50',title:'Persone, ruoli, prevenzione',goal:'Identificare chi osserva, segnala, coordina e valida una misura nel caso specifico.',output:'Matrice ruoli/azioni da confrontare con l’organizzazione.'},
- {time:'50–85',title:'Progettare secondo l’Accordo 2025',goal:'Riconoscere soggetto formatore, qualifiche dei docenti, frequenza, verifica e documentazione.',output:'Checklist preliminare e punti da verificare con HSE.'},
- {time:'85–130',title:'Near Miss Detective',goal:'Ricostruire un quasi-incidente e scegliere misure senza cercare un colpevole.',output:'Scheda rischio, segnalazione e follow-up.'},
- {time:'130–165',title:'Microlezione applicativa',goal:'Progettare un messaggio che induca un comportamento osservabile.',output:'Sequenza: dimostrazione → prova → feedback.'},
- {time:'165–180',title:'Debrief e verifica',goal:'Riconoscere limiti, azioni possibili e controlli successivi.',output:'Piano di miglioramento di 7 giorni.'},
+const slides=[
+ {k:'01 / 06',title:'La sicurezza non è una firma',sub:'Le regole diventano protezione quando guidano comportamenti, esercitazioni e verifiche.',points:['Osservare una situazione concreta','Distinguere ciò che sappiamo da ciò che dobbiamo verificare','Scegliere un’azione compatibile con il nostro ruolo']},
+ {k:'02 / 06',title:'Prima la fonte, poi l’opinione',sub:'Il D.Lgs. 81/2008 è il quadro legislativo; l’Accordo 59/CSR del 2025 disciplina percorsi formativi specifici.',points:['Leggere il testo vigente, non un riassunto casuale','Separare norma, procedura aziendale e consiglio','Verificare la data del documento e le FAQ ufficiali']},
+ {k:'03 / 06',title:'Chi ha quale responsabilità?',sub:'I ruoli concorrono alla prevenzione, ma non sono intercambiabili.',points:['Datore di lavoro: organizzazione e obblighi propri','Preposto: sovrintendenza e vigilanza nell’ambito del ruolo','RSPP: supporto tecnico; RLS: rappresentanza dei lavoratori','Lavoratore: cura, istruzioni e segnalazioni']},
+ {k:'04 / 06',title:'Pericolo non significa rischio',sub:'L’oggetto pericoloso non basta per valutare il rischio concreto.',points:['Pericolo: potenziale di provocare un danno','Rischio: possibilità e conseguenze, valutate nel contesto','Il DVR e le misure sono di competenza dei soggetti designati']},
+ {k:'05 / 06',title:'Informare, formare, addestrare',sub:'Tre parole vicine ma non equivalenti.',points:['Informazione: conoscere dati, rischi e indicazioni','Formazione: acquisire conoscenze e competenze','Addestramento: apprendere tramite prova pratica, dove previsto','L’attestato da solo non dimostra ogni competenza']},
+ {k:'06 / 06',title:'Dalla norma alla prova',sub:'Un laboratorio utile produce comportamento osservabile e un debrief.',points:['Scenario di quasi-incidente','Discussione delle alternative','Una segnalazione chiara','Riesame con chi è competente']},
+];
+const terms=[
+ ['Pericolo','Proprietà o situazione con potenziale di causare un danno.'],
+ ['Rischio','Possibilità che un pericolo produca un danno nel contesto esaminato, considerando anche le conseguenze.'],
+ ['Prevenzione','Misure e scelte per evitare o ridurre i rischi.'],
+ ['Protezione','Misure per limitare l’esposizione o le conseguenze di un pericolo.'],
+ ['DVR','Documento di valutazione dei rischi, previsto per l’organizzazione aziendale.'],
+ ['Datore di lavoro','Soggetto su cui ricadono specifici obblighi organizzativi e di valutazione.'],
+ ['Preposto','Soggetto che sovrintende e vigila sull’attività lavorativa nei limiti del ruolo.'],
+ ['RSPP','Responsabile del Servizio di prevenzione e protezione: funzione tecnica di supporto.'],
+ ['RLS','Rappresentante dei lavoratori per la sicurezza.'],
+ ['Lavoratore','Persona con doveri di cura, osservanza delle istruzioni e segnalazione delle anomalie.'],
+ ['Informazione','Comunicazione di conoscenze utili su rischi, misure e procedure.'],
+ ['Formazione','Percorso educativo per acquisire conoscenze e competenze in prevenzione.'],
+ ['Addestramento','Apprendimento pratico sull’uso o sulle procedure applicabili, dove richiesto.'],
+ ['Near miss','Quasi-incidente: evento che avrebbe potuto produrre un danno, utile per apprendere e prevenire.'],
+ ['Accordo 59/CSR','Accordo Stato-Regioni del 17 aprile 2025 sulla formazione in materia di salute e sicurezza.'],
+];
+const roleExercise=[
+ {s:'Chi sovrintende alle attività e vigila nell’ambito delle proprie attribuzioni?',answer:'preposto'},
+ {s:'Chi rappresenta i lavoratori sui temi di salute e sicurezza?',answer:'rls'},
+ {s:'Quale funzione tecnica collabora al sistema di prevenzione e protezione?',answer:'rspp'},
+ {s:'Chi deve seguire le istruzioni e segnalare le condizioni di pericolo conosciute?',answer:'lavoratore'},
+];
+const crossword={
+ rows:[
+ '.........A..V....L',
+ '.F...S...D..A....A',
+ '.O.I.E...D..L....V',
+ '.R.N.G...E..U....O',
+ '.M.F.N...S..T.R..R',
+ '.A.O.A...T..A.I..A',
+ '.Z.R.L.P.R..Z.S..T',
+ '.I.M.A.R.A..I.C..O',
+ '.O.A.Z.E.M..O.H..R',
+ '.N.Z.I.PREVENZIONE',
+ 'PERICOLO.N..E.O...',
+ '...O.N.S.T........',
+ '...N.E.T.O........',
+ '...E...O..........',
+ ],
+ words:[
+ {n:1,w:'ADDESTRAMENTO',r:0,c:9,d:'d',clue:'Non basta raccontare: si impara anche mediante esercitazione pratica.'},
+ {n:2,w:'VALUTAZIONE',r:0,c:12,d:'d',clue:'Processo che precede la scelta coerente delle misure per i rischi.'},
+ {n:3,w:'LAVORATORE',r:0,c:17,d:'d',clue:'Non è spettatore: segue le istruzioni e partecipa alla sicurezza.'},
+ {n:4,w:'FORMAZIONE',r:1,c:1,d:'d',clue:'Non coincide con la presenza: mira ad acquisire competenze.'},
+ {n:5,w:'SEGNALAZIONE',r:1,c:5,d:'d',clue:'Azione che rende visibile una situazione pericolosa a chi può intervenire.'},
+ {n:6,w:'INFORMAZIONE',r:2,c:3,d:'d',clue:'Comunica elementi necessari ma da sola non esaurisce l’apprendimento.'},
+ {n:7,w:'RISCHIO',r:4,c:14,d:'d',clue:'Dipende dal contesto: non è sinonimo di pericolo.'},
+ {n:8,w:'PREPOSTO',r:6,c:7,d:'d',clue:'Sovrintende e vigila nell’ambito delle proprie attribuzioni.'},
+ {n:9,w:'PREVENZIONE',r:9,c:7,d:'a',clue:'Prima del danno: insieme di misure e scelte per evitarlo o ridurlo.'},
+ {n:10,w:'PERICOLO',r:10,c:0,d:'a',clue:'Potenziale di danno, da distinguere dalla probabilità che si realizzi.'},
+ ]
+};
+const starts=new Map(crossword.words.map(x=>[x.r+','+x.c,x.n]));
+const cells=crossword.rows.flatMap((line,r)=>Array.from(line).map((letter,c)=>({letter,r,c,number:starts.get(r+','+c)})));
+const quiz=[
+ {q:'Un collega segnala un cavo in zona di passaggio. Quale risposta è più prudente?',choices:['Aspettare che qualcuno inciampi','Segnalare secondo la procedura e far gestire la messa in sicurezza alla persona competente','Spostare da soli l’impianto elettrico'],correct:1,why:'Il quasi-incidente è un’informazione preventiva. Segnalazione, protezione sicura e intervento competente hanno priorità.'},
+ {q:'La presenza a una lezione e una firma equivalgono automaticamente a formazione conforme?',choices:['Sempre','Soltanto se le slide sono molte','No: occorre verificare requisiti e modalità previsti per il percorso applicabile'],correct:2,why:'Modalità, organizzazione, contenuti, docenti e prove vanno controllati nelle norme pertinenti.'},
+ {q:'Il RSPP e l’RLS svolgono lo stesso compito?',choices:['No, hanno funzioni diverse','Sì, sono due sigle dello stesso ruolo','Dipende da chi parla al telefono'],correct:0,why:'Il RSPP è parte del servizio di prevenzione e protezione; l’RLS rappresenta i lavoratori.'},
+ {q:'Quale frase è un buon segnale di ragionamento professionale?',choices:['Me lo hanno detto, sarà vero','Non trovo la fonte: controllo prima di diffondere la notizia','Lo ha scritto una AI, quindi è corretto'],correct:1,why:'La verifica delle fonti e delle versioni è parte del metodo, specialmente su obblighi normativi.'},
+ {q:'Pericolo e rischio significano sempre la stessa cosa?',choices:['Sì','No: il rischio si valuta anche nel contesto','Sì, se il pericolo è visibile'],correct:1,why:'La presenza di un pericolo non sostituisce la valutazione del rischio e delle misure da adottare.'},
+ {q:'Come possiamo verificare che un partecipante sappia agire?',choices:['Con una prova osservabile e un debrief','Contando il numero di pagine della dispensa','Misurando soltanto il gradimento'],correct:0,why:'La dimostrazione di un comportamento e il feedback sono più informativi della sola presenza.'},
 ];
 const sources=[
- ['D.Lgs. 81/2008, testo vigente','https://www.normattiva.it/eli/id/2008/04/30/008G0104/CONSOLIDATED'],
- ['Accordo 17 aprile 2025 — Allegato A','https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/accordo-stato-regioni-17042025-allegato'],
- ['FAQ ufficiali Ministero — aggiornamento 2026','https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/faq-accordo-stato-regioni-27032026'],
- ['Qualificazione formatori — D.I. 6 marzo 2013','https://www.lavoro.gov.it/documenti-e-norme/normative/Documents/2013/Decreto_interministeriale_6_marzo_2013'],
-];
-const quiz=[
- {q:'Un collega nota un cavo di alimentazione nell’area di transito, ma nessuno è caduto. Quale atteggiamento è più solido?',options:['Ignorarlo perché non c’è stato infortunio','Segnalare subito il pericolo attraverso il canale previsto e far gestire la messa in sicurezza a chi è competente','Rimuovere autonomamente l’apparecchiatura senza verificare istruzioni o competenze'],correct:1,why:'Un quasi-incidente è un segnale preventivo. Servono azioni sicure e segnalazione coerente con le procedure aziendali, senza interventi non autorizzati.'},
- {q:'Un modulo di 3 ore prodotto dal laboratorio può sostituire automaticamente la formazione obbligatoria prevista dall’articolo 37?',options:['Sì, perché contiene nozioni di legge','No: servono percorsi, docenti, soggetti, contenuti e prove di conformità previsti dalle norme applicabili','Sì, purché siano disponibili le slide'],correct:1,why:'Un workshop complementare non equivale a un corso obbligatorio conforme. Il percorso normativo richiede verifiche specifiche, non un semplice numero di ore.'},
- {q:'Un generatore AI propone un numero di ore per il corso preposti senza indicare una fonte. Come lo utilizzi?',options:['Copio il numero nella brochure','Lo considero una bozza da verificare nel testo vigente dell’Accordo e nelle FAQ ministeriali','Lo inserisco con la dicitura “probabilmente”'],correct:1,why:'Per un obbligo normativo occorre fonte primaria, versione, data di verifica e revisione umana qualificata. Le risposte AI non certificano il requisito.'},
- {q:'Quale evidenza mostra meglio che una microlezione ha cambiato il comportamento?',options:['Il numero di slide proiettate','La soddisfazione dichiarata, senza prova pratica','Una prova osservabile in un caso realistico, seguita da feedback e ricontrollo'],correct:2,why:'Le evidenze di trasferimento richiedono compiti osservabili e criteri espliciti. Gradimento e completamento non misurano da soli la competenza applicata.'}
+ ['D.Lgs. 81/2008, versione vigente su Normattiva','https://www.normattiva.it/eli/id/2008/04/30/008G0104/CONSOLIDATED'],
+ ['Accordo 17 aprile 2025, 59/CSR e FAQ ministeriali','https://lavoro.gov.it/temi-e-priorita/salute-e-sicurezza/focus/pagine/accordo-stato-regioni-del-17042025-materia-di-formazione'],
+ ['Testo ufficiale dell’Accordo (Ministero)','https://www.lavoro.gov.it/media/88228'],
+ ['Qualificazione docenti: D.I. 6 marzo 2013','https://www.lavoro.gov.it/documenti-e-norme/normative/Documents/2013/Decreto_interministeriale_6_marzo_2013'],
 ];
 ---
-<Hub title="Laboratorio Sicurezza che si applica">
-  <header class="lab-head">
-    <p class="eyebrow">RISTO-LAB Business Academy · Lab BA-04/05</p>
-    <h1>Sicurezza che si applica</h1>
-    <p class="lead">Dal D.Lgs. 81/2008 all’Accordo Stato-Regioni del 17 aprile 2025: progettare, esercitare e verificare comportamenti. Un laboratorio operativo per docenti, HR e responsabili.</p>
-    <div class="actions"><a class="button secondary" href={withBase('/instructor/programmi/')}>Torna ai programmi ↗</a><a class="button secondary" href={withBase('/formazione-aziende/')}>Presentazione aziende ↗</a><button type="button" id="print-lab" class="secondary">Stampa scheda attività</button></div>
-  </header>
-  <div class="notice"><strong>Distinzione essenziale.</strong> Laboratorio didattico e informativo <strong>non certificante</strong>: non sostituisce i corsi obbligatori, la valutazione dei rischi, la consulenza del RSPP o le abilitazioni. Ogni applicazione aziendale deve riferirsi a DVR, procedure e valutazioni di professionisti competenti. Non inserire nomi di dipendenti, incidenti reali o dati riservati in questo sito pubblico.</div>
-  <section class="section">
-    <p class="eyebrow">Progetto formativo</p><h2>Sequenza di 180 minuti</h2>
-    <p>Questa durata è una scelta didattica per un workshop integrativo, <strong>non</strong> una durata legale di formazione obbligatoria.</p>
-    <div class="lab-stages">{stages.map(s=><article class="card"><span class="pill">{s.time} min</span><h3>{s.title}</h3><p>{s.goal}</p><p><strong>Output:</strong> {s.output}</p></article>)}</div>
-  </section>
-  <section class="section" id="fonti">
-    <p class="eyebrow">Evidence-first</p><h2>Norme, requisiti e limiti</h2>
-    <div class="lab-three">
-      <article class="card"><h3>D.Lgs. 81/2008</h3><p>Quadro generale di tutela della salute e sicurezza, prevenzione, soggetti, misure, informazione e formazione. Il riferimento va consultato nella versione vigente.</p></article>
-      <article class="card"><h3>Accordo 59/CSR del 2025</h3><p>Disciplina percorsi formativi, durata e contenuti minimi, organizzazione dei corsi, modalità, prove e monitoraggio. Non tutti i percorsi seguono le stesse regole.</p></article>
-      <article class="card"><h3>Qualifica del formatore</h3><p>Prima di erogare corsi obbligatori verificare le condizioni per soggetto formatore e docenti, inclusi i criteri del D.I. 6 marzo 2013 e specifiche eccezioni.</p></article>
-    </div>
-    <h3>Fonti ufficiali consultabili</h3>
-    <ul class="source-list">{sources.map(([label,url])=><li><a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a></li>)}</ul>
-    <p class="muted">Riferimenti ricontrollati il 29 ottobre 2026. L’aggiornamento della norma va ripetuto prima di ogni utilizzo formale.</p>
-  </section>
-  <section class="section" id="scenario">
-    <p class="eyebrow">Caso sintetico · 45 minuti</p><h2>Near Miss Detective</h2>
-    <div class="case-panel">
-      <p class="case-label">Brief operativo</p>
-      <p>È venerdì, durante una consegna urgente. Un cavo attraversa un tratto utilizzato per passare dalla zona di deposito alla postazione di lavoro. Una collega inciampa leggermente ma non cade. Il responsabile di turno sta gestendo più richieste contemporaneamente. Nessuno ha ancora segnalato l’ostacolo.</p>
-      <p><strong>Compito di gruppo:</strong> individuare le informazioni mancanti, il pericolo, le azioni immediate sicure e le responsabilità da verificare. Non proporre interventi elettrici o tecnici senza competenza.</p>
-    </div>
-    <div class="lab-three">
-      <article class="card"><h3>01 · Osserva</h3><p>Che cosa sappiamo? Che cosa non sappiamo? Quali informazioni richiedono conferma con procedure e preposto?</p></article>
-      <article class="card"><h3>02 · Agisci senza improvvisare</h3><p>Come avvisare tempestivamente, evitare ulteriori esposizioni e coinvolgere la persona competente?</p></article>
-      <article class="card"><h3>03 · Verifica</h3><p>Quale misura preventiva è stata approvata? Come dimostrare che il pericolo non si ripresenta?</p></article>
-    </div>
-    <details><summary>Apri una possibile traccia docente per il debrief</summary><p>Usare la sequenza osservazione → segnalazione secondo procedura → protezione dell’area se possibile in sicurezza e nel proprio ruolo → verifica tecnica/organizzativa del soggetto competente → registrazione interna secondo le regole aziendali → feedback. Chiedere al gruppo quale passaggio potrebbe fallire durante un turno affollato.</p></details>
-  </section>
-  <section class="section" id="verifica">
-    <p class="eyebrow">Autovalutazione · non attestante</p><h2>Quattro decisioni da motivare</h2>
-    <form id="lab-quiz" class="lab-quiz" novalidate>
-      {quiz.map((q,i)=><fieldset><legend>{i+1}. {q.q}</legend>{q.options.map((o,j)=><label class="lab-option"><input type="radio" name={'q'+i} value={j}/><span>{o}</span></label>)}</fieldset>)}
-      <button type="button" id="lab-grade">Verifica le risposte</button><p id="lab-score" role="status" aria-live="polite"></p>
-      <ol id="lab-feedback" aria-live="polite"></ol>
-    </form>
-  </section>
-  <section class="section">
-    <p class="eyebrow">Consegna al responsabile</p><h2>Rubrica di osservazione</h2>
-    <p>Valutare ciascun criterio da 0 a 2: <strong>0 assente, 1 parziale, 2 documentato.</strong> Totale massimo 10 punti, con significato esclusivamente didattico.</p>
-    <ol class="rubric"><li>Uso corretto delle fonti e indicazione degli elementi da verificare.</li><li>Identificazione delle circostanze e del rischio nel caso.</li><li>Misure di prevenzione proporzionate e compatibili con il proprio ruolo.</li><li>Chiarezza della segnalazione e del passaggio di consegne.</li><li>Distinzione tra attività complementare e formazione normativamente obbligatoria.</li></ol>
-    <p class="notice">Follow-up suggerito: entro 7 giorni il gruppo verifica, con il proprio referente HSE, una procedura reale e documenta un solo miglioramento osservabile senza pubblicare dati aziendali sul sito.</p>
-  </section>
+<Hub title="La sicurezza non è una firma">
+ <header class="lab-hero">
+  <p class="eyebrow">RISTO-LAB Instructor · Laboratorio dinamico</p>
+  <h1>La sicurezza non è una firma</h1>
+  <p class="lead">D.Lgs. 81/2008 e Accordo Stato-Regioni 2025 raccontati attraverso situazioni, conversazioni, incroci, quiz e piccoli esperimenti di ragionamento.</p>
+  <div class="lab-pills"><span>90 minuti modulabili</span><span>6 mini-attività</span><span>10 parole incrociate</span><span>6 slide</span></div>
+  <div class="actions"><a class="button secondary" href={withBase('/instructor/programmi/')}>Torna ai programmi</a><button class="secondary" id="print-activity" type="button">Stampa scheda docente</button></div>
+ </header>
+ <div class="notice"><strong>Laboratorio didattico non certificante.</strong> Non sostituisce la formazione obbligatoria ex art. 37 D.Lgs. 81/2008, i requisiti dei soggetti formatori/docenti, il DVR o le procedure aziendali. Esempi e dialoghi sono inventati. Riferimenti consultati il 29 ottobre 2026: verificare sempre vigenza e aggiornamenti prima di utilizzi formali. Non inserire dati aziendali o personali.</div>
+
+ <nav class="lab-jump" aria-label="Vai alle attività">
+  <a href="#minilezioni">01 · Impara</a><a href="#slide">02 · Slide</a><a href="#telefonata">03 · Gossip</a><a href="#vocabolario">04 · Parole</a><a href="#cruciverba">05 · Cruciverba</a><a href="#quiz">06 · Quiz</a>
+ </nav>
+
+ <section id="minilezioni" class="section">
+  <p class="eyebrow">10–15 minuti · concetti essenziali</p><h2>Tre idee da portare al lavoro</h2>
+  <div class="lab-cards">
+   <article class="card"><span class="pill">01 · Fonti</span><h3>Legge, accordo e procedure</h3><p>Il D.Lgs. 81/2008 definisce il quadro normativo. L’Accordo 59/CSR del 17 aprile 2025 disciplina aspetti di specifici percorsi formativi. Il DVR e le procedure traduccono gli obblighi nel contesto aziendale: non sono documenti intercambiabili.</p><details><summary>Domanda lampo</summary><p>Una voce riferita da un collega è una fonte normativa? <strong>No.</strong> Cerca il testo vigente e valuta l’applicabilità al caso.</p></details></article>
+   <article class="card"><span class="pill">02 · Ruoli</span><h3>La prevenzione è una squadra</h3><p>Datore di lavoro, lavoratori, preposti, RSPP e RLS hanno attribuzioni diverse. Non si può affidare a una persona un obbligo che non le compete soltanto perché è la più esperta o disponibile.</p><details><summary>Domanda lampo</summary><p>Il RSPP sostituisce il datore di lavoro? <strong>No.</strong> Le responsabilità sono disciplinate da disposizioni specifiche.</p></details></article>
+   <article class="card"><span class="pill">03 · Apprendimento</span><h3>Una firma non basta</h3><p>Informazione, formazione e addestramento non sono sinonimi. Per un corso obbligatorio occorre rispettare il percorso applicabile, inclusi requisiti di docenti, organizzazione, modalità e verifiche.</p><details><summary>Domanda lampo</summary><p>Un workshop di questo sito rilascia un attestato abilitante? <strong>No.</strong> È formazione integrativa non certificante.</p></details></article>
+  </div>
+  <div class="lab-card-small">
+   <h3>Gioco rapido: chi fa cosa?</h3><p>Abbina le quattro situazioni al ruolo corretto. Questa è una semplificazione didattica delle funzioni, non una matrice legale esaustiva.</p>
+   <form id="roles-activity">
+    {roleExercise.map((item,i)=><label class="lab-role">{i+1}. {item.s}<select name={'role'+i} data-expected={item.answer}><option value="">Scegli il ruolo</option><option value="lavoratore">Lavoratore</option><option value="preposto">Preposto</option><option value="rspp">RSPP</option><option value="rls">RLS</option></select></label>)}
+    <div class="actions"><button id="roles-check" type="button">Controlla gli abbinamenti</button><p id="roles-result" aria-live="polite" role="status"></p></div>
+   </form>
+  </div>
+ </section>
+
+ <section id="slide" class="section">
+  <p class="eyebrow">6 slide · proiezione o lettura autonoma</p><h2>Presentazione guidata</h2>
+  <p class="muted">Usa Avanti e Indietro per proiettare una slide alla volta. La presentazione funziona anche senza installare programmi esterni.</p>
+  <div class="slide-deck" id="slide-deck">
+   {slides.map((s,i)=><article class="lab-slide" data-slide={i} hidden={i!==0}>
+    <p class="slide-index">{s.k} · RISTO-LAB</p><h3>{s.title}</h3><p class="slide-sub">{s.sub}</p><ul>{s.points.map(p=><li>{p}</li>)}</ul>
+    <small>Materiale integrativo, non corso obbligatorio.</small>
+   </article>)}
+  </div>
+  <div class="slide-controls"><button class="secondary" type="button" id="slide-prev">Indietro</button><span id="slide-count" aria-live="polite">Slide 1 / 6</span><button type="button" id="slide-next">Avanti</button><button type="button" class="secondary" id="slide-project">Proietta</button></div>
+ </section>
+
+ <section id="telefonata" class="section">
+  <p class="eyebrow">10 minuti · narrativa e verifica</p><h2>«Pronto, hai sentito che…?»</h2>
+  <p>Due colleghe immaginarie commentano una voce sulla formazione aziendale. Il tono è leggero; il messaggio è serio: distinguere le informazioni verificabili dalle convinzioni ripetute.</p>
+  <div class="gossip-dialogue">
+   <p><strong>Giulia</strong> <span>«Arianna! Ti devo raccontare una cosa. Dicono che col nuovo Accordo basti guardare un video e mettere una firma. Che comodità!»</span></p>
+   <p><strong>Arianna</strong> <span>«Aspetta… chi lo dice? L’hai letto nell’Accordo oppure l’hai sentito alla macchinetta del caffè?»</span></p>
+   <p><strong>Giulia</strong> <span>«La collega del turno prima! E mi ha detto che il preposto può fare tutto, pure decidere come si tengono i corsi…»</span></p>
+   <p><strong>Arianna</strong> <span>«E il soggetto formatore? E i requisiti dei docenti? Prima di dirlo agli altri controlliamo.»</span></p>
+  </div>
+  <fieldset class="gossip-choice"><legend>Come risponderesti alla voce?</legend>
+   <label><input type="radio" name="gossip" value="0"/> «Se l’hanno detto in reparto è sicuramente corretto.»</label>
+   <label><input type="radio" name="gossip" value="1"/> «Verifico i requisiti del percorso applicabile nell’Accordo e nella documentazione ufficiale.»</label>
+   <label><input type="radio" name="gossip" value="2"/> «Non serve controllare: i corsi sono tutti uguali.»</label>
+  </fieldset>
+  <button type="button" id="gossip-check">Scopri il seguito</button><p id="gossip-feedback" class="lab-feedback" role="status" aria-live="polite"></p>
+  <details><summary>Il finale della telefonata</summary><p><strong>Giulia:</strong> «Quindi la storia della firma era una scorciatoia raccontata male?» <strong>Arianna:</strong> «Esatto. Prima si capisce quale corso serve, chi può organizzarlo, come si verifica l'apprendimento e cosa va documentato. Gossip finito, fonti aperte!»</p></details>
+ </section>
+
+ <section id="vocabolario" class="section">
+  <p class="eyebrow">5 minuti · vocabolario consultabile</p><h2>Le parole che cambiano il significato</h2>
+  <label class="terms-search">Cerca nel vocabolario <input type="search" id="term-search" placeholder="Es. preposto, rischio, formazione"/></label>
+  <div class="terms-grid" id="term-list">{terms.map(([word,definition])=><details class="term-item" data-search={(word+' '+definition).toLocaleLowerCase('it')}><summary>{word}</summary><p>{definition}</p></details>)}</div>
+  <p class="muted" id="term-count" aria-live="polite">{terms.length} termini disponibili</p>
+ </section>
+
+ <section id="cruciverba" class="section">
+  <p class="eyebrow">10 minuti · esercizio di ragionamento</p><h2>Cruciverba — Parole della prevenzione</h2>
+  <p>Dieci risposte reali con incroci: risolvi le definizioni, non indovinare sulla base del numero di lettere. Le caselle condivise devono avere la stessa lettera.</p>
+  <div class="cross-holder"><div class="cross-grid" id="cross-grid" style={'--cols:'+crossword.rows[0].length}>
+   {cells.map(cell=>cell.letter==='.'?<span class="cross-empty" aria-hidden="true"></span>:<label class="cross-cell">{cell.number&&<span class="cross-no" aria-hidden="true">{cell.number}</span>}<input class="cross-input" type="text" inputmode="text" maxlength="1" autocomplete="off" spellcheck="false" data-r={cell.r} data-c={cell.c} aria-label={'Riga '+(cell.r+1)+' colonna '+(cell.c+1)}/></label>)}
+  </div></div>
+  <div class="clues-two">
+   <div><h3>Orizzontali</h3><ol class="cross-clues">{crossword.words.filter(w=>w.d==='a').map(w=><li><button type="button" class="clue-jump" data-r={w.r} data-c={w.c}>{w.n}. {w.clue} <small>({w.w.length})</small></button></li>)}</ol></div>
+   <div><h3>Verticali</h3><ol class="cross-clues">{crossword.words.filter(w=>w.d==='d').map(w=><li><button type="button" class="clue-jump" data-r={w.r} data-c={w.c}>{w.n}. {w.clue} <small>({w.w.length})</small></button></li>)}</ol></div>
+  </div>
+  <div class="actions"><button type="button" id="cross-check">Verifica griglia</button><button type="button" class="secondary" id="cross-reset">Svuota</button><button type="button" class="secondary" id="cross-reveal">Mostra soluzione</button></div>
+  <p id="cross-result" role="status" aria-live="polite" class="lab-feedback"></p>
+ </section>
+
+ <section id="quiz" class="section">
+  <p class="eyebrow">15 minuti · verifica ragionata</p><h2>Quiz: scegli e motiva</h2>
+  <p>Le domande verificano la comprensione del laboratorio, non rilasciano crediti o attestazioni di formazione obbligatoria.</p>
+  <form id="lab-quiz">
+   {quiz.map((q,i)=><fieldset><legend>{i+1}. {q.q}</legend>{q.choices.map((ch,j)=><label class="quiz-option"><input name={'q'+i} type="radio" value={j}/><span>{ch}</span></label>)}</fieldset>)}
+   <button id="quiz-grade" type="button">Correggi con spiegazioni</button><p id="quiz-score" class="lab-feedback" role="status" aria-live="polite"></p><ol id="quiz-notes"></ol>
+  </form>
+  <div class="lab-case"><h3>Ultimo caso: il quasi-incidente</h3><p>Un cavo attraversa un corridoio di servizio durante una consegna urgente. Un addetto si ferma appena in tempo per non inciampare.</p><p>In 60 secondi, descrivi: <strong>che cosa osservi, a chi segnali e che cosa non devi improvvisare.</strong> Confronta il risultato con le istruzioni del tuo luogo di lavoro e con le persone competenti.</p><details><summary>Una traccia di debrief</summary><p>Riconoscere il potenziale inciampo; informare tempestivamente chi di competenza secondo le istruzioni; non intervenire sull’impianto senza competenza; verificare che siano state definite misure adeguate. La decisione tecnica e l’eventuale registrazione si valutano nel contesto aziendale.</p></details></div>
+  <div class="lab-final"><h3>Consegna del docente</h3><p>Al termine, ogni partecipante formula una regola in linguaggio semplice e una domanda da verificare sulle fonti. La valutazione considera: fonte usata, chiarezza, distinzione tra ruolo e responsabilità, applicabilità della scelta.</p></div>
+ </section>
+
+ <section class="section" id="fonti"><p class="eyebrow">Fonti e trasparenza</p><h2>Verifica prima di insegnare</h2><ul class="source-list">{sources.map(([name,url])=><li><a href={url} target="_blank" rel="noopener noreferrer">{name} ↗</a></li>)}</ul>
+ <p class="muted">Ultima ricognizione editoriale: 29 ottobre 2026. Gli esempi non sostituiscono una consulenza legale o HSE. Se una fonte cambia, aggiornare la lezione prima di utilizzarla nuovamente. Un professionista qualificato dovrà validare applicazioni normative specialistiche.</p></section>
 </Hub>
-<script>
-const answers=[1,1,1,2];
-const explanations=[
-'Un quasi-incidente è un segnale utile per prevenire. Segnalare secondo procedura e coinvolgere chi è competente.',
-'Un workshop integrativo non coincide automaticamente con un percorso obbligatorio, soggetto a condizioni specifiche.',
-'I requisiti HSE non si ricavano da un output AI non verificato: servono fonti primarie e revisione competente.',
-'Le prove pratiche osservabili e il follow-up sono più informative del numero di slide o del solo gradimento.'
-];
-const check=document.getElementById('lab-grade');
-check?.addEventListener('click',()=>{
- const form=document.getElementById('lab-quiz');
- if(!(form instanceof HTMLFormElement))return;
- let correct=0,answered=0;const details:string[]=[];
- answers.forEach((answer,i)=>{
-  const selected=form.querySelector('input[name="q'+i+'"]:checked');
-  const value=selected instanceof HTMLInputElement?Number(selected.value):null;
-  if(value!==null)answered+=1;
-  if(value===answer)correct+=1;
-  details.push('Q'+(i+1)+': '+(value===answer?'corretta':'da rivedere')+'. '+explanations[i]);
+<script define:vars={{quiz, crossword}}>
+ let current=0;
+ const slideCards=Array.from(document.querySelectorAll<HTMLElement>('.lab-slide'));
+ const showSlide=(n:number)=>{
+  current=(n+slideCards.length)%slideCards.length;
+  slideCards.forEach((el,i)=>{el.hidden=i!==current;});
+  const label=document.querySelector('#slide-count');if(label)label.textContent='Slide '+(current+1)+' / '+slideCards.length;
+ };
+ document.querySelector('#slide-next')?.addEventListener('click',()=>showSlide(current+1));
+ document.querySelector('#slide-prev')?.addEventListener('click',()=>showSlide(current-1));
+ document.querySelector('#slide-project')?.addEventListener('click',async()=>{const el=document.querySelector('#slide-deck');if(el instanceof HTMLElement&&el.requestFullscreen){try{await el.requestFullscreen();}catch{el.scrollIntoView({behavior:'smooth'});}}});
+ document.querySelector('#print-activity')?.addEventListener('click',()=>window.print());
+ document.querySelector('#roles-check')?.addEventListener('click',()=>{
+  const selects=Array.from(document.querySelectorAll<HTMLSelectElement>('#roles-activity select'));
+  const answered=selects.filter(x=>x.value).length,correct=selects.filter(x=>x.value===x.dataset.expected).length;
+  const dest=document.querySelector('#roles-result');if(dest)dest.textContent='Abbinamenti completati '+answered+'/4 · corretti '+correct+'/4.';
  });
- const result=document.getElementById('lab-score');if(result)result.textContent='Risposte '+answered+'/4 · corrette '+correct+'/4. Autovalutazione non certificante.';
- const feedback=document.getElementById('lab-feedback');if(feedback){feedback.replaceChildren();for(const msg of details){const li=document.createElement('li');li.textContent=msg;feedback.append(li);}}
-});
-document.getElementById('print-lab')?.addEventListener('click',()=>window.print());
+ document.querySelector('#gossip-check')?.addEventListener('click',()=>{
+  const selected=document.querySelector<HTMLInputElement>('input[name="gossip"]:checked');
+  const dest=document.querySelector('#gossip-feedback');
+  if(dest)dest.textContent=!selected?'Scegli prima una risposta.':selected.value==='1'?'Corretto: una voce non prova un obbligo. Serve consultare l’Accordo vigente, il percorso applicabile e le indicazioni ufficiali.':'Da rivedere: una firma, il racconto di un collega o una risposta AI non dimostrano da soli la conformità del percorso formativo.';
+ });
+ const search=document.querySelector<HTMLInputElement>('#term-search');
+ search?.addEventListener('input',()=>{
+  const value=search.value.trim().toLocaleLowerCase('it');let count=0;
+  document.querySelectorAll<HTMLElement>('.term-item').forEach(el=>{el.hidden=!el.dataset.search?.includes(value);if(!el.hidden)count++;});
+  const dest=document.querySelector('#term-count');if(dest)dest.textContent=count+' termini corrispondenti';
+ });
+ const crossInputs=Array.from(document.querySelectorAll<HTMLInputElement>('.cross-input'));
+ const getCell=(r:number,c:number)=>crossInputs.find(x=>Number(x.dataset.r)===r&&Number(x.dataset.c)===c);
+ crossInputs.forEach(el=>{
+  el.addEventListener('input',()=>{el.value=el.value.toUpperCase().replace(/[^A-Z]/g,'').slice(-1);el.classList.remove('bad','good');const i=crossInputs.indexOf(el);if(el.value&&i>=0)crossInputs[i+1]?.focus();});
+  el.addEventListener('keydown',(ev:KeyboardEvent)=>{
+   const r=Number(el.dataset.r),c=Number(el.dataset.c);
+   const offset:Record<string,number[]>={ArrowUp:[-1,0],ArrowDown:[1,0],ArrowLeft:[0,-1],ArrowRight:[0,1]};
+   if(offset[ev.key]){ev.preventDefault();let [dr,dc]=offset[ev.key];for(let step=1;step<=18;step++){const target=getCell(r+dr*step,c+dc*step);if(target){target.focus();break;}}}
+   else if(ev.key==='Backspace'&&!el.value){const i=crossInputs.indexOf(el);crossInputs[i-1]?.focus();}
+  });
+ });
+ document.querySelectorAll<HTMLButtonElement>('.clue-jump').forEach(el=>el.addEventListener('click',()=>getCell(Number(el.dataset.r),Number(el.dataset.c))?.focus()));
+ const letters=crossword.rows.map((line:string)=>line.split(''));
+ document.querySelector('#cross-check')?.addEventListener('click',()=>{
+  let correct=0,filled=0;crossInputs.forEach(el=>{const r=Number(el.dataset.r),c=Number(el.dataset.c),v=el.value.toUpperCase();if(v)filled++;const yes=v===letters[r][c];el.classList.toggle('good',yes);el.classList.toggle('bad',!!v&&!yes);if(yes)correct++;});
+  const dest=document.querySelector('#cross-result');if(dest)dest.textContent='Caselle corrette '+correct+'/'+crossInputs.length+' · compilate '+filled+'. Le caselle rosse sono da rivedere.';
+ });
+ document.querySelector('#cross-reset')?.addEventListener('click',()=>{crossInputs.forEach(el=>{el.value='';el.classList.remove('good','bad');});const dest=document.querySelector('#cross-result');if(dest)dest.textContent='Griglia svuotata.';crossInputs[0]?.focus();});
+ document.querySelector('#cross-reveal')?.addEventListener('click',()=>{crossInputs.forEach(el=>{el.value=letters[Number(el.dataset.r)][Number(el.dataset.c)];el.classList.remove('bad');el.classList.add('good');});const dest=document.querySelector('#cross-result');if(dest)dest.textContent='Soluzione visualizzata: confrontala con le definizioni.';});
+ document.querySelector('#quiz-grade')?.addEventListener('click',()=>{
+  const notes=document.querySelector('#quiz-notes');if(notes)notes.replaceChildren();
+  let score=0,filled=0;
+  quiz.forEach((q:{correct:number;why:string},i:number)=>{const sel=document.querySelector<HTMLInputElement>('input[name="q'+i+'"]:checked');if(sel)filled++;if(sel&&Number(sel.value)===q.correct)score++;if(notes){const li=document.createElement('li');li.textContent=(sel&&Number(sel.value)===q.correct?'Corretta. ':'Da rivedere. ')+q.why;notes.append(li);}});
+  const dest=document.querySelector('#quiz-score');if(dest)dest.textContent='Risposte '+filled+'/'+quiz.length+' · corrette '+score+'/'+quiz.length+'. Verifica didattica non certificante.';
+ });
 </script>
 <style>
-.lab-head{max-width:910px;padding-bottom:22px}.lab-stages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.lab-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.lab-stages .card,.lab-three .card{padding:21px}.lab-stages .card p:last-child{margin-bottom:0}.source-list li{padding:5px 0}.case-panel{background:var(--soft);border-left:4px solid var(--deep-teal);padding:25px 28px;margin:18px 0 24px}.case-panel p{max-width:900px}.case-label{font-size:.8rem;text-transform:uppercase;font-weight:800;letter-spacing:.1em}.lab-quiz fieldset{border:1px solid var(--line);padding:20px;margin:0 0 17px;border-radius:8px}.lab-quiz legend{font-weight:700;padding:4px}.lab-option{display:flex;flex-direction:row;align-items:flex-start;gap:13px;font-weight:400;font-size:1rem;padding:7px 0}.lab-option input{min-height:auto;flex-shrink:0;margin-top:4px}.lab-option span{line-height:1.5}.lab-quiz #lab-score{font-weight:700;margin-top:20px}.rubric li{padding:5px}.lab-quiz #lab-feedback li{margin-bottom:10px}details{margin-top:12px;padding:15px 18px;border:1px solid var(--line);border-radius:6px}details summary{cursor:pointer;font-weight:700}@media(max-width:950px){.lab-three{grid-template-columns:1fr}}@media(max-width:700px){.lab-stages{grid-template-columns:1fr}.case-panel{padding:20px}}@media print{.topbar,.sidebar,.actions,.footer,#lab-grade,#print-lab{display:none!important}.hubbody{display:block!important}.hubmain{padding:0!important}.lab-stages,.lab-three{grid-template-columns:1fr 1fr!important}.section{break-inside:avoid}.lab-head h1{font-size:30pt}}
+.lab-hero{max-width:1050px;padding:8px 0 30px}.lab-hero h1{font-size:clamp(2.5rem,5vw,4.5rem)}.lab-hero .lead{max-width:860px}.lab-pills{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0}.lab-pills span{padding:7px 13px;border:1px solid var(--line);border-radius:25px;font-size:.84rem}.lab-jump{display:flex;gap:10px;overflow-x:auto;padding:15px 0 22px}.lab-jump a{white-space:nowrap;border:1px solid var(--line);padding:10px 13px;border-radius:6px;text-decoration:none;font-size:.85rem;font-weight:600}.lab-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.lab-cards .card{padding:22px}.lab-cards details{margin-top:12px}.lab-cards summary{cursor:pointer}.lab-card-small,.lab-case,.lab-final{border:1px solid var(--line);padding:24px;margin-top:22px;background:var(--surface);border-radius:8px}.lab-role{display:grid;grid-template-columns:1fr minmax(180px,240px);gap:15px;align-items:center;margin:13px 0;font-size:.98rem}.lab-role select{width:100%}.slide-deck{background:#102830;color:#fff;border-radius:14px;min-height:380px;display:grid;align-items:center;overflow:hidden}.slide-deck:fullscreen{height:100vh;min-height:0;border-radius:0}.lab-slide{padding:clamp(25px,5vw,65px);max-width:1100px}.lab-slide[hidden]{display:none}.slide-index{color:#a2dfd3;font-size:.84rem;letter-spacing:.1em;text-transform:uppercase}.lab-slide h3{font-size:clamp(2rem,4.5vw,4rem);font-family:Georgia,serif;color:#fff;margin:15px 0}.lab-slide .slide-sub{font-size:1.15rem;line-height:1.6;color:#e4f2ee}.lab-slide ul{padding-left:24px}.lab-slide li{font-size:clamp(1.05rem,2vw,1.35rem);margin:9px 0;line-height:1.4}.lab-slide small{color:#bed1cb}.slide-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}.gossip-dialogue{background:#f3f5f0;border:1px solid var(--line);border-radius:12px;padding:20px;max-width:850px}.gossip-dialogue p{display:flex;gap:14px;margin:10px 0;align-items:flex-start}.gossip-dialogue strong{min-width:65px}.gossip-dialogue span{background:white;border:1px solid var(--line);border-radius:12px;padding:12px 15px;flex:1}.gossip-choice{border:1px solid var(--line);padding:20px;margin:18px 0}.gossip-choice legend{font-weight:700}.gossip-choice label,.quiz-option{display:flex;flex-direction:row;align-items:flex-start;gap:12px;font-size:1rem;font-weight:400;line-height:1.5;margin:12px 0}.gossip-choice input,.quiz-option input{min-height:auto;margin-top:5px;flex-shrink:0}.lab-feedback{font-weight:600;margin:15px 0}.terms-search{max-width:540px}.terms-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:18px 0}.term-item{border:1px solid var(--line);border-radius:6px;padding:12px 15px}.term-item summary{cursor:pointer;font-weight:700}.term-item p{margin:10px 0 0;font-size:.9rem}.cross-holder{overflow:auto;border:1px solid var(--line);background:#e8eee8;padding:14px;border-radius:8px}.cross-grid{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));min-width:630px;width:min(100%,760px);gap:1px}.cross-cell,.cross-empty{aspect-ratio:1;min-width:0}.cross-cell{position:relative;background:white;border:1px solid #acc1b3}.cross-empty{background:#e8eee8}.cross-no{position:absolute;font-size:.52rem;left:2px;top:0;line-height:1.1;color:#555;pointer-events:none}.cross-cell input{display:block;border:0!important;border-radius:0!important;width:100%;height:100%;min-height:0!important;padding:0!important;font-size:clamp(.8rem,1.7vw,1.3rem)!important;text-transform:uppercase;text-align:center;background:transparent!important;font-weight:700;color:#122a25}.cross-cell input:focus{background:#e9f6c8!important;outline:2px solid #94642f;position:relative;z-index:2}.cross-cell input.good{background:#dbf0d9!important}.cross-cell input.bad{background:#fbd7ce!important}.clues-two{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:22px}.cross-clues{list-style:none;padding-left:0}.cross-clues li{margin:0 0 8px}.clue-jump{border:0!important;background:none!important;color:var(--ink)!important;text-align:left;display:inline!important;min-height:0!important;padding:5px 0!important;font-weight:500!important;line-height:1.5}.clue-jump:hover{text-decoration:underline}.lab-quiz fieldset{border:1px solid var(--line);border-radius:8px;padding:18px;margin-bottom:15px}.lab-quiz legend{font-size:1.06rem;font-weight:700;max-width:98%;padding:0 6px}.lab-quiz #quiz-notes li{margin:10px 0}.source-list li{padding:6px 0;overflow-wrap:anywhere}section[id]{scroll-margin-top:22px}@media(max-width:1100px){.lab-cards,.terms-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:750px){.lab-cards,.terms-grid,.clues-two{grid-template-columns:1fr}.lab-role{grid-template-columns:1fr}.gossip-dialogue{padding:12px}.gossip-dialogue p{flex-direction:column;gap:5px}.lab-slide{padding:24px}.slide-deck{min-height:400px}.slide-controls button{flex:1}}@media print{.topbar,.sidebar,.footer,.lab-jump,button,.slide-controls,.cross-holder,.gossip-choice{display:none!important}.hubbody{display:block!important}.hubmain{padding:0!important}.lab-slide{display:block!important;background:#102830!important;color:#fff!important;break-inside:avoid}.lab-cards,.terms-grid{grid-template-columns:1fr 1fr!important}.section{break-inside:avoid}}
 </style>

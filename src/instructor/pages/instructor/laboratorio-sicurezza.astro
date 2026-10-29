@@ -175,7 +175,11 @@ const sources=[
  <section class="section" id="fonti"><p class="eyebrow">Fonti e trasparenza</p><h2>Verifica prima di insegnare</h2><ul class="source-list">{sources.map(([name,url])=><li><a href={url} target="_blank" rel="noopener noreferrer">{name} ↗</a></li>)}</ul>
  <p class="muted">Ultima ricognizione editoriale: 29 ottobre 2026. Gli esempi non sostituiscono una consulenza legale o HSE. Se una fonte cambia, aggiornare la lezione prima di utilizzarla nuovamente. Un professionista qualificato dovrà validare applicazioni normative specialistiche.</p></section>
 </Hub>
-<script define:vars={{quiz, crossword}}>
+<script type="application/json" id="lab-interactive-data" set:html={JSON.stringify({quiz,crossword}).replace(/</g,"\\u003c")}/>
+<script>
+ const model=JSON.parse(document.querySelector("#lab-interactive-data")?.textContent||"{}");
+ const quiz=model.quiz as Array<{correct:number;why:string}>;
+ const crossword=model.crossword as {rows:string[]};
  let current=0;
  const slideCards=Array.from(document.querySelectorAll<HTMLElement>('.lab-slide'));
  const showSlide=(n:number)=>{

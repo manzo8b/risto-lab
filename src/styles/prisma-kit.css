@@ -89,6 +89,8 @@
 .prisma-page .prisma-slide li{font-size:1.12rem;line-height:1.6}
 .prisma-page .prisma-slide[hidden]{display:none}
 .prisma-page .slide-counter{font-size:.8rem;color:#D0E9E5;letter-spacing:.13em;text-transform:uppercase}
+.prisma-page #prisma-slides:fullscreen{height:100vh;background:#112F52;overflow:auto}
+.prisma-page #prisma-slides:fullscreen .prisma-slide{min-height:100vh;border-radius:0}
 .prisma-page .prisma-slide:fullscreen{height:100vh;max-height:none;border-radius:0}
 .prisma-page .slide-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:15px 0}
 .prisma-page .slide-notes{background:var(--p-soft-violet);border-left:5px solid var(--p-violet);padding:20px;border-radius:0 8px 8px 0}

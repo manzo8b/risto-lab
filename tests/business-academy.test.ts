@@ -24,7 +24,7 @@ test('business marketing clearly segregates mandatory training',()=>{
  const t=read(pub);assert.match(t,/non certificanti/i);
  assert.match(t,/non sostituiscono la formazione obbligatoria/i);
  assert.match(t,/Sicurezza che si applica/);
- assert.match(t,/formazione-aziende/);
+ assert.match(t,/instructor\/laboratorio-sicurezza/);
 });
 test('curriculum links to the lab and company offer',()=>{
  const program=read('src/instructor/pages/instructor/programmi/index.astro');

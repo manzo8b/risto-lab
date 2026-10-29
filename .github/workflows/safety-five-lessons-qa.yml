@@ -1,0 +1,35 @@
+name: Five Safety Lessons QA
+
+on:
+  pull_request:
+    paths:
+      - 'src/instructor/data/safety-course.ts'
+      - 'src/instructor/pages/instructor/laboratorio-sicurezza/lezioni/**'
+      - 'src/instructor/pages/instructor/laboratorio-sicurezza.astro'
+      - 'src/instructor/pages/instructor/programmi/index.astro'
+      - 'src/instructor/pages/instructor/index.astro'
+      - 'src/instructor/pages/formazione.astro'
+      - 'tests/safety-five-lessons.test.ts'
+      - 'tests/safety-five-lessons.e2e.ts'
+      - '.github/workflows/safety-five-lessons-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+      - run: npm run publication:gate
+      - run: npx playwright test tests/safety-five-lessons.e2e.ts

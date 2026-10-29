@@ -1,0 +1,39 @@
+---
+import Hub from '../../../../../layouts/Instructor.astro';
+import {withBase} from '../../../../../lib/urls';
+import {safetyLessons,safetySources} from '../../../../data/safety-course';
+const url=(slug:string)=>withBase('/instructor/laboratorio-sicurezza/lezioni/'+slug+'/');
+---
+<Hub title="Cinque lezioni di salute e sicurezza sul lavoro">
+ <header class="course-head">
+  <p class="eyebrow">RISTO-LAB Instructor · Biblioteca aperta</p>
+  <h1>Conoscere la sicurezza sul lavoro</h1>
+  <p class="lead">Cinque lezioni originali per capire il D.Lgs. 81/2008 e l’Accordo Stato-Regioni del 17 aprile 2025. Leggi, ragiona su un caso realistico e verifica ciò che hai imparato.</p>
+  <div class="course-stats"><span>5 lezioni</span><span>100 minuti indicativi</span><span>15 domande guidate</span><span>Accesso pubblico</span></div>
+  <div class="actions"><a class="button secondary" href={withBase('/instructor/laboratorio-sicurezza/')}>Vai al laboratorio dinamico ↗</a><a class="button secondary" href={withBase('/instructor/programmi/')}>Tutti i programmi ↗</a></div>
+ </header>
+ <div class="notice"><strong>Risorsa gratuita e non certificante.</strong> Le lezioni sono contenuti di studio e sensibilizzazione. Non sostituiscono la formazione obbligatoria o un parere HSE, non rilasciano attestati e non attribuiscono crediti formativi normativi. Aggiornamento editoriale: 29 ottobre 2026. Prima di applicare obblighi a un caso reale verificare fonti, vigenza e requisiti specifici.</div>
+ <section class="section">
+  <p class="eyebrow">Percorso guidato</p><h2>Scegli una lezione e mettila alla prova</h2>
+  <div class="course-grid">
+  {safetyLessons.map(lesson=><article class="lesson-card">
+    <div class="lesson-top"><span class="lesson-number">{String(lesson.number).padStart(2,'0')}</span><span class="pill">{lesson.duration} minuti · {lesson.tag}</span></div>
+    <h3><a href={url(lesson.slug)}>{lesson.title}</a></h3><p>{lesson.intro}</p>
+    <p class="muted"><strong>Riferimenti:</strong> {lesson.articles}</p>
+    <a class="button secondary" href={url(lesson.slug)}>Leggi e svolgi gli esercizi ↗</a>
+  </article>)}
+  </div>
+ </section>
+ <section class="section">
+  <p class="eyebrow">Verifica normativa</p><h2>Consulta sempre le fonti ufficiali</h2>
+  <p>Non usare una slide, una voce di reparto o una risposta dell’AI come prova sufficiente di un obbligo. Confronta le spiegazioni con i documenti originali.</p>
+  <ul class="references">
+   <li><a href={safetySources.normattiva.url} target="_blank" rel="noopener noreferrer">{safetySources.normattiva.label} ↗</a></li>
+   <li><a href={safetySources.accordo.url} target="_blank" rel="noopener noreferrer">{safetySources.accordo.label} ↗</a></li>
+   <li><a href={safetySources.gu.url} target="_blank" rel="noopener noreferrer">{safetySources.gu.label} ↗</a></li>
+  </ul>
+ </section>
+</Hub>
+<style>
+.course-head{max-width:1000px}.course-stats{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}.course-stats span{padding:7px 12px;border:1px solid var(--line);border-radius:20px;font-size:.85rem}.course-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.lesson-card{border:1px solid var(--line);border-radius:9px;padding:25px;background:var(--surface);display:flex;flex-direction:column;align-items:flex-start}.lesson-card h3{font-size:1.4rem;margin:18px 0 10px}.lesson-card h3 a{text-decoration:none}.lesson-card h3 a:hover{text-decoration:underline}.lesson-card p{max-width:65ch}.lesson-card .button{margin-top:auto}.lesson-top{width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.lesson-number{font:500 2rem Georgia,serif;color:var(--copper-text)}.references li{margin:12px 0;overflow-wrap:anywhere}@media(max-width:800px){.course-grid{grid-template-columns:1fr}}
+</style>

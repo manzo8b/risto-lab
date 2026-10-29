@@ -1,0 +1,35 @@
+name: Instructor Safety Lab QA
+
+on:
+  pull_request:
+    paths:
+      - 'src/instructor/pages/instructor/laboratorio-sicurezza.astro'
+      - 'src/instructor/pages/instructor/index.astro'
+      - 'src/instructor/pages/instructor/programmi/index.astro'
+      - 'src/instructor/pages/instructor/normativa.astro'
+      - 'src/layouts/Instructor.astro'
+      - 'tests/safety-lab-v02.test.ts'
+      - 'tests/safety-lab-v02.e2e.ts'
+      - 'docs/LAB_SICUREZZA_INTERATTIVO_V02.md'
+      - '.github/workflows/safety-lab-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+      - run: npm run publication:gate
+      - run: npx playwright test tests/safety-lab-v02.e2e.ts

@@ -1,0 +1,374 @@
+/* RISTO-LAB · pedagogical chromatic system, 29 October 2026
+   Accent roles: teal = action/method; cobalt = lessons/information;
+   terracotta = scenarios/practice; violet = reflection; amber = verification.
+   Readable light surfaces remain neutral. Projector and print are preserved. */
+
+:root{
+  --learning-teal:#0C615D;
+  --learning-blue:#244F9B;
+  --learning-clay:#B13F28;
+  --learning-violet:#67439A;
+  --learning-gold:#7B4B10;
+  --learning-teal-tint:#E6F4EE;
+  --learning-blue-tint:#E9F1FF;
+  --learning-clay-tint:#FFF0E9;
+  --learning-violet-tint:#F2ECFF;
+  --learning-gold-tint:#FFF2D9;
+  --learning-focus:#B13F28;
+}
+
+/* Global restraint: color belongs to navigation, learning hierarchy and action. */
+body:not(.instructor-shell) .topbar{
+  background:#FFFFFF;
+  border-bottom:3px solid var(--learning-teal);
+}
+body:not(.instructor-shell) .brand i{color:var(--learning-clay)}
+body:not(.instructor-shell) .topbar .nav a[aria-current=page]{
+  color:var(--learning-blue);
+  text-decoration-color:var(--learning-blue);
+  text-decoration-thickness:3px;
+  text-underline-offset:8px;
+}
+body:not(.instructor-shell) .topbar .nav a:hover{color:var(--learning-blue)}
+body:not(.instructor-shell) .button:not(.secondary){
+  background:var(--learning-teal);
+  border-color:var(--learning-teal);
+  color:#FFFFFF;
+}
+body:not(.instructor-shell) .button.secondary{
+  background:var(--learning-blue-tint);
+  color:var(--learning-blue);
+  border-color:#A4B8DB;
+}
+body:not(.instructor-shell) .button.secondary:hover{background:#D9E8FC}
+body:not(.instructor-shell) .hero.editorial-hero{
+  background:linear-gradient(112deg,#FFF5E4 0%,#FFFFFF 61%,#E9F1FF 100%);
+  border-left:6px solid var(--learning-clay);
+  padding-left:clamp(18px,3.5vw,44px);
+  padding-right:clamp(14px,2vw,26px);
+  border-radius:0 12px 12px 0;
+  margin-top:18px;
+}
+body:not(.instructor-shell) .hero.editorial-hero h1 em{color:var(--learning-blue)}
+body:not(.instructor-shell) .hero-art{
+  background:linear-gradient(140deg,#D5F1E7 0%,#E8EFFF 100%);
+}
+body:not(.instructor-shell) .story-bridge{
+  background:var(--learning-blue-tint);
+  border-left:5px solid var(--learning-blue);
+  padding:clamp(26px,4vw,54px);
+  border-radius:0 10px 10px 0;
+}
+body:not(.instructor-shell) .story-bridge .journey span:nth-child(1){color:var(--learning-blue)}
+body:not(.instructor-shell) .story-bridge .journey span:nth-child(2){color:var(--learning-teal)}
+body:not(.instructor-shell) .story-bridge .journey span:nth-child(3){color:var(--learning-violet)}
+body:not(.instructor-shell) .story-bridge .journey span:nth-child(4){color:var(--learning-clay)}
+body:not(.instructor-shell) .section:not(.story-bridge)>.eyebrow{color:var(--learning-blue)}
+body:not(.instructor-shell) .grid>.card{
+  border-top:4px solid var(--learning-blue);
+  background:#FFFFFF;
+}
+body:not(.instructor-shell) .grid>.card:nth-child(3n+2){border-top-color:var(--learning-clay)}
+body:not(.instructor-shell) .grid>.card:nth-child(3n+3){border-top-color:var(--learning-violet)}
+body:not(.instructor-shell) .grid>.card .eyebrow{color:var(--learning-blue)}
+body:not(.instructor-shell) .grid>.card:nth-child(3n+2) .eyebrow{color:var(--learning-clay)}
+body:not(.instructor-shell) .grid>.card:nth-child(3n+3) .eyebrow{color:var(--learning-violet)}
+body:not(.instructor-shell) .editorial-note{
+  border-top:5px solid var(--learning-clay);
+  background:var(--learning-clay-tint);
+}
+body:not(.instructor-shell) .public-feature:nth-of-type(even) .editorial-note{
+  border-top-color:var(--learning-blue);
+  background:var(--learning-blue-tint);
+}
+body:not(.instructor-shell) .cycle>div{
+  background:var(--learning-blue-tint);
+  border-color:#C0D0EC;
+  border-top:4px solid var(--learning-blue);
+}
+body:not(.instructor-shell) .cycle>div:nth-child(2),
+body:not(.instructor-shell) .cycle>div:nth-child(6){
+  background:var(--learning-teal-tint);
+  border-top-color:var(--learning-teal);
+}
+body:not(.instructor-shell) .cycle>div:nth-child(3),
+body:not(.instructor-shell) .cycle>div:nth-child(7){
+  background:var(--learning-gold-tint);
+  border-top-color:var(--learning-gold);
+}
+body:not(.instructor-shell) .cycle>div:nth-child(4){
+  background:var(--learning-clay-tint);
+  border-top-color:var(--learning-clay);
+}
+body:not(.instructor-shell) .cycle>div:nth-child(5){
+  background:var(--learning-violet-tint);
+  border-top-color:var(--learning-violet);
+}
+body:not(.instructor-shell) .cycle>div span{color:#244F9B}
+body:not(.instructor-shell) .cycle>div:nth-child(2) span,
+body:not(.instructor-shell) .cycle>div:nth-child(6) span{color:var(--learning-teal)}
+body:not(.instructor-shell) .cycle>div:nth-child(3) span,
+body:not(.instructor-shell) .cycle>div:nth-child(7) span{color:var(--learning-gold)}
+body:not(.instructor-shell) .cycle>div:nth-child(4) span{color:var(--learning-clay)}
+body:not(.instructor-shell) .cycle>div:nth-child(5) span{color:var(--learning-violet)}
+body:not(.instructor-shell) .contact-band{
+  background:linear-gradient(130deg,#0B414A,#123F68);
+  padding:55px 30px 58px;
+  border-radius:12px;
+  margin:20px 0 36px;
+  color:#FFFFFF;
+}
+body:not(.instructor-shell) .contact-band h2,
+body:not(.instructor-shell) .contact-band .eyebrow{color:#FFFFFF}
+body:not(.instructor-shell) .contact-band .muted{color:#E1EAF1}
+body:not(.instructor-shell) .contact-band .button{
+  background:#FFFFFF;
+  color:#123F68;
+  border-color:#FFFFFF;
+  font-weight:750;
+}
+body:not(.instructor-shell) .footer{border-top:4px solid var(--learning-teal)}
+
+/* Instructor: clearer hierarchy without saturating every reading surface. */
+.instructor-shell .topbar{
+  border-bottom:3px solid var(--learning-blue);
+}
+.instructor-shell .topbar .brand i{color:var(--learning-clay)}
+.instructor-shell .sidebar{
+  background:linear-gradient(180deg,#EAF1FE 0%,#F5F1FB 100%);
+  border-right-color:#B8C8E0;
+}
+.instructor-shell .sidebar .nav a:hover{
+  background:#DFE9FC;
+  color:var(--learning-blue);
+}
+.instructor-shell .sidebar .nav a[aria-current=page]{
+  background:#DAE8FC;
+  color:var(--learning-blue);
+  border-left:4px solid var(--learning-blue);
+  font-weight:750;
+}
+.instructor-shell .work-heading{
+  padding:26px 30px;
+  background:linear-gradient(110deg,#E8F0FF 0%,#FFF2E7 100%);
+  border-left:5px solid var(--learning-blue);
+  border-radius:0 10px 10px 0;
+}
+.instructor-shell .work-heading .eyebrow{color:var(--learning-blue)}
+.instructor-shell .work-surface.today-session{border-top:4px solid var(--learning-teal)}
+.instructor-shell .home-tools .button.secondary{
+  background:var(--learning-blue-tint);
+  color:var(--learning-blue);
+  border-color:#A9BEE0;
+}
+.instructor-shell .home-tools .button.secondary:nth-child(2){
+  background:var(--learning-violet-tint);
+  color:var(--learning-violet);
+  border-color:#C8B5E8;
+}
+.instructor-shell .quick-access>a:nth-child(1){
+  background:var(--learning-blue-tint);
+  border-top:4px solid var(--learning-blue);
+}
+.instructor-shell .quick-access>a:nth-child(2){
+  background:var(--learning-teal-tint);
+  border-top:4px solid var(--learning-teal);
+}
+.instructor-shell .quick-access>a:nth-child(3){
+  background:var(--learning-violet-tint);
+  border-top:4px solid var(--learning-violet);
+}
+.instructor-shell .quick-access>a:nth-child(1) .eyebrow{color:var(--learning-blue)}
+.instructor-shell .quick-access>a:nth-child(2) .eyebrow{color:var(--learning-teal)}
+.instructor-shell .quick-access>a:nth-child(3) .eyebrow{color:var(--learning-violet)}
+.instructor-shell .dashboard-hero{
+  background:linear-gradient(120deg,#0C615D,#244F9B);
+  color:#FFFFFF;
+}
+.instructor-shell .dashboard-hero h2{color:#FFFFFF}
+.instructor-shell .unitrow:hover,
+.instructor-shell .recent-row:focus-within{border-color:var(--learning-blue)}
+.instructor-shell .unitrow:focus-visible{outline-color:var(--learning-blue)}
+.instructor-shell .unit-actionbar{background:var(--learning-gold-tint);border-left:4px solid var(--learning-gold)}
+
+/* Safety hub: visual anchors identify "law", "practice", "reflection". */
+.instructor-shell .lab-hero{
+  max-width:none;
+  background:linear-gradient(115deg,#123F68 0%,#0C615D 100%);
+  color:#FFFFFF;
+  border-radius:12px;
+  padding:clamp(22px,4vw,45px);
+}
+.instructor-shell .lab-hero h1,
+.instructor-shell .lab-hero .lead,
+.instructor-shell .lab-hero .eyebrow{color:#FFFFFF}
+.instructor-shell .lab-hero .lab-pills span{
+  color:#FFFFFF;
+  background:#FFFFFF19;
+  border-color:#FFFFFF85;
+}
+.instructor-shell .lab-hero .button.secondary,
+.instructor-shell .lab-hero button.secondary{
+  background:#FFFFFF;
+  border-color:#FFFFFF;
+  color:#123F68;
+}
+.instructor-shell .lab-hero .button.secondary:hover,
+.instructor-shell .lab-hero button.secondary:hover{background:#E9F1FF}
+.instructor-shell #percorso-cinque-lezioni{
+  background:var(--learning-blue-tint);
+  border-left:4px solid var(--learning-blue);
+  padding-left:clamp(16px,3vw,30px)!important;
+  padding-right:20px;
+  border-radius:0 8px 8px 0;
+}
+.instructor-shell #percorso-cinque-lezioni .button{
+  background:var(--learning-blue);
+  border-color:var(--learning-blue);
+  color:#FFFFFF;
+}
+.instructor-shell .lab-jump a{
+  background:#FFFFFF;
+  border-bottom:3px solid var(--learning-teal);
+}
+.instructor-shell .lab-jump a:nth-child(2),
+.instructor-shell .lab-jump a:nth-child(5){border-bottom-color:var(--learning-blue)}
+.instructor-shell .lab-jump a:nth-child(3),
+.instructor-shell .lab-jump a:nth-child(6){border-bottom-color:var(--learning-clay)}
+.instructor-shell .lab-jump a:nth-child(4){border-bottom-color:var(--learning-violet)}
+.instructor-shell .lab-cards .card:nth-child(1){background:var(--learning-blue-tint);border-top:4px solid var(--learning-blue)}
+.instructor-shell .lab-cards .card:nth-child(2){background:var(--learning-teal-tint);border-top:4px solid var(--learning-teal)}
+.instructor-shell .lab-cards .card:nth-child(3){background:var(--learning-violet-tint);border-top:4px solid var(--learning-violet)}
+.instructor-shell .gossip-dialogue{background:var(--learning-clay-tint);border-color:#DDBDAF}
+.instructor-shell .gossip-dialogue strong{color:var(--learning-clay)}
+.instructor-shell #vocabolario .term-item{background:#FFFFFF;border-left:3px solid var(--learning-violet)}
+.instructor-shell #quiz .lesson-q,
+.instructor-shell #quiz .lab-quiz fieldset{border-left:3px solid var(--learning-gold)}
+
+/* Five-lesson library: five different learning "chapters", not five grey cards. */
+.instructor-shell .course-head{
+  max-width:none;
+  background:linear-gradient(112deg,#E9F1FF 0%,#F2ECFF 55%,#FFF2D9 100%);
+  padding:clamp(22px,3.5vw,40px);
+  border-left:5px solid var(--learning-blue);
+  border-radius:0 10px 10px 0;
+}
+.instructor-shell .course-head .eyebrow{color:var(--learning-blue)}
+.instructor-shell .course-stats span{
+  background:#FFFFFFB8;
+  border-color:#ACBFDA;
+  color:#123F68;
+  font-weight:700;
+}
+.instructor-shell .lesson-card{
+  border-top:5px solid var(--learning-blue);
+  background:var(--learning-blue-tint);
+  box-shadow:0 5px 16px #10242D0B;
+}
+.instructor-shell .lesson-card:nth-child(5n+2){background:var(--learning-teal-tint);border-top-color:var(--learning-teal)}
+.instructor-shell .lesson-card:nth-child(5n+3){background:var(--learning-clay-tint);border-top-color:var(--learning-clay)}
+.instructor-shell .lesson-card:nth-child(5n+4){background:var(--learning-violet-tint);border-top-color:var(--learning-violet)}
+.instructor-shell .lesson-card:nth-child(5n+5){background:var(--learning-gold-tint);border-top-color:var(--learning-gold)}
+.instructor-shell .lesson-card .lesson-number{color:var(--learning-blue);font-weight:700}
+.instructor-shell .lesson-card:nth-child(5n+2) .lesson-number{color:var(--learning-teal)}
+.instructor-shell .lesson-card:nth-child(5n+3) .lesson-number{color:var(--learning-clay)}
+.instructor-shell .lesson-card:nth-child(5n+4) .lesson-number{color:var(--learning-violet)}
+.instructor-shell .lesson-card:nth-child(5n+5) .lesson-number{color:var(--learning-gold)}
+.instructor-shell .lesson-card .button.secondary{
+  color:#FFFFFF;
+  background:var(--learning-blue);
+  border-color:var(--learning-blue);
+}
+.instructor-shell .lesson-card:nth-child(5n+2) .button.secondary{background:var(--learning-teal);border-color:var(--learning-teal)}
+.instructor-shell .lesson-card:nth-child(5n+3) .button.secondary{background:var(--learning-clay);border-color:var(--learning-clay)}
+.instructor-shell .lesson-card:nth-child(5n+4) .button.secondary{background:var(--learning-violet);border-color:var(--learning-violet)}
+.instructor-shell .lesson-card:nth-child(5n+5) .button.secondary{background:var(--learning-gold);border-color:var(--learning-gold)}
+.instructor-shell .lesson-card .pill{background:#FFFFFFC7;border-color:#C9D4E2;color:var(--ink)}
+.instructor-shell .lesson-head{
+  max-width:none;
+  padding:clamp(20px,3.5vw,36px);
+  border-left:5px solid var(--learning-blue);
+  background:var(--learning-blue-tint);
+  border-radius:0 10px 10px 0;
+}
+.instructor-shell .lesson-head[data-course-lesson="2"]{border-left-color:var(--learning-teal);background:var(--learning-teal-tint)}
+.instructor-shell .lesson-head[data-course-lesson="3"]{border-left-color:var(--learning-clay);background:var(--learning-clay-tint)}
+.instructor-shell .lesson-head[data-course-lesson="4"]{border-left-color:var(--learning-violet);background:var(--learning-violet-tint)}
+.instructor-shell .lesson-head[data-course-lesson="5"]{border-left-color:var(--learning-gold);background:var(--learning-gold-tint)}
+.instructor-shell .lesson-head .eyebrow{color:var(--learning-blue)}
+.instructor-shell .lesson-head[data-course-lesson="2"] .eyebrow{color:var(--learning-teal)}
+.instructor-shell .lesson-head[data-course-lesson="3"] .eyebrow{color:var(--learning-clay)}
+.instructor-shell .lesson-head[data-course-lesson="4"] .eyebrow{color:var(--learning-violet)}
+.instructor-shell .lesson-head[data-course-lesson="5"] .eyebrow{color:var(--learning-gold)}
+.instructor-shell .lesson-part .part-no{color:var(--learning-blue);font-weight:700}
+.instructor-shell .lesson-part:nth-child(3n+2) .part-no{color:var(--learning-teal)}
+.instructor-shell .lesson-part:nth-child(3n+3) .part-no{color:var(--learning-clay)}
+.instructor-shell .lesson-part .norm-reference{
+  background:var(--learning-blue-tint);
+  border-left-color:var(--learning-blue);
+}
+.instructor-shell .scenario{background:var(--learning-clay-tint);border-left-color:var(--learning-clay)}
+.instructor-shell .glossary>div:nth-child(3n+1){border-top:4px solid var(--learning-blue);background:var(--learning-blue-tint)}
+.instructor-shell .glossary>div:nth-child(3n+2){border-top:4px solid var(--learning-teal);background:var(--learning-teal-tint)}
+.instructor-shell .glossary>div:nth-child(3n+3){border-top:4px solid var(--learning-violet);background:var(--learning-violet-tint)}
+.instructor-shell .lesson-q{border-left:4px solid var(--learning-gold);background:#FFFDF7}
+.instructor-shell .source-section .faq-update{background:var(--learning-gold-tint);border-color:#DBBC75}
+
+/* Teacher guide & scenarios: color conveys editorial roles only; words remain explicit. */
+.instructor-shell .teacher-sheet>header{
+  background:var(--learning-blue-tint);
+  border-left:5px solid var(--learning-blue);
+  padding:clamp(20px,3vw,35px);
+  border-radius:0 10px 10px 0;
+}
+.instructor-shell .teacher-sheet .agenda-row:nth-child(4n+1){background:var(--learning-blue-tint)}
+.instructor-shell .teacher-sheet .agenda-row:nth-child(4n+2){background:var(--learning-teal-tint)}
+.instructor-shell .teacher-sheet .agenda-row:nth-child(4n+3){background:var(--learning-clay-tint)}
+.instructor-shell .teacher-sheet .agenda-row:nth-child(4n+4){background:var(--learning-violet-tint)}
+.instructor-shell .teacher-sheet .agenda-row{padding-left:15px}
+.instructor-shell .case-shell>header{
+  background:var(--learning-blue-tint);
+  border-left:5px solid var(--learning-blue);
+  padding:clamp(18px,3vw,35px);
+  border-radius:0 10px 10px 0;
+}
+.instructor-shell .sector-case:nth-of-type(3n+1) .situation{background:var(--learning-clay-tint);border-left-color:var(--learning-clay)}
+.instructor-shell .sector-case:nth-of-type(3n+2) .situation{background:var(--learning-blue-tint);border-left-color:var(--learning-blue)}
+.instructor-shell .sector-case:nth-of-type(3n+3) .situation{background:var(--learning-violet-tint);border-left-color:var(--learning-violet)}
+.instructor-shell .sector-case .decision{background:#FFFFFF;border-left:4px solid var(--learning-teal)}
+.instructor-shell .sector-case .case-debrief{background:var(--learning-gold-tint)}
+
+/* Accessibility, focus and print: contrast tested for dark accents on white (>5.8:1). */
+body a:focus-visible,body button:focus-visible,body input:focus-visible,
+body select:focus-visible,body summary:focus-visible{
+  outline:3px solid var(--learning-focus);
+  outline-offset:3px;
+}
+@media(max-width:800px){
+  .instructor-shell .sidebar{background:#EAF1FE}
+  .instructor-shell .sidebar .nav a[aria-current=page]{border-left:0;border-bottom:3px solid var(--learning-blue)}
+  body:not(.instructor-shell) .hero.editorial-hero{padding-top:38px;padding-bottom:38px}
+}
+@media(max-width:640px){
+  body:not(.instructor-shell) .hero.editorial-hero{margin-top:12px}
+  body:not(.instructor-shell) .story-bridge{padding:25px}
+  body:not(.instructor-shell) .contact-band{padding:35px 20px}
+  .instructor-shell .course-head,
+  .instructor-shell .lesson-head,
+  .instructor-shell .lab-hero{padding:24px 20px}
+}
+@media print{
+  body:not(.instructor-shell) .hero.editorial-hero,
+  body:not(.instructor-shell) .story-bridge,
+  .instructor-shell .lab-hero,
+  .instructor-shell .lesson-head,
+  .instructor-shell .course-head,
+  .instructor-shell .teacher-sheet>header,
+  .instructor-shell .case-shell>header{background:#FFFFFF!important;color:#111!important}
+  .instructor-shell .lab-hero h1,
+  .instructor-shell .lab-hero .lead,
+  .instructor-shell .lab-hero .eyebrow{color:#111!important}
+  .instructor-shell .teacher-sheet .agenda-row{background:#FFFFFF!important}
+  .instructor-shell .teacher-sheet .agenda-row .step strong{color:#111!important}
+  .instructor-shell .sidebar,.instructor-shell .topbar{background:#FFFFFF!important}
+}

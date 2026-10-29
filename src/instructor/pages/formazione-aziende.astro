@@ -1,0 +1,53 @@
+---
+import Public from '../../layouts/Public.astro';
+import {withBase} from '../../lib/urls';
+const paths=[
+ ['01','Rischio in 90 secondi','Imparare a riconoscere pericoli e segnalare anomalie prima dell’incidente.','Team e nuovi assunti · 90 min'],
+ ['02','Near Miss Detective','Trasformare un quasi-incidente in un’azione preventiva, non in una ricerca di colpe.','Operatori e responsabili · 150 min'],
+ ['03','Passaggio di consegne sicuro','Simulare briefing e handover chiari in condizioni di urgenza.','Coordinatori e team · 120 min'],
+ ['04','D.Lgs. 81/2008 in pratica','Comprendere ruoli, prevenzione e responsabilità nel proprio contesto, con revisione HSE.','Manager e formatori · 180 min'],
+ ['05','Accordo 2025, formazione che funziona','Progettare fabbisogni, verifiche e follow-up partendo dalle fonti ufficiali.','HR e progettisti · 180 min'],
+ ['06','Procedure che si capiscono','Trasformare procedure complesse in istruzioni e microlezioni verificabili.','Team leader e HR · 180 min'],
+ ['07','AI con supervisione umana','Generare materiali didattici senza affidare all’AI l’ultima parola su norme e sicurezza.','Formatori e operations · 150 min'],
+ ['08','Squadre multilingue, istruzioni chiare','Verificare la comprensione in contesti plurilingui senza affidarsi a traduzioni automatiche non controllate.','Hospitality e servizi · 150 min'],
+];
+---
+<Public title="Formazione aziendale | Safety, People & Digital Skills">
+  <div class="wrap">
+    <header class="pagehead" style="max-width:950px">
+      <p class="eyebrow">RISTO-LAB · Business Academy · Proposta pilota</p>
+      <h1>Formazione che cambia <em>il lavoro quotidiano</em></h1>
+      <p class="lead muted">Sicurezza, comunicazione, procedure e intelligenza artificiale: workshop con casi realistici, esercitazioni e risultati osservabili, pensati per piccoli team e imprese.</p>
+      <div class="actions"><a class="button" href={withBase('/contatti/')}>Proponi un bisogno formativo ↗</a><a class="button secondary" href={withBase('/instructor/laboratorio-sicurezza/')}>Esplora un laboratorio dimostrativo ↗</a></div>
+    </header>
+    <div class="notice"><strong>Perimetro chiaro:</strong> i workshop proposti sono percorsi complementari non certificanti. Non sostituiscono la formazione obbligatoria su salute e sicurezza, le abilitazioni o gli adempimenti previsti dalla normativa. Per corsi obbligatori occorrono soggetti e docenti in possesso dei requisiti previsti, da accertare prima di ogni proposta.</div>
+    <section class="section">
+      <p class="eyebrow">Un metodo diverso dalle slide passive</p>
+      <h2>Osservare → Provare → Verificare</h2>
+      <div class="grid">
+        <article class="card"><span class="pill">01</span><h3>Un problema reale</h3><p>Partiamo da un rischio, una consegna incompleta, una procedura difficile o un nuovo strumento.</p></article>
+        <article class="card"><span class="pill">02</span><h3>Una simulazione guidata</h3><p>I partecipanti ricostruiscono informazioni, distinguono ipotesi e scelgono azioni appropriate.</p></article>
+        <article class="card"><span class="pill">03</span><h3>Un risultato osservabile</h3><p>Una checklist, una procedura più chiara, un briefing, una decisione motivata e un follow-up concordato.</p></article>
+      </div>
+    </section>
+    <section class="section">
+      <p class="eyebrow">Catalogo preliminare</p>
+      <h2>Otto laboratori, una logica pratica</h2>
+      <div class="offerings">{paths.map(([number,title,desc,meta])=><article class="offer"><div class="index">{number}</div><div><h3>{title}</h3><p>{desc}</p><p class="muted"><small>{meta}</small></p></div></article>)}</div>
+      <p class="muted">Le durate sono ipotesi per workshop complementari. Non rappresentano durate minime dei corsi obbligatori regolati dall’Accordo Stato-Regioni.</p>
+    </section>
+    <section class="section public-feature">
+      <div><p class="eyebrow">Primo workshop proposto</p><h2>Sicurezza che si applica</h2><p>Un laboratorio dimostrativo unisce D.Lgs. 81/2008, Accordo Stato-Regioni 2025, progettazione didattica e casi di quasi-incidente. Per chi vuole ragionare sui comportamenti, con riferimento alle fonti e senza improvvisare interpretazioni normative.</p><a class="button secondary" href={withBase('/instructor/laboratorio-sicurezza/')}>Apri la demo Instructor ↗</a></div>
+      <div class="editorial-note"><p class="eyebrow">Cosa riceve l’azienda</p><h3>Un esercizio applicabile</h3><p>Analisi del bisogno, facilitazione, scheda di attività, criteri di osservazione e sintesi dei punti da migliorare. Il perimetro esatto viene concordato nel preventivo.</p><p><strong>Workshop pilota fino a 3 ore: da €350</strong> — valore indicativo da confermare secondo partecipanti, materiali, sede e fiscalità.</p></div>
+    </section>
+    <section class="section">
+      <h2>Rigore prima della promessa</h2>
+      <p class="prose">Le attività possono essere adattate ai documenti e alle procedure effettivamente applicabili all’azienda solo con le appropriate verifiche. Eventuali percorsi HSE obbligatori saranno considerati esclusivamente con soggetti formatori e docenti qualificati e con responsabilità esplicite.</p>
+      <p><a href="https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/accordo-stato-regioni-17042025-allegato" target="_blank" rel="noopener noreferrer">Consulta l’Accordo 2025 sul sito del Ministero del Lavoro ↗</a></p>
+    </section>
+    <section class="contact-band"><h2>Quale comportamento vuoi migliorare?</h2><p class="muted">Raccontaci un problema operativo, non serve partire da un catalogo preconfezionato.</p><a class="button" href={withBase('/contatti/')}>Parliamone ↗</a></section>
+  </div>
+</Public>
+<style>
+.offerings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 35px}.offer{display:grid;grid-template-columns:50px 1fr;gap:15px;padding:23px 0;border-top:1px solid var(--line)}.offer h3{font-size:1.2rem}.offer p{margin:0 0 8px}.offer .index{font:700 1.25rem Georgia,serif;color:var(--accent)}@media(max-width:720px){.offerings{grid-template-columns:1fr}}
+</style>

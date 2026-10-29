@@ -1,0 +1,73 @@
+---
+import PrismaKit from '../../../../layouts/PrismaKit.astro';
+import {agenda,prismaRoot,sourceMatrix,rubric} from '../../../../instructor/data/prisma-hse';
+import {withBase} from '../../../../lib/urls';
+const base=withBase(prismaRoot);
+const activities=[
+{id:'A1',title:'Diagnosi delle competenze',setup:'Distribuire la situazione sintetica del cavo nel passaggio e un pre-test di 4 domande; chiedere che cosa il gruppo già sa.',guide:'Raccogliere senza attribuire insufficienze al committente. Concludere con una domanda: è un problema di competenze o di organizzazione?',result:'Ipotesi di gap formativo e prima baseline.'},
+{id:'A2',title:'Matrice delle fonti',setup:'Mettere a disposizione Normattiva e testo dell’Accordo 59/CSR. Assegnare due affermazioni su ruoli e formazione.',guide:'Il gruppo registra articolo/punto, significato, ambito e grado di certezza. Non accettare citazioni prive di sezione.',result:'Due affermazioni normative controllate e una questione aperta per esperto HSE.'},
+{id:'A3',title:'Obiettivo osservabile',setup:'Partire da «capire la sicurezza» e mostrare perché non è una prova.',guide:'Chiedere una riscrittura con verbo osservabile, criterio e caso di applicazione. Fare peer review.',result:'Un obiettivo che può essere verificato da altro docente.'},
+{id:'A4',title:'Storyboard di microlezione',setup:'Proporre una durata di 25 minuti, cinque fasi e un unico caso narrativo.',guide:'Ogni gruppo sceglie spiegazione, prova, debrief e minuti. Evitare di accumulare contenuti senza funzione.',result:'Storyboard con sequenza 4–4–5–8–4 min.'},
+{id:'A5',title:'Telefonata e Near Miss Detective',setup:'Distribuire le parti di Giulia e Arianna; selezionare uno dei tre contesti sintetici.',guide:'Far distinguere fatti, congetture, riferimento da verificare e segnalazione. Nessuna manovra tecnica improvvisata.',result:'Risposta motivata e simulazione di comunicazione.'},
+{id:'A6',title:'Richiamo attivo',setup:'Riprendere senza slide tre principi del giorno precedente.',guide:'Chiedere fonti e esempi. Dare feedback immediato, non giudizi sulla persona.',result:'Mappa di tre conoscenze recuperate correttamente.'},
+{id:'A7',title:'Storyboard accessibile',setup:'Portare il prototipo di microlezione e verificare linguaggio, contrasto, fruizione mobile e chiarezza.',guide:'Rivedere sequenza, scelte e feedback; inserire note docente e alternativa testuale alle attività.',result:'Storyboard revisionato e note di facilitazione.'},
+{id:'A8',title:'Slide e AI Fact-Check',setup:'Fornire tre frasi sintetiche, una deliberatamente fuorviante, con fonti ufficiali a portata.',guide:'Classificare verificato/incompleto/errato, scrivere fonte e correzione. Non caricare dati riservati in servizi AI non autorizzati.',result:'Tre righe di matrice AI e una slide corretta.'},
+{id:'A9',title:'Microteaching fra pari',setup:'Distribuire il ruolo docente a turno; 8–10 minuti di conduzione, feedback strutturato, seconda prova.',guide:'Usare rubriche 0–2: obiettivi, fonte, coinvolgimento, feedback, applicabilità. Evitare di confondere punteggio interno con attestazione.',result:'Prototipo revisionato e commenti osservabili.'},
+{id:'A10',title:'Riesame e transfer',setup:'Definire un criterio osservabile per il successivo utilizzo del kit; concordare chi può verificarlo.',guide:'Distinguere apprendimento finale e efficacia sul lavoro. Programmare un riesame a 30 giorni come scelta metodologica, non obbligo legale generalizzato.',result:'Piano di follow-up e check di qualità.'},
+];
+const worksheet=[
+{code:'S1',name:'Fabbisogno',prompt:'Quale prestazione va migliorata? Come sappiamo che manca? È davvero un problema formativo?'},
+{code:'S2',name:'Destinatari',prompt:'Mansioni, prerequisiti, accessibilità linguistica/digitale e vincoli?'},
+{code:'S3',name:'Obiettivo',prompt:'Al termine il discente sarà in grado di… [verbo, criterio e contesto]'},
+{code:'S4',name:'Requisito',prompt:'Quale disposizione normativa si applica, a quale tipologia di corso e con quale revisione?'},
+{code:'S5',name:'Esperienza',prompt:'Che cosa vedrà, farà e discuterà il discente? Quanto tempo?'},
+{code:'S6',name:'Prova',prompt:'Come misurare il comportamento richiesto? Con quale rubrica?'},
+{code:'S7',name:'Trasferimento',prompt:'Quale indicatore osserveremo dopo il corso, da chi e quando?'}
+];
+---
+<PrismaKit title="Guida docente e schede operative" section="docente">
+ <header class="prisma-hero"><p class="pretitle">04 · Manuale di conduzione</p><h1>Il <em>kit del docente</em></h1><p class="lead">Istruzioni, tempi, materiali, soluzioni guida, domande per il debrief e schede stampabili. Un altro formatore deve poter ricostruire la logica del corso senza dipendere dall’autore.</p><div class="prisma-actions"><button type="button" class="prisma-button" id="print-teacher">Stampa il manuale</button><a class="prisma-button secondary" href={base+'valutazione/'}>Vai alle rubriche</a></div></header>
+ <aside class="prisma-warning"><strong>Nota sul perimetro:</strong> due incontri metodologici da quattro ore, non corso obbligatorio di sicurezza. Materiali da revisionare con professionista HSE prima di qualunque impiego formale. Esercizi senza dati identificativi di persone o aziende.</aside>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Preparazione prima dell'aula</p><h2>Checklist per il facilitatore</h2>
+  <div class="prisma-grid two">
+   <article class="prisma-tile"><h3>7–14 giorni prima</h3><ul><li>Confermare il bisogno e i partecipanti.</li><li>Ottenere il permesso d'uso dei materiali aziendali, se previsto.</li><li>Verificare requisiti di accessibilità e strumenti.</li><li>Aprire Normattiva, Accordo e FAQ vigenti.</li><li>Concordare revisione HSE e responsabile di progetto.</li></ul></article>
+   <article class="prisma-tile"><h3>Il giorno del laboratorio</h3><ul><li>Provare browser, proiezione e link alle fonti.</li><li>Preparare tre casi fittizi e scheda A1–A10.</li><li>Concordare regole di partecipazione e riservatezza.</li><li>Preparare schede per ogni gruppo e rubriche.</li><li>Identificare le domande da rinviare all’esperto HSE.</li></ul></article>
+  </div>
+  <p><strong>Materiali:</strong> browser, proiettore, dispositivi individuali se disponibili, schede stampate, timer, accesso alle fonti ufficiali e lavagna. Non è richiesto un LMS per questa dimostrazione; i corsi obbligatori hanno regole ulteriori.</p>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Sequenza docente minuto per minuto</p><h2>Due mattinate da 240 minuti</h2>
+  {[1,2].map(day=><div class="prisma-panel"><h3>Giornata {day} · 09:00–13:00</h3><div class="prisma-table-wrap"><table><thead><tr><th>Orario</th><th>Durata</th><th>Attività / metodo</th><th>Output</th></tr></thead><tbody>{agenda.filter(x=>x.day===day).map(x=><tr><td>{x.start}–{x.end}</td><td>{x.minutes}'</td><td><strong>{x.title}</strong><p class="prisma-subtle">{x.method||'Pausa'}</p></td><td>{x.output||'—'}</td></tr>)}</tbody></table></div></div>)}
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Script del formatore</p><h2>Dieci attività con consegne precise</h2>
+  {activities.map((x,i)=><details><summary>{x.id} · {x.title}</summary><p><strong>Preparazione:</strong> {x.setup}</p><p><strong>Conduzione:</strong> {x.guide}</p><p><strong>Evidenza da raccogliere:</strong> {x.result}</p><p class="prisma-subtle">Suggerimento: chiedere sempre «come lo dimostri?» invece di accontentarsi di «ho capito».</p></details>)}
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Schede compilabili e stampabili</p><h2>Canvas del progetto formativo — sette campi</h2>
+  <p>I campi seguenti sono modelli stampabili per una simulazione. Non compilare con dati personali o contenuti riservati su un dispositivo non controllato.</p>
+  <div class="prisma-panel">
+   {worksheet.map(w=><div style="margin:18px 0"><label class="field-label" for={'teacher-'+w.code}>{w.code} · {w.name}: {w.prompt}</label><textarea id={'teacher-'+w.code} placeholder="Compila la risposta del tuo gruppo..."></textarea></div>)}
+  </div>
+  <p class="prisma-subtle">La stampa dal browser può essere salvata come PDF. I dati restano nel dispositivo e non vengono inviati al sito.</p>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Conduzione e correzione</p><h2>Risposte guida per debrief e microteaching</h2>
+  <div class="prisma-grid two">
+   <article class="prisma-tile"><h3>Telefonata gossip</h3><p>Domanda: una firma e una videolezione sono automaticamente sufficienti? <strong>No.</strong> Identificare destinatario, tipo di corso, modalità, docenti e prove richieste dal percorso. Fonte: Accordo 59/CSR e FAQ.</p></article>
+   <article class="prisma-tile"><h3>Casi near miss</h3><p>Distinguere fatti e supposizioni; segnalare secondo le procedure; non assumere competenze tecniche non possedute; verificare le misure con le figure appropriate. Fonti: D.Lgs. 81/2008 artt. 15, 19, 20, 28.</p></article>
+   <article class="prisma-tile"><h3>AI Fact-Check</h3><p>Classificare l'affermazione, specificare norma/punto, verificare versione e correggere. Non trattare un risultato generativo come parere normativo.</p></article>
+   <article class="prisma-tile"><h3>Project work</h3><p>Valutare coerenza di fabbisogno, obiettivo, prova, fonte e transfer. Una rubrica didattica 0–2 non certifica una qualifica HSE.</p></article>
+  </div>
+ </section>
+ <section class="prisma-section">
+  <p class="prisma-kicker">Due strumenti di qualità</p><h2>Checklist del progetto e revisione tecnica</h2>
+  <div class="prisma-table-wrap"><table class="rubric-table"><thead><tr><th>Criterio</th><th>Sì</th><th>Da rivedere</th></tr></thead><tbody>
+   {['Fabbisogni documentati e distinti dai problemi tecnici','Destinatari e prerequisiti identificati','Obiettivi di apprendimento formulati come prestazioni','Sequenze e durate coerenti con gli obiettivi','Fonti ufficiali e sezioni riferite alle affermazioni','Controllo HSE delle interpretazioni prima di usare il materiale','Esercitazioni e quiz senza ambiguità','Accessibilità, linguaggio e fruizione mobile testati','Verifica dell’apprendimento allineata agli obiettivi','Monitoraggio e riesame dell’efficacia definiti'].map(c=><tr><td>{c}</td><td>□</td><td>□</td></tr>)}</tbody></table></div>
+  <p>Le risposte «da rivedere» sono punti di lavoro, non difetti di una specifica azienda. Il completamento di questa checklist <strong>non</strong> prova conformità di un corso obbligatorio.</p>
+  <h3>Riferimenti del docente</h3>
+  <ul><li><a href="https://www.normattiva.it/eli/id/2008/04/30/008G0104/CONSOLIDATED" target="_blank" rel="noopener noreferrer">D.Lgs. 81/2008, artt. 15, 17, 19, 20, 28, 36, 37 ↗</a></li><li><a href="https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/accordo-stato-regioni-17042025-allegato" target="_blank" rel="noopener noreferrer">Accordo 59/CSR, Parte I e Parte IV ↗</a></li><li><a href="https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/faq-accordo-stato-regioni-27032026" target="_blank" rel="noopener noreferrer">FAQ ministeriali 2026 ↗</a></li></ul>
+ </section>
+</PrismaKit>
+<script>document.querySelector('#print-teacher')?.addEventListener('click',()=>window.print());</script>

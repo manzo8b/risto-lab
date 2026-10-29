@@ -1,0 +1,106 @@
+---
+import Hub from '../../../layouts/Instructor.astro';
+import {withBase} from '../../../lib/urls';
+
+const stages=[
+ {time:'00–15',title:'Leggere il quadro normativo',goal:'Distinguere obblighi del D.Lgs. 81/2008, accordo sulla formazione e procedure interne.',output:'Mappa delle fonti e delle domande aperte.'},
+ {time:'15–50',title:'Persone, ruoli, prevenzione',goal:'Identificare chi osserva, segnala, coordina e valida una misura nel caso specifico.',output:'Matrice ruoli/azioni da confrontare con l’organizzazione.'},
+ {time:'50–85',title:'Progettare secondo l’Accordo 2025',goal:'Riconoscere soggetto formatore, qualifiche dei docenti, frequenza, verifica e documentazione.',output:'Checklist preliminare e punti da verificare con HSE.'},
+ {time:'85–130',title:'Near Miss Detective',goal:'Ricostruire un quasi-incidente e scegliere misure senza cercare un colpevole.',output:'Scheda rischio, segnalazione e follow-up.'},
+ {time:'130–165',title:'Microlezione applicativa',goal:'Progettare un messaggio che induca un comportamento osservabile.',output:'Sequenza: dimostrazione → prova → feedback.'},
+ {time:'165–180',title:'Debrief e verifica',goal:'Riconoscere limiti, azioni possibili e controlli successivi.',output:'Piano di miglioramento di 7 giorni.'},
+];
+const sources=[
+ ['D.Lgs. 81/2008, testo vigente','https://www.normattiva.it/eli/id/2008/04/30/008G0104/CONSOLIDATED'],
+ ['Accordo 17 aprile 2025 — Allegato A','https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/accordo-stato-regioni-17042025-allegato'],
+ ['FAQ ufficiali Ministero — aggiornamento 2026','https://www.lavoro.gov.it/temi-e-priorita-salute-e-sicurezza/focus/faq-accordo-stato-regioni-27032026'],
+ ['Qualificazione formatori — D.I. 6 marzo 2013','https://www.lavoro.gov.it/documenti-e-norme/normative/Documents/2013/Decreto_interministeriale_6_marzo_2013'],
+];
+const quiz=[
+ {q:'Un collega nota un cavo di alimentazione nell’area di transito, ma nessuno è caduto. Quale atteggiamento è più solido?',options:['Ignorarlo perché non c’è stato infortunio','Segnalare subito il pericolo attraverso il canale previsto e far gestire la messa in sicurezza a chi è competente','Rimuovere autonomamente l’apparecchiatura senza verificare istruzioni o competenze'],correct:1,why:'Un quasi-incidente è un segnale preventivo. Servono azioni sicure e segnalazione coerente con le procedure aziendali, senza interventi non autorizzati.'},
+ {q:'Un modulo di 3 ore prodotto dal laboratorio può sostituire automaticamente la formazione obbligatoria prevista dall’articolo 37?',options:['Sì, perché contiene nozioni di legge','No: servono percorsi, docenti, soggetti, contenuti e prove di conformità previsti dalle norme applicabili','Sì, purché siano disponibili le slide'],correct:1,why:'Un workshop complementare non equivale a un corso obbligatorio conforme. Il percorso normativo richiede verifiche specifiche, non un semplice numero di ore.'},
+ {q:'Un generatore AI propone un numero di ore per il corso preposti senza indicare una fonte. Come lo utilizzi?',options:['Copio il numero nella brochure','Lo considero una bozza da verificare nel testo vigente dell’Accordo e nelle FAQ ministeriali','Lo inserisco con la dicitura “probabilmente”'],correct:1,why:'Per un obbligo normativo occorre fonte primaria, versione, data di verifica e revisione umana qualificata. Le risposte AI non certificano il requisito.'},
+ {q:'Quale evidenza mostra meglio che una microlezione ha cambiato il comportamento?',options:['Il numero di slide proiettate','La soddisfazione dichiarata, senza prova pratica','Una prova osservabile in un caso realistico, seguita da feedback e ricontrollo'],correct:2,why:'Le evidenze di trasferimento richiedono compiti osservabili e criteri espliciti. Gradimento e completamento non misurano da soli la competenza applicata.'}
+];
+---
+<Hub title="Laboratorio Sicurezza che si applica">
+  <header class="lab-head">
+    <p class="eyebrow">RISTO-LAB Business Academy · Lab BA-04/05</p>
+    <h1>Sicurezza che si applica</h1>
+    <p class="lead">Dal D.Lgs. 81/2008 all’Accordo Stato-Regioni del 17 aprile 2025: progettare, esercitare e verificare comportamenti. Un laboratorio operativo per docenti, HR e responsabili.</p>
+    <div class="actions"><a class="button secondary" href={withBase('/instructor/programmi/')}>Torna ai programmi ↗</a><a class="button secondary" href={withBase('/formazione-aziende/')}>Presentazione aziende ↗</a><button type="button" id="print-lab" class="secondary">Stampa scheda attività</button></div>
+  </header>
+  <div class="notice"><strong>Distinzione essenziale.</strong> Laboratorio didattico e informativo <strong>non certificante</strong>: non sostituisce i corsi obbligatori, la valutazione dei rischi, la consulenza del RSPP o le abilitazioni. Ogni applicazione aziendale deve riferirsi a DVR, procedure e valutazioni di professionisti competenti. Non inserire nomi di dipendenti, incidenti reali o dati riservati in questo sito pubblico.</div>
+  <section class="section">
+    <p class="eyebrow">Progetto formativo</p><h2>Sequenza di 180 minuti</h2>
+    <p>Questa durata è una scelta didattica per un workshop integrativo, <strong>non</strong> una durata legale di formazione obbligatoria.</p>
+    <div class="lab-stages">{stages.map(s=><article class="card"><span class="pill">{s.time} min</span><h3>{s.title}</h3><p>{s.goal}</p><p><strong>Output:</strong> {s.output}</p></article>)}</div>
+  </section>
+  <section class="section" id="fonti">
+    <p class="eyebrow">Evidence-first</p><h2>Norme, requisiti e limiti</h2>
+    <div class="lab-three">
+      <article class="card"><h3>D.Lgs. 81/2008</h3><p>Quadro generale di tutela della salute e sicurezza, prevenzione, soggetti, misure, informazione e formazione. Il riferimento va consultato nella versione vigente.</p></article>
+      <article class="card"><h3>Accordo 59/CSR del 2025</h3><p>Disciplina percorsi formativi, durata e contenuti minimi, organizzazione dei corsi, modalità, prove e monitoraggio. Non tutti i percorsi seguono le stesse regole.</p></article>
+      <article class="card"><h3>Qualifica del formatore</h3><p>Prima di erogare corsi obbligatori verificare le condizioni per soggetto formatore e docenti, inclusi i criteri del D.I. 6 marzo 2013 e specifiche eccezioni.</p></article>
+    </div>
+    <h3>Fonti ufficiali consultabili</h3>
+    <ul class="source-list">{sources.map(([label,url])=><li><a href={url} target="_blank" rel="noopener noreferrer">{label} ↗</a></li>)}</ul>
+    <p class="muted">Riferimenti ricontrollati il 29 ottobre 2026. L’aggiornamento della norma va ripetuto prima di ogni utilizzo formale.</p>
+  </section>
+  <section class="section" id="scenario">
+    <p class="eyebrow">Caso sintetico · 45 minuti</p><h2>Near Miss Detective</h2>
+    <div class="case-panel">
+      <p class="case-label">Brief operativo</p>
+      <p>È venerdì, durante una consegna urgente. Un cavo attraversa un tratto utilizzato per passare dalla zona di deposito alla postazione di lavoro. Una collega inciampa leggermente ma non cade. Il responsabile di turno sta gestendo più richieste contemporaneamente. Nessuno ha ancora segnalato l’ostacolo.</p>
+      <p><strong>Compito di gruppo:</strong> individuare le informazioni mancanti, il pericolo, le azioni immediate sicure e le responsabilità da verificare. Non proporre interventi elettrici o tecnici senza competenza.</p>
+    </div>
+    <div class="lab-three">
+      <article class="card"><h3>01 · Osserva</h3><p>Che cosa sappiamo? Che cosa non sappiamo? Quali informazioni richiedono conferma con procedure e preposto?</p></article>
+      <article class="card"><h3>02 · Agisci senza improvvisare</h3><p>Come avvisare tempestivamente, evitare ulteriori esposizioni e coinvolgere la persona competente?</p></article>
+      <article class="card"><h3>03 · Verifica</h3><p>Quale misura preventiva è stata approvata? Come dimostrare che il pericolo non si ripresenta?</p></article>
+    </div>
+    <details><summary>Apri una possibile traccia docente per il debrief</summary><p>Usare la sequenza osservazione → segnalazione secondo procedura → protezione dell’area se possibile in sicurezza e nel proprio ruolo → verifica tecnica/organizzativa del soggetto competente → registrazione interna secondo le regole aziendali → feedback. Chiedere al gruppo quale passaggio potrebbe fallire durante un turno affollato.</p></details>
+  </section>
+  <section class="section" id="verifica">
+    <p class="eyebrow">Autovalutazione · non attestante</p><h2>Quattro decisioni da motivare</h2>
+    <form id="lab-quiz" class="lab-quiz" novalidate>
+      {quiz.map((q,i)=><fieldset><legend>{i+1}. {q.q}</legend>{q.options.map((o,j)=><label class="lab-option"><input type="radio" name={'q'+i} value={j}/><span>{o}</span></label>)}</fieldset>)}
+      <button type="button" id="lab-grade">Verifica le risposte</button><p id="lab-score" role="status" aria-live="polite"></p>
+      <ol id="lab-feedback" aria-live="polite"></ol>
+    </form>
+  </section>
+  <section class="section">
+    <p class="eyebrow">Consegna al responsabile</p><h2>Rubrica di osservazione</h2>
+    <p>Valutare ciascun criterio da 0 a 2: <strong>0 assente, 1 parziale, 2 documentato.</strong> Totale massimo 10 punti, con significato esclusivamente didattico.</p>
+    <ol class="rubric"><li>Uso corretto delle fonti e indicazione degli elementi da verificare.</li><li>Identificazione delle circostanze e del rischio nel caso.</li><li>Misure di prevenzione proporzionate e compatibili con il proprio ruolo.</li><li>Chiarezza della segnalazione e del passaggio di consegne.</li><li>Distinzione tra attività complementare e formazione normativamente obbligatoria.</li></ol>
+    <p class="notice">Follow-up suggerito: entro 7 giorni il gruppo verifica, con il proprio referente HSE, una procedura reale e documenta un solo miglioramento osservabile senza pubblicare dati aziendali sul sito.</p>
+  </section>
+</Hub>
+<script>
+const answers=[1,1,1,2];
+const explanations=[
+'Un quasi-incidente è un segnale utile per prevenire. Segnalare secondo procedura e coinvolgere chi è competente.',
+'Un workshop integrativo non coincide automaticamente con un percorso obbligatorio, soggetto a condizioni specifiche.',
+'I requisiti HSE non si ricavano da un output AI non verificato: servono fonti primarie e revisione competente.',
+'Le prove pratiche osservabili e il follow-up sono più informative del numero di slide o del solo gradimento.'
+];
+const check=document.getElementById('lab-grade');
+check?.addEventListener('click',()=>{
+ const form=document.getElementById('lab-quiz');
+ if(!(form instanceof HTMLFormElement))return;
+ let correct=0,answered=0;const details=[];
+ answers.forEach((answer,i)=>{
+  const selected=form.querySelector('input[name="q'+i+'"]:checked');
+  const value=selected instanceof HTMLInputElement?Number(selected.value):null;
+  if(value!==null)answered+=1;
+  if(value===answer)correct+=1;
+  details.push('Q'+(i+1)+': '+(value===answer?'corretta':'da rivedere')+'. '+explanations[i]);
+ });
+ const result=document.getElementById('lab-score');if(result)result.textContent='Risposte '+answered+'/4 · corrette '+correct+'/4. Autovalutazione non certificante.';
+ const feedback=document.getElementById('lab-feedback');if(feedback){feedback.replaceChildren();for(const msg of details){const li=document.createElement('li');li.textContent=msg;feedback.append(li);}}
+});
+document.getElementById('print-lab')?.addEventListener('click',()=>window.print());
+</script>
+<style>
+.lab-head{max-width:910px;padding-bottom:22px}.lab-stages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.lab-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.lab-stages .card,.lab-three .card{padding:21px}.lab-stages .card p:last-child{margin-bottom:0}.source-list li{padding:5px 0}.case-panel{background:var(--soft);border-left:4px solid var(--deep-teal);padding:25px 28px;margin:18px 0 24px}.case-panel p{max-width:900px}.case-label{font-size:.8rem;text-transform:uppercase;font-weight:800;letter-spacing:.1em}.lab-quiz fieldset{border:1px solid var(--line);padding:20px;margin:0 0 17px;border-radius:8px}.lab-quiz legend{font-weight:700;padding:4px}.lab-option{display:flex;flex-direction:row;align-items:flex-start;gap:13px;font-weight:400;font-size:1rem;padding:7px 0}.lab-option input{min-height:auto;flex-shrink:0;margin-top:4px}.lab-option span{line-height:1.5}.lab-quiz #lab-score{font-weight:700;margin-top:20px}.rubric li{padding:5px}.lab-quiz #lab-feedback li{margin-bottom:10px}details{margin-top:12px;padding:15px 18px;border:1px solid var(--line);border-radius:6px}details summary{cursor:pointer;font-weight:700}@media(max-width:950px){.lab-three{grid-template-columns:1fr}}@media(max-width:700px){.lab-stages{grid-template-columns:1fr}.case-panel{padding:20px}}@media print{.topbar,.sidebar,.actions,.footer,#lab-grade,#print-lab{display:none!important}.hubbody{display:block!important}.hubmain{padding:0!important}.lab-stages,.lab-three{grid-template-columns:1fr 1fr!important}.section{break-inside:avoid}.lab-head h1{font-size:30pt}}
+</style>

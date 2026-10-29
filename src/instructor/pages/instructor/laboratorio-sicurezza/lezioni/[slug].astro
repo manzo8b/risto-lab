@@ -17,7 +17,7 @@ const root=withBase('/instructor/laboratorio-sicurezza/lezioni/');
 const lessonUrl=(slug:string)=>withBase('/instructor/laboratorio-sicurezza/lezioni/'+slug+'/');
 ---
 <Hub title={lesson.title}>
- <header class="lesson-head">
+ <header class="lesson-head" data-course-lesson={lesson.number}>
   <p class="eyebrow">RISTO-LAB Instructor · Lezione {String(lesson.number).padStart(2,'0')} di 05</p>
   <nav aria-label="Percorso di sicurezza"><a class="text-link" href={root}>← Tutte le lezioni</a><span class="muted">Studio libero · {lesson.duration} min</span></nav>
   <h1>{lesson.title}</h1>

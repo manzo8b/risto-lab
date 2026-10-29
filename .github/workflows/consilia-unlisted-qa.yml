@@ -1,9 +1,12 @@
-name: Unlisted Consilia Portfolio QA
+name: P.R.I.S.M.A. HSE Portfolio QA
 
 on:
   pull_request:
     paths:
-      - 'src/instructor/pages/atelier/scheda-pc4m8q2.astro'
+      - 'src/instructor/pages/atelier/**'
+      - 'src/instructor/data/prisma-*.ts'
+      - 'src/layouts/PrismaKit.astro'
+      - 'src/styles/prisma-kit.css'
       - 'tests/consilia-unlisted.test.ts'
       - 'tests/consilia-unlisted.e2e.ts'
       - '.github/workflows/consilia-unlisted-qa.yml'
@@ -15,7 +18,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

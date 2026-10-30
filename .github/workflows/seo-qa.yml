@@ -1,0 +1,41 @@
+name: Public SEO QA — RISTO-LAB
+on:
+  pull_request:
+    paths:
+      - 'scripts/generate-seo.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/seo-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+      - run: npm run publication:gate
+      - name: Validate public sitemap and private exclusions
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          sitemap=Path('dist/sitemap.xml')
+          assert sitemap.is_file()
+          root=ET.parse(sitemap).getroot()
+          ns={'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[x.text for x in root.findall('sm:url/sm:loc',ns)]
+          assert len(urls)>5 and len(urls)==len(set(urls))
+          assert all(x.startswith('https://manzo8b.github.io/risto-lab/') for x in urls)
+          assert not any('/atelier/' in x or '/404' in x for x in urls)
+          assert 'https://manzo8b.github.io/risto-lab/' in urls
+          print('RISTO-LAB SEO QA passed:',len(urls),'URLs; unlisted excluded')
+          PY

@@ -27,6 +27,6 @@ test('restaurant owner process contains carbonara, ingredient evidence and sampl
  assert.equal(dishExamples.reduce((count,g)=>count+g.dishes.length,0),31);
  const carbonara=dishExamples.flatMap(g=>g.dishes).find(x=>x.id==='P01');
  assert.deepEqual(carbonara?.codes,[1,3,7]);
- for(const term of ['id="gestione-allergeni"','Spaghetti alla carbonara','schede tecniche','contaminazioni crociate','dishExamples.map','group.dishes.map','è una scelta grafica'])assert.ok(lesson.includes(term),term);
+ for(const term of ['id="gestione-allergeni"','Spaghetti alla carbonara','schede tecniche','contaminazioni crociate','dishExamples.map','group.dishes.map','sono una scelta grafica'])assert.ok(lesson.includes(term),term);
  assert.match(style,/\.me-carbonara/);
 });

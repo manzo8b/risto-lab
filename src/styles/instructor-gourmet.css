@@ -224,3 +224,12 @@
 @media(max-width:680px){.instructor-luxury .gourmet-hero-copy{padding:34px 20px}.instructor-shell.instructor-luxury .gourmet-hero h1{font-size:clamp(2.6rem,10vw,3.5rem)}.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{padding:15px 10px!important}.instructor-luxury .gourmet-hero-media{min-height:0;height:auto}.instructor-luxury .gourmet-hero-media img{height:auto;max-height:none!important}.instructor-luxury .gourmet-visual-heading{padding:20px 14px 8px}.instructor-luxury .gourmet-academy-strip{padding:12px}.instructor-luxury .gourmet-academy-monogram{width:46px;height:46px;font-size:19px}}
 @media(max-width:420px){.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:1fr}}
 @media print{.instructor-luxury .gourmet-hero-copy{background:#fff!important}.instructor-shell.instructor-luxury .gourmet-hero h1,.instructor-luxury .gourmet-hero-description{color:#174839!important}.instructor-shell.instructor-luxury .gourmet-hero-media{display:block}.instructor-luxury .gourmet-hero-media img{max-height:480px!important}}
+
+/* Academy feature: menu engineering, no botanical ornaments */
+.instructor-luxury .gourmet-menu-study{display:flex;align-items:center;justify-content:space-between;gap:25px;margin:-12px 0 46px;padding:25px 30px;background:#f1ede2;border:1px solid #dfd1b6;border-left:4px solid #315f4e;border-radius:7px}
+.instructor-luxury .gourmet-menu-study .eyebrow{margin:0 0 9px;color:#84662f;font-size:10px}
+.instructor-shell.instructor-luxury .gourmet-menu-study h2{font:500 clamp(1.7rem,2.7vw,2.5rem)/1.15 Georgia,serif;color:#284d40;margin:0 0 10px}
+.instructor-luxury .gourmet-menu-study h2 em{font-weight:400;color:#a57a2f}
+.instructor-luxury .gourmet-menu-study p:not(.eyebrow){font:15px/1.55 Georgia,serif;color:#465b4e;max-width:680px;margin:0}
+.instructor-luxury .gourmet-menu-study .gourmet-cta{white-space:nowrap}
+@media(max-width:740px){.instructor-luxury .gourmet-menu-study{flex-direction:column;align-items:stretch;padding:22px}.instructor-luxury .gourmet-menu-study .gourmet-cta{align-self:flex-start}}

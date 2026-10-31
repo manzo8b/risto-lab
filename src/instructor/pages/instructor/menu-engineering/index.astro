@@ -1,0 +1,178 @@
+---
+import {withBase} from '../../../../lib/urls';
+import Hub from '../../../../layouts/Instructor.astro';
+import '../../../../styles/menu-engineering.css';
+const menu=[
+ {n:'01',category:'Antipasto',it:'Supplì al pomodoro e mozzarella',en:'Supplì — Roman rice croquette with tomato and mozzarella',detail:'Riso al pomodoro, cuore di mozzarella, crosta croccante di pangrattato.',english:'Tomato rice, melted mozzarella centre and a crisp breadcrumb coating.',price:'8,00',allergens:'1, 7',frozen:false},
+ {n:'02',category:'Primo',it:'Rigatoni all’amatriciana',en:'Rigatoni with guanciale, tomato and Pecorino Romano',detail:'Guanciale rosolato, pomodoro e Pecorino Romano.',english:'Rigatoni tossed with cured pork cheek, tomato and Pecorino Romano.',price:'16,00',allergens:'1, 7',frozen:false},
+ {n:'03',category:'Secondo',it:'Merluzzo al limone e ceci',en:'Cod with lemon and chickpeas',detail:'Filetto di merluzzo, ceci morbidi e salsa al limone. Preparato con merluzzo da materia prima surgelata.',english:'Cod fillet with tender chickpeas and lemon sauce. Prepared using previously quick-frozen cod.',price:'23,00',allergens:'4',frozen:true},
+ {n:'04',category:'Dolce',it:'Tiramisù classico',en:'Classic tiramisù with mascarpone, coffee and cocoa',detail:'Crema al mascarpone, savoiardi al caffè e cacao.',english:'Mascarpone cream, coffee-soaked sponge fingers and cocoa.',price:'9,00',allergens:'1, 3, 7',frozen:false}
+];
+const allergens=[
+['01','Cereali contenenti glutine'],['02','Crostacei'],['03','Uova'],['04','Pesce'],['05','Arachidi'],['06','Soia'],['07','Latte'],['08','Frutta a guscio'],['09','Sedano'],['10','Senape'],['11','Semi di sesamo'],['12','Anidride solforosa e solfiti (oltre le soglie UE)'],['13','Lupini'],['14','Molluschi']
+];
+const matrix=[
+{dish:'Pollo arrosto',count:70,margin:10.20,label:'Stella',en:'Star',action:'Proteggi qualità, porzione e visibilità.'},
+{dish:'Polpette al sugo',count:65,margin:3.80,label:'Cavallo da tiro',en:'Plowhorse',action:'Controlla grammature, scarti e prezzo.'},
+{dish:'Merluzzo e ceci',count:25,margin:13.00,label:'Enigma',en:'Puzzle',action:'Migliora nome, descrizione e posizione.'},
+{dish:'Brasato di manzo',count:20,margin:6.10,label:'Da riesaminare',en:'Dog',action:'Valuta ricetta, domanda e ruolo in carta.'}
+];
+const orders=matrix.reduce((s,x)=>s+x.count,0);
+const popularityLimit=orders/matrix.length*.7;
+const avgMargin=matrix.reduce((s,x)=>s+x.count*x.margin,0)/orders;
+const f=(n)=>new Intl.NumberFormat('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
+---
+<Hub title="Menu Engineering — La radiografia del menù">
+<article class="menu-lesson">
+  <header class="me-intro">
+    <p class="me-overline">RISTO-LAB ACADEMY <span aria-hidden="true">/</span> MICRO-LEZIONE DI SALA, CUCINA E MANAGEMENT</p>
+    <div class="me-heading">
+      <div>
+        <h1>La radiografia<br/><em>del menù</em></h1>
+        <p class="me-lead">Dal menù malato al menù sano. Un esercizio di chiarezza, identità gastronomica e responsabilità economica.</p>
+        <div class="me-chips" aria-label="Obiettivi della lezione"><span>Italiano e inglese</span><span>14 allergeni UE</span><span>Surgelati e decongelati</span><span>Menu Engineering</span></div>
+      </div>
+      <div class="me-hero-seal" aria-label="Metodo Risto-Lab">
+        <span>RL</span><strong>IL MENÙ È UN PROGETTO</strong><small>Il cliente comprende.<br/>La cucina esegue.<br/>L'impresa misura.</small>
+      </div>
+    </div>
+    <div class="me-objective"><strong>Obiettivo didattico</strong><p>Alla fine sarai in grado di diagnosticare un menù confuso, riscrivere quattro piatti in modo comprensibile e controllare le informazioni che non possono mancare prima della stampa.</p></div>
+  </header>
+
+  <section class="me-part" aria-labelledby="diagnosi-title">
+    <div class="me-section-head"><span class="me-index">01 / OSSERVARE</span><h2 id="diagnosi-title">I sintomi di un menù malato</h2><p>Il problema non è il numero delle parole: è la quantità di informazioni utili che contengono.</p></div>
+    <div class="me-diagnosis">
+      <div class="me-ill-menu">
+        <p class="me-faux-top">RISTORANTE DIMOSTRATIVO · ESEMPIO INVENTATO</p>
+        <h3>Il nostro super menu</h3>
+        <p>Il fantastico supplì della tradizione ................................ € 8</p>
+        <p>Pasta speciale alla grande maniera ......................... € 16</p>
+        <p>Pesce squisito del giorno ........................................ € 23</p>
+        <p>Dolce della casa ...................................................... € 9</p>
+        <small>«Chiedere al personale per tutto»</small>
+      </div>
+      <div class="me-ill-findings">
+        <p class="me-overline">ESAME DEL MENÙ</p>
+        <ol>
+          <li><strong>Nomi vaghi:</strong> il cliente non capisce ingredienti e tecniche.</li>
+          <li><strong>Promesse gonfiate:</strong> «fantastico» non spiega il piatto.</li>
+          <li><strong>Informazioni mancanti:</strong> allergeni e stato degli alimenti non sono rintracciabili.</li>
+          <li><strong>Nessuna logica interna:</strong> sala, cucina e costi non condividono la stessa scheda.</li>
+          <li><strong>Traduzione assente:</strong> il turista deve indovinare.</li>
+        </ol>
+        <p class="me-verdict"><strong>Diagnosi:</strong> tante parole, poca precisione.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="me-part" aria-labelledby="radiografia-title">
+    <div class="me-section-head"><span class="me-index">02 / RICOSTRUIRE</span><h2 id="radiografia-title">Il menù sano, al centro della radiografia</h2><p>Una carta dimostrativa breve: quattro piatti, quattro informazioni essenziali per ogni scelta. Non è un menù validato per un locale reale.</p></div>
+    <div class="me-xray">
+      <aside class="me-xray-side" aria-label="Anatomia del testo">
+        <div><span>01</span><strong>Nome riconoscibile</strong><p>Dice cosa arriva in tavola; conserva l’identità gastronomica.</p></div>
+        <div><span>02</span><strong>Descrizione utile</strong><p>Ingredienti principali, tecnica o consistenza. Nessun superlativo vuoto.</p></div>
+        <div><span>03</span><strong>Inglese gastronomico</strong><p>Si traduce il significato: «guanciale» può restare, ma va spiegato.</p></div>
+      </aside>
+      <div class="me-perfect-menu">
+        <p class="me-perfect-overline">RISTO-LAB · CARTA DIMOSTRATIVA</p>
+        <h3>Una carta essenziale</h3>
+        <p class="me-perfect-subtitle">Il piacere di scegliere, senza dover indovinare.</p>
+        <div class="me-menu-items">
+          {menu.map(item=><section class="me-menu-item">
+            <p class="me-dish-category">{item.category} <span>{item.n}</span></p>
+            <div class="me-dish-title"><h4>{item.it}</h4><strong>€ {item.price}</strong></div>
+            <p class="me-dish-it">{item.detail}</p>
+            <p class="me-dish-en" lang="en">{item.en}. <span>{item.english}</span></p>
+            <p class="me-dish-info"><strong>Allergeni:</strong> {item.allergens} {item.frozen&&<span class="me-frozen-tag">Materia prima surgelata</span>}</p>
+          </section>)}
+        </div>
+        <div class="me-menu-foot">
+          <p><strong>Legenda allergeni:</strong> i numeri rimandano alle 14 categorie UE elencate più sotto. La numerazione è una convenzione grafica di questo esercizio, non un codice ufficiale imposto dall'UE.</p>
+          <p><strong>Nota didattica:</strong> ricette, prezzi e allergeni sono ipotetici. Prima dell’uso reale verificare ingredienti, specifiche fornitori, contaminazioni crociate, procedure e obblighi informativi applicabili.</p>
+          <p>Prezzi al pubblico in euro, illustrativi.</p>
+        </div>
+      </div>
+      <aside class="me-xray-side" aria-label="Anatomia della trasparenza">
+        <div><span>04</span><strong>Prezzo leggibile</strong><p>Per ogni voce, nel formato coerente scelto dal locale.</p></div>
+        <div><span>05</span><strong>Allergeni verificati</strong><p>Collegamento preciso fra piatto e sostanze contenute.</p></div>
+        <div><span>06</span><strong>Stato del prodotto</strong><p>Surgelato, congelato o decongelato: informazioni corrette, senza ambiguità.</p></div>
+        <div><span>07</span><strong>Fattibilità</strong><p>Porzioni, scarti, attrezzature e servizio sono parte del progetto.</p></div>
+      </aside>
+    </div>
+    <p class="me-insight"><strong>Il principio:</strong> il menù stampato è la parte visibile di un sistema interno fatto di ricette, procedure, personale, fornitori, prezzi e dati.</p>
+  </section>
+
+  <section class="me-part" aria-labelledby="translation-title">
+    <div class="me-section-head"><span class="me-index">03 / DIRE BENE</span><h2 id="translation-title">L’inglese gastronomico non è un dizionario</h2><p>La traduzione serve a far immaginare correttamente il piatto, non a sostituire ogni termine italiano.</p></div>
+    <div class="me-translation">
+      <div><small>DA EVITARE</small><p>“Roman rice ball”</p><p>“Pasta with cheek”</p><p>“House sweet”</p></div>
+      <div><small>MEGLIO</small><p>“Supplì — Roman rice croquette with tomato and mozzarella”</p><p>“Rigatoni with guanciale (cured pork cheek), tomato and Pecorino Romano”</p><p>“Classic tiramisù with mascarpone, coffee and cocoa”</p></div>
+    </div>
+    <p class="me-small-note">Quando una denominazione è culturalmente riconoscibile, possiamo mantenerla in italiano e aggiungere una spiegazione breve, gastronomicamente fedele. La traduzione va poi rivista da chi conosce le ricette reali.</p>
+  </section>
+
+  <section class="me-part" aria-labelledby="allergens-title">
+    <div class="me-section-head"><span class="me-index">04 / PROTEGGERE</span><h2 id="allergens-title">I 14 gruppi di allergeni: dalla norma alla carta</h2><p>Regolamento (UE) n. 1169/2011, allegato II. Il cliente deve poter individuare le informazioni prima della somministrazione.</p></div>
+    <div class="me-allergens">{allergens.map(([id,name])=><div class="me-allergen"><span>{id}</span><strong>{name}</strong></div>)}</div>
+    <div class="me-legal-pair">
+      <div><h3>Come applicarli</h3><p>Associare l’informazione al singolo piatto, mediante menù, registro, cartello o altro sistema adeguato. Quando si rimanda al personale, devono essere disponibili informazioni documentate per ogni preparazione.</p></div>
+      <div><h3>Cosa non basta</h3><p>Un’icona senza legenda, un elenco non aggiornato o l’affermazione generica «senza allergeni» senza verifica delle ricette e della gestione delle contaminazioni crociate.</p></div>
+    </div>
+    <p class="me-small-note">Le soglie previste per i solfiti e le eccezioni specifiche di alcune categorie devono essere valutate sulla norma integrale. Questa lezione non sostituisce la matrice allergeni reale e il piano di autocontrollo.</p>
+  </section>
+
+  <section class="me-part" aria-labelledby="frozen-title">
+    <div class="me-section-head"><span class="me-index">05 / DICHIARARE</span><h2 id="frozen-title">Congelato, surgelato, decongelato: non sono sinonimi</h2></div>
+    <div class="me-freeze">
+      <div><strong>Surgelato</strong><p>Indica un prodotto sottoposto a un processo specifico di surgelazione. Nel nostro esempio, il merluzzo è una <em>materia prima surgelata</em>.</p></div>
+      <div><strong>Congelato</strong><p>Non equivale automaticamente a «surgelato». Identificare correttamente il trattamento e la storia del prodotto.</p></div>
+      <div><strong>Decongelato</strong><p>Per alimenti congelati prima della vendita e venduti decongelati è prevista questa indicazione, con le eccezioni dell’allegato VI, parte A, punto 2 del Reg. 1169/2011.</p></div>
+    </div>
+    <p class="me-insight"><strong>Regola prudente:</strong> non apporre lo stesso simbolo a tutti i piatti solo perché una parte delle materie prime è stata congelata. Verificare per ogni preparazione stato, fornitura, trasformazione, eventuali deroghe e obblighi applicabili. Una nota volontaria sulla materia prima non sostituisce eventuali diciture obbligatorie.</p>
+  </section>
+
+  <section class="me-part" aria-labelledby="matrix-title">
+    <div class="me-section-head"><span class="me-index">06 / MISURARE</span><h2 id="matrix-title">Il cuore del Menu Engineering: chi vende e chi rende</h2><p>La matrice di Kasavana e Smith considera due dimensioni: popolarità e margine di contribuzione per porzione. La bontà da sola non basta.</p></div>
+    <div class="me-formula"><span>PREZZO NETTO (IVA ESCLUSA)</span><b>−</b><span>COSTO INGREDIENTI DELLA PORZIONE</span><b>=</b><strong>MARGINE DI CONTRIBUZIONE SEMPLIFICATO</strong></div>
+    <div class="me-matrix-wrap">
+      <div class="me-matrix" role="img" aria-label="Matrice Menu Engineering: alto margine e bassa popolarità Enigmi, alto margine e alta popolarità Stelle, basso margine e bassa popolarità Da riesaminare, basso margine e alta popolarità Cavalli da tiro">
+        <p class="me-matrix-y">MARGINE PER PIATTO ↑</p>
+        <div class="me-quadrants">
+          <div><small>ALTO MARGINE · BASSA POPOLARITÀ</small><strong>Enigmi</strong><p>Più visibilità e descrizioni efficaci</p></div>
+          <div><small>ALTO MARGINE · ALTA POPOLARITÀ</small><strong>Stelle</strong><p>Proteggere la qualità e il risultato</p></div>
+          <div><small>BASSO MARGINE · BASSA POPOLARITÀ</small><strong>Da riesaminare</strong><p>Ripensare o sostituire con criterio</p></div>
+          <div><small>BASSO MARGINE · ALTA POPOLARITÀ</small><strong>Cavalli da tiro</strong><p>Correggere porzione e prezzo</p></div>
+        </div>
+        <p class="me-matrix-x">POPOLARITÀ →</p>
+      </div>
+      <div class="me-matrix-notes"><h3>Un esempio con numeri inventati</h3><p>Analizziamo <strong>quattro secondi</strong> nello stesso periodo: {orders} ordinazioni complessive. La soglia didattica di popolarità è il 70% della quota media teorica: <strong>{f(popularityLimit)} ordini</strong>. Il margine medio ponderato dalle vendite è <strong>€ {f(avgMargin)}</strong>.</p><p>Per il confronto economico usiamo prezzi al netto dell’IVA e costi della porzione coerenti. Non è ancora il profitto finale: mancano lavoro, affitto e altri costi.</p></div>
+    </div>
+    <div class="me-table-scroll"><table class="me-table"><caption>Quattro secondi · esempio interamente simulato</caption><thead><tr><th scope="col">Piatto</th><th scope="col">Porzioni</th><th scope="col">Margine/porzione</th><th scope="col">Classe</th><th scope="col">Intervento</th></tr></thead><tbody>{matrix.map(r=><tr><th scope="row">{r.dish}</th><td>{r.count}</td><td>€ {f(r.margin)}</td><td>{r.label} <small lang="en">({r.en})</small></td><td>{r.action}</td></tr>)}</tbody></table></div>
+    <p class="me-small-note">Il 70% della quota equidistribuita è una soglia convenzionale nel metodo classico; le soglie economiche devono essere definite e mantenute coerenti nel tempo e nella categoria. Le quattro etichette descrivono i dati, non ordinano automaticamente di eliminare un piatto.</p>
+  </section>
+
+  <section class="me-part" aria-labelledby="check-title">
+    <div class="me-section-head"><span class="me-index">07 / METTERE IN SERVIZIO</span><h2 id="check-title">La prova finale: sette domande prima di stampare</h2></div>
+    <ol class="me-checklist">
+      <li>Ogni piatto è identificabile senza chiedere spiegazioni?</li>
+      <li>Le descrizioni corrispondono a ricette, grammature e tecniche vere?</li>
+      <li>L’inglese gastronomico è fedele e scorrevole?</li>
+      <li>Allergeni e rischi di contaminazione sono verificati con cucina e fornitori?</li>
+      <li>Congelamento, surgelazione e decongelamento sono descritti correttamente, dove necessario?</li>
+      <li>Prezzi, porzioni, tempi di preparazione e margini sono sostenibili?</li>
+      <li>La sala sa raccontare ogni piatto con la stessa precisione del menù?</li>
+    </ol>
+    <details class="me-assignment"><summary>Esercizio in aula · 15 minuti</summary><div><p><strong>Consegna:</strong> scrivi tre piatti di un ristorante immaginario. Per ognuno inserisci nome italiano, descrizione di massimo 18 parole, versione inglese gastronomica, prezzo e allergeni da verificare. Indica eventuali materie prime surgelate o trattamenti rilevanti. Poi spiega quale piatto vorresti promuovere e quali dati ti servono per deciderlo.</p><p><strong>Valutazione:</strong> chiarezza (0–2), fedeltà gastronomica (0–2), trasparenza (0–2), fattibilità (0–2), capacità di giustificare le scelte (0–2). Totale: 10 punti.</p></div></details>
+  </section>
+
+  <aside class="me-compliance"><h2>Fonti e limiti della lezione</h2><p>Contenuto formativo esemplificativo, aggiornato al 31 ottobre 2026. I menu campione, i numeri e le ricette sono inventati e non sono documenti di autocontrollo. Verificare normativa vigente e applicabilità al caso concreto prima dell'uso commerciale.</p>
+  <ul>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://eur-lex.europa.eu/eli/reg/2011/1169/oj">Regolamento (UE) 1169/2011</a> — art. 9, 21, 44; allegati II e VI.</li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://portale-etichettatura.lab-to.camcom.it/somministrazione/">Camera di Commercio di Torino — Prodotti somministrati</a> — allergeni, indicazioni e art. 19 del D.Lgs. 231/2017.</li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://food.ec.europa.eu/food-safety/labelling-and-nutrition/food-information-consumers-legislation/mandatory-food-information_en">Commissione europea — Mandatory food information</a> — quadro informativo UE.</li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://restaurantmanagement.co.uk/menu-engineering/">Restaurant Management — Menu Engineering</a> — approccio pratico alla matrice di Kasavana e Smith.</li>
+  </ul>
+  <div class="me-last-actions"><a href={withBase("/instructor/")} class="me-back">← Torna alla carta del docente</a><a href={withBase("/instructor/normativa/")} class="me-back">Consulta la biblioteca normativa →</a></div>
+  </aside>
+</article>
+</Hub>

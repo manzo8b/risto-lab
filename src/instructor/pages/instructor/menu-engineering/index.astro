@@ -2,6 +2,7 @@
 import {withBase} from '../../../../lib/urls';
 import Hub from '../../../../layouts/Instructor.astro';
 import '../../../../styles/menu-engineering.css';
+import {dishExamples,totalExampleDishes} from '../../../data/menu-allergen-examples';
 const menu=[
  {n:'01',category:'Antipasto',it:'Supplì al pomodoro e mozzarella',en:'Supplì — Roman rice croquette with tomato and mozzarella',detail:'Riso al pomodoro, cuore di mozzarella, crosta croccante di pangrattato.',english:'Tomato rice, melted mozzarella centre and a crisp breadcrumb coating.',price:'8,00',allergens:'1, 7',frozen:false},
  {n:'02',category:'Primo',it:'Rigatoni all’amatriciana',en:'Rigatoni with guanciale, tomato and Pecorino Romano',detail:'Guanciale rosolato, pomodoro e Pecorino Romano.',english:'Rigatoni tossed with cured pork cheek, tomato and Pecorino Romano.',price:'16,00',allergens:'1, 7',frozen:false},
@@ -119,6 +120,85 @@ const f=(n:number)=>new Intl.NumberFormat('it-IT',{minimumFractionDigits:2,maxim
       <div><h3>Cosa non basta</h3><p>Un’icona senza legenda, un elenco non aggiornato o l’affermazione generica «senza allergeni» senza verifica delle ricette e della gestione delle contaminazioni crociate.</p></div>
     </div>
     <p class="me-small-note">Le soglie previste per i solfiti e le eccezioni specifiche di alcune categorie devono essere valutate sulla norma integrale. Questa lezione non sostituisce la matrice allergeni reale e il piano di autocontrollo.</p>
+  </section>
+
+  <section class="me-part me-owner-section" aria-labelledby="owner-title" id="gestione-allergeni">
+    <div class="me-section-head">
+      <span class="me-index">04 BIS / LA CUCINA, LA SALA, IL TITOLARE</span>
+      <h2 id="owner-title">Sono il titolare: come preparo gli allergeni di 31 piatti?</h2>
+      <p>Non si indovinano gli allergeni dal nome della ricetta. Si costruisce un sistema verificabile: <strong>una scheda per ogni piatto</strong>, con ingredienti reali, etichette e una legenda leggibile dal cliente.</p>
+    </div>
+    <div class="me-owner-process" aria-label="Processo di gestione allergeni dal ricettario al menù">
+      <div><span>01</span><strong>Ricetta standard</strong><p>Il cuoco elenca <em>tutti</em> gli ingredienti, le quantità, salse, panature, guarnizioni, brodi e coadiuvanti pertinenti.</p></div>
+      <div><span>02</span><strong>Prove documentali</strong><p>Controlla confezioni e schede dei fornitori, inclusi ingredienti composti e sostituzioni.</p></div>
+      <div><span>03</span><strong>Matrice piatto/allergene</strong><p>Riunisce i 14 gruppi UE, unisce i codici degli ingredienti e valuta separatamente le contaminazioni crociate.</p></div>
+      <div><span>04</span><strong>Menù e formazione</strong><p>Pubblica la legenda, conserva un registro aggiornato e istruisce sala e cucina prima del servizio.</p></div>
+    </div>
+    <div class="me-carbonara" aria-labelledby="carbonara-title">
+      <div class="me-carbonara-overline"><span>CASO STUDIO · RICETTA C-001 · VERSIONE DIMOSTRATIVA</span><span>NON APPROVATA PER L'USO COMMERCIALE</span></div>
+      <h3 id="carbonara-title">Spaghetti alla carbonara: radiografia degli ingredienti</h3>
+      <p>La ricetta ipotizzata contiene spaghetti <strong>di frumento</strong>, uova, Pecorino Romano, guanciale e pepe. Si parte dalla composizione effettiva di ciascun prodotto, <strong>non</strong> da una ricerca generica sul piatto.</p>
+      <div class="me-table-scroll"><table class="me-table me-carbonara-table">
+        <caption>Da ingrediente a codice allergene: esempio di analisi interna</caption>
+        <thead><tr><th scope="col">Ingrediente</th><th scope="col">Cosa verifico</th><th scope="col">Gruppo UE nell'esempio</th><th scope="col">Documento da conservare</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Spaghetti</th><td>Semola di <strong>frumento</strong>; assenza di uova nel formato utilizzato</td><td><strong>1</strong> · cereali contenenti glutine</td><td>Etichetta e scheda pasta</td></tr>
+          <tr><th scope="row">Uova</th><td>Uovo intero o tuorlo, effettivamente presente nella ricetta</td><td><strong>3</strong> · uova</td><td>Etichetta/tracciabilità</td></tr>
+          <tr><th scope="row">Pecorino Romano</th><td>Prodotto a base di <strong>latte</strong>; composizione e marchio effettivi</td><td><strong>7</strong> · latte</td><td>Etichetta e specifica formaggio</td></tr>
+          <tr><th scope="row">Guanciale</th><td>Ingredienti, additivi e preparazione del prodotto fornito; non presumere che sia identico presso ogni fornitore</td><td>Da etichetta; nessun codice aggiunto <em>nell'ipotesi</em></td><td>Scheda tecnica del fornitore</td></tr>
+          <tr><th scope="row">Pepe nero</th><td>Spezie pure o miscela? Verificare ingredienti di eventuali preparati</td><td>Nessuno aggiunto nell'ipotesi</td><td>Etichetta prodotto</td></tr>
+        </tbody>
+      </table></div>
+      <div class="me-carbonara-result">
+        <div class="me-carbonara-card">
+          <p class="me-faux-top">COME APPARE NEL MENÙ · ESEMPIO</p>
+          <div class="me-dish-title"><h4>Spaghetti alla carbonara</h4><strong>€ 16,00</strong></div>
+          <p>Spaghetti di frumento, guanciale, uova, Pecorino Romano e pepe nero.</p>
+          <p lang="en"><em>Spaghetti with guanciale (cured pork cheek), eggs, Pecorino Romano and black pepper.</em></p>
+          <p class="me-dish-info"><strong>Allergeni: 1, 3, 7</strong> — frumento (cereali contenenti glutine), uova, latte.</p>
+        </div>
+        <div class="me-carbonara-check"><strong>Perché è verificabile?</strong><p>Il codice 1 arriva dalla pasta, il 3 dall'uovo, il 7 dal Pecorino. Il cuoco approva la ricetta, il responsabile raccoglie le schede e chi gestisce la carta riporta i dati. La lista non include automaticamente le eventuali tracce da contaminazione crociata, che richiedono valutazione separata.</p></div>
+      </div>
+    </div>
+    <div class="me-owner-record">
+      <h3>La scheda madre da tenere dietro il menù</h3>
+      <p>Il cliente vede una riga chiara. Il ristorante conserva la documentazione completa, accessibile e aggiornata.</p>
+      <dl>
+        <div><dt>ID e versione</dt><dd>C-001 · Carbonara · v1.0 · data di revisione</dd></div>
+        <div><dt>Ricetta</dt><dd>Ingredienti, preparazioni interne, grammature, guarnizioni, varianti</dd></div>
+        <div><dt>Fornitori</dt><dd>Prodotti effettivi, etichette, schede tecniche, sostituzioni autorizzate</dd></div>
+        <div><dt>Allergeni intenzionali</dt><dd>Gruppi identificati per ingrediente, con evidenza verificata</dd></div>
+        <div><dt>Contaminazioni crociate</dt><dd>Attrezzature, superfici, cotture, fritture e misure di gestione; valutazione documentata</dd></div>
+        <div><dt>Stato e autorizzazione</dt><dd>Bozza → controllata dal responsabile cucina → approvata prima del servizio</dd></div>
+      </dl>
+    </div>
+    <div class="me-section-head me-owner-other-head">
+      <span class="me-index">LABORATORIO · 30 PIATTI AGGIUNTIVI</span>
+      <h3>Carbonara più 30 piatti della tradizione: la matrice di esempio</h3>
+      <p>Le {totalExampleDishes} ricette sono <strong>ipotesi didattiche</strong>. Il codice mostrato vale soltanto per gli ingredienti dichiarati nella rispettiva riga. Non significa che tutti i locali preparino quel piatto allo stesso modo.</p>
+    </div>
+    <div class="me-dish-groups">
+      {dishExamples.map(group=><details class="me-dish-group" open={group.group==='Primi'}>
+        <summary><span>{group.group}</span><small>{group.dishes.length} piatti · apri la matrice</small></summary>
+        <div class="me-table-scroll"><table class="me-table me-example-matrix">
+          <caption>Codici ipotetici da verificare per ogni ricetta: {group.group}</caption>
+          <thead><tr><th scope="col">Piatto</th><th scope="col">Ingredienti dell'esempio</th><th scope="col">Codici allergeni</th><th scope="col">Controllo prima della pubblicazione</th></tr></thead>
+          <tbody>{group.dishes.map(d=><tr>
+            <th scope="row"><small>{d.id}</small>{d.title}{d.id==='P01'&&<span class="me-example-featured"> Caso guida</span>}</th>
+            <td>{d.ingredients}</td>
+            <td class="me-example-codes">{d.codes.length?d.codes.join(' · '):'—'}<span>{d.codes.length?'Presenti nella ricetta ipotizzata':'Nessuna categoria prevista nella ricetta ipotizzata; verifica obbligatoria'}</span></td>
+            <td>{d.check}</td>
+          </tr>)}</tbody>
+        </table></div>
+      </details>)}
+    </div>
+    <div class="me-owner-footer">
+      <h3>Come stampo gli allergeni nel mio menù?</h3>
+      <p><strong>Opzione semplice:</strong> inserisci dopo ogni piatto «Allergeni: 1, 3, 7» e pubblica vicino ai piatti o in una pagina ben visibile la legenda di tutti i numeri utilizzati (già presente in questa lezione). Le sigle sono una scelta grafica del locale, <strong>non numeri obbligatori stabiliti dall’UE</strong>.</p>
+      <p><strong>Altra possibilità:</strong> registro/cartello per singola preparazione, o avviso che rinvia al personale e alla relativa documentazione scritta. Il sistema deve essere accessibile prima del servizio; il solo QR code non sostituisce la documentazione scritta. Le informazioni obbligatorie devono essere in italiano, chiare e leggibili.</p>
+      <p><strong>Attenzione:</strong> una voce «—» non autorizza a scrivere «senza allergeni» o a garantire assenza di contaminazioni. Le indicazioni «può contenere» non sostituiscono una valutazione concreta del rischio.</p>
+      <div class="me-owner-update"><strong>Quando ricontrollare la scheda?</strong><span>Nuovo fornitore</span><span>Nuova ricetta</span><span>Nuova guarnizione</span><span>Nuova attrezzatura/procedura</span><span>Nuova etichetta</span></div>
+    </div>
   </section>
 
   <section class="me-part" aria-labelledby="frozen-title">

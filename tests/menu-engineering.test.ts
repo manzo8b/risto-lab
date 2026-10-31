@@ -20,3 +20,13 @@ test('lesson has transparent demonstration, EU allergens and frozen disclosures'
  assert.ok(lesson.includes('withBase("/instructor/")'));
  assert.match(style,/max-width:800px/);
 });
+
+test('restaurant owner process contains carbonara, ingredient evidence and sample menu matrix',async()=>{
+ const {dishExamples,totalExampleDishes}=await import('../src/instructor/data/menu-allergen-examples.ts');
+ assert.equal(totalExampleDishes,31);
+ assert.equal(dishExamples.reduce((count,g)=>count+g.dishes.length,0),31);
+ const carbonara=dishExamples.flatMap(g=>g.dishes).find(x=>x.id==='P01');
+ assert.deepEqual(carbonara?.codes,[1,3,7]);
+ for(const term of ['id="gestione-allergeni"','Spaghetti alla carbonara','schede tecniche','contaminazioni crociate','dishExamples.map','group.dishes.map','è una scelta grafica'])assert.ok(lesson.includes(term),term);
+ assert.match(style,/\.me-carbonara/);
+});

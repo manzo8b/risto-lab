@@ -1,0 +1,154 @@
+/* Risto-Lab · Edizione Alta Ospitalità / Instructor Home
+ * Luxury-inspired teaching dashboard. Scope: only /instructor/.
+ * Pedagogical interfaces elsewhere intentionally keep existing colors and behavior.
+ */
+.instructor-shell.instructor-luxury{
+  --ink:#211b15;--graphite:#28221c;--muted:#62594e;--paper:#f9f5ec;
+  --surface:#fffcf6;--white:#fffcf6;--soft:#efe7d9;--line:#d9c9ac;
+  --copper:#ad8139;--copper-text:#88611f;--deep-teal:#45372a;
+  --font-editorial:Georgia,'Times New Roman',serif;
+  background:#f9f5ec;color:#28211a;
+}
+.instructor-luxury .topbar{background:#fbf8f1!important;border:0!important;border-bottom:1px solid #c9b48e!important;box-shadow:0 3px 20px #4732150a}
+.instructor-luxury .toprow{min-height:94px}
+.instructor-luxury .brand{font:500 clamp(1.9rem,2.6vw,2.55rem)/1 Georgia,serif!important;letter-spacing:-.052em!important;color:#242018!important}
+.instructor-luxury .brand i{color:#ad8139!important}
+.instructor-luxury .brand small{font:700 9px/1.5 Arial,sans-serif;letter-spacing:.26em;color:#725b3c;margin-top:8px}
+.instructor-luxury .header-tools a{color:#3b332b;text-decoration:none;font-size:.78rem;letter-spacing:.045em}
+.instructor-luxury .header-tools a:hover{color:#856020}
+.instructor-luxury .ecosystem-contact-header{background:#f4edde;border:0;border-bottom:1px solid #decba9}
+.instructor-luxury .ecosystem-contact-header a,.instructor-luxury .ecosystem-contact-header a strong{color:#62513a}
+.instructor-luxury .instructor-profile{color:#2b241c}
+.instructor-luxury .hubbody{grid-template-columns:205px minmax(0,1fr)}
+.instructor-luxury .sidebar{background:#f4eddf!important;border-right:1px solid #d7c5a5!important;padding:26px 14px}
+.instructor-luxury .sidebar .eyebrow{color:#856329!important;font:700 10px Arial,sans-serif;letter-spacing:.2em;padding:0 15px}
+.instructor-luxury .sidebar .nav a{color:#4a3f34!important;border:0!important;border-left:2px solid transparent!important;border-radius:0!important;font:600 13px/1.4 Arial,sans-serif;padding:13px 13px!important;min-height:43px}
+.instructor-luxury .sidebar .nav a:hover{background:#eae0cc!important;color:#4d381d!important}
+.instructor-luxury .sidebar .nav a[aria-current=page]{background:#e8d8bd!important;border-left-color:#9b712e!important;color:#3f2b14!important}
+.instructor-luxury .nav-extra{border-top-color:#d3c09d}
+.instructor-luxury .nav-extra summary{color:#5c4e3e}
+.instructor-luxury .hubmain{max-width:1580px;padding:clamp(21px,3.1vw,44px) clamp(18px,3.6vw,56px)}
+.instructor-luxury .hubcontent{min-width:0}
+.instructor-luxury .instructor-footer{border-color:#cbb995;color:#675846}
+.instructor-luxury .instructor-footer a{color:#57412c}
+.instructor-luxury .instructor-footer strong{font-family:Georgia,serif;letter-spacing:-.025em}
+.instructor-luxury :focus-visible{outline:3px solid #956723;outline-offset:3px}
+.gourmet-dashboard{font-family:Arial,Helvetica,sans-serif}
+.gourmet-dashboard .eyebrow,.gourmet-dashboard .gourmet-overline,.gourmet-dashboard .gourmet-small-title{text-transform:uppercase;letter-spacing:.2em;font:700 11px/1.45 Arial,sans-serif;color:#8b6a35}
+.gourmet-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:420px;background:#29231e;color:#fff9ed;border:1px solid #b18a4d;overflow:hidden;isolation:isolate}
+.gourmet-hero-copy{position:relative;z-index:1;padding:clamp(30px,4.7vw,65px) clamp(24px,4vw,58px);background:radial-gradient(circle at 78% 70%,#57442d55,transparent 50%),linear-gradient(125deg,#28231d 0%,#27201b 74%,#382b21 100%)}
+.gourmet-hero-copy:before{content:'';position:absolute;top:27px;left:clamp(24px,4vw,58px);width:76px;height:1px;background:#c6a36d}
+.gourmet-hero .gourmet-overline{color:#d8b781;margin:0 0 24px;font-size:10px}
+.gourmet-hero .gourmet-overline span{padding:0 5px}
+.instructor-shell.instructor-luxury .gourmet-hero h1{font:400 clamp(2.6rem,4.25vw,5.35rem)/1.06 Georgia,serif;letter-spacing:-.047em;color:#fff9ed;margin:0 0 23px}
+.gourmet-hero h1 em{font-weight:400;color:#e6c68c}
+.gourmet-hero-description{font:16px/1.67 Georgia,serif;max-width:590px;color:#f2e7d3;margin:0 0 26px}
+.gourmet-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:17px}
+.gourmet-cta{display:inline-flex;justify-content:center;align-items:center;gap:9px;text-decoration:none;min-height:47px;padding:12px 18px;font:700 11px/1.35 Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase;border:1px solid #d7b980;transition:background .18s,border-color .18s}
+.gourmet-cta--gold{background:#ddba76;color:#231b13}
+.gourmet-cta--gold:hover{background:#f2d293}
+.gourmet-cta--outline{background:transparent;color:#f9ecda}
+.gourmet-cta--outline:hover{background:#fff3d718;color:#fff}
+.gourmet-hero-caption{font:700 10px/1.5 Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#cbbb9e;margin:30px 0 0}
+.gourmet-hero-media{position:relative;margin:0;min-width:0;min-height:420px;background:#b5a48f}
+.gourmet-hero-media:before{position:absolute;inset:0;content:'';z-index:1;pointer-events:none;background:linear-gradient(90deg,#28221e 0%,transparent 18%),linear-gradient(0deg,#1b171790,transparent 33%)}
+.gourmet-hero-media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(.7) sepia(.13)}
+.gourmet-hero-media figcaption{position:absolute;z-index:2;bottom:24px;right:23px;color:#fff3d5;text-align:right;font:italic 20px/1.3 Georgia,serif;text-shadow:0 2px 10px #0008}
+.gourmet-hero-media figcaption span{display:block;font:700 10px Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;margin-top:5px}
+.gourmet-section-intro{text-align:center;padding:56px 10px 28px}
+.gourmet-small-title{display:flex;align-items:center;justify-content:center;gap:20px}
+.gourmet-small-title span{height:1px;width:min(12vw,100px);background:#bca174}
+.instructor-shell.instructor-luxury .gourmet-section-intro h2{font:italic 400 clamp(2.3rem,3.7vw,3.5rem)/1.12 Georgia,serif;color:#2e251d;margin:10px 0 9px}
+.gourmet-section-intro>p:last-child{font:16px/1.6 Georgia,serif;color:#625647}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;border:0;background:transparent;margin:0 0 60px}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;background:#fffcf6!important;border:1px solid #c5a978;border-radius:0;padding:27px 17px 23px!important;text-decoration:none;transition:background-color .15s,border-color .15s}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:before,.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:after{content:'';position:absolute;width:11px;height:11px;border:1px solid #c5a978}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:before{top:5px;left:5px;border-right:0;border-bottom:0}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:after{bottom:5px;right:5px;border-left:0;border-top:0}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:hover{background:#f3e8d2!important;border-color:#9d773a}
+.gourmet-menu-number{font:italic 42px/1 Georgia,serif;color:#a47c3b;margin-bottom:15px}
+.instructor-shell.instructor-luxury .gourmet-menu .eyebrow{color:#8a6a35!important;margin:0 0 9px;font-size:10px}
+.instructor-shell.instructor-luxury .gourmet-menu h3{font:italic 400 clamp(1.36rem,2vw,1.95rem)/1.12 Georgia,serif;color:#2a241c;letter-spacing:-.02em;margin:0 0 12px}
+.instructor-shell.instructor-luxury .gourmet-menu p{font:13px/1.55 Georgia,serif;color:#615647;margin:auto 0 0}
+.gourmet-menu p svg{color:#926e36}
+.gourmet-service{border-top:1px solid #c8ae80;padding-top:33px}
+.instructor-shell.instructor-luxury .work-heading.gourmet-section-heading{background:transparent!important;border:0!important;border-left:0!important;border-radius:0;padding:0 0 24px;margin:0}
+.instructor-luxury .gourmet-section-heading .eyebrow{margin:0 0 12px}
+.instructor-luxury .gourmet-section-heading .eyebrow span{color:#a9803c}
+.instructor-shell.instructor-luxury .gourmet-section-heading h2{font:italic 400 clamp(2.15rem,3.4vw,3.25rem)/1.2 Georgia,serif;color:#29231c;margin:0 0 10px}
+.instructor-shell.instructor-luxury .gourmet-section-heading .lead{font:16px/1.6 Georgia,serif;color:#615748}
+.instructor-luxury .work-surface.today-session{border:1px solid #d6c4a5!important;border-top:3px solid #af8643!important;background:#fffcf7!important;padding:clamp(20px,3vw,38px)}
+.instructor-luxury .today-session .section-heading{border-bottom:1px solid #dfcfb4;padding-bottom:17px;gap:16px}
+.instructor-shell.instructor-luxury .today-session .section-heading h3{font:400 1.9rem Georgia,serif;color:#2a211a;line-height:1.18}
+.instructor-luxury .today-session .empty-workspace{padding:16px 0 27px}
+.instructor-shell.instructor-luxury .today-session .empty-workspace h3{font:400 1.45rem Georgia,serif}
+.instructor-shell.instructor-luxury .today-session .empty-workspace p{font:14px/1.6 Arial,sans-serif;color:#6c6257}
+.instructor-luxury .today-session .continue-teaching{border-top:1px solid #d6c6aa;padding-top:23px}
+.instructor-shell.instructor-luxury .button,.instructor-shell.instructor-luxury button:not(.comment-load-button){background:#3f3327;border-color:#3f3327;color:#fff6e6;border-radius:1px;font-size:12px;font-weight:700;letter-spacing:.025em}
+.instructor-shell.instructor-luxury .button:hover,.instructor-shell.instructor-luxury button:hover{background:#5c4932;border-color:#5c4932}
+.instructor-shell.instructor-luxury .button.secondary,.instructor-shell.instructor-luxury button.secondary{background:transparent;color:#493b2b;border-color:#ad9265}
+.instructor-shell.instructor-luxury .button.secondary:hover{background:#eee2cb}
+.instructor-shell.instructor-luxury .text-link{color:#755321;font-weight:700}
+.instructor-shell.instructor-luxury .text-link:hover{color:#322513}
+.gourmet-home-tools{display:flex;align-items:center;gap:12px 23px;border-bottom:1px solid #dac9aa;margin:0 0 38px;padding:19px 0 24px}
+.instructor-luxury .gourmet-recent{padding:16px 0 37px;border-bottom:1px solid #d6bd94}
+.instructor-luxury .gourmet-recent .section-heading{border-bottom:1px solid #c9b389;padding-bottom:14px}
+.instructor-shell.instructor-luxury .gourmet-recent h2{font:italic 400 clamp(2rem,3vw,2.9rem) Georgia,serif;color:#2b241c}
+.instructor-luxury .gourmet-recent .recent-row{border-bottom:1px solid #d9cbb6;background:transparent}
+.instructor-luxury #recent-materials{padding-left:20px;color:#4f4232}
+.gourmet-declaration{text-align:center;padding:48px 20px 45px;border-bottom:1px solid #c8ac7e}
+.gourmet-declaration-line{font:30px Georgia,serif;color:#a78140;margin:0 0 11px}
+.gourmet-declaration blockquote{font:italic 400 clamp(1.6rem,2.5vw,2.5rem)/1.28 Georgia,serif;color:#29221b;margin:0 auto 20px;max-width:790px}
+.gourmet-declaration>p:last-child{text-transform:uppercase;font:700 10px Arial,sans-serif;letter-spacing:.2em;color:#95703b}
+.gourmet-lower-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.85fr);gap:33px;margin-bottom:34px}
+.instructor-luxury .gourmet-lower-grid>.section{border-top:0;padding:34px 0}
+.instructor-shell.instructor-luxury .gourmet-lower-grid h2{font:italic 400 clamp(1.8rem,2.5vw,2.35rem)/1.18 Georgia,serif;color:#29221c}
+.instructor-shell.instructor-luxury .gourmet-lower-grid .muted{color:#625648;font:14px/1.7 Georgia,serif}
+.instructor-luxury .gourmet-regulatory{border-left:1px solid #d5bf96;padding-left:28px!important}
+.instructor-luxury .gourmet-regulatory .text-link,.instructor-luxury .gourmet-workshop .text-link{align-self:flex-start}
+@media(max-width:1200px){
+ .instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gourmet-hero{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+}
+@media(max-width:900px){
+ .instructor-luxury .hubbody{grid-template-columns:170px minmax(0,1fr)}
+ .gourmet-hero{grid-template-columns:1fr}
+ .gourmet-hero-media{min-height:290px;height:290px}
+ .gourmet-hero-media img{max-height:290px}
+ .gourmet-hero-media:before{background:linear-gradient(0deg,#1b171780,transparent 35%)}
+ .gourmet-lower-grid{grid-template-columns:1fr;gap:0}
+ .instructor-luxury .gourmet-regulatory{border-left:0;border-top:1px solid #d4bf9b;padding:30px 0!important}
+}
+@media(max-width:640px){
+ .instructor-luxury .hubbody{display:block}
+ .instructor-luxury .sidebar{padding:12px 16px;border:0;border-bottom:1px solid #ceb992}
+ .instructor-luxury .sidebar .nav{flex-direction:row;overflow-x:auto;flex-wrap:nowrap}
+ .instructor-luxury .sidebar .nav a{white-space:nowrap}
+ .instructor-luxury .sidebar .eyebrow{display:none}
+ .instructor-luxury .toprow{min-height:0;padding:20px}
+ .instructor-luxury .brand{font-size:2rem!important}
+ .instructor-luxury .hubmain{padding:22px 16px}
+ .gourmet-hero-copy{padding:38px 23px}
+ .gourmet-hero-copy:before{left:23px;top:21px}
+ .instructor-shell.instructor-luxury .gourmet-hero h1{font-size:clamp(2.6rem,10vw,3.7rem)}
+ .gourmet-hero-actions{flex-direction:column;align-items:stretch}
+ .gourmet-hero-media{min-height:230px;height:230px}
+ .gourmet-hero-media img{max-height:230px}
+ .gourmet-section-intro{padding:38px 0 21px}
+ .instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:1fr;gap:12px;margin-bottom:40px}
+ .instructor-luxury .today-session .section-heading{align-items:flex-start;flex-direction:column}
+ .instructor-luxury .today-session .continue-teaching{align-items:flex-start;flex-direction:column}
+ .gourmet-home-tools{align-items:stretch;gap:12px}
+ .gourmet-home-tools .button{flex:1}
+ .gourmet-declaration{padding:35px 0}
+}
+@media(prefers-reduced-motion:reduce){
+ .gourmet-dashboard *, .gourmet-dashboard *::before,.gourmet-dashboard *::after{transition:none!important}
+}
+@media print{
+ .instructor-luxury .topbar,.instructor-luxury .sidebar,.instructor-luxury .instructor-footer{background:#fff!important}
+ .gourmet-hero{background:#fff!important;color:#111!important}
+ .gourmet-hero-copy{background:#fff!important}
+ .instructor-shell.instructor-luxury .gourmet-hero h1,.gourmet-hero-description{color:#111!important}
+ .gourmet-hero-media{display:none}
+}

@@ -152,3 +152,75 @@
  .instructor-shell.instructor-luxury .gourmet-hero h1,.gourmet-hero-description{color:#111!important}
  .gourmet-hero-media{display:none}
 }
+
+/* RISTO-LAB Academy · 31 ottobre 2026
+   Edizione chiara, senza decorazioni vegetali. Scoped exclusively to instructor home. */
+.instructor-shell.instructor-luxury{--ink:#214c3e;--graphite:#2a463c;--muted:#58695d;--paper:#fcf9f3;--surface:#fffdf9;--white:#fffdf9;--soft:#f3efe5;--line:#dacaad;--copper:#aa8139;--copper-text:#815e27;--deep-teal:#315f4e;background:#fcf9f3;color:#283f35}
+.instructor-luxury .topbar{background:#fffdf8!important;box-shadow:none}
+.instructor-luxury .brand{color:#254b3e!important}
+.instructor-luxury .sidebar{background:#f8f3e9!important;border-right-color:#ddcaa9!important}
+.instructor-luxury .sidebar .nav a{color:#345044!important}
+.instructor-luxury .sidebar .nav a:hover{background:#ece4d4!important;color:#254b3e!important}
+.instructor-luxury .sidebar .nav a[aria-current=page]{background:#e8deca!important;border-left-color:#a88341!important;color:#254b3e!important}
+.instructor-luxury .hubcontent{background:#fcf9f3}
+.instructor-shell.instructor-luxury .gourmet-hero{display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr);min-height:0;gap:clamp(15px,2vw,27px);border:0;background:#fcf9f3;color:#254c3e;overflow:visible;align-items:stretch}
+.instructor-shell.instructor-luxury .gourmet-hero-copy{position:relative;background:linear-gradient(140deg,#fffdf9,#faf7ed 80%,#f6f1e6);border:1px solid #e2d2b3;padding:clamp(28px,3vw,45px) clamp(20px,2.7vw,40px);overflow:hidden}
+.instructor-luxury .gourmet-hero-copy:before{background:#b39a67;top:23px;left:clamp(20px,2.7vw,40px)}
+.instructor-luxury .gourmet-hero .gourmet-overline{color:#825f26;margin:9px 0 23px}
+.instructor-shell.instructor-luxury .gourmet-hero h1{color:#244c3e;font-size:clamp(2.55rem,4.15vw,5.15rem);line-height:1.03;margin:0 0 14px}
+.instructor-luxury .gourmet-hero h1 em{color:#a67a2f}
+.instructor-luxury .gourmet-hero-description{color:#344c41;font:clamp(15px,1.2vw,17px)/1.64 Georgia,serif;margin:0 0 20px}
+.instructor-luxury .gourmet-hero-actions{margin:16px 0}
+.instructor-luxury .gourmet-cta{min-height:48px;font-size:11px;letter-spacing:.07em;border-radius:3px}
+.instructor-luxury .gourmet-cta--gold{background:#315f4e;border-color:#315f4e;color:#fff}
+.instructor-luxury .gourmet-cta--gold:hover{background:#234838;color:#fff}
+.instructor-luxury .gourmet-cta--outline{background:#fffdf8;border-color:#a78040;color:#3e483b}
+.instructor-luxury .gourmet-cta--outline:hover{background:#f1e8d8;color:#284d3e}
+.instructor-luxury .gourmet-hero-caption{display:flex;align-items:center;gap:12px;margin:20px 0 0;color:#315f4e;letter-spacing:.18em;font-size:10px}
+.instructor-luxury .gourmet-hero-caption:before,.instructor-luxury .gourmet-hero-caption:after{content:'';width:28px;height:1px;flex:none;background:#b39a67}
+.instructor-luxury .gourmet-carte{margin-top:32px}
+.instructor-luxury .gourmet-section-intro{text-align:center;padding:0 0 19px}
+.instructor-luxury .gourmet-section-intro .gourmet-small-title{font-size:10px;color:#315b4b}
+.instructor-luxury .gourmet-small-title span{width:clamp(12px,3.5vw,48px);background:#b89d70}
+.instructor-shell.instructor-luxury .gourmet-section-intro h2{color:#264d3f;font:italic 400 clamp(1.6rem,2.15vw,2.1rem)/1.15 Georgia,serif;margin:8px 0}
+.instructor-luxury .gourmet-section-intro>p:last-child{font:13px/1.5 Georgia,serif;color:#4e6659;margin:0}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 18px;border:0}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{align-items:center;justify-content:flex-start;background:#fffdf9!important;border:1px solid #dbc9a9;border-radius:7px;padding:19px 9px 15px!important;box-shadow:0 2px 6px #7056320b}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:before,.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:after{content:none}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:hover{background:#f5ecda!important;border-color:#ba9760}
+.instructor-luxury .gourmet-menu-number{font-size:28px;color:#a07835;margin-bottom:9px}
+.instructor-shell.instructor-luxury .gourmet-menu .eyebrow{color:#315f4e!important;font-size:10px;letter-spacing:.04em;margin:0 0 7px}
+.instructor-shell.instructor-luxury .gourmet-menu h3{font:600 clamp(13px,1.1vw,16px)/1.24 Georgia,serif;color:#284b3e;margin:0 0 8px}
+.instructor-shell.instructor-luxury .gourmet-menu p{font:12px/1.5 Georgia,serif;color:#496156}
+.instructor-luxury .gourmet-academy-strip{display:flex;align-items:center;gap:15px;background:#f0eddf;border:1px solid #e2d6c2;border-radius:8px;padding:15px 17px}
+.instructor-luxury .gourmet-academy-monogram{flex:none;display:grid;place-items:center;border:2px double #ae8951;border-radius:50%;width:55px;height:55px;color:#997032;font:italic 23px Georgia,serif}
+.instructor-luxury .gourmet-academy-strip strong{display:block;color:#315b4b;font:700 11px/1.4 Arial,sans-serif;letter-spacing:.17em}
+.instructor-luxury .gourmet-academy-strip p{margin:4px 0 0;color:#3b584a;font:italic 14px/1.5 Georgia,serif}
+.instructor-shell.instructor-luxury .gourmet-hero-media{display:flex;flex-direction:column;min-height:0;height:auto;align-self:stretch;background:#fffdf9;border:1px solid #ccb180;border-radius:11px;overflow:hidden}
+.instructor-luxury .gourmet-hero-media:before{content:none!important}
+.instructor-luxury .gourmet-visual-heading{text-align:center;padding:22px 18px 13px}
+.instructor-luxury .gourmet-visual-kicker{font:700 10px/1.5 Arial,sans-serif;color:#947035;letter-spacing:.19em;margin:0 0 10px}
+.instructor-shell.instructor-luxury .gourmet-visual-heading h2{font:700 clamp(1.65rem,2.3vw,2.35rem)/1.12 Georgia,serif;color:#254b3e;margin:0 0 10px}
+.instructor-luxury .gourmet-visual-heading>p:last-child{font:14px/1.55 Georgia,serif;color:#4b5f54;margin:0}
+.instructor-luxury .gourmet-visual-link{display:block;flex:1;min-height:0;padding:8px 12px 0;text-decoration:none}
+.instructor-luxury .gourmet-visual-link:focus-visible{outline-offset:-4px}
+.instructor-luxury .gourmet-hero-media img{display:block;width:100%;height:auto;min-height:0;max-height:none!important;object-fit:contain;object-position:center top;filter:none!important;background:#fff}
+.instructor-luxury .gourmet-hero-media figcaption{position:static;background:#f5f1e8;border-top:1px solid #e6d9c3;padding:13px 16px;text-shadow:none;text-align:center;color:#4f6459;font:12px/1.5 Arial,sans-serif}
+.instructor-luxury .gourmet-hero-media figcaption a{color:#315f4e;font-weight:700;text-decoration:underline}
+.instructor-luxury .gourmet-hero-media figcaption svg{width:15px;height:15px}
+.instructor-shell.instructor-luxury .gourmet-section-heading h2,
+.instructor-shell.instructor-luxury .gourmet-recent h2,
+.instructor-shell.instructor-luxury .gourmet-lower-grid h2{color:#275043}
+.instructor-luxury .gourmet-declaration blockquote{color:#275043}
+.instructor-shell.instructor-luxury .button,.instructor-shell.instructor-luxury button:not(.comment-load-button){background:#315f4e;color:#fff;border-color:#315f4e;border-radius:3px}
+.instructor-shell.instructor-luxury .button:hover,.instructor-shell.instructor-luxury button:hover{background:#244b3d;color:#fff;border-color:#244b3d}
+.instructor-shell.instructor-luxury .button.secondary,.instructor-shell.instructor-luxury button.secondary{background:transparent;color:#31594c;border-color:#a88d5c}
+.instructor-shell.instructor-luxury .button.secondary:hover{background:#f2e9d9;color:#23493b}
+.instructor-luxury .text-link{color:#305d4e!important}
+.instructor-luxury .work-surface.today-session{border-top-color:#ae8e58!important}
+.instructor-luxury :focus-visible{outline-color:#96712f}
+@media(max-width:1500px){.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1080px){.instructor-shell.instructor-luxury .gourmet-hero{grid-template-columns:1fr}.instructor-shell.instructor-luxury .gourmet-hero-media{height:auto;max-width:none}.instructor-luxury .gourmet-visual-link{flex:initial}.instructor-luxury .gourmet-hero-media img{max-width:780px;margin:auto}}
+@media(max-width:680px){.instructor-luxury .gourmet-hero-copy{padding:34px 20px}.instructor-shell.instructor-luxury .gourmet-hero h1{font-size:clamp(2.6rem,10vw,3.5rem)}.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{padding:15px 10px!important}.instructor-luxury .gourmet-hero-media{min-height:0;height:auto}.instructor-luxury .gourmet-hero-media img{height:auto;max-height:none!important}.instructor-luxury .gourmet-visual-heading{padding:20px 14px 8px}.instructor-luxury .gourmet-academy-strip{padding:12px}.instructor-luxury .gourmet-academy-monogram{width:46px;height:46px;font-size:19px}}
+@media(max-width:420px){.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:1fr}}
+@media print{.instructor-luxury .gourmet-hero-copy{background:#fff!important}.instructor-shell.instructor-luxury .gourmet-hero h1,.instructor-luxury .gourmet-hero-description{color:#174839!important}.instructor-shell.instructor-luxury .gourmet-hero-media{display:block}.instructor-luxury .gourmet-hero-media img{max-height:480px!important}}

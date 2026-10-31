@@ -20,19 +20,13 @@ import Icon from '../../../components/Icon.astro';
         <a class="gourmet-cta gourmet-cta--gold" href={withBase("/instructor/programmi/il-servizio-in-sala/")}>Esplora il programma <Icon name="right"/></a>
         <a class="gourmet-cta gourmet-cta--outline" href={withBase("/instructor/sessioni/nuova/")}>Prepara una lezione <Icon name="right"/></a>
       </div>
-      <p class="gourmet-hero-caption">Formazione pratica · Organizzazione · Cultura dell’ospitalità</p>
-    </div>
-    <figure class="gourmet-hero-media">
-      <img src={withBase("/materiali/res-mep-image.webp")} alt="Materiale visivo Risto-Lab dedicato alla preparazione della mise en place" width="1200" height="800" loading="eager"/>
-      <figcaption>Il valore è nei dettagli <span>— Risto-Lab</span></figcaption>
-    </figure>
-  </section>
+      <p class="gourmet-hero-caption">MASTERCLASS DI SALA E OSPITALITÀ</p>
 
-  <section class="gourmet-carte" aria-labelledby="gourmet-carte-heading">
+<section class="gourmet-carte" aria-labelledby="gourmet-carte-heading">
     <div class="gourmet-section-intro">
-      <p class="gourmet-small-title"><span aria-hidden="true"></span> GLI STRUMENTI <span aria-hidden="true"></span></p>
+      <p class="gourmet-small-title"><span aria-hidden="true"></span> PERCORSO FORMATIVO <span aria-hidden="true"></span></p>
       <h2 id="gourmet-carte-heading">La carta del docente</h2>
-      <p>Quattro percorsi operativi, come le portate di un menu ben progettato.</p>
+      <p>Quattro strumenti per preparare, condurre e valutare ogni lezione.</p>
     </div>
     <nav class="quick-access gourmet-menu" aria-label="Strumenti principali del docente">
       <a href={withBase("/instructor/programmi/il-servizio-in-sala/")}>
@@ -60,6 +54,16 @@ import Icon from '../../../components/Icon.astro';
         <p>Sequenza didattica, presentazione e conduzione <Icon name="right"/></p>
       </a>
     </nav>
+  </section>
+<div class="gourmet-academy-strip"><span class="gourmet-academy-monogram" aria-hidden="true">RL</span><div><strong>ACADEMY RISTO-LAB</strong><p>Formazione d’eccellenza per la sala, il servizio e l’ospitalità.</p></div></div>
+    </div>
+    <figure class="gourmet-hero-media" aria-labelledby="gourmet-mise-title">
+      <div class="gourmet-visual-heading"><p class="gourmet-visual-kicker">UNITÀ 06 · RISORSA DIDATTICA</p><h2 id="gourmet-mise-title">La mise en place</h2><p>Le sette fasi operative: osservare, preparare e verificare il servizio in sala.</p></div>
+      <a class="gourmet-visual-link" href={withBase("/instructor/unita/06-la-mise-en-place/")} aria-label="Apri la lezione e la scheda sulla mise en place">
+        <img src={withBase("/materiali/res-mep-image.webp")} alt="Infografica didattica sulle sette fasi operative della mise en place in sala" loading="eager" decoding="async"/>
+      </a>
+      <figcaption>Materiale illustrativo Risto-Lab · <a href={withBase("/instructor/unita/06-la-mise-en-place/")}>Apri l’unità 06 per leggere i contenuti <Icon name="right"/></a></figcaption>
+    </figure>
   </section>
 
   <section class="gourmet-service" aria-labelledby="today-heading">

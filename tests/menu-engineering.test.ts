@@ -17,6 +17,6 @@ test('lesson has transparent demonstration, EU allergens and frozen disclosures'
  }
  assert.match(lesson,/allergens\.map/);
  assert.match(lesson,/matrix\.map/);
- assert.match(lesson,/withBase\('\/instructor\/'\)/);
+ assert.ok(lesson.includes('withBase("/instructor/")'));
  assert.match(style,/max-width:800px/);
 });

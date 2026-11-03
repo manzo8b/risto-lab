@@ -1,0 +1,179 @@
+/* RISTO-LAB · Practical clarity, editorial precision. Content and controls unchanged. */
+:root{--ink-navy:#192e40;--ink:#192e40;--graphite:#253846;--deep-teal:#265e77;--paper:#fff;--warm-ivory:#f7f8fa;--white:#fff;--surface:#fff;--muted:#5d6c78;--line:#dfe5eb;--soft:#eef3f8;--accent:#a8472a;--font-editorial:var(--font-ui);--radius:12px;--radius-lg:16px;--font-ui:-apple-system,BlinkMacSystemFont,'Helvetica Neue','Segoe UI',Arial,sans-serif}
+body,.instructor-shell,.instructor-shell.instructor-luxury{background:#fff;color:#192e40;font-family:var(--font-ui);--ink:#192e40;--graphite:#253846;--paper:#fff;--surface:#fff;--white:#fff;--muted:#5d6c78;--soft:#eef3f8;--line:#dfe5eb;--deep-teal:#265e77;--copper-text:#a8472a;--font-editorial:var(--font-ui)}
+body{line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:var(--font-ui);font-style:normal;font-weight:500;letter-spacing:-.045em;text-wrap:balance}
+h1{font-size:clamp(40px,5vw,76px);line-height:1.05}
+h2{font-size:clamp(28px,3vw,44px);line-height:1.16}
+h3{font-size:20px;line-height:1.3;letter-spacing:-.025em}
+.wrap{max-width:1392px;padding-left:clamp(22px,4vw,64px);padding-right:clamp(22px,4vw,64px)}
+body .topbar,.instructor-luxury .topbar{background:#ffffffed!important;border:0!important;border-bottom:1px solid #dfe5eb!important;box-shadow:none;z-index:5}
+.toprow,.instructor-luxury .toprow{min-height:86px;gap:24px}
+body .brand,.instructor-shell.instructor-luxury .brand{display:flex;align-items:center;gap:12px;font-family:var(--font-ui)!important;font-size:23px!important;font-weight:700!important;letter-spacing:-.055em!important;line-height:1;color:#192e40!important}
+.risto-brand-symbol{width:42px;height:42px;flex:none;display:block}
+.risto-wordmark{display:block}
+body .brand i,.instructor-luxury .brand i{color:#c65936!important}
+body .brand small,.instructor-luxury .brand small{font:500 8px/1.5 var(--font-ui);letter-spacing:.12em;color:#5d6c78;margin-top:8px}
+.topbar .nav{gap:22px}
+body:not(.instructor-shell) .topbar .nav a{font-size:12px;min-height:44px;display:inline-flex;align-items:center;color:#475c6c}
+body:not(.instructor-shell) .topbar .nav a[aria-current=page]{color:#204e78;text-decoration-thickness:2px;text-underline-offset:9px}
+.ecosystem-contact-header,.instructor-luxury .ecosystem-contact-header{background:#f5f7fa!important;border:0!important;border-top:1px solid #eef1f5!important;font-size:11px}
+.ecosystem-contact-header a,.ecosystem-contact-header a strong,.instructor-luxury .ecosystem-contact-header a,.instructor-luxury .ecosystem-contact-header a strong{color:#586c7c!important;font-weight:500;font-size:11px}
+.eyebrow{color:#617889;font-weight:600;letter-spacing:.12em;font-size:10px;line-height:1.6}
+body:not(.instructor-shell) .hero.editorial-hero{background:#fff;border:0;padding:70px 0 76px;margin:0;border-radius:0;grid-template-columns:minmax(0,1.45fr) minmax(240px,.75fr);gap:50px}
+body:not(.instructor-shell) .hero.editorial-hero h1{font-size:clamp(40px,5vw,76px);line-height:1.04;letter-spacing:-.055em}
+body:not(.instructor-shell) .hero.editorial-hero h1 em{font-style:normal;color:#326893;font-weight:400}
+.hero .lead{font-size:17px;line-height:1.7;max-width:570px}
+body:not(.instructor-shell) .hero-art{height:365px;border-radius:16px;background:linear-gradient(145deg,#e7f0fb,#eef5f9);box-shadow:inset 0 0 0 1px #e1eaf3}
+.place{width:180px;height:180px;background:#fff;border:1px solid #a4bacd;box-shadow:0 0 0 18px #f8fbff,0 0 0 19px #b8ccdc,0 0 0 31px #f8fbff}
+.place:before,.place:after{border-color:#a4bacd;height:150px;width:6px;top:13px}
+.place:before{left:-50px}.place:after{right:-50px}
+.art-label{font-size:9px;letter-spacing:.15em;color:#506c81}
+body:not(.instructor-shell) .button:not(.secondary),body button,body .button,.instructor-shell.instructor-luxury .button,.instructor-shell.instructor-luxury button:not(.comment-load-button){background:#204e78;color:#fff;border:1px solid #204e78;border-radius:8px;font:500 13px/1.5 var(--font-ui);letter-spacing:0;min-height:46px;padding:12px 19px;filter:none}
+body:not(.instructor-shell) .button.secondary,body button.secondary,body .button.secondary,.instructor-shell.instructor-luxury .button.secondary,.instructor-shell.instructor-luxury button.secondary{background:#fff;color:#204e78;border-color:#bacddd}
+body button:hover,body .button:hover,.instructor-shell.instructor-luxury .button:hover,.instructor-shell.instructor-luxury button:hover{background:#2d638c;border-color:#2d638c;filter:none}
+body .button.secondary:hover,body button.secondary:hover{background:#eff5fa}
+.text-link{font-size:13px;color:#204e78;text-underline-offset:5px;font-weight:500}
+.actions{gap:18px;align-items:center}
+.section{padding:66px 0;border-color:#e1e7ec}
+body:not(.instructor-shell) .story-bridge{background:#edf4fc;border:1px solid #dee9f5;padding:46px;border-radius:14px}
+.story-bridge h2{max-width:800px}
+.journey{gap:10px;flex-wrap:wrap}
+body .journey span{color:#42627a!important;font-size:12px;background:#fff;border:1px solid #d5e3ef;border-radius:99px;padding:9px 14px}
+.area-grid{gap:0 34px}
+.area-row{padding:23px 0;border-color:#dfe5eb}
+.area-row h3{font-size:21px;font-weight:500}
+.area-row>span{font-family:var(--font-ui);font-size:11px;color:#8093a2}
+body:not(.instructor-shell) .editorial-note,body:not(.instructor-shell) .public-feature:nth-of-type(even) .editorial-note{border:1px solid #e5e1d7;border-radius:14px;background:#faf7ef;padding:34px}
+.editorial-note .serif{font-size:30px;line-height:1.25}
+.public-feature{gap:50px}
+body:not(.instructor-shell) .grid>.card{border:1px solid #dfe5eb;border-radius:12px;padding:30px;background:#f4f7fb;box-shadow:none}
+body:not(.instructor-shell) .grid>.card:nth-child(3n+2){background:#f7f5ef;border-color:#e7e2d7}
+body:not(.instructor-shell) .grid>.card:nth-child(3n+3){background:#f1f7f4;border-color:#dce9e2}
+body:not(.instructor-shell) .grid>.card .eyebrow{font-size:10px}
+.console-illustration{background:#eef4fa;border:1px solid #d3e1ee;border-radius:14px;padding:34px}
+.illustration-panel{border-radius:7px;background:#fff;color:#204e78;border-color:#cadbea}
+.contact-band{background:#f1f5fa;padding:46px;border:1px solid #dfe7f1;border-radius:14px;color:#192e40}
+.contact-band .eyebrow{color:#617889}
+.footer,.instructor-footer{background:#fafbfc;border-color:#e2e7ec;font-size:12px}
+.pagehead{padding-top:60px;max-width:1000px}
+.pagehead h1{font-size:clamp(38px,4.5vw,64px)}
+.prose{max-width:780px}
+.prose p{font-size:16px;line-height:1.85}
+/* Teaching workspace: stable light surfaces, visible state, readable controls. */
+.instructor-shell .hubbody,.instructor-luxury .hubbody{grid-template-columns:218px minmax(0,1fr)}
+.instructor-shell .sidebar,.instructor-luxury .sidebar{background:#f5f7fa!important;border-right:1px solid #dfe5eb!important;padding:24px 12px;align-self:start;position:sticky;top:0;max-height:100dvh;overflow-y:auto;scrollbar-width:thin}
+.instructor-shell .sidebar .eyebrow,.instructor-luxury .sidebar .eyebrow{color:#6a7b89!important;font:600 10px/1.6 var(--font-ui);letter-spacing:.1em}
+.instructor-shell .sidebar .nav a,.instructor-luxury .sidebar .nav a{font:400 13px/1.4 var(--font-ui);color:#4b6070!important;border:0!important;border-radius:8px!important;min-height:44px;padding:12px!important}
+.instructor-shell .sidebar .nav a[aria-current=page],.instructor-luxury .sidebar .nav a[aria-current=page]{background:#dfeaf7!important;color:#204e78!important;border:0!important;font-weight:600}
+.instructor-shell .sidebar .nav a:hover,.instructor-luxury .sidebar .nav a:hover{background:#e8eef5!important;color:#204e78!important}
+.nav-extra{border-color:#dfe5eb}.nav-extra summary{font-size:12px;color:#617789}
+.instructor-shell .hubmain,.instructor-luxury .hubmain{max-width:1550px;padding:30px clamp(24px,3.4vw,52px) 56px}
+.instructor-shell .hubmain h1{font-family:var(--font-ui);font-size:clamp(34px,3.8vw,58px);font-weight:500;letter-spacing:-.045em;line-height:1.13}
+.breadcrumbs{font-size:11px;margin-bottom:24px;color:#697e8d}
+.instructor-shell .work-surface,.instructor-shell .card,.instructor-shell .resource,.instructor-shell .unitrow{border:1px solid #dfe5eb!important;border-radius:12px!important;background:#fff!important;box-shadow:none}
+.instructor-shell .card h2,.instructor-shell .work-surface h2,.instructor-shell .unitrow h3{font-family:var(--font-ui);font-weight:500;letter-spacing:-.025em}
+.instructor-shell .filters{background:#f5f8fc;padding:20px;border:1px solid #dfe8f1;border-radius:12px;gap:14px}
+body input,body select,body textarea{border:1px solid #bdcdda;border-radius:7px;background:#fff;color:#263c4c;min-height:44px;font:400 14px/1.5 var(--font-ui);padding:11px 13px;max-width:100%}
+body input[type=checkbox],body input[type=radio]{min-height:0;accent-color:#204e78}
+.notice,.first-resource-help,.builder-guide a{background:#eef5fb;border-color:#c8dceb;color:#36566e;border-radius:9px}
+.builder-guide strong{background:#204e78}
+.teaching-toolbar{background:#ffffffed;backdrop-filter:blur(12px);border-color:#dfe5eb;z-index:4}
+.unitnumber{font-family:var(--font-ui);font-size:16px;color:#648199}
+.reading,.source-text{line-height:1.85}
+/* The existing instructor-home sections are reflowed, never rewritten. */
+.gourmet-dashboard{font-family:var(--font-ui)}
+.instructor-shell.instructor-luxury .gourmet-hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(250px,.88fr);gap:16px 32px;background:#fff;color:#192e40;border:0;min-height:0;overflow:visible}
+.gourmet-hero-copy{display:contents;background:none;padding:0}
+.gourmet-hero-copy:before{display:none}
+.gourmet-hero-copy>.gourmet-overline,.gourmet-hero-copy>h1,.gourmet-hero-copy>.gourmet-hero-description,.gourmet-hero-actions,.gourmet-hero-caption{grid-column:1;margin:0!important}
+.gourmet-hero-copy>.gourmet-overline{grid-row:1;color:#617b8f;font:600 10px/1.6 var(--font-ui);letter-spacing:.1em}
+.instructor-shell.instructor-luxury .gourmet-hero h1{grid-row:2;font:500 clamp(38px,4.5vw,66px)/1.06 var(--font-ui);letter-spacing:-.05em;color:#192e40;margin:0!important}
+.gourmet-hero h1 em{font-style:normal;color:#326893;font-weight:400}
+.gourmet-hero-description{grid-row:3;font:400 15px/1.75 var(--font-ui);color:#5b7182}
+.gourmet-hero-actions{grid-row:4;align-content:start;gap:10px}
+.gourmet-hero-caption{grid-row:5;font:500 9px/1.6 var(--font-ui);letter-spacing:.1em;color:#6a8092}
+.gourmet-hero-media{grid-column:2;grid-row:1/6;min-height:0;background:#f3f7fb;border:1px solid #dbe7f2;border-radius:14px;padding:24px;display:flex;flex-direction:column;justify-content:center}
+.gourmet-hero-media:before{display:none}
+.gourmet-hero-media img{filter:none;max-height:380px;width:100%;height:auto;object-fit:contain}
+.gourmet-hero-media .gourmet-visual-heading{background:transparent;padding:0 0 14px}
+.gourmet-hero-media .gourmet-visual-heading h2{font:500 26px/1.2 var(--font-ui);color:#204e78}
+.gourmet-hero-media .gourmet-visual-heading p{color:#61798c;font-size:12px}
+.gourmet-hero-media figcaption{position:static;background:transparent;color:#5d7183;text-shadow:none;font:400 10px/1.6 var(--font-ui);padding:12px 0 0;text-align:left}
+.gourmet-carte{grid-column:1/-1;grid-row:6}
+.gourmet-academy-strip{grid-column:1/-1;grid-row:7;background:#f5f7fa;border:1px solid #dfe5eb;color:#204e78;border-radius:10px}
+.instructor-shell.instructor-luxury .gourmet-section-intro h2,.instructor-shell.instructor-luxury .gourmet-section-heading h2,.instructor-shell.instructor-luxury .gourmet-recent h2{font:500 clamp(28px,3vw,40px)/1.18 var(--font-ui);color:#192e40;letter-spacing:-.035em}
+.gourmet-section-intro{padding:40px 0 24px;text-align:left}
+.gourmet-small-title{justify-content:flex-start}
+.gourmet-small-title span{display:none}
+.gourmet-section-intro>p:last-child{font:400 14px/1.7 var(--font-ui);color:#61788b}
+.gourmet-dashboard .eyebrow,.gourmet-dashboard .gourmet-small-title{color:#617b8f;font-family:var(--font-ui);font-size:10px;letter-spacing:.1em}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu{gap:12px;margin-bottom:20px}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{background:#f3f7fc!important;border:1px solid #dce6f0;border-radius:12px;padding:24px 20px!important;text-align:left;align-items:flex-start}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:nth-child(2){background:#f2f7f4!important;border-color:#dce8e1}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:nth-child(3){background:#fbf6ef!important;border-color:#ece2d5}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:nth-child(4){background:#f5f3fa!important;border-color:#e5e0ee}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:before,.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:after{display:none}
+.gourmet-menu-number{font:400 12px/1.4 var(--font-ui);color:#7b94a7;margin-bottom:18px}
+.instructor-shell.instructor-luxury .gourmet-menu h3{font:500 22px/1.2 var(--font-ui);color:#204e78;letter-spacing:-.03em}
+.instructor-shell.instructor-luxury .gourmet-menu .eyebrow{color:#617b8f!important;font-size:9px}
+.instructor-shell.instructor-luxury .gourmet-menu p{font:400 12px/1.7 var(--font-ui);color:#61778a}
+.gourmet-cta{font:500 12px/1.45 var(--font-ui);letter-spacing:0;text-transform:none;border-radius:8px;min-height:46px;padding:12px 16px}
+.gourmet-cta--gold{background:#204e78;color:#fff;border-color:#204e78}
+.gourmet-cta--gold:hover{background:#326893;color:#fff}
+.gourmet-cta--outline{background:#fff;color:#204e78;border-color:#b8cddd}
+.gourmet-cta--outline:hover{background:#edf4fb;color:#204e78}
+.gourmet-service,.gourmet-home-tools,.gourmet-recent,.gourmet-declaration{border-color:#dfe5eb}
+.instructor-luxury .work-surface.today-session{background:#fff!important;border:1px solid #dfe5eb!important;border-radius:12px;padding:30px}
+.instructor-shell.instructor-luxury .today-session .section-heading h3,.instructor-shell.instructor-luxury .today-session .empty-workspace h3{font:500 25px/1.25 var(--font-ui);color:#204e78}
+.instructor-luxury .today-session .section-heading,.instructor-luxury .today-session .continue-teaching{border-color:#dfe5eb}
+.instructor-shell.instructor-luxury .text-link{color:#204e78}
+.gourmet-menu-study{background:#edf4fc!important;border:1px solid #d8e5f2!important;color:#192e40;border-radius:12px}
+.gourmet-menu-study h2,.gourmet-menu-study h2 em{font:500 30px/1.2 var(--font-ui)!important;color:#204e78!important;letter-spacing:-.03em}
+.gourmet-menu-study p{color:#61778a!important}
+.gourmet-declaration-line{color:#607f95;font-family:var(--font-ui)}
+.gourmet-declaration :is(h2,p),.gourmet-method p{font-family:var(--font-ui);color:#546d80}
+:focus-visible{outline:3px solid #326893!important;outline-offset:4px}
+body :is(button,.button,.gourmet-cta,.card,.unitrow){transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease}
+body :is(button,.button,.gourmet-cta):active{transform:scale(.98)}
+@media(hover:hover){.card:hover,.unitrow:hover{border-color:#a4bfd5!important;box-shadow:0 7px 20px #204e7809!important}}
+@media(max-width:1100px){.topbar .nav{gap:16px}.topbar .nav a{font-size:11px}.instructor-shell .hubbody,.instructor-luxury .hubbody{grid-template-columns:190px minmax(0,1fr)}.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.toprow{flex-wrap:wrap;padding-top:18px;padding-bottom:18px;gap:18px}.topbar .nav{width:100%;gap:6px 22px}.hero-art{height:280px!important}.instructor-shell.instructor-luxury .gourmet-hero{grid-template-columns:minmax(0,1fr)}.gourmet-hero-media{grid-column:1;grid-row:6}.gourmet-carte{grid-row:7}.gourmet-academy-strip{grid-row:8}.gourmet-hero-media img{max-height:330px}.public-feature{gap:26px}}
+@media(max-width:640px){body .brand,.instructor-shell.instructor-luxury .brand{font-size:21px!important}.risto-brand-symbol{width:38px;height:38px}.topbar .nav a{min-height:38px!important}body:not(.instructor-shell) .hero.editorial-hero{grid-template-columns:1fr;padding:40px 0;gap:26px}body:not(.instructor-shell) .hero.editorial-hero h1{font-size:clamp(34px,8vw,48px)}.hero-art{width:100%;max-width:none}.story-bridge,.contact-band{padding:28px!important}.public-feature{grid-template-columns:1fr}.instructor-shell .hubbody,.instructor-luxury .hubbody{display:block}.instructor-shell .sidebar,.instructor-luxury .sidebar{position:static;max-height:none;padding:10px;border-right:0!important;border-bottom:1px solid #dfe5eb}.instructor-shell .sidebar .nav,.instructor-luxury .sidebar .nav{flex-direction:row;flex-wrap:nowrap;overflow:auto;gap:4px}.instructor-shell .sidebar .nav a,.instructor-luxury .sidebar .nav a{white-space:nowrap;font-size:12px}.instructor-shell .hubmain,.instructor-luxury .hubmain{padding:24px 20px 42px}.instructor-shell.instructor-luxury .quick-access.gourmet-menu{gap:10px}.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{padding:20px 14px!important}.instructor-shell.instructor-luxury .gourmet-menu h3{font-size:21px}.gourmet-hero-actions{flex-direction:column}.gourmet-cta{width:100%}.gourmet-hero-media{padding:20px}.instructor-luxury .work-surface.today-session{padding:22px}.header-tools{gap:12px}.instructor-luxury .header-tools{margin-left:auto}.pagehead{padding-top:38px}}
+@media(prefers-reduced-motion:reduce){body :is(button,.button,.gourmet-cta,.card,.unitrow){transition:none;transform:none!important}}
+@media print{body,.instructor-shell,.instructor-shell.instructor-luxury{background:#fff!important;color:#111}.risto-brand-symbol{display:none}.gourmet-hero-copy{display:block}.gourmet-hero{display:block!important}.card,.work-surface{box-shadow:none!important}}
+/* Final overrides for the legacy high-specificity instructor-home theme. */
+.instructor-luxury .hubcontent{background:#fff}
+.instructor-shell.instructor-luxury .gourmet-hero-copy{display:contents;background:none;border:0;padding:0}
+.instructor-luxury .gourmet-hero h1 em{color:#326893;font-style:normal}
+.instructor-luxury .gourmet-hero-description{font:400 15px/1.75 var(--font-ui);color:#5b7182}
+.instructor-luxury .gourmet-overline,.instructor-luxury .gourmet-visual-kicker{color:#617b8f}
+.instructor-luxury .gourmet-cta--gold{background:#204e78;color:#fff;border-color:#204e78}
+.instructor-luxury .gourmet-cta--outline{background:#fff;color:#204e78;border-color:#b8cddd}
+.instructor-shell.instructor-luxury .gourmet-hero-media{background:#f3f7fb;border:1px solid #dbe7f2;min-height:0;border-radius:14px}
+.instructor-luxury .gourmet-hero-media img{height:360px!important;max-height:360px!important;width:100%;object-fit:contain;background:transparent}
+.instructor-shell.instructor-luxury .gourmet-visual-heading h2{font:500 26px/1.2 var(--font-ui);color:#204e78}
+.instructor-luxury .gourmet-visual-heading>p:last-child{font:400 12px/1.6 var(--font-ui);color:#61798c}
+.instructor-luxury .gourmet-hero-media figcaption{background:transparent;color:#5d7183;border-color:#dbe7f2;font:400 10px/1.6 var(--font-ui)}
+.instructor-luxury .gourmet-section-intro>p:last-child{font:400 14px/1.7 var(--font-ui);color:#61788b}
+.instructor-luxury .gourmet-academy-strip{background:#f5f7fa;border-color:#dfe5eb;color:#204e78}
+.instructor-luxury .gourmet-academy-strip p{font:400 13px/1.6 var(--font-ui);color:#61788b}
+.instructor-luxury .gourmet-academy-monogram{font:500 18px var(--font-ui);border:1px solid #b8cddd;color:#326893}
+.instructor-luxury .gourmet-menu-number{font:400 12px/1.4 var(--font-ui);color:#7b94a7}
+.instructor-luxury .gourmet-menu-study p:not(.eyebrow){font:400 14px/1.7 var(--font-ui);color:#61778a}
+@media(max-width:800px){.instructor-luxury .gourmet-hero-media img{height:300px!important;max-height:300px!important}}
+.instructor-luxury .gourmet-hero-media img{height:280px!important;max-height:280px!important}
+.instructor-shell.instructor-luxury .gourmet-hero{align-items:start}
+.instructor-luxury .gourmet-cta{font:500 12px/1.45 var(--font-ui);letter-spacing:0;text-transform:none}
+@media(max-width:640px){.instructor-luxury .gourmet-hero-media img{height:300px!important;max-height:300px!important}}
+.instructor-shell .card.resource{padding:24px!important}
+.instructor-shell .dashboard-hero{background:#edf4fc;color:#192e40;border:1px solid #d8e5f2;border-radius:14px}
+.instructor-shell .dashboard-hero .eyebrow{color:#617b8f}
+.instructor-shell .dashboard-hero .button{background:#204e78;color:#fff}
+.instructor-shell .technical{font-size:12px;color:#61788b}
+@media(max-width:640px){.instructor-shell .card.resource{padding:20px!important}.instructor-luxury .gourmet-hero{gap:16px}.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Public home is the calling card: one clear headline and a branded service illustration. */
+body:not(.instructor-shell) .editorial-hero .hero-art{background:radial-gradient(ellipse at 25% 15%,#f7fbff 0%,#e5effb 72%);box-shadow:inset 0 0 0 1px #dae6f2,0 18px 50px #204e7808;overflow:hidden}
+body:not(.instructor-shell) .editorial-hero .place{background:#fff url('/risto-lab/brand/risto-symbol.svg') center/76px 76px no-repeat;border-color:#9db7d0;box-shadow:0 0 0 18px #f8fbff,0 0 0 19px #afc6dc,0 0 0 31px #f8fbff,0 20px 44px #204e7810}
+body:not(.instructor-shell) .editorial-hero .actions .button{min-height:50px;padding:14px 23px}
+body:not(.instructor-shell) .story-bridge .prose{max-width:850px}

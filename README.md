@@ -2,7 +2,9 @@
 
 Hospitality Training & Restaurant Operations — spazio docente statico per materiali, lezioni e conduzione in aula.
 
-Sito previsto: https://manzo8b.github.io/risto-lab/ (stato effettivo nel report Phase 4B).
+**[Apri RISTO-LAB](https://manzo8b.github.io/risto-lab/)** · [Codice e documentazione](https://github.com/manzo8b/risto-lab) · [GitHub Actions](https://github.com/manzo8b/risto-lab/actions)
+
+**Distribuzione:** il workflow GitHub Pages sul ramo `main` ha avuto esito positivo il 3 novembre 2026. La disponibilità del sito non sostituisce la verifica su dispositivi reali, l'approvazione dei contenuti o i collaudi didattici ancora aperti.
 
 ## Tecnologia e avvio
 

@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 const root=process.env.LIVE_URL||'http://127.0.0.1:4330/risto-lab';
-const paths=['/','/formazione/','/programmi/','/gratuita/','/premium/','/aziende/','/contatti/','/instructor/','/instructor/biblioteca/','/instructor/programmi/il-servizio-in-sala/','/instructor/unita/06-la-mise-en-place/','/instructor/aula/'];
+const paths=['/','/formazione/','/programmi/','/gratuita/','/risorse/','/premium/','/aziende/','/contatti/','/instructor/','/instructor/biblioteca/','/instructor/programmi/il-servizio-in-sala/','/instructor/unita/06-la-mise-en-place/','/instructor/aula/'];
 test('all public and instructor entrypoints render on a white page',async({page})=>{
  for(const path of paths){await page.goto(root+path);const color=await page.evaluate(()=>getComputedStyle(document.body).backgroundColor);expect(color,path).toBe('rgb(255, 255, 255)');}
 });
@@ -40,4 +40,21 @@ test('200 percent typography preserves horizontal reflow on instructor workflows
   });
   expect(geometry.width<=geometry.viewport,JSON.stringify({path,geometry})).toBeTruthy();
  }
+});
+
+test('Risto-Lab identity, section hierarchy and resources menu are functional',async({page})=>{
+ await page.setViewportSize({width:1440,height:900});
+ await page.goto(root+'/');
+ await expect(page.locator('header .risto-brand-symbol')).toBeVisible();
+ const logoLoads=await page.locator('header .risto-brand-symbol').evaluate(img=>img instanceof HTMLImageElement&&img.complete&&img.naturalWidth>0);
+ expect(logoLoads).toBeTruthy();
+ await expect(page.locator('#in-evidenza .rl-course-card')).toHaveCount(3);
+ const bands=await page.locator('.rl-band--sage, .rl-band--blue, .rl-band--clay').evaluateAll(els=>els.map(el=>getComputedStyle(el).backgroundColor));
+ expect(new Set(bands).size).toBeGreaterThanOrEqual(3);
+ const titles=await page.locator('h1,h2,h3').evaluateAll(els=>els.map(el=>(el.textContent||'').trim()));
+ expect(titles.filter(s=>s.endsWith('.'))).toEqual([]);
+ await page.getByRole('link',{name:'Risorse',exact:true}).click();
+ await expect(page).toHaveURL(/\/risorse\/$/);
+ await expect(page.locator('#libere .rl-course-card')).toHaveCount(3);
+ await expect(page.locator('.rl-resource-panel')).toHaveCount(2);
 });

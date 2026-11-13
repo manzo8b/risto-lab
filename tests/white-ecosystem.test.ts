@@ -28,7 +28,7 @@ test('public catalog and tier pages represent actual project maturity',()=>{
  for(const p of paths)assert.match(read(p),/<Public title=/,p);
  assert.match(read(paths[0]),/units\.filter/);
  assert.match(read(paths[1]),/non certificante/i);
- assert.match(read(paths[2]),/non è ancora attivo un abbonamento/);
+ assert.match(read(paths[2]),/non è ancora attivo un abbonamento/i);
  assert.match(read(paths[3]),/non è ancora una piattaforma operativa/);
 });
 

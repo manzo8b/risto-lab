@@ -16,7 +16,7 @@ test('white canvas is explicit on every platform shell',()=>{
 });
 
 test('responsive navigation offers all public destinations without JS dependency',()=>{
- for(const target of ['/programmi/','/gratuita/','/premium/','/aziende/','/area-docente/'])assert.ok(publicShell.includes(target),target);
+ for(const target of ['/programmi/','/risorse/','/premium/','/aziende/','/area-docente/'])assert.ok(publicShell.includes(target),target);
  assert.match(publicShell,/rl-mobile-menu/);
  assert.match(publicShell,/rl-mobile-links/);
  assert.match(publicShell,/aria-current/);

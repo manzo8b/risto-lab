@@ -1,0 +1,32 @@
+---
+import {withBase} from '../../lib/urls';
+import Public from '../../layouts/Public.astro';
+const openResources=[
+  {type:'5 LEZIONI · ACCESSO LIBERO',title:'Sicurezza nel lavoro quotidiano',description:'Casi professionali, riferimenti normativi e 15 domande guidate di autovalutazione',meta:'Formazione divulgativa · non certificante',href:'/instructor/laboratorio-sicurezza/lezioni/',image:'/materiali/res-visual-igiene.png',alt:'Illustrazione formativa sulla sicurezza e sull’igiene'},
+  {type:'UNITÀ 06 · IN REVISIONE',title:'La mise en place',description:'Masterclass navigabile di 12 slide, schema del coperto e prova pratica da condurre con un docente',meta:'12 slide · esercitazione · checklist',href:'/materiali/mise-en-place-masterclass.html',image:'/materiali/res-mep-image.webp',alt:'Materiale visivo originale sulla mise en place'},
+  {type:'BIBLIOTECA DOCENTE',title:'Materiali professionali',description:'Schede, documentazione e risorse pubbliche classificate per preparare lezioni ed esercitazioni',meta:'Consultazione libera · risorse selezionate',href:'/instructor/biblioteca/',image:'/materiali/res-visual-ciclo-servizio.png',alt:'Infografica del ciclo del servizio'}
+];
+---
+<Public title="Risorse">
+<div class="wrap">
+  <header class="rl-page-banner"><div class="rl-breadcrumb"><a href={withBase('/')}>Home</a><span>/</span><span>Risorse</span></div>
+    <p class="rl-eyebrow-line">RISTO-LAB / BIBLIOTECA APERTA</p><h1>Risorse concrete<br/>per imparare e insegnare</h1>
+    <p class="lead muted">Guide, unità, presentazioni e materiali pronti da consultare. Ogni risorsa indica il proprio stato: ciò che è disponibile resta distinto dai percorsi ancora in progettazione.</p>
+    <div class="actions"><a class="button" href="#libere">Esplora le risorse libere ↗</a><a class="button secondary" href={withBase('/premium/')}>Scopri il percorso Premium</a></div>
+  </header>
+  <section class="section rl-band--sage" id="libere">
+    <div class="rl-section-head"><div><p class="rl-eyebrow-line">ACCESSO LIBERO</p><h2>Materiali che puoi aprire adesso</h2><p class="muted">Le risorse pubbliche non richiedono un account e non producono attestati automatici</p></div></div>
+    <div class="rl-card-grid">{openResources.map(r=><article class="rl-course-card"><a class="rl-card-image" href={withBase(r.href)} aria-label={'Apri '+r.title}><img src={withBase(r.image)} alt={r.alt} loading="lazy" decoding="async"/></a><div class="rl-card-body"><span class="rl-chip rl-chip--accent">{r.type}</span><h3>{r.title}</h3><p>{r.description}</p><p class="rl-card-meta"><strong>{r.meta}</strong></p><a class="rl-card-action" href={withBase(r.href)}>Apri il materiale ↗</a></div></article>)}</div>
+  </section>
+  <section class="section rl-band--clay" id="approfondimenti">
+    <div class="rl-section-head"><div><p class="rl-eyebrow-line">PROSSIMI SVILUPPI</p><h2>Dal materiale libero al percorso strutturato</h2></div></div>
+    <div class="rl-resource-grid">
+      <a class="rl-resource-panel rl-resource-panel--premium" style="text-decoration:none" href={withBase('/premium/')}><span class="rl-panel-icon" aria-hidden="true">✧</span><span class="rl-chip rl-chip--soon">IN PROGETTAZIONE</span><h3>Percorsi Premium</h3><p>Una futura proposta con progressione didattica, attività e feedback. Iscrizioni e pagamenti non sono ancora attivi.</p><span class="rl-link">Esplora il progetto ↗</span></a>
+      <a class="rl-resource-panel" style="text-decoration:none" href={withBase('/aziende/')}><span class="rl-panel-icon" aria-hidden="true">◈</span><span class="rl-chip rl-chip--soon">MODELLO DA VALIDARE</span><h3>Soluzioni per aziende</h3><p>Una direzione per laboratori di gruppo, standard di servizio e verifica delle competenze sul lavoro. Non è ancora un servizio B2B operativo.</p><span class="rl-link">Scopri l'area Aziende ↗</span></a>
+    </div>
+  </section>
+  <section class="section rl-band--blue">
+    <div class="rl-split"><div><p class="rl-eyebrow-line">DOCENTI E FORMATORI</p><h2>Una biblioteca da portare in aula</h2><p class="muted">L'Instructor Hub consente di consultare il programma, selezionare materiali e preparare una sessione di insegnamento. Le bozze rimangono nel browser del docente.</p><a class="button" href={withBase('/instructor/')}>Apri Instructor Hub ↗</a></div><div class="rl-white-panel"><strong>Disponibile</strong><p>Catalogo curricolare di 26 unità, biblioteca didattica, Aula e laboratorio di sicurezza</p><strong>Da verificare</strong><p>Effettivo apprendimento in presenza, accessibilità su dispositivi reali e modello di monitoraggio individuale</p></div></div>
+  </section>
+</div>
+</Public>

@@ -158,3 +158,14 @@ body.rl-public .rl-resource-panel:hover,body.rl-public .rl-resource-panel:focus-
  transform:translateY(-3px);box-shadow:0 21px 46px #172b2625;border-color:#afc7b9
 }
 @media(max-width:800px){body.rl-public .rl-footer-brand{flex-wrap:wrap}}
+
+/* Readable disclosure controls across the Instructor curriculum */
+body.instructor-shell #docente .technical > summary,
+body.instructor-shell .hubmain details.technical > summary{
+  color:#183f39!important;
+  background:#ffffff!important;
+  border:1px solid #ccdad5!important;
+  border-radius:9px;
+  padding:11px 14px;
+  font-weight:650
+}

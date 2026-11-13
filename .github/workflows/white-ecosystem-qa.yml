@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'src/styles/white-ecosystem.css'
+      - 'src/styles/editorial-v3.css'
+      - 'public/brand/**'
       - 'src/layouts/**'
       - 'src/instructor/pages/**'
       - 'public/materiali/mise-en-place-masterclass.html'

@@ -20,3 +20,21 @@ test('program listing distinguishes partial units from classroom ready',async({p
  await expect(page.locator('.rl-unit-link')).toHaveCount(26);
  await expect(page.locator('.rl-unit-link').filter({hasText:'La mise en place'})).toContainText('Parziale');
 });
+
+test('200 percent typography preserves horizontal reflow on instructor workflows',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ for(const path of ['/instructor/','/instructor/sessioni/nuova/?unit=unit-06','/instructor/unita/24-simulazioni-operative/']){
+  await page.goto(root+path);
+  await page.evaluate(()=>document.documentElement.style.fontSize='200%');
+  const geometry=await page.evaluate(()=>{
+   const vw=innerWidth;
+   const htmlWidth=document.documentElement.scrollWidth;
+   const offenders=Array.from(document.querySelectorAll('*')).filter(el=>{
+    const x=el.getBoundingClientRect();
+    return x.width>0&&(x.right>vw+1||x.left< -1);
+   }).slice(0,12).map(el=>({tag:el.tagName,cls:String(el.className).slice(0,80),right:Math.round(el.getBoundingClientRect().right)}));
+   return {viewport:vw,width:htmlWidth,offenders};
+  });
+  expect(geometry.width<=geometry.viewport,JSON.stringify({path,geometry})).toBeTruthy();
+ }
+});

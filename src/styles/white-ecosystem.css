@@ -362,3 +362,11 @@ body.instructor-shell .curriculum-expand ol a{
   min-width:0!important;max-width:100%!important
  }
 }
+
+/* Breadcrumb and inline curriculum links must retain AA contrast at any width. */
+body.instructor-shell .breadcrumbs a,
+body.instructor-shell .hubmain ol li a,
+body.instructor-shell .hubmain .unit-sequence a,
+body.instructor-shell .hubmain .curriculum-content a:not(.button){
+ color:var(--rl-forest)!important;
+}

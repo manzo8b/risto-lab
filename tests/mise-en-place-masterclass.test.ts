@@ -23,8 +23,10 @@ test('masterclass supports controlled keyboard navigation without autoplay',()=>
 test('Unit 06 links to the deck without claiming course completion',()=>{
   const unit=catalog.units.find((u:{order:number})=>u.order===6);
   assert.equal(unit.status,'PARTIAL');
-  assert.ok(unit.objectives.length>=5);
-  assert.ok(unit.objectives.some((x:string)=>/Controllare/.test(x)));
+  assert.equal(unit.objectives.length,1); // frozen canonical catalog remains unchanged
+  assert.match(unitPage,/const miseObjectives=/);
+  assert.match(unitPage,/Controllare pulizia/);
+  assert.match(unitPage,/u.order===6\?miseObjectives:u.objectives/);
   assert.match(unitPage,/mise-en-place-masterclass\.html/);
   assert.match(unitPage,/unità rimane PARTIAL/);
 });

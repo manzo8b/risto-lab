@@ -1,0 +1,18 @@
+---
+import {withBase} from '../../lib/urls';
+import Public from '../../layouts/Public.astro';
+import {units} from '../data/catalog';
+const groups=[
+ {id:'fondamenti',title:'Fondamenti della professione',start:1,end:6,intro:'Ruoli, squadra, strumenti e preparazione.'},
+ {id:'servizio',title:'Il ciclo del servizio',start:7,end:15,intro:'Dalla postazione alla chiusura.'},
+ {id:'sicurezza',title:'Sicurezza e professionalità',start:16,end:22,intro:'Igiene, decisioni, comunicazione e comportamento.'},
+ {id:'pratica',title:'Dal corso al lavoro',start:23,end:26,intro:'Colloquio, simulazioni, laboratori e verifica.'}
+];
+---
+<Public title="Programmi e unità">
+<div class="wrap">
+ <header class="rl-page-banner"><div class="rl-breadcrumb"><a href={withBase('/')}>Home</a><span>/</span><span>Programmi</span></div><p class="rl-eyebrow-line">ESPLORA IL CURRICULUM</p><h1>26 unità.<br/>Un percorso professionale.</h1><p class="lead muted">Dai fondamenti alle esercitazioni: esplora i materiali del programma Il Servizio in Sala. Ogni unità indica il proprio stato di preparazione, senza confonderlo con l'accettazione finale.</p></header>
+ <nav class="rl-filters" aria-label="Seleziona l'area del curriculum">{groups.map(g=><a class="rl-filter" href={'#'+g.id}>{g.title}</a>)}</nav>
+ {groups.map(g=><section class="section" id={g.id}><div class="rl-section-head"><div><p class="rl-eyebrow-line">{String(g.start).padStart(2,'0')}–{String(g.end).padStart(2,'0')}</p><h2>{g.title}</h2><p class="muted">{g.intro}</p></div></div><div class="rl-program-list">{units.filter(u=>u.order>=g.start&&u.order<=g.end).map(u=><a class="rl-unit-link" href={withBase('/instructor/unita/'+u.slug+'/')}><span class="rl-unit-num">{String(u.order).padStart(2,'0')}</span><span class="rl-unit-title">{u.title}</span><span class="rl-unit-state">{u.status==='PARTIAL'?'Parziale':'Predisposta per l’aula'} ↗</span></a>)}</div></section>)}
+ <section class="section"><div class="rl-status-note"><strong>Stato didattico:</strong> il curriculum è pronto per revisione umana; le unità 06 e 18 sono PARTIAL. CLASSROOM_READY significa che esistono sequenze e risorse selezionate, non che il corso sia accreditato o che un allievo abbia acquisito la competenza.</div><div class="actions"><a class="button" href={withBase('/instructor/programmi/il-servizio-in-sala/')}>Apri il programma completo nell'Instructor Hub ↗</a></div></section>
+</div></Public>

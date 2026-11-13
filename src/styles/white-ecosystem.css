@@ -1,0 +1,372 @@
+/* RISTO-LAB / White Ecosystem 2026 — public site + instructor
+   A presentation layer only. Teaching data, runtime and projector remain untouched. */
+:root {
+ --rl-forest:#0d4943;--rl-forest-hi:#0a3935;--rl-copper:#c15e38;--rl-copper-deep:#963c22;
+ --rl-blue:#245f98;--rl-ink:#182e2b;--rl-text:#2c4140;--rl-muted:#536866;
+ --rl-border:#dae4e2;--rl-wash:#f5f9f8;--rl-white:#ffffff;
+ --ink-navy:var(--rl-ink);--ink:var(--rl-ink);--graphite:var(--rl-text);
+ --deep-teal:var(--rl-forest);--warm-ivory:#fff;--paper:#fff;--white:#fff;
+ --surface:#fff;--muted:var(--rl-muted);--soft:#f5f9f8;--line:var(--rl-border);
+ --accent:var(--rl-copper-deep);--copper-text:var(--rl-copper-deep);
+ --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+ --font-editorial:Georgia,"Times New Roman",serif;--radius:12px;--radius-lg:20px;
+}
+html,body,body.instructor-shell,body.instructor-shell.instructor-luxury {
+ background:#fff!important;color:var(--rl-ink)!important;
+}
+body {font-family:var(--font-ui);overflow-x:clip}
+#contenuto,.hubcontent,.hubmain,.hubbody,main,.wrap {background-color:transparent}
+:where(a,button,input,textarea,select,summary):focus-visible{outline:3px solid var(--rl-blue)!important;outline-offset:3px}
+a{color:inherit}
+button,.button,.gourmet-cta{transition:background-color .16s ease,border-color .16s ease,transform .16s ease}
+button:hover:not(:disabled),.button:hover,.gourmet-cta:hover{transform:translateY(-1px)}
+body:not(.aula) .topbar,body.instructor-shell .topbar,body.instructor-shell.instructor-luxury .topbar {
+ background:#fff!important;border:0!important;border-bottom:1px solid var(--rl-border)!important;
+ box-shadow:0 3px 25px #123d3610!important;position:relative;z-index:8;
+}
+.toprow,body.instructor-shell .toprow{min-height:82px;display:flex;gap:18px;align-items:center}
+body .brand,body.instructor-shell .brand,body.instructor-shell.instructor-luxury .brand{
+ font-size:22px!important;color:var(--rl-ink)!important;font-weight:700!important;
+ letter-spacing:-.045em!important;gap:11px;text-decoration:none;
+}
+.risto-brand-symbol{width:40px;height:40px}
+body .brand i{color:var(--rl-copper)!important}
+body .brand small{font-size:9px;letter-spacing:.12em;color:var(--rl-muted)}
+.ecosystem-contact-header,body.instructor-shell .ecosystem-contact-header {
+ background:#fff!important;color:var(--rl-muted)!important;border-top:1px solid #eff2f1!important
+}
+.ecosystem-contact-header a,.ecosystem-contact-header a strong{color:var(--rl-muted)!important}
+.rl-desktop-nav{display:flex;align-items:center;justify-content:end;gap:5px;margin-left:auto;flex-wrap:wrap}
+.rl-desktop-nav a,.rl-top-workspace-links a{
+ text-decoration:none;display:inline-flex;align-items:center;min-height:44px;
+ padding:8px 11px;border-radius:999px;font-size:13px;font-weight:600;color:var(--rl-text);
+}
+.rl-desktop-nav a:hover,.rl-top-workspace-links a:hover{background:#f0f6f5;color:var(--rl-forest)}
+.rl-desktop-nav a[aria-current=page],.rl-top-workspace-links a[aria-current=page]{
+ color:var(--rl-forest);background:#e8f3f0;text-decoration:none!important
+}
+.rl-desktop-nav a.rl-nav-cta{border-radius:10px;background:var(--rl-forest);color:#fff!important;padding:8px 18px}
+.rl-desktop-nav a.rl-nav-cta:hover{background:var(--rl-forest-hi)}
+.rl-mobile-menu{display:none;position:relative;margin-left:auto}
+.rl-mobile-menu summary{list-style:none;min-height:44px;display:flex;align-items:center;gap:8px;
+ border:1px solid var(--rl-border);border-radius:10px;padding:8px 15px;cursor:pointer;font-size:14px;font-weight:650}
+.rl-mobile-menu summary::-webkit-details-marker{display:none}
+.rl-mobile-menu .rl-mobile-links{position:absolute;right:0;top:calc(100% + 8px);z-index:20;
+ min-width:min(310px,calc(100vw - 36px));background:#fff;border:1px solid var(--rl-border);
+ box-shadow:0 16px 40px #102f2926;border-radius:16px;padding:10px}
+.rl-mobile-links a{display:block;padding:12px 14px;text-decoration:none;border-radius:9px;font-size:14px;color:var(--rl-ink)}
+.rl-mobile-links a:hover,.rl-mobile-links a[aria-current=page]{background:#eff7f4;color:var(--rl-forest)}
+.rl-top-workspace-links{display:flex;gap:2px;align-items:center;margin-left:auto}
+.rl-top-workspace-links a{font-size:12px}
+body.instructor-shell .header-tools{display:flex;gap:9px;align-items:center}
+body.instructor-shell .header-tools a{color:var(--rl-forest)!important}
+body:not(.instructor-shell) h1,body:not(.instructor-shell) h2,body:not(.instructor-shell) .rl-serif,
+body.instructor-shell .rl-serif {font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+ font-weight:500;letter-spacing:-.045em;color:var(--rl-ink);text-wrap:balance}
+body:not(.instructor-shell) h1{font-size:clamp(40px,4.8vw,75px);line-height:1.07}
+body:not(.instructor-shell) h2{font-size:clamp(29px,3.25vw,47px);line-height:1.13}
+body:not(.instructor-shell) h3,body.instructor-shell h3{font-family:var(--font-ui);font-size:clamp(18px,1.45vw,23px);font-weight:650;letter-spacing:-.02em}
+.eyebrow{color:var(--rl-copper-deep)!important;letter-spacing:.13em;font-size:11px;font-weight:700}
+.wrap{max-width:1450px;padding-inline:clamp(18px,4.25vw,72px)}
+.section{border-color:var(--rl-border);padding-block:clamp(38px,5vw,74px)}
+body:not(.instructor-shell) .section,body:not(.instructor-shell) .story-bridge,
+body:not(.instructor-shell) .editorial-note,body:not(.instructor-shell) .grid>.card,
+body:not(.instructor-shell) .public-feature,body:not(.instructor-shell) .cycle>div {
+ background:#fff!important
+}
+body:not(.instructor-shell) .story-bridge,body:not(.instructor-shell) .editorial-note,
+body:not(.instructor-shell) .public-feature .editorial-note,body:not(.instructor-shell) .grid>.card {
+ border:1px solid var(--rl-border)!important;border-radius:18px!important
+}
+body:not(.instructor-shell) .grid>.card{box-shadow:0 10px 28px #0d494309!important}
+body:not(.instructor-shell) .contact-band{
+ background:#fff!important;color:var(--rl-ink)!important;
+ border:1px solid var(--rl-border);border-radius:21px;padding:clamp(28px,5vw,56px)
+}
+body:not(.instructor-shell) .contact-band h2{color:var(--rl-ink)!important}
+body:not(.instructor-shell) .contact-band .button{background:var(--rl-forest)!important;color:#fff!important;border-color:var(--rl-forest)!important}
+body .button:not(.secondary),body button:not(.secondary),body.instructor-shell .button:not(.secondary),
+body.instructor-shell button:not(.secondary),.gourmet-cta--gold {
+ background:var(--rl-forest)!important;color:#fff!important;border:1px solid var(--rl-forest)!important;
+ border-radius:10px;font-weight:650;min-height:46px
+}
+body .button.secondary,body button.secondary,.gourmet-cta--outline {
+ background:#fff!important;color:var(--rl-forest)!important;border:1px solid #aec9c4!important;border-radius:10px
+}
+body button:hover:not(:disabled),body .button:hover{filter:none}
+body .button:not(.secondary):hover,body button:not(.secondary):hover{background:var(--rl-forest-hi)!important}
+body :is(.pill,.badge,.rl-chip){border-radius:999px}
+body .pill{background:#fff;border:1px solid var(--rl-border);color:var(--rl-ink)}
+body .badge-partial{background:#fff3e9!important;color:#8d4c21!important;border:1px solid #efccaf!important}
+body .badge-review{background:#fff4e8!important}
+body .notice,body.instructor-shell .notice{background:#fff!important;color:var(--rl-text)!important;
+ border:1px solid var(--rl-border)!important;border-left:4px solid var(--rl-copper)!important;border-radius:10px}
+body .footer,body .instructor-footer{background:#fff!important;border-top:1px solid var(--rl-border)!important}
+body input,body select,body textarea{background:#fff!important;color:var(--rl-ink)!important;border:1px solid #b3c8c3!important;border-radius:10px}
+body input[type=checkbox],body input[type=radio]{accent-color:var(--rl-forest)}
+/* Public platform: editorial Apple-inspired breathing room + structured HP-inspired navigation */
+.rl-public-hero{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(20px,4vw,66px);
+ align-items:center;min-height:530px;padding:clamp(38px,6vw,85px) 0}
+.rl-public-hero .rl-hero-copy h1{margin-bottom:25px}
+.rl-public-hero .rl-hero-copy h1 em{font-style:normal;color:var(--rl-copper-deep)}
+.rl-public-hero .lead{font-size:clamp(16px,1.45vw,20px);max-width:590px;line-height:1.68}
+.rl-visual{position:relative;background:#fff;overflow:hidden;border:1px solid var(--rl-border);border-radius:26px;
+ box-shadow:0 18px 50px #0d494318;min-height:420px;display:flex;align-items:center;justify-content:center}
+.rl-visual img{display:block;width:100%;max-height:530px;height:100%;object-fit:contain}
+.rl-visual .rl-photo-label{position:absolute;bottom:20px;left:22px;color:var(--rl-ink);
+ font-size:12px;background:#fff;border:1px solid var(--rl-border);border-radius:999px;padding:9px 15px}
+.rl-hero-metrics{display:flex;gap:15px;flex-wrap:wrap;margin:25px 0 0}
+.rl-hero-metrics span{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--rl-border);
+ border-radius:10px;color:var(--rl-text);font-size:13px;background:#fff}
+.rl-eyebrow-line{font-size:12px;font-weight:700;color:var(--rl-copper-deep);text-transform:uppercase;letter-spacing:.13em}
+.rl-section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:27px;flex-wrap:wrap}
+.rl-section-head h2{margin:0}
+.rl-link{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:700;color:var(--rl-forest);text-decoration:underline;text-underline-offset:4px}
+.rl-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.rl-course-card{min-width:0;overflow:hidden;background:#fff;border:1px solid var(--rl-border);border-radius:19px;
+ box-shadow:0 9px 28px #18423b0d;display:flex;flex-direction:column}
+.rl-course-card:focus-within,.rl-course-card:hover{border-color:#b7cec7;box-shadow:0 15px 35px #18423b17}
+.rl-course-card .rl-card-image{height:190px;overflow:hidden;background:#f7faf9;display:flex;align-items:center;justify-content:center}
+.rl-course-card img{width:100%;height:100%;object-fit:cover}
+.rl-course-card .rl-card-body{padding:23px;display:flex;flex-direction:column;align-items:flex-start;gap:9px;flex:1}
+.rl-course-card h3{margin:0}
+.rl-course-card p{margin:0;color:var(--rl-muted);line-height:1.6;font-size:14px}
+.rl-course-card .rl-card-action{color:var(--rl-forest);margin-top:auto;padding-top:15px;font-size:13px;font-weight:700}
+.rl-chip{font-size:11px;line-height:1.4;font-weight:700;padding:7px 11px;display:inline-flex;align-items:center;
+ background:#fff;border:1px solid var(--rl-border);color:var(--rl-forest)}
+.rl-chip--accent{color:var(--rl-copper-deep);border-color:#ebcab8;background:#fff9f5}
+.rl-chip--soon{background:#f5f8fd;color:#244f89;border-color:#d7e4f3}
+.rl-feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.rl-feature{padding:22px;border:1px solid var(--rl-border);border-radius:16px;background:#fff;min-width:0}
+.rl-feature strong{display:block;font-size:16px;margin:7px 0}
+.rl-feature p{font-size:13px;color:var(--rl-muted);margin:0;line-height:1.55}
+.rl-feature .rl-feature-icon{font-size:23px;color:var(--rl-copper-deep)}
+.rl-split{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(24px,5vw,70px)}
+.rl-white-panel{border:1px solid var(--rl-border);border-radius:22px;padding:clamp(23px,3vw,43px);background:#fff}
+.rl-white-panel p:last-child{margin-bottom:0}
+.rl-tile-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.rl-tile{display:block;text-decoration:none;min-width:0;min-height:128px;padding:23px;border:1px solid var(--rl-border);
+ border-radius:16px;background:#fff;box-shadow:0 8px 28px #0d49430a}
+.rl-tile:hover{border-color:var(--rl-forest)}
+.rl-tile strong{font-size:17px;display:block;margin:7px 0;color:var(--rl-ink)}
+.rl-tile span{color:var(--rl-muted);font-size:13px}
+.rl-page-banner{padding:55px 0 34px;max-width:1000px}
+.rl-page-banner p{max-width:750px;font-size:17px}
+.rl-breadcrumb{display:flex;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--rl-muted);margin-bottom:21px}
+.rl-filters{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}
+.rl-filter{font:600 12px var(--font-ui);display:inline-block;padding:10px 15px;background:#fff;color:var(--rl-forest);
+ border:1px solid var(--rl-border);border-radius:999px;text-decoration:none}
+.rl-filter[aria-current=page]{background:var(--rl-forest);color:#fff}
+.rl-program-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.rl-unit-link{display:grid;grid-template-columns:46px minmax(0,1fr) auto;align-items:center;gap:12px;padding:20px;
+ text-decoration:none;border:1px solid var(--rl-border);border-radius:14px;background:#fff}
+.rl-unit-link:hover,.rl-unit-link:focus-visible{border-color:var(--rl-forest);background:#fff!important}
+.rl-unit-num{color:var(--rl-copper-deep);font-weight:800;font-size:14px}
+.rl-unit-title{font-weight:650;font-size:15px;line-height:1.35}
+.rl-unit-state{color:var(--rl-muted);font-size:11px;white-space:nowrap}
+.rl-price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.rl-price{border:1px solid var(--rl-border);border-radius:19px;padding:28px;background:#fff;display:flex;flex-direction:column;gap:13px}
+.rl-price h3{margin:0;font-size:26px}
+.rl-price .button{margin-top:auto}
+.rl-price p{font-size:14px;color:var(--rl-muted)}
+.rl-price--featured{border-color:var(--rl-copper);box-shadow:0 12px 35px #8e412716}
+.rl-sequence{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.rl-sequence span{padding:17px 9px;text-align:center;border:1px solid var(--rl-border);border-radius:12px;font-size:12px;font-weight:650}
+.rl-status-note{border-left:4px solid var(--rl-blue);background:#fff;padding:19px 22px;
+ border-top:1px solid var(--rl-border);border-bottom:1px solid var(--rl-border);border-right:1px solid var(--rl-border);
+ border-radius:10px;font-size:14px;color:var(--rl-text)}
+/* Instructor: white canvas on every existing teaching page. */
+body.instructor-shell,body.instructor-shell.instructor-luxury{--paper:#fff;--surface:#fff;--white:#fff;--soft:#fff}
+body.instructor-shell .hubbody,body.instructor-shell.instructor-luxury .hubbody{background:#fff;grid-template-columns:235px minmax(0,1fr)}
+body.instructor-shell .sidebar,body.instructor-shell.instructor-luxury .sidebar{
+ background:#fff!important;border-right:1px solid var(--rl-border)!important;top:0;
+ padding:18px 12px!important;box-shadow:none!important
+}
+body.instructor-shell .sidebar .eyebrow{color:var(--rl-forest)!important}
+body.instructor-shell .sidebar .nav a,body.instructor-shell.instructor-luxury .sidebar .nav a{
+ color:var(--rl-text)!important;border:0!important;border-radius:10px!important;
+ font-size:13px!important;font-weight:550!important;min-height:44px
+}
+body.instructor-shell .sidebar .nav a[aria-current=page],body.instructor-shell.instructor-luxury .sidebar .nav a[aria-current=page]{
+ background:#edf6f3!important;color:var(--rl-forest)!important;border:0!important;font-weight:700!important
+}
+body.instructor-shell .sidebar .nav a:hover{background:#f2f8f6!important;color:var(--rl-forest)!important}
+body.instructor-shell .hubmain,body.instructor-shell.instructor-luxury .hubmain{
+ max-width:1600px;padding:clamp(23px,3.6vw,54px);background:#fff
+}
+body.instructor-shell .hubmain h1,body.instructor-shell.instructor-luxury .hubmain h1{
+ color:var(--rl-ink)!important;font-size:clamp(31px,3.7vw,54px);
+ font-family:Georgia,"Times New Roman",serif!important;font-weight:500!important
+}
+body.instructor-shell .hubmain h2,body.instructor-shell.instructor-luxury .hubmain h2{
+ color:var(--rl-ink)!important;font-family:Georgia,"Times New Roman",serif!important;font-weight:500!important
+}
+body.instructor-shell .card,body.instructor-shell .work-surface,body.instructor-shell .unitrow,
+body.instructor-shell .resource,body.instructor-shell .curriculum-unit,body.instructor-shell .practice-card {
+ background:#fff!important;border:1px solid var(--rl-border)!important;border-radius:15px!important;
+ box-shadow:0 5px 22px #143f3809!important
+}
+body.instructor-shell .curriculum-content,body.instructor-shell .curriculum-expand,
+body.instructor-shell .filters,body.instructor-shell .work-heading,body.instructor-shell .work-surface,
+body.instructor-shell .gourmet-carte,body.instructor-shell .gourmet-academy-strip{
+ background:#fff!important
+}
+body.instructor-shell .work-heading{border-color:var(--rl-border)!important}
+body.instructor-shell .filters{border:1px solid var(--rl-border)!important}
+body.instructor-shell :is(.unitrow,.resource,.card,.work-surface) h3{font-family:var(--font-ui);font-weight:650}
+body.instructor-shell .pill{background:#fff;color:var(--rl-forest)}
+body.instructor-shell .text-link{color:var(--rl-forest)}
+body.instructor-shell .sidebar summary{cursor:pointer;color:var(--rl-forest);font-weight:600}
+body.instructor-shell .rl-workspace-band{padding:18px 24px;margin:0 0 26px;background:#fff;
+ border:1px solid var(--rl-border);border-radius:16px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.rl-workspace-band strong{font-size:14px;color:var(--rl-forest)}
+.rl-workspace-band span{font-size:12px;color:var(--rl-muted)}
+body.instructor-shell.instructor-luxury .gourmet-hero{
+ border:1px solid var(--rl-border)!important;border-radius:24px!important;background:#fff!important;
+ overflow:hidden!important;padding:clamp(22px,3vw,44px)!important;gap:18px 36px!important
+}
+body.instructor-shell.instructor-luxury .gourmet-hero h1{color:var(--rl-ink)!important;
+ font-family:Georgia,"Times New Roman",serif!important;font-weight:500!important}
+body.instructor-shell.instructor-luxury .gourmet-hero h1 em{color:var(--rl-copper-deep)!important;font-style:normal}
+body.instructor-shell.instructor-luxury .gourmet-hero-media{
+ background:#fff!important;border:1px solid var(--rl-border)!important;border-radius:20px!important;
+ min-width:0;overflow:hidden
+}
+body.instructor-shell.instructor-luxury .gourmet-hero-media img{object-fit:contain}
+body.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{
+ background:#fff!important;border:1px solid var(--rl-border)!important;border-radius:17px!important;
+ box-shadow:0 5px 19px #0d49430c
+}
+body.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:nth-child(n){background:#fff!important;border-color:var(--rl-border)!important}
+body.instructor-shell.instructor-luxury .gourmet-menu h3{color:var(--rl-forest)!important}
+body.instructor-shell.instructor-luxury .gourmet-hero-media .gourmet-visual-heading h2{
+ font-family:Georgia,"Times New Roman",serif!important;color:var(--rl-forest)!important
+}
+body.instructor-shell.instructor-luxury .gourmet-academy-strip,
+body.instructor-shell.instructor-luxury .gourmet-workshop,
+body.instructor-shell.instructor-luxury .gourmet-declaration{background:#fff!important;color:var(--rl-ink)!important;border-color:var(--rl-border)!important}
+body.instructor-shell .teaching-toolbar,body.instructor-shell .builder-guide a,
+body.instructor-shell .checklist-grid .card,body.instructor-shell .reading,body.instructor-shell .source-text{
+ background:#fff!important
+}
+body.instructor-shell .badge-partial{background:#fff4e8!important;color:#88502e!important}
+body.instructor-shell .curriculum-category,body.instructor-shell .unit-sequence{background:#fff!important}
+body.instructor-shell .resource[hidden]{display:none!important}
+.rl-page-cta{font-weight:650}
+/* Mobile: no horizontal clipping, no menu overlay or inaccessible fixed sidebar */
+@media(max-width:1100px){
+ .rl-desktop-nav{gap:0}.rl-desktop-nav a{padding:7px;font-size:12px}
+ .rl-top-workspace-links{display:none}
+ .rl-public-hero{min-height:0}
+ .rl-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rl-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rl-sequence{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:800px){
+ .rl-desktop-nav{display:none}.rl-mobile-menu{display:block}
+ body.instructor-shell .toprow{flex-wrap:wrap}
+ body.instructor-shell .hubbody,body.instructor-shell.instructor-luxury .hubbody{display:block}
+ body.instructor-shell .sidebar,body.instructor-shell.instructor-luxury .sidebar{
+  position:static!important;max-height:none!important;overflow:visible!important;
+  border-right:0!important;border-bottom:1px solid var(--rl-border)!important;padding:12px 16px!important
+ }
+ body.instructor-shell .sidebar>.eyebrow{display:none}
+ body.instructor-shell .sidebar .nav{flex-direction:row;display:flex;flex-wrap:nowrap;
+  gap:6px;overflow-x:auto;overscroll-behavior-inline:contain;padding-bottom:8px;scrollbar-width:thin}
+ body.instructor-shell .sidebar .nav a{white-space:nowrap!important;flex:none!important}
+ body.instructor-shell .sidebar .nav-extra{padding:5px 0;border:0!important}
+ body.instructor-shell .sidebar .nav-extra summary{padding:6px 12px!important}
+ body.instructor-shell .hubmain,body.instructor-shell.instructor-luxury .hubmain{padding:24px 18px!important}
+ .rl-public-hero{grid-template-columns:1fr;gap:20px;padding:35px 0}
+ .rl-visual{min-height:290px;max-height:420px}
+ .rl-split{grid-template-columns:1fr}
+ .rl-price-grid{grid-template-columns:1fr}
+ .rl-tile-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rl-program-list{grid-template-columns:1fr}
+ .rl-sequence{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .rl-unit-link{grid-template-columns:36px minmax(0,1fr) auto;padding:17px}
+ body.instructor-shell.instructor-luxury .gourmet-hero{grid-template-columns:1fr!important}
+ .gourmet-hero-media{grid-column:1!important;grid-row:auto!important}
+ .gourmet-hero-copy>.gourmet-overline,.gourmet-hero-copy>h1,
+ .gourmet-hero-copy>.gourmet-hero-description,.gourmet-hero-actions,.gourmet-hero-caption{grid-column:1!important}
+ .gourmet-carte,.gourmet-academy-strip{grid-column:1!important;grid-row:auto!important}
+}
+@media(max-width:550px){
+ .toprow{min-height:72px!important}
+ body .brand,body.instructor-shell .brand{font-size:18px!important}
+ .risto-brand-symbol{height:34px;width:34px}
+ .brand small{font-size:7px!important}
+ .rl-card-grid,.rl-feature-grid,.rl-tile-row{grid-template-columns:1fr}
+ .rl-hero-metrics{gap:7px}
+ .rl-hero-metrics span{font-size:11px}
+ .rl-public-hero .rl-hero-copy h1{font-size:clamp(38px,9vw,54px)}
+ .rl-visual{min-height:240px}
+ .rl-card-image{height:180px!important}
+ .rl-sequence{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rl-unit-link{grid-template-columns:26px minmax(0,1fr);gap:8px}
+ .rl-unit-state{grid-column:2}
+ .rl-workspace-band{flex-wrap:wrap}
+ .footer .wrap{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){.rl-course-card,.rl-tile,button,.button{transition:none!important;transform:none!important}}
+@media print{
+ html,body,body.instructor-shell,body.instructor-shell.instructor-luxury{background:#fff!important;color:#111!important}
+ .rl-mobile-menu,.rl-desktop-nav,.rl-top-workspace-links{display:none!important}
+ .rl-course-card,.rl-white-panel,.rl-feature,.rl-price{box-shadow:none!important}
+}
+
+/* Contrast correction after browser accessibility inspection. */
+body.instructor-shell .gourmet-menu-study,
+body.instructor-shell.instructor-luxury .gourmet-menu-study{
+ background:#fff!important;border:1px solid var(--rl-border)!important;color:var(--rl-ink)!important
+}
+body.instructor-shell .gourmet-menu-study .eyebrow,
+body.instructor-shell .gourmet-menu-study p:not(.eyebrow){
+ color:#345a53!important
+}
+@media(max-width:800px){
+ body.instructor-shell .hubmain,body.instructor-shell .gourmet-dashboard,body.instructor-shell .gourmet-hero,
+ body.instructor-shell .gourmet-menu-study,body.instructor-shell .gourmet-hero-media{
+  min-width:0!important;max-width:100%!important
+ }
+ body.instructor-shell .gourmet-menu-study .gourmet-cta{white-space:normal!important}
+ body.instructor-shell.instructor-luxury .quick-access.gourmet-menu{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important
+ }
+}
+@media(max-width:550px){
+ body.instructor-shell.instructor-luxury .quick-access.gourmet-menu{
+  grid-template-columns:minmax(0,1fr)!important
+ }
+}
+
+/* Ensure links in expandable curriculum sequences are AA-readable. */
+body.instructor-shell .curriculum-unit ol a,
+body.instructor-shell .unit-sequence ol a,
+body.instructor-shell .curriculum-expand ol a{
+ color:var(--rl-forest)!important;font-weight:650!important;
+ text-decoration-thickness:1px;text-underline-offset:3px
+}
+
+/* Real reflow fix: avoid intrinsic grid width exceeding the device at 200% text.
+   Preserve access to all fields; do not clip or hide content. */
+@media(max-width:800px){
+ body.instructor-shell #teaching-form .workflow-columns{
+  grid-template-columns:minmax(0,1fr)!important;min-width:0!important;max-width:100%!important
+ }
+ body.instructor-shell #teaching-form .workflow-columns > *,
+ body.instructor-shell #teaching-form .workflow-columns :is(label,select,input,textarea,fieldset){
+  min-width:0!important;max-width:100%!important
+ }
+ body.instructor-shell #teaching-form :is(.metadata-fields,.block-fields,.meeting-options){
+  min-width:0!important;max-width:100%!important
+ }
+}
+
+/* Breadcrumb and inline curriculum links must retain AA contrast at any width. */
+body.instructor-shell .breadcrumbs a,
+body.instructor-shell .hubmain ol li a,
+body.instructor-shell .hubmain .unit-sequence a,
+body.instructor-shell .hubmain .curriculum-content a:not(.button){
+ color:var(--rl-forest)!important;
+}

@@ -339,3 +339,11 @@ body.instructor-shell .gourmet-menu-study p:not(.eyebrow){
   grid-template-columns:minmax(0,1fr)!important
  }
 }
+
+/* Ensure links in expandable curriculum sequences are AA-readable. */
+body.instructor-shell .curriculum-unit ol a,
+body.instructor-shell .unit-sequence ol a,
+body.instructor-shell .curriculum-expand ol a{
+ color:var(--rl-forest)!important;font-weight:650!important;
+ text-decoration-thickness:1px;text-underline-offset:3px
+}

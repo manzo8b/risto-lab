@@ -3,13 +3,13 @@ import {withBase} from '../../lib/urls';
 import Public from '../../layouts/Public.astro';
 
 const highlights=[
- {kind:'PERCORSO · GUIDATO',title:'Il Servizio in Sala',detail:'Un curriculum in 26 unità: fondamenti, operatività, professionalità, simulazioni e verifica.',href:'/instructor/programmi/il-servizio-in-sala/',image:'/materiali/res-visual-ciclo-servizio.png',alt:'Visuale didattica del ciclo del servizio'},
- {kind:'UNITÀ 06 · IN REVISIONE',title:'La mise en place',detail:'Preparare la tavola con ordine, pulizia e coerenza. Materiali, checklist e masterclass.',href:'/instructor/unita/06-la-mise-en-place/',image:'/materiali/res-mep-image.webp',alt:'Infografica Risto-Lab sulla mise en place'},
- {kind:'GRATUITO · NON CERTIFICANTE',title:'Conoscere la sicurezza',detail:'Cinque lezioni pubbliche: esempi, riferimenti ufficiali e quiz di autovalutazione.',href:'/instructor/laboratorio-sicurezza/lezioni/',image:'/materiali/res-visual-igiene.png',alt:'Illustrazione didattica relativa alla sicurezza e all’igiene'}
+ {kind:'CURRICULUM · 26 UNITÀ',title:'Il Servizio in Sala',evidence:'26 unità formative · percorso guidato',detail:'Un curriculum che collega fondamenti, operatività e simulazioni del servizio.',href:'/instructor/programmi/il-servizio-in-sala/',image:'/materiali/res-visual-ciclo-servizio.png',alt:'Visuale didattica del ciclo del servizio'},
+ {kind:'UNITÀ 06 · PARZIALE',title:'La mise en place',evidence:'12 slide · laboratorio · checklist',detail:'Preparazione del coperto, controllo della qualità e prova pratica guidata.',href:'/instructor/unita/06-la-mise-en-place/',image:'/materiali/res-mep-image.webp',alt:'Infografica Risto-Lab sulla mise en place'},
+ {kind:'RISORSA LIBERA · 5 LEZIONI',title:'Conoscere la sicurezza',evidence:'5 lezioni · 15 domande guidate',detail:'Materiale aperto, con riferimenti normativi e quiz non certificanti.',href:'/instructor/laboratorio-sicurezza/lezioni/',image:'/materiali/res-visual-igiene.png',alt:'Illustrazione didattica relativa alla sicurezza e all’igiene'}
 ];
 const pathways=[
  {icon:'◈',name:'Servizio in sala',detail:'Preparazione, accoglienza, servizio e chiusura.',href:'/programmi/#servizio'},
- {icon:'◇',name:'Sicurezza',detail:'Materiali divulgativi e pratica contestualizzata.',href:'/gratuita/'},
+ {icon:'◇',name:'Sicurezza',detail:'Materiali divulgativi e pratica contestualizzata.',href:'/risorse/'},
  {icon:'▤',name:'Menu Engineering',detail:'Leggere, progettare e rendere più chiaro un menu.',href:'/instructor/menu-engineering/'},
  {icon:'◎',name:'Instructor Hub',detail:'Progettare lezioni, selezionare risorse, condurre in aula.',href:'/instructor/'}
 ];
@@ -19,32 +19,32 @@ const pathways=[
  <section class="rl-public-hero" aria-labelledby="rl-home-title">
   <div class="rl-hero-copy">
    <p class="rl-eyebrow-line">RISTO-LAB / HOSPITALITY TRAINING</p>
-   <h1 id="rl-home-title">Il servizio si impara.<br/><em>La qualità si costruisce.</em></h1>
+   <h1 id="rl-home-title">Il servizio si impara<br/><em>La qualità si costruisce</em></h1>
    <p class="lead muted">La formazione incontra il lavoro reale nella ristorazione. Competenze di sala, simulazioni, laboratori e strumenti concreti per chi insegna e per chi vuole imparare.</p>
-   <div class="actions"><a class="button" href={withBase('/programmi/')}>Esplora il curriculum ↗</a><a class="button secondary" href={withBase('/gratuita/')}>Inizia dalle lezioni gratuite</a></div>
+   <div class="actions"><a class="button" href={withBase('/programmi/')}>Esplora il curriculum ↗</a><a class="button secondary" href={withBase('/risorse/')}>Scopri le risorse libere</a></div>
    <div class="rl-hero-metrics"><span>◉ 26 unità del curriculum</span><span>◈ 5 lezioni gratuite</span><span>◇ Approccio pratico</span></div>
   </div>
   <div class="rl-visual"><img src={withBase('/materiali/res-mep-image.webp')} alt="Infografica didattica originale Risto-Lab: preparazione della mise en place" width="860" height="740" fetchpriority="high"/><span class="rl-photo-label">Unità 06 · La mise en place</span></div>
  </section>
 
- <section class="section" id="in-evidenza">
+ <section class="section rl-band--sage" id="in-evidenza">
   <div class="rl-section-head"><div><p class="rl-eyebrow-line">SCOPRI I MATERIALI</p><h2>Da dove iniziare</h2></div><a class="rl-link" href={withBase('/programmi/')}>Tutte le unità del programma ↗</a></div>
-  <div class="rl-card-grid">{highlights.map(card=><article class="rl-course-card"><a class="rl-card-image" href={withBase(card.href)} aria-label={'Apri '+card.title}><img src={withBase(card.image)} alt={card.alt} loading="lazy" decoding="async"/></a><div class="rl-card-body"><span class="rl-chip rl-chip--accent">{card.kind}</span><h3>{card.title}</h3><p>{card.detail}</p><a class="rl-card-action" href={withBase(card.href)}>Esplora il materiale ↗</a></div></article>)}</div>
+  <div class="rl-card-grid">{highlights.map(card=><article class="rl-course-card"><a class="rl-card-image" href={withBase(card.href)} aria-label={'Apri '+card.title}><img src={withBase(card.image)} alt={card.alt} loading="lazy" decoding="async"/></a><div class="rl-card-body"><span class="rl-chip rl-chip--accent">{card.kind}</span><h3>{card.title}</h3><p>{card.detail}</p><p class="rl-card-meta"><strong>{card.evidence}</strong></p><a class="rl-card-action" href={withBase(card.href)}>Esplora il materiale ↗</a></div></article>)}</div>
  </section>
- <section class="section" id="ambiti">
-  <div class="rl-section-head"><div><p class="rl-eyebrow-line">TROVA IL TUO PERCORSO</p><h2>Formazione e strumenti, con una logica chiara.</h2></div></div>
+ <section class="section rl-band--white" id="ambiti">
+  <div class="rl-section-head"><div><p class="rl-eyebrow-line">TROVA IL TUO PERCORSO</p><h2>Formazione e strumenti, con una logica chiara</h2></div></div>
   <div class="rl-feature-grid">{pathways.map(p=><a class="rl-feature" href={withBase(p.href)} style="text-decoration:none"><span class="rl-feature-icon" aria-hidden="true">{p.icon}</span><strong>{p.name}</strong><p>{p.detail}</p></a>)}</div>
  </section>
- <section class="section" id="metodo">
-  <div class="rl-split"><div><p class="rl-eyebrow-line">IL METODO RISTO-LAB</p><h2>Non basta leggere.<br/>Bisogna saper fare.</h2><p class="lead muted">Spiegazioni essenziali, dimostrazioni, attività pratiche e feedback. Una buona lezione prepara un gesto osservabile; un laboratorio permette di ripeterlo e migliorarlo.</p><a class="button secondary" href={withBase('/formazione/')}>Come funziona la formazione ↗</a></div><div class="rl-white-panel"><div class="rl-sequence"><span>Capire</span><span>Osservare</span><span>Provare</span><span>Correggere</span><span>Ripetere</span><span>Simulare</span><span>Valutare</span></div><p class="muted" style="margin-top:20px">La valutazione pratica richiede un docente e un contesto reale: i test automatici non dimostrano da soli una competenza professionale.</p></div></div>
+ <section class="section rl-band--blue" id="metodo">
+  <div class="rl-split"><div><p class="rl-eyebrow-line">IL METODO RISTO-LAB</p><h2>Non basta leggere<br/>Bisogna saper fare</h2><p class="lead muted">Spiegazioni essenziali, dimostrazioni, attività pratiche e feedback. Una buona lezione prepara un gesto osservabile; un laboratorio permette di ripeterlo e migliorarlo.</p><a class="button secondary" href={withBase('/formazione/')}>Come funziona la formazione ↗</a></div><div class="rl-white-panel"><div class="rl-sequence"><span>Capire</span><span>Osservare</span><span>Provare</span><span>Correggere</span><span>Ripetere</span><span>Simulare</span><span>Valutare</span></div><p class="muted" style="margin-top:20px">La valutazione pratica richiede un docente e un contesto reale: i test automatici non dimostrano da soli una competenza professionale.</p></div></div>
  </section>
- <section class="section">
-  <div class="rl-section-head"><div><p class="rl-eyebrow-line">UN ECOSISTEMA, TRE DESTINATARI</p><h2>Il formato giusto per ogni esigenza.</h2></div></div>
-  <div class="rl-tile-row"><a class="rl-tile" href={withBase('/gratuita/')}><span class="rl-chip">DISPONIBILE</span><strong>Gratuita</strong><span>Lezioni aperte per cominciare, senza iscrizione.</span></a><a class="rl-tile" href={withBase('/premium/')}><span class="rl-chip rl-chip--soon">IN PROGETTAZIONE</span><strong>Premium</strong><span>Un futuro percorso digitale più approfondito.</span></a><a class="rl-tile" href={withBase('/aziende/')}><span class="rl-chip rl-chip--soon">DA DEFINIRE</span><strong>Aziende</strong><span>Proposte guidate per gruppi e contesti organizzativi.</span></a></div>
+ <section class="section rl-band--clay">
+  <div class="rl-section-head"><div><p class="rl-eyebrow-line">UN ECOSISTEMA, TRE DESTINATARI</p><h2>Scegli come accedere ai materiali</h2></div></div>
+  <div class="rl-resource-grid"><a class="rl-resource-panel" href={withBase('/risorse/')} style="text-decoration:none"><span class="rl-panel-icon" aria-hidden="true">◈</span><span class="rl-chip">DISPONIBILI ORA</span><h3>Risorse libere</h3><p>Cinque lezioni aperte sulla sicurezza, checklist, materiali per la mise en place e strumenti per la pratica</p><span class="rl-link">Esplora le risorse ↗</span></a><a class="rl-resource-panel rl-resource-panel--premium" href={withBase('/premium/')} style="text-decoration:none"><span class="rl-panel-icon" aria-hidden="true">✧</span><span class="rl-chip rl-chip--soon">IN PROGETTAZIONE</span><h3>Percorsi Premium</h3><p>Un futuro ambiente di apprendimento approfondito con percorsi guidati e attività formative verificate</p><span class="rl-link">Scopri il progetto Premium ↗</span></a></div><div class="rl-status-note" style="margin-top:22px"><strong>Per le aziende</strong> — è in studio un modello formativo per gruppi di lavoro e organizzazioni <a class="rl-link" href={withBase('/aziende/')}>Esplora l'area Aziende ↗</a></div>
  </section>
- <section class="section">
-  <div class="rl-split"><div><p class="rl-eyebrow-line">PER CHI INSEGNA</p><h2>Una regia per le tue lezioni.</h2><p class="muted">L'Instructor Hub raccoglie materiali, curriculum, biblioteca e una vista per la conduzione in aula. Le bozze restano nel browser corrente e non sono sincronizzate tra dispositivi.</p><a class="button" href={withBase('/instructor/')}>Entra nell'Instructor Hub ↗</a></div><div class="rl-white-panel"><p class="rl-eyebrow-line">STRUMENTI DISPONIBILI</p><div class="rl-feature-grid" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div class="rl-feature"><strong>Programma</strong><p>26 unità organizzate.</p></div><div class="rl-feature"><strong>Biblioteca</strong><p>Risorse di lavoro.</p></div><div class="rl-feature"><strong>Lezioni</strong><p>Piani salvati localmente.</p></div><div class="rl-feature"><strong>Aula</strong><p>Presentazione guidata.</p></div></div></div></div>
+ <section class="section rl-band--sage">
+  <div class="rl-split"><div><p class="rl-eyebrow-line">PER CHI INSEGNA</p><h2>Una regia per le tue lezioni</h2><p class="muted">L'Instructor Hub raccoglie materiali, curriculum, biblioteca e una vista per la conduzione in aula. Le bozze restano nel browser corrente e non sono sincronizzate tra dispositivi.</p><a class="button" href={withBase('/instructor/')}>Entra nell'Instructor Hub ↗</a></div><div class="rl-white-panel"><p class="rl-eyebrow-line">STRUMENTI DISPONIBILI</p><div class="rl-feature-grid" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div class="rl-feature"><strong>Programma</strong><p>26 unità organizzate.</p></div><div class="rl-feature"><strong>Biblioteca</strong><p>Risorse di lavoro.</p></div><div class="rl-feature"><strong>Lezioni</strong><p>Piani salvati localmente.</p></div><div class="rl-feature"><strong>Aula</strong><p>Presentazione guidata.</p></div></div></div></div>
  </section>
- <section class="contact-band"><p class="rl-eyebrow-line">RISTO-LAB · FORMAZIONE APPLICATA</p><h2>La professionalità nasce dai dettagli.</h2><a class="button" href={withBase('/contatti/')}>Contatti e progetto ↗</a></section>
+ <section class="contact-band"><p class="rl-eyebrow-line">RISTO-LAB · FORMAZIONE APPLICATA</p><h2>La professionalità nasce dai dettagli</h2><a class="button" href={withBase('/contatti/')}>Contatti e progetto ↗</a></section>
 </div>
 </Public>

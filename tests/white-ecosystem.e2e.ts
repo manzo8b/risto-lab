@@ -33,7 +33,10 @@ test('200 percent typography preserves horizontal reflow on instructor workflows
     const x=el.getBoundingClientRect();
     return x.width>0&&(x.right>vw+1||x.left< -1);
    }).slice(0,12).map(el=>({tag:el.tagName,cls:String(el.className).slice(0,80),right:Math.round(el.getBoundingClientRect().right)}));
-   return {viewport:vw,width:htmlWidth,offenders};
+   const sectors=['.sidebar','.hubbody','.hubcontent','.hubmain','#teaching-form','.workflow-columns','.builder-guide','.teaching-toolbar','.session-timing','#session-resources','.metadata-fields'];
+   const regions=sectors.map(sel=>{const el=document.querySelector(sel);if(!el)return null;const b=el.getBoundingClientRect();return {sel,left:Math.round(b.left),right:Math.round(b.right),width:Math.round(b.width),scroll:el.scrollWidth,client:el.clientWidth};}).filter(Boolean);
+   const outer=Array.from(document.querySelectorAll('*')).filter(el=>{const b=el.getBoundingClientRect();if(!(b.width>0&&b.right>vw+1))return false;for(let parent=el.parentElement;parent;parent=parent.parentElement){const sx=getComputedStyle(parent).overflowX;if(['auto','scroll'].includes(sx)&&parent.scrollWidth>parent.clientWidth)return false;}return true;}).slice(0,20).map(el=>({tag:el.tagName,cls:typeof el.className==='string'?el.className.slice(0,70):'',right:Math.round(el.getBoundingClientRect().right)}));
+   return {viewport:vw,width:htmlWidth,offenders,regions,outer};
   });
   expect(geometry.width<=geometry.viewport,JSON.stringify({path,geometry})).toBeTruthy();
  }

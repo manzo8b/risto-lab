@@ -314,3 +314,28 @@ body.instructor-shell .resource[hidden]{display:none!important}
  .rl-mobile-menu,.rl-desktop-nav,.rl-top-workspace-links{display:none!important}
  .rl-course-card,.rl-white-panel,.rl-feature,.rl-price{box-shadow:none!important}
 }
+
+/* Contrast correction after browser accessibility inspection. */
+body.instructor-shell .gourmet-menu-study,
+body.instructor-shell.instructor-luxury .gourmet-menu-study{
+ background:#fff!important;border:1px solid var(--rl-border)!important;color:var(--rl-ink)!important
+}
+body.instructor-shell .gourmet-menu-study .eyebrow,
+body.instructor-shell .gourmet-menu-study p:not(.eyebrow){
+ color:#345a53!important
+}
+@media(max-width:800px){
+ body.instructor-shell .hubmain,body.instructor-shell .gourmet-dashboard,body.instructor-shell .gourmet-hero,
+ body.instructor-shell .gourmet-menu-study,body.instructor-shell .gourmet-hero-media{
+  min-width:0!important;max-width:100%!important
+ }
+ body.instructor-shell .gourmet-menu-study .gourmet-cta{white-space:normal!important}
+ body.instructor-shell.instructor-luxury .quick-access.gourmet-menu{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important
+ }
+}
+@media(max-width:550px){
+ body.instructor-shell.instructor-luxury .quick-access.gourmet-menu{
+  grid-template-columns:minmax(0,1fr)!important
+ }
+}

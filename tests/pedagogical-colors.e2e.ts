@@ -15,15 +15,17 @@ const paths={
 test('public pages show purposeful, differentiated learning colors',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(paths.home);
- await expect(page.locator('.editorial-hero')).toBeVisible();
- const hero=await page.locator('.editorial-hero').evaluate(el=>getComputedStyle(el).backgroundImage);
- expect(hero).toContain('linear-gradient');
- const action=await page.locator('.editorial-hero .button:not(.secondary)').evaluate(el=>getComputedStyle(el).backgroundColor);
- expect(action).toBe('rgb(12, 97, 93)');
- await expect(page.locator('.story-bridge')).toBeVisible();
+ await expect(page.locator('.rl-public-hero')).toBeVisible();
+ const heroCanvas=await page.evaluate(()=>getComputedStyle(document.body).backgroundColor);
+ expect(heroCanvas).toBe('rgb(255, 255, 255)');
+ const action=await page.locator('.rl-public-hero .button:not(.secondary)').evaluate(el=>getComputedStyle(el).backgroundColor);
+ expect(action).toBe('rgb(13, 73, 67)');
+ await expect(page.locator('.rl-course-card')).toHaveCount(3);
  await page.goto(paths.formazione);
- const bands=await page.locator('.cycle>div').evaluateAll(items=>items.map(el=>getComputedStyle(el).backgroundColor));
- expect(new Set(bands).size).toBeGreaterThanOrEqual(4);
+ await expect(page.locator('.rl-sequence span')).toHaveCount(7);
+ const formationCanvas=await page.evaluate(()=>getComputedStyle(document.body).backgroundColor);
+ expect(formationCanvas).toBe('rgb(255, 255, 255)');
+ await expect(page.getByRole('link',{name:/Apri le cinque lezioni gratuite/})).toBeVisible();
  expect(errors).toEqual([]);
 });
 
@@ -31,8 +33,9 @@ test('instructor home and legal teaching paths have visible semantic hierarchy',
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(paths.instructor);
  await expect(page.locator('.sidebar')).toBeVisible();
- const sidebar=await page.locator('.sidebar').evaluate(el=>getComputedStyle(el).backgroundImage);
- expect(sidebar).toContain('linear-gradient');
+ const sidebar=await page.locator('.sidebar').evaluate(el=>getComputedStyle(el).backgroundColor);
+ expect(sidebar).toBe('rgb(255, 255, 255)');
+ await expect(page.locator('.sidebar a[aria-current="page"]').first()).toBeVisible();
  await page.goto(paths.lessons);
  const cardColors=await page.locator('.lesson-card').evaluateAll(items=>items.map(el=>getComputedStyle(el).backgroundColor));
  expect(new Set(cardColors).size).toBe(5);

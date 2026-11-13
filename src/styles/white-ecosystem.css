@@ -347,3 +347,18 @@ body.instructor-shell .curriculum-expand ol a{
  color:var(--rl-forest)!important;font-weight:650!important;
  text-decoration-thickness:1px;text-underline-offset:3px
 }
+
+/* Real reflow fix: avoid intrinsic grid width exceeding the device at 200% text.
+   Preserve access to all fields; do not clip or hide content. */
+@media(max-width:800px){
+ body.instructor-shell #teaching-form .workflow-columns{
+  grid-template-columns:minmax(0,1fr)!important;min-width:0!important;max-width:100%!important
+ }
+ body.instructor-shell #teaching-form .workflow-columns > *,
+ body.instructor-shell #teaching-form .workflow-columns :is(label,select,input,textarea,fieldset){
+  min-width:0!important;max-width:100%!important
+ }
+ body.instructor-shell #teaching-form :is(.metadata-fields,.block-fields,.meeting-options){
+  min-width:0!important;max-width:100%!important
+ }
+}

@@ -2,7 +2,7 @@
 Data: 13 novembre 2026. Ambito: preparazione della tavola e attività pratica. Stato: proposta pronta per revisione umana, **non COMPLETE**.
 
 ## Criticità affrontata
-Prima dell'intervento l'unità 06 dichiarava un solo obiettivo generico («capire»). Il nuovo catalogo propone cinque risultati osservabili: selezione degli elementi, preparazione, controllo, individuazione degli errori, ripetizione dopo feedback. Il contenuto resta PARTIAL fino a prova pratica ed editoriale.
+Prima dell'intervento l'unità 06 dichiarava un solo obiettivo generico («capire»). La pagina didattica espone cinque risultati osservabili: selezione degli elementi, preparazione, controllo, individuazione degli errori, ripetizione dopo feedback. Il catalogo canonico conserva volutamente il precedente obiettivo generico perché è protetto da diversi test di regressione storici: questa fase non modifica gli snapshot congelati. Il contenuto resta PARTIAL fino a prova pratica ed editoriale.
 
 ## Materiale aggiunto
 - 12 slide web statiche in `public/materiali/mise-en-place-masterclass.html`, accessibili dalla pagina dell'unità

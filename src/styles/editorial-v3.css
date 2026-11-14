@@ -6,8 +6,8 @@
   --rl-dark:#151a1e;
   --rl-sage:#eff5f1;
   --rl-glacier:#eef5f9;
-  --rl-clay:#faf3e9;
-  --rl-rose:#f7f0ee;
+  --rl-clay:#ffffff;
+  --rl-rose:#ffffff;
 }
 html,body,body.rl-public,body.instructor-shell{background:#fff!important}
 body.rl-public{color:var(--rl-dark)}
@@ -19,7 +19,7 @@ body .brand .risto-wordmark small{color:#495151!important;letter-spacing:.13em!i
 body .brand .risto-brand-symbol{width:51px;height:51px;object-fit:contain;border:0;background:transparent}
 body .brand i{color:var(--rl-gold)!important}
 body.rl-public .topbar,body.instructor-shell .topbar{box-shadow:0 8px 30px #131a2108!important}
-body.rl-public .rl-desktop-nav a[aria-current=page]{background:#f3eee4;color:#2a2822}
+body.rl-public .rl-desktop-nav a[aria-current=page]{background:#ffffff;color:#2a2822}
 body.rl-public .rl-desktop-nav a.rl-nav-cta{background:#151a1e!important;border:1px solid #151a1e!important}
 body.rl-public .rl-desktop-nav a.rl-nav-cta:hover{background:#303739!important}
 body.rl-public .rl-public-hero{min-height:570px;padding-block:clamp(50px,6.5vw,100px);gap:clamp(25px,4vw,80px)}
@@ -108,8 +108,8 @@ body.rl-public .rl-resource-panel{display:flex;min-height:245px;flex-direction:c
 body.rl-public .rl-resource-panel h3{font:560 clamp(26px,2.6vw,38px)/1.1 Georgia,serif;color:#19221e}
 body.rl-public .rl-resource-panel p{color:#4c5c55;font-size:15px;max-width:50ch}
 body.rl-public .rl-resource-panel .rl-panel-icon{display:grid;place-items:center;width:47px;height:47px;border:1px solid #cbd8d1;border-radius:15px;background:#eff6f2;color:#18554d;font-size:23px}
-body.rl-public .rl-resource-panel--premium{border-color:#e4d4bd}
-body.rl-public .rl-resource-panel--premium .rl-panel-icon{background:#faf1e3;color:#866224}
+body.rl-public .rl-resource-panel--premium{border-color:#cbd7e9}
+body.rl-public .rl-resource-panel--premium .rl-panel-icon{background:#ffffff;color:#866224}
 body.rl-public .rl-resource-panel .rl-link{margin-top:auto}
 body.rl-public .rl-page-banner h1{font-weight:540}
 body.rl-public .rl-program-list .rl-unit-link{min-height:86px}

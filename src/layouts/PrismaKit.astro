@@ -4,6 +4,7 @@ import '../styles/prisma-kit.css';
 import '../styles/manzo-signature.css';
 import '../styles/contact-header.css';
 import whiteEcosystemStyles from '../styles/white-ecosystem.css?url';
+import academyStyles from '../styles/academy-v4.css?url';
 import ContactHeader from '../components/ContactHeader.astro';
 import ManzoSignature from '../components/ManzoSignature.astro';
 import {withBase} from '../lib/urls';
@@ -32,7 +33,7 @@ const nav=[
  <link rel="icon" href={withBase('/favicon.svg')}/>
  <title>{title} | P.R.I.S.M.A. HSE</title>
 </head>
-<body class="prisma-page"><link rel="stylesheet" href={whiteEcosystemStyles}/>
+<body class="prisma-page"><link rel="stylesheet" href={whiteEcosystemStyles}/><link rel="stylesheet" href={academyStyles}/>
  <a class="skip" href="#prisma-content">Salta al contenuto</a>
  <header class="prisma-top">
   <div class="prisma-container prisma-top-inner">

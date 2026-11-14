@@ -11,9 +11,9 @@
   --learning-gold:#7B4B10;
   --learning-teal-tint:#E6F4EE;
   --learning-blue-tint:#E9F1FF;
-  --learning-clay-tint:#FFF0E9;
+  --learning-clay-tint:#ffffff;
   --learning-violet-tint:#F2ECFF;
-  --learning-gold-tint:#FFF2D9;
+  --learning-gold-tint:#ffffff;
   --learning-focus:#B13F28;
 }
 
@@ -42,7 +42,7 @@ body:not(.instructor-shell) .button.secondary{
 }
 body:not(.instructor-shell) .button.secondary:hover{background:#D9E8FC}
 body:not(.instructor-shell) .hero.editorial-hero{
-  background:linear-gradient(112deg,#FFF5E4 0%,#FFFFFF 61%,#E9F1FF 100%);
+  background:linear-gradient(112deg,#ffffff 0%,#FFFFFF 61%,#E9F1FF 100%);
   border-left:6px solid var(--learning-clay);
   padding-left:clamp(18px,3.5vw,44px);
   padding-right:clamp(14px,2vw,26px);
@@ -150,7 +150,7 @@ body:not(.instructor-shell) .footer{border-top:4px solid var(--learning-teal)}
 }
 .instructor-shell .work-heading{
   padding:26px 30px;
-  background:linear-gradient(110deg,#E8F0FF 0%,#FFF2E7 100%);
+  background:linear-gradient(110deg,#E8F0FF 0%,#ffffff 100%);
   border-left:5px solid var(--learning-blue);
   border-radius:0 10px 10px 0;
 }
@@ -248,7 +248,7 @@ body:not(.instructor-shell) .footer{border-top:4px solid var(--learning-teal)}
 /* Five-lesson library: five different learning "chapters", not five grey cards. */
 .instructor-shell .course-head{
   max-width:none;
-  background:linear-gradient(112deg,#E9F1FF 0%,#F2ECFF 55%,#FFF2D9 100%);
+  background:linear-gradient(112deg,#E9F1FF 0%,#F2ECFF 55%,#ffffff 100%);
   padding:clamp(22px,3.5vw,40px);
   border-left:5px solid var(--learning-blue);
   border-radius:0 10px 10px 0;
@@ -311,7 +311,7 @@ body:not(.instructor-shell) .footer{border-top:4px solid var(--learning-teal)}
 .instructor-shell .glossary>div:nth-child(3n+1){border-top:4px solid var(--learning-blue);background:var(--learning-blue-tint)}
 .instructor-shell .glossary>div:nth-child(3n+2){border-top:4px solid var(--learning-teal);background:var(--learning-teal-tint)}
 .instructor-shell .glossary>div:nth-child(3n+3){border-top:4px solid var(--learning-violet);background:var(--learning-violet-tint)}
-.instructor-shell .lesson-q{border-left:4px solid var(--learning-gold);background:#FFFDF7}
+.instructor-shell .lesson-q{border-left:4px solid var(--learning-gold);background:#ffffff}
 .instructor-shell .source-section .faq-update{background:var(--learning-gold-tint);border-color:#DBBC75}
 
 /* Teacher guide & scenarios: color conveys editorial roles only; words remain explicit. */

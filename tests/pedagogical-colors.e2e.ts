@@ -37,7 +37,7 @@ test('instructor home and legal teaching paths have visible semantic hierarchy',
  expect(sidebar).toBe('rgb(255, 255, 255)');
  await expect(page.locator('.sidebar a[aria-current="page"]').first()).toBeVisible();
  await page.goto(paths.lessons);
- const cardColors=await page.locator('.lesson-card').evaluateAll(items=>items.map(el=>getComputedStyle(el).backgroundColor));
+ const cardColors=await page.locator('.lesson-card').evaluateAll(items=>items.map(el=>getComputedStyle(el).borderTopColor));
  expect(new Set(cardColors).size).toBe(5);
  await page.goto(paths.lesson);
  await expect(page.locator('.norm-reference')).toHaveCount(3);

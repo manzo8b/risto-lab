@@ -1,5 +1,5 @@
 /* RISTO-LAB · Practical clarity, editorial precision. Content and controls unchanged. */
-:root{--ink-navy:#192e40;--ink:#192e40;--graphite:#253846;--deep-teal:#265e77;--paper:#fff;--warm-ivory:#f7f8fa;--white:#fff;--surface:#fff;--muted:#5d6c78;--line:#dfe5eb;--soft:#eef3f8;--accent:#a8472a;--font-editorial:var(--font-ui);--radius:12px;--radius-lg:16px;--font-ui:-apple-system,BlinkMacSystemFont,'Helvetica Neue','Segoe UI',Arial,sans-serif}
+:root{--ink-navy:#192e40;--ink:#192e40;--graphite:#253846;--deep-teal:#265e77;--paper:#fff;--warm-ivory:#ffffff;--white:#fff;--surface:#fff;--muted:#5d6c78;--line:#dfe5eb;--soft:#eef3f8;--accent:#a8472a;--font-editorial:var(--font-ui);--radius:12px;--radius-lg:16px;--font-ui:-apple-system,BlinkMacSystemFont,'Helvetica Neue','Segoe UI',Arial,sans-serif}
 body,.instructor-shell,.instructor-shell.instructor-luxury{background:#fff;color:#192e40;font-family:var(--font-ui);--ink:#192e40;--graphite:#253846;--paper:#fff;--surface:#fff;--white:#fff;--muted:#5d6c78;--soft:#eef3f8;--line:#dfe5eb;--deep-teal:#265e77;--copper-text:#a8472a;--font-editorial:var(--font-ui)}
 body{line-height:1.65;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.serif{font-family:var(--font-ui);font-style:normal;font-weight:500;letter-spacing:-.045em;text-wrap:balance}
@@ -25,7 +25,7 @@ body:not(.instructor-shell) .hero.editorial-hero h1{font-size:clamp(40px,5vw,76p
 body:not(.instructor-shell) .hero.editorial-hero h1 em{font-style:normal;color:#326893;font-weight:400}
 .hero .lead{font-size:17px;line-height:1.7;max-width:570px}
 body:not(.instructor-shell) .hero-art{height:365px;border-radius:16px;background:linear-gradient(145deg,#e7f0fb,#eef5f9);box-shadow:inset 0 0 0 1px #e1eaf3}
-.place{width:180px;height:180px;background:#fff;border:1px solid #a4bacd;box-shadow:0 0 0 18px #f8fbff,0 0 0 19px #b8ccdc,0 0 0 31px #f8fbff}
+.place{width:180px;height:180px;background:#fff;border:1px solid #a4bacd;box-shadow:0 0 0 18px #ffffff,0 0 0 19px #b8ccdc,0 0 0 31px #ffffff}
 .place:before,.place:after{border-color:#a4bacd;height:150px;width:6px;top:13px}
 .place:before{left:-50px}.place:after{right:-50px}
 .art-label{font-size:9px;letter-spacing:.15em;color:#506c81}
@@ -44,18 +44,18 @@ body .journey span{color:#42627a!important;font-size:12px;background:#fff;border
 .area-row{padding:23px 0;border-color:#dfe5eb}
 .area-row h3{font-size:21px;font-weight:500}
 .area-row>span{font-family:var(--font-ui);font-size:11px;color:#8093a2}
-body:not(.instructor-shell) .editorial-note,body:not(.instructor-shell) .public-feature:nth-of-type(even) .editorial-note{border:1px solid #e5e1d7;border-radius:14px;background:#faf7ef;padding:34px}
+body:not(.instructor-shell) .editorial-note,body:not(.instructor-shell) .public-feature:nth-of-type(even) .editorial-note{border:1px solid #ffffff;border-radius:14px;background:#ffffff;padding:34px}
 .editorial-note .serif{font-size:30px;line-height:1.25}
 .public-feature{gap:50px}
 body:not(.instructor-shell) .grid>.card{border:1px solid #dfe5eb;border-radius:12px;padding:30px;background:#f4f7fb;box-shadow:none}
-body:not(.instructor-shell) .grid>.card:nth-child(3n+2){background:#f7f5ef;border-color:#e7e2d7}
+body:not(.instructor-shell) .grid>.card:nth-child(3n+2){background:#ffffff;border-color:#ffffff}
 body:not(.instructor-shell) .grid>.card:nth-child(3n+3){background:#f1f7f4;border-color:#dce9e2}
 body:not(.instructor-shell) .grid>.card .eyebrow{font-size:10px}
 .console-illustration{background:#eef4fa;border:1px solid #d3e1ee;border-radius:14px;padding:34px}
 .illustration-panel{border-radius:7px;background:#fff;color:#204e78;border-color:#cadbea}
 .contact-band{background:#f1f5fa;padding:46px;border:1px solid #dfe7f1;border-radius:14px;color:#192e40}
 .contact-band .eyebrow{color:#617889}
-.footer,.instructor-footer{background:#fafbfc;border-color:#e2e7ec;font-size:12px}
+.footer,.instructor-footer{background:#ffffff;border-color:#e2e7ec;font-size:12px}
 .pagehead{padding-top:60px;max-width:1000px}
 .pagehead h1{font-size:clamp(38px,4.5vw,64px)}
 .prose{max-width:780px}
@@ -111,7 +111,7 @@ body input[type=checkbox],body input[type=radio]{min-height:0;accent-color:#204e
 .instructor-shell.instructor-luxury .quick-access.gourmet-menu{gap:12px;margin-bottom:20px}
 .instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{background:#f3f7fc!important;border:1px solid #dce6f0;border-radius:12px;padding:24px 20px!important;text-align:left;align-items:flex-start}
 .instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:nth-child(2){background:#f2f7f4!important;border-color:#dce8e1}
-.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:nth-child(3){background:#fbf6ef!important;border-color:#ece2d5}
+.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:nth-child(3){background:#ffffff!important;border-color:#ffffff}
 .instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:nth-child(4){background:#f5f3fa!important;border-color:#e5e0ee}
 .instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:before,.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a:after{display:none}
 .gourmet-menu-number{font:400 12px/1.4 var(--font-ui);color:#7b94a7;margin-bottom:18px}
@@ -173,7 +173,7 @@ body :is(button,.button,.gourmet-cta):active{transform:scale(.98)}
 .instructor-shell .technical{font-size:12px;color:#61788b}
 @media(max-width:640px){.instructor-shell .card.resource{padding:20px!important}.instructor-luxury .gourmet-hero{gap:16px}.instructor-shell.instructor-luxury .quick-access.gourmet-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Public home is the calling card: one clear headline and a branded service illustration. */
-body:not(.instructor-shell) .editorial-hero .hero-art{background:radial-gradient(ellipse at 25% 15%,#f7fbff 0%,#e5effb 72%);box-shadow:inset 0 0 0 1px #dae6f2,0 18px 50px #204e7808;overflow:hidden}
-body:not(.instructor-shell) .editorial-hero .place{background:#fff url('/risto-lab/brand/risto-symbol.svg') center/76px 76px no-repeat;border-color:#9db7d0;box-shadow:0 0 0 18px #f8fbff,0 0 0 19px #afc6dc,0 0 0 31px #f8fbff,0 20px 44px #204e7810}
+body:not(.instructor-shell) .editorial-hero .hero-art{background:radial-gradient(ellipse at 25% 15%,#ffffff 0%,#e5effb 72%);box-shadow:inset 0 0 0 1px #dae6f2,0 18px 50px #204e7808;overflow:hidden}
+body:not(.instructor-shell) .editorial-hero .place{background:#fff url('/risto-lab/brand/risto-symbol.svg') center/76px 76px no-repeat;border-color:#9db7d0;box-shadow:0 0 0 18px #ffffff,0 0 0 19px #afc6dc,0 0 0 31px #ffffff,0 20px 44px #204e7810}
 body:not(.instructor-shell) .editorial-hero .actions .button{min-height:50px;padding:14px 23px}
 body:not(.instructor-shell) .story-bridge .prose{max-width:850px}

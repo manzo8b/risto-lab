@@ -26,7 +26,7 @@ test('mobile has usable full-width layout on public, teaching and specialist pag
  for(const path of ['/','/risorse/','/formazione/','/instructor/','/instructor/biblioteca/','/instructor/unita/06-la-mise-en-place/','/instructor/menu-engineering/','/instructor/sessioni/nuova/']){
   await page.goto(root+path);
   await expect(page.locator('h1')).toBeVisible();
-  const geo=await page.evaluate(()=>({width:document.documentElement.scrollWidth,viewport:window.innerWidth,bodyWidth:Math.round(document.body.getBoundingClientRect().width)}));
+  const geo=await page.evaluate(()=>({width:document.documentElement.scrollWidth,viewport:window.innerWidth,bodyWidth:Math.round(document.body.getBoundingClientRect().width),offenders:Array.from(document.querySelectorAll('*')).filter(el=>{const b=el.getBoundingClientRect();return b.width>0&&(b.right>window.innerWidth+2||b.left<-2)}).slice(0,16).map(el=>({tag:el.tagName,cls:typeof el.className==='string'?el.className.slice(0,65):'',right:Math.round(el.getBoundingClientRect().right),width:Math.round(el.getBoundingClientRect().width)}))}));
   expect(geo.width<=geo.viewport,JSON.stringify({path,geo})).toBeTruthy();
   expect(geo.bodyWidth>=geo.viewport-2,JSON.stringify({path,geo})).toBeTruthy();
  }

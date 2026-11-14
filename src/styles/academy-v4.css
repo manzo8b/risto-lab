@@ -471,3 +471,26 @@ body.instructor-shell .academy-footer-identity strong{font-size:21px;font-weight
 body.instructor-shell .academy-footer-identity p{font-size:12px;color:#455473;margin:5px 0}
 body.instructor-shell .academy-footer-identity small{font-size:11px;color:#465476}
 body.instructor-shell .instructor-footer a{color:var(--academy-deep-purple)!important}
+
+/* Diagnostic fixes from the first Academy v4 browser run */
+body.instructor-shell .hubmain .menu-lesson .me-diagnosis > .me-ill-menu{
+ background-color:#091f58!important;background-image:none!important;border-color:#091f58!important}
+body.instructor-shell .hubmain .menu-lesson .me-diagnosis > .me-ill-menu :is(h3,p,small){
+ color:#fff!important}
+@media(max-width:900px){
+ body.instructor-shell .hubmain .menu-lesson,body.instructor-shell .hubmain .menu-lesson article,
+ body.instructor-shell .hubmain .menu-lesson section,body.instructor-shell .hubmain .menu-lesson details,
+ body.instructor-shell .hubmain .menu-lesson :is(.me-dish-groups,.me-owner-section,.me-matrix-wrap,.me-carbonara,
+ .me-carbonara-card,.me-owner-record,.me-diagnosis,.me-heading,.me-xray,.me-translation,.me-legal-pair,
+ .me-table-scroll,.me-part,.me-freeze,.me-owner-process){
+  min-width:0!important;max-width:100%!important;box-sizing:border-box
+ }
+ body.instructor-shell .menu-lesson .me-table-scroll{display:block!important;width:100%!important;
+   overflow-x:auto!important;overscroll-behavior-x:contain;scrollbar-width:thin}
+ body.instructor-shell .menu-lesson .me-table-scroll > table{width:max-content;max-width:none}
+ body.instructor-shell .menu-lesson .me-dish-groups,body.instructor-shell .menu-lesson .me-dish-group{display:block;min-width:0!important}
+ body.instructor-shell .menu-lesson .me-carbonara-result,
+ body.instructor-shell .menu-lesson .me-matrix-wrap,
+ body.instructor-shell .menu-lesson .me-xray{grid-template-columns:minmax(0,1fr)!important}
+ body.instructor-shell .menu-lesson :is(.me-carbonara,.me-owner-record,.me-owner-footer){padding-inline:clamp(12px,3vw,22px)!important}
+}

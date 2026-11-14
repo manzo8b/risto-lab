@@ -1,0 +1,233 @@
+/* RISTO-LAB · Public UI refinement · 14 Nov 2026
+   Approved brand retained. Large blue home panels become concise white-first
+   sections with saturated accent rails; no cream, beige, ivory or dead pastels.
+   Kept separate from academy-v4 to make future size/color review straightforward. */
+:root{
+ --rl-ui-border:#d5e1f1;
+ --rl-ui-blue:#2569d3;
+ --rl-ui-violet:#6337ca;
+ --rl-ui-teal:#008998;
+ --rl-ui-ink:#102657;
+ --rl-ui-shadow:0 7px 21px #09265012,0 2px 5px #09265009;
+}
+
+/* De-emphasize depth without reducing card separation. */
+body.rl-public .rl-course-card,
+body.rl-public .rl-feature,
+body.rl-public .rl-tile,
+body.rl-public .rl-resource-panel,
+body.rl-public .rl-white-panel {
+ border:1px solid var(--rl-ui-border)!important;
+ border-radius:16px!important;
+ box-shadow:var(--rl-ui-shadow)!important;
+}
+body.rl-public .rl-course-card:is(:hover,:focus-within),
+body.rl-public .rl-feature:is(:hover,:focus-within),
+body.rl-public .rl-tile:is(:hover,:focus-within),
+body.rl-public .rl-resource-panel:is(:hover,:focus-within) {
+ transform:translateY(-2px)!important;
+ box-shadow:0 10px 26px #0926501d!important;
+}
+body.rl-public .rl-course-card .rl-card-image{
+ height:184px!important;
+ background:#fff!important;
+}
+body.rl-public .rl-course-card .rl-card-image img{
+ object-fit:contain;
+ padding:8px!important;
+}
+body.rl-public .rl-course-card .rl-card-body{
+ padding:20px!important;
+ gap:10px!important;
+}
+body.rl-public .rl-course-card .rl-card-body h3{
+ font-size:clamp(18px,1.5vw,22px)!important;
+ line-height:1.22!important;
+}
+body.rl-public .rl-course-card .rl-card-body p{
+ font-size:14px!important;
+ line-height:1.48!important;
+}
+body.rl-public .rl-course-card .rl-card-action{
+ min-height:42px!important;
+ padding:10px 13px!important;
+ font-size:13px!important;
+ border-radius:9px!important;
+ box-shadow:none!important;
+}
+body.rl-public .rl-feature,
+body.rl-public .rl-tile,
+body.rl-public .rl-price {padding:19px!important}
+body.rl-public .rl-feature .rl-feature-icon{font-size:23px!important;min-height:28px!important}
+body.rl-public .rl-feature-grid .rl-feature{
+ border-top-width:4px!important;
+}
+body.rl-public .rl-resource-panel{
+ min-height:208px!important;
+ padding:23px!important;
+ border-top-width:4px!important;
+}
+body.rl-public .rl-resource-panel h3{
+ font:750 clamp(22px,2vw,29px)/1.13 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+}
+body.rl-public .rl-resource-panel .rl-panel-icon{
+ width:40px!important;height:40px!important;
+ border-radius:11px!important;
+ background:#fff!important;color:var(--rl-ui-violet)!important;
+ border:1px solid #c3d4ec!important;
+}
+body.rl-public .rl-white-panel{padding:clamp(18px,2.5vw,30px)!important}
+body.rl-public .wrap>.section{
+ padding-block:clamp(34px,4vw,54px)!important;
+}
+body.rl-public .rl-section-head{margin-bottom:23px!important}
+body.rl-public .rl-section-head h2{
+ font-size:clamp(27px,2.9vw,41px)!important;
+ line-height:1.16!important;
+}
+body.rl-public .rl-page-banner{padding-bottom:clamp(23px,3vw,42px)!important}
+body.rl-public .rl-status-note{padding:15px 19px!important}
+
+/* HOME: compact hero instead of a heavy, oversized blue block. */
+body.rl-public .rl-home>.rl-public-hero{
+ min-height:0!important;
+ padding-block:clamp(28px,4.2vw,60px)!important;
+ grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+ gap:clamp(20px,3vw,45px)!important;
+ align-items:center;
+}
+body.rl-public .rl-home .rl-public-hero h1{
+ font-size:clamp(38px,4.5vw,66px)!important;
+ line-height:1.055!important;
+ letter-spacing:-.059em!important;
+ margin-bottom:17px!important;
+}
+body.rl-public .rl-home .rl-hero-copy .lead{
+ font-size:clamp(15px,1.15vw,18px)!important;
+ line-height:1.55!important;
+ max-width:560px;
+}
+body.rl-public .rl-home .rl-visual{
+ height:350px!important;
+ min-height:0!important;
+ border-radius:19px!important;
+ border:1px solid #c7d9f3!important;
+ border-top:4px solid #2569d3!important;
+ /* Color stays energetic in the trim, not across 480px of dark blue. */
+ background:linear-gradient(128deg,#ffffff 0%,#ffffff 56%,#eaf3ff 100%)!important;
+ box-shadow:0 11px 28px #0b357b17!important;
+}
+body.rl-public .rl-home .rl-visual img{
+ display:block;
+ width:100%!important;
+ max-width:100%!important;
+ height:100%!important;
+ max-height:100%!important;
+ padding:16px 18px 38px!important;
+ background:transparent!important;
+ object-fit:contain!important;
+}
+body.rl-public .rl-home .rl-photo-label{
+ left:17px!important;bottom:12px!important;
+ padding:6px 11px!important;
+ font-size:11px!important;
+ color:var(--rl-ui-ink)!important;
+ border:1px solid #ccdcef!important;
+ background:#fff!important;
+ box-shadow:none!important;
+}
+body.rl-public .rl-home .rl-hero-metrics{
+ margin-top:17px!important;gap:7px!important;
+}
+body.rl-public .rl-home .rl-hero-metrics span{
+ padding:6px 9px!important;
+ font-size:11px!important;
+ border-radius:999px!important;
+ background:#fff!important;
+ border-color:#d3e0f0!important;
+}
+body.rl-public .rl-home>.section{
+ margin-block:0!important;
+ padding-block:clamp(34px,4vw,53px)!important;
+}
+/* Every home band remains distinct but white dominates.
+   Strong brand colors survive in a narrow rule and the module cards. */
+body.rl-public .rl-home>#in-evidenza{
+ background:linear-gradient(115deg,#fff 0%,#f3f8ff 100%)!important;
+ border-top:4px solid var(--rl-ui-blue)!important;
+}
+body.rl-public .rl-home>#ambiti{
+ background:#fff!important;
+ border-top:4px solid var(--rl-ui-teal)!important;
+}
+body.rl-public .rl-home>#metodo{
+ background:linear-gradient(115deg,#fff 8%,#edf5ff 100%)!important;
+ border-top:4px solid #2c78d5!important;
+}
+body.rl-public .rl-home>#formati{
+ background:linear-gradient(117deg,#fff 3%,#f5f2ff 100%)!important;
+ border-top:4px solid var(--rl-ui-violet)!important;
+}
+body.rl-public .rl-home>#docenti{
+ background:linear-gradient(115deg,#fff 6%,#edfaff 100%)!important;
+ border-top:4px solid var(--rl-ui-teal)!important;
+}
+body.rl-public .rl-home>:is(#in-evidenza,#metodo,#formati,#docenti)
+ :is(h2,.rl-section-head h2,.rl-section-head p,.rl-eyebrow-line,.lead,.muted){
+ color:var(--rl-ui-ink)!important;
+}
+body.rl-public .rl-home>:is(#in-evidenza,#metodo,#formati,#docenti) .rl-eyebrow-line{
+ color:#4d28b4!important;
+}
+body.rl-public .rl-home>:is(#in-evidenza,#metodo,#formati,#docenti) .rl-link{
+ color:#3d1b97!important;
+}
+body.rl-public .rl-home>:is(#in-evidenza,#metodo,#formati,#docenti) .rl-course-card .rl-card-action{
+ color:#fff!important;
+}
+body.rl-public .rl-home #metodo .rl-white-panel{
+ background:#fff!important;
+ border-left:4px solid #2671cc!important;
+}
+body.rl-public .rl-home #docenti .rl-white-panel{
+ border-left:4px solid var(--rl-ui-teal)!important;
+}
+body.rl-public .rl-home #metodo .rl-sequence{gap:7px!important}
+body.rl-public .rl-home #metodo .rl-sequence span{
+ border-color:#cbdcf1!important;
+ border-radius:9px!important;
+ padding:8px 10px!important;
+}
+body.rl-public .rl-home .rl-course-card:nth-child(3n+1){border-top:4px solid var(--rl-ui-blue)!important}
+body.rl-public .rl-home .rl-course-card:nth-child(3n+2){border-top:4px solid var(--rl-ui-violet)!important}
+body.rl-public .rl-home .rl-course-card:nth-child(3n){border-top:4px solid var(--rl-ui-teal)!important}
+body.rl-public .rl-home .rl-resource-grid{gap:16px!important}
+body.rl-public .rl-home .rl-feature-grid{gap:12px!important}
+body.rl-public .rl-home .contact-band{
+ margin-top:0!important;
+ border-radius:0!important;
+ padding-block:clamp(30px,3.7vw,47px)!important;
+ box-shadow:none!important;
+ background:linear-gradient(112deg,#163c80,#5540a9)!important;
+}
+body.rl-public .rl-home .contact-band :is(h2,p,.rl-eyebrow-line){color:#fff!important}
+
+@media(max-width:920px){
+ body.rl-public .rl-home>.rl-public-hero{grid-template-columns:1fr!important;gap:18px!important}
+ body.rl-public .rl-home .rl-visual{height:280px!important}
+}
+@media(max-width:550px){
+ body.rl-public .rl-home>.rl-public-hero{padding-top:22px!important;padding-bottom:31px!important}
+ body.rl-public .rl-home .rl-public-hero h1{font-size:clamp(34px,9vw,47px)!important}
+ body.rl-public .rl-home .rl-visual{height:240px!important;border-radius:15px!important}
+ body.rl-public .rl-home .rl-visual img{padding:10px 12px 32px!important}
+ body.rl-public .rl-home>.section{padding-block:28px!important}
+ body.rl-public .rl-course-card .rl-card-image{height:166px!important}
+ body.rl-public .rl-course-card .rl-card-body{padding:17px!important}
+ body.rl-public .rl-resource-panel{min-height:0!important;padding:19px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ body.rl-public .rl-course-card,
+ body.rl-public .rl-resource-panel,
+ body.rl-public .rl-feature{transition:none!important;transform:none!important}
+}

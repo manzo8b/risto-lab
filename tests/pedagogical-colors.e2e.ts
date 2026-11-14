@@ -25,7 +25,7 @@ test('public pages show purposeful, differentiated learning colors',async({page}
  await expect(page.locator('.rl-sequence span')).toHaveCount(7);
  const formationCanvas=await page.evaluate(()=>getComputedStyle(document.body).backgroundColor);
  expect(formationCanvas).toBe('rgb(255, 255, 255)');
- await expect(page.getByRole('link',{name:/Apri le cinque lezioni gratuite/})).toBeVisible();
+ await expect(page.getByRole('link',{name:/Apri le cinque lezioni libere/})).toBeVisible();
  expect(errors).toEqual([]);
 });
 

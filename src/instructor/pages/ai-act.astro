@@ -1,0 +1,41 @@
+---
+import LegalPage from '../../components/LegalPage.astro';
+import {withBase} from '../../lib/urls';
+---
+<LegalPage title="Trasparenza AI e AI Act" eyebrow="RISTO-LAB / TECNOLOGIA E RESPONSABILITÀ" intro="Come utilizziamo l'intelligenza artificiale, quale controllo mantiene il curatore e come informiamo i visitatori.">
+ <section>
+  <h2>Il ruolo dell'intelligenza artificiale</h2>
+  <p class="legal-summary"><strong>Risto-Lab è un progetto a curatela umana.</strong> Alcune immagini, illustrazioni, presentazioni, testi o altri materiali possono essere prodotti, trasformati o revisionati con il supporto di strumenti di intelligenza artificiale generativa. La scelta dei contenuti e la responsabilità editoriale restano del creatore e curatore, <strong>Marcelo Javier Fernandez Caballero</strong>.</p>
+  <p>L'utilizzo di strumenti AI non implica che tutte le immagini o tutti i materiali siano artificiali: quando è pertinente e possibile, la natura del contributo AI viene indicata nel contesto del contenuto o nella documentazione del materiale.</p>
+ </section>
+ <section>
+  <h2>Principi editoriali</h2>
+  <ul>
+   <li><strong>Controllo umano:</strong> il curatore seleziona, corregge e approva le pubblicazioni; l'AI non sostituisce la responsabilità professionale.</li>
+   <li><strong>Riconoscibilità:</strong> immagini o contenuti sintetici potenzialmente confondibili con eventi o persone reali devono essere segnalati in maniera chiara secondo gli obblighi applicabili.</li>
+   <li><strong>Verificabilità:</strong> affermazioni giuridiche, tecniche o sulla sicurezza richiedono confronto con fonti istituzionali o tecniche aggiornate.</li>
+   <li><strong>Rispetto dei diritti:</strong> l'uso di servizi generativi non elimina diritti di terzi, licenze, privacy o obblighi relativi ai dati.</li>
+  </ul>
+ </section>
+ <section>
+  <h2>Come sono identificati i contenuti assistiti da AI</h2>
+  <p>Risto-Lab adotta un'informazione generale sulla possibile presenza di contenuti realizzati con supporto AI e prevede, laddove necessario, indicazioni specifiche sui singoli materiali, ad esempio <strong>«Immagine generata con AI»</strong>, <strong>«Illustrazione assistita da AI»</strong> oppure <strong>«Testo rielaborato con AI e revisionato dal curatore»</strong>.</p>
+  <p>Queste indicazioni sono proporzionate al contenuto. Una dicitura generica nel footer, da sola, non sostituisce gli obblighi specifici di divulgazione previsti per determinati contenuti sintetici o deepfake.</p>
+ </section>
+ <section>
+  <h2>Risto-Lab AI e strumenti esterni</h2>
+  <p>Il collegamento <strong>Risto-Lab AI</strong> aiuta il docente a formulare una richiesta strutturata a partire da unità e risorse del sito. La continuazione della conversazione avviene, su scelta dell'utente, all'interno di un servizio esterno come ChatGPT. Il sito non presenta questa funzione come un assistente che raccoglie automaticamente tutte le conversazioni degli utenti.</p>
+  <p>Prima di trasferire testo o materiali a piattaforme esterne, evita di includere dati personali o riservati di studenti, colleghi e clienti. Le risposte generate sono bozze da verificare, non valutazioni automatizzate di persone o certificazioni.</p>
+ </section>
+ <section>
+  <h2>Riferimento al Regolamento europeo sull'AI</h2>
+  <p>Il <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/ita" target="_blank" rel="noopener noreferrer">Regolamento (UE) 2024/1689 — AI Act</a>, in particolare l'articolo 50, prevede specifici obblighi di trasparenza per determinate interazioni e contenuti generati o manipolati artificialmente. Le disposizioni dell'articolo 50 sono applicabili dal <strong>2 agosto 2026</strong>.</p>
+  <p>Gli obblighi cambiano a seconda del ruolo dell'operatore, della natura del sistema e del tipo di contenuto, inclusi i deepfake e determinate pubblicazioni di interesse pubblico. Il presente documento è una dichiarazione di prassi editoriale, <strong>non una certificazione automatica di conformità all'AI Act</strong>.</p>
+  <p>Per il quadro interpretativo consulta gli <a href="https://digital-strategy.ec.europa.eu/it/policies/guidelines-ai-transparency-obligations" target="_blank" rel="noopener noreferrer">orientamenti della Commissione europea sulla trasparenza AI</a>.</p>
+ </section>
+ <section>
+  <h2>Segnalazioni e responsabilità</h2>
+  <p>Se rilevi un contenuto artificiale non riconoscibile, un'imprecisione o un possibile uso improprio di immagini, testi o dati, scrivi a <a href="mailto:marcelo2020.it@gmail.com">marcelo2020.it@gmail.com</a>, indicando la pagina interessata. Il curatore valuterà la segnalazione e apporterà le eventuali correzioni o indicazioni necessarie.</p>
+  <p>Consulta anche le <a href={withBase('/legal/')}>Note legali</a> e l'<a href={withBase('/privacy/')}>Informativa Privacy</a>.</p>
+ </section>
+</LegalPage>

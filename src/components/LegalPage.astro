@@ -1,0 +1,40 @@
+---
+import Public from '../layouts/Public.astro';
+import {withBase} from '../lib/urls';
+import '../styles/legal.css';
+const {title,eyebrow='INFORMAZIONI E TRASPARENZA',intro} = Astro.props;
+const links=[
+ {path:'/legal/',label:'Note legali'},
+ {path:'/privacy/',label:'Privacy'},
+ {path:'/cookie/',label:'Cookie e memoria locale'},
+ {path:'/ai-act/',label:'Trasparenza AI'}
+];
+const current=Astro.url.pathname;
+---
+<Public title={title}>
+  <div class="wrap legal-site">
+    <header class="rl-page-banner legal-heading">
+      <p class="rl-eyebrow-line">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="lead">{intro}</p>
+      <p class="legal-updated">Ultimo aggiornamento: <time datetime="2026-11-14">14 novembre 2026</time></p>
+    </header>
+    <div class="legal-layout">
+      <nav class="legal-nav" aria-label="Documenti legali e trasparenza">
+        <p class="legal-nav-label">Informazioni sul progetto</p>
+        {links.map(item=><a href={withBase(item.path)} aria-current={current===withBase(item.path)?'page':undefined}>{item.label}<span aria-hidden="true">↗</span></a>)}
+      </nav>
+      <article class="legal-document">
+        <slot/>
+      </article>
+    </div>
+    <aside class="legal-contact" aria-label="Contatti del curatore">
+      <div>
+        <p class="rl-eyebrow-line">CONTATTO DIRETTO</p>
+        <h2>Hai domande sui contenuti o sul trattamento dei dati?</h2>
+        <p>Scrivi al creatore e curatore, Marcelo Javier Fernandez Caballero</p>
+      </div>
+      <a class="button" href="mailto:marcelo2020.it@gmail.com?subject=RISTO-LAB%20-%20Informazioni%20legali">Invia un'email ↗</a>
+    </aside>
+  </div>
+</Public>

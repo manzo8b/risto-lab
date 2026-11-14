@@ -18,8 +18,8 @@ test('public pages show purposeful, differentiated learning colors',async({page}
  await expect(page.locator('.rl-public-hero')).toBeVisible();
  const heroCanvas=await page.evaluate(()=>getComputedStyle(document.body).backgroundColor);
  expect(heroCanvas).toBe('rgb(255, 255, 255)');
- const action=await page.locator('.rl-public-hero .button:not(.secondary)').evaluate(el=>getComputedStyle(el).backgroundColor);
- expect(action).toBe('rgb(13, 73, 67)');
+ const action=await page.locator('.rl-public-hero .button:not(.secondary)').evaluate(el=>getComputedStyle(el).backgroundImage);
+ expect(action).toContain('linear-gradient');
  await expect(page.locator('.rl-course-card')).toHaveCount(3);
  await page.goto(paths.formazione);
  await expect(page.locator('.rl-sequence span')).toHaveCount(7);

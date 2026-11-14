@@ -49,8 +49,9 @@ test('Risto-Lab identity, section hierarchy and resources menu are functional',a
  const logoLoads=await page.locator('header .risto-brand-symbol').evaluate(img=>img instanceof HTMLImageElement&&img.complete&&img.naturalWidth>0);
  expect(logoLoads).toBeTruthy();
  await expect(page.locator('#in-evidenza .rl-course-card')).toHaveCount(3);
- const bands=await page.locator('.rl-band--sage, .rl-band--blue, .rl-band--clay').evaluateAll(els=>els.map(el=>getComputedStyle(el).backgroundColor));
+ const bands=await page.locator('.rl-band--sage, .rl-band--blue, .rl-band--clay').evaluateAll(els=>els.map(el=>getComputedStyle(el).backgroundImage));
  expect(new Set(bands).size).toBeGreaterThanOrEqual(3);
+ expect(bands.every(x=>x.includes('linear-gradient'))).toBeTruthy();
  const titles=await page.locator('h1,h2,h3').evaluateAll(els=>els.map(el=>(el.textContent||'').trim()));
  expect(titles.filter(s=>s.endsWith('.'))).toEqual([]);
  await page.getByRole('link',{name:'Risorse',exact:true}).click();

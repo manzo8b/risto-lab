@@ -1,12 +1,12 @@
 :root {
   --ink-navy: #10242d;
   --deep-teal: #176b68;
-  --warm-ivory: #f6f3ed;
+  --warm-ivory: #ffffff;
   --surface: #fff;
   --graphite: #242b2e;
   --copper: #b86d45;
   --copper-text: #91502d;
-  --soft-stone: #e7e2da;
+  --soft-stone: #ffffff;
   --container: 1240px;
   --space-9: 6rem;
   --ink: var(--ink-navy);
@@ -14,7 +14,7 @@
   --paper: var(--warm-ivory);
   --white: var(--surface);
   --accent: var(--copper-text);
-  --line: #dcd8d0;
+  --line: #cbd7e9;
   --soft: #eef2ef;
   --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-editorial: Georgia, 'Times New Roman', serif;

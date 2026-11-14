@@ -10,7 +10,10 @@ test('Academy visual uses full didactic infographic, without botanical decoratio
  const refinement=css.split('RISTO-LAB Academy · 31 ottobre 2026')[1];
  assert.ok(refinement);
  assert.match(refinement,/object-fit:contain/);
- assert.match(refinement,/background:#fffdf8/);
+ assert.ok(refinement.includes('object-fit:contain'));
+ const next=readFileSync('src/styles/academy-v4.css','utf8');
+ assert.match(next,/academy-launch-grid/);
+ assert.match(next,/--academy-purple:#5b16d6/);
  assert.doesNotMatch(refinement,/palm|leaf|foglie|palme|laurel/i);
  assert.ok(page.indexOf('gourmet-carte"')<page.indexOf('gourmet-hero-media"'));
 });

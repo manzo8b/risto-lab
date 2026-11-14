@@ -5,6 +5,9 @@ on:
     paths:
       - 'src/styles/white-ecosystem.css'
       - 'src/styles/editorial-v3.css'
+      - 'src/styles/academy-v4.css'
+      - 'src/styles/menu-engineering.css'
+      - 'tests/academy-v4.*'
       - 'public/brand/**'
       - 'src/layouts/**'
       - 'src/instructor/pages/**'
@@ -32,4 +35,4 @@ jobs:
       - run: npm run build
       - run: npm run publication:gate
       - name: White design, mobile navigation and accessibility regression
-        run: npx playwright test tests/white-ecosystem.e2e.ts tests/quality-audit.e2e.ts
+        run: npx playwright test tests/white-ecosystem.e2e.ts tests/quality-audit.e2e.ts tests/academy-v4.e2e.ts

@@ -18,14 +18,14 @@ test('public pages show purposeful, differentiated learning colors',async({page}
  await expect(page.locator('.rl-public-hero')).toBeVisible();
  const heroCanvas=await page.evaluate(()=>getComputedStyle(document.body).backgroundColor);
  expect(heroCanvas).toBe('rgb(255, 255, 255)');
- const action=await page.locator('.rl-public-hero .button:not(.secondary)').evaluate(el=>getComputedStyle(el).backgroundColor);
- expect(action).toBe('rgb(13, 73, 67)');
+ const action=await page.locator('.rl-public-hero .button:not(.secondary)').evaluate(el=>getComputedStyle(el).backgroundImage);
+ expect(action).toContain('linear-gradient');
  await expect(page.locator('.rl-course-card')).toHaveCount(3);
  await page.goto(paths.formazione);
  await expect(page.locator('.rl-sequence span')).toHaveCount(7);
  const formationCanvas=await page.evaluate(()=>getComputedStyle(document.body).backgroundColor);
  expect(formationCanvas).toBe('rgb(255, 255, 255)');
- await expect(page.getByRole('link',{name:/Apri le cinque lezioni gratuite/})).toBeVisible();
+ await expect(page.getByRole('link',{name:/Apri le cinque lezioni libere/})).toBeVisible();
  expect(errors).toEqual([]);
 });
 
@@ -37,7 +37,7 @@ test('instructor home and legal teaching paths have visible semantic hierarchy',
  expect(sidebar).toBe('rgb(255, 255, 255)');
  await expect(page.locator('.sidebar a[aria-current="page"]').first()).toBeVisible();
  await page.goto(paths.lessons);
- const cardColors=await page.locator('.lesson-card').evaluateAll(items=>items.map(el=>getComputedStyle(el).backgroundColor));
+ const cardColors=await page.locator('.lesson-card').evaluateAll(items=>items.map(el=>getComputedStyle(el).borderTopColor));
  expect(new Set(cardColors).size).toBe(5);
  await page.goto(paths.lesson);
  await expect(page.locator('.norm-reference')).toHaveCount(3);

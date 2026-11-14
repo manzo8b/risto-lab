@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/prisma-kit.css';
 import '../styles/manzo-signature.css';
 import '../styles/contact-header.css';
+import '../styles/legal-links.css';
 import whiteEcosystemStyles from '../styles/white-ecosystem.css?url';
 import academyStyles from '../styles/academy-v4.css?url';
 import ContactHeader from '../components/ContactHeader.astro';
@@ -49,7 +50,7 @@ const nav=[
  <footer class="prisma-footer"><div class="prisma-container">
   <strong>P.R.I.S.M.A. HSE · RISTO-LAB</strong>
   <span>Progetto dimostrativo non commissionato · Non equivale a formazione obbligatoria né attestazione</span>
-  <ManzoSignature/>
+  <nav class="rl-legal-links" aria-label="Informazioni legali"><a href={withBase('/legal/')}>Note legali</a><a href={withBase('/privacy/')}>Privacy</a><a href={withBase('/cookie/')}>Cookie</a><a href={withBase('/ai-act/')}>Trasparenza AI</a></nav><ManzoSignature/>
  </div></footer>
 </body>
 </html>

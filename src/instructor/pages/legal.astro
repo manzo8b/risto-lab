@@ -1,0 +1,42 @@
+---
+import LegalPage from '../../components/LegalPage.astro';
+import {withBase} from '../../lib/urls';
+---
+<LegalPage title="Note legali" eyebrow="RISTO-LAB / IDENTITÀ E RESPONSABILITÀ" intro="Chi cura Risto-Lab, perché esiste questo progetto e quali sono i limiti dei contenuti pubblicati.">
+ <section>
+  <h2>Identità del progetto</h2>
+  <p class="legal-summary"><strong>Risto-Lab — Hospitality Training</strong> è un progetto indipendente di divulgazione, sperimentazione pedagogica e presentazione professionale, creato e curato da <strong>Marcelo Javier Fernandez Caballero</strong>.</p>
+  <div class="legal-fact-list">
+   <div><strong>Creatore e curatore</strong><small>Marcelo Javier Fernandez Caballero</small></div>
+   <div><strong>Contatto pubblico</strong><small><a href="mailto:marcelo2020.it@gmail.com">marcelo2020.it@gmail.com</a></small></div>
+   <div><strong>Indirizzo del progetto</strong><small><a href={withBase('/')}>manzo8b.github.io/risto-lab</a></small></div>
+   <div><strong>Modalità attuale</strong><small>Presentazione indipendente e informazione professionale</small></div>
+  </div>
+  <p>Il progetto ha lo scopo di condividere esperienze, metodi e risorse sulla formazione per il settore dell'ospitalità, rendere visibile il lavoro del curatore e favorire opportunità professionali, collaborazioni e contatti con formatori, scuole, imprese e operatori del settore.</p>
+ </section>
+ <section>
+  <h2>Attività divulgativa e stato di sviluppo</h2>
+  <p>Il sito è in evoluzione: le sezioni possono includere materiali già consultabili, strumenti didattici dimostrativi, contenuti da verificare e funzionalità pianificate. Le aree Premium e Aziende non devono essere intese come servizi a pagamento o contratti già attivi.</p>
+  <p>Il catalogo didattico e le esercitazioni hanno valore informativo e formativo nell'ambito del progetto; non costituiscono automaticamente titoli riconosciuti, abilitazioni, formazione obbligatoria di legge o attestazioni ufficiali. In particolare, i materiali su Sicurezza, igiene e HACCP non sostituiscono i corsi, gli aggiornamenti o le procedure obbligatorie previsti per le singole attività.</p>
+ </section>
+ <section>
+  <h2>Pubblicità e rapporti commerciali</h2>
+  <p>Alla data del presente aggiornamento, Risto-Lab <strong>non ospita inserzioni pubblicitarie a pagamento, non utilizza programmi di affiliazione e non vende corsi o abbonamenti sul sito</strong>. Collegamenti a fonti esterne, repository, piattaforme tecnologiche o materiali istituzionali hanno una funzione informativa; non implicano patrocinio, approvazione o collaborazione ufficiale con tali soggetti.</p>
+  <p>Eventuali future attività commerciali, offerte formative, partnership o strumenti di marketing dovranno essere dichiarati attraverso un aggiornamento esplicito delle informazioni pubblicate.</p>
+ </section>
+ <section>
+  <h2>Contenuti, autorialità e diritti</h2>
+  <p>La selezione, la curatela, l'impostazione didattica e la revisione editoriale sono svolte sotto la responsabilità del curatore. Alcuni testi, immagini, video o altri materiali possono essere realizzati o modificati con l'assistenza di strumenti di intelligenza artificiale. Per approfondire, consulta la <a href={withBase('/ai-act/')}>politica di trasparenza AI</a>.</p>
+  <p>I riferimenti a fonti esterne sono attribuiti ai rispettivi autori e titolari. L'accessibilità pubblica del sito non trasferisce automaticamente licenze di riutilizzo dei contenuti, dei marchi o delle immagini; ogni uso deve rispettare i diritti di terzi, le eventuali licenze esplicitate e la normativa vigente. Il repository del progetto non comporta di per sé una licenza generale di sfruttamento.</p>
+ </section>
+ <section>
+  <h2>Accuratezza e responsabilità editoriale</h2>
+  <p>Il curatore si impegna a distinguere fatti, risorse, esempi dimostrativi e contenuti in revisione. Le informazioni professionali e normative devono essere confrontate con le fonti ufficiali e le disposizioni aggiornate applicabili al contesto concreto.</p>
+  <p>È possibile segnalare imprecisioni, richieste di rettifica, attribuzione o rimozione scrivendo a <a href="mailto:marcelo2020.it@gmail.com">marcelo2020.it@gmail.com</a>. Le presenti note non escludono né limitano i diritti riconosciuti dalla legge ai visitatori o ai titolari dei contenuti.</p>
+ </section>
+ <section>
+  <h2>Protezione dei dati e tecnologie utilizzate</h2>
+  <p>Risto-Lab non utilizza un modulo di registrazione dei visitatori e non dichiara di raccogliere statistiche individuali degli utenti. Restano distinti il trattamento dei messaggi inviati volontariamente via email, la memoria tecnica del browser degli strumenti Instructor e i log di sicurezza dell'hosting GitHub Pages.</p>
+  <p>Consulta <a href={withBase('/privacy/')}>Privacy</a> e <a href={withBase('/cookie/')}>Cookie e memoria locale</a> per i dettagli.</p>
+ </section>
+</LegalPage>

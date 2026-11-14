@@ -1,0 +1,46 @@
+---
+import LegalPage from '../../components/LegalPage.astro';
+import {withBase} from '../../lib/urls';
+---
+<LegalPage title="Informativa Privacy" eyebrow="RISTO-LAB / DATI PERSONALI" intro="Cosa accade ai dati durante la visita, l'uso degli strumenti locali e l'eventuale contatto con il curatore.">
+ <section>
+  <h2>Titolare e contatti</h2>
+  <p class="legal-summary">Il referente per il trattamento dei dati relativo alle attività di curatela e corrispondenza del progetto è <strong>Marcelo Javier Fernandez Caballero</strong>, creatore e curatore di Risto-Lab. Per domande o richieste: <a href="mailto:marcelo2020.it@gmail.com">marcelo2020.it@gmail.com</a>.</p>
+  <p>Questa informativa descrive i trattamenti riconducibili al progetto per quanto verificabile nel sito; il provider di hosting e i servizi esterni applicano anche le proprie informative.</p>
+ </section>
+ <section>
+  <h2>Visita del sito e assenza di profilazione del curatore</h2>
+  <p>Risto-Lab è realizzato come sito statico e, nella versione attuale, <strong>non dispone di registrazione utenti, account studenti, newsletter, moduli di contatto con invio al server, analytics proprietari o strumenti pubblicitari di profilazione</strong>. Il curatore non costruisce un database dei visitatori né usa i loro dati di navigazione per campagne commerciali.</p>
+  <p><strong>Attenzione all'hosting:</strong> le pagine sono distribuite mediante <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. GitHub dichiara che durante le visite registra e conserva gli indirizzi IP per ragioni di sicurezza, anche per utenti non autenticati. Per informazioni su finalità, conservazione e diritti relativi a tali dati, consulta la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Privacy Statement di GitHub</a>. Il curatore non può presentare il sito come privo di qualsiasi trattamento di dati da parte dell'infrastruttura.</p>
+ </section>
+ <section>
+  <h2>Dati salvati nel tuo browser</h2>
+  <p>Alcuni strumenti di <strong>Risto-Lab Instructor</strong> permettono di preparare lezioni, mantenere bozze, recuperare materiali recenti e riprendere una sequenza didattica. Queste funzioni utilizzano <code>localStorage</code> e, in alcuni casi, <code>sessionStorage</code>, cioè spazi di memoria del tuo browser.</p>
+  <p>Secondo l'architettura attualmente pubblicata, tali bozze e preferenze rimangono sul dispositivo: <strong>Risto-Lab non le invia automaticamente a un database del curatore</strong>. Possono però contenere le informazioni che l'utente decide di inserire; è opportuno evitare dati personali o sensibili di allievi, clienti e colleghi.</p>
+  <p>Puoi eliminare tali informazioni attraverso le impostazioni del browser. La cancellazione può far perdere lezioni e bozze non esportate. Per maggiori dettagli, consulta <a href={withBase('/cookie/')}>Cookie e memoria locale</a>.</p>
+ </section>
+ <section>
+  <h2>Quando ci scrivi via email</h2>
+  <p>Se scegli volontariamente il collegamento email, il curatore può conoscere indirizzo del mittente, nome, contenuto del messaggio e altri dati che decidi di condividere. Tali informazioni sono utilizzate <strong>per rispondere alla richiesta e gestire l'eventuale interlocuzione professionale</strong>, non per iscrizioni automatiche a newsletter o marketing.</p>
+  <p>Il trattamento si basa, in funzione della richiesta, sul legittimo interesse alla gestione di contatti professionali spontanei (art. 6, par. 1, lett. f, GDPR) oppure sull'esecuzione di misure precontrattuali richieste dall'interessato (art. 6, par. 1, lett. b, GDPR). La corrispondenza è mantenuta per il tempo necessario alla gestione della richiesta ed eventuali obblighi applicabili; non viene stabilito qui un termine fisso non verificato.</p>
+ </section>
+ <section>
+  <h2>Servizi esterni scelti dall'utente</h2>
+  <p>I collegamenti a GitHub, ChatGPT o ad altre fonti sono esterni al sito. Quando decidi di aprirli, i rispettivi gestori possono trattare dati secondo le loro condizioni e informative. Lo strumento <strong>Risto-Lab AI</strong> prepara una richiesta da copiare e permette di proseguire su una piattaforma esterna: non deve essere confuso con un sistema che trasferisce automaticamente al curatore tutte le conversazioni.</p>
+  <p>Prima di incollare testi su un servizio AI esterno, evita di includere dati riservati, sanitari, identificativi di studenti o documentazione personale non necessaria. Consulta anche <a href={withBase('/ai-act/')}>Trasparenza AI</a>.</p>
+ </section>
+ <section>
+  <h2>Destinatari, sicurezza e trasferimenti</h2>
+  <p>I messaggi inviati volontariamente sono gestiti tramite il servizio di posta elettronica utilizzato per i contatti; il relativo fornitore opera secondo le proprie condizioni. L'hosting del sito è affidato a GitHub Pages. Non è presente, nell'attuale progetto, una funzione destinata a cedere elenchi di visitatori a inserzionisti o broker di dati.</p>
+  <p>Le infrastrutture dei fornitori esterni possono comportare trattamenti anche al di fuori dello Spazio economico europeo, secondo le loro informative e gli eventuali meccanismi di trasferimento applicabili. Il curatore non può garantire l'assenza di trattamenti tecnici esterni.</p>
+ </section>
+ <section>
+  <h2>Diritti delle persone interessate</h2>
+  <p>Quando ne ricorrono le condizioni, puoi richiedere accesso, rettifica, cancellazione, limitazione, opposizione o portabilità dei dati trattati dal curatore; puoi inoltre chiedere chiarimenti sulla base giuridica e sulla gestione di un tuo messaggio.</p>
+  <p>Per esercitare questi diritti scrivi a <a href="mailto:marcelo2020.it@gmail.com">marcelo2020.it@gmail.com</a>. Hai anche il diritto di proporre reclamo al <a href="https://www.garanteprivacy.it/" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a>. Per i dati trattati direttamente da GitHub o da altre piattaforme, consulta anche i loro canali privacy.</p>
+ </section>
+ <section>
+  <h2>Normativa di riferimento e aggiornamenti</h2>
+  <p>Il documento fa riferimento al <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/ita" target="_blank" rel="noopener noreferrer">Regolamento (UE) 2016/679 (GDPR)</a>, in particolare ai principi di trasparenza e informazione. Sarà aggiornato qualora vengano introdotti nuovi moduli, strumenti di analisi, account, attività commerciali o servizi che modifichino i trattamenti attuali.</p>
+ </section>
+</LegalPage>

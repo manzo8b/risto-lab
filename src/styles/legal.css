@@ -1,0 +1,45 @@
+/* Risto-Lab Legal · 2026-11-14. White and navy/violet Academy identity. */
+body.rl-public .legal-site{max-width:1440px}
+body.rl-public .legal-heading{max-width:1080px;padding-top:clamp(30px,5vw,70px);padding-bottom:32px}
+body.rl-public .legal-heading h1{font-size:clamp(39px,4vw,61px);margin:12px 0 17px}
+body.rl-public .legal-heading .lead{max-width:68ch;font-size:17px;line-height:1.65;color:#384866}
+body.rl-public .legal-updated{font-size:12px;color:#4b5b77;margin-top:14px}
+body.rl-public .legal-layout{display:grid;grid-template-columns:minmax(190px,260px) minmax(0,1fr);gap:clamp(20px,3vw,50px);padding-bottom:clamp(35px,5vw,70px);align-items:start}
+body.rl-public .legal-nav{position:sticky;top:20px;border:1px solid #d5dfef;border-radius:15px;background:#fff;padding:12px;display:flex;flex-direction:column;gap:4px}
+body.rl-public .legal-nav-label{font-weight:760;font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin:7px 11px 10px;color:#33446c}
+body.rl-public .legal-nav a{display:flex;justify-content:space-between;align-items:center;min-height:44px;text-decoration:none;color:#132a56;font-weight:670;padding:11px 13px;border-radius:9px;font-size:13px}
+body.rl-public .legal-nav a span{font-size:14px}
+body.rl-public .legal-nav a:hover{background:#f2f6ff}
+body.rl-public .legal-nav a[aria-current=page]{background:#261072;color:#fff}
+body.rl-public .legal-document{border:1px solid #cfd9eb;border-radius:18px;background:#fff;box-shadow:0 9px 25px #101f3d0e;padding:clamp(21px,3.4vw,48px);min-width:0}
+body.rl-public .legal-document>section{margin:0 0 32px;padding:0 0 29px;border-bottom:1px solid #e0e8f2}
+body.rl-public .legal-document>section:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}
+body.rl-public .legal-document h2{font-size:clamp(23px,2vw,30px);letter-spacing:-.035em;font-weight:760;color:#081b4b;margin:0 0 16px}
+body.rl-public .legal-document h3{font-size:18px;font-weight:730;margin:18px 0 8px;color:#102756}
+body.rl-public .legal-document p,body.rl-public .legal-document li{color:#24395e;line-height:1.76;font-size:15px}
+body.rl-public .legal-document p{margin:10px 0 16px}
+body.rl-public .legal-document ul,body.rl-public .legal-document ol{padding-left:23px;margin:10px 0 18px}
+body.rl-public .legal-document li{padding:3px 0}
+body.rl-public .legal-document a{color:#3f18a8;text-decoration:underline;text-underline-offset:3px}
+body.rl-public .legal-document a:hover{color:#1454ad}
+body.rl-public .legal-document .legal-summary{padding:17px 20px;border-left:5px solid #5933c4;background:#f5f7ff;border-radius:0 12px 12px 0;font-weight:580}
+body.rl-public .legal-document .legal-fact-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0 19px}
+body.rl-public .legal-document .legal-fact-list>div{background:#fff;border:1px solid #d3dfec;border-top:4px solid #3155c0;border-radius:12px;padding:16px}
+body.rl-public .legal-document .legal-fact-list>div:nth-child(even){border-top-color:#5b16d6}
+body.rl-public .legal-document .legal-fact-list strong{display:block;color:#081b4b;font-size:15px;margin-bottom:5px}
+body.rl-public .legal-document .legal-fact-list small{display:block;color:#455572;font-size:13px;line-height:1.6}
+body.rl-public .legal-contact{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;border-top:5px solid #3159ca;border-radius:16px;border-right:1px solid #cfdaeb;border-bottom:1px solid #cfdaeb;border-left:1px solid #cfdaeb;padding:clamp(21px,3vw,35px);margin-bottom:clamp(40px,6vw,85px)}
+body.rl-public .legal-contact h2{font-size:clamp(22px,2vw,30px);font-weight:760;margin:6px 0 8px}
+body.rl-public .legal-contact p{color:#495b76;margin:5px 0}
+body.rl-public .legal-contact .button{white-space:normal}
+body.rl-public .legal-document :target{scroll-margin-top:30px}
+body.rl-public .legal-document a:focus-visible{outline:3px solid #0968e8;outline-offset:3px}
+@media(max-width:790px){body.rl-public .legal-layout{grid-template-columns:1fr}
+body.rl-public .legal-nav{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+body.rl-public .legal-nav-label{grid-column:1/-1}
+body.rl-public .legal-nav a{font-size:12px}
+}
+@media(max-width:440px){body.rl-public .legal-heading{padding-bottom:18px}
+body.rl-public .legal-fact-list{grid-template-columns:1fr!important}
+body.rl-public .legal-nav{grid-template-columns:1fr}
+body.rl-public .legal-document{padding:18px!important}}

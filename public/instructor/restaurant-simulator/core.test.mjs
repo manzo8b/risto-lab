@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {simulate,compare,sensitivity} from './core.mjs';
+const b={seats:50,turns:2,days:25,occupancy:60,grossTicket:33,vat:10,foodCostPct:30,otherVariablePerGuest:2,fixedLabor:14000,rent:3000,otherFixed:3000};
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8);
+test('monthly capacity, net sales, contribution and result',()=>{const r=simulate(b);assert.equal(r.capacity,2500);assert.equal(r.guests,1500);near(r.netRevenue,45000);near(r.grossRevenue,49500);near(r.foodCost,13500);near(r.otherVariable,3000);near(r.operatingResult,8500);assert.equal(r.breakEvenGuests,1053);near(r.breakEvenOccupancy,42.12)});
+test('zero occupancy keeps fixed costs',()=>{const r=simulate({...b,occupancy:0});assert.equal(r.netRevenue,0);assert.equal(r.operatingResult,-20000);assert.equal(r.marginPct,null)});
+test('unreachable break even',()=>{const r=simulate({...b,foodCostPct:100});assert.equal(r.breakEvenGuests,null);assert.equal(r.breakEvenFeasible,false)});
+test('capacity constraint',()=>assert.equal(simulate({...b,fixedLabor:100000}).breakEvenFeasible,false));
+test('no operating days',()=>{const r=simulate({...b,days:0});assert.equal(r.breakEvenOccupancy,null);assert.equal(r.breakEvenFeasible,false)});
+test('invalid input rejected',()=>{for(const v of [{occupancy:101},{grossTicket:-1},{seats:1.5},{vat:NaN},{days:'25'},{foodCostPct:undefined}])assert.throws(()=>simulate({...b,...v}))});
+test('comparison uses independent demand assumptions',()=>{const r=compare(b,{...b,occupancy:50,grossTicket:36.3});assert.equal(r.delta.guests,-250);near(r.scenario.netRevenue,41250);near(r.scenario.operatingResult,6375);near(r.delta.operatingResult,-2125)});
+test('sensitivity rejects infeasible occupancy without clipping',()=>{const r=sensitivity({...b,occupancy:98},[-5,0,5]);assert.equal(r[2].result,null);assert.equal(r[0].occupancy,93)});

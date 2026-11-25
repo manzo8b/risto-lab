@@ -1,6 +1,9 @@
 import {test,expect} from '@playwright/test';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
+type Evidence={channel:string;rule:string;allergen_code:number|null;concept_id:string;auto_confirm:boolean;provenance:string};
+type Analysis={s:number[];events:Evidence[];cross:Evidence[];flags:string[]};
+type AuditSnapshot={n:number;categories:number;cells:number;langs:boolean;provenance:boolean;ids:number};
 const root=process.env.LIVE_URL||'http://127.0.0.1:4330/risto-lab';
 const route=root+'/instructor/menu-engineering/matrice-allergeni/';
 const csv='Plato,Ingredientes\nMerluza,"merluza, harina de trigo, mantequilla"\n';
@@ -38,4 +41,113 @@ test('CDN spreadsheet, Word and PDF imports on built route',async({page})=>{
  const pdf=await page.evaluate(async(bytes)=>{const parsed=await (window as any).parseFile(new File([new Uint8Array(bytes)],'test.pdf'));return parsed.list;},Array.from(pdfFixture()));
  for(const f of ['xlsx','xls','docx'])expect((results as any)[f]).toEqual({count:1,name:'Merluza',ing:'merluza, mantequilla'});
  expect(pdf).toEqual([{name:'Merluza',ing:'merluza, mantequilla'}]);
+});
+
+
+test('v2.5 semantic context: evidence, composition, alternatives, claims and traces',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(route);
+ const cases=await page.evaluate<Record<string,Analysis>>(`(()=>{
+ const run=(ing,foodLang='es')=>{const d=make('Synthetic',ing,{foodLang});return {s:d.s,events:d.events,cross:d.crossEvents,flags:d.flags};};
+ return {
+ egg:run('huevos fritos o revueltos'),milk:run('leche o agua'),butter:run('aceite de oliva o mantequilla'),sesame:run('sésamo (opcional)'),
+ bread:run('pan blanco'),multi:run('pan multicereales'),lupin:run('harina de altramuz'),negative:run('sin leche'),gluten:run('pan sin gluten'),lactose:run('sin lactosa'),
+ trace:run('puede contener leche; huevos'),traceList:run('puede contener leche, huevos'),wine:run('vino blanco'),gin:run('gin'),
+ pepper:run('peperoni','it'),sausage:run('pepperoni','en'),coconut:run('coconut cream','en'),suppli:run('supplì','it')
+ };
+ })()`);
+ expect(cases.egg.s[2]).toBe(1);
+ expect(cases.milk.s[6]).toBe(2);expect(cases.butter.s[6]).toBe(2);expect(cases.sesame.s[10]).toBe(2);
+ expect(cases.bread.s).toEqual([2,...Array(13).fill(0)]);expect(cases.multi.s[10]).toBe(0);expect(cases.multi.s[12]).toBe(0);
+ expect(cases.lupin.s[12]).toBe(1);
+ expect(cases.negative.events.some(e=>e.channel==='negative_claim')).toBe(true);expect(cases.negative.s[6]).toBe(2);
+ expect(cases.gluten.events.some(e=>e.channel==='negative_claim')).toBe(true);expect(cases.lactose.s[6]).toBe(2);
+ expect(cases.trace.s[6]).toBe(0);expect(cases.trace.s[2]).toBe(1);expect(cases.trace.cross.some(e=>e.allergen_code===7)).toBe(true);
+ expect(cases.traceList.flags.some(f=>f.includes('trace_scope_review'))).toBe(true);
+ expect(cases.wine.s[11]).toBe(2);expect(cases.wine.events.some(e=>e.channel==='threshold_check')).toBe(true);
+ expect(cases.gin.s.every(s=>s===0)).toBe(true);expect(cases.pepper.s.every(s=>s===0)).toBe(true);
+ expect(cases.sausage.events.some(e=>e.concept_id==='rlgi:pepperoni_sausage')).toBe(true);
+ expect(cases.coconut.s[6]).toBe(0);expect(cases.suppli.s.every(s=>s===0)).toBe(true);expect(cases.suppli.flags.length).toBeGreaterThan(0);
+ for(const c of Object.values(cases))expect(c.s.every(s=>s<=2)).toBe(true);
+ expect(errors).toEqual([]);
+});
+test('v2.5 synthetic 227-row structured CSV, language, provenance, session and Excel audit',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(route);
+ const header=['ID','Categoría','Plato','Ingredientes declarados (carta/ficha)','Ingredientes propuestos (no confirmados)','Verificación / discrepancia','Fuente Canva','Estado','Idioma'];
+ const rows=Array.from({length:227},(_,i)=>['SYN-'+i,'Category '+i%17,'Synthetic '+i,'huevo frito o revuelto','leche','Otra carta indica mostaza','Synthetic source','SIMULACION','ES-es']);
+ const data=[header,...rows].map(row=>row.map(v=>'"'+v.replace(/"/g,'""')+'"').join(',')).join('\n');
+ await page.locator('#file').setInputFiles({name:'synthetic-SIMULACION.csv',mimeType:'text/csv',buffer:Buffer.from(data)});
+ await expect(page.locator('#count')).toHaveText('227');
+ const audit=await page.evaluate<{before:AuditSnapshot;after:AuditSnapshot;sourceCol:number;sourceValues:boolean;audit:boolean;matrixRows:number}>(`(async()=>{
+ const inspect=()=>({n:dishes.length,categories:new Set(dishes.map(d=>d.meta.category)).size,cells:dishes.reduce((n,d)=>n+d.s.length,0),langs:dishes.every(d=>d.foodLang==='es'&&d.sourceFoodLang==='es'),provenance:dishes.every(d=>d.s[2]===1&&d.s[6]===2&&d.s[9]===0&&d.events.some(e=>e.channel==='document_discrepancy')),ids:new Set(dishes.map(d=>d.meta.id)).size});
+ const before=inspect();
+ const data=JSON.parse(JSON.stringify({format:'RISTO-LAB-session',version:1,dictionary:DICTIONARY.version,dishes,source,raw,demo}));
+ data.dishes[0].foodLang='mixed';restoreSession(data);
+ const after=inspect();
+ const reportData=report(),sourceCol=reportData.head.indexOf('Lingua sorgente');
+ const bytes=new Uint8Array(await excelBlob().arrayBuffer()),view=new DataView(bytes.buffer),decoder=new TextDecoder(),files={};
+ for(let p=0;p+30<=bytes.length&&view.getUint32(p,true)===0x04034b50;){const len=view.getUint32(p+18,true),nl=view.getUint16(p+26,true),el=view.getUint16(p+28,true),start=p+30+nl+el;files[decoder.decode(bytes.slice(p+30,p+30+nl))]=decoder.decode(bytes.slice(start,start+len));p=start+len;}
+ return {before,after,sourceCol,sourceValues:reportData.rows.every(r=>r[sourceCol]==='es'),audit:files['xl/workbook.xml'].includes('name="Audit"')&&files['xl/worksheets/sheet3.xml'].includes('document_discrepancy'),matrixRows:(files['xl/worksheets/sheet1.xml'].match(/<row r=/g)||[]).length};
+ })()`);
+ const expected={n:227,categories:17,cells:3178,langs:true,provenance:true,ids:227};
+ expect(audit.before).toEqual(expected);expect(audit.after).toEqual(expected);expect(audit.sourceCol).toBeGreaterThan(0);expect(audit.sourceValues).toBe(true);expect(audit.audit).toBe(true);expect(audit.matrixRows).toBe(228);
+ for(const l of ['es','en','it']){await page.locator('[data-l="'+l+'"]').click();expect(await page.evaluate('dishes.every(d=>d.foodLang==="es"&&d.sourceFoodLang==="es")')).toBe(true);}
+ await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ expect(errors).toEqual([]);
+});
+test('v2.5 proposed ingredients never become direct evidence after language or name edits',async({page})=>{
+ await page.goto(route);
+ const result=await page.evaluate<{unchanged:number[];edited:number[];source:string;events:Evidence[]}>(`(()=>{
+ const d=make('Synthetic','huevo; leche',{foodLang:'es',sourceFoodLang:'es',meta:{declared:'huevo',proposed:'leche',question:'Otra carta: mostaza',simulation:true}});
+ d.name='Edited';d.meta.modified=true;d.foodLang='en';analyze(d);
+ const unchanged=d.s.slice();d.ing='huevo; leche; mantequilla';analyze(d);
+ return {unchanged,edited:d.s,source:d.sourceFoodLang,events:d.events};
+ })()`);
+ expect(result.unchanged[2]).toBe(1);expect(result.unchanged[6]).toBe(2);expect(result.edited[2]).toBe(2);expect(result.edited[6]).toBe(2);expect(result.source).toBe('es');expect(result.events.some(e=>e.channel==='document_discrepancy')).toBe(true);
+});
+
+test('research context lexicon is non-assertive; provenance and trace ambiguity stay explicit',async({page})=>{
+ await page.goto(route);
+ const result=await page.evaluate<{count:number;profile:string;context:Evidence[];states:number[];before:Evidence[];edited:Evidence[];editedStates:number[];trace:Evidence[];cross:Evidence[];names:{events:Evidence[];states:number[]}[]}>(`(()=>{
+ const dish=make('Supplì','riso',{foodLang:'it'});
+ const declared=make('Synthetic','huevo',{foodLang:'es',meta:{declared:'huevo',simulation:true}});
+ const before=declared.events.slice();declared.ing='huevo; leche';analyze(declared);
+ const trace=make('Synthetic','may contain milk, egg',{foodLang:'en'});
+ const reportNames=['tortilla de patatas','full English','croque-monsieur','clam chowder','negroni'];
+ const names=reportNames.map(name=>make(name,'',{foodLang:'mixed'}));
+ return {count:GI.context_lexicon.length,profile:GI.regulatory_profile.id,context:dish.events,states:dish.s,before,edited:declared.events,editedStates:declared.s,trace:trace.events,cross:trace.crossEvents,names:names.map(d=>({events:d.events,states:d.s}))};
+ })()`);
+ expect(result.count).toBeGreaterThanOrEqual(50);expect(result.profile).toBe('EU_1169');
+ expect(result.states.every(s=>s===0)).toBe(true);
+ expect(result.context.some(e=>e.rule==='dish_name_recipe_required'&&e.allergen_code===null&&e.auto_confirm===false)).toBe(true);
+ expect(result.before.some(e=>e.provenance==='declared'&&e.channel==='ingredient_evidence')).toBe(true);
+ expect(result.editedStates[2]).toBe(2);expect(result.editedStates[6]).toBe(2);
+ expect(result.edited.every(e=>e.provenance==='edited_unverified'&&e.auto_confirm===false)).toBe(true);
+ expect(result.trace.some(e=>e.channel==='cross_contact_scope_ambiguous')).toBe(true);
+ expect(result.cross.every(e=>e.channel==='cross_contact')).toBe(true);
+ for(const d of result.names){expect(d.states.every(s=>s===0)).toBe(true);expect(d.events.some(e=>e.rule==='dish_name_recipe_required')).toBe(true);}
+});
+
+test('optional private CSV release gate (local only, no recipe content in assertions)',async({page})=>{
+ const privatePath=process.env.RISTOLAB_PRIVATE_CSV;
+ test.skip(!privatePath,'Private dataset not provided; run locally with RISTOLAB_PRIVATE_CSV');
+ test.skip(!!process.env.CI,'Private data must never be uploaded to CI');
+ const errors:string[]=[];page.on('pageerror',()=>errors.push('page error'));
+ await page.goto(route);
+ await page.locator('#file').setInputFiles(privatePath!);
+ await expect(page.locator('#count')).toHaveText('227');
+ await page.locator('[data-l="it"]').click();
+ const audit=await page.evaluate(`(async()=>{
+ const ids=dishes.map(d=>d.meta.id),meta=JSON.stringify(dishes.map(d=>d.meta)),states=JSON.stringify(dishes.map(d=>d.s));
+ const session=JSON.parse(JSON.stringify({format:'RISTO-LAB-session',version:1,dictionary:DICTIONARY.version,dishes,source,raw,demo}));
+ session.dishes[0].foodLang='mixed';restoreSession(session);
+ const events=dishes.flatMap(d=>[...d.events,...d.crossEvents]);
+ const bytes=new Uint8Array(await excelBlob().arrayBuffer()),view=new DataView(bytes.buffer),decoder=new TextDecoder(),files={};
+ for(let p=0;p+30<=bytes.length&&view.getUint32(p,true)===0x04034b50;){const len=view.getUint32(p+18,true),nl=view.getUint16(p+26,true),el=view.getUint16(p+28,true),start=p+30+nl+el;files[decoder.decode(bytes.slice(p+30,p+30+nl))]=decoder.decode(bytes.slice(start,start+len));p=start+len;}
+ const audit=files['xl/worksheets/sheet3.xml'];
+ return {n:dishes.length,categories:new Set(dishes.map(d=>d.meta.category)).size,ids:new Set(ids).size,stable:JSON.stringify(ids)===JSON.stringify(dishes.map(d=>d.meta.id)),metadata:meta===JSON.stringify(dishes.map(d=>d.meta)),states:states===JSON.stringify(dishes.map(d=>d.s)),cells:dishes.reduce((n,d)=>n+d.s.length,0),language:dishes.every(d=>d.foodLang==='es'&&d.sourceFoodLang==='es'),simulation:demo&&!isReviewed(),noConfirm:dishes.every(d=>d.s.every(s=>s<=2))&&events.every(e=>e.auto_confirm===false),noProposedDirect:!events.some(e=>e.provenance==='proposed'&&e.channel==='ingredient_evidence'),audit:!!audit&&audit.includes('EU_1169')&&(audit.match(/<row r=/g)||[]).length===234,exportLanguages:(()=>{const r=report(),a=r.head.indexOf('Lingua sorgente'),b=r.head.indexOf('Lingua del ricettario');return a>=0&&b>=0&&r.rows.every(row=>row[a]==='es'&&row[b]==='es')})()};
+ })()`);
+ expect(audit).toEqual({n:227,categories:17,ids:227,stable:true,metadata:true,states:true,cells:3178,language:true,simulation:true,noConfirm:true,noProposedDirect:true,audit:true,exportLanguages:true});
+ for(const l of ['es','en','it']){await page.locator('[data-l="'+l+'"]').click();expect(await page.evaluate('dishes.every(d=>d.foodLang==="es"&&d.sourceFoodLang==="es")')).toBe(true);}
+ await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ expect(errors).toEqual([]);
 });

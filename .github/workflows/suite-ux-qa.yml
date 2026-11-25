@@ -1,0 +1,39 @@
+name: Professional Suite — UX and navigation QA
+on:
+  pull_request:
+    paths:
+      - 'src/layouts/**'
+      - 'src/instructor/pages/**'
+      - 'public/instructor/**'
+      - 'tests/suite-ux.e2e.ts'
+      - 'tests/human-review*'
+      - 'tests/quality-history*'
+      - 'tests/menu-dashboard*'
+      - 'tests/menu-classify*'
+      - 'scripts/**'
+      - 'package*.json'
+      - '.gitignore'
+      - '.github/workflows/suite-ux-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - run: node scripts/release-manifest.mjs --self-test
+      - run: npm run release:manifest && npm run release:verify
+      - run: npm run audit:portability
+      - run: npm run publication:gate
+      - run: npx tsx --test tests/human-review.test.ts tests/quality-history.test.ts tests/menu-dashboard.test.ts
+      - run: node --test tests/menu-classify.test.mjs
+      - run: npx playwright test tests/suite-ux.e2e.ts tests/human-review.e2e.ts tests/quality-history.e2e.ts tests/menu-dashboard.e2e.ts tests/food-cost.e2e.ts tests/matrice-allergeni.e2e.ts

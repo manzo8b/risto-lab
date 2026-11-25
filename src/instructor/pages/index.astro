@@ -11,7 +11,7 @@ const pathways=[
  {icon:'◈',name:'Servizio in sala',detail:'Preparazione, accoglienza, servizio e chiusura.',href:'/programmi/#servizio'},
  {icon:'◇',name:'Sicurezza',detail:'Materiali divulgativi e pratica contestualizzata.',href:'/risorse/'},
  {icon:'▤',name:'Menu Engineering',detail:'Leggere, progettare e rendere più chiaro un menu.',href:'/instructor/menu-engineering/'},
- {icon:'▣',name:'Strumenti professionali',detail:'Ricette, fornitori e allergeni: applicativi separati per il lavoro operativo.',href:'/instructor/professional-suite/'},
+ {icon:'▣',name:'Strumenti professionali',detail:'Dalla ricetta alla carta e alla simulazione economica: sette strumenti per il lavoro operativo.',href:'/instructor/professional-suite/'},
  {icon:'◎',name:'Instructor Hub',detail:'Progettare lezioni, selezionare risorse, condurre in aula.',href:'/instructor/'}
 ];
 ---
@@ -28,6 +28,15 @@ const pathways=[
   <div class="rl-visual"><img src={withBase('/materiali/res-mep-image.webp')} alt="Infografica didattica originale Risto-Lab: preparazione della mise en place" width="860" height="740" fetchpriority="high"/><span class="rl-photo-label">Unità 06 · La mise en place</span></div>
  </section>
 
+ <section class="section rl-band--white" id="strumenti" aria-labelledby="home-suite-title"><div class="rl-split"><div><p class="rl-eyebrow-line">PROFESSIONAL SUITE</p><h2 id="home-suite-title">Dalla ricetta alla decisione</h2><p class="lead muted">Sette strumenti per passare dalla ricetta alla gestione del ristorante. Analisi preliminari, verifica umana e correzione progressiva.</p><a class="button" href={withBase('/instructor/professional-suite/')}>Apri Professional Suite ↗</a></div><div class="rl-white-panel"><p class="rl-eyebrow-line">STRUMENTI OPERATIVI · ANTEPRIME E BETA</p><div class="rl-feature-grid rl-product-grid">{[
+ ['01','Recipe Manager','Ricette, ingredienti e rese','/instructor/recipe-manager/'],
+ ['02','Supplier Manager','Acquisti, fornitori e schede','/instructor/supplier-manager/'],
+ ['03','Matrice Allergeni','Indizi e verifica documentale','/instructor/menu-engineering/matrice-allergeni/'],
+ ['04','Food Cost Calculator','Costi per porzione e margini','/instructor/food-cost-calculator/'],
+ ['05','Menu Engineering Dashboard','Popolarità e marginalità','/instructor/menu-engineering-dashboard/'],
+ ['06','Menu Design Studio','Carta multilingue in tre stili','/instructor/menu-design-studio/'],
+ ['07','Restaurant Simulator','Scenari economici e pareggio','/instructor/restaurant-simulator/']
+ ].map(([n,label,detail,href])=><a class="rl-feature rl-product-tile" href={withBase(href)}><span class="rl-product-index">{n}</span><strong>{label}</strong><p>{detail}</p><span class="rl-product-open" aria-hidden="true">↗</span></a>)}</div></div></div></section>
  <section class="section rl-band--sage" id="in-evidenza">
   <div class="rl-section-head"><div><p class="rl-eyebrow-line">SCOPRI I MATERIALI</p><h2>Da dove iniziare</h2></div><a class="rl-link" href={withBase('/programmi/')}>Tutte le unità del programma ↗</a></div>
   <div class="rl-card-grid">{highlights.map(card=><article class="rl-course-card"><a class="rl-card-image" href={withBase(card.href)} aria-label={'Apri '+card.title}><img src={withBase(card.image)} alt={card.alt} loading="lazy" decoding="async"/></a><div class="rl-card-body"><span class="rl-chip rl-chip--accent">{card.kind}</span><h3>{card.title}</h3><p>{card.detail}</p><p class="rl-card-meta"><strong>{card.evidence}</strong></p><a class="rl-card-action" href={withBase(card.href)}>Esplora il materiale ↗</a></div></article>)}</div>

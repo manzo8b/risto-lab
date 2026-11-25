@@ -1,0 +1,7 @@
+/* MANZO Web Production: preserve brand, palette and layout. */
+:where(.rl-public,.instructor-shell) :where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid currentColor;outline-offset:3px}
+:where(.rl-public,.instructor-shell) .skip:focus{z-index:9999}
+:where(.rl-public,.instructor-shell) :where(main,[id]){scroll-margin-top:1rem}
+:where(.rl-public,.instructor-shell) :where(img,video){max-inline-size:100%}
+:where(.rl-public,.instructor-shell) :where(.rl-course-card,.rl-feature,.rl-resource-panel,.suite-card){min-inline-size:0;overflow-wrap:anywhere}
+@media(prefers-reduced-motion:reduce){:where(.rl-public,.instructor-shell) *, :where(.rl-public,.instructor-shell) *::before,:where(.rl-public,.instructor-shell) *::after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}

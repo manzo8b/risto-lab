@@ -1,0 +1,27 @@
+name: Menu Design Studio QA
+on:
+  push:
+    branches: [feat/menu-design-studio]
+    paths:
+      - 'public/instructor/menu-design-studio/**'
+      - '.github/workflows/menu-design-studio-qa.yml'
+  pull_request:
+    paths:
+      - 'public/instructor/menu-design-studio/**'
+      - '.github/workflows/menu-design-studio-qa.yml'
+permissions:
+  contents: read
+jobs:
+  studio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test core and language contracts
+        run: node --test public/instructor/menu-design-studio/*.test.mjs
+      - name: Check inline module syntax
+        run: |
+          node --input-type=module -e "import fs from 'node:fs'; const html=fs.readFileSync('public/instructor/menu-design-studio/index.html','utf8'); const script=html.match(/<script type=\"module\">([\\s\\S]*?)<\\/script>/); if(!script) throw Error('Missing module'); fs.writeFileSync('/tmp/menu-design-check.mjs',script[1]);"
+          node --check /tmp/menu-design-check.mjs

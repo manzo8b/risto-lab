@@ -27,3 +27,21 @@
 
 /* Apple-inspired operational navigation: native links, no fake controls. */
 .rl-suite-nav{border-radius:1.5rem;box-shadow:0 4px 18px #172a4209}.rl-suite-apps a{transition:background 150ms ease-out,transform 100ms ease-out;touch-action:manipulation}.rl-suite-apps a:active{transform:scale(.97)}.rl-suite-guide{border-radius:1.25rem}.rl-suite-guide summary:active{opacity:.78}@media(prefers-reduced-motion:reduce){.rl-suite-apps a{transition:none!important;transform:none!important}}
+
+/* Shared workspace craft, screen only. Never override allergen matrix cell states or printed menu typography. */
+@media screen {
+.rl-suite-nav,.rl-suite-guide{--ink:#172a42;--muted:#52647a;--blue:#174e94;--line:#dce5ef;--soft:#f3f7fc}
+.rl-suite-nav{background:#fff;border-color:#dce5ef;box-shadow:0 5px 22px #172a4209}
+.rl-suite-nav .rl-suite-home{font-weight:750;letter-spacing:-.025em}
+.rl-suite-nav .rl-suite-apps a{border-color:#e0e6ef}
+.rl-suite-nav .rl-suite-apps a[aria-current=page]{background:#e9f1fc;color:#174e94;border-color:#b7cbea}
+body:has(.rl-suite-nav)>main,body:has(.rl-suite-nav)>header{min-width:0}
+body:has(.rl-suite-nav) main>h1,body:has(.rl-suite-nav) header h1,body:has(.rl-suite-nav) .hero h1{letter-spacing:-.045em;line-height:1.08}
+body:has(.rl-suite-nav) main :is(.panel,.aside,.heroaside){border-radius:22px;box-shadow:0 4px 20px #172a4208}
+body:has(.rl-suite-nav) main .metric{border-radius:16px}
+body:has(.rl-suite-nav) main .metric :is(b,strong){font-variant-numeric:tabular-nums;letter-spacing:-.035em}
+body:has(.rl-suite-nav) :is(.actions,.controls,.toolbar,.stack) button.primary{border-radius:999px;touch-action:manipulation;transition:transform 100ms ease-out,background 160ms ease-out}
+body:has(.rl-suite-nav) :is(.actions,.controls,.toolbar,.stack) button.primary:not(:disabled):active{transform:scale(.97)}
+body:has(.rl-suite-nav)>nav.rl-suite-nav,body:has(.rl-suite-nav)>details.rl-suite-guide{max-width:1280px;margin:1rem auto;width:calc(100% - 32px)}
+@media(prefers-reduced-motion:reduce){body:has(.rl-suite-nav) :is(.actions,.controls,.toolbar,.stack) button.primary{transition:none!important;transform:none!important}}
+}

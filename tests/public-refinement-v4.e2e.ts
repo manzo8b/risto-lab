@@ -45,3 +45,15 @@ test('homepage and resources cards fit phone width and leave the official brand 
  expect(await hero.evaluate(el=>el.getBoundingClientRect().height)).toBeLessThanOrEqual(260);
  await expect(page.getByRole('link',{name:'Scopri le risorse libere'})).toBeVisible();
 });
+
+test('home keeps a compact editorial rhythm between Hero and Professional Suite',async({page},info)=>{
+ for(const width of [390,768,1440]){
+  await page.setViewportSize({width,height:900});await page.goto(root+'/');
+  const m=await page.evaluate(()=>{const r=(s:string)=>document.querySelector(s)!.getBoundingClientRect();return {heroBottom:r('.rl-public-hero').bottom,sectionTop:r('#strumenti').top,headingTop:r('#strumenti .rl-suite-copy').top,headingBottom:r('#strumenti .rl-suite-intro').bottom,tilesTop:r('#strumenti .rl-white-panel').top,heroContentBottom:Math.max(r('.rl-hero-copy').bottom,r('.rl-visual').bottom),width:innerWidth,scroll:document.documentElement.scrollWidth}});
+  expect(m.headingTop-m.heroContentBottom).toBeLessThanOrEqual(70);
+  expect(m.tilesTop-m.headingBottom).toBeLessThanOrEqual(24);
+  expect(m.scroll).toBeLessThanOrEqual(m.width);
+  await expect(page.locator('#strumenti .rl-product-tile')).toHaveCount(7);
+  await info.attach('home-rhythm-'+width,{body:await page.screenshot({animations:'disabled',fullPage:true}),contentType:'image/png'});
+ }
+});

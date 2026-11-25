@@ -20,11 +20,13 @@ test('Menu Design Studio has distinct layouts and blocks unvalidated exports',as
 });
 test('Restaurant Simulator recomputes, exports and invalidates missing inputs',async({page})=>{
  await page.goto(root+'/instructor/restaurant-simulator/');
- await expect(page.locator('#metrics')).toContainText('6.375');
+ const result=page.locator('[data-metric=operatingResult] strong');
+ const expected=async(n:number)=>page.evaluate(v=>new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR'}).format(v),n);
+ await expect(result).toHaveText(await expected(6375));
  await page.locator('#copy').click();
- await expect(page.locator('#metrics')).toContainText('8.500');
+ await expect(result).toHaveText(await expected(8500));
  await page.locator('#scenario-occupancy').fill('0');
- await expect(page.locator('#metrics')).toContainText('20.000');
+ await expect(result).toHaveText(await expected(-20000));
  await page.locator('#scenario-occupancy').fill('');
  await expect(page.locator('#save')).toBeDisabled();
  await page.locator('#reset').click();

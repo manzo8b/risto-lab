@@ -19,7 +19,7 @@ test('home, suite, and seven app routes are connected with review guidance',asyn
 test('navigation at 360, 390, 768 and 1440 pixels; language and reduced motion',async({page})=>{
  for(const width of [360,390,768,1440]){
   await page.setViewportSize({width,height:900});
-  for(const route of [suite,...routes]){await page.goto(root+route);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route+' '+width).toBe(true)}
+  for(const route of [suite,...routes]){await page.goto(root+route);const geometry=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,overflow:Array.from(document.querySelectorAll('body *')).filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,8).map(e=>({tag:e.tagName,id:e.id,cls:String(e.className).slice(0,80)}))}));expect(geometry.scrollWidth<=geometry.width,route+' '+width+' '+JSON.stringify(geometry)).toBe(true)}
  }
  await page.goto(root+routes[0]);await page.locator('[data-lang="es"]').click();await expect(page.locator('.rl-suite-guide summary')).toContainText('Verificación asistida');
  await page.locator('[data-lang="en"]').click();await expect(page.locator('.rl-suite-guide summary')).toContainText('Assisted review');

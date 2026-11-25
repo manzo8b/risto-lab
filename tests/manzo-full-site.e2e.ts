@@ -30,12 +30,29 @@ test('Apple Design shared stylesheet is loaded across public, instructor and ope
   for(const route of routes){
    const res=await page.goto(root+route);expect(res?.ok(),route).toBe(true);
    const revision=await page.evaluate(()=>getComputedStyle(document.documentElement).getPropertyValue('--rl-design-revision').trim());
-   expect(revision,route).toBe('apple-excellence-1-1');
+   expect(revision,route).toBe(route.includes('/instructor/')&&await page.locator('.rl-suite-nav').count()?'apple-excellence-1-1':'apple-excellence-1-2');
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route+' '+width).toBeTruthy();
    if(['/', '/risorse/', '/instructor/', '/instructor/aula/', '/instructor/menu-engineering/', '/instructor/menu-engineering-dashboard/', '/instructor/menu-design-studio/'].includes(route)){
     const name=(route==='/'?'home':route.replace(/^\//,'').replaceAll('/','-').replace(/-$/,''))+'-'+width;
     await info.attach(name,{body:await page.screenshot({animations:'disabled',fullPage:false}),contentType:'image/png'});
    }
   }
+ }
+});
+
+test('public typography uses one hierarchy, and the Home visual uses the landscape teaching asset',async({page},info)=>{
+ for(const width of [390,1440]){
+  await page.setViewportSize({width,height:900});
+  await page.goto(root+'/');
+  const styles=await page.evaluate(()=>{const read=(selector:string)=>{const el=document.querySelector(selector)!;const c=getComputedStyle(el);return {font:c.fontFamily,weight:c.fontWeight,size:parseFloat(c.fontSize),tracking:parseFloat(c.letterSpacing)}};return {hero:read('#rl-home-title'),suite:read('#home-suite-title'),method:read('#metodo h2'),resources:read('#in-evidenza h2'),card:read('#in-evidenza h3')}});
+  expect(styles.hero.font).toBe(styles.suite.font);expect(styles.hero.weight).toBe(styles.suite.weight);
+  expect(styles.suite.size).toBe(styles.method.size);expect(styles.method.size).toBe(styles.resources.size);
+  expect(styles.hero.size).toBeGreaterThan(styles.suite.size);expect(styles.suite.size).toBeGreaterThan(styles.card.size);
+  const img=page.locator('.rl-home .rl-visual img');await expect(img).toHaveAttribute('src',/res-mep-table\.webp$/);
+  expect(await img.evaluate((el:HTMLImageElement)=>el.complete&&el.naturalWidth>el.naturalHeight)).toBeTruthy();
+  await info.attach('home-type-'+width,{body:await page.screenshot({animations:'disabled',fullPage:true}),contentType:'image/png'});
+  await page.goto(root+'/materiali/mise-en-place-masterclass.html');
+  expect(await page.evaluate(()=>getComputedStyle(document.documentElement).getPropertyValue('--rl-design-revision').trim())).toBe('apple-excellence-1-2');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
  }
 });

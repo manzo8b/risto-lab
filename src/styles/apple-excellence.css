@@ -37,3 +37,34 @@ body.instructor-shell .suite-page .suite-card h3{letter-spacing:-.025em}
 
 /* Respect reflow and the pre-existing instructor typography at increased text sizes. */
 body.instructor-shell .hubmain,body.instructor-shell .hubcontent{min-width:0}
+
+/* 1.1 — shared coverage beyond the approved Home.
+   Preserve pedagogical accents and the distinct printed examples. */
+:root{--rl-design-revision: apple-excellence-1-1}
+@media screen{
+body.rl-public .wrap:not(.rl-home) .rl-page-banner{padding-block:clamp(2.25rem,5vw,4.5rem) clamp(1.5rem,3vw,2.5rem)!important}
+body.rl-public .wrap:not(.rl-home) :is(.rl-course-card,.rl-feature,.rl-tile,.rl-resource-panel,.rl-white-panel,.rl-price,.legal-document,.legal-nav,.legal-contact){border-radius:24px!important;box-shadow:0 5px 22px #101b3e0a!important}
+body.rl-public .wrap:not(.rl-home) :is(.rl-band--sage,.rl-band--blue,.rl-band--clay,.rl-band--rose){background:linear-gradient(120deg,#fff,#f3f6fc)!important;color:#101b3e!important}
+body.rl-public .wrap:not(.rl-home) :is(.rl-band--sage,.rl-band--blue,.rl-band--clay,.rl-band--rose) :is(.rl-section-head h2,.rl-section-head p,.rl-section-head .rl-eyebrow-line,.rl-split>div:first-child h2,.rl-split>div:first-child p,.rl-split>div:first-child .rl-eyebrow-line){color:#101b3e!important}
+body.rl-public .wrap:not(.rl-home) :is(.rl-band--sage,.rl-band--blue,.rl-band--clay,.rl-band--rose) .rl-link{color:#3f149b!important}
+body.rl-public .wrap:not(.rl-home) .rl-band--sage{border-top:4px solid #2569d3!important}
+body.rl-public .wrap:not(.rl-home) .rl-band--blue{border-top:4px solid #0968e8!important}
+body.rl-public .wrap:not(.rl-home) .rl-band--clay{border-top:4px solid #5b16d6!important}
+body.rl-public .wrap:not(.rl-home) .rl-band--rose{border-top:4px solid #008e90!important}
+body.rl-public .legal-nav a{border-radius:14px!important}
+body.instructor-shell .hubmain :is(.academy-stat-card,.academy-banner,.academy-featured,.academy-toolbox,.academy-library,.academy-recent,.academy-launch,.gourmet-menu-study,.card,.work-surface,.unitrow,.resource,.curriculum-unit,.practice-card){border-radius:20px!important;box-shadow:0 5px 22px #101b3e0a!important}
+body.instructor-shell.instructor-luxury .quick-access.gourmet-menu>a{border-radius:20px!important}
+body.instructor-shell .academy-launch-head{border-radius:19px 19px 0 0}
+body.instructor-shell .hubmain :is(.academy-tools a,.academy-library-links a){border-radius:16px!important}
+body.instructor-shell .hubmain :is(a.button,button.primary),body.aula :is(a.button,button.secondary,#next){border-radius:999px!important;touch-action:manipulation;transition:transform 100ms ease-out,background-color 160ms ease-out}
+body.instructor-shell .hubmain :is(a.button,button.primary):active,body.aula :is(a.button,button.secondary,#next):active{transform:scale(.98)}
+body.instructor-shell .menu-lesson :is(.me-intro,.me-ill-findings,.me-insight,.me-hero-seal,.me-allergen,.me-freeze>div,.me-matrix,.me-formula){border-radius:20px!important}
+body.instructor-shell .menu-lesson .me-chips span{border-radius:999px}
+body.instructor-shell .menu-lesson :is(.me-intro,.me-ill-findings,.me-insight){box-shadow:0 5px 22px #101b3e0a}
+body.aula:not(.projector) :is(.aula-head,.controls){background:#fff!important;border-color:#dce4f1!important}
+body.aula:not(.projector) :is(.aula-support,dialog){border-radius:20px!important}
+body.aula:not(.projector) .progress-track{border-radius:999px;overflow:hidden}
+body.aula:not(.projector) .progress-track span{border-radius:999px}
+body.aula:not(.projector) .controls button{max-inline-size:100%;white-space:normal}
+@media(prefers-reduced-motion:reduce){body.instructor-shell .hubmain :is(a.button,button.primary),body.aula :is(a.button,button.secondary,#next){transition:none!important;transform:none!important}}
+}

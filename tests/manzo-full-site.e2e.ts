@@ -21,3 +21,21 @@ test('home seven tools and legal disclosures remain consistent',async({page})=>{
  await page.goto(root+'/legal/');await expect(page.getByRole('heading',{name:'Strumenti professionali e sicurezza alimentare'})).toBeVisible();
  await page.goto(root+'/privacy/');await expect(page.getByRole('heading',{name:'Professional Suite e importazioni'})).toBeVisible();
 });
+
+test('Apple Design shared stylesheet is loaded across public, instructor and operational entrypoints',async({page},info)=>{
+ test.setTimeout(180000);
+ const routes=[...paths,'/instructor/menu-engineering/','/instructor/programmi/il-servizio-in-sala/','/instructor/unita/06-la-mise-en-place/','/instructor/laboratorio-sicurezza/','/instructor/laboratorio-sicurezza/lezioni/','/instructor/cerca/','/instructor/sessioni/'];
+ for(const width of [390,1440]){
+  await page.setViewportSize({width,height:900});
+  for(const route of routes){
+   const res=await page.goto(root+route);expect(res?.ok(),route).toBe(true);
+   const revision=await page.evaluate(()=>getComputedStyle(document.documentElement).getPropertyValue('--rl-design-revision').trim());
+   expect(revision,route).toBe('apple-excellence-1-1');
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route+' '+width).toBeTruthy();
+   if(['/', '/risorse/', '/instructor/', '/instructor/aula/', '/instructor/menu-engineering/', '/instructor/menu-engineering-dashboard/', '/instructor/menu-design-studio/'].includes(route)){
+    const name=(route==='/'?'home':route.replace(/^\//,'').replaceAll('/','-').replace(/-$/,''))+'-'+width;
+    await info.attach(name,{body:await page.screenshot({animations:'disabled',fullPage:false}),contentType:'image/png'});
+   }
+  }
+ }
+});

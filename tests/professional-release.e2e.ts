@@ -33,3 +33,19 @@ test('Restaurant Simulator recomputes, exports and invalidates missing inputs',a
  await expect(page.locator('#save')).toBeEnabled();
  const d=page.waitForEvent('download');await page.locator('#save').click();expect((await d).suggestedFilename()).toBe('restaurant-scenario.json');
 });
+
+test('documented menu remains an internal review draft and excludes costs',async({page})=>{
+ await page.goto(root+'/instructor/menu-design-studio/');
+ const data={items:[{id:'fixture',approved:true,name:{it:'Pasta'},category:{it:'Primi'},description:{it:'Pomodoro'},grossPrice:12,internalCost:3,allergenReview:{status:'validated',reference:'synthetic QA fixture',codes:[]},translationReview:{it:{status:'validated',reference:'synthetic QA fixture'}}}]};
+ await page.locator('#source').fill(JSON.stringify(data));
+ await page.locator('#load').click();
+ await expect(page.locator('#export')).toBeEnabled();
+ await expect(page.locator('.watermark')).toContainText('NON DISTRIBUIRE');
+ await expect(page.locator('.dish')).toContainText('non è garanzia di assenza');
+ const pending=page.waitForEvent('download');await page.locator('#export').click();const d=await pending;
+ expect(d.suggestedFilename()).toBe('menu-bozza-revisione.json');
+ const fs=await import('node:fs/promises');const file=await d.path();if(!file)throw Error('Missing exported draft');
+ const out=JSON.parse(await fs.readFile(file,'utf8'));
+ expect(out.purpose).toBe('internal_review_only_not_for_customer_use');
+ expect(out.menus[0].items[0]).not.toHaveProperty('internalCost');
+});

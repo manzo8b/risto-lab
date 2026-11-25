@@ -1,6 +1,9 @@
 import {test,expect} from '@playwright/test';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
+type Evidence={channel:string;rule:string;allergen_code:number|null;concept_id:string;auto_confirm:boolean;provenance:string};
+type Analysis={s:number[];events:Evidence[];cross:Evidence[];flags:string[]};
+type AuditSnapshot={n:number;categories:number;cells:number;langs:boolean;provenance:boolean;ids:number};
 const root=process.env.LIVE_URL||'http://127.0.0.1:4330/risto-lab';
 const route=root+'/instructor/menu-engineering/matrice-allergeni/';
 const csv='Plato,Ingredientes\nMerluza,"merluza, harina de trigo, mantequilla"\n';
@@ -43,7 +46,7 @@ test('CDN spreadsheet, Word and PDF imports on built route',async({page})=>{
 
 test('v2.5 semantic context: evidence, composition, alternatives, claims and traces',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(route);
- const cases=await page.evaluate(`(()=>{
+ const cases=await page.evaluate<Record<string,Analysis>>(`(()=>{
  const run=(ing,foodLang='es')=>{const d=make('Synthetic',ing,{foodLang});return {s:d.s,events:d.events,cross:d.crossEvents,flags:d.flags};};
  return {
  egg:run('huevos fritos o revueltos'),milk:run('leche o agua'),butter:run('aceite de oliva o mantequilla'),sesame:run('sésamo (opcional)'),
@@ -74,7 +77,7 @@ test('v2.5 synthetic 227-row structured CSV, language, provenance, session and E
  const data=[header,...rows].map(row=>row.map(v=>'"'+v.replace(/"/g,'""')+'"').join(',')).join('\n');
  await page.locator('#file').setInputFiles({name:'synthetic-SIMULACION.csv',mimeType:'text/csv',buffer:Buffer.from(data)});
  await expect(page.locator('#count')).toHaveText('227');
- const audit=await page.evaluate(`(async()=>{
+ const audit=await page.evaluate<{before:AuditSnapshot;after:AuditSnapshot;sourceCol:number;sourceValues:boolean;audit:boolean;matrixRows:number}>(`(async()=>{
  const inspect=()=>({n:dishes.length,categories:new Set(dishes.map(d=>d.meta.category)).size,cells:dishes.reduce((n,d)=>n+d.s.length,0),langs:dishes.every(d=>d.foodLang==='es'&&d.sourceFoodLang==='es'),provenance:dishes.every(d=>d.s[2]===1&&d.s[6]===2&&d.s[9]===0&&d.events.some(e=>e.channel==='document_discrepancy')),ids:new Set(dishes.map(d=>d.meta.id)).size});
  const before=inspect();
  const data=JSON.parse(JSON.stringify({format:'RISTO-LAB-session',version:1,dictionary:DICTIONARY.version,dishes,source,raw,demo}));
@@ -93,7 +96,7 @@ test('v2.5 synthetic 227-row structured CSV, language, provenance, session and E
 });
 test('v2.5 proposed ingredients never become direct evidence after language or name edits',async({page})=>{
  await page.goto(route);
- const result=await page.evaluate(`(()=>{
+ const result=await page.evaluate<{unchanged:number[];edited:number[];source:string;events:Evidence[]}>(`(()=>{
  const d=make('Synthetic','huevo; leche',{foodLang:'es',sourceFoodLang:'es',meta:{declared:'huevo',proposed:'leche',question:'Otra carta: mostaza',simulation:true}});
  d.name='Edited';d.meta.modified=true;d.foodLang='en';analyze(d);
  const unchanged=d.s.slice();d.ing='huevo; leche; mantequilla';analyze(d);
@@ -104,7 +107,7 @@ test('v2.5 proposed ingredients never become direct evidence after language or n
 
 test('research context lexicon is non-assertive; provenance and trace ambiguity stay explicit',async({page})=>{
  await page.goto(route);
- const result=await page.evaluate(`(()=>{
+ const result=await page.evaluate<{count:number;profile:string;context:Evidence[];states:number[];before:Evidence[];edited:Evidence[];editedStates:number[];trace:Evidence[];cross:Evidence[];names:{events:Evidence[];states:number[]}[]}>(`(()=>{
  const dish=make('Supplì','riso',{foodLang:'it'});
  const declared=make('Synthetic','huevo',{foodLang:'es',meta:{declared:'huevo',simulation:true}});
  const before=declared.events.slice();declared.ing='huevo; leche';analyze(declared);

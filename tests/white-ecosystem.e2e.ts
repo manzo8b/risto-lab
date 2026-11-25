@@ -72,7 +72,7 @@ test('Professional Suite navigation works in desktop, tablet and mobile layouts'
   await page.getByRole('link',{name:'Strumenti',exact:true}).click();
   await expect(page).toHaveURL(suite);
   await expect(page.getByRole('heading',{name:'Professional Suite',exact:true})).toBeVisible();
-  await expect(page.locator('.suite-card a')).toHaveCount(4);
+  await expect(page.locator('.suite-card a')).toHaveCount(7);
   await expect(page.getByRole('heading',{name:'Menu Design Studio',exact:true})).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
   if(width<=800){const nav=page.locator('.suite-primary-nav');expect(await nav.evaluate(el=>getComputedStyle(el).display)).toBe('grid');}

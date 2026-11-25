@@ -6,6 +6,11 @@ on:
       - 'src/instructor/pages/**'
       - 'public/instructor/**'
       - 'tests/suite-ux.e2e.ts'
+      - 'tests/human-review*'
+      - 'tests/quality-history*'
+      - 'scripts/**'
+      - 'package*.json'
+      - '.gitignore'
       - '.github/workflows/suite-ux-qa.yml'
   workflow_dispatch:
 permissions:
@@ -26,5 +31,6 @@ jobs:
       - run: node scripts/release-manifest.mjs --self-test
       - run: npm run release:manifest && npm run release:verify
       - run: npm run audit:portability
+      - run: npm run publication:gate
       - run: npx tsx --test tests/human-review.test.ts tests/quality-history.test.ts
       - run: npx playwright test tests/suite-ux.e2e.ts tests/human-review.e2e.ts tests/quality-history.e2e.ts tests/food-cost.e2e.ts tests/matrice-allergeni.e2e.ts

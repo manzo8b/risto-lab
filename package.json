@@ -11,7 +11,10 @@
     "test": "tsx --test tests/*.test.ts",
     "test:e2e": "playwright test",
     "validate:content": "tsx scripts/validate-public.ts",
-    "publication:gate": "node scripts/publication-gate.mjs"
+    "publication:gate": "node scripts/publication-gate.mjs",
+    "release:manifest": "node scripts/release-manifest.mjs",
+    "release:verify": "node scripts/release-manifest.mjs --verify",
+    "audit:portability": "node scripts/audit-portability.mjs"
   },
   "keywords": [],
   "author": "",

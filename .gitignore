@@ -74,3 +74,14 @@ docs/*
 !docs/PHASE6D_COMPLETION_REPORT.md
 
 !docs/QUALITY_REVIEW_2026_10_25.md
+
+# Professional Suite local exports and private review evidence
+risto-lab-quality-history*.json
+risto-lab-review-*.json
+risto-lab-recipe-archive*.json
+risto-lab-supplier-session*.json
+risto-lab-supplier-links*.json
+risto-lab-cost-run*.json
+matrice-allergeni-*.xlsx
+!docs/provider-readiness.md
+!docs/suite-human-review-standard.md

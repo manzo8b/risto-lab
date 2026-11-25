@@ -48,3 +48,7 @@ Nessuna autenticazione o riservatezza tecnica dei materiali online. I piani loca
 ## Phase 5
 
 Unità 10 e 17 dispongono di sequenze Aula e schede stampabili, con stato CLASSROOM_READY. La Home usa un profilo docente locale sostituibile. RISTO-LAB AI prepara richieste contestuali da copiare in ChatGPT, senza API o modifica automatica dei piani. Vedi `docs/PHASE5_COMPLETION_REPORT.md` e `docs/PHASE5_HUMAN_ACCEPTANCE.md` per verifiche e prova umana ancora da eseguire.
+
+## Professional Suite — qualità e portabilità
+
+La direzione tecnica è descritta in [Human Review Intelligence](docs/suite-human-review-standard.md) e [Provider readiness](docs/provider-readiness.md). Lo storico delle verifiche è locale, esplicito e trasferibile via JSON; non costituisce validazione degli allergeni. Il repository resta la fonte canonica. Per un artefatto statico verificabile: `npm run release:manifest` dopo la build, `npm run release:verify` per controllare i file, `npm run audit:portability` per inventariare i riferimenti al provider attuale. Il cambio di dominio/base path non è ancora collaudato.

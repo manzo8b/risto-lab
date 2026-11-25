@@ -23,5 +23,8 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run build
+      - run: node scripts/release-manifest.mjs --self-test
+      - run: npm run release:manifest && npm run release:verify
+      - run: npm run audit:portability
       - run: npx tsx --test tests/human-review.test.ts tests/quality-history.test.ts
       - run: npx playwright test tests/suite-ux.e2e.ts tests/human-review.e2e.ts tests/quality-history.e2e.ts tests/food-cost.e2e.ts tests/matrice-allergeni.e2e.ts

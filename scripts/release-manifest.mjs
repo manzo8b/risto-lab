@@ -1,0 +1,11 @@
+import {readdirSync,readFileSync,writeFileSync,mkdirSync,mkdtempSync,rmSync} from 'node:fs';
+import {join,relative,resolve,sep,dirname} from 'node:path';
+import {tmpdir} from 'node:os';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import assert from 'node:assert/strict';
+const sha=b=>createHash('sha256').update(b).digest('hex');
+function inventory(root){const entries=[];function walk(dir){for(const e of readdirSync(dir,{withFileTypes:true})){const p=join(dir,e.name);if(e.isDirectory())walk(p);else if(e.isFile()){const b=readFileSync(p);entries.push({path:relative(root,p).split(sep).join('/'),bytes:b.length,sha256:sha(b)})}else throw Error('Non-regular release entry: '+p)}}walk(root);entries.sort((a,b)=>a.path<b.path?-1:a.path>b.path?1:0);if(!entries.length)throw Error('Empty release');return entries}
+function manifest(root,commit){const files=inventory(root);return {schema:'ristolab.static-release/1',commit,files,contentSha256:sha(JSON.stringify(files))}}
+function verify(root,m){if(m.schema!=='ristolab.static-release/1'||!Array.isArray(m.files)||typeof m.commit!=='string')throw Error('Invalid manifest');const actual=manifest(root,m.commit);assert.deepEqual(actual,m,'Release contents differ');return actual}
+if(process.argv.includes('--self-test')){const dir=mkdtempSync(join(tmpdir(),'rl-release-'));try{writeFileSync(join(dir,'a.txt'),'one');const m=manifest(dir,'synthetic');verify(dir,m);writeFileSync(join(dir,'a.txt'),'two');assert.throws(()=>verify(dir,m));writeFileSync(join(dir,'a.txt'),'one');writeFileSync(join(dir,'extra.txt'),'extra');assert.throws(()=>verify(dir,m));console.log('Release manifest self-test PASS')}finally{rmSync(dir,{recursive:true,force:true})}}else{const root=resolve('dist'),out=resolve('.local/release-manifest.json');if(process.argv.includes('--verify')){const m=verify(root,JSON.parse(readFileSync(out,'utf8')));console.log('Verified '+m.files.length+' files: '+m.contentSha256)}else{const commit=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();const m=manifest(root,commit);mkdirSync(dirname(out),{recursive:true});writeFileSync(out,JSON.stringify(m,null,2)+'\n');console.log('Release manifest: '+m.files.length+' files: '+m.contentSha256)}}

@@ -16,3 +16,6 @@ Require green typecheck, unit, build, browser/accessibility and Matrix release g
 3. Test static staging on chosen provider; backup/restore browser archives.
 4. Introduce backend only when requirements justify it; separate identity/storage from domain logic.
 5. Verify rollback and DNS/TLS before switching production.
+
+## Release artifact and migration inventory
+After the normal build and QA, run `npm run release:manifest` to create `.local/release-manifest.json` (outside the public artifact). It records the Git commit and sorted relative paths, byte sizes and SHA-256 for every regular file in `dist`. Run `npm run release:verify` against the same artifact before transfer or rollback; it detects changed, missing and extra files, but does not sign the artifact or certify its safety. `npm run audit:portability` produces a non-blocking inventory of GitHub origin, base-path and common CDN references in tracked source files. It is not exhaustive and does not prove root-domain compatibility. CI tests the manifest and generates/verifies it after the build. Local professional exports are excluded from Git by default and blocked by the publication gate if explicitly added.

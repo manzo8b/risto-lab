@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {convert,ingredientCost,metrics,recipeCost} from './core.mjs';
+test('units',()=>{assert.equal(convert(500,'g','kg'),.5);assert.equal(convert(1,'l','ml'),1000);assert.equal(convert(1,'kg','l'),null)});
+test('yield',()=>assert.ok(Math.abs(ingredientCost({net:200,waste:20,unit:'g'},{pack:1,unit:'kg',price:.9}).cost-.225)<1e-10));
+test('gross precedence',()=>assert.equal(ingredientCost({gross:250,net:100,waste:20,unit:'g'},{pack:1,unit:'kg',price:4}).cost,1));
+test('missing',()=>{assert.equal(ingredientCost({gross:100,unit:'g'},null).cost,null);assert.equal(ingredientCost({net:100,unit:'g'},{pack:1,unit:'kg',price:4}).cost,null)});
+test('metrics',()=>{const m=metrics({cost:3,portions:1,grossPrice:11,vat:10,target:30,labor:2,overhead:1});assert.ok(Math.abs(m.foodCostPct-30)<1e-10);assert.equal(m.fullCost,6);assert.equal(m.cm1,7);assert.equal(m.targetGross,11)});
+test('unknown portions',()=>assert.equal(metrics({cost:3,grossPrice:11,vat:10}).perPortion,null));
+test('recursive',()=>{const rs=[{id:'a',ingredients:[],subrecipes:[{id:'b',portions:2}]},{id:'b',servings:4,ingredients:[{gross:1,unit:'kg'}]}];assert.equal(recipeCost('a',rs,()=>({pack:1,unit:'kg',price:8})).cost,4)});
+test('cycle',()=>assert.equal(recipeCost('a',[{id:'a',subrecipes:[{id:'a',portions:1}]}],()=>null).cost,null));
+test('partial',()=>{const x=recipeCost('a',[{id:'a',ingredients:[{gross:1,unit:'kg'},{gross:1,unit:'kg'}]}],(_,i)=>i?null:{pack:1,unit:'kg',price:2});assert.equal(x.cost,null);assert.equal(x.knownSubtotal,2)});

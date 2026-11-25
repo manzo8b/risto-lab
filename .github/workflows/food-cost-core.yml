@@ -4,6 +4,7 @@ on:
     paths:
       - 'public/instructor/food-cost-calculator/**'
       - '.github/workflows/food-cost-core.yml'
+      - 'tests/food-cost.e2e.ts'
   workflow_dispatch:
 permissions:
   contents: read
@@ -16,3 +17,7 @@ jobs:
         with:
           node-version: '24'
       - run: node --test public/instructor/food-cost-calculator/*.test.mjs
+
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright test tests/food-cost.e2e.ts

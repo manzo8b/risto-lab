@@ -1,0 +1,27 @@
+name: Restaurant Simulator QA
+on:
+  push:
+    branches: [feat/restaurant-simulator]
+    paths:
+      - 'public/instructor/restaurant-simulator/**'
+      - '.github/workflows/restaurant-simulator-qa.yml'
+  pull_request:
+    paths:
+      - 'public/instructor/restaurant-simulator/**'
+      - '.github/workflows/restaurant-simulator-qa.yml'
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify economic calculations
+        run: node --test public/instructor/restaurant-simulator/core.test.mjs
+      - name: Verify browser module syntax
+        run: |
+          node --input-type=module -e "import fs from 'node:fs'; const html=fs.readFileSync('public/instructor/restaurant-simulator/index.html','utf8'); const script=html.match(/<script type=\"module\">([\\s\\S]*?)<\\/script>/); if(!script) throw Error('Missing module'); fs.writeFileSync('/tmp/simulator-check.mjs',script[1]);"
+          node --check /tmp/simulator-check.mjs

@@ -1,6 +1,6 @@
 /* Provider-independent quality snapshots. Explicit local persistence only. */
 (function(g){'use strict';
-const schema='ristolab.quality-history/1',version='0.2.0',apps=new Set(['recipe','supplier','allergen','food']),limit=100,maxBytes=2000000;
+const schema='ristolab.quality-history/1',version='0.2.0',apps=new Set(['recipe','supplier','allergen','food','menu']),limit=100,maxBytes=2000000;
 const str=(v,max)=>typeof v==='string'&&v.length<=max;
 const integer=v=>Number.isSafeInteger(v)&&v>=0;
 const validDate=v=>str(v,40)&&Number.isFinite(Date.parse(v));

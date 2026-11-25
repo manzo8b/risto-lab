@@ -85,3 +85,7 @@ risto-lab-cost-run*.json
 matrice-allergeni-*.xlsx
 !docs/provider-readiness.md
 !docs/suite-human-review-standard.md
+
+risto-lab-menu-session*.json
+risto-lab-menu-report*.json
+risto-lab-menu-analysis*.csv

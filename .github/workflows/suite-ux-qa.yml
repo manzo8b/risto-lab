@@ -8,6 +8,7 @@ on:
       - 'tests/suite-ux.e2e.ts'
       - 'tests/human-review*'
       - 'tests/quality-history*'
+      - 'tests/menu-dashboard*'
       - 'scripts/**'
       - 'package*.json'
       - '.gitignore'
@@ -32,5 +33,6 @@ jobs:
       - run: npm run release:manifest && npm run release:verify
       - run: npm run audit:portability
       - run: npm run publication:gate
-      - run: npx tsx --test tests/human-review.test.ts tests/quality-history.test.ts
-      - run: npx playwright test tests/suite-ux.e2e.ts tests/human-review.e2e.ts tests/quality-history.e2e.ts tests/food-cost.e2e.ts tests/matrice-allergeni.e2e.ts
+      - run: npx tsx --test tests/human-review.test.ts tests/quality-history.test.ts tests/menu-dashboard.test.ts
+      - run: node --test public/instructor/menu-engineering-dashboard/core.test.mjs
+      - run: npx playwright test tests/suite-ux.e2e.ts tests/human-review.e2e.ts tests/quality-history.e2e.ts tests/menu-dashboard.e2e.ts tests/food-cost.e2e.ts tests/matrice-allergeni.e2e.ts

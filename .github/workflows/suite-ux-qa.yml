@@ -23,4 +23,5 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run build
-      - run: npx playwright test tests/suite-ux.e2e.ts
+      - run: npx tsx --test tests/human-review.test.ts
+      - run: npx playwright test tests/suite-ux.e2e.ts tests/human-review.e2e.ts tests/food-cost.e2e.ts tests/matrice-allergeni.e2e.ts

@@ -9,3 +9,6 @@ Scope: all professional and teaching tools. Outputs should be traceable, correct
 5. Recompute after corrections; retain versions and invalidate affected decisions where applicable.
 
 This UX sprint implements navigation and static review guidance, not a shared review engine, cross-app synchronization, or automatic validation. Review guidance is not a completion indicator. Preserve current app palettes and functional logic. Local files are not transferred automatically. Release requires browser QA and owner approval under MANZO AI Web Production v1.3.0. Matrix v2.5 is a separate draft PR; reconcile overlapping navigation changes before merging both.
+
+## Human Review Intelligence v0.1
+Four read-only rule adapters inspect current in-memory data, group issues by record, expose high priority and direct navigation to native editors, and export an internal JSON review report with optional reviewer/reference/observations. Notes are not approvals and are reset when analyzed data changes. No automatic confirmation, no accuracy score, no new storage, no transfer between tools. Rule coverage is finite; zero detected issues does not mean verified. Food Cost restores original inputs from saved run, and the local QA server now serves .mjs as JavaScript. Matrix v2.5 is integrated with the shared shell in this branch; no public deployment until coordinated QA and approval.

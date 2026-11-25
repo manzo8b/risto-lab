@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {classify} from './core.mjs';
+import test from 'node:test';import assert from 'node:assert/strict';import {classify} from '../public/instructor/menu-engineering-dashboard/core.mjs';
 const rows=[['a',40,10],['b',40,2],['c',10,10],['d',10,2]].map(([id,sold,margin])=>({id,sold,margin,category:'pasta',period:'2026-11'}));
 const opts={category:'pasta',period:'2026-11'};
 test('four quadrants',()=>assert.deepEqual(classify(rows,opts).items.map(x=>x.classification),['star','plowhorse','puzzle','dog']));

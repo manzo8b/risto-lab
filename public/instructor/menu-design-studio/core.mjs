@@ -1,6 +1,6 @@
 // Public menu projection: explicit allowlist, never expose internal costs.
 export function publicMenu(input,lang='it'){
- if(!['it','es','en'].includes(lang)||!Array.isArray(input?.items))throw Error('invalid_menu');
+ if(!['it','es','en','fr','de','pt','nl','ro','ar','zh','ja','ru'].includes(lang)||!Array.isArray(input?.items))throw Error('invalid_menu');
  const ids=new Set;
  const items=input.items.filter(x=>x.approved===true).map(x=>{
  if(typeof x.id!=='string'||!x.id||ids.has(x.id)||typeof x.name?.[lang]!=='string'||!x.name[lang].trim()||typeof x.category?.[lang]!=='string'||!x.category[lang].trim()||!Number.isFinite(x.grossPrice)||x.grossPrice<0)throw Error('invalid_item');

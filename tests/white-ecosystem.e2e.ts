@@ -59,3 +59,35 @@ test('Risto-Lab identity, section hierarchy and resources menu are functional',a
  await expect(page.locator('#libere .rl-course-card')).toHaveCount(3);
  await expect(page.locator('.rl-resource-panel')).toHaveCount(2);
 });
+
+
+test('Professional Suite navigation works in desktop, tablet and mobile layouts',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ const suite=root+'/instructor/professional-suite/';
+ for(const width of [390,768,1440]){
+  await page.setViewportSize({width,height:900});
+  await page.goto(root+'/');
+  const menu=page.locator('.rl-mobile-menu');
+  if(await menu.isVisible()) await menu.locator('summary').click();
+  await page.getByRole('link',{name:'Strumenti',exact:true}).click();
+  await expect(page).toHaveURL(suite);
+  await expect(page.getByRole('heading',{name:'Professional Suite',exact:true})).toBeVisible();
+  await expect(page.locator('.suite-card a')).toHaveCount(3);
+  await expect(page.getByRole('heading',{name:'Menu Design Studio',exact:true})).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+  if(width<=800){const nav=page.locator('.suite-primary-nav');expect(await nav.evaluate(el=>getComputedStyle(el).flexWrap)).toBe('wrap');}
+  for(const [label,route] of [['Recipe Manager','/instructor/recipe-manager/'],['Supplier Manager','/instructor/supplier-manager/'],['Matrice Allergeni','/instructor/menu-engineering/matrice-allergeni/']]){
+   await page.locator('.suite-card').getByRole('link',{name:new RegExp('Apri '+label)}).click();
+   await expect(page).toHaveURL(root+route);
+   await expect(page.getByRole('heading',{level:1})).toBeVisible();
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),label+' at '+width).toBeTruthy();
+   await page.getByRole('link',{name:/Professional Suite/}).first().click();
+   await expect(page).toHaveURL(suite);
+  }
+  await page.getByRole('link',{name:"Torna all'Instructor Hub"}).click();
+  await expect(page).toHaveURL(root+'/instructor/');
+  await page.getByRole('link',{name:/Esplora gli strumenti/}).click();
+  await expect(page).toHaveURL(suite);
+ }
+ expect(errors).toEqual([]);
+});

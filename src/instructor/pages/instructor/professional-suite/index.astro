@@ -1,0 +1,27 @@
+---
+import {withBase} from '../../../../lib/urls';
+import Hub from '../../../../layouts/Instructor.astro';
+const active=[
+ {n:'01',title:'Recipe Manager',desc:'Organizza ricette, ingredienti, grammature, rese e sottoricette.',href:'/instructor/recipe-manager/',state:'ANTEPRIMA',action:'Apri Recipe Manager'},
+ {n:'02',title:'Supplier Manager',desc:'Collega ingredienti, prodotti acquistati, prezzi e schede dei fornitori.',href:'/instructor/supplier-manager/',state:'ANTEPRIMA',action:'Apri Supplier Manager'},
+ {n:'03',title:'Matrice Allergeni',desc:'Analizza il ricettario e verifica le evidenze dei 14 gruppi UE.',href:'/instructor/menu-engineering/matrice-allergeni/',state:'BETA',action:'Apri Matrice Allergeni'}
+];
+const planned=[
+ {n:'04',title:'Food Cost Calculator',desc:'Calcola costi, rese e margini con dati di acquisto documentati.'},
+ {n:'05',title:'Menu Engineering Dashboard',desc:'Confronta popolarità e margini delle preparazioni.'},
+ {n:'06',title:'Menu Design Studio',desc:'Progetta la carta, le descrizioni, le lingue e i formati di stampa.'},
+ {n:'07',title:'Restaurant Simulator',desc:'Sperimenta scenari gestionali in un ambiente didattico.'}
+];
+---
+<Hub title="Professional Suite">
+ <div class="academy-dash suite-page">
+  <header class="academy-welcome"><div><p class="eyebrow">RISTO-LAB / STRUMENTI OPERATIVI</p><h1>Professional Suite</h1><p>Un archivio di lavoro, strumenti indipendenti. Dalla ricetta alla gestione del menù.</p></div><a class="button secondary" href={withBase('/instructor/')}>Torna all'Instructor Hub</a></header>
+  <section class="academy-library suite-section" aria-labelledby="suite-open"><h2 id="suite-open">Scegli lo strumento</h2><p>Tre ambienti separati, con scambio di file JSON e CSV. Le anteprime non sono strumenti professionali validati.</p><div class="suite-grid">{active.map(x=><article class="rl-white-panel suite-card"><p class="eyebrow">{x.n} / {x.state}</p><h3>{x.title}</h3><p>{x.desc}</p><a class="button secondary" href={withBase(x.href)}>{x.action} ↗</a></article>)}</div></section>
+  <section class="academy-library suite-section" aria-labelledby="suite-flow"><h2 id="suite-flow">Il percorso di lavoro</h2><ol class="suite-steps"><li><strong>Ricetta</strong><span>Definisci ingredienti e quantità</span></li><li><strong>Acquisto</strong><span>Collega prodotti e fornitori</span></li><li><strong>Verifica</strong><span>Revisiona le evidenze allergeniche</span></li><li><strong>Carta</strong><span>Costi, analisi e design nei moduli futuri</span></li></ol><p class="muted">Salva gli archivi sul dispositivo e importali nel modulo successivo. Non esiste ancora sincronizzazione automatica tra applicativi.</p></section>
+  <section class="academy-library suite-section" aria-labelledby="suite-planned"><h2 id="suite-planned">In progettazione</h2><div class="suite-grid">{planned.map(x=><article class="rl-white-panel suite-card"><p class="eyebrow">{x.n} / PROGRAMMATO</p><h3>{x.title}</h3><p>{x.desc}</p></article>)}</div></section>
+  <section class="gourmet-menu-study"><div><p class="eyebrow">PERCORSO FORMATIVO</p><h2>La radiografia del menù</h2><p>Studia il metodo prima di applicarlo agli strumenti operativi.</p></div><a class="button secondary" href={withBase('/instructor/menu-engineering/')}>Apri Menu Engineering</a></section>
+ </div>
+</Hub>
+<style>
+.suite-section{margin-block:24px}.suite-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:16px;margin-top:18px}.suite-card{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:22px;min-width:0}.suite-card h3,.suite-card p{margin:0}.suite-card .button{margin-top:auto;min-height:44px;max-width:100%;white-space:normal}.suite-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:20px;padding-inline-start:24px;margin-block:20px}.suite-steps li span{display:block;margin-top:4px}.suite-card a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+</style>

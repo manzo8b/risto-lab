@@ -15,6 +15,7 @@ import Icon from '../../../components/Icon.astro';
   <div><p class="eyebrow">RISTO-LAB · SPAZIO DOCENTE</p><h1>Progetta, insegna, fai crescere le competenze</h1><p>{instructorGreeting(currentInstructor)}. Un solo ambiente per i materiali, la pratica e la conduzione delle lezioni.</p></div>
   <a class="button" href={withBase('/instructor/sessioni/nuova/')}>＋ Crea una lezione</a>
  </header>
+ <section class="gourmet-menu-study" aria-labelledby="suite-entry" style="margin-block:20px"><div><p class="eyebrow">PROFESSIONAL SUITE</p><h2 id="suite-entry">Strumenti per la ristorazione</h2><p>Ricette, fornitori e allergeni: tre ambienti di lavoro indipendenti, distinti dalla preparazione delle lezioni.</p></div><a class="button secondary" href={withBase('/instructor/professional-suite/')}>Esplora gli strumenti ↗</a></section>
  <div class="academy-overview">
   <section class="academy-banner" aria-labelledby="academy-hero-heading">
     <div class="academy-banner-copy"><p class="eyebrow" style="color:#fff!important">HOSPITALITY TRAINING</p><h2 id="academy-hero-heading">Progetta esperienze formative<br/>per i professionisti dell’ospitalità</h2><div class="academy-banner-points"><span>26 unità curricolari</span><span>Risorse professionali</span><span>Didattica pratica</span></div></div>
@@ -31,7 +32,7 @@ import Icon from '../../../components/Icon.astro';
   </section>
  </div>
  <section class="gourmet-carte" aria-labelledby="academy-navigation-heading">
-  <h2 id="academy-navigation-heading" style="font-size:22px;margin:0 0 15px">I tuoi strumenti di lavoro</h2>
+  <h2 id="academy-navigation-heading" style="font-size:22px;margin:0 0 15px">Organizza la didattica</h2>
   <nav class="academy-launch-grid quick-access gourmet-menu" aria-label="Strumenti principali">
    <a class="academy-launch" href={withBase('/instructor/programmi/il-servizio-in-sala/')}><div class="academy-launch-head"><span aria-hidden="true">▱</span><b>Programmi</b></div><div class="academy-launch-body"><p>Le 26 unità del Servizio in Sala e il percorso da progettare</p><small>Apri il programma ↗</small></div></a>
    <a class="academy-launch" href={withBase('/instructor/biblioteca/')}><div class="academy-launch-head"><span aria-hidden="true">▤</span><b>Biblioteca</b></div><div class="academy-launch-body"><p>178 risorse catalogate, schede e materiali per le lezioni</p><small>Esplora le risorse ↗</small></div></a>
@@ -46,7 +47,7 @@ import Icon from '../../../components/Icon.astro';
      <div><span class="academy-label">Unità 06 · In revisione</span><h2 id="academy-featured-title">La mise en place</h2><p>Preparazione della tavola, controllo dei dettagli e verifica pratica con il docente</p><div class="academy-tagline"><span>12 slide</span><span>Laboratorio</span><span>Obiettivi osservabili</span></div><p><strong>Stato:</strong> PARTIAL — validazione pedagogica ancora da completare</p><a class="button" href={withBase('/instructor/unita/06-la-mise-en-place/')}>Apri l’unità ↗</a></div>
    </section>
    <section class="academy-toolbox" aria-labelledby="academy-tools-title">
-    <h2 id="academy-tools-title">Strumenti didattici pratici</h2><p>Collegamenti a funzioni e materiali realmente disponibili</p>
+    <h2 id="academy-tools-title">Laboratori e supporto didattico</h2><p>Collegamenti a funzioni e materiali realmente disponibili</p>
     <div class="academy-tools">
       <a href={withBase('/instructor/sessioni/nuova/')}><span aria-hidden="true">▣</span><strong>Crea lezione</strong><small>Componi la sequenza e scegli risorse</small></a>
       <a href={withBase('/instructor/laboratorio-sicurezza/')}><span aria-hidden="true">◇</span><strong>Laboratorio</strong><small>Attività e casi di sicurezza</small></a>

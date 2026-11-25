@@ -11,13 +11,13 @@ const links=[
 ];
 const current=Astro.url.pathname;
 ---
-<Public title={title}>
+<Public title={title} description={intro}>
   <div class="wrap legal-site">
     <header class="rl-page-banner legal-heading">
       <p class="rl-eyebrow-line">{eyebrow}</p>
       <h1>{title}</h1>
       <p class="lead">{intro}</p>
-      <p class="legal-updated">Ultimo aggiornamento: <time datetime="2026-11-14">14 novembre 2026</time></p>
+      <p class="legal-updated">Ultimo aggiornamento: <time datetime="2026-11-25">25 novembre 2026</time></p>
     </header>
     <div class="legal-layout">
       <nav class="legal-nav" aria-label="Documenti legali e trasparenza">

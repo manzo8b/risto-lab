@@ -45,3 +45,15 @@ body:has(.rl-suite-nav) :is(.actions,.controls,.toolbar,.stack) button.primary:n
 body:has(.rl-suite-nav)>nav.rl-suite-nav,body:has(.rl-suite-nav)>details.rl-suite-guide{max-width:1280px;margin:1rem auto;width:calc(100% - 32px)}
 @media(prefers-reduced-motion:reduce){body:has(.rl-suite-nav) :is(.actions,.controls,.toolbar,.stack) button.primary{transition:none!important;transform:none!important}}
 }
+
+/* Workspace surfaces omitted by earlier .panel-only scope, including Food Cost and Dashboard. */
+:root{--rl-design-revision: apple-excellence-1-1}
+@media screen{
+body:has(.rl-suite-nav) main>section{border-radius:20px;box-shadow:0 4px 20px #172a4208}
+body:has(.rl-suite-nav) main>section>.primary{border-radius:999px;touch-action:manipulation}
+body:has(.rl-suite-nav) main>section>.primary:not(:disabled):active{transform:scale(.98)}
+body:has(.rl-suite-nav) main :is(.actions,.controls,.toolbar) button:not(:disabled){touch-action:manipulation}
+body:has(.rl-suite-nav) main :is(.actions,.controls,.toolbar) button:not(:disabled):active{transform:scale(.98)}
+body:has(.rl-suite-nav) main :is(.actions,.controls,.toolbar) button.primary{border-radius:999px}
+@media(prefers-reduced-motion:reduce){body:has(.rl-suite-nav) main :is(.actions,.controls,.toolbar) button,body:has(.rl-suite-nav) main>section>.primary{transform:none!important;transition:none!important}}
+}

@@ -1,0 +1,36 @@
+/* RISTO-LAB / Apple Design Excellence — original brand, no Apple assets.
+   Loaded after legacy themes. Operational controls and menu print templates untouched. */
+:root{--rl-craft-font:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;--rl-craft-radius:24px;--rl-craft-shadow:0 5px 22px #101b3e0a;--rl-craft-press:100ms ease-out}
+body.rl-public,body.instructor-shell{font-family:var(--rl-craft-font);font-optical-sizing:auto}
+body.rl-public :is(h1,h2,h3),body.instructor-shell :is(h1,h2,h3){font-family:var(--rl-craft-font);text-wrap:balance}
+body.rl-public :is(.rl-home,.wrap) :is(.rl-public-hero,.rl-page-banner) h1{letter-spacing:-.048em!important;line-height:1.07!important}
+body.rl-public .rl-home>.rl-public-hero{padding-block:clamp(38px,6.5vw,96px)!important;gap:clamp(24px,4vw,64px)!important}
+body.rl-public .rl-home .rl-visual{height:clamp(310px,36vw,460px)!important;border:1px solid #dce4f1!important;border-radius:var(--rl-craft-radius)!important;box-shadow:var(--rl-craft-shadow)!important;background:linear-gradient(135deg,#fff,#f5f8ff)!important}
+body.rl-public .rl-home .rl-visual img{padding:clamp(14px,2vw,28px) clamp(14px,2vw,28px) 42px!important}
+body.rl-public .wrap>.section,body.rl-public .rl-home>.section{padding-block:clamp(42px,6vw,84px)!important}
+body.rl-public .rl-section-head{margin-bottom:clamp(20px,3vw,36px)!important}
+body.rl-public .rl-section-head h2{font-size:clamp(1.85rem,3.5vw,3.05rem)!important;letter-spacing:-.045em!important;line-height:1.12!important}
+body.rl-public .rl-home>:is(#in-evidenza,#ambiti,#metodo,#formati,#docenti){border-top:1px solid #dce4f1!important}
+body.rl-public :is(.rl-course-card,.rl-feature,.rl-tile,.rl-resource-panel,.rl-white-panel),body.instructor-shell .suite-card{border-radius:var(--rl-craft-radius)!important;box-shadow:var(--rl-craft-shadow)!important}
+body.rl-public :is(.rl-course-card,.rl-feature,.rl-tile,.rl-resource-panel){border-top-width:2px!important}
+body.rl-public :is(a.button,.rl-card-action),body.instructor-shell .suite-page a.button{border-radius:999px!important;min-height:44px;box-shadow:none!important;touch-action:manipulation;transition:background 160ms ease-out,transform var(--rl-craft-press)}
+body.rl-public a.button:not(.secondary){background:#4b18b5!important;color:#fff!important;border-color:#4b18b5!important}
+body.rl-public a.button:not(.secondary):hover{background:#35108d!important}
+body.rl-public :is(a.button,.rl-card-action):active,body.instructor-shell .suite-page a.button:active{transform:scale(.97)}
+body.rl-public .rl-home #strumenti .rl-split{grid-template-columns:minmax(0,1fr);gap:clamp(24px,4vw,44px)}
+body.rl-public .rl-home #strumenti .rl-split>div:first-child{max-width:760px}
+body.rl-public .rl-home #strumenti .rl-white-panel{border:0!important;background:#f5f7fb!important;padding:clamp(16px,3vw,30px)!important}
+body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+body.rl-public .rl-home #strumenti .rl-product-tile{display:grid;grid-template-columns:1fr auto;align-content:start;align-items:start;min-height:142px;gap:6px;padding:18px!important;text-decoration:none;border:1px solid #dce4f1!important;position:relative}
+body.rl-public .rl-home #strumenti .rl-product-tile strong{grid-column:1/-1;font-size:clamp(1rem,1.4vw,1.3rem);line-height:1.25;letter-spacing:-.025em}
+body.rl-public .rl-home #strumenti .rl-product-tile p{grid-column:1/-1;margin:0;color:#495775;line-height:1.45;font-size:.875rem}
+.rl-product-index{font-size:.78rem;font-weight:700;color:#4b18b5;font-variant-numeric:tabular-nums}
+.rl-product-open{grid-column:2;grid-row:1;color:#4b18b5;font-weight:700}
+body.instructor-shell .suite-page .suite-card{padding:clamp(1rem,2vw,1.5rem)}
+body.instructor-shell .suite-page .suite-card h3{letter-spacing:-.025em}
+@supports(backdrop-filter:blur(12px)){body.instructor-shell .topbar{background:rgba(255,255,255,.96)!important;backdrop-filter:blur(12px) saturate(120%)}}
+@media(hover:hover) and (pointer:fine){body.rl-public :is(.rl-course-card,.rl-feature,.rl-tile,.rl-resource-panel):hover{transform:translateY(-2px);box-shadow:0 10px 28px #101b3e12!important}}
+@media(max-width:920px){body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.rl-public .rl-home .rl-visual{height:clamp(270px,54vw,420px)!important}}
+@media(max-width:550px){body.rl-public .rl-home>.rl-public-hero{padding-block:32px!important}body.rl-public .rl-home .rl-visual{height:270px!important}body.rl-public .rl-home>.section{padding-block:40px!important}body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:minmax(0,1fr)!important}body.rl-public .rl-home #strumenti .rl-product-tile{min-height:0}}
+@media(prefers-reduced-motion:reduce){body.rl-public :is(a.button,.rl-card-action,.rl-course-card,.rl-feature,.rl-tile,.rl-resource-panel),body.instructor-shell .suite-page a.button{transition:none!important;transform:none!important}}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){body.instructor-shell .topbar{background:#fff!important;backdrop-filter:none!important}}

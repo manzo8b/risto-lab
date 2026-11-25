@@ -1,0 +1,32 @@
+name: MANZO Web Production full-site audit
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - run: node scripts/manzo-web-production-audit.mjs
+      - run: npx playwright test tests/manzo-full-site.e2e.ts --output=.local/manzo-browser --reporter=list,json
+        env:
+          PLAYWRIGHT_JSON_OUTPUT_FILE: .local/manzo-browser.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manzo-web-production-evidence
+          path: |
+            .local/web-production-static.json
+            .local/manzo-browser.json
+            .local/manzo-browser/

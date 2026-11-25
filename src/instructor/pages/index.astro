@@ -11,6 +11,7 @@ const pathways=[
  {icon:'◈',name:'Servizio in sala',detail:'Preparazione, accoglienza, servizio e chiusura.',href:'/programmi/#servizio'},
  {icon:'◇',name:'Sicurezza',detail:'Materiali divulgativi e pratica contestualizzata.',href:'/risorse/'},
  {icon:'▤',name:'Menu Engineering',detail:'Leggere, progettare e rendere più chiaro un menu.',href:'/instructor/menu-engineering/'},
+ {icon:'▣',name:'Strumenti professionali',detail:'Ricette, fornitori e allergeni: applicativi separati per il lavoro operativo.',href:'/instructor/professional-suite/'},
  {icon:'◎',name:'Instructor Hub',detail:'Progettare lezioni, selezionare risorse, condurre in aula.',href:'/instructor/'}
 ];
 ---
@@ -32,7 +33,7 @@ const pathways=[
   <div class="rl-card-grid">{highlights.map(card=><article class="rl-course-card"><a class="rl-card-image" href={withBase(card.href)} aria-label={'Apri '+card.title}><img src={withBase(card.image)} alt={card.alt} loading="lazy" decoding="async"/></a><div class="rl-card-body"><span class="rl-chip rl-chip--accent">{card.kind}</span><h3>{card.title}</h3><p>{card.detail}</p><p class="rl-card-meta"><strong>{card.evidence}</strong></p><a class="rl-card-action" href={withBase(card.href)}>Esplora il materiale ↗</a></div></article>)}</div>
  </section>
  <section class="section rl-band--white" id="ambiti">
-  <div class="rl-section-head"><div><p class="rl-eyebrow-line">TROVA IL TUO PERCORSO</p><h2>Formazione e strumenti, con una logica chiara</h2></div></div>
+  <div class="rl-section-head"><div><p class="rl-eyebrow-line">TROVA IL TUO PERCORSO</p><h2>Scegli il percorso adatto al tuo lavoro</h2></div></div>
   <div class="rl-feature-grid">{pathways.map(p=><a class="rl-feature" href={withBase(p.href)} style="text-decoration:none"><span class="rl-feature-icon" aria-hidden="true">{p.icon}</span><strong>{p.name}</strong><p>{p.detail}</p></a>)}</div>
  </section>
  <section class="section rl-band--blue" id="metodo">

@@ -101,3 +101,25 @@ test('v2.5 proposed ingredients never become direct evidence after language or n
  })()`);
  expect(result.unchanged[2]).toBe(1);expect(result.unchanged[6]).toBe(2);expect(result.edited[2]).toBe(2);expect(result.edited[6]).toBe(2);expect(result.source).toBe('es');expect(result.events.some(e=>e.channel==='document_discrepancy')).toBe(true);
 });
+
+test('research context lexicon is non-assertive; provenance and trace ambiguity stay explicit',async({page})=>{
+ await page.goto(route);
+ const result=await page.evaluate(`(()=>{
+ const dish=make('Supplì','riso',{foodLang:'it'});
+ const declared=make('Synthetic','huevo',{foodLang:'es',meta:{declared:'huevo',simulation:true}});
+ const before=declared.events.slice();declared.ing='huevo; leche';analyze(declared);
+ const trace=make('Synthetic','may contain milk, egg',{foodLang:'en'});
+ const reportNames=['tortilla de patatas','full English','croque-monsieur','clam chowder','negroni'];
+ const names=reportNames.map(name=>make(name,'',{foodLang:'mixed'}));
+ return {count:GI.context_lexicon.length,profile:GI.regulatory_profile.id,context:dish.events,states:dish.s,before,edited:declared.events,editedStates:declared.s,trace:trace.events,cross:trace.crossEvents,names:names.map(d=>({events:d.events,states:d.s}))};
+ })()`);
+ expect(result.count).toBeGreaterThanOrEqual(50);expect(result.profile).toBe('EU_1169');
+ expect(result.states.every(s=>s===0)).toBe(true);
+ expect(result.context.some(e=>e.rule==='dish_name_recipe_required'&&e.allergen_code===null&&e.auto_confirm===false)).toBe(true);
+ expect(result.before.some(e=>e.provenance==='declared'&&e.channel==='ingredient_evidence')).toBe(true);
+ expect(result.editedStates[2]).toBe(2);expect(result.editedStates[6]).toBe(2);
+ expect(result.edited.every(e=>e.provenance==='edited_unverified'&&e.auto_confirm===false)).toBe(true);
+ expect(result.trace.some(e=>e.channel==='cross_contact_scope_ambiguous')).toBe(true);
+ expect(result.cross.every(e=>e.channel==='cross_contact')).toBe(true);
+ for(const d of result.names){expect(d.states.every(s=>s===0)).toBe(true);expect(d.events.some(e=>e.rule==='dish_name_recipe_required')).toBe(true);}
+});

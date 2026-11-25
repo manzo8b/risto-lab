@@ -57,3 +57,23 @@ test('home keeps a compact editorial rhythm between Hero and Professional Suite'
   await info.attach('home-rhythm-'+width,{body:await page.screenshot({animations:'disabled',fullPage:true}),contentType:'image/png'});
  }
 });
+
+test('Professional Suite fills every row without an orphan right-hand column',async({page},info)=>{
+ for(const width of [390,768,1024,1440]){
+  await page.setViewportSize({width,height:900});await page.goto(root+'/');
+  const data=await page.evaluate(()=>{
+   const rect=(s:string)=>document.querySelector(s)!.getBoundingClientRect();
+   const grid=rect('#strumenti .rl-product-grid'),intro=rect('#strumenti .rl-suite-intro'),layout=rect('#strumenti .rl-suite-layout'),copy=rect('#strumenti .rl-suite-copy'),cta=rect('#strumenti .rl-suite-intro>a.button');
+   const rows: {top:number,left:number,right:number,count:number}[]=[];
+   for(const tile of document.querySelectorAll('#strumenti .rl-product-tile')){const r=tile.getBoundingClientRect();let row=rows.find(x=>Math.abs(x.top-r.top)<2);if(!row){row={top:r.top,left:r.left,right:r.right,count:0};rows.push(row)}row.left=Math.min(row.left,r.left);row.right=Math.max(row.right,r.right);row.count++}
+   return {rows,gridLeft:grid.left,gridRight:grid.right,introWidth:intro.width,layoutWidth:layout.width,copyLeft:copy.left,copyBottom:copy.bottom,ctaLeft:cta.left,ctaTop:cta.top,scroll:document.documentElement.scrollWidth};
+  });
+  expect(Math.abs(data.introWidth-data.layoutWidth)).toBeLessThanOrEqual(2);
+  expect(Math.abs(data.copyLeft-data.ctaLeft)).toBeLessThanOrEqual(2);
+  expect(data.ctaTop).toBeGreaterThanOrEqual(data.copyBottom-2);
+  expect(data.rows.map(r=>r.count)).toEqual(width>920?[4,3]:width>550?[2,2,2,1]:[1,1,1,1,1,1,1]);
+  for(const row of data.rows){expect(Math.abs(row.left-data.gridLeft)).toBeLessThanOrEqual(2);expect(Math.abs(row.right-data.gridRight)).toBeLessThanOrEqual(2)}
+  expect(data.scroll).toBeLessThanOrEqual(width);
+  await info.attach('suite-balanced-'+width,{body:await page.locator('#strumenti').screenshot({animations:'disabled'}),contentType:'image/png'});
+ }
+});

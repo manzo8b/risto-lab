@@ -22,10 +22,8 @@ body.rl-public :is(a.button,.rl-card-action),body.instructor-shell .suite-page a
 body.rl-public a.button:not(.secondary){background:linear-gradient(115deg,#6126cc,#4b18b5)!important;color:#fff!important;border-color:#4b18b5!important}
 body.rl-public a.button:not(.secondary):hover{background:#35108d!important}
 body.rl-public :is(a.button,.rl-card-action):active,body.instructor-shell .suite-page a.button:active{transform:scale(.97)}
-body.rl-public .rl-home #strumenti .rl-split{grid-template-columns:minmax(0,1fr);gap:16px}
-body.rl-public .rl-home #strumenti .rl-split>div:first-child{max-width:none}
 body.rl-public .rl-home #strumenti .rl-white-panel{border:0!important;background:#f5f7fb!important;padding:clamp(12px,1.6vw,22px)!important}
-body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:12px!important}
 body.rl-public .rl-home #strumenti .rl-product-tile{display:grid;grid-template-columns:1fr auto;align-content:start;align-items:start;min-height:118px;gap:5px;padding:14px!important;text-decoration:none;border:1px solid #dce4f1!important;position:relative}
 body.rl-public .rl-home #strumenti .rl-product-tile strong{grid-column:1/-1;font-size:clamp(1rem,1.4vw,1.3rem);line-height:1.25;letter-spacing:-.025em}
 body.rl-public .rl-home #strumenti .rl-product-tile p{grid-column:1/-1;margin:0;color:#495775;line-height:1.45;font-size:.875rem}
@@ -35,8 +33,8 @@ body.instructor-shell .suite-page .suite-card{padding:clamp(1rem,2vw,1.5rem)}
 body.instructor-shell .suite-page .suite-card h3{letter-spacing:-.025em}
 @supports(backdrop-filter:blur(12px)){body.instructor-shell .topbar{background:rgba(255,255,255,.96)!important;backdrop-filter:blur(12px) saturate(120%)}}
 @media(hover:hover) and (pointer:fine){body.rl-public :is(.rl-course-card,.rl-feature,.rl-tile,.rl-resource-panel):hover{transform:translateY(-2px);box-shadow:0 10px 28px #101b3e12!important}}
-@media(max-width:920px){body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.rl-public .rl-home .rl-visual{height:clamp(240px,48vw,350px)!important}}
-@media(max-width:550px){body.rl-public .rl-home>.rl-public-hero{padding-block:24px 16px!important}body.rl-public .rl-home .rl-visual{height:240px!important}body.rl-public .rl-home>.section{padding-block:32px!important}body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:minmax(0,1fr)!important}body.rl-public .rl-home #strumenti .rl-product-tile{min-height:0}}
+@media(max-width:920px){body.rl-public .rl-home .rl-visual{height:clamp(240px,48vw,350px)!important}}
+@media(max-width:550px){body.rl-public .rl-home>.rl-public-hero{padding-block:24px 16px!important}body.rl-public .rl-home .rl-visual{height:240px!important}body.rl-public .rl-home>.section{padding-block:32px!important}body.rl-public .rl-home #strumenti .rl-product-tile{min-height:0}}
 @media(prefers-reduced-motion:reduce){body.rl-public :is(a.button,.rl-card-action,.rl-course-card,.rl-feature,.rl-tile,.rl-resource-panel),body.instructor-shell .suite-page a.button{transition:none!important;transform:none!important}}
 @media(prefers-reduced-transparency:reduce),(prefers-contrast:more){body.instructor-shell .topbar{background:#fff!important;backdrop-filter:none!important}}
 
@@ -81,14 +79,27 @@ body.aula:not(.projector) .controls button{max-inline-size:100%;white-space:norm
 @media(prefers-reduced-motion:reduce){body.instructor-shell .hubmain :is(a.button,button.primary),body.aula :is(a.button,button.secondary,#next){transition:none!important;transform:none!important}}
 }
 
-/* Home editorial rhythm — content-led spacing, no changes to other pages. */
+
+/* Home: one independent full-width product section, balanced 4 + 3 rows. */
 body.rl-public .rl-home>#strumenti{padding-block:22px 36px!important;margin-block:0!important}
-body.rl-public .rl-home #strumenti .rl-suite-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
-body.rl-public .rl-home #strumenti .rl-suite-copy{min-width:0;flex:1 1 30rem}
+body.rl-public .rl-home #strumenti .rl-suite-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;width:100%;min-width:0}
+body.rl-public .rl-home #strumenti .rl-suite-intro{display:block;width:100%;min-width:0}
+body.rl-public .rl-home #strumenti .rl-suite-copy{min-width:0;width:100%;max-width:none}
 body.rl-public .rl-home #strumenti .rl-suite-copy .rl-eyebrow-line{margin:0 0 7px!important}
-body.rl-public .rl-home #strumenti .rl-suite-copy h2{margin:0 0 10px!important}
-body.rl-public .rl-home #strumenti .rl-suite-copy .lead{margin:0!important;max-width:65ch}
-body.rl-public .rl-home #strumenti .rl-suite-intro>a.button{margin:0!important;flex:0 0 auto}
+body.rl-public .rl-home #strumenti .rl-suite-copy h2{margin:0 0 10px!important;font-family:var(--rl-craft-font)!important;font-size:var(--rl-heading)!important;font-weight:var(--rl-heading-weight)!important;letter-spacing:var(--rl-heading-tracking)!important;line-height:1.18!important}
+body.rl-public .rl-home #strumenti .rl-suite-copy .lead{margin:0 0 12px!important;max-width:none}
+body.rl-public .rl-home #strumenti .rl-suite-intro>a.button{margin:0!important;display:inline-flex}
+body.rl-public .rl-home #strumenti .rl-white-panel{width:100%;min-width:0;box-sizing:border-box}
 body.rl-public .rl-home #strumenti .rl-white-panel>.rl-eyebrow-line{margin:0 0 10px!important}
-@media(min-width:921px){body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
-@media(max-width:550px){body.rl-public .rl-home>#strumenti{padding-block:16px 28px!important}body.rl-public .rl-home #strumenti .rl-suite-intro{gap:12px}body.rl-public .rl-home #strumenti .rl-suite-copy{flex-basis:100%}body.rl-public .rl-home #strumenti .rl-split{gap:14px}}
+body.rl-public .rl-home #strumenti .rl-product-tile{grid-column:span 3;min-width:0}
+body.rl-public .rl-home #strumenti .rl-product-tile:nth-child(n+5){grid-column:span 4}
+@media(max-width:920px){
+ body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body.rl-public .rl-home #strumenti .rl-product-grid .rl-product-tile:nth-child(n){grid-column:span 1}
+ body.rl-public .rl-home #strumenti .rl-product-grid .rl-product-tile:last-child{grid-column:1/-1}
+}
+@media(max-width:550px){
+ body.rl-public .rl-home>#strumenti{padding-block:16px 28px!important}
+ body.rl-public .rl-home #strumenti .rl-suite-layout{gap:14px}
+ body.rl-public .rl-home #strumenti .rl-product-grid{grid-template-columns:minmax(0,1fr)!important}
+}

@@ -1,3 +1,4 @@
+import {analyze} from '../menu-engineering-dashboard/model.mjs';
 // Explicit local transfers. No name matching or automatic documentary approval.
 const langs=['it','es','en','fr','de','pt','nl','ro','ar','zh','ja','ru'];
 const str=x=>typeof x==='string'?x.trim():'';
@@ -29,6 +30,22 @@ export function importTransfer(current,source,lang){
  const archived=source.inputs?.archive?.recipes?.find(r=>r.id===id);
  if(!archived||!Object.values(item.name??{}).includes(archived.name))throw Error('recipe_identity_mismatch');
  item.grossPrice=p;item.approved=false;item.provenance={...item.provenance,price:{schema:source.schema,recipeId:id,asOf:str(source.asOf)}};count++;
+ }else if(source?.schema==='ristolab.menu-engineering-report/1'){
+ if(source.currency!=='EUR'||source.purpose!=='internal_decision_support_not_validation')throw Error('invalid_engineering_report');
+ const analysis=analyze(source.session);
+ if(analysis.simulation||source.result?.simulation!==false)throw Error('simulation_not_transferable');
+ const matched=[];
+ for(const r of analysis.items){
+ const item=ids.get(r.id);if(!item)continue;
+ if(!Object.values(item.name??{}).includes(r.name)||!Object.values(item.category??{}).includes(r.category))throw Error('recipe_identity_mismatch:'+r.id);
+ matched.push([item,r]);
+ }
+ if(!matched.length)throw Error('no_matching_recipe_ids');
+ for(const [item,r] of matched){
+ item.internalEngineering={classification:r.classification,share:r.share,margin:r.margin,period:analysis.period,category:analysis.category,review:'pending'};
+ item.provenance={...item.provenance,engineering:{schema:source.schema,recipeId:r.id,period:analysis.period}};
+ count++;
+ }
  }else throw Error('unsupported_transfer');
  if(next.items.length>1000)throw Error('too_many_items');
  return {menu:next,count};

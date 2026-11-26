@@ -186,3 +186,17 @@ test('v2.6 explicit language wins, missing provenance never becomes declared, an
  })()`);
  expect(result.lang).toEqual(['es','mixed']);expect(result.p).toEqual(['unspecified','unspecified']);expect(result.n).toBe(195);expect(result.categories).toBe(16);expect(result.all).toBe(true);
 });
+
+test('v2.7 regional pasta, origin labels, shared alternatives and extra interests',async({page})=>{
+ await page.goto(route);
+ const result=await page.evaluate<Record<string,{s:number[];events:Evidence[];extra:string}>>(`(()=>{
+ const cases={fusilli:make('QA','fusilli',{foodLang:'it'}),paccheri:make('QA','paccheri',{foodLang:'it'}),linguine:make('QA','linguine',{foodLang:'it'}),dry:make('QA','fusilli di semola di grano duro',{foodLang:'it'}),dop:make('QA','mozzarella di bufala campana D.O.P.',{foodLang:'it'}),parma:make('QA','prosciutto di Parma DOP',{foodLang:'it'}),fish:make('QA','merluza o eglefino',{foodLang:'es'}),milk:make('QA','leche o agua',{foodLang:'es'}),mixed:make('QA','tonno o gamberi',{foodLang:'it'}),optional:make('QA','merluza o eglefino (opcional)',{foodLang:'es'}),pine:make('QA','pinoli',{foodLang:'it'}),savoiardi:make('QA','savoiardi',{foodLang:'it'}),gelatine:make('QA','gelatina suina',{foodLang:'it'})};
+ return Object.fromEntries(Object.entries(cases).map(([k,d])=>[k,{s:d.s,events:d.events,extra:supplementalText(d)}]));
+ })()`);
+ for(const k of ['fusilli','paccheri','linguine'])expect(result[k].s[0]).toBe(2);
+ expect(result.dry.s[0]).toBe(1);expect(result.dop.s[6]).toBe(1);
+ expect(result.parma.events.some(e=>e.concept_id==='rlgi:parma_ham_dop')).toBe(true);
+ expect(result.fish.s[3]).toBe(1);expect(result.milk.s[6]).toBe(2);expect(result.mixed.s[1]).toBe(2);expect(result.mixed.s[3]).toBe(2);expect(result.optional.s[3]).toBe(2);
+ expect(result.pine.s[7]).toBe(0);expect(result.pine.extra).toContain('pinoli');expect(result.savoiardi.s[7]).toBe(0);expect(result.gelatine.s[3]).toBe(0);
+ expect(Object.values(result).every(d=>d.s.every(v=>v<=2)&&d.events.every(e=>e.auto_confirm===false))).toBe(true);
+});

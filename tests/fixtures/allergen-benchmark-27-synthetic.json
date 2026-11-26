@@ -1,0 +1,305 @@
+[
+  {
+    "category": "Antipasti",
+    "name": "Bruschetta al pomodoro",
+    "ingredients": "Farina di grano tenero; acqua; lievito di birra; pomodoro; aglio; basilico; olio extravergine di oliva; sale",
+    "expected": [
+      1
+    ]
+  },
+  {
+    "category": "Antipasti",
+    "name": "Caprese DOP",
+    "ingredients": "Mozzarella di bufala campana D.O.P.; latte di bufala; sale; caglio microbico; fermenti lattici; pomodoro; basilico; olio extravergine di oliva",
+    "expected": [
+      7
+    ]
+  },
+  {
+    "category": "Antipasti",
+    "name": "Prosciutto di Parma e melone",
+    "ingredients": "Prosciutto di Parma DOP; carne suina; sale marino; melone",
+    "expected": []
+  },
+  {
+    "category": "Antipasti",
+    "name": "Crostino di salmone e sesamo",
+    "ingredients": "Farina di grano tenero; acqua; lievito di birra; sale; salmone; semi di sesamo; olio extravergine di oliva; limone",
+    "expected": [
+      1,
+      4,
+      11
+    ]
+  },
+  {
+    "category": "Antipasti",
+    "name": "Insalata di mare",
+    "ingredients": "Gamberi; calamari; cozze; merluzzo; limone; prezzemolo; olio extravergine di oliva; sale",
+    "expected": [
+      2,
+      4,
+      14
+    ]
+  },
+  {
+    "category": "Antipasti",
+    "name": "Hummus di ceci",
+    "ingredients": "Ceci; semi di sesamo macinati; limone; aglio; olio extravergine di oliva; sale",
+    "expected": [
+      11
+    ]
+  },
+  {
+    "category": "Primi",
+    "name": "Fusilli al pesto della casa",
+    "ingredients": "Fusilli di semola di grano duro; acqua; basilico; parmigiano reggiano; latte vaccino; caglio; sale; pinoli; aglio; olio extravergine di oliva",
+    "expected": [
+      1,
+      7
+    ]
+  },
+  {
+    "category": "Primi",
+    "name": "Paccheri al pomodoro",
+    "ingredients": "Paccheri di semola di grano duro; acqua; pomodoro; basilico; aglio; olio extravergine di oliva; sale",
+    "expected": [
+      1
+    ]
+  },
+  {
+    "category": "Primi",
+    "name": "Linguine alle vongole",
+    "ingredients": "Linguine di semola di grano duro; acqua; vongole; aglio; prezzemolo; olio extravergine di oliva; sale",
+    "expected": [
+      1,
+      14
+    ]
+  },
+  {
+    "category": "Primi",
+    "name": "Tagliatelle all'uovo ai porcini",
+    "ingredients": "Farina di grano tenero; uova; funghi porcini; burro; aglio; prezzemolo; sale",
+    "expected": [
+      1,
+      3,
+      7
+    ]
+  },
+  {
+    "category": "Primi",
+    "name": "Risotto al sedano e piselli",
+    "ingredients": "Riso; acqua; sedano; piselli; carote; cipolla; olio extravergine di oliva; sale",
+    "expected": [
+      9
+    ]
+  },
+  {
+    "category": "Primi",
+    "name": "Orecchiette con cime di rapa",
+    "ingredients": "Orecchiette di semola di grano duro; acqua; cime di rapa; acciughe; aglio; peperoncino; olio extravergine di oliva; sale",
+    "expected": [
+      1,
+      4
+    ]
+  },
+  {
+    "category": "Secondi",
+    "name": "Merluzzo al limone",
+    "ingredients": "Merluzzo; limone; olio extravergine di oliva; prezzemolo; sale",
+    "expected": [
+      4
+    ]
+  },
+  {
+    "category": "Secondi",
+    "name": "Eglefino alle erbe",
+    "ingredients": "Eglefino; rosmarino; timo; olio extravergine di oliva; limone; sale",
+    "expected": [
+      4
+    ]
+  },
+  {
+    "category": "Secondi",
+    "name": "Gamberi al sesamo",
+    "ingredients": "Gamberi; semi di sesamo; aglio; limone; olio extravergine di oliva; sale",
+    "expected": [
+      2,
+      11
+    ]
+  },
+  {
+    "category": "Secondi",
+    "name": "Pollo alla senape",
+    "ingredients": "Petto di pollo; semi di senape macinati; acqua; olio extravergine di oliva; limone; sale",
+    "expected": [
+      10
+    ]
+  },
+  {
+    "category": "Secondi",
+    "name": "Manzo alle arachidi",
+    "ingredients": "Manzo; arachidi tostate; zenzero; aglio; olio extravergine di oliva; sale",
+    "expected": [
+      5
+    ]
+  },
+  {
+    "category": "Secondi",
+    "name": "Tofu alla griglia",
+    "ingredients": "Semi di soia; acqua; cloruro di magnesio; zucchine; olio extravergine di oliva; sale",
+    "expected": [
+      6
+    ]
+  },
+  {
+    "category": "Pizze e lievitati",
+    "name": "Pizza Marinara",
+    "ingredients": "Farina di grano tenero; acqua; lievito di birra; sale; pomodoro; aglio; origano; olio extravergine di oliva",
+    "expected": [
+      1
+    ]
+  },
+  {
+    "category": "Pizze e lievitati",
+    "name": "Pizza Margherita",
+    "ingredients": "Farina di grano tenero; acqua; lievito di birra; sale; pomodoro; mozzarella; latte vaccino; caglio; basilico; olio extravergine di oliva",
+    "expected": [
+      1,
+      7
+    ]
+  },
+  {
+    "category": "Pizze e lievitati",
+    "name": "Pizza al tonno",
+    "ingredients": "Farina di grano tenero; acqua; lievito di birra; sale; pomodoro; tonno; cipolla; olio extravergine di oliva",
+    "expected": [
+      1,
+      4
+    ]
+  },
+  {
+    "category": "Pizze e lievitati",
+    "name": "Focaccia ai lupini",
+    "ingredients": "Farina di grano tenero; farina di lupini; acqua; lievito di birra; olio extravergine di oliva; sale; rosmarino",
+    "expected": [
+      1,
+      13
+    ]
+  },
+  {
+    "category": "Pizze e lievitati",
+    "name": "Focaccia di riso",
+    "ingredients": "Farina di riso; acqua; lievito di birra; olio extravergine di oliva; sale; rosmarino",
+    "expected": []
+  },
+  {
+    "category": "Pizze e lievitati",
+    "name": "Pizza ai quattro formaggi",
+    "ingredients": "Farina di grano tenero; acqua; lievito di birra; sale; mozzarella; gorgonzola; fontina; parmigiano; latte vaccino; caglio; olio extravergine di oliva",
+    "expected": [
+      1,
+      7
+    ]
+  },
+  {
+    "category": "Contorni e insalate",
+    "name": "Peperoni in casseruola",
+    "ingredients": "Peperoni rossi; peperoni gialli; pomodoro; aglio; olio extravergine di oliva; sale",
+    "expected": []
+  },
+  {
+    "category": "Contorni e insalate",
+    "name": "Patate al rosmarino",
+    "ingredients": "Patate; rosmarino; aglio; olio extravergine di oliva; sale",
+    "expected": []
+  },
+  {
+    "category": "Contorni e insalate",
+    "name": "Purè di patate",
+    "ingredients": "Patate; latte vaccino; burro; sale",
+    "expected": [
+      7
+    ]
+  },
+  {
+    "category": "Contorni e insalate",
+    "name": "Insalata di finocchi e noci",
+    "ingredients": "Finocchi; noci; arancia; olio extravergine di oliva; sale",
+    "expected": [
+      8
+    ]
+  },
+  {
+    "category": "Contorni e insalate",
+    "name": "Insalata di lupini",
+    "ingredients": "Lupini; pomodoro; cipolla; olio extravergine di oliva; limone; sale",
+    "expected": [
+      13
+    ]
+  },
+  {
+    "category": "Contorni e insalate",
+    "name": "Verdure al sedano",
+    "ingredients": "Sedano; carote; zucchine; melanzane; olio extravergine di oliva; sale",
+    "expected": [
+      9
+    ]
+  },
+  {
+    "category": "Dolci",
+    "name": "Caprese al limone",
+    "ingredients": "Mandorle; uova; zucchero; burro; limone; fecola di patate",
+    "expected": [
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "category": "Dolci",
+    "name": "Tiramisù della casa",
+    "ingredients": "Farina di grano tenero; uova; zucchero; mascarpone; latte vaccino; caffè; cacao puro in polvere",
+    "expected": [
+      1,
+      3,
+      7
+    ]
+  },
+  {
+    "category": "Dolci",
+    "name": "Panna cotta",
+    "ingredients": "Panna di latte vaccino; zucchero; gelatina suina; vaniglia",
+    "expected": [
+      7
+    ]
+  },
+  {
+    "category": "Dolci",
+    "name": "Mousse al cioccolato e soia",
+    "ingredients": "Massa di cacao; burro di cacao; zucchero; lecitina di soia; uova; panna di latte vaccino",
+    "expected": [
+      3,
+      6,
+      7
+    ]
+  },
+  {
+    "category": "Dolci",
+    "name": "Biscotti al pistacchio",
+    "ingredients": "Farina di grano tenero; uova; zucchero; pistacchi; burro",
+    "expected": [
+      1,
+      3,
+      7,
+      8
+    ]
+  },
+  {
+    "category": "Dolci",
+    "name": "Macedonia con uvetta trattata",
+    "ingredients": "Mela; pera; arancia; uvetta; metabisolfito di potassio; acqua; zucchero; limone; solfiti (SO2 totale nel prodotto pronto al consumo: 18 mg/kg)",
+    "expected": [
+      12
+    ]
+  }
+]

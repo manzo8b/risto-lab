@@ -245,3 +245,28 @@ test('2.8 GKB read-only multilingual decomposition, recursive variants and graph
  expect(await page.evaluate('JSON.stringify(dishes)')).toBe(before);
  await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
+
+test('closed-composition 36-recipe synthetic workbook benchmark: 504 cells',async({page})=>{
+ await page.goto(route);
+ const fixture=require('./fixtures/allergen-benchmark-27-synthetic.json') as {category:string;name:string;ingredients:string;expected:number[]}[];
+ const payload=fixture.map(({category,name,ingredients})=>[category,name,ingredients]);
+ const actual=await page.evaluate<{name:string;category:string;states:number[]}[]>(`(async()=>{
+ const x=await sheets(),wb=x.utils.book_new();
+ x.utils.book_append_sheet(wb,x.utils.aoa_to_sheet([['Categoria','Piatto','Ingredienti'],...${JSON.stringify(payload)}]),'SIMULAZIONE');
+ const p=await parseFile(new File([x.write(wb,{bookType:'xlsx',type:'array'})],'BENCHMARK-SIMULAZIONE.xlsx'));
+ load(p.list,'BENCHMARK-SIMULAZIONE.xlsx','',p.sample);
+ return dishes.map(d=>({name:d.name,category:d.meta?.category,states:d.s}));
+ })()`);
+ expect(actual.length).toBe(36);
+ let tp=0,fp=0,fn=0,tn=0;
+ const discrepancies:string[]=[];
+ for(let i=0;i<fixture.length;i++){
+  const a=actual[i],f=fixture[i];expect(a.name).toBe(f.name);expect(a.category).toBe(f.category);
+  expect(a.states.length).toBe(14);expect(a.states.every(v=>v<=2)).toBe(true);
+  for(let j=0;j<14;j++){
+   const expected=f.expected.includes(j+1),flag=a.states[j]===1||a.states[j]===2;
+   if(expected&&flag)tp++;else if(expected&&!flag){fn++;discrepancies.push(f.name+' FN '+(j+1));}else if(!expected&&flag){fp++;discrepancies.push(f.name+' FP '+(j+1));}else tn++;
+  }
+ }
+ expect({tp,fp,fn,tn,discrepancies}).toEqual({tp:55,fp:0,fn:0,tn:449,discrepancies:[]});
+});

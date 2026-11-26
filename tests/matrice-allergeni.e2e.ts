@@ -217,3 +217,31 @@ test('v2.7.1 yeast phrases preserve real beer, starter and explicit ingredient e
  expect(results.starter.s[0]).toBe(2);expect(results.carrier.s[0]).toBe(1);
  expect(Object.values(results).every(d=>d.s.every(v=>v<=2)&&d.events.every(e=>e.auto_confirm===false))).toBe(true);
 });
+
+test('2.8 GKB read-only multilingual decomposition, recursive variants and graph safeguards',async({page})=>{
+ await page.goto(route);
+ const q=await page.evaluate<{matches:(string|null)[];nested:boolean;unknown:boolean;cycle:boolean;missing:boolean;n:number;variantCount:number}>(`(()=>{
+ const g=RLGKB;
+ const matches=[['pane','it'],['bread','en'],['pan','es'],['pan','en'],['pan','mixed'],['salsa brava','es'],['peperoni','it'],['sin pan','es']].map(([s,l])=>g.find(s,l)?.id||null);
+ const nested=g.leaves(g.expand('gkb:brava','mayo')).some(x=>x.it==='uova');
+ const invalid={schema:'ristolab.gkb/1',concepts:[{id:'a',variants:[{id:'x',components:[{ref:'a',variant:'x'}]}]}]};
+ let cycle=false,missing=false;try{g.expand('a','x',invalid)}catch(e){cycle=e.message==='cycle'}try{g.expand('missing','x')}catch(e){missing=e.message==='missing_reference'}
+ return {matches,nested,unknown:!g.find('random','it'),cycle,missing,n:g.catalog.concepts.length,variantCount:g.catalog.concepts.reduce((n,c)=>n+c.variants.length,0)};
+ })()`);
+ expect(q.matches).toEqual(['gkb:bread','gkb:bread','gkb:bread',null,null,'gkb:brava',null,null]);expect(q.nested).toBe(true);expect(q.unknown).toBe(true);expect(q.cycle).toBe(true);expect(q.missing).toBe(true);expect(q.n).toBe(7);expect(q.variantCount).toBe(13);
+ await page.evaluate(`load([{name:'QA',ing:'pan; salsa brava',foodLang:'es'}],'SIMULACION','',true)`);
+ const before=await page.evaluate('JSON.stringify(dishes)');
+ await page.locator('.gkb-preview > summary').click();
+ await page.locator('[data-gkb-choice="gkb:bread"]').selectOption('wheat');
+ await expect(page.locator('.gkb-item').first()).toContainText('farina di grano');
+ await page.locator('[data-gkb-choice="gkb:brava"]').selectOption('mayo');
+ await expect(page.locator('.gkb-item').last()).toContainText('uova');
+ expect(await page.evaluate('JSON.stringify(dishes)')).toBe(before);
+ await page.locator('[data-l="es"]').click();
+ await page.locator('.gkb-preview > summary').click();
+ await page.locator('[data-gkb-choice="gkb:brava"]').selectOption('tomato');
+ await expect(page.locator('.gkb-item').last()).toContainText('harina');
+ await expect(page.locator('.gkb-preview')).toContainText('la matriz no cambia');
+ expect(await page.evaluate('JSON.stringify(dishes)')).toBe(before);
+ await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});

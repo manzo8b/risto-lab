@@ -69,7 +69,7 @@ input[type=file]{display:block;width:100%;min-width:0;max-width:100%}
 </style></head><body><nav class="rl-suite-nav" aria-label="Professional Suite"><div class="rl-suite-nav-head"><a class="rl-suite-home" href="../professional-suite/"><img src="../../brand/risto-lab-icon.webp" alt="" width="30" height="30"><span>Professional Suite</span></a><div class="rl-suite-exits"><a href="../">Instructor Hub</a><a href="../../">Sito pubblico</a></div></div><div class="rl-suite-apps"><a href="../recipe-manager/">Recipe Manager</a><a href="../supplier-manager/">Supplier Manager</a><a href="../menu-engineering/matrice-allergeni/">Matrice Allergeni</a><a href="../food-cost-calculator/">Food Cost Calculator</a><a href="../menu-engineering-dashboard/">Menu Engineering</a><a href="../menu-design-studio/" aria-current="page">Menu Design Studio</a><a href="../restaurant-simulator/">Restaurant Simulator</a></div><p class="rl-suite-save">Prima di cambiare strumento, salva o esporta il lavoro. I dati non si trasferiscono automaticamente.</p></nav><details class="rl-suite-guide"><summary><span>Verifica assistita</span><span aria-hidden="true">+</span></summary><p>Controlli consigliati · non attestano una validazione</p><ol><li>Controlla i dati importati e le traduzioni.</li><li>Valida allergeni e legenda prima dell’esportazione.</li><li>Verifica l'impaginazione e le informazioni per il cliente.</li></ol></details>
 <header><a href="../">RISTO-LAB / Instructor</a><div><small>PROFESSIONAL SUITE · 06 · BETA</small><h1>Menu Design Studio</h1><p class="muted">Dai dati gastronomici alla carta del ristorante</p></div></header>
 <main class="layout"><aside class="panel" aria-label="Configurazione menu"><h2>Configurazione</h2><label for="file">Importa JSON compatibile</label><input id="file" type="file" accept=".json,application/json"><label for="source">Dati del menu (JSON)</label><textarea id="source" spellcheck="false" aria-describedby="format"></textarea><p id="format" class="muted"><small>Formato: items con id, approved, name, category, description, grossPrice, allergenReview e translationReview. Nessun prezzo o allergene viene dedotto. Per lingue diverse da IT, EN, ES importare allergenLegends con entries (14 voci ordinate), status validated e reference.</small></p><div class="stack"><button id="demo">Carica esempio didattico</button><button id="load" class="primary">Applica dati</button></div>
-<details id="suite-transfer"><summary><strong>Importa dalla Professional Suite</strong></summary><p>Importa prima l’archivio Recipe Manager, poi il JSON Food Cost. I prezzi mancanti restano vuoti; nessuna approvazione automatica.</p><label for="transfer-file">Archivio o calcolo JSON</label><input id="transfer-file" type="file" accept=".json,application/json"><p id="transfer-status" role="status" aria-live="polite"></p></details><details open id="visual-editor"><summary><strong>Editor visuale dei piatti</strong></summary>
+<details id="suite-transfer"><summary><strong>Importa dalla Professional Suite</strong></summary><p>Importa prima l’archivio Recipe Manager, poi il JSON Food Cost o il rapporto Menu Engineering. I prezzi mancanti restano vuoti; nessuna approvazione automatica.</p><label for="transfer-file">Archivio o calcolo JSON</label><input id="transfer-file" type="file" accept=".json,application/json"><p id="transfer-status" role="status" aria-live="polite"></p></details><details open id="visual-editor"><summary><strong>Editor visuale dei piatti</strong></summary>
 <p class="muted">Modifica una lingua alla volta. Le modifiche gastronomiche richiedono una nuova verifica documentale.</p>
 <div id="visual-items"></div><button type="button" id="visual-add">+ Aggiungi piatto</button>
 <p id="visual-status" role="status" aria-live="polite"></p></details>
@@ -130,6 +130,11 @@ function visualDraw(){
  for(const [index,item] of entries){
  const field=el('fieldset');field.style.cssText='min-width:0;border:1px solid #dbe3ef;border-radius:10px;margin:12px 0;padding:12px';
  field.append(el('legend',item.name?.[lang]||'Nuovo piatto'));
+ const advisory=item.internalEngineering;
+ if(advisory&&['star','puzzle','plowhorse','dog'].includes(advisory.classification)){
+ const note=el('p','SOLO USO INTERNO · '+advisory.classification.toUpperCase()+' · '+String(advisory.period??'')+' · Analisi da verificare','muted');
+ field.append(note);
+ }
  function control(label,value,type,change){
  const wrap=el('label',label);const input=el(type==='textarea'?'textarea':'input');
  if(type!=='textarea')input.type=type;
@@ -140,6 +145,7 @@ function visualDraw(){
  control(label,item[key]?.[lang],type,value=>{
  if(value===(item[key]?.[lang]??''))return;
  item[key]={...item[key],[lang]:value};
+ delete item.internalEngineering;
  item.translationReview={};
  item.allergenReview={...item.allergenReview,status:'pending'};
  item.approved=false;visualCommit();
@@ -147,14 +153,14 @@ function visualDraw(){
  }
  control('Prezzo lordo EUR',item.grossPrice,'number',(value,input)=>{
  const n=Number(value);if(!value.trim()||!Number.isFinite(n)||n<0){input.setCustomValidity('Prezzo non valido');input.reportValidity();return;}
- item.grossPrice=n;item.approved=false;visualCommit();
+ item.grossPrice=n;item.approved=false;delete item.internalEngineering;visualCommit();
  });
  const approval=el('label','Includi nella bozza');const check=el('input');check.type='checkbox';check.checked=item.approved===true;check.addEventListener('change',()=>{item.approved=check.checked;visualCommit()});approval.prepend(check);field.append(approval);
  const actions=el('div',undefined,'toolbar');
  function action(label,fn,disabled=false){const b=el('button',label);b.type='button';b.disabled=disabled;b.addEventListener('click',fn);actions.append(b)}
  action('Su',()=>{[data.items[index-1],data.items[index]]=[data.items[index],data.items[index-1]];visualCommit()},index===0);
  action('Giù',()=>{[data.items[index+1],data.items[index]]=[data.items[index],data.items[index+1]];visualCommit()},index===data.items.length-1);
- action('Duplica',()=>{const copy=structuredClone(item);copy.id=crypto.randomUUID();copy.approved=false;copy.translationReview={};copy.allergenReview={status:'pending'};data.items.splice(index+1,0,copy);visualCommit()},data.items.length>=1000);
+ action('Duplica',()=>{const copy=structuredClone(item);copy.id=crypto.randomUUID();copy.approved=false;delete copy.internalEngineering;delete copy.provenance;copy.translationReview={};copy.allergenReview={status:'pending'};data.items.splice(index+1,0,copy);visualCommit()},data.items.length>=1000);
  action('Elimina',()=>{if(confirm('Eliminare questo piatto dalla bozza?')){data.items.splice(index,1);visualCommit()}});
  field.append(actions);section.append(field);
  }visual.append(section);

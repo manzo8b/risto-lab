@@ -151,3 +151,37 @@ test('optional private CSV release gate (local only, no recipe content in assert
  await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  expect(errors).toEqual([]);
 });
+
+test('v2.6 three-column import keeps categories, original text and proposed evidence',async({page})=>{
+ await page.goto(route);
+ const result=await page.evaluate(`(async()=>{
+ const x=await sheets(),wb=x.utils.book_new();
+ const raw='patatas; Propuestos (no confirmados): leche; mantequilla; sal';
+ const rows=[['Categoría','Plato','Ingredientes'],['Guarniciones','Puré de patatas [SIMULACIÓN]',raw],['Pescados','Merluza','merluza'],['Guarniciones','Otro','huevo; Propuestos (no confirmados): leche']];
+ x.utils.book_append_sheet(wb,x.utils.aoa_to_sheet(rows),'SIMULACION');
+ const p=await parseFile(new File([x.write(wb,{bookType:'xlsx',type:'array'})],'QA-SIMULACION.xlsx'));
+ load(p.list,'QA-SIMULACION.xlsx','',p.sample);
+ const inspect=()=>({categories:dishes.map(d=>d.meta.category),langs:dishes.map(d=>d.foodLang),basis:dishes.map(d=>d.meta.languageBasis),raw:dishes[0].ing,declared:dishes[0].meta.declared,proposed:dishes[0].meta.proposed,states:dishes.map(d=>d.s),events:dishes[0].events,unknown:dishes[1].meta.unspecified});
+ const first=inspect(),r=report();const v=JSON.parse(JSON.stringify({format:'RISTO-LAB-session',version:1,dictionary:DICTIONARY.version,dishes,source,raw:'',demo}));restoreSession(v);
+ const second=inspect();
+ return {first,second,expectedRaw:raw,head:r.head,row:r.rows[0],last:r.head.at(-1),options:[...document.querySelector('#categoryFilter').options].map(o=>o.value),edited:(()=>{const d=dishes[0];d.ing+='; huevo';analyze(d);return d.s[2]})()};
+ })()`);
+ expect(result.first).toEqual(result.second);
+ expect(result.first.categories).toEqual(['Guarniciones','Pescados','Guarniciones']);
+ expect(result.first.langs).toEqual(['es','es','es']);expect(result.first.basis).toEqual(['header_hint','header_hint','header_hint']);
+ expect(result.first.raw).toBe(result.expectedRaw);expect(result.first.declared).toBe('patatas');expect(result.first.proposed).toContain('leche');
+ expect(result.first.states[0][6]).toBe(2);expect(result.first.states[1][3]).toBe(1);expect(result.first.states[2][2]).toBe(1);expect(result.first.states[2][6]).toBe(2);
+ expect(result.first.events.filter((e:any)=>e.allergen_code===7).every((e:any)=>e.provenance==='proposed'&&e.state!==1&&e.auto_confirm===false)).toBe(true);
+ expect(result.first.unknown).toBe(true);expect(result.options).toContain('Guarniciones');expect(result.row[result.head.indexOf('Categoria')]).toBe('Guarniciones');expect(result.row[result.head.indexOf('Dubbi / possibili da verificare')]).toBe('7');expect(result.last).toBe('Codici allergeni segnalati / confermati');expect(result.edited).toBe(2);
+});
+test('v2.6 explicit language wins, missing provenance never becomes declared, and imports scale',async({page})=>{
+ await page.goto(route);
+ const result=await page.evaluate(`(()=>{
+ const p=importRows([['Category','Dish','Ingredients','Language'],['A','Test','milk','es'],['B','Test','milk','mixed']]);
+ const a=p.list.map(x=>make(x.name,x.ing,x));
+ const big=importRows([['Categoría','Plato','Ingredientes'],...Array.from({length:195},(_,i)=>['Category '+i%16,'Test '+i,'huevo; Propuestos (no confirmados): leche'])]);
+ const d=big.list.map(x=>make(x.name,x.ing,x));
+ return {lang:a.map(x=>x.foodLang),p:a.map(x=>x.events[0].provenance),n:d.length,categories:new Set(d.map(x=>x.meta.category)).size,all:d.every(x=>x.s[2]===1&&x.s[6]===2&&x.s.every(v=>v<=2))};
+ })()`);
+ expect(result.lang).toEqual(['es','mixed']);expect(result.p).toEqual(['unspecified','unspecified']);expect(result.n).toBe(195);expect(result.categories).toBe(16);expect(result.all).toBe(true);
+});

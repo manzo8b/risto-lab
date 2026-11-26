@@ -200,3 +200,20 @@ test('v2.7 regional pasta, origin labels, shared alternatives and extra interest
  expect(result.pine.s[7]).toBe(0);expect(result.pine.extra).toContain('pinoli');expect(result.savoiardi.s[7]).toBe(0);expect(result.gelatine.s[3]).toBe(0);
  expect(Object.values(result).every(d=>d.s.every(v=>v<=2)&&d.events.every(e=>e.auto_confirm===false))).toBe(true);
 });
+
+test('v2.7.1 yeast phrases preserve real beer, starter and explicit ingredient evidence',async({page})=>{
+ await page.goto(route);
+ const results=await page.evaluate<Record<string,{s:number[];events:{concept_id:string;auto_confirm:boolean;allergen_code:number|null}[];flags:string[]}>>(`(()=>{
+ const cases={it:['lievito di birra','it'],es:['levadura de cerveza','es'],en:["brewer's yeast",'en'],curly:["brewer’s yeast",'en'],fresh:['lievito di birra fresco','it'],real:['lievito di birra; birra','it'],realES:['levadura de cerveza; cerveza','es'],realEN:["brewer's yeast; beer",'en'],wheat:['farina di grano; lievito di birra; acqua; sale','it'],rice:['farina di riso; lievito di birra; acqua; sale','it'],starter:['lievito madre','it'],spent:["spent brewer's yeast",'en'],spentIT:['lievito di birra esausto','it'],chemical:['lievito chimico','it'],carrier:['lievito per dolci; farina di grano','it']};
+ return Object.fromEntries(Object.entries(cases).map(([k,[ing,foodLang]])=>{const d=make('QA',ing,{foodLang});return [k,{s:d.s,events:d.events,flags:d.flags}]}));
+ })()`);
+ for(const k of ['it','es','en','curly','fresh','rice','chemical']){
+  expect(results[k].s[0]).toBe(0);expect(results[k].s[11]).toBe(0);expect(results[k].flags.length).toBeGreaterThan(0);
+ }
+ for(const k of ['real','realES','realEN','spent','spentIT']){
+  expect(results[k].s[0]).toBe(2);expect(results[k].s[11]).toBe(2);
+ }
+ expect(results.wheat.s[0]).toBe(1);expect(results.wheat.s[11]).toBe(0);
+ expect(results.starter.s[0]).toBe(2);expect(results.carrier.s[0]).toBe(1);
+ expect(Object.values(results).every(d=>d.s.every(v=>v<=2)&&d.events.every(e=>e.auto_confirm===false))).toBe(true);
+});

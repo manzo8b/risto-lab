@@ -1,0 +1,3 @@
+# Matrice Allergeni 2.7.1 — disambiguazione lieviti
+
+The closed-composition benchmark exposed false beer matches inside yeast phrases. Longest-match aliases distinguish baking yeast, brewing-derived residue, sourdough and chemical leavening. Actual beer remains a separate possible source of gluten cereals and sulphites. Unspecified brewer's yeast still requires product-specific origin, carrier and cross-contact verification; explicit brewing-residue terms retain possible groups 1 and 12. No automatic absence or confirmation. Original benchmark must be repeated after deployment. No real menu or supplier files committed.

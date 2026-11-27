@@ -1,0 +1,5 @@
+# Pedagogical UX refinement before international UAT
+
+Seven dashboard cards: goal-oriented subtitle, four visible ordered actions, expected output, final check, collapsed technical formats and goal-oriented link. Same four steps reproduced under each app introduction as native expandable guidance. Italian dashboard remains consistent with Instructor Hub; existing IT/ES/EN app language switches retain localized guide and lead in five apps. Menu Design Studio and Restaurant Simulator retain Italian application UI (menu-output languages are distinct). No data engine changes. No change to beta limitations. JSON remains portable; Data Hub is explicit and local where implemented. Tests: seven cards, four steps, outcomes, native format disclosure, app routes, translated recipe lead, 360/390/768/1440, no-JS navigation. No publishing or release approval.
+
+Production delivery deliberately limited to pedagogical UI changes; Matrix 2.7.1 and existing file workflows retained. Data Hub and 2.8 excluded.

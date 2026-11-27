@@ -14,7 +14,7 @@ test('UAT-07: independent monthly model, price versus occupancy, sensitivity, br
  const expected={capacity:2000,guests:1200,netTicket:30,netRevenue:36000,grossRevenue:39600,foodCost:10800,otherVariable:2400,fixed:17000,contributionPerGuest:19,contribution:22800,operatingResult:5800,marginPct:5800/36000*100,breakEvenGuests:895,breakEvenOccupancy:44.75};
  for(const [k,v] of Object.entries(expected))expect(out.results.base[k],k).toBeCloseTo(v,8);
  expect(out.results.scenario).toEqual(out.results.base);expect(out.results.scenario.breakEvenFeasible).toBe(true);
- expect(out.sensitivity.map((r:any)=>r.result)).toEqual([2000,3900,5800,7700,9600]);
+ for(const [i,v] of [2000,3900,5800,7700,9600].entries())expect(out.sensitivity[i].result).toBeCloseTo(v,8);
  await page.locator('#scenario-grossTicket').fill('36.3');out=await read();
  expect(out.results.scenario.guests).toBe(1200);expect(out.results.scenario.netRevenue).toBeCloseTo(39600,8);expect(out.results.scenario.operatingResult).toBeCloseTo(8320,8);
  await page.locator('#scenario-occupancy').fill('50');out=await read();

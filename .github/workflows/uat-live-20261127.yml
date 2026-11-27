@@ -1,0 +1,42 @@
+name: International UAT — live technical preflight
+on:
+  push:
+    branches: [qa/international-uat-20261127]
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      LIVE_URL: https://manzo8b.github.io/risto-lab
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chrome
+      - name: Confirm public release has new dashboard guidance
+        run: |
+          curl --fail --silent --show-error --location "$LIVE_URL/instructor/professional-suite/" -o /tmp/suite.html
+          grep -q 'suite-action-guide' /tmp/suite.html
+          grep -q 'suite-purpose' /tmp/suite.html
+      - name: Build local static fixture required by existing Playwright configuration
+        run: npm run build
+      - name: Live browser navigation, responsive layout, languages and report checks
+        run: npx playwright test tests/suite-ux.e2e.ts tests/suite-formats.e2e.ts
+      - name: Capture public dashboard at desktop, tablet and phone widths
+        if: always()
+        run: |
+          mkdir -p uat-screenshots
+          for width in 360 390 768 1440; do
+            npx playwright screenshot --browser chromium --channel chrome --viewport-size "$width,900" "$LIVE_URL/instructor/professional-suite/" "uat-screenshots/suite-${width}.png"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: international-uat-live-screenshots
+          path: uat-screenshots/
+          if-no-files-found: warn

@@ -14,7 +14,7 @@ test('MANZO full-site representative browser evidence',async({page},info)=>{
  }
  await info.attach('manzo-browser-audit',{body:JSON.stringify({scope:'25 representative routes; Chromium 390px; axe subset; not Lighthouse or WCAG certification',findings},null,2),contentType:'application/json'});
  console.log('MANZO browser evidence '+JSON.stringify({routes:findings.length,overflow:findings.filter(x=>x.scrollWidth>x.width).map(x=>x.route),axeViolations:findings.map(x=>({route:x.route,count:x.violations.length})).filter(x=>x.count)}));
- expect(findings.flatMap(x=>x.violations.map(v=>({route:x.route,...v}))),'All 25 representative routes must pass the selected axe WCAG rules').toEqual([]);
+ expect(findings.flatMap(x=>x.violations.map((v:{id:string;impact:string|null;count:number;targets:unknown[]})=>({route:x.route,...v}))),'All 25 representative routes must pass the selected axe WCAG rules').toEqual([]);
 });
 test('home seven tools and legal disclosures remain consistent',async({page})=>{
  await page.goto(root+'/');await expect(page.locator('#strumenti .rl-feature')).toHaveCount(7);

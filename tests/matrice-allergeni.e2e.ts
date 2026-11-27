@@ -287,3 +287,27 @@ test('2.8 manual composition archive: explicit binding, additive doubts, session
  expect(await page.evaluate('dishes[0].gkbIssue')).toBe(true);expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('complete(dishes[0])')).toBe(false);
  expect(await page.evaluate('report().rows[0].slice(-2)[0]')).toContain('STALE_REVISION');
 });
+
+test('2.8 Recipe Manager adapter: selective recursive native archive, provenance and revisions',async({page})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ const data={"schema":"ristolab.recipe-archive/1","version":"1.0.0","purpose":"experimental_internal_only","recipes":[{"id":"bread-01","name":"Pane","category":"Preparazioni","foodLang":"it","servings":4,"source":"Ricetta simulata A","notes":"","method":"","ingredients":[{"name":"farina di grano","provenance":"declared"},{"name":"lievito di birra","provenance":"unknown"},{"name":"acqua","provenance":"declared"}],"subrecipes":[],"status":"draft"},{"id":"mayo-01","name":"Mayonesa","category":"Salsas","foodLang":"es","servings":4,"source":"Ricetta simulata B","notes":"","method":"","ingredients":[{"name":"huevo","provenance":"declared"},{"name":"mostaza","provenance":"proposed"}],"subrecipes":[],"status":"draft"},{"id":"brava-01","name":"Salsa brava","category":"Salsas","foodLang":"es","servings":4,"source":"Ricetta simulata C","notes":"","method":"","ingredients":[{"name":"tomate","provenance":"declared"}],"subrecipes":[{"id":"mayo-01","portions":1}],"status":"draft"},{"id":"unfinished","name":"Bozza","foodLang":"it","ingredients":[],"subrecipes":[]}]};
+ await page.evaluate(`load([{name:'QA',ing:'salsa brava; patate',foodLang:'es'}],'SIMULAZIONE','',true)`);
+ await page.locator('#rmImportPanel > summary').click();await page.locator('#rmFile').setInputFiles({name:'recipe-archive.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(data))});
+ await expect(page.locator('#rmStatus')).toContainText('4');await page.locator('#rmScope').fill('qa');await page.locator('#rmRecipe').selectOption('brava-01');await page.locator('#rmApply').click();
+ await expect(page.locator('#rmStatus')).toContainText('Nuove revisioni: 2');
+ expect(await page.evaluate('manualArchive.components.length')).toBe(2);
+ await page.locator('.manual-link details > summary').click();await page.locator('[data-mg-term]').selectOption('0');await page.locator('[data-mg-ref]').selectOption('rm:qa:brava-01@1');await page.locator('[data-mg-bind]').click();
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('dishes[0].s[9]')).toBe(2);
+ expect(await page.evaluate('manualText(dishes[0])')).toContain('rm:qa:mayo-01@1');expect(await page.evaluate('manualText(dishes[0])')).toContain('Recipe Manager: proposed');
+ const result=await page.evaluate<{same:number;newCount:number;oldWarning:boolean;separate:number;bad:string[];only:boolean}>(`(()=>{
+ const data=${JSON.stringify(data)},orig=manualArchive;
+ const same=RLRecipeGKB.importSelected(orig,data,'qa',['brava-01'],'2026-11-27');
+ const next=JSON.parse(JSON.stringify(data));next.recipes.find(x=>x.id==='mayo-01').ingredients[1].name='ajo';
+ const changed=RLRecipeGKB.importSelected(orig,next,'qa',['brava-01'],'2026-11-27');
+ const other=RLRecipeGKB.importSelected(orig,data,'other',['brava-01'],'2026-11-27');
+ const bad=[];for(const mode of ['missing','cycle','empty']){const d=JSON.parse(JSON.stringify(data));if(mode==='missing')d.recipes[2].subrecipes[0].id='absent';if(mode==='cycle')d.recipes[1].subrecipes=[{id:'brava-01',portions:1}];try{RLRecipeGKB.importSelected(orig,d,'qa',[mode==='empty'?'unfinished':'brava-01'],'2026-11-27')}catch(e){bad.push(e.message)}}
+ return {same:same.created,newCount:changed.created,oldWarning:RLManualGKB.resolve(changed.archive,{id:'rm:qa:brava-01',revision:1}).warnings.length>0,separate:other.created,bad,only:orig.components.every(c=>c.id.includes('brava')||c.id.includes('mayo'))};
+ })()`);
+ expect(result).toEqual({same:0,newCount:2,oldWarning:true,separate:2,bad:['MISSING_SUBRECIPE','CYCLE','INCOMPLETE_RECIPE'],only:true});
+ expect(await page.evaluate('dishes[0].s.every(v=>v<=2)')).toBe(true);
+});

@@ -217,3 +217,194 @@ test('v2.7.1 yeast phrases preserve real beer, starter and explicit ingredient e
  expect(results.starter.s[0]).toBe(2);expect(results.carrier.s[0]).toBe(1);
  expect(Object.values(results).every(d=>d.s.every(v=>v<=2)&&d.events.every(e=>e.auto_confirm===false))).toBe(true);
 });
+
+test('2.8 GKB read-only multilingual decomposition, recursive variants and graph safeguards',async({page})=>{
+ await page.goto(route);
+ const q=await page.evaluate<{matches:(string|null)[];nested:boolean;unknown:boolean;cycle:boolean;missing:boolean;n:number;variantCount:number}>(`(()=>{
+ const g=RLGKB;
+ const matches=[['pane','it'],['bread','en'],['pan','es'],['pan','en'],['pan','mixed'],['salsa brava','es'],['peperoni','it'],['sin pan','es']].map(([s,l])=>g.find(s,l)?.id||null);
+ const nested=g.leaves(g.expand('gkb:brava','mayo')).some(x=>x.it==='uova');
+ const invalid={schema:'ristolab.gkb/1',concepts:[{id:'a',variants:[{id:'x',components:[{ref:'a',variant:'x'}]}]}]};
+ let cycle=false,missing=false;try{g.expand('a','x',invalid)}catch(e){cycle=e.message==='cycle'}try{g.expand('missing','x')}catch(e){missing=e.message==='missing_reference'}
+ return {matches,nested,unknown:!g.find('random','it'),cycle,missing,n:g.catalog.concepts.length,variantCount:g.catalog.concepts.reduce((n,c)=>n+c.variants.length,0)};
+ })()`);
+ expect(q.matches).toEqual(['gkb:bread','gkb:bread','gkb:bread',null,null,'gkb:brava',null,null]);expect(q.nested).toBe(true);expect(q.unknown).toBe(true);expect(q.cycle).toBe(true);expect(q.missing).toBe(true);expect(q.n).toBe(7);expect(q.variantCount).toBe(13);
+ await page.evaluate(`load([{name:'QA',ing:'pan; salsa brava',foodLang:'es'}],'SIMULACION','',true)`);
+ const before=await page.evaluate('JSON.stringify(dishes)');
+ await page.locator('.gkb-preview > summary').click();
+ await page.locator('[data-gkb-choice="gkb:bread"]').selectOption('wheat');
+ await expect(page.locator('.gkb-item').first()).toContainText('farina di grano');
+ await page.locator('[data-gkb-choice="gkb:brava"]').selectOption('mayo');
+ await expect(page.locator('.gkb-item').last()).toContainText('uova');
+ expect(await page.evaluate('JSON.stringify(dishes)')).toBe(before);
+ await page.locator('[data-l="es"]').click();
+ await page.locator('.gkb-preview > summary').click();
+ await page.locator('[data-gkb-choice="gkb:brava"]').selectOption('tomato');
+ await expect(page.locator('.gkb-item').last()).toContainText('harina');
+ await expect(page.locator('.gkb-preview')).toContainText('la matriz no cambia');
+ expect(await page.evaluate('JSON.stringify(dishes)')).toBe(before);
+ await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+test('closed-composition 36-recipe synthetic workbook benchmark: 504 cells',async({page})=>{
+ await page.goto(route);
+ const fixture=require('./fixtures/allergen-benchmark-27-synthetic.json') as {category:string;name:string;ingredients:string;expected:number[]}[];
+ const payload=fixture.map(({category,name,ingredients})=>[category,name,ingredients]);
+ const actual=await page.evaluate<{name:string;category:string;states:number[]}[]>(`(async()=>{
+ const x=await sheets(),wb=x.utils.book_new();
+ x.utils.book_append_sheet(wb,x.utils.aoa_to_sheet([['Categoria','Piatto','Ingredienti'],...${JSON.stringify(payload)}]),'SIMULAZIONE');
+ const p=await parseFile(new File([x.write(wb,{bookType:'xlsx',type:'array'})],'BENCHMARK-SIMULAZIONE.xlsx'));
+ load(p.list,'BENCHMARK-SIMULAZIONE.xlsx','',p.sample);
+ return dishes.map(d=>({name:d.name,category:d.meta?.category,states:d.s}));
+ })()`);
+ expect(actual.length).toBe(36);
+ let tp=0,fp=0,fn=0,tn=0;
+ const discrepancies:string[]=[];
+ for(let i=0;i<fixture.length;i++){
+  const a=actual[i],f=fixture[i];expect(a.name).toBe(f.name);expect(a.category).toBe(f.category);
+  expect(a.states.length).toBe(14);expect(a.states.every(v=>v<=2)).toBe(true);
+  for(let j=0;j<14;j++){
+   const expected=f.expected.includes(j+1),flag=a.states[j]===1||a.states[j]===2;
+   if(expected&&flag)tp++;else if(expected&&!flag){fn++;discrepancies.push(f.name+' FN '+(j+1));}else if(!expected&&flag){fp++;discrepancies.push(f.name+' FP '+(j+1));}else tn++;
+  }
+ }
+ expect({tp,fp,fn,tn,discrepancies}).toEqual({tp:55,fp:0,fn:0,tn:449,discrepancies:[]});
+});
+
+test('2.8 manual composition archive: explicit binding, additive doubts, session, stale revisions',async({page})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ await page.evaluate(`load([{name:'QA',ing:'pane; pomodoro',foodLang:'it'}],'SIMULAZIONE','',true)`);
+ await page.locator('#manualArchivePanel > summary').click();
+ await page.locator('#mgId').fill('pane-test');await page.locator('#mgName').fill('Pane test');await page.locator('#mgSource').fill('Scenario simulato');await page.locator('#mgParts').fill('farina di grano\nuova');
+ await page.locator('#mgSave').click();await expect(page.locator('#mgStatus')).toContainText('Operazione completata');
+ await page.locator('.manual-link details > summary').click();await page.locator('[data-mg-term]').selectOption('0');await page.locator('[data-mg-ref]').selectOption('pane-test@1');await page.locator('[data-mg-bind]').click();
+ const a=await page.evaluate<{s:number[];path:string;issue:boolean}>(`({s:dishes[0].s,path:manualText(dishes[0]),issue:dishes[0].gkbIssue})`);
+ expect(a.s[0]).toBe(2);expect(a.s[2]).toBe(2);expect(a.s.every(v=>v<=2)).toBe(true);expect(a.path).toContain('pane-test@1');expect(a.issue).toBe(false);
+ const saved=await page.evaluate<string>(`JSON.stringify({format:'RISTO-LAB-session',version:1,dictionary:DICTIONARY.version,dishes,componentArchive:manualArchive,demo:true})`);
+ await page.evaluate(`restoreSession(JSON.parse(${JSON.stringify(saved)}))`);
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);
+ await page.locator('#manualArchivePanel > summary').click();await page.locator('#mgEdit').selectOption('pane-test@1');await page.locator('#mgParts').fill('farina di riso');await page.locator('#mgSave').click();
+ expect(await page.evaluate('dishes[0].gkbIssue')).toBe(true);expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('complete(dishes[0])')).toBe(false);
+ expect(await page.evaluate('report().rows[0].slice(-2)[0]')).toContain('STALE_REVISION');
+});
+
+test('2.8 Recipe Manager adapter: selective recursive native archive, provenance and revisions',async({page})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ const data={"schema":"ristolab.recipe-archive/1","version":"1.0.0","purpose":"experimental_internal_only","recipes":[{"id":"bread-01","name":"Pane","category":"Preparazioni","foodLang":"it","servings":4,"source":"Ricetta simulata A","notes":"","method":"","ingredients":[{"name":"farina di grano","provenance":"declared"},{"name":"lievito di birra","provenance":"unknown"},{"name":"acqua","provenance":"declared"}],"subrecipes":[],"status":"draft"},{"id":"mayo-01","name":"Mayonesa","category":"Salsas","foodLang":"es","servings":4,"source":"Ricetta simulata B","notes":"","method":"","ingredients":[{"name":"huevo","provenance":"declared"},{"name":"mostaza","provenance":"proposed"}],"subrecipes":[],"status":"draft"},{"id":"brava-01","name":"Salsa brava","category":"Salsas","foodLang":"es","servings":4,"source":"Ricetta simulata C","notes":"","method":"","ingredients":[{"name":"tomate","provenance":"declared"}],"subrecipes":[{"id":"mayo-01","portions":1}],"status":"draft"},{"id":"unfinished","name":"Bozza","foodLang":"it","ingredients":[],"subrecipes":[]}]};
+ await page.evaluate(`load([{name:'QA',ing:'salsa brava; patate',foodLang:'es'}],'SIMULAZIONE','',true)`);
+ await page.locator('#rmImportPanel > summary').click();await page.locator('#rmFile').setInputFiles({name:'recipe-archive.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(data))});
+ await expect(page.locator('#rmStatus')).toContainText('4');await page.locator('#rmScope').fill('qa');await page.locator('#rmRecipe').selectOption('brava-01');await page.locator('#rmApply').click();
+ await expect(page.locator('#rmStatus')).toContainText('Nuove revisioni: 2');
+ expect(await page.evaluate('manualArchive.components.length')).toBe(2);
+ await page.locator('.manual-link details > summary').click();await page.locator('[data-mg-term]').selectOption('0');await page.locator('[data-mg-ref]').selectOption('rm:qa:brava-01@1');await page.locator('[data-mg-bind]').click();
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('dishes[0].s[9]')).toBe(2);
+ expect(await page.evaluate('manualText(dishes[0])')).toContain('rm:qa:mayo-01@1');expect(await page.evaluate('manualText(dishes[0])')).toContain('Recipe Manager: proposed');
+ const result=await page.evaluate<{same:number;newCount:number;oldWarning:boolean;separate:number;bad:string[];only:boolean}>(`(()=>{
+ const data=${JSON.stringify(data)},orig=manualArchive;
+ const same=RLRecipeGKB.importSelected(orig,data,'qa',['brava-01'],'2026-11-27');
+ const next=JSON.parse(JSON.stringify(data));next.recipes.find(x=>x.id==='mayo-01').ingredients[1].name='ajo';
+ const changed=RLRecipeGKB.importSelected(orig,next,'qa',['brava-01'],'2026-11-27');
+ const other=RLRecipeGKB.importSelected(orig,data,'other',['brava-01'],'2026-11-27');
+ const bad=[];for(const mode of ['missing','cycle','empty']){const d=JSON.parse(JSON.stringify(data));if(mode==='missing')d.recipes[2].subrecipes[0].id='absent';if(mode==='cycle')d.recipes[1].subrecipes=[{id:'brava-01',portions:1}];try{RLRecipeGKB.importSelected(orig,d,'qa',[mode==='empty'?'unfinished':'brava-01'],'2026-11-27')}catch(e){bad.push(e.message)}}
+ return {same:same.created,newCount:changed.created,oldWarning:RLManualGKB.resolve(changed.archive,{id:'rm:qa:brava-01',revision:1}).warnings.length>0,separate:other.created,bad,only:orig.components.every(c=>c.id.includes('brava')||c.id.includes('mayo'))};
+ })()`);
+ expect(result).toEqual({same:0,newCount:2,oldWarning:true,separate:2,bad:['MISSING_SUBRECIPE','CYCLE','INCOMPLETE_RECIPE'],only:true});
+ expect(await page.evaluate('dishes[0].s.every(v=>v<=2)')).toBe(true);
+});
+
+test('3.1 Local Data Hub: Recipe Manager persistence, stable IDs, explicit Matrix import and CAS',async({page,context})=>{
+ await page.goto(root+'/instructor/recipe-manager/');
+ await page.locator('#sample').click();
+ const first=await page.evaluate<{id:string}[]>(`snapshot().recipes[0].ingredients.map(i=>({id:i.id}))`);
+ expect(new Set(first.map(i=>i.id)).size).toBe(3);
+ await page.locator('#hubPanel > summary').click();await page.locator('#hubSave').click();
+ await expect(page.locator('#hubStatus')).toContainText('Revisione condivisa: 1');
+ const other=await context.newPage();await other.goto(root+'/instructor/recipe-manager/');
+ await other.locator('#hubPanel > summary').click();await other.locator('#hubLoad').click();
+ await expect(other.locator('#hubStatus')).toContainText('revisione: 1');
+ expect(await other.evaluate(`snapshot().recipes[0].ingredients.map(i=>({id:i.id}))`)).toEqual(first);
+ await page.evaluate(`recipes[0].ingredients[0].name='farina di grano'`);
+ await page.locator('#hubSave').click();await expect(page.locator('#hubStatus')).toContainText('Revisione condivisa: 2');
+ await other.locator('#hubSave').click();await expect(other.locator('#hubStatus')).toContainText('Archivio aggiornato altrove');
+ const h=await page.evaluate<{revision:number;name:string}[]>(`RLDataHub.history('recipes').then(a=>a.map(r=>({revision:r.revision,name:r.data.recipes[0].ingredients[0].name})))`);
+ expect(h).toEqual([{revision:1,name:'spaghetti'},{revision:2,name:'farina di grano'}]);
+ await page.reload();await page.locator('#hubPanel > summary').click();await page.locator('#hubLoad').click();await expect(page.locator('#hubStatus')).toContainText('revisione: 2');
+ expect(await page.evaluate(`snapshot().recipes[0].ingredients.map(i=>({id:i.id}))`)).toEqual(first);
+ await other.goto(route);await other.locator('[data-l="it"]').click();
+ await other.evaluate(`load([{name:'QA',ing:'pasta; pomodoro',foodLang:'it'}],'SIMULAZIONE','',true)`);
+ await other.locator('#rmImportPanel > summary').click();await other.locator('#rmHubRead').click();await expect(other.locator('#rmStatus')).toContainText('Data Hub rev. 2');
+ await expect(other.locator('#rmScope')).toHaveValue('hub-local');await other.locator('#rmRecipe').selectOption('DEMO-001');await other.locator('#rmApply').click();await expect(other.locator('#rmStatus')).toContainText('Nuove revisioni: 1');
+ await other.locator('.manual-link details > summary').click();await other.locator('[data-mg-term]').selectOption('0');await other.locator('[data-mg-ref]').selectOption('rm:hub-local:DEMO-001@1');await other.locator('[data-mg-bind]').click();
+ expect(await other.evaluate('dishes[0].gkbIssue')).toBe(true);
+ expect(await other.evaluate('complete(dishes[0])')).toBe(false);
+ expect(await other.evaluate('manualText(dishes[0])')).toContain('DATA_HUB_PILOT_REVIEW_REQUIRED');
+ await other.close();
+});
+
+test('3.2 Data Hub dependencies: transitive changes, missing recipes, unaffected graph, explicit review',async({page,context})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ const data={schema:'ristolab.recipe-archive/1',version:'1.0.0',purpose:'experimental_internal_only',recipes:[
+ {id:'mayo',name:'Mayonesa',foodLang:'es',ingredients:[{id:'mayo-egg',name:'huevo',provenance:'declared'}],subrecipes:[]},
+ {id:'brava',name:'Salsa brava',foodLang:'es',ingredients:[{id:'brava-tomato',name:'tomate',provenance:'declared'}],subrecipes:[{id:'mayo',portions:1}]},
+ {id:'bread',name:'Pane',foodLang:'it',ingredients:[{id:'bread-flour',name:'farina di grano',provenance:'declared'}],subrecipes:[]}]};
+ await page.evaluate(`(async()=>{const data=${JSON.stringify(data)};await RLDataHub.put('recipes','local',data,0);manualArchive=RLRecipeGKB.importSelected(manualArchive,data,'hub-local',['brava','bread'],'2026-11-27').archive;manualArchive=RLManualGKB.save(manualArchive,{id:'sauce-house',name:'Salsa della casa',language:'es',updatedOn:'2026-11-27',provenance:'manual',source:'SIMULAZIONE',parts:[{kind:'reference',id:'rm:hub-local:brava',revision:1}]},0);load([{name:'QA Brava',ing:'salsa brava',foodLang:'es'},{name:'QA Pane',ing:'pane',foodLang:'it'}],'SIMULAZIONE','',true);for(let i=0;i<2;i++){const d=dishes[i];d.gkbId='qa-'+i;d.gkbRevision=1;const ref=i===0?{id:'sauce-house',revision:1}:{id:'rm:hub-local:bread',revision:1};const binding=RLManualGKB.bind(manualRecipe(d),'i-0',ref,manualArchive);d.gkbLinks=[{text:d.ing,language:d.foodLang,binding,lastPossible:manualPreview(d,{text:d.ing,language:d.foodLang,binding}).possibleCodes}];analyze(d);}renderAll();await checkHubDependencies();})()`);
+ expect(await page.evaluate('dishes.map(d=>dependencyStatus(d).status)')).toEqual(['current','current']);
+ expect(await page.evaluate('dishes.every(d=>d.gkbIssue&&!complete(d))')).toBe(true);
+ const writer=await context.newPage();await writer.goto(root+'/instructor/recipe-manager/');
+ const next=JSON.parse(JSON.stringify(data));next.recipes[0].ingredients[0].name='mostaza';
+ await writer.evaluate(`RLDataHub.put('recipes','local',${JSON.stringify(next)},1)`);
+ await expect.poll(()=>page.evaluate('dishes.map(d=>dependencyStatus(d).status)')).toEqual(['stale','current']);
+ expect(await page.evaluate('dependencyStatus(dishes[0]).changes')).toContain('mayo: RECIPE_CHANGED');
+ expect(await page.evaluate('dishes[0].gkbLinks[0].binding.component.revision')).toBe(1);
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2); // old composition is pinned
+ expect(await page.evaluate('dishes[0].s[9]')).toBe(0); // new composition not silently applied
+ expect(await page.evaluate('manualText(dishes[0])')).toContain('mayo: RECIPE_CHANGED');
+ const removed=JSON.parse(JSON.stringify(next));removed.recipes.shift();
+ await writer.evaluate(`RLDataHub.put('recipes','local',${JSON.stringify(removed)},2)`);
+ await expect.poll(()=>page.evaluate('dishes.map(d=>dependencyStatus(d).status)')).toEqual(['unresolved','current']);
+ expect(await page.evaluate('dependencyStatus(dishes[0]).changes')).toContain('mayo: RECIPE_MISSING');
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);
+ expect(await page.evaluate('complete(dishes[0])')).toBe(false);
+ await writer.close();
+});
+
+test('4 Supplier documentary integration: native catalogue, recorded presence, separate traces, pinned changes',async({page,context})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ const data={schema:'ristolab.supplier-links/1',version:'1.0.0',purpose:'experimental_internal_only',products:[{id:'p-brava',name:'Salsa brava test',supplier:'Fornecedor simulato',sku:'BR-01',doc:'Scheda simulata A',docdate:'2026-11-26',composition:'tomate; huevo',review:'Operatore test',notes:'',presence:[3,10],trace:[8]}],links:[]};
+ await page.evaluate(`load([{name:'QA',ing:'salsa brava',foodLang:'es'}],'SIMULAZIONE','',true)`);
+ await page.locator('#spImportPanel > summary').click();await page.locator('#spFile').setInputFiles({name:'supplier-links.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(data))});await expect(page.locator('#spStatus')).toContainText('Prodotti disponibili: 1');await page.locator('#spScope').fill('qa');await page.locator('#spProduct').selectOption('p-brava');await page.locator('#spLanguage').selectOption('es');await page.locator('#spApply').click();await expect(page.locator('#spStatus')).toContainText('sm:qa:p-brava@1');
+ await page.locator('.manual-link details > summary').click();await page.locator('[data-mg-term]').selectOption('0');await page.locator('[data-mg-ref]').selectOption('sm:qa:p-brava@1');await page.locator('[data-mg-bind]').click();
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('dishes[0].s[9]')).toBe(2);expect(await page.evaluate('dishes[0].s[7]')).toBe(0);
+ expect(await page.evaluate('dishes[0].crossEvents.some(e=>e.allergen_code===8&&e.concept_id==="gkb:supplier_trace")')).toBe(true);
+ expect(await page.evaluate('complete(dishes[0])')).toBe(false);expect(await page.evaluate('manualText(dishes[0])')).toContain('Scheda simulata A');
+ const writer=await context.newPage();await writer.goto(root+'/instructor/supplier-manager/');
+ await writer.evaluate(`RLDataHub.put('suppliers','local',${JSON.stringify(data)},0)`);
+ await page.locator('#spImportPanel > summary').click();await page.locator('#spHubRead').click();await expect(page.locator('#spStatus')).toContainText('Data Hub rev. 1');await page.locator('#spProduct').selectOption('p-brava');await page.locator('#spLanguage').selectOption('es');await page.locator('#spApply').click();await expect(page.locator('#spStatus')).toContainText('sm:hub-local:p-brava@1');
+ await page.locator('.manual-link details > summary').click();await page.locator('[data-mg-term]').selectOption('0');await page.locator('[data-mg-ref]').selectOption('sm:hub-local:p-brava@1');await page.locator('[data-mg-bind]').click();
+ await expect.poll(()=>page.evaluate('supplierCheckPending')).toBe(false);
+ const changed=JSON.parse(JSON.stringify(data));changed.products[0].presence=[7];changed.products[0].composition='tomate; leche';changed.products[0].doc='Scheda simulata B';
+ await writer.evaluate(`RLDataHub.put('suppliers','local',${JSON.stringify(changed)},1)`);
+ await expect.poll(()=>page.evaluate('manualText(dishes[0])')).toContain('PRODUCT_CHANGED');
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('dishes[0].s[6]')).toBe(0);
+ const checks=await page.evaluate<{same:boolean;newRev:number;invalid:boolean}>(`(()=>{const a=${JSON.stringify(data)},b=${JSON.stringify(changed)},same=RLSupplierGKB.importSelected(manualArchive,a,'hub-local','p-brava','es','2026-11-27'),n=RLSupplierGKB.importSelected(manualArchive,b,'hub-local','p-brava','es','2026-11-27');let invalid=false;try{a.products[0].doc='';RLSupplierGKB.importSelected(manualArchive,a,'qa','p-brava','es','2026-11-27')}catch(e){invalid=e.message==='INCOMPLETE_DOCUMENT_RECORD'}return {same:!same.created,newRev:n.ref.revision,invalid};})()`);
+ expect(checks).toEqual({same:true,newRev:2,invalid:true});await writer.close();
+});
+
+test('5 IQA: 42 trilingual Annex II terms, scope, trace and pilot confirmation guards',async({page})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ const cases=[["farina di grano","harina de trigo","wheat flour"],["gamberi","gambas","prawns"],["uova","huevos","eggs"],["merluzzo","bacalao","cod"],["arachidi","cacahuetes","peanuts"],["soia","soja","soybeans"],["latte vaccino","leche de vaca","milk"],["mandorle","almendras","almonds"],["sedano","apio","celery"],["senape","mostaza","mustard"],["sesamo","sésamo","sesame"],["solfiti","sulfitos","sulphites"],["lupini","altramuces","lupin"],["cozze","mejillones","mussels"]];
+ const result=await page.evaluate<{code:number;language:string;s:number[];auto:boolean;threshold:boolean}[]>(`(()=>{const cases=${JSON.stringify(cases)};return cases.flatMap((terms,i)=>terms.map((term,j)=>{const language=['it','es','en'][j],d=make('QA',term,{foodLang:language});return {code:i+1,language,s:d.s,auto:d.events.some(e=>e.auto_confirm!==false),threshold:d.events.some(e=>e.channel==='threshold_check')};}));})()`);
+ expect(result.length).toBe(42);
+ for(const x of result){expect(x.s.flatMap((v,i)=>v?[i+1]:[]),x.language+' '+x.code).toEqual([x.code]);expect(x.s[x.code-1]).toBe(x.code===12?2:1);expect(x.auto).toBe(false);if(x.code===12)expect(x.threshold).toBe(true);}
+ await page.evaluate(`load([{name:'QA',ing:'huevo; puede contener leche',foodLang:'es'}],'SIMULAZIONE','',true)`);
+ expect(await page.evaluate('traceCodes(dishes[0])')).toBe('7');
+ expect(await page.evaluate('summaryParts(dishes[0]).headline')).toBe('3');
+ expect(await page.evaluate("(()=>{const r=report();return r.rows[0][r.head.indexOf(IQA5[lang].trace)]})()")).toBe('7');
+ await page.locator('#iqaScope summary').click();await expect(page.locator('#iqaScope')).toContainText('La lingua non seleziona la normativa');
+ await page.evaluate(`dishes[0].gkbIssue=true;dishes[0].proof='Test';renderMatrix()`);
+ await page.locator('#tb button[data-i="0"][data-j="2"]').click();await page.locator('#outcome').selectOption('4');await page.locator('#apply').click();
+ await expect(page.locator('#dlgError')).toContainText('conferma definitiva non disponibile');
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(1);await page.locator('#cancel').click();
+ await page.locator('[data-l="es"]').click();await expect(page.locator('#iqaScope')).toContainText('El idioma no selecciona jurisdicción');
+ await page.locator('[data-l="en"]').click();await expect(page.locator('#iqaScope')).toContainText('Language does not select jurisdiction');
+});

@@ -4,7 +4,7 @@ const root=process.env.LIVE_URL||'http://127.0.0.1:4330/risto-lab';
 test('all dashboard cards show three actions and real import/export formats',async({page})=>{
  await page.goto(root+'/instructor/professional-suite/');
  const cards=page.locator('.suite-card');await expect(cards).toHaveCount(7);
- for(const c of await cards.all()){await expect(c.locator('.suite-action-guide li')).toHaveCount(3);await expect(c.locator('.suite-formats')).toContainText('Importazione');await expect(c.locator('.suite-formats')).toContainText('XLSX');await expect(c.locator('.suite-formats')).toContainText('DOCX')}
+ for(const c of await cards.all()){await expect(c.locator('.suite-action-guide li')).toHaveCount(4);await c.locator('.suite-format-details summary').click();await expect(c.locator('.suite-formats')).toBeVisible();await expect(c.locator('.suite-formats')).toContainText('Importazione');await expect(c.locator('.suite-formats')).toContainText('XLSX');await expect(c.locator('.suite-formats')).toContainText('DOCX')}
 });
 test('six report selectors load, and Menu Design retains its gate',async({page})=>{
  for(const path of ['recipe-manager','supplier-manager','food-cost-calculator','menu-engineering-dashboard','menu-design-studio','restaurant-simulator']){

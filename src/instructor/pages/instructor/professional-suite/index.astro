@@ -10,17 +10,193 @@ const active=[
  {n:'06',title:'Menu Design Studio',desc:'Progetta la carta in tre stili e più lingue.',href:'/instructor/menu-design-studio/',state:'Beta sperimentale',review:'Verifica traduzioni, allergeni e impaginazione prima di pubblicare.',output:'Bozza stampabile / JSON per revisione OSA'},
  {n:'07',title:'Restaurant Simulator',desc:'Confronta scenari economici mensili, margini e pareggio.',href:'/instructor/restaurant-simulator/',state:'Beta sperimentale',review:'Verifica dati, aliquota effettiva, costi e ipotesi di domanda.',output:'Scenari JSON / CSV'}
 ];
-const guide=[["Crea una ricetta oppure importa un archivio CSV o JSON.","Inserisci ingredienti, quantità, rese e sottoricette.","Controlla le fonti e salva l’archivio per gli altri moduli.","CSV, JSON (schema ricette)","JSON, CSV · MD, XLSX, DOCX, PDF tramite stampa"],["Importa il ricettario JSON o riprendi una sessione.","Registra i prodotti e collega gli ingredienti ai fornitori.","Verifica prezzi, confezioni e riferimenti; esporta i collegamenti.","JSON (ricette o sessione)","JSON · MD, XLSX, DOCX, PDF tramite stampa"],["Importa il menu o inserisci i piatti a mano.","Esamina gli indizi e confrontali con le schede tecniche.","Registra dubbi, tracce e verifiche; esporta solo per uso interno.","XLSX, XLS, CSV, DOCX, PDF, MD, TXT · sessione JSON","XLSX, DOCX, MD, PDF tramite stampa · sessione JSON"],["Importa ricette e collegamenti fornitori JSON.","Scegli ricetta e parametri; esegui il calcolo.","Controlla costi mancanti e salva il risultato.","JSON (archivi RISTO-LAB)","JSON, CSV · MD, XLSX, DOCX, PDF tramite stampa"],["Inserisci vendite oppure importa calcoli Food Cost e sessioni.","Definisci categoria e periodo; calcola popolarità e margini.","Verifica il perimetro e interpreta le quattro classi.","JSON (calcoli o sessione)","JSON, CSV · MD, XLSX, DOCX, PDF tramite stampa"],["Importa o incolla il JSON dei piatti e traduzioni.","Scegli stile, lingue e modalità; visualizza la bozza.","Verifica allergeni e traduzioni; esporta per revisione OSA.","JSON (schema menu)","JSON, MD, XLSX, DOCX · bozza PDF tramite stampa (dopo controlli)"],["Imposta o importa scenario base e alternativo.","Modifica i parametri e confronta ricavi, margini e pareggio.","Controlla le ipotesi e salva il confronto.","JSON (schema scenario)","JSON, CSV · MD, XLSX, DOCX, PDF tramite stampa"]];
+const guide=[
+  {
+    "desc": "Crea le schede delle tue ricette: sai cosa serve, quanto ne occorre e quali preparazioni puoi riutilizzare.",
+    "steps": [
+      [
+        "Inizia",
+        "Crea una ricetta oppure importa il ricettario CSV o JSON."
+      ],
+      [
+        "Completa",
+        "Inserisci ingredienti, quantità, rese e sottoricette; segnala le informazioni mancanti."
+      ],
+      [
+        "Salva",
+        "Controlla le fonti e salva l’archivio JSON per riutilizzarlo negli altri strumenti."
+      ],
+      [
+        "Condividi",
+        "Stampa la scheda della ricetta o esporta il ricettario e il report."
+      ]
+    ],
+    "result": "Un ricettario ordinato, riutilizzabile per acquisti, allergeni e costi",
+    "cta": "Crea il ricettario",
+    "imports": "CSV, JSON (schema ricette)",
+    "exports": "JSON, CSV · MD, XLSX, DOCX, PDF tramite stampa"
+  },
+  {
+    "desc": "Organizza i prodotti che acquisti, i loro prezzi e le schede tecniche, collegandoli alle ricette.",
+    "steps": [
+      [
+        "Inizia",
+        "Importa il ricettario JSON o riapri una sessione."
+      ],
+      [
+        "Registra",
+        "Aggiungi i prodotti con fornitore, codice, prezzo, confezione e riferimenti alla scheda tecnica."
+      ],
+      [
+        "Collega",
+        "Associa ogni ingrediente al prodotto effettivamente utilizzato; controlla i dati."
+      ],
+      [
+        "Salva ed esporta",
+        "Salva la sessione, esporta i collegamenti JSON per il Food Cost o il report da consultare e stampare."
+      ]
+    ],
+    "result": "Un archivio acquisti collegato agli ingredienti delle ricette",
+    "cta": "Organizza gli acquisti",
+    "imports": "JSON (ricette o sessione)",
+    "exports": "JSON · MD, XLSX, DOCX, PDF tramite stampa"
+  },
+  {
+    "desc": "Individua i possibili allergeni dei piatti e organizza le verifiche necessarie, senza dare per certa la loro assenza.",
+    "steps": [
+      [
+        "Inizia",
+        "Carica il ricettario o aggiungi i piatti con gli ingredienti."
+      ],
+      [
+        "Esamina",
+        "Leggi i codici segnalati; distingui indizi, dubbi e tracce."
+      ],
+      [
+        "Verifica",
+        "Confronta ingredienti, composizioni e documenti originali; registra le verifiche e ciò che resta da chiarire."
+      ],
+      [
+        "Salva ed esporta",
+        "Salva la sessione; scarica o stampa la matrice come bozza interna dopo aver accettato le condizioni."
+      ]
+    ],
+    "result": "Una matrice di lavoro da verificare, non una dichiarazione per il cliente",
+    "cta": "Analizza gli allergeni",
+    "imports": "XLSX, XLS, CSV, DOCX, PDF, MD, TXT · sessione JSON",
+    "exports": "XLSX, DOCX, MD, PDF tramite stampa · sessione JSON"
+  },
+  {
+    "desc": "Scopri quanto costa preparare una porzione e valuta il prezzo di vendita e il margine, senza confondere i costi mancanti con zero.",
+    "steps": [
+      [
+        "Inizia",
+        "Importa i JSON di ricette e collegamenti fornitori; seleziona una ricetta."
+      ],
+      [
+        "Imposta",
+        "Inserisci prezzo di vendita, IVA, obiettivo Food Cost e gli altri parametri disponibili."
+      ],
+      [
+        "Calcola",
+        "Avvia il calcolo; controlla quantità, prezzi, date e dati mancanti prima di usare i risultati."
+      ],
+      [
+        "Salva ed esporta",
+        "Salva il calcolo; esporta JSON per il Menu Engineering, CSV o un report da consultare e stampare."
+      ]
+    ],
+    "result": "Costo per porzione e indicatori utili per valutare il prezzo",
+    "cta": "Calcola il costo del piatto",
+    "imports": "JSON (archivi RISTO-LAB)",
+    "exports": "JSON, CSV · MD, XLSX, DOCX, PDF tramite stampa"
+  },
+  {
+    "desc": "Capisci quali piatti vendono di più, quali offrono un buon margine e quali meritano un intervento.",
+    "steps": [
+      [
+        "Inizia",
+        "Scegli una categoria completa, un periodo e la fonte delle vendite."
+      ],
+      [
+        "Inserisci",
+        "Aggiungi tutti i piatti, anche quelli con zero vendite; inserisci porzioni vendute, prezzi netti e costi, oppure importa i calcoli Food Cost."
+      ],
+      [
+        "Analizza",
+        "Avvia l’analisi; leggi le quattro classi e valuta le possibili azioni, senza decisioni automatiche."
+      ],
+      [
+        "Salva ed esporta",
+        "Esporta la sessione per riprendere il lavoro e il rapporto per discutere le scelte commerciali."
+      ]
+    ],
+    "result": "Una radiografia delle vendite e dei margini per decidere come migliorare la carta",
+    "cta": "Analizza il rendimento del menu",
+    "imports": "JSON (calcoli o sessione)",
+    "exports": "JSON, CSV · MD, XLSX, DOCX, PDF tramite stampa"
+  },
+  {
+    "desc": "Trasforma i dati dei piatti in una carta elegante, scegliendo stile, lingue e formato.",
+    "steps": [
+      [
+        "Inizia",
+        "Importa o incolla il JSON del menu con piatti, prezzi e traduzioni; puoi provare l’esempio didattico."
+      ],
+      [
+        "Personalizza",
+        "Applica i dati, inserisci il nome del locale e scegli stile, lingue e formato."
+      ],
+      [
+        "Controlla",
+        "Esamina l’anteprima, le traduzioni, gli allergeni e la legenda; completa le verifiche richieste nei dati."
+      ],
+      [
+        "Esporta",
+        "Dopo i controlli previsti, esporta il JSON per revisione o stampa/salva il PDF della bozza interna."
+      ]
+    ],
+    "result": "Una bozza della carta pronta per la revisione, non per la pubblicazione",
+    "cta": "Progetta la carta",
+    "imports": "JSON (schema menu)",
+    "exports": "JSON, MD, XLSX, DOCX · bozza PDF tramite stampa (dopo controlli)"
+  },
+  {
+    "desc": "Esplora come cambiano ricavi, costi e risultato economico mensile quando modifichi le ipotesi del ristorante.",
+    "steps": [
+      [
+        "Inizia",
+        "Compila lo scenario base con coperti, giorni, occupazione, scontrino medio e costi, o importa uno scenario JSON."
+      ],
+      [
+        "Confronta",
+        "Copia la base nello scenario alternativo e modifica le ipotesi che vuoi studiare."
+      ],
+      [
+        "Leggi i risultati",
+        "Confronta ricavi, risultato, punto di pareggio e sensibilità alla domanda; verifica le ipotesi."
+      ],
+      [
+        "Salva ed esporta",
+        "Esporta il confronto JSON, i risultati CSV o un report da consultare e stampare."
+      ]
+    ],
+    "result": "Due scenari mensili confrontabili, non una previsione delle vendite",
+    "cta": "Simula la gestione del ristorante",
+    "imports": "JSON (schema scenario)",
+    "exports": "JSON, CSV · MD, XLSX, DOCX, PDF tramite stampa"
+  }
+];
 const steps=[['Acquisisci','Raccogli dati e fonti'],['Analizza','Ottieni un risultato preliminare'],['Verifica','Controlla evidenze e dati mancanti'],['Valida','Documenta la decisione umana'],['Migliora','Correggi e ripeti l’analisi']];
 ---
 <Hub title="Professional Suite">
  <div class="academy-dash suite-page">
-  <header class="suite-intro"><div><p class="eyebrow">RISTO-LAB / PROFESSIONAL SUITE</p><h1>Professional Suite</h1><p class="suite-lead">Dalla ricetta alla gestione del menu. Strumenti indipendenti per analizzare, verificare e migliorare le decisioni operative.</p><div class="suite-actions"><a class="button" href="#suite-open">Scegli uno strumento</a><a class="button secondary" href={withBase('/instructor/')}>Torna all'Instructor Hub</a></div></div><div class="suite-overview" aria-label="Stato della suite"><span><strong>{active.length}</strong> Strumenti accessibili</span><span><strong>1.0</strong> Release candidate</span><p>Anteprime e beta · verifica umana necessaria</p></div></header>
-  <section class="academy-library suite-section" aria-labelledby="suite-open"><div class="suite-heading"><div><p class="eyebrow">AREA OPERATIVA</p><h2 id="suite-open">Scegli lo strumento</h2></div><p>Crea, importa, verifica ed esporta</p></div><div class="suite-grid">{active.map((x,i)=><article class="rl-white-panel suite-card"><div class="suite-card-top"><span class="suite-number" aria-hidden="true">{x.n}</span><span class="suite-state">{x.state}</span></div><h3>{x.title}</h3><p>{x.desc}</p><div class="suite-action-guide"><strong>Come procedere</strong><ol>{guide[i].slice(0,3).map(step=><li>{step}</li>)}</ol></div><div class="suite-review"><strong>Da verificare</strong><p>{x.review}</p></div><dl class="suite-formats"><div><dt>Importazione</dt><dd>{guide[i][3]}</dd></div><div><dt>Esportazione</dt><dd>{guide[i][4]}</dd></div></dl><a class="button secondary" href={withBase(x.href)}>Apri {x.title} <span aria-hidden="true">→</span></a></article>)}</div></section>
-  <section class="academy-library suite-section" aria-labelledby="suite-flow"><p class="eyebrow">METODO RISTO-LAB</p><h2 id="suite-flow">Dai dati alla decisione</h2><ol class="suite-steps">{steps.map(([title,desc],i)=><li><span class="suite-step-number">{String(i+1).padStart(2,'0')}</span><strong>{title}</strong><span>{desc}</span></li>)}</ol><p class="suite-note">Il percorso è una guida, non un indicatore automatico di avanzamento. Salva gli archivi sul dispositivo e importali nel modulo successivo: non esiste ancora sincronizzazione automatica. Un risultato preliminare non è una validazione professionale. I report MD, Excel, Word e PDF sono documenti di consultazione: non sostituiscono gli archivi JSON per lo scambio dei dati. Le importazioni richiedono i formati e gli schemi indicati.</p></section>
+  <header class="suite-intro"><div><p class="eyebrow">RISTO-LAB / PROFESSIONAL SUITE</p><h1>Professional Suite</h1><p class="suite-lead">Scegli l’obiettivo che vuoi raggiungere: creare un ricettario, controllare acquisti e allergeni, calcolare i costi, migliorare la carta o confrontare scenari. Ogni strumento ti guida dal primo dato al risultato.</p><div class="suite-actions"><a class="button" href="#suite-open">Scegli uno strumento</a><a class="button secondary" href={withBase('/instructor/')}>Torna all'Instructor Hub</a></div></div><div class="suite-overview" aria-label="Stato della suite"><span><strong>{active.length}</strong> Strumenti accessibili</span><span><strong>1.0</strong> Release candidate</span><p>Anteprime e beta · verifica umana necessaria</p></div></header>
+  <section class="academy-library suite-section" aria-labelledby="suite-open"><div class="suite-heading"><div><p class="eyebrow">AREA OPERATIVA</p><h2 id="suite-open">Scegli lo strumento</h2></div><p>Scopri cosa puoi fare e segui i passaggi in ordine</p></div><div class="suite-grid">{active.map((x,i)=><article class="rl-white-panel suite-card"><div class="suite-card-top"><span class="suite-number" aria-hidden="true">{x.n}</span><span class="suite-state">{x.state}</span></div><h3>{x.title}</h3><p class="suite-purpose">{guide[i].desc}</p><div class="suite-action-guide"><strong>Come si usa</strong><ol>{guide[i].steps.map(([label,step])=><li><b>{label}</b><span>{step}</span></li>)}</ol></div><div class="suite-result"><strong>Cosa ottieni</strong><p>{guide[i].result}</p></div><div class="suite-review"><strong>Prima di concludere</strong><p>{x.review}</p></div><details class="suite-format-details"><summary>Formati di importazione ed esportazione</summary><dl class="suite-formats"><div><dt>Importazione</dt><dd>{guide[i].imports}</dd></div><div><dt>Esportazione</dt><dd>{guide[i].exports}</dd></div></dl></details><a class="button secondary" href={withBase(x.href)} aria-label={`${guide[i].cta} · Apri ${x.title}`}>{guide[i].cta} <span aria-hidden="true">→</span></a></article>)}</div></section>
+  <section class="academy-library suite-section" aria-labelledby="suite-flow"><p class="eyebrow">METODO RISTO-LAB</p><h2 id="suite-flow">Dai dati alla decisione</h2><ol class="suite-steps">{steps.map(([title,desc],i)=><li><span class="suite-step-number">{String(i+1).padStart(2,'0')}</span><strong>{title}</strong><span>{desc}</span></li>)}</ol><p class="suite-note">Non devi usare tutti gli strumenti: scegli quello che risponde alla tua esigenza. Salva sempre il lavoro prima di passare a un altro modulo. Gli archivi JSON consentono il trasferimento dei dati; il Data Hub locale, quando disponibile, permette la condivisione esplicita di ricette e fornitori. Un risultato preliminare non è una validazione professionale. I report MD, Excel, Word e PDF sono documenti di consultazione: non sostituiscono gli archivi JSON per lo scambio dei dati. Le importazioni richiedono i formati e gli schemi indicati.</p></section>
   <section class="gourmet-menu-study"><div><p class="eyebrow">PERCORSO FORMATIVO</p><h2>La radiografia del menu</h2><p>Studia il metodo prima di applicarlo agli strumenti operativi.</p></div><a class="button secondary" href={withBase('/instructor/menu-engineering/')}>Apri Menu Engineering</a></section>
  </div>
 </Hub>
 <style>
 .suite-page{font-family:var(--font-ui);min-width:0}.suite-intro{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(1rem,3vw,2.5rem);align-items:center;padding:clamp(1.25rem,4vw,3rem) 0}.suite-intro h1{font-size:clamp(2rem,4vw,3.5rem)!important;line-height:1.06;letter-spacing:-.045em;margin:.5rem 0 1rem}.suite-lead{max-width:52ch;font-size:1.05rem;line-height:1.6}.suite-actions{display:flex;gap:.65rem;flex-wrap:wrap}.suite-page .button{border-radius:999px;min-height:44px;white-space:normal;max-width:100%;transition:transform .15s ease,background .15s ease}.suite-page .button:active{transform:scale(.98)}.suite-overview{border:1px solid var(--line);border-radius:1.5rem;background:var(--white);padding:1.5rem;display:grid;gap:.75rem}.suite-overview span{display:flex;align-items:center;gap:1rem}.suite-overview strong{font-size:2.4rem;line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums;color:var(--academy-purple,var(--ink))}.suite-overview p{margin:0;color:var(--muted);font-size:.875rem}.suite-section{margin-block:2rem;scroll-margin-top:6rem}.suite-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;flex-wrap:wrap}.suite-heading p{margin:0}.suite-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.25rem}.suite-card{display:flex;flex-direction:column;align-items:stretch;gap:.8rem;padding:clamp(1rem,2.5vw,1.5rem);min-width:0;border-radius:1.5rem!important;transition:box-shadow .18s ease}.suite-card:focus-within{box-shadow:0 0 0 2px var(--academy-purple,var(--ink))}.suite-card h3,.suite-card p{margin:0}.suite-card h3{font-size:1.35rem;letter-spacing:-.025em;line-height:1.2}.suite-card-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap}.suite-number{font-size:1.8rem;font-weight:750;letter-spacing:-.04em;color:var(--academy-purple,var(--ink))}.suite-state{font-size:.75rem;border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;color:var(--muted)}.suite-review{border-top:1px solid var(--line);padding-top:.8rem;font-size:.9rem}.suite-review strong,.suite-output strong{font-size:.8rem}.suite-output{font-size:.85rem;color:var(--muted)}.suite-card .button{margin-top:auto;align-self:flex-start}.suite-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.75rem;list-style:none;padding:0;margin:1.25rem 0}.suite-steps li{border:1px solid var(--line);border-radius:1rem;padding:.85rem;display:grid;gap:.35rem;align-content:start;overflow-wrap:anywhere}.suite-step-number{font-size:.75rem;font-weight:700;color:var(--academy-purple,var(--ink))}.suite-steps li span:last-child,.suite-note{font-size:.875rem;color:var(--muted)}.suite-planned{grid-template-columns:repeat(3,minmax(0,1fr))}.suite-page a:focus-visible{outline:2px solid currentColor;outline-offset:4px}@media(max-width:900px){.suite-intro{grid-template-columns:1fr}.suite-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.suite-grid,.suite-planned{grid-template-columns:1fr}.suite-steps{grid-template-columns:1fr}.suite-overview{padding:1rem}}@media(prefers-reduced-motion:reduce){.suite-page *{transition:none!important;transform:none!important}}
-.suite-action-guide{padding:.75rem .85rem;background:#f5f7fc;border-radius:14px;color:#172a42;font-size:.875rem}.suite-action-guide>strong{font-size:.82rem}.suite-action-guide ol{padding-inline-start:1.35rem;margin:.5rem 0 0;line-height:1.55}.suite-action-guide li+li{margin-top:.3rem}.suite-action-guide li::marker{font-weight:700;color:#4b18b5}.suite-formats{margin:0;display:grid;gap:.45rem;font-size:.85rem}.suite-formats div{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:.5rem}.suite-formats dt{font-weight:700;color:#405475}.suite-formats dd{margin:0;overflow-wrap:anywhere;color:#172a42}@media(max-width:560px){.suite-formats div{grid-template-columns:1fr;gap:.15rem}}</style>
+.suite-purpose{font-size:1rem;line-height:1.55;color:#172a42}.suite-action-guide li b{display:block;color:#172a42;font-size:.88rem}.suite-action-guide li span{display:block}.suite-action-guide li+li{margin-top:.55rem!important}.suite-result{padding:.75rem .85rem;border:1px solid #dce5ef;border-radius:12px;color:#172a42;font-size:.875rem;line-height:1.5}.suite-result strong{font-size:.8rem;color:#315da7}.suite-format-details{font-size:.85rem;color:#405475}.suite-format-details summary{cursor:pointer;min-height:44px;display:list-item;padding:.65rem 0}.suite-format-details[open] .suite-formats{margin-bottom:.55rem}.suite-format-details summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}.suite-action-guide{padding:.75rem .85rem;background:#f5f7fc;border-radius:14px;color:#172a42;font-size:.875rem}.suite-action-guide>strong{font-size:.82rem}.suite-action-guide ol{padding-inline-start:1.35rem;margin:.5rem 0 0;line-height:1.55}.suite-action-guide li+li{margin-top:.3rem}.suite-action-guide li::marker{font-weight:700;color:#4b18b5}.suite-formats{margin:0;display:grid;gap:.45rem;font-size:.85rem}.suite-formats div{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:.5rem}.suite-formats dt{font-weight:700;color:#405475}.suite-formats dd{margin:0;overflow-wrap:anywhere;color:#172a42}@media(max-width:560px){.suite-formats div{grid-template-columns:1fr;gap:.15rem}}</style>

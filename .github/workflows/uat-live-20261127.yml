@@ -42,6 +42,5 @@ jobs:
           name: international-uat-live-screenshots
           path: |
             uat-screenshots/
-            test-results/uat-menu-design-*/**/*.png
-            test-results/uat-menu-design-*/**/*.pdf
+            uat-evidence/menu-design/
           if-no-files-found: warn

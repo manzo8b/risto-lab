@@ -26,7 +26,7 @@ jobs:
       - name: Build local static fixture required by existing Playwright configuration
         run: npm run build
       - name: Live browser navigation, responsive layout, languages and report checks
-        run: npx playwright test tests/suite-ux.e2e.ts tests/suite-formats.e2e.ts tests/uat-recipe-manager.e2e.ts tests/uat-supplier-manager.e2e.ts
+        run: npx playwright test tests/suite-ux.e2e.ts tests/suite-formats.e2e.ts tests/uat-recipe-manager.e2e.ts tests/uat-supplier-manager.e2e.ts tests/matrice-allergeni.e2e.ts tests/uat-allergen-matrix.e2e.ts
       - name: Capture public dashboard at desktop, tablet and phone widths
         if: always()
         run: |

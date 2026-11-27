@@ -311,3 +311,32 @@ test('2.8 Recipe Manager adapter: selective recursive native archive, provenance
  expect(result).toEqual({same:0,newCount:2,oldWarning:true,separate:2,bad:['MISSING_SUBRECIPE','CYCLE','INCOMPLETE_RECIPE'],only:true});
  expect(await page.evaluate('dishes[0].s.every(v=>v<=2)')).toBe(true);
 });
+
+test('3.1 Local Data Hub: Recipe Manager persistence, stable IDs, explicit Matrix import and CAS',async({page,context})=>{
+ await page.goto(root+'/instructor/recipe-manager/');
+ await page.locator('#sample').click();
+ const first=await page.evaluate<{id:string}[]>(`snapshot().recipes[0].ingredients.map(i=>({id:i.id}))`);
+ expect(new Set(first.map(i=>i.id)).size).toBe(3);
+ await page.locator('#hubPanel > summary').click();await page.locator('#hubSave').click();
+ await expect(page.locator('#hubStatus')).toContainText('Revisione condivisa: 1');
+ const other=await context.newPage();await other.goto(root+'/instructor/recipe-manager/');
+ await other.locator('#hubPanel > summary').click();await other.locator('#hubLoad').click();
+ await expect(other.locator('#hubStatus')).toContainText('revisione: 1');
+ expect(await other.evaluate(`snapshot().recipes[0].ingredients.map(i=>({id:i.id}))`)).toEqual(first);
+ await page.evaluate(`recipes[0].ingredients[0].name='farina di grano'`);
+ await page.locator('#hubSave').click();await expect(page.locator('#hubStatus')).toContainText('Revisione condivisa: 2');
+ await other.locator('#hubSave').click();await expect(other.locator('#hubStatus')).toContainText('Archivio aggiornato altrove');
+ const h=await page.evaluate<{revision:number;name:string}[]>(`RLDataHub.history('recipes').then(a=>a.map(r=>({revision:r.revision,name:r.data.recipes[0].ingredients[0].name})))`);
+ expect(h).toEqual([{revision:1,name:'spaghetti'},{revision:2,name:'farina di grano'}]);
+ await page.reload();await page.locator('#hubPanel > summary').click();await page.locator('#hubLoad').click();
+ expect(await page.evaluate(`snapshot().recipes[0].ingredients.map(i=>({id:i.id}))`)).toEqual(first);
+ await other.goto(route);await other.locator('[data-l="it"]').click();
+ await other.evaluate(`load([{name:'QA',ing:'pasta; pomodoro',foodLang:'it'}],'SIMULAZIONE','',true)`);
+ await other.locator('#rmImportPanel > summary').click();await other.locator('#rmHubRead').click();await expect(other.locator('#rmStatus')).toContainText('Data Hub rev. 2');
+ await expect(other.locator('#rmScope')).toHaveValue('hub-local');await other.locator('#rmRecipe').selectOption('DEMO-001');await other.locator('#rmApply').click();await expect(other.locator('#rmStatus')).toContainText('Nuove revisioni: 1');
+ await other.locator('.manual-link details > summary').click();await other.locator('[data-mg-term]').selectOption('0');await other.locator('[data-mg-ref]').selectOption('rm:hub-local:DEMO-001@1');await other.locator('[data-mg-bind]').click();
+ expect(await other.evaluate('dishes[0].gkbIssue')).toBe(true);
+ expect(await other.evaluate('complete(dishes[0])')).toBe(false);
+ expect(await other.evaluate('manualText(dishes[0])')).toContain('DATA_HUB_PILOT_REVIEW_REQUIRED');
+ await other.close();
+});

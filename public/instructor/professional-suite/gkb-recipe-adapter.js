@@ -12,10 +12,10 @@ function read(input){
  return input.recipes.map(r=>{
  if(!r||!validId(r.id)||ids.has(r.id)||!text(r.name,500)||!Array.isArray(r.ingredients)||r.ingredients.length>1000||!Array.isArray(r.subrecipes)||r.subrecipes.length>500||!langs.includes(r.foodLang))fail('INVALID_RECIPE');
  ids.add(r.id);
- for(const x of r.ingredients){if(!x||!text(x.name,500)||!provs.includes(x.provenance))fail('INVALID_INGREDIENT');}
+ for(const x of r.ingredients){if(!x||!text(x.name,500)||!provs.includes(x.provenance)||(x.id!==undefined&&!validId(x.id)))fail('INVALID_INGREDIENT');}
  for(const x of r.subrecipes){if(!x||!validId(x.id)||!(x.portions===null||x.portions===undefined||(typeof x.portions==='number'&&Number.isFinite(x.portions)&&x.portions>0)))fail('INVALID_SUBRECIPE');}
  for(const k of ['source','notes','category','method'])if(r[k]!==undefined&&!text(r[k],20000))fail('INVALID_RECIPE_METADATA');
- const snapshot=JSON.stringify({name:r.name,category:r.category||'',foodLang:r.foodLang,servings:r.servings??null,source:r.source||'',notes:r.notes||'',method:r.method||'',ingredients:r.ingredients.map(x=>({name:x.name,provenance:x.provenance,gross:x.gross??null,unit:x.unit??'',waste:x.waste??null,net:x.net??null,notes:x.notes??''})),subrecipes:r.subrecipes.map(x=>({id:x.id,portions:x.portions??null}))});
+ const snapshot=JSON.stringify({name:r.name,category:r.category||'',foodLang:r.foodLang,servings:r.servings??null,source:r.source||'',notes:r.notes||'',method:r.method||'',ingredients:r.ingredients.map(x=>({...(x.id?{id:x.id}:{}),name:x.name,provenance:x.provenance,gross:x.gross??null,unit:x.unit??'',waste:x.waste??null,net:x.net??null,notes:x.notes??''})),subrecipes:r.subrecipes.map(x=>({id:x.id,portions:x.portions??null}))});
  if(snapshot.length>200000)fail('RECIPE_SIZE');
  return {id:r.id,name:r.name,foodLang:r.foodLang,source:r.source||'',category:r.category||'',ingredients:r.ingredients.map(x=>({name:x.name,provenance:x.provenance})),subrecipes:r.subrecipes.map(x=>({id:x.id})),snapshot};
  });

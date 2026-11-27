@@ -270,3 +270,20 @@ test('closed-composition 36-recipe synthetic workbook benchmark: 504 cells',asyn
  }
  expect({tp,fp,fn,tn,discrepancies}).toEqual({tp:55,fp:0,fn:0,tn:449,discrepancies:[]});
 });
+
+test('2.8 manual composition archive: explicit binding, additive doubts, session, stale revisions',async({page})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ await page.evaluate(`load([{name:'QA',ing:'pane; pomodoro',foodLang:'it'}],'SIMULAZIONE','',true)`);
+ await page.locator('#manualArchivePanel > summary').click();
+ await page.locator('#mgId').fill('pane-test');await page.locator('#mgName').fill('Pane test');await page.locator('#mgSource').fill('Scenario simulato');await page.locator('#mgParts').fill('farina di grano\nuova');
+ await page.locator('#mgSave').click();await expect(page.locator('#mgStatus')).toContainText('Operazione completata');
+ await page.locator('.manual-link details > summary').click();await page.locator('[data-mg-term]').selectOption('0');await page.locator('[data-mg-ref]').selectOption('pane-test@1');await page.locator('[data-mg-bind]').click();
+ const a=await page.evaluate<{s:number[];path:string;issue:boolean}>(`({s:dishes[0].s,path:manualText(dishes[0]),issue:dishes[0].gkbIssue})`);
+ expect(a.s[0]).toBe(2);expect(a.s[2]).toBe(2);expect(a.s.every(v=>v<=2)).toBe(true);expect(a.path).toContain('pane-test@1');expect(a.issue).toBe(false);
+ const saved=await page.evaluate<string>(`JSON.stringify({format:'RISTO-LAB-session',version:1,dictionary:DICTIONARY.version,dishes,componentArchive:manualArchive,demo:true})`);
+ await page.evaluate(`restoreSession(JSON.parse(${JSON.stringify(saved)}))`);
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);
+ await page.locator('#manualArchivePanel > summary').click();await page.locator('#mgEdit').selectOption('pane-test@1');await page.locator('#mgParts').fill('farina di riso');await page.locator('#mgSave').click();
+ expect(await page.evaluate('dishes[0].gkbIssue')).toBe(true);expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('complete(dishes[0])')).toBe(false);
+ expect(await page.evaluate('report().rows[0].slice(-2)[0]')).toContain('STALE_REVISION');
+});

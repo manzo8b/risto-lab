@@ -18,6 +18,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chrome
+      - name: Install PDF text extraction for print acceptance
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Confirm public release has new dashboard guidance
         run: |
           curl --fail --silent --show-error --location "$LIVE_URL/instructor/professional-suite/" -o /tmp/suite.html
@@ -26,7 +28,7 @@ jobs:
       - name: Build local static fixture required by existing Playwright configuration
         run: npm run build
       - name: Live browser navigation, responsive layout, languages and report checks
-        run: npx playwright test tests/suite-ux.e2e.ts tests/suite-formats.e2e.ts tests/uat-recipe-manager.e2e.ts tests/uat-supplier-manager.e2e.ts tests/matrice-allergeni.e2e.ts tests/uat-allergen-matrix.e2e.ts tests/uat-food-cost.e2e.ts tests/uat-menu-engineering.e2e.ts
+        run: npx playwright test tests/suite-ux.e2e.ts tests/suite-formats.e2e.ts tests/uat-recipe-manager.e2e.ts tests/uat-supplier-manager.e2e.ts tests/matrice-allergeni.e2e.ts tests/uat-allergen-matrix.e2e.ts tests/uat-food-cost.e2e.ts tests/uat-menu-engineering.e2e.ts tests/uat-menu-design.e2e.ts
       - name: Capture public dashboard at desktop, tablet and phone widths
         if: always()
         run: |
@@ -38,5 +40,8 @@ jobs:
         if: always()
         with:
           name: international-uat-live-screenshots
-          path: uat-screenshots/
+          path: |
+            uat-screenshots/
+            test-results/uat-menu-design-*/**/*.png
+            test-results/uat-menu-design-*/**/*.pdf
           if-no-files-found: warn

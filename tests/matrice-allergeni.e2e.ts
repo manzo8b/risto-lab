@@ -389,3 +389,22 @@ test('4 Supplier documentary integration: native catalogue, recorded presence, s
  const checks=await page.evaluate<{same:boolean;newRev:number;invalid:boolean}>(`(()=>{const a=${JSON.stringify(data)},b=${JSON.stringify(changed)},same=RLSupplierGKB.importSelected(manualArchive,a,'hub-local','p-brava','es','2026-11-27'),n=RLSupplierGKB.importSelected(manualArchive,b,'hub-local','p-brava','es','2026-11-27');let invalid=false;try{a.products[0].doc='';RLSupplierGKB.importSelected(manualArchive,a,'qa','p-brava','es','2026-11-27')}catch(e){invalid=e.message==='INCOMPLETE_DOCUMENT_RECORD'}return {same:!same.created,newRev:n.ref.revision,invalid};})()`);
  expect(checks).toEqual({same:true,newRev:2,invalid:true});await writer.close();
 });
+
+test('5 IQA: 42 trilingual Annex II terms, scope, trace and pilot confirmation guards',async({page})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ const cases=[["farina di grano","harina de trigo","wheat flour"],["gamberi","gambas","prawns"],["uova","huevos","eggs"],["merluzzo","bacalao","cod"],["arachidi","cacahuetes","peanuts"],["soia","soja","soybeans"],["latte vaccino","leche de vaca","milk"],["mandorle","almendras","almonds"],["sedano","apio","celery"],["senape","mostaza","mustard"],["sesamo","sésamo","sesame"],["solfiti","sulfitos","sulphites"],["lupini","altramuces","lupin"],["cozze","mejillones","mussels"]];
+ const result=await page.evaluate<{code:number;language:string;s:number[];auto:boolean;threshold:boolean}[]>(`(()=>{const cases=${JSON.stringify(cases)};return cases.flatMap((terms,i)=>terms.map((term,j)=>{const language=['it','es','en'][j],d=make('QA',term,{foodLang:language});return {code:i+1,language,s:d.s,auto:d.events.some(e=>e.auto_confirm!==false),threshold:d.events.some(e=>e.channel==='threshold_check')};}));})()`);
+ expect(result.length).toBe(42);
+ for(const x of result){expect(x.s.flatMap((v,i)=>v?[i+1]:[]),x.language+' '+x.code).toEqual([x.code]);expect(x.s[x.code-1]).toBe(x.code===12?2:1);expect(x.auto).toBe(false);if(x.code===12)expect(x.threshold).toBe(true);}
+ await page.evaluate(`load([{name:'QA',ing:'huevo; puede contener leche',foodLang:'es'}],'SIMULAZIONE','',true)`);
+ expect(await page.evaluate('traceCodes(dishes[0])')).toBe('7');
+ expect(await page.evaluate('summaryParts(dishes[0]).headline')).toBe('3');
+ expect(await page.evaluate("(()=>{const r=report();return r.rows[0][r.head.indexOf(IQA5[lang].trace)]})()")).toBe('7');
+ await page.locator('#iqaScope summary').click();await expect(page.locator('#iqaScope')).toContainText('La lingua non seleziona la normativa');
+ await page.evaluate(`dishes[0].gkbIssue=true;dishes[0].proof='Test';renderMatrix()`);
+ await page.locator('#tb button[data-i="0"][data-j="2"]').click();await page.locator('#outcome').selectOption('4');await page.locator('#apply').click();
+ await expect(page.locator('#dlgError')).toContainText('conferma definitiva non disponibile');
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(1);await page.locator('#cancel').click();
+ await page.locator('[data-l="es"]').click();await expect(page.locator('#iqaScope')).toContainText('El idioma no selecciona jurisdicción');
+ await page.locator('[data-l="en"]').click();await expect(page.locator('#iqaScope')).toContainText('Language does not select jurisdiction');
+});

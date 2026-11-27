@@ -7,15 +7,16 @@ const fail=c=>{throw Error(c);};
 const validId=s=>typeof s==='string'&&/^[A-Za-z0-9][A-Za-z0-9_.:-]{0,49}$/.test(s);
 const id=()=> 'ing-'+crypto.randomUUID();
 function payload(kind,data){
+ if(kind==='suppliers'){if(!root.RLSupplierGKB)fail('SUPPLIER_ADAPTER_REQUIRED');root.RLSupplierGKB.read(data);const serialized=JSON.stringify(data);if(new TextEncoder().encode(serialized).length>MAX_BYTES)fail('ARCHIVE_LIMIT');return serialized;}
  if(kind!=='recipes'||data?.schema!=='ristolab.recipe-archive/1'||data.version!=='1.0.0'||data.purpose!=='experimental_internal_only'||!Array.isArray(data.recipes)||!data.recipes.length||data.recipes.length>5000)fail('INVALID_ARCHIVE');
  const recipes=new Set(),ingredients=new Set();
  for(const r of data.recipes){if(!r||!validId(r.id)||recipes.has(r.id)||!Array.isArray(r.ingredients)||r.ingredients.length>1000||!Array.isArray(r.subrecipes))fail('INVALID_RECIPE');recipes.add(r.id);for(const x of r.ingredients){if(!x||!validId(x.id)||ingredients.has(x.id)||typeof x.name!=='string')fail('INVALID_INGREDIENT_ID');ingredients.add(x.id);}}
  const serialized=JSON.stringify(data);if(new TextEncoder().encode(serialized).length>MAX_BYTES)fail('ARCHIVE_LIMIT');return serialized;
 }
-function validateKey(kind,scope){if(kind!=='recipes'||!validScope(scope))fail('INVALID_KEY');}
+function validateKey(kind,scope){if(!['recipes','suppliers'].includes(kind)||!validScope(scope))fail('INVALID_KEY');}
 function open(){return new Promise((resolve,reject)=>{if(!root.indexedDB){reject(Error('STORAGE_UNAVAILABLE'));return;}const r=root.indexedDB.open(DB,1);r.onupgradeneeded=()=>{const db=r.result;db.createObjectStore('heads',{keyPath:'key'});db.createObjectStore('revisions',{keyPath:['key','revision']});};r.onerror=()=>reject(r.error||Error('STORAGE_UNAVAILABLE'));r.onblocked=()=>reject(Error('STORAGE_BLOCKED'));r.onsuccess=()=>{const db=r.result;db.onversionchange=()=>db.close();resolve(db);};});}
 function notify(event){try{if(typeof root.BroadcastChannel==='function'){const c=new root.BroadcastChannel(CHANNEL);c.postMessage(event);c.close();}}catch{}}
-function subscribe(fn){if(typeof fn!=='function')fail('INVALID_LISTENER');if(typeof root.BroadcastChannel!=='function')return ()=>{};const c=new root.BroadcastChannel(CHANNEL);c.onmessage=e=>{const x=e.data;if(x?.schema===SCHEMA&&x.kind==='recipes'&&validScope(x.scope)&&Number.isSafeInteger(x.revision)&&x.revision>0)fn(x);};return ()=>c.close();}
+function subscribe(fn){if(typeof fn!=='function')fail('INVALID_LISTENER');if(typeof root.BroadcastChannel!=='function')return ()=>{};const c=new root.BroadcastChannel(CHANNEL);c.onmessage=e=>{const x=e.data;if(x?.schema===SCHEMA&&['recipes','suppliers'].includes(x.kind)&&validScope(x.scope)&&Number.isSafeInteger(x.revision)&&x.revision>0)fn(x);};return ()=>c.close();}
 async function get(kind,scope='local'){
  validateKey(kind,scope);const db=await open();
  return new Promise((resolve,reject)=>{const tx=db.transaction(['heads','revisions'],'readonly');let result=null;const r=tx.objectStore('heads').get(key(kind,scope));r.onsuccess=()=>{if(!r.result)return;const x=tx.objectStore('revisions').get([key(kind,scope),r.result.revision]);x.onsuccess=()=>{result=x.result||null;if(!result)tx.abort();};};tx.oncomplete=()=>{db.close();resolve(result);};tx.onabort=tx.onerror=()=>{db.close();reject(tx.error||Error('READ_FAILED'));};});

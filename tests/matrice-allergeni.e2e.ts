@@ -367,3 +367,25 @@ test('3.2 Data Hub dependencies: transitive changes, missing recipes, unaffected
  expect(await page.evaluate('complete(dishes[0])')).toBe(false);
  await writer.close();
 });
+
+test('4 Supplier documentary integration: native catalogue, recorded presence, separate traces, pinned changes',async({page,context})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ const data={schema:'ristolab.supplier-links/1',version:'1.0.0',purpose:'experimental_internal_only',products:[{id:'p-brava',name:'Salsa brava test',supplier:'Fornecedor simulato',sku:'BR-01',doc:'Scheda simulata A',docdate:'2026-11-26',composition:'tomate; huevo',review:'Operatore test',notes:'',presence:[3,10],trace:[8]}],links:[]};
+ await page.evaluate(`load([{name:'QA',ing:'salsa brava',foodLang:'es'}],'SIMULAZIONE','',true)`);
+ await page.locator('#spImportPanel > summary').click();await page.locator('#spFile').setInputFiles({name:'supplier-links.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(data))});await expect(page.locator('#spStatus')).toContainText('Prodotti disponibili: 1');await page.locator('#spScope').fill('qa');await page.locator('#spProduct').selectOption('p-brava');await page.locator('#spLanguage').selectOption('es');await page.locator('#spApply').click();await expect(page.locator('#spStatus')).toContainText('sm:qa:p-brava@1');
+ await page.locator('.manual-link details > summary').click();await page.locator('[data-mg-term]').selectOption('0');await page.locator('[data-mg-ref]').selectOption('sm:qa:p-brava@1');await page.locator('[data-mg-bind]').click();
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('dishes[0].s[9]')).toBe(2);expect(await page.evaluate('dishes[0].s[7]')).toBe(0);
+ expect(await page.evaluate('dishes[0].crossEvents.some(e=>e.allergen_code===8&&e.concept_id==="gkb:supplier_trace")')).toBe(true);
+ expect(await page.evaluate('complete(dishes[0])')).toBe(false);expect(await page.evaluate('manualText(dishes[0])')).toContain('Scheda simulata A');
+ const writer=await context.newPage();await writer.goto(root+'/instructor/supplier-manager/');
+ await writer.evaluate(`RLDataHub.put('suppliers','local',${JSON.stringify(data)},0)`);
+ await page.locator('#spImportPanel > summary').click();await page.locator('#spHubRead').click();await expect(page.locator('#spStatus')).toContainText('Data Hub rev. 1');await page.locator('#spProduct').selectOption('p-brava');await page.locator('#spLanguage').selectOption('es');await page.locator('#spApply').click();await expect(page.locator('#spStatus')).toContainText('sm:hub-local:p-brava@1');
+ await page.locator('.manual-link details > summary').click();await page.locator('[data-mg-term]').selectOption('0');await page.locator('[data-mg-ref]').selectOption('sm:hub-local:p-brava@1');await page.locator('[data-mg-bind]').click();
+ await expect.poll(()=>page.evaluate('supplierCheckPending')).toBe(false);
+ const changed=JSON.parse(JSON.stringify(data));changed.products[0].presence=[7];changed.products[0].composition='tomate; leche';changed.products[0].doc='Scheda simulata B';
+ await writer.evaluate(`RLDataHub.put('suppliers','local',${JSON.stringify(changed)},1)`);
+ await expect.poll(()=>page.evaluate('manualText(dishes[0])')).toContain('PRODUCT_CHANGED');
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);expect(await page.evaluate('dishes[0].s[6]')).toBe(0);
+ const checks=await page.evaluate<{same:boolean;newRev:number;invalid:boolean}>(`(()=>{const a=${JSON.stringify(data)},b=${JSON.stringify(changed)},same=RLSupplierGKB.importSelected(manualArchive,a,'hub-local','p-brava','es','2026-11-27'),n=RLSupplierGKB.importSelected(manualArchive,b,'hub-local','p-brava','es','2026-11-27');let invalid=false;try{a.products[0].doc='';RLSupplierGKB.importSelected(manualArchive,a,'qa','p-brava','es','2026-11-27')}catch(e){invalid=e.message==='INCOMPLETE_DOCUMENT_RECORD'}return {same:!same.created,newRev:n.ref.revision,invalid};})()`);
+ expect(checks).toEqual({same:true,newRev:2,invalid:true});await writer.close();
+});

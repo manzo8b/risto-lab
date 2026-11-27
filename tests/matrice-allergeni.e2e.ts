@@ -328,7 +328,7 @@ test('3.1 Local Data Hub: Recipe Manager persistence, stable IDs, explicit Matri
  await other.locator('#hubSave').click();await expect(other.locator('#hubStatus')).toContainText('Archivio aggiornato altrove');
  const h=await page.evaluate<{revision:number;name:string}[]>(`RLDataHub.history('recipes').then(a=>a.map(r=>({revision:r.revision,name:r.data.recipes[0].ingredients[0].name})))`);
  expect(h).toEqual([{revision:1,name:'spaghetti'},{revision:2,name:'farina di grano'}]);
- await page.reload();await page.locator('#hubPanel > summary').click();await page.locator('#hubLoad').click();
+ await page.reload();await page.locator('#hubPanel > summary').click();await page.locator('#hubLoad').click();await expect(page.locator('#hubStatus')).toContainText('revisione: 2');
  expect(await page.evaluate(`snapshot().recipes[0].ingredients.map(i=>({id:i.id}))`)).toEqual(first);
  await other.goto(route);await other.locator('[data-l="it"]').click();
  await other.evaluate(`load([{name:'QA',ing:'pasta; pomodoro',foodLang:'it'}],'SIMULAZIONE','',true)`);
@@ -339,4 +339,31 @@ test('3.1 Local Data Hub: Recipe Manager persistence, stable IDs, explicit Matri
  expect(await other.evaluate('complete(dishes[0])')).toBe(false);
  expect(await other.evaluate('manualText(dishes[0])')).toContain('DATA_HUB_PILOT_REVIEW_REQUIRED');
  await other.close();
+});
+
+test('3.2 Data Hub dependencies: transitive changes, missing recipes, unaffected graph, explicit review',async({page,context})=>{
+ await page.goto(route);await page.locator('[data-l="it"]').click();
+ const data={schema:'ristolab.recipe-archive/1',version:'1.0.0',purpose:'experimental_internal_only',recipes:[
+ {id:'mayo',name:'Mayonesa',foodLang:'es',ingredients:[{id:'mayo-egg',name:'huevo',provenance:'declared'}],subrecipes:[]},
+ {id:'brava',name:'Salsa brava',foodLang:'es',ingredients:[{id:'brava-tomato',name:'tomate',provenance:'declared'}],subrecipes:[{id:'mayo',portions:1}]},
+ {id:'bread',name:'Pane',foodLang:'it',ingredients:[{id:'bread-flour',name:'farina di grano',provenance:'declared'}],subrecipes:[]}]};
+ await page.evaluate(`(async()=>{const data=${JSON.stringify(data)};await RLDataHub.put('recipes','local',data,0);manualArchive=RLRecipeGKB.importSelected(manualArchive,data,'hub-local',['brava','bread'],'2026-11-27').archive;manualArchive=RLManualGKB.save(manualArchive,{id:'sauce-house',name:'Salsa della casa',language:'es',updatedOn:'2026-11-27',provenance:'manual',source:'SIMULAZIONE',parts:[{kind:'reference',id:'rm:hub-local:brava',revision:1}]},0);load([{name:'QA Brava',ing:'salsa brava',foodLang:'es'},{name:'QA Pane',ing:'pane',foodLang:'it'}],'SIMULAZIONE','',true);for(let i=0;i<2;i++){const d=dishes[i];d.gkbId='qa-'+i;d.gkbRevision=1;const ref=i===0?{id:'sauce-house',revision:1}:{id:'rm:hub-local:bread',revision:1};const binding=RLManualGKB.bind(manualRecipe(d),'i-0',ref,manualArchive);d.gkbLinks=[{text:d.ing,language:d.foodLang,binding,lastPossible:manualPreview(d,{text:d.ing,language:d.foodLang,binding}).possibleCodes}];analyze(d);}renderAll();await checkHubDependencies();})()`);
+ expect(await page.evaluate('dishes.map(d=>dependencyStatus(d).status)')).toEqual(['current','current']);
+ expect(await page.evaluate('dishes.every(d=>d.gkbIssue&&!complete(d))')).toBe(true);
+ const writer=await context.newPage();await writer.goto(root+'/instructor/recipe-manager/');
+ const next=JSON.parse(JSON.stringify(data));next.recipes[0].ingredients[0].name='mostaza';
+ await writer.evaluate(`RLDataHub.put('recipes','local',${JSON.stringify(next)},1)`);
+ await expect.poll(()=>page.evaluate('dishes.map(d=>dependencyStatus(d).status)')).toEqual(['stale','current']);
+ expect(await page.evaluate('dependencyStatus(dishes[0]).changes')).toContain('mayo: RECIPE_CHANGED');
+ expect(await page.evaluate('dishes[0].gkbLinks[0].binding.component.revision')).toBe(1);
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2); // old composition is pinned
+ expect(await page.evaluate('dishes[0].s[9]')).toBe(0); // new composition not silently applied
+ expect(await page.evaluate('manualText(dishes[0])')).toContain('mayo: RECIPE_CHANGED');
+ const removed=JSON.parse(JSON.stringify(next));removed.recipes.shift();
+ await writer.evaluate(`RLDataHub.put('recipes','local',${JSON.stringify(removed)},2)`);
+ await expect.poll(()=>page.evaluate('dishes.map(d=>dependencyStatus(d).status)')).toEqual(['unresolved','current']);
+ expect(await page.evaluate('dependencyStatus(dishes[0]).changes')).toContain('mayo: RECIPE_MISSING');
+ expect(await page.evaluate('dishes[0].s[2]')).toBe(2);
+ expect(await page.evaluate('complete(dishes[0])')).toBe(false);
+ await writer.close();
 });
